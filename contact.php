@@ -43,7 +43,7 @@ include_once("include/lang/{$idioma}-contact.php");
 
     <!-- Title -->
     <section class="shock-section has-holder pb-2">
-      <div class="container max-w-75">
+      <div class="container max-w-85">
 
         <div class="basic-intro text-center">
           <h2 class="text-blue text-style-2 text-uppercase">

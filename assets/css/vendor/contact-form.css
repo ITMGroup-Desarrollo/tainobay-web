@@ -3,7 +3,8 @@
   border-color: var(--blue-color);
   border-width: 2px;
 }
-#contact-form input::placeholder, #contact-form textarea::placeholder {
+#contact-form input::placeholder, 
+#contact-form textarea::placeholder {
   color: var(--blue-color);
   font-weight: bold;
   text-transform: uppercase;
@@ -20,4 +21,19 @@
   border-color: #808080;
   cursor: not-allowed;
   opacity: 0.6;
+}
+
+/* Faq page */
+#faq-page #contact-form input,
+#faq-page #contact-form textarea {
+  border-color: white;
+  background-color: transparent;
+  border-width: 2px;
+}
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
 }
