@@ -2,5 +2,6 @@
 define('TITULOS_BLOG', array(
     'TITULO NOTICIA',
     'Subtitulo noticia',
-    'descubre.'
+    'JULIO',
+    'ATRAS'
 ));
