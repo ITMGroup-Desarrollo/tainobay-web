@@ -64,7 +64,7 @@
                                                 ?>/arrivals"
                                    class="menu-grid-main-item menu-item"><?php //echo MENU[4]; 
                                                                             ?></a>-->
-                               <a href="javascript:void(0)" class="menu-grid-main-item menu-item"><?php echo MENU[5]; ?></a>
+                               <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog_all" class="menu-grid-main-item menu-item"><?php echo MENU[5]; ?></a>
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="menu-grid-main-item menu-item"><?php echo MENU[6]; ?></a>
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/contact" class="menu-grid-main-item menu-item"><?php echo MENU[7]; ?></a>
                                <div class="language">
