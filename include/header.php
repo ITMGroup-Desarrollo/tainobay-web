@@ -62,7 +62,7 @@
                                                 ?>/arrivals"
                                    class="menu-grid-main-item menu-item"><?php //echo MENU[4]; 
                                                                             ?></a>-->
-                               <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog" class="menu-grid-main-item menu-item"><?php echo MENU[5]; ?></a>
+                               <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog_all" class="menu-grid-main-item menu-item"><?php echo MENU[5]; ?></a>
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="menu-grid-main-item menu-item"><?php echo MENU[6]; ?></a>
                                <div class="language">
                                    <?php $_lang = explode('.', $page) ?>

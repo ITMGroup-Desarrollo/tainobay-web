@@ -132,15 +132,21 @@ include_once("include/lang/{$idioma}-blog.php");
         .swiper-button-next {
             position: relative;
             z-index: 10;
+            background-color: transparent !important;
+            width: auto !important;
+            height: 1rem !important;
         }
-
-        .swiper-button-prev {
-            margin-right: 10px;
+        .pagination-items .row {
+            padding-top: 1.5rem;
+            border-top: 2px solid;
         }
-
-        .swiper-button-next {
-            margin-left: 10px;
+        .imgRound {
+            border: none;
+            border-radius: 1.5rem;
         }
+        .navigation-style{
+    margin-top: -20px !important;
+}
     </style>
 </head>
 
@@ -224,7 +230,7 @@ include_once("include/lang/{$idioma}-blog.php");
                                 <!-- Slide 1 con la imagen -->
                                 <div class="swiper-slide">
                                     <div style="position: relative; display: inline-block;">
-                                        <img src="assets/images/blog/playa-dorada-two.jpg" class="img-fluid rounded" alt="title image" style="width: 100%; height: auto;">
+                                        <img src="assets/images/blog/playa-dorada-two.jpg" class="img-fluid imgRound" alt="title image" style="width: 100%; height: auto;  ">
                                         <i class="fa fa-share-alt fa-2x azulBlog" style=" position: absolute; top: 10px; right: 10px;"></i>
                                     </div>
 
@@ -238,10 +244,13 @@ include_once("include/lang/{$idioma}-blog.php");
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-4">
-                                                    <img src="assets/images/blog/mojito-bar-one.jpg" class="rounded mb-1" alt="" style="max-width: 100%; height: auto;">
+                                                    <img src="assets/images/blog/mojito-bar-one.jpg" class=" mb-1 imgRound" alt="" style="max-width: 100%; height: auto;   ">
                                                 </div>
                                                 <div class="col-lg-8 mb-1">
 
+                                                    <p class="justificado">
+                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
+                                                    </p>
                                                     <p class="justificado">
                                                         Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
                                                     </p>
@@ -269,7 +278,7 @@ include_once("include/lang/{$idioma}-blog.php");
                                 <!-- Slide 2 -->
                                 <div class="swiper-slide">
                                     <div>
-                                        <img src="assets/images/blog/monkey-island-four.jpg" class="img-fluid rounded" alt="title image">
+                                        <img src="assets/images/blog/monkey-island-four.jpg" class="img-fluid imgRound" alt="title image">
                                         <i class="fa fa-th-list"></i>
                                     </div>
 
@@ -284,10 +293,13 @@ include_once("include/lang/{$idioma}-blog.php");
                                         <div class="container mb-1">
                                             <div class="row">
                                                 <div class="col-lg-4">
-                                                    <img src="assets/images/blog/mojito-bar-two.jpg" class="rounded" alt="" style="max-width: 100%; height: auto;">
+                                                    <img src="assets/images/blog/mojito-bar-two.jpg" class="imgRound" alt="" style="max-width: 100%; height: auto;  ">
                                                 </div>
                                                 <div class="col-lg-8">
 
+                                                    <p class="justificado">
+                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
+                                                    </p>
                                                     <p class="justificado">
                                                         Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
                                                     </p>
@@ -311,7 +323,7 @@ include_once("include/lang/{$idioma}-blog.php");
                                 </div>
                                 <!-- Slide 3 -->
                                 <div class="swiper-slide">
-                                    <img src="assets/images/blog/playa-dorada-two.jpg" class="img-fluid rounded" alt="Descripción de la imagen">
+                                    <img src="assets/images/blog/playa-dorada-two.jpg" class="img-fluid imgRound" alt="Descripción de la imagen">
                                     <div class="blog-post">
                                         <p class="justificado">
                                             Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
@@ -322,10 +334,16 @@ include_once("include/lang/{$idioma}-blog.php");
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-4">
-                                                    <img src="assets/images/blog/mojito-bar-one.jpg" class="rounded" alt="" style="max-width: 100%; height: auto;">
+                                                    <img src="assets/images/blog/mojito-bar-one.jpg" alt="" class="mb-1 imgRound" style="max-width: 100%; height: auto;  ">
                                                 </div>
                                                 <div class="col-lg-8">
-                                                    <br>
+
+                                                    <p class="justificado">
+                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
+                                                    </p>
+                                                    <p class="justificado">
+                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
+                                                    </p>
                                                     <p class="justificado">
                                                         Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
                                                     </p>
@@ -348,25 +366,29 @@ include_once("include/lang/{$idioma}-blog.php");
 
                                 </div>
                             </div>
-                            <div style="display: flex; " >
-                                <a href="#" class="text-uppercase button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
-                            <!-- Botones de navegación y paginación -->
+                            <div style="display: flex; ">
+                                <a href="blog_all.php" class=" button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
+                                <!-- Botones de navegación y paginación -->
 
-                            <div class="container mt-3 d-flex justify-content-end" style="margin-top:-40%;">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="swiper-pagination"></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="swiper-button-next"></div>
+                                <div class="container mt-3 d-flex justify-content-end pagination-items" style="margin-top:-40%;">
+                                    <div class="row">
+                                        <div class="col-auto">
+
+                                            <img class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev">
+
+                                        </div>
+                                        <div class="col-auto ">
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                        <div class="col-auto">
+
+                                            <img class="swiper-button-next" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            </div>
-                            
+
 
                         </div>
                     </div>
