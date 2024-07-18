@@ -29,9 +29,10 @@
   border-color: white;
   background-color: transparent;
   border-width: 2px;
+  color: white !important;
 }
-#contact-form input::placeholder,
-#contact-form textarea::placeholder {
+#faq-page #contact-form input::placeholder,
+#faq-page #contact-form textarea::placeholder {
   color: white;
   font-weight: bold;
   text-transform: uppercase;

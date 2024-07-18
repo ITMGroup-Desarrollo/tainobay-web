@@ -1,0 +1,69 @@
+#port-page .card-port {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: transparent;
+  background-clip: border-box;
+  border-radius: 25px !important;
+  overflow: hidden;
+}
+
+#port-page .card-img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.card-img-wrapper {
+  position: relative;
+}
+
+.card-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue-color)); */
+  z-index: 1;
+}
+
+.card-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 40%, var(--blue-color));
+}
+
+.card-title {
+  font-size: 2.8rem;
+}
+
+.card-content-overlay .button-transparent {
+  padding: 2px 8%;
+}
+
+.wrapper-link-more {
+  transition: all 0.5s ease;
+  max-height: 0;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue-color) 80%);
+}
+
+.card-content-overlay:hover .wrapper-link-more {
+  max-height: 40%;
+  opacity: 1;
+  padding: 0.5rem 0;
+}
