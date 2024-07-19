@@ -73,8 +73,13 @@
 
 .gradient-title {
   background: linear-gradient(105deg, var(--primary-color) 45%, var(--blue-color) 0%);
-    -webkit-background-clip: text;
-    color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+#single-port-page .dashed-border {
+  border-bottom: 2px dashed var(--blue-color);
 }
 
 /* sm */
@@ -83,18 +88,48 @@
 /* md 768px  */
 @media (min-width: 768px) {
   .grid-container-3 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
-    #port-page .card-img {
-      width: 400px;
-      height: 250px;
-    }
+  #port-page .card-img {
+    width: 400px;
+    height: 250px;
+  }
+  .dashed-border {
+    margin-bottom: 4px;
+  }
+  #single-port-page .dashed-border {
+    border: none;
+  }
+  #single-port-page .dashed-border:nth-child(odd) {
+    border-right: 2px dashed var(--blue-color);
+  }
+         /* #single-port-page .dashed-border {
+       position: relative;
+     }
+  
+         #single-port-page .dashed-border::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       width: 2px;
+
+       background: repeating-linear-gradient(to bottom,
+           var(--blue-color),
+          var(--blue-color),
+
+           transparent 10px,
+           transparent 15px
+
+         );
+     } */
 }
 
 /* lg 1024px  */
 @media (min-width: 1024px) {
   .grid-container-3 {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
 }
 

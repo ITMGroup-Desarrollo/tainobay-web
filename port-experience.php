@@ -94,7 +94,7 @@ include_once("include/lang/{$idioma}-port-experience.php");
                   </div>
                   <h2 class="card-title">Blue Parrot</h2>
                   <div class="w-100 wrapper-link-more">
-                    <a href="#" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= BUTTON_EXPLORE ?></strong></a>
+                    <a href="<?= $idioma ?>/single-port-experience" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= BUTTON_EXPLORE ?></strong></a>
                     <!-- Icon aino Bay -->
                     <div>
                       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
@@ -626,7 +626,7 @@ include_once("include/lang/{$idioma}-port-experience.php");
         </div>
 
         <div class="text-center d-block mt-4">
-          <a href="#" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_PORT_EXPERIENCE ?></strong></a>
+          <a href="<?= $idioma ?>/map" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_PORT_EXPERIENCE ?></strong></a>
         </div>
       </div>
     </section>
