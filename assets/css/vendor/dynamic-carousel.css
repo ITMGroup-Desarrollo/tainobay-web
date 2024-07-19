@@ -66,11 +66,21 @@ position: relative;
 }
 .button-blue {
   color: var(--blue-color);
-  border: solid 2px var(--blue-color);
+  border: solid 3px var(--blue-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.button-blue:hover {
+  background-color: var(--blue-color);
+  color: white;
 }
 .button-orange {
   color: var(--primary-color);
-  border: solid 2px var(--primary-color);
+  border: solid 3px var(--primary-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.button-orange:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 /* sm */
