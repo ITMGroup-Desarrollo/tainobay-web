@@ -15,7 +15,7 @@ define('DISCOVER_WELCOME', array(
 define('DISCOVER_CARRUSEL', array(
     '¡UN ESCAPADA',
     'LLENA DE ADRENALINA!',
-    'SIENTE LA EMOCION',
+    'SIENTE LA EMOCIÓN',
     'La experiencia definitiva en ATV. Súbete a un camión safari al aire libre durante 25 minutos y disfruta de un recorrido panorámico por el vibrante paisaje de Puerto Plata.',
     'VER MÁS',
     'VER MENOS'

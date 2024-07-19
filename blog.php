@@ -10,7 +10,49 @@ include_once("include/lang/{$idioma}-blog.php");
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/blog.css">
     <style>
-       
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: -3rem;
+            top: 4rem;
+            background-color: transparent; /* Hacer el fondo transparente */
+            min-width: 60px; /* Ajusta el ancho mínimo según sea necesario */
+            box-shadow: none; /* Eliminar la sombra */
+            z-index: 1;
+            opacity: 0; /* Hacer que el contenido sea invisible por defecto */
+            max-height: 0; /* Hacer que el contenido tenga una altura de 0 por defecto */
+            overflow: hidden; /* Ocultar el contenido desbordante */
+            transition: opacity 0.5s ease, max-height 0.5s ease; /* Agregar una transición suave */
+        }
+
+        .dropdown-content.show {
+            display: block;
+            opacity: 1; /* Hacer el contenido visible */
+            max-height: 500px; /* Ajusta el máximo alto según sea necesario */
+        }
+
+        .dropdown-content a {
+            color: white; /* Hacer los iconos blancos */
+            padding: 0; /* Eliminar el padding */
+            text-decoration: none;
+            display: block;
+            font-size: 1.5rem; /* Ajustar el tamaño del icono */
+        }
+
+        .dropdown-content a:hover {
+            background-color: transparent; /* No cambiar el fondo al hacer hover */
+        }
+
+        .azulBlog {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 
@@ -95,7 +137,22 @@ include_once("include/lang/{$idioma}-blog.php");
                                 <div class="swiper-slide blog-content">
                                     <div class="title-image">
                                         <img src="assets/images/blog/playa-dorada-two.jpg" class="img-fluid imgRound" alt="title image" style="width: 100%; height: auto;  ">
-                                        <i class="fa fa-share-alt fa-2x azulBlog"></i>
+                                        <div class="dropdown azulBlog">
+                                            <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                                    <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-content" id="dropdownContent">
+                                                <a href="https://www.facebook.com" target="_blank">
+                                                    <i class="fab fa-facebook"></i>
+                                                </a>
+                                                <a href="https://www.whatsapp.com" target="_blank">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                     <div class="blog-post">
@@ -241,9 +298,6 @@ include_once("include/lang/{$idioma}-blog.php");
                                             <img class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev">
 
                                         </div>
-                                        <div class="col-auto ">
-                                            <div class="swiper-pagination"></div>
-                                        </div>
                                         <div class="col-auto">
 
                                             <img class="swiper-button-next" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev">
@@ -255,11 +309,6 @@ include_once("include/lang/{$idioma}-blog.php");
 
 
                         </div>
-                    </div>
-                    <div class="col-lg-1 title-icons" style="display: flex; justify-content: space-around;">
-                        <img src="assets/icons/icon-list.png" style="margin-left:30px; margin-right:30px; width:50px; height:50px;" alt="list icon">
-                        <img src="assets/icons/icon-grid.png" style="margin-right:10px; width:50px; height:50px;" alt="grid icon">
-
                     </div>
 
                 </div>
@@ -273,6 +322,25 @@ include_once("include/lang/{$idioma}-blog.php");
     <?php include("include/footer.php"); ?>
     <?php include("include/js.php"); ?>
     <script src="assets/js/vendor/blog.js"></script>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownContent");
+            dropdown.classList.toggle("show");
+        }
+
+        // Cerrar el dropdown si se hace clic fuera de él
+        window.onclick = function(event) {
+            if (!event.target.matches('.border-0') && !event.target.closest('.dropdown')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show")) {
+                        openDropdown.classList.remove("show");
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
