@@ -1,5 +1,10 @@
+    <style>
+        .shock-footer{
+            background-color: #1c355e;
+        }
+    </style>
     <!-- Footer -->
-    <footer id="footer" class="shock-footer scheme-1 primary">
+    <footer id="footer" class="shock-footer scheme-1 primary" >
         <div class="footer-content focus-trigger">
             <div class="container">
                 <div class="row g-3">
