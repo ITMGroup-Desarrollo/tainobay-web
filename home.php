@@ -368,8 +368,8 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                                     <span class="d-block w-100 border-2 border-bottom border-blue"></span>
                                 </div>
                                 <a href="#collapse-1" class="d-block parent w-100 text-center text-orange button-plus collapsed" aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse">
-                                    <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m-7-7h14" />
+                                    <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32" />
                                     </svg>
                                 </a>
                             </div>
@@ -416,8 +416,8 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                                     <span class="d-block w-100 border-2 border-bottom border-blue"></span>
                                 </div>
                                 <a href="#collapse-2" class="d-block parent w-100 text-center text-orange button-plus collapsed" aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse">
-                                    <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m-7-7h14" />
+                                    <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32" />
                                     </svg>
                                 </a>
                             </div>
@@ -463,8 +463,8 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                                     <span class="d-block w-100 border-2 border-bottom border-blue"></span>
                                 </div>
                                 <a href="#collapse-3" class="d-block parent w-100 text-center text-orange button-plus collapsed" aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse">
-                                    <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m-7-7h14" />
+                                    <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32" />
                                     </svg>
                                 </a>
                             </div>
@@ -472,7 +472,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="#" class="text-uppercase button-transparent button-orange text-center"><strong><?= FAQS_TEXT[3]; ?></strong></a>
+                    <a href="<?= $idioma ?>/faqs" class="text-uppercase button-transparent button-orange text-center"><strong><?= FAQS_TEXT[3]; ?></strong></a>
                 </div>
             </div>
         </section>

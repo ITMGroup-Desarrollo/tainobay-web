@@ -9,7 +9,10 @@ define('MENU', array(
     'Map',
     'Arrivals',
     'Blog',
-    'FAQs'
+    'FAQs',
+    'Contact',
+    'Port Experience',
+    'Discover Beyond The Cruise'
 ));
 
 define('TEXT_MENU', array(

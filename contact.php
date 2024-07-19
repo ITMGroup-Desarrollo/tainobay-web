@@ -42,8 +42,8 @@ include_once("include/lang/{$idioma}-contact.php");
     </section>
 
     <!-- Title -->
-    <section class="shock-section has-holder pt-5 pb-2">
-      <div class="container max-w-75">
+    <section class="shock-section has-holder pb-2">
+      <div class="container max-w-85">
 
         <div class="basic-intro text-center">
           <h2 class="text-blue text-style-2 text-uppercase">
@@ -57,7 +57,9 @@ include_once("include/lang/{$idioma}-contact.php");
     <!-- Main -->
     <section class="shock-section pb-5">
       <div class="container max-w-85">
-        <a href="mailto:info@porttainobay.com" class="text-blue text-center d-block mb-1"><strong>info@porttainobay.com</strong></a>
+        <div class="mb-1 text-center">
+          <a href="mailto:info@porttainobay.com" class="text-blue text-center"><strong>info@porttainobay.com</strong></a>
+        </div>
         <address class="text-blue text-center">Av. Antigua Via Férrea, Muelle Turístico entre Av. Penetración Portuaria y Prolongación Duarte. <br>
           Puerto Plata 57000 República Dominicana.
         </address>
@@ -70,6 +72,8 @@ include_once("include/lang/{$idioma}-contact.php");
 
   </main>
 
+
+  <?php include("include/action-form.php"); ?>
   <?php include("include/widget.php"); ?>
   <?php include("include/footer.php"); ?>
   <?php include("include/js.php"); ?>
