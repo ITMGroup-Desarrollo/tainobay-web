@@ -56,6 +56,11 @@
                                         <span class="text"><?php echo  FOOTER_OURS[3]; ?></span>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="nav-link">
+                                        <span class="text"><?php echo  FOOTER_OURS[4]; ?></span>
+                                    </a>
+                                </li>
 
                             </ul>
                         </div>

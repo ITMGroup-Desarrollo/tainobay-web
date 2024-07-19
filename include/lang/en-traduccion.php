@@ -25,7 +25,8 @@ define('FOOTER_OURS', array(
     'ABOUT US',
     'Puerto Plata',
     'Map',
-    'Arrivals'
+    'Arrivals',
+    'DISCOVER BEYOND THE CRUISE'
 ));
 
 define('FOOTER_ACTIVITIES', array(
