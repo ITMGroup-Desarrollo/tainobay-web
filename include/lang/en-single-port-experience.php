@@ -38,7 +38,8 @@ $points = [
     'title' => 'Menu',
     'menu' => [
       [
-        'img' => 'cantina-latina-menu-1.webp',
+        'image' => 'cantina-latina-menu-1.jpg',
+        'image-position' => 'center',
         'items' => [
           [
             'name' => 'Nachos',
@@ -51,7 +52,8 @@ $points = [
         ]
       ],
       [
-        'img' => 'cantina-latina-menu-2.webp',
+        'image' => 'cantina-latina-menu-2.jpg',
+        'image-position' => 'bottom',
         'items' => [
           [
             'name' => 'Dominican D',
