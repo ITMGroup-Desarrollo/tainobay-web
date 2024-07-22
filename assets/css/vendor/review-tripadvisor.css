@@ -45,7 +45,7 @@
       padding: 20px 35px 20px 35px;
     }
 
-  .active {
+  .active-card-review {
     transform: translateY(35px);
   }
 }

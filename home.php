@@ -244,7 +244,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                     </div>
 
                     <!-- card -->
-                    <div class="card-review rounded-5 d-flex flex-column position-relative active">
+                    <div class="card-review rounded-5 d-flex flex-column position-relative active-card-review">
                         <!-- Image wrapper -->
                         <div class="card-header mb-1">
                             <img src="https://randomuser.me/api/portraits/men/71.jpg" class="rounded-circle user-img" alt="">
