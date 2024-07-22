@@ -28,7 +28,8 @@ define('FOOTER_OURS', array(
     'NOSOTROS',
     'Puerto Plata',
     'Mapa',
-    'Llegadas'
+    'Llegadas',
+    'DISCOVER BEYOND THE CRUISE'
 ));
 
 define('FOOTER_ACTIVITIES', array(

@@ -8,41 +8,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 <head>
 
     <?php include("include/head.php"); ?>
-
-    <style>
-        .justificado {
-            text-align: justify;
-        }
-
-        :root {
-            --blog-icono: #1c355e;
-        }
-
-        .title-carrusel {
-            color: var(--blog-icono);
-        }
-
-        .text-start {
-            padding-left: 3rem;
-        }
-        .display-button{
-            color: white;
-        }
-        .display-button:hover{
-            color: var(--blog-icono);
-        }
-        .rotate-90 {
-    --fa-rotate-angle: 90deg !important;
-}
-.fa-rotate-by {
-    transition: transform 0.5s ease; /* Cambia la duración a tu gusto */
-}
-
-.rotate-90 {
-    --fa-rotate-angle: 90deg;
-    transform: rotate(var(--fa-rotate-angle));
-}
-    </style>
+    <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
 </head>
 
 <body class="shock-body">
@@ -93,57 +59,96 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
             </div>
         </section>
-        <!-- Blog Section -->
+        <!--First Carrusel-->
         <section id="port-experience" class="shock-section pt-2 pb-4">
-
-            <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
-                <div class="basic-intro mb-35">
-
-                    <h3 class="text-style-2 lh-1 title-carrusel"><span class="d-block text-start"><?php echo DISCOVER_CARRUSEL[0];  ?></span>
-                        <span class="d-flex justify-content-end gap-5">
-                            <h3 class="text-style-4 lh-1  text-italic">
-                                <span><mark class="animated-underline primary"> <?php echo  DISCOVER_CARRUSEL[1]; ?></mark></span>
-                        </span>
-                        </h2>
-                        <div class="description gray">
-
-                        </div>
-                </div>
-                <div class="d-flex align-items-center gap-3 w-75">
-                    <!-- Arrow Left -->
-                    <a href="#" class="slide-navigation-item-prev d-block text-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
-                            <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                            <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                        </svg>
-                    </a>
-                    <!-- Text Carousel -->
-                    <div class="flex-grow-1 ">
-                        <p class="text-style-7" style="line-height: 55px; text-align:center; color:#1c355e;"><span class="d-block"><?php echo  DISCOVER_CARRUSEL[2]; ?></span></p>
-                    </div>
-                    <!-- Arrow Right -->
-                    <a href="#" class="slide-navigation-item-next d-block text-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
-                            <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                            <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class=" container-text mx-auto px-5 bg-orange pb-3 pt-3" style="width: 100%; ">
-
-
-                    <p class="text-black black text-style-13 justificado"><?php echo DISCOVER_CARRUSEL[3];  ?></p>
-                    <div class="d-flex justify-content-end">
-                        <a  class="display-button" onclick="rotateIcon(this)">
-                        <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
-                            <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4];  ?></b>
-                        </a>
-                    </div>
-
-
-                </div>
-
+    <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
+        <div class="basic-intro mb-35">
+            <h3 class="text-style-2 lh-1 title-carrusel">
+                <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
+                <span class="d-flex justify-content-end gap-5">
+                    <span class="text-style-4 lh-1 text-italic">
+                        <mark class="animated-underline primary"><?php echo DISCOVER_CARRUSEL[1]; ?></mark>
+                    </span>
+                </span>
+            </h3>
+            <div class="description gray"></div>
+        </div>
+        <div class="d-flex align-items-center gap-3 w-75">
+            <!-- Arrow Left -->
+            <a href="#" class="slide-navigation-item-prev d-block text-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+                    <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                    <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                </svg>
+            </a>
+            <!-- Text Carousel -->
+            <div class="flex-grow-1">
+                <p class="text-style-7" style="line-height: 55px; text-align:center; color:#1c355e;">
+                    <span class="d-block"><?php echo DISCOVER_CARRUSEL[2]; ?></span>
+                </p>
             </div>
+            <!-- Arrow Right -->
+            <a href="#" class="slide-navigation-item-next d-block text-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+                    <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                    <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                </svg>
+            </a>
+        </div>
+        <div class="container-text mx-auto px-5 bg-orange pb-3 pt-3" style="width: 100%;">
+            <p class="text-black black text-style-13 justificado"><?php echo DISCOVER_CARRUSEL[3]; ?></p>
+            <div class="d-flex justify-content-end">
+                <a class="display-button" onclick="rotateIcon(this)">
+                    <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
+                    <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image-wrapper position-relative">
+                    <!-- share -->
+                    <div class="position-absolute top-0 end-0 p-1 button-share">
+                        <button class="border-0 text-white bg-transparent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <picture>
+                        <source src="assets/images/points-of-interest/ParqueCentral.jpg">
+                        <img src="assets/images/points-of-interest/ParqueCentral.jpg" class="d-block w-100" alt="Parque Central">
+                    </picture>
+                </div>
+            </div>
+            <!-- Añadir más elementos del carrusel aquí -->
+            <div class="carousel-item">
+                <div class="carousel-image-wrapper position-relative">
+                    <!-- share -->
+                    <div class="position-absolute top-0 end-0 p-1 button-share">
+                        <button class="border-0 text-white bg-transparent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <picture>
+                        <source src="assets/images/points-of-interest/MuseoAmbar.jpg">
+                        <img src="assets/images/points-of-interest/MuseoAmbar.jpg" class="d-block w-100" alt="Otra Imagen">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="displayed-blog">
+        <p style="color: black;">Hola mundo</p>
+    </div>
+</section>
+        <!--Second Carrusel-->
+        <section id="port-experience" class="shock-section pt-2 pb-4 ">
             <div class="carousel-image-wrapper">
                 <!-- share -->
                 <div class="position-absolute top-0 end-0 p-1 button-share">
@@ -164,31 +169,107 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <img src="assets/images/points-of-interest/ParqueCentral.jpg" alt="">
                 </picture>
             </div>
+            <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
+                <div class="basic-intro mb-35">
+                    <h3 class="text-style-2 lh-1 title-carrusel">
+                        <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
+                        <span class="d-flex justify-content-end gap-5">
+                            <span class="text-style-4 lh-1 text-italic">
+                                <mark class="animated-underline primary"><?php echo DISCOVER_CARRUSEL[1]; ?></mark>
+                            </span>
+                        </span>
+                    </h3>
+                    <div class="description gray"></div>
+                </div>
+                <div class="d-flex align-items-center gap-3 w-75">
+                    <!-- Arrow Left -->
+                    <a href="#" class="slide-navigation-item-prev d-block text-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+                            <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                            <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                        </svg>
+                    </a>
+                    <!-- Text Carousel -->
+                    <div class="flex-grow-1">
+                        <p class="text-style-7" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <span class="d-block"><?php echo DISCOVER_CARRUSEL[2]; ?></span>
+                        </p>
+                    </div>
+                    <!-- Arrow Right -->
+                    <a href="#" class="slide-navigation-item-next d-block text-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+                            <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                            <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="container-text mx-auto px-5 bg-orange pb-3 pt-3" style="width: 100%;">
+                    <p class="text-black black text-style-13 justificado"><?php echo DISCOVER_CARRUSEL[3]; ?></p>
+                    <div class="d-flex justify-content-end">
+                        <a class="display-button" onclick="rotateIcon(this)">
+                            <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
+                            <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="displayed-blog">
+                <p style="color: black;">Hola mundo</p>
+            </div>
         </section>
+
     </main>
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
     <?php include("include/js.php"); ?>
-    <script src="assets/js/vendor/blog.js"></script>
     <script>
-        function rotateIcon(element) {
-    const icon = element.querySelector('.fa-xmark');
-    const textElement = element.querySelector('b');
-    if (icon) {
-        icon.classList.toggle('rotate-90');
-    }
-    if (textElement) {
-        // Alterna entre los dos textos
-        if (textElement.textContent.trim() === "<?php echo DISCOVER_CARRUSEL[4]; ?>") {
-            textElement.textContent = "<?php echo DISCOVER_CARRUSEL[5]; ?>";
-        } else {
-            textElement.textContent = "<?php echo DISCOVER_CARRUSEL[4]; ?>";
-        }
-    }
-}
+        document.addEventListener('DOMContentLoaded', function() {
+            // Añade un manejador de eventos para cada botón de despliegue
+            const buttons = document.querySelectorAll('.display-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const section = this.closest('section'); // Encuentra el ancestro <section> del botón
+                    const displayedBlog = section.querySelector('.displayed-blog'); // Encuentra el div correspondiente dentro de esa sección
 
+                    // Oculta todos los otros displayed-blog en otras secciones
+                    document.querySelectorAll('.displayed-blog').forEach(blog => {
+                        if (blog !== displayedBlog) {
+                            blog.style.display = 'none';
+                        }
+                    });
+
+                    // Alterna la visibilidad del displayed-blog en la sección actual
+                    if (displayedBlog.style.display === 'none' || displayedBlog.style.display === '') {
+                        displayedBlog.style.display = 'block';
+                    } else {
+                        displayedBlog.style.display = 'none';
+                    }
+
+                    // Rotea el icono y cambia el texto del botón
+                    const icon = this.querySelector('.fa-xmark');
+                    const textElement = this.querySelector('b');
+                    if (icon) {
+                        icon.classList.toggle('rotate-90');
+                    }
+                    if (textElement) {
+                        const isExpanded = textElement.textContent.trim() === "<?php echo DISCOVER_CARRUSEL[4]; ?>";
+                        textElement.textContent = isExpanded ? "<?php echo DISCOVER_CARRUSEL[5]; ?>" : "<?php echo DISCOVER_CARRUSEL[4]; ?>";
+                    }
+                });
+            });
+        });
+        document.querySelector('.slide-navigation-item-prev').addEventListener('click', function(event) {
+            event.preventDefault();
+            $('#carouselExample').carousel('prev');
+        });
+
+        document.querySelector('.slide-navigation-item-next').addEventListener('click', function(event) {
+            event.preventDefault();
+            $('#carouselExample').carousel('next');
+        });
     </script>
+
 </body>
 
 </html>

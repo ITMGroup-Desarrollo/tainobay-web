@@ -1,7 +1,7 @@
 <?php
 define('TITULOS_DISCOVER', array(
     'DISCOVER BEYOND',
-    'EL CRUCERO',
+    'THE CRUISE',
     '¡Reserva tus tours a tu llegada en los puestos de última hora!',
     'BACK'
 ));

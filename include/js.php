@@ -20,6 +20,7 @@
     <script src="assets/js/vendor/aos.min.js"></script>
     <script src="assets/js/vendor/lax.min.js"></script>
     <script src="assets/js/vendor/cursor-effect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
