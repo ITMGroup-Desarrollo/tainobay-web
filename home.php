@@ -67,9 +67,9 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
         <section class="shock-section pt-2 pb-4">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
-                    <h2 class="text-style-2 lh-1 text-uppercase text-blue"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>
+                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>
                         <span class="d-flex justify-content-end gap-3">
-                            <span class="text-style-3 lh-1 text-orange"><?= HOME_TEXT_WELCOME[1] ?></span> <?= HOME_TEXT_WELCOME[2] ?>
+                            <span class="text-style-3 lh-1"><?= HOME_TEXT_WELCOME[1] ?></span> <?= HOME_TEXT_WELCOME[2] ?>
                         </span>
                     </h2>
                 </div>
@@ -86,7 +86,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
 
             <div class="carousel-content bg-orange d-flex flex-column justify-content-evenly align-items-center">
                 <h2 class="text-uppercase text-center text-style-3"><strong>Port experience</strong></h2>
-                <div class="d-flex align-items-center gap-3 w-75">
+                <div class="d-flex align-items-center gap-3 w-75 max-w-2xl-60">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-block text-blue">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -171,7 +171,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
 
             <div class="carousel-content bg-blue d-flex flex-column justify-content-evenly align-items-center">
                 <h2 class="text-uppercase text-center text-style-3"><strong>Discover Beyond The Cruise</strong></h2>
-                <div class="d-flex align-items-center gap-3 w-75">
+                <div class="d-flex align-items-center gap-3 w-75 max-w-2xl-60">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-block text-orange">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -319,11 +319,11 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-2 pb-4 mb-5">
+        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-delay="300">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="mb-0 text-blue text-style-2" style="line-height: 70px;"><?= FAQS_TEXT[0] ?></h2>
-                    <h3 class="mb-0 text-blue text-style-5"><?= FAQS_TEXT[1] ?></h3>
+                    <h2 class="mb-0 text-blue text-style-2 gradient-animated-title animation-duration-3" style="line-height: 70px;"><?= FAQS_TEXT[0] ?></h2>
+                    <h3 class="mb-0 text-blue text-style-5 gradient-animated-title animation-duration-3"><?= FAQS_TEXT[1] ?></h3>
                     <p class="text-blue text-style-13"><?= FAQS_TEXT[2] ?></p>
                 </div>
 

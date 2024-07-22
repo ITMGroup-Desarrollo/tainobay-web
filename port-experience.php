@@ -45,7 +45,7 @@ include_once("include/lang/{$idioma}-port-experience.php");
     <section class="shock-section pt-2 pb-4">
       <div class="container text-center my-5">
         <div class="mx-auto mb-2">
-          <h2 class="text-style-3 lh-1 text-uppercase text-blue gradient-title"><?= TITULOS_PORT_EXPERIENCE[0] ?><br>
+          <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-2"><?= TITULOS_PORT_EXPERIENCE[0] ?><br>
             <?= TITULOS_PORT_EXPERIENCE[1] ?>
           </h2>
         </div>

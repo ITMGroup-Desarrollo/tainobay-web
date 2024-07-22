@@ -16,4 +16,4 @@ define('TEXT_PORT_EXPERIENCE', array(
 ));
 
 define('BUTTON_EXPLORE', 'Ver más');
-define('TEXT_BUTTON_PORT_EXPERIENCE', 'Descubre nuestro mapa intereactivo');
+define('TEXT_BUTTON_PORT_EXPERIENCE', 'Descubre nuestro mapa interactivo');

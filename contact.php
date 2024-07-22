@@ -46,7 +46,7 @@ include_once("include/lang/{$idioma}-contact.php");
       <div class="container max-w-85">
 
         <div class="basic-intro text-center">
-          <h2 class="text-blue text-style-2 text-uppercase">
+          <h2 class="text-blue text-style-2 text-uppercase gradient-animated-title animation-duration-2">
             <?= TITULOS_CONTACT[0] ?>
           </h2>
         </div>

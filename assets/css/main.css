@@ -834,4 +834,60 @@ table{caption-side:bottom;border-collapse:collapse;border-color:var(--color)}
 .bg-orange {
   background-color: var(--primary-color);
 }
-
+a:hover {
+  color: initial;
+}
+.z-15 {
+  z-index: 15;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.text-xs {
+  /* font-size: 12px; */
+  font-size: 0.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+}
+@keyframes colorChange {
+  0% {
+    background-position: 100% 100%;
+  }
+  
+  100% {
+    background-position: 0% 0%;
+  }
+ }
+.gradient-animated-title {
+  font-weight: bold;
+  color: transparent;
+  position: relative;
+  /* display: inline-block; */
+  background: linear-gradient(105deg, var(--blue-color) 50%, var(--primary-color) 50%);
+  background-size: 220%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorChange;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  /* animation-delay: 0.2s; */
+  animation-play-state: paused;
+}
+.active-animation {
+  animation-play-state: running;
+}
+.animation-duration-1{
+  animation-duration: 1s;
+}
+.animation-duration-2{
+  animation-duration: 2s;
+}
+.animation-duration-3{
+  animation-duration: 3s;
+}
+.animation-duration-4{
+  animation-duration: 4s;
+}

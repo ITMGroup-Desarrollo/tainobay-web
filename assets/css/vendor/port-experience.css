@@ -55,9 +55,9 @@
   transform: translateY(60%);
 }
 
-.card-title {
+/* .card-title {
   font-size: 2.8rem;
-}
+} */
 
 .card-content-overlay .button-transparent {
   padding: 2px 8%;
@@ -71,12 +71,12 @@
 }
 
 
-.gradient-title {
+/* .gradient-title {
   background: linear-gradient(105deg, var(--primary-color) 45%, var(--blue-color) 0%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent !important;
-}
+} */
 
 #single-port-page .dashed-border {
   border-bottom: 2px dashed var(--blue-color);
@@ -98,7 +98,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   #port-page .card-img {
-    width: 400px;
+    width: 100%;
     height: 250px;
   }
   .dashed-border {

@@ -1247,3 +1247,27 @@ jQuery(function ($) {
 });
 
 // #endregion ZZZ
+
+/*----------------------------------------------
+14. Animated Gradient Title
+----------------------------------------------*/
+
+// #region Animated Gradient Title
+
+jQuery(function ($) {
+  "use strict";
+
+  $(".gradient-animated-title").each(function () {
+    var $this = $(this);
+
+    $this.one("inview", function (event, isInView) {
+      if (isInView) {
+        setTimeout(function () {
+          $this.addClass("active-animation");
+        }, 200);
+      }
+    });
+  });
+});
+
+// #endregion Animated Gradient Title

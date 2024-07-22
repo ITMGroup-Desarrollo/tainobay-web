@@ -83,6 +83,10 @@ position: relative;
   color: white;
 }
 
+.w-75 {
+  max-width: 75%;
+}
+
 /* sm */
 @media (min-width: 640px) {
 
@@ -106,6 +110,8 @@ position: relative;
 }
 
 /* 2xl 1536px  */
-@media (min-width: 1536px) {
-  
+@media (min-width: 1600px) {
+  .max-w-2xl-60 {
+    max-width: 60%;
+  }
 }
