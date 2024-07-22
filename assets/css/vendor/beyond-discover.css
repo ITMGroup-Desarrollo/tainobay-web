@@ -1,69 +1,110 @@
 .justificado {
-            text-align: justify;
-        }
+    text-align: justify;
+}
 
-        :root {
-            --blog-icono: #1c355e;
-        }
+:root {
+    --blog-icono: #1c355e;
+}
 
-        .title-carrusel {
-            color: var(--blog-icono);
-        }
+.title-carrusel {
+    color: var(--blog-icono);
+}
 
-        .text-start {
-            padding-left: 3rem;
-        }
+.text-start {
+    padding-left: 3rem;
+}
 
-        .display-button {
-            color: white;
-        }
+.display-button {
+    color: white;
+}
 
-        .display-button:hover {
-            color: var(--blog-icono);
-        }
+.display-button:hover {
+    color: var(--blog-icono);
+}
 
-        .rotate-90 {
-            --fa-rotate-angle: 90deg !important;
-        }
+.rotate-90 {
+    --fa-rotate-angle: 90deg !important;
+}
 
-        .fa-rotate-by {
-            transition: transform 0.5s ease;
-        }
+.fa-rotate-by {
+    transition: transform 0.5s ease;
+}
 
 
-        .displayed-blog {
-            display: none;
-        }
-        span.text-style-4.lh-1.text-italic {
-            padding-right: 2rem;
-        }
-        a.slide-navigation-item-next.d-block.text-blue:hover,
-        a.slide-navigation-item-prev.d-block.text-blue:hover{
-            color: #f5a23a;
-        }
-        .carousel-indicators {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            padding-left: 0;
-            margin-bottom: 20px;
-            list-style: none;
-        }
-    
-        .carousel-indicators li {
-            background-color: #ccc;
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            transition: background-color 0.6s ease, width 0.6s ease, height 0.6s ease;
-        }
-    
-        .carousel-indicators .active {
-            background-color: #007bff;
-            width: 15px;
-            height: 15px;
-        }
+.displayed-blog {
+    display: none;
+}
+
+span.text-style-4.lh-1.text-italic {
+    padding-right: 2rem;
+}
+
+
+
+.carousel-indicators {
+    position: absolute !important;
+    bottom: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    gap: 5px !important;
+}
+
+.carousel-indicators button {
+    background-color: transparent !important; /* Fondo transparente para bullets inactivos */
+    border: 4px solid #fff !important; /* Borde blanco para bullets inactivos */
+    width: 1rem !important; /* Tamaño del bullet */
+    height: 1rem !important; /* Tamaño del bullet */
+    border-radius: 50% !important; /* Hace que el bullet sea redondo */
+    padding: 0 !important;
+    opacity: 0.6 !important;
+    transition: background-color 0.3s, opacity 0.3s !important;
+    position: relative !important;
+    margin-bottom: 2rem !important;
+}
+
+.carousel-indicators button.active {
+    background-color: white !important; /* Fondo del bullet activo */
+    border: 4px solid white !important; /* Borde del bullet activo */
+    opacity: 1 !important;
+    padding: 0 !important;
+    transform: none !important; /* Asegura que no se mueva hacia abajo */
+}
+
+.carousel-indicators button::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    background-color: transparent !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+a.slide-navigation-item-next1.d-block.text-blue:hover,
+a.slide-navigation-item-prev1.d-block.text-blue:hover, 
+a.slide-navigation-item-next2.d-block.text-blue:hover,
+a.slide-navigation-item-prev2.d-block.text-blue:hover, 
+a.slide-navigation-item-next3.d-block.text-blue:hover,
+a.slide-navigation-item-prev3.d-block.text-blue:hover, 
+a.slide-navigation-item-next4.d-block.text-blue:hover,
+a.slide-navigation-item-prev4.d-block.text-blue:hover {
+    color: #f5a23a !important;
+}
+.container-title-display{
+    width: auto !important;
+    padding: 0 rem;
+    text-align: center;
+}
+.justificado {
+    text-align: justify;
+}
+.centrado{
+    text-align: center !important;
+}
+
