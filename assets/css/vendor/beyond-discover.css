@@ -54,11 +54,16 @@ span.text-style-4.lh-1.text-italic {
 }
 
 .carousel-indicators button {
-    background-color: transparent !important; /* Fondo transparente para bullets inactivos */
-    border: 4px solid #fff !important; /* Borde blanco para bullets inactivos */
-    width: 1rem !important; /* Tamaño del bullet */
-    height: 1rem !important; /* Tamaño del bullet */
-    border-radius: 50% !important; /* Hace que el bullet sea redondo */
+    background-color: transparent !important;
+    /* Fondo transparente para bullets inactivos */
+    border: 4px solid #fff !important;
+    /* Borde blanco para bullets inactivos */
+    width: 1rem !important;
+    /* Tamaño del bullet */
+    height: 1rem !important;
+    /* Tamaño del bullet */
+    border-radius: 50% !important;
+    /* Hace que el bullet sea redondo */
     padding: 0 !important;
     opacity: 0.6 !important;
     transition: background-color 0.3s, opacity 0.3s !important;
@@ -67,11 +72,14 @@ span.text-style-4.lh-1.text-italic {
 }
 
 .carousel-indicators button.active {
-    background-color: white !important; /* Fondo del bullet activo */
-    border: 4px solid white !important; /* Borde del bullet activo */
+    background-color: white !important;
+    /* Fondo del bullet activo */
+    border: 4px solid white !important;
+    /* Borde del bullet activo */
     opacity: 1 !important;
     padding: 0 !important;
-    transform: none !important; /* Asegura que no se mueva hacia abajo */
+    transform: none !important;
+    /* Asegura que no se mueva hacia abajo */
 }
 
 .carousel-indicators button::after {
@@ -87,24 +95,196 @@ span.text-style-4.lh-1.text-italic {
 }
 
 a.slide-navigation-item-next1.d-block.text-blue:hover,
-a.slide-navigation-item-prev1.d-block.text-blue:hover, 
+a.slide-navigation-item-prev1.d-block.text-blue:hover,
 a.slide-navigation-item-next2.d-block.text-blue:hover,
-a.slide-navigation-item-prev2.d-block.text-blue:hover, 
+a.slide-navigation-item-prev2.d-block.text-blue:hover,
 a.slide-navigation-item-next3.d-block.text-blue:hover,
-a.slide-navigation-item-prev3.d-block.text-blue:hover, 
+a.slide-navigation-item-prev3.d-block.text-blue:hover,
 a.slide-navigation-item-next4.d-block.text-blue:hover,
 a.slide-navigation-item-prev4.d-block.text-blue:hover {
     color: #f5a23a !important;
 }
-.container-title-display{
+
+.container-title-display {
     width: auto !important;
     padding: 0 rem;
     text-align: center;
 }
+
 .justificado {
     text-align: justify;
 }
-.centrado{
+
+.centrado {
     text-align: center !important;
 }
+
+.duration-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.what-to-bring-duration {
+    display: flex;
+    background-color: #f5a23a;
+    padding: 0 1rem;
+    width: max-content;
+}
+
+.what-to-bring-list {
+    text-align: center;
+    background-color: #1c355e;
+    padding-bottom: 3rem;
+    width: fit-content;
+    padding: 0 3rem 3rem 3rem;
+}
+.what-to-bring-list h2{
+    padding-top: 2rem;
+    color: #fff;
+}
+.what-to-bring-list p{
+    justify-content: center;
+    color: #fff;
+    padding: 1.5rem 2rem;
+}
+.what-to-bring-duration svg {
+    align-self: center;
+    margin-right: 1rem;
+}
+.what-to-bring-list-container{
+display: flex;
+flex-direction:row-reverse ;
+}
+.duration-text h2 {
+    color: #1c355e;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+h2.text-style-6.text-italic {
+    margin-bottom: -1rem;
+    text-align: end;
+}
+
+.what-to-bring-duration {
+    justify-content: end;
+}
+
+.listado h2, .note-container h2 {
+    color: #1c355e;
+}
+
+.listado p {
+    color: black;
+    
+}
+
+.listado-highlights {
+    margin-bottom: 3rem;
+}
+
+/* Estilos para el contenedor del listado */
+.listado ul {
+    list-style-type: none;
+    /* Cambia el tipo de viñeta a disco */
+    padding-left: 3rem;
+    /* Espacio a la izquierda de la lista */
+}
+
+.listado ul li {
+    position: relative;
+    /* Necesario para posicionar la viñeta personalizada */
+    margin-bottom: 10px;
+    /* Espacio entre los elementos de la lista */
+    padding-left: 1rem;
+}
+
+/* Estilos para las viñetas */
+.listado ul li::before {
+    content: '';
+    /* Elimina el contenido predeterminado de la viñeta */
+    position: absolute;
+    /* Posiciona la viñeta personalizada */
+    left: -20px;
+    /* Espacio a la izquierda de la viñeta */
+    top: 50%;
+    /* Alinea verticalmente la viñeta */
+    transform: translateY(-50%);
+    /* Centra la viñeta verticalmente */
+    width: 10px;
+    /* Ancho de la viñeta */
+    height: 10px;
+    /* Alto de la viñeta */
+    background-color: #000;
+    /* Color de la viñeta */
+    border-radius: 50%;
+    /* Hace la viñeta circular */
+}
+
+/* Estilos adicionales para el texto */
+.listado ul li p {
+    margin: 0;
+    /* Elimina el margen del párrafo */
+    padding: 0;
+    /* Elimina el relleno del párrafo */
+}
+
+.list-item-container{
+    display: inline-flex;
+    align-items: center;
+}
+.list-container{
+    display: grid;
+    justify-content:center;
+}
+.listado-row{
+    margin-bottom: 3rem;
+}
+.note-container{
+    margin-bottom: 3rem;
+}
+.gallery-general-container{
+    text-align: center;
+}
+.gallery-general-container h2{
+    color: #1c355e;
+}
+.gallery-general-container {
+    text-align: center; 
+    padding: 20px; 
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 10px; 
+    justify-content: center; /
+}
+
+.gallery-container img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+.gallery-container{
+    margin-bottom: 5rem;
+}
+a.button-transparent.button-orange.text-center:hover {
+    background-color: #f5a23a;
+}
+.carousel-image-wrapper {
+    width: 900px;  /* Ancho fijo del contenedor */
+    height: 900px; /* Alto fijo del contenedor */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image-wrapper picture,
+.carousel-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el contenido al contenedor sin deformarlo */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+
 
