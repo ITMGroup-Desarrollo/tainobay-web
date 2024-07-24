@@ -56,11 +56,11 @@ span.text-style-4.lh-1.text-italic {
 .carousel-indicators button {
     background-color: transparent !important;
     /* Fondo transparente para bullets inactivos */
-    border: 4px solid #fff !important;
+    border: 2px solid #fff !important;
     /* Borde blanco para bullets inactivos */
-    width: 1rem !important;
+    width: 10px !important;
     /* Tamaño del bullet */
-    height: 1rem !important;
+    height: 10px !important;
     /* Tamaño del bullet */
     border-radius: 50% !important;
     /* Hace que el bullet sea redondo */
@@ -74,7 +74,7 @@ span.text-style-4.lh-1.text-italic {
 .carousel-indicators button.active {
     background-color: white !important;
     /* Fondo del bullet activo */
-    border: 4px solid white !important;
+    border: 2px solid white !important;
     /* Borde del bullet activo */
     opacity: 1 !important;
     padding: 0 !important;
@@ -211,9 +211,9 @@ h2.text-style-6.text-italic {
     /* Alinea verticalmente la viñeta */
     transform: translateY(-50%);
     /* Centra la viñeta verticalmente */
-    width: 10px;
+    width: 8px;
     /* Ancho de la viñeta */
-    height: 10px;
+    height: 8px;
     /* Alto de la viñeta */
     background-color: #000;
     /* Color de la viñeta */
@@ -271,7 +271,24 @@ h2.text-style-6.text-italic {
 a.button-transparent.button-orange.text-center:hover {
     background-color: #f5a23a;
 }
+.carousel-image-wrapper {
+    width: 60rem !important;
+    height: 60rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
 
+.carousel-image-wrapper picture,
+.carousel-image-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.displayed-blog {
+    margin-bottom: 3rem;
+}
 
 
 

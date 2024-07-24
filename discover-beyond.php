@@ -10,26 +10,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     <?php include("include/head.php"); ?>
     <?php include("include/header.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
-    <style>
-        .carousel-image-wrapper {
-            width: 60rem !important;
-            height: 60rem !important;
-            overflow: hidden !important;
-            position: relative !important;
-        }
 
-        .carousel-image-wrapper picture,
-        .carousel-image-wrapper img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            object-position: center !important;
-        }
-
-        .displayed-blog {
-            margin-bottom: 3rem;
-        }
-    </style>
 </head>
 
 <body class="shock-body">
@@ -88,9 +69,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <h3 class="text-style-2 lh-1 title-carrusel">
                             <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
                             <span class="d-flex justify-content-end gap-5">
-                                <span class="text-style-4 lh-1 text-italic">
-                                    <mark class="animated-underline primary"><?php echo DISCOVER_CARRUSEL[1]; ?></mark>
-                                </span>
+                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL[1]; ?></span>
                             </span>
                         </h3>
                         <div class="description gray"></div>
@@ -502,9 +481,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <h3 class="text-style-2 lh-1 title-carrusel">
                             <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL2[0]; ?></span>
                             <span class="d-flex justify-content-end gap-5">
-                                <span class="text-style-4 lh-1 text-italic">
-                                    <mark class="animated-underline primary"><?php echo DISCOVER_CARRUSEL2[1]; ?></mark>
-                                </span>
+                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL2[1]; ?></span>
                             </span>
                         </h3>
                         <div class="description gray"></div>
@@ -698,9 +675,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <h3 class="text-style-2 lh-1 title-carrusel">
                             <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL3[0]; ?></span>
                             <span class="d-flex justify-content-end gap-5">
-                                <span class="text-style-4 lh-1 text-italic">
-                                    <mark class="animated-underline primary"><?php echo DISCOVER_CARRUSEL3[1]; ?></mark>
-                                </span>
+                            <span class="d-flex justify-content-end gap-5">
+                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL3[1]; ?></span>
+                            </span>
                             </span>
                         </h3>
                         <div class="description gray"></div>
@@ -1091,9 +1068,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <h3 class="text-style-2 lh-1 title-carrusel">
                             <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL4[0]; ?></span>
                             <span class="d-flex justify-content-end gap-5">
-                                <span class="text-style-4 lh-1 text-italic">
-                                    <mark class="animated-underline primary"><?php echo DISCOVER_CARRUSEL4[1]; ?></mark>
-                                </span>
+                            <span class="d-flex justify-content-end gap-5">
+                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL4[1]; ?></span>
+                            </span>
                             </span>
                         </h3>
                         <div class="description gray"></div>
