@@ -11,7 +11,24 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     <?php include("include/header.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
     <style>
+        .carousel-image-wrapper {
+            width: 60rem !important;
+            height: 60rem !important;
+            overflow: hidden !important;
+            position: relative !important;
+        }
 
+        .carousel-image-wrapper picture,
+        .carousel-image-wrapper img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+        }
+
+        .displayed-blog {
+            margin-bottom: 3rem;
+        }
     </style>
 </head>
 
@@ -64,7 +81,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
         </section>
         <!--First Carrusel-->
-        <section>
+        <section class="carousel-section">
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
@@ -154,8 +171,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\atv-expedition-two.jpg">
-                                    <img src="assets\images\blog\atv-expedition-two.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/damajagua-two.jpg">
+                                    <img src="assets/images/blog/damajagua-two.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -380,7 +397,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
         </section>
         <!--Second Carrusel-->
-        <section>
+        <section class="carousel-section">
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
                     <div class="carousel-indicators">
@@ -674,7 +691,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
         </section>
         <!--Third Carrusel-->
-        <section>
+        <section class="carousel-section">
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
@@ -969,7 +986,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
         </section>
         <!--Fourth Carrusel-->
-        <section>
+        <section class="carousel-section">
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
                     <div class="carousel-indicators">
@@ -1272,24 +1289,17 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
         document.addEventListener('DOMContentLoaded', function() {
             const displayButtons = document.querySelectorAll('.display-button');
             const hideButtons = document.querySelectorAll('.display-hide-button');
+            const carouselSections = document.querySelectorAll('.carousel-section');
 
-            function handleButtonClick(button) {
-                const section = button.closest('section');
+            // Función para manejar el clic en los botones de visualización
+            function handleDisplayButtonClick(button) {
+                const section = button.closest('.carousel-section');
                 const displayedBlog = section.querySelector('.displayed-blog');
                 const textElement = button.querySelector('b');
                 const icon = button.querySelector('.fa-xmark');
 
-                // Oculta todos los otros displayed-blog en otras secciones y reinicia los textos de sus botones
-                document.querySelectorAll('.displayed-blog').forEach(blog => {
-                    if (blog !== displayedBlog) {
-                        blog.style.display = 'none';
-                    }
-                });
-                document.querySelectorAll('.display-button b').forEach(b => {
-                    if (b !== textElement) {
-                        b.textContent = "<?php echo DISCOVER_CARRUSEL[4]; ?>";
-                    }
-                });
+                // Verifica si todas las secciones están visibles o alguna está oculta
+                const areAllSectionsVisible = Array.from(carouselSections).every(sec => sec.style.display !== 'none');
 
                 // Alterna la visibilidad del displayed-blog en la sección actual
                 if (displayedBlog.style.display === 'none' || displayedBlog.style.display === '') {
@@ -1305,74 +1315,74 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     icon.classList.toggle('rotate-90');
                 }
 
-                // Asegura que los iconos en otras secciones estén en su estado original
-                document.querySelectorAll('.display-button .fa-xmark').forEach(i => {
-                    if (i !== icon) {
-                        i.classList.remove('rotate-90');
+                // Alterna la visibilidad de las secciones del carrusel
+                carouselSections.forEach(sec => {
+                    if (areAllSectionsVisible) {
+                        if (sec !== section) {
+                            sec.style.display = 'none';
+                        }
+                    } else {
+                        sec.style.display = 'block';
                     }
                 });
 
+                // Desplaza la vista al h2 dentro del displayed-blog
+                const blogHeading = displayedBlog.querySelector('p');
+                if (blogHeading) {
+                    blogHeading.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            }
+
+            // Función para manejar el clic en los botones de ocultación
+            function handleHideButtonClick(button) {
+                const section = button.closest('.carousel-section');
+                const displayedBlog = section.querySelector('.displayed-blog');
+                const displayButtonTextElement = section.querySelector('.display-button b');
+                const icon = section.querySelector('.display-button .fa-xmark');
+
+                // Muestra todas las secciones
+                carouselSections.forEach(sec => {
+                    sec.style.display = 'block';
+                });
+
+                // Alterna la visibilidad del displayed-blog en la sección actual
+                if (displayedBlog.style.display === 'none' || displayedBlog.style.display === '') {
+                    displayedBlog.style.display = 'block';
+                } else {
+                    displayedBlog.style.display = 'none';
+                }
+
+                // Cambia el texto del botón display-button
+                if (displayButtonTextElement) {
+                    displayButtonTextElement.textContent = "<?php echo DISCOVER_CARRUSEL[4]; ?>";
+                }
+
+                // Rotea el icono del button-hide-display
+                if (icon) {
+                    icon.classList.remove('rotate-90');
+                }
+
                 // Desplaza la vista al botón de display
-                button.scrollIntoView({
+                displayButtonTextElement.closest('.display-button').scrollIntoView({
                     behavior: 'smooth',
                     block: 'center'
                 });
             }
 
+            // Agrega los event listeners a los botones de visualización
             displayButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    handleButtonClick(this);
+                    handleDisplayButtonClick(this);
                 });
             });
 
+            // Agrega los event listeners a los botones de ocultación
             hideButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    const section = this.closest('section');
-                    const displayedBlog = section.querySelector('.displayed-blog');
-                    const displayButtonTextElement = section.querySelector('.display-button b');
-                    const icon = section.querySelector('.display-button .fa-xmark');
-
-                    // Oculta todos los otros displayed-blog en otras secciones y reinicia los textos de sus botones
-                    document.querySelectorAll('.displayed-blog').forEach(blog => {
-                        if (blog !== displayedBlog) {
-                            blog.style.display = 'none';
-                        }
-                    });
-                    document.querySelectorAll('.display-button b').forEach(b => {
-                        if (b !== displayButtonTextElement) {
-                            b.textContent = "<?php echo DISCOVER_CARRUSEL[4]; ?>";
-                        }
-                    });
-
-                    // Asegura que los iconos en otras secciones estén en su estado original
-                    document.querySelectorAll('.display-button .fa-xmark').forEach(i => {
-                        if (i !== icon) {
-                            i.classList.remove('rotate-90');
-                        }
-                    });
-
-                    // Alterna la visibilidad del displayed-blog en la sección actual
-                    if (displayedBlog.style.display === 'none' || displayedBlog.style.display === '') {
-                        displayedBlog.style.display = 'block';
-                    } else {
-                        displayedBlog.style.display = 'none';
-                    }
-
-                    // Cambia el texto del botón display-button
-                    if (displayButtonTextElement) {
-                        displayButtonTextElement.textContent = "<?php echo DISCOVER_CARRUSEL[4]; ?>";
-                    }
-
-                    // Rotea el icono del button-hide-display
-                    if (icon) {
-                        icon.classList.remove('rotate-90');
-                    }
-
-                    // Desplaza la vista al botón de display
-                    displayButtonTextElement.closest('.display-button').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
+                    handleHideButtonClick(this);
                 });
             });
         });
