@@ -20,32 +20,45 @@ include_once("include/lang/{$idioma}-blog.php");
             position: absolute;
             left: -3rem;
             top: 4rem;
-            background-color: transparent; /* Hacer el fondo transparente */
-            min-width: 60px; /* Ajusta el ancho mínimo según sea necesario */
-            box-shadow: none; /* Eliminar la sombra */
+            background-color: transparent;
+            /* Hacer el fondo transparente */
+            min-width: 60px;
+            /* Ajusta el ancho mínimo según sea necesario */
+            box-shadow: none;
+            /* Eliminar la sombra */
             z-index: 1;
-            opacity: 0; /* Hacer que el contenido sea invisible por defecto */
-            max-height: 0; /* Hacer que el contenido tenga una altura de 0 por defecto */
-            overflow: hidden; /* Ocultar el contenido desbordante */
-            transition: opacity 0.5s ease, max-height 0.5s ease; /* Agregar una transición suave */
+            opacity: 0;
+            /* Hacer que el contenido sea invisible por defecto */
+            max-height: 0;
+            /* Hacer que el contenido tenga una altura de 0 por defecto */
+            overflow: hidden;
+            /* Ocultar el contenido desbordante */
+            transition: opacity 0.5s ease, max-height 0.5s ease;
+            /* Agregar una transición suave */
         }
 
         .dropdown-content.show {
             display: block;
-            opacity: 1; /* Hacer el contenido visible */
-            max-height: 500px; /* Ajusta el máximo alto según sea necesario */
+            opacity: 1;
+            /* Hacer el contenido visible */
+            max-height: 500px;
+            /* Ajusta el máximo alto según sea necesario */
         }
 
         .dropdown-content a {
-            color: white; /* Hacer los iconos blancos */
-            padding: 0; /* Eliminar el padding */
+            color: white;
+            /* Hacer los iconos blancos */
+            padding: 0;
+            /* Eliminar el padding */
             text-decoration: none;
             display: block;
-            font-size: 1.5rem; /* Ajustar el tamaño del icono */
+            font-size: 1.5rem;
+            /* Ajustar el tamaño del icono */
         }
 
         .dropdown-content a:hover {
-            background-color: transparent; /* No cambiar el fondo al hacer hover */
+            background-color: transparent;
+            /* No cambiar el fondo al hacer hover */
         }
 
         .azulBlog {
@@ -91,43 +104,22 @@ include_once("include/lang/{$idioma}-blog.php");
                     <!-- timeline-->
                     <div class="col-lg-2">
                         <ul class="timeline">
-                            <li class="timeline-item">
-                                <div class="content">
-                                    <h3 class="mestitle"><?php echo TITULOS_BLOG[2];  ?></h3>
-                                    <h3 class="diatitle">25</h3>
-                                </div>
-                                <div class="circle">
-                                    <i class="fa-regular fa-circle"></i>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="content">
-                                    <h3 class="mestitle"><?php echo TITULOS_BLOG[2];  ?></h3>
-                                    <h3 class="diatitle">24</h3>
-                                </div>
-                                <div class="circle">
-                                    <i class="fa-regular fa-circle"></i>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="content">
-                                    <h3 class="mestitle"><?php echo TITULOS_BLOG[2];  ?></h3>
-                                    <h3 class="diatitle">23</h3>
-                                </div>
-                                <div class="circle">
-                                    <i class="fa-regular fa-circle"></i>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="content">
-                                    <h3 class="mestitle"><?php echo TITULOS_BLOG[2];  ?></h3>
-                                    <h3 class="diatitle">22</h3>
-                                </div>
-                                <div class="circle">
-                                    <i class="fa-regular fa-circle"></i>
-                                </div>
-                            </li>
-                            <!-- Añadir más eventos según sea necesario -->
+                            <?php
+                            $dias = array(25, 24, 23, 22, 21);
+                            foreach ($dias as $dia) {
+                            ?>
+                                <li class="timeline-item">
+                                    <div class="content">
+                                        <h3 class="mestitle"><?php echo TITULOS_BLOG[2]; ?></h3>
+                                        <h3 class="diatitle"><?php echo $dia; ?></h3>
+                                    </div>
+                                    <div class="circle">
+                                        <i class="fa-regular fa-circle"></i>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                     </div>
                     <div class="col-lg-9">
