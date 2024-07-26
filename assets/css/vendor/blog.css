@@ -22,7 +22,7 @@
 .timeline-item {
     position: relative;
     width: 100%;
-    padding: 10px 0 10px 40px;
+    padding: 1rem 0 1rem 1rem;
 
     box-sizing: border-box;
     margin-top: 0;
@@ -37,19 +37,6 @@
     /* Ajusta para poner la línea al lado derecho */
     width: 3px;
     height: 100%;
-    background-color: #949599;
-    /* Color de la línea */
-}
-
-.timeline-item:first-child:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    /* Ajusta para poner la línea al lado derecho */
-    width: 3px;
-    height: 50%;
-    /* Altura de la línea hasta la mitad */
     background-color: #949599;
     /* Color de la línea */
 }
@@ -88,28 +75,44 @@
 
 }
 
-.timeline-item:first-child .content {
+.timeline-item.active {
+    /* estilos para los items activos */
     color: var(--blog-icono);
-
+    margin-top: -21%;
 }
 
-.timeline-item:first-child .content .diatitle {
+.timeline-item.active.circle {
+    background-color: var(--blog-icono);
+}
+
+.timeline-item.active.diatitle {
     font-size: 4.5rem;
 }
 
-.timeline-item:first-child .content .mestitle {
+.timeline-item.active.mestitle {
     padding-left: 5px;
 }
 
-.timeline-item:first-child .content h3 {
-
+.timeline-item.active h3 {
     margin-top: -30%;
     margin-left: -15%;
 }
 
-.timeline-item:first-child .circle {
-    background-color: var(--blog-icono);
+.timeline-item:first-child:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 3px;
+    height: 50%;
+    background-color: #949599;
 }
+
+.timeline-item {
+    cursor: pointer;
+    /* Cambia el cursor a una mano para indicar que es clickeable */
+}
+
 
 .swiper-navigation {
     display: flex;
@@ -151,6 +154,63 @@
     display: inline-block;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -3rem;
+    top: 4rem;
+    background-color: transparent;
+    /* Hacer el fondo transparente */
+    min-width: 60px;
+    /* Ajusta el ancho mínimo según sea necesario */
+    box-shadow: none;
+    /* Eliminar la sombra */
+    z-index: 1;
+    opacity: 0;
+    /* Hacer que el contenido sea invisible por defecto */
+    max-height: 0;
+    /* Hacer que el contenido tenga una altura de 0 por defecto */
+    overflow: hidden;
+    /* Ocultar el contenido desbordante */
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    /* Agregar una transición suave */
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+    /* Hacer el contenido visible */
+    max-height: 500px;
+    /* Ajusta el máximo alto según sea necesario */
+}
+
+.dropdown-content a {
+    color: white;
+    /* Hacer los iconos blancos */
+    padding: 0;
+    /* Eliminar el padding */
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem;
+    /* Ajustar el tamaño del icono */
+}
+
+.dropdown-content a:hover {
+    background-color: transparent;
+    /* No cambiar el fondo al hacer hover */
+}
+
+.azulBlog {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 @media (max-width: 768px) {
 
     .timeline {
@@ -188,6 +248,7 @@
         width: 50%;
         height: 3px;
         transform: translateX(-50%);
+
     }
 
     .timeline-item .circle {
@@ -198,16 +259,25 @@
         transform: translateX(-50%);
     }
 
-    .timeline-item .content {
+    
+    .timeline-item .content{
         margin-left: 0;
         margin-bottom: 20px;
+        padding-right: 1.5rem;
         /* espacio entre contenido y círculo */
     }
-
-    .timeline-item:first-child .content {
-        margin-top: 13px;
+    .timeline-item.active h3 {
+        margin-top: 0%;
+        margin-left: 0%;
     }
 
+    .timeline-item.active {
+        margin-top: -7.3%;
+    }
+
+    .timeline-item.active .circle{
+        background-color: #1c355e;
+    }
 
     .swiper-button-prev,
     .swiper-button-next {

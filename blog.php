@@ -10,62 +10,8 @@ include_once("include/lang/{$idioma}-blog.php");
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/blog.css">
     <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: -3rem;
-            top: 4rem;
-            background-color: transparent;
-            /* Hacer el fondo transparente */
-            min-width: 60px;
-            /* Ajusta el ancho mínimo según sea necesario */
-            box-shadow: none;
-            /* Eliminar la sombra */
-            z-index: 1;
-            opacity: 0;
-            /* Hacer que el contenido sea invisible por defecto */
-            max-height: 0;
-            /* Hacer que el contenido tenga una altura de 0 por defecto */
-            overflow: hidden;
-            /* Ocultar el contenido desbordante */
-            transition: opacity 0.5s ease, max-height 0.5s ease;
-            /* Agregar una transición suave */
-        }
-
-        .dropdown-content.show {
-            display: block;
-            opacity: 1;
-            /* Hacer el contenido visible */
-            max-height: 500px;
-            /* Ajusta el máximo alto según sea necesario */
-        }
-
-        .dropdown-content a {
-            color: white;
-            /* Hacer los iconos blancos */
-            padding: 0;
-            /* Eliminar el padding */
-            text-decoration: none;
-            display: block;
-            font-size: 1.5rem;
-            /* Ajustar el tamaño del icono */
-        }
-
-        .dropdown-content a:hover {
-            background-color: transparent;
-            /* No cambiar el fondo al hacer hover */
-        }
-
-        .azulBlog {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
+        
+        
     </style>
 </head>
 
@@ -106,9 +52,12 @@ include_once("include/lang/{$idioma}-blog.php");
                         <ul class="timeline">
                             <?php
                             $dias = array(25, 24, 23, 22, 21);
+                            $first = true;
                             foreach ($dias as $dia) {
+                                $active = $first ? ' active' : '';
+                                $first = false;
                             ?>
-                                <li class="timeline-item">
+                                <li class="timeline-item<?php echo $active; ?>">
                                     <div class="content">
                                         <h3 class="mestitle"><?php echo TITULOS_BLOG[2]; ?></h3>
                                         <h3 class="diatitle"><?php echo $dia; ?></h3>
@@ -122,6 +71,8 @@ include_once("include/lang/{$idioma}-blog.php");
                             ?>
                         </ul>
                     </div>
+
+                    
                     <div class="col-lg-9">
                         <div class="swiper-container swiper slider stretched scheme-3 primary" data-columns="1,1,1,1">
                             <div class="swiper-wrapper">
@@ -332,6 +283,21 @@ include_once("include/lang/{$idioma}-blog.php");
                 }
             }
         }
+        // Selecciona todos los elementos.timeline-item
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        // Agrega un evento de clic a cada elemento.timeline-item
+        timelineItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                // Remueve la clase.active de todos los elementos.timeline-item
+                timelineItems.forEach((otherItem) => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Agrega la clase.active al elemento clickeado
+                item.classList.add('active');
+            });
+        });
     </script>
 </body>
 

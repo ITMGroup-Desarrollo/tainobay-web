@@ -1,58 +1,34 @@
+    <link rel="stylesheet" href="assets/css/vendor/footer.css">
     <style>
-        .shock-footer{
-            background-color: #1c355e;
-        }
+        
     </style>
     <!-- Footer -->
-    <footer id="footer" class="shock-footer scheme-1 primary" >
+    <footer id="footer" class="shock-footer scheme-1 primary">
         <div class="footer-content focus-trigger">
             <div class="container">
                 <div class="row g-3">
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-md-12 col-lg-2 footer-first-list">
                         <div class="footer-item">
-                            <!-- Brand -->
-                            <a href="index.php" class="footer-brand">
-                                <!-- <div class="site-title">Site Title</div> -->
-                                <img src="assets/images/logo-white.svg" alt="<?php echo SITIO ?>" class="logo" />
-
-                            </a>
-                            <!-- Text -->
-                            <div class="footer-text">
-                                <p>Av. Antigua Via Férrea, Muelle Turístico
-                                    entre Av. Penetración Portuaria y
-                                    Prolongación Duarte.
-                                    Puerto Plata 57000
-                                    República Dominicana.</p>
-                            </div>
-                        </div>
-                        <div class="footer-item">
-                            <!-- Button -->
-                            <div class="hover-up-down">
-                                <a href="mailto:info@porttainobay.com" class="button outline rounded gray primary-hover">
-                                    <i class="fa-solid fas fa-envelope icon button-icon left-icon gray white-hover"></i>
-                                    <span class="button-text gray white-hover">info@porttainobay.com</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="footer-item">
-                            <h6 class="title"><?php echo FOOTER_OURS[0]; ?></h6>
                             <!-- Links list -->
                             <ul class="nav-list list-unstyled">
                                 <li class="nav-item">
                                     <a href="<?php echo $path; ?><?php echo $idioma; ?>/" class="nav-link">
-                                        <span class="text"><?php echo FOOTER_OURS[1]; ?></span>
+                                        <span class="text"><?php echo FOOTER_OURS[0]; ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="nav-link">
-                                        <span class="text"><?php echo FOOTER_OURS[2]; ?></span>
+                                        <span class="text"><?php echo FOOTER_OURS[1]; ?></span>
 
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?php echo $path; ?><?php echo $idioma; ?>/arrivals" class="nav-link">
+                                        <span class="text"><?php echo  FOOTER_OURS[2]; ?></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[3]; ?></span>
                                     </a>
                                 </li>
@@ -65,33 +41,64 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-12 col-md-12 col-lg-8 footer-main">
                         <div class="footer-item">
-                            <h6 class="title"><?php echo FOOTER_ACTIVITIES[0]; ?></h6>
+                            <!-- Brand -->
+                            <a href="index.php" class="footer-brand">
+                                <!-- <div class="site-title">Site Title</div> -->
+                                <img src="assets/images/logo-white.svg" alt="<?php echo SITIO ?>" class="logo" />
+
+                            </a>
+                            <!-- Text -->
+                            <div class="footer-textbox-container" style="height: 7rem">
+                                <div class="footer-textbox">
+                                    <input type="text" placeholder="<?php echo FOOTER_DESCRIP[2]; ?>">
+                                </div>
+                                <div class="footer-textbox-button">
+                                    <div class="button-container"><a class="button-sub"><?php echo FOOTER_DESCRIP[1]; ?></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-2 footer-second-list">
+                        <div class="footer-item">
                             <!-- Tag Cloud -->
                             <ul class="nav-list list-unstyled">
                                 <li class="nav-item">
                                     <a href="<?php echo $path; ?><?php echo $idioma; ?>/what-to-do" class="nav-link">
-                                        <span class="text"><?php echo FOOTER_ACTIVITIES[1]; ?></span>
+                                        <span class="text"><?php echo FOOTER_OURS[5]; ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="<?php echo $path; ?><?php echo $idioma; ?>/points-of-interest" class="nav-link">
-                                        <span class="text"><?php echo  FOOTER_ACTIVITIES[2]; ?></span>
+                                        <span class="text"><?php echo  FOOTER_OURS[6]; ?></span>
 
                                     </a>
                                 </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="footer-item">
-                            <h6 class="title"><?php echo FOOTER_PRIVACY[0] ?></h6>
-                            <ul class="nav-list list-unstyled">
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/privacy-policy" class="nav-link">
-                                        <span class="text"><?php echo FOOTER_PRIVACY[1] ?></span>
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/points-of-interest" class="nav-link">
+                                        <span class="text"><?php echo  FOOTER_OURS[7]; ?></span>
+
                                     </a>
+                                </li>
+                                <li class="nav-item">
+
+                                </li>
+                                <li class="nav-item">
+                                    <div class="item">
+                                        <div class="item-follow">
+                                            <a href="" class="nav-link">
+                                                <span class="text follow-title"><?php echo  FOOTER_OURS[8]; ?></span>
+                                            </a>
+                                        </div>
+                                        <div class="item-social">
+                                            <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link black black-hover" target="_blank"><i class="icon fab fa-facebook-f" style="color: white;"></i></a>
+                                            <a href="https://www.instagram.com/tainobay_puertoplata/" class="link black black-hover" target="_blank"><i class="icon fab fa-instagram" style="color: white;"></i></a>
+                                            <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html" class="link black black-hover" target="_blank"><img src="assets/images/icons/tripadvisor-blanco.png" width="18" height="18" alt="Icono Tripadvisor"></a>
+
+                                        </div>
+
+                                    </div>
                                 </li>
                             </ul>
                         </div>

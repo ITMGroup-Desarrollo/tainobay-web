@@ -21,15 +21,21 @@ define('TEXT_MENU', array(
 ));
 
 define('FOOTER_DESCRIP', array(
-    '¡Trabaja con nosotros!'
+    '¡Trabaja con nosotros!',
+    'SUSCRIBETE',
+    'ÚNETE A NUESTRO BOLETÍN'
 ));
 
 define('FOOTER_OURS', array(
-    'NOSOTROS',
-    'Puerto Plata',
+    'Port Experience',
+    'Discover Beyond the Cruise',
     'Mapa',
-    'Llegadas',
-    'DISCOVER BEYOND THE CRUISE'
+    'Blog',
+    'FAQ´s',
+    'Contactanos',
+    'Aviso Legal',
+    'Políticas de privacidad',
+    'SIGUENOS'
 ));
 
 define('FOOTER_ACTIVITIES', array(
