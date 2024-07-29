@@ -12,7 +12,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
 
     <?php include("include/head.php"); ?>
     <style>
-        @media only screen (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
 
             video.vh-100,
             .vh-100 {
@@ -64,12 +64,12 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
         </section>
 
         <!-- Welcome Text -->
-        <section class="shock-section pt-2 pb-4">
+        <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
-                    <h2 class="text-style-2 lh-1 text-uppercase text-blue"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>
+                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>
                         <span class="d-flex justify-content-end gap-3">
-                            <span class="text-style-3 lh-1 text-orange"><?= HOME_TEXT_WELCOME[1] ?></span> <?= HOME_TEXT_WELCOME[2] ?>
+                            <span class="text-style-3 lh-1"><?= HOME_TEXT_WELCOME[1] ?></span> <?= HOME_TEXT_WELCOME[2] ?>
                         </span>
                     </h2>
                 </div>
@@ -86,7 +86,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
 
             <div class="carousel-content bg-orange d-flex flex-column justify-content-evenly align-items-center">
                 <h2 class="text-uppercase text-center text-style-3"><strong>Port experience</strong></h2>
-                <div class="d-flex align-items-center gap-3 w-75">
+                <div class="d-flex align-items-center gap-3 w-75 max-w-2xl-60">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-block text-blue">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -171,7 +171,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
 
             <div class="carousel-content bg-blue d-flex flex-column justify-content-evenly align-items-center">
                 <h2 class="text-uppercase text-center text-style-3"><strong>Discover Beyond The Cruise</strong></h2>
-                <div class="d-flex align-items-center gap-3 w-75">
+                <div class="d-flex align-items-center gap-3 w-75 max-w-2xl-60">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-block text-orange">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -244,7 +244,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                     </div>
 
                     <!-- card -->
-                    <div class="card-review rounded-5 d-flex flex-column position-relative active">
+                    <div class="card-review rounded-5 d-flex flex-column position-relative active-card-review">
                         <!-- Image wrapper -->
                         <div class="card-header mb-1">
                             <img src="https://randomuser.me/api/portraits/men/71.jpg" class="rounded-circle user-img" alt="">
@@ -319,11 +319,11 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-2 pb-4 mb-5">
+        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-delay="200">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="mb-0 text-blue text-style-2" style="line-height: 70px;"><?= FAQS_TEXT[0] ?></h2>
-                    <h3 class="mb-0 text-blue text-style-5"><?= FAQS_TEXT[1] ?></h3>
+                    <h2 class="mb-0 text-blue text-style-2 gradient-animated-title animation-duration-3" style="line-height: 70px;"><?= FAQS_TEXT[0] ?></h2>
+                    <h3 class="mb-0 text-blue text-style-5 gradient-animated-title animation-duration-3"><?= FAQS_TEXT[1] ?></h3>
                     <p class="text-blue text-style-13"><?= FAQS_TEXT[2] ?></p>
                 </div>
 
@@ -560,6 +560,84 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                 </div>
         </section>
 
+        <style>
+            #btn-mas {
+                display: none;
+            }
+
+            .container-btn {
+                z-index: 10;
+                position: fixed;
+                bottom: 50px;
+                right: 50px;
+            }
+
+            .redes a,
+            .btn-mas label {
+                font-size: 25px;
+                display: block;
+                text-decoration: none;
+                background: var(--blue-color);
+                color: #fff;
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
+                text-align: center;
+                border-radius: 50%;
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+                transition: all 500ms ease;
+            }
+
+            /*.redes a:hover{*/
+            /*    background: #fff;*/
+            /*    color: white;*/
+            /*}*/
+            .redes a.btn-whatsapp:hover {
+                background: #006432;
+                color: white;
+            }
+
+            .redes a.btn-messenger:hover {
+                background: #8A00C6;
+                color: white;
+            }
+
+            .redes a {
+                margin-bottom: -15px;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            #btn-mas:checked~.redes a {
+                margin-bottom: 10px;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .btn-mas label {
+                cursor: pointer;
+                background: var(--blue-color);
+                font-size: 23px;
+            }
+
+            #btn-mas:checked~.btn-mas label {
+                transform: rotate(135deg);
+                font-size: 25px;
+            }
+        </style>
+        <section class="shock-section">
+            <div class="container-btn">
+                <input type="checkbox" id="btn-mas">
+                <div class="redes">
+                    <a target="_blank" class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=+529986499679&text=Estoy%20interesado%20en%20un%20servico%20de%20transporte,%20me%20podr%C3%ADa%20dar%20m%C3%A1s%20informaci%C3%B3n"><i class="bi bi-whatsapp"></i></a>
+                    <a target="_blank" class="btn-messenger" href="https://m.me/XelborTransfer"><i class="bi bi-messenger"></i></a>
+                </div>
+                <div class="btn-mas">
+                    <label for="btn-mas" class="fa fa-plus"></label>
+                    <!-- <label for="btn-mas"><i class="bi bi-chat-right-text-fill"></i></label> -->
+                </div>
+            </div>
+        </section>
     </main>
 
     <?php include("include/widget.php"); ?>

@@ -17,6 +17,7 @@ RewriteBase /tainobay/
 
 RewriteRule ^/$ index.php [L]
 RewriteRule ^(en|es)/(.*)$ $2.php?lang=$1 [QSA,L]
+#RewriteRule ^([a-zA-Z0-9_-]+)$ single-port-experience.php?title=$1 [L,QSA]
 
 
 RewriteRule ^blog/([^/]+)$ blog.php?title=$1 [L,QSA]

@@ -42,7 +42,7 @@ foreach ($points as $point) {
               <h1 class="title white text-1 banner-title text-uppercase fw-bold">
                 <?= $currentMenu['name'] ?>
               </h1>
-              <div class="mx-auto text-white mt-2" style="width: 60px;"><?= $currentMenu['icon'] ?></div>
+              <div class="mx-auto text-white mt-2 icon-banner"><?= $currentMenu['icon'] ?></div>
             </div>
           </div>
           <!-- Image -->
@@ -68,11 +68,9 @@ foreach ($points as $point) {
       <section class="shock-section pb-5">
         <!-- <div class="container max-w-85"> -->
         <div class="w-100">
-
-          <!-- <?php print_r($currentMenu['menu']); ?> -->
           <?php foreach ($currentMenu['menu'] as $menuItem) { ?>
-            <div class="w-100">
-              <img src="<?= "assets/images/port-experience/{$currentMenu['path']}/{$menuItem['img']}" ?>" class="w-100" alt="imagen del menu">
+            <div class="seccion-menu-img w-100" style="background-image: url(<?= "assets/images/port-experience/{$currentMenu['path']}/{$menuItem['image']}" ?>); background-position: <?= $menuItem['image-position'] ?>;">
+              <!-- <img src="<?= "assets/images/port-experience/{$currentMenu['path']}/{$menuItem['img']}" ?>" class="w-100" alt="imagen del menu"> -->
             </div>
             <div class="row row-cols-2 p-md-5 g-0 max-w-100">
               <?php foreach ($menuItem['items'] as $item) { ?>

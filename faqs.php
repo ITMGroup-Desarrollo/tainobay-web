@@ -33,7 +33,10 @@ include_once("include/lang/{$idioma}-contact.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+                    <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+
+                    </div>
+                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-blue"></div>
@@ -116,7 +119,7 @@ include_once("include/lang/{$idioma}-contact.php");
                 <div class="content-wrapper top-zero ">
                     <!-- Intro -->
                     <div class="basic-intro text-center">
-                        <div class="container max-w-65">
+                        <div class="container">
                             <h3 class="white text-1 form-title fw-bold">
                                 <?= TITLE_FORM; ?>
                             </h3>
@@ -127,7 +130,7 @@ include_once("include/lang/{$idioma}-contact.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+                    <img src="assets/images/media/bg-faqs.jpg" class="image fit-cover" alt="This is an example description for this item." />
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-blue"></div>
