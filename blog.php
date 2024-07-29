@@ -61,7 +61,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                                 $first = false;
                             ?>
                                 <li class="timeline-item<?php echo $active; ?>">
-                                    <div class="content">
+                                    <div class="content timeline-text-container">
                                         <h3 class="mestitle"><?php echo TITULOS_BLOG[2]; ?></h3>
                                         <h3 class="diatitle"><?php echo $dia; ?></h3>
                                     </div>
@@ -76,7 +76,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     </div>
 
 
-                    <div class="col-lg-9">
+                    <div class="col-lg-10">
                         <div class="shock-section container" id="blog-container">
                             <!-- Posts se cargarán aquí -->
                         </div>
@@ -146,11 +146,31 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
                 $('#blog-container').append(`
             <div class="blog-post">
-                <img src="${data.image_url}" alt="${data.title}" class="img-fluid imgRound">
-                <h2>${data.title}</h2>
-                <p>${data.content}</p>
-                <p>${data.day} ${data.month}</p>
+                <div class="title-image">
+                    <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" style="width: 100%; height: auto;  ">
+                    <div class="dropdown azulBlog">
+                        <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.whatsapp.com" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="blog-post">
+                <h2>${data.title}</h2>
+                <p class="justificado">${data.content}</p>
+                <p class="justificado">${data.day} ${data.month}</p>
+            </div>
+            
         `);
 
                 // Controlar la habilitación de los botones de navegación
