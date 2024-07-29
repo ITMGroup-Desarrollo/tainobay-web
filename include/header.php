@@ -119,21 +119,22 @@
                            </a>
                        </div>
                    </div>
-                   <div class="menu-grid-item item-5" data-direction="tb">
-                       <div class="menu-grid-item-inner">
+                   <div class="menu-grid-item item-5 " data-direction="tb">
+                       <div class="menu-grid-item-inner ">
                            <!-- Contacts -->
-                           <div class="menu-grid-minor text-white">
+                           <div class="menu-grid-minor text-white ">
                                <div class="m-4">
 
-                                   <h5>
-                                       <?php echo TEXT_MENU[1];  ?>
+                                   <h5 class="font-extrabold">
+                                       <strong><?php echo TEXT_MENU[1];  ?></strong>
                                    </h5>
-
-                                   <p class="text-center"> info@porttainobay.com <br> Av. Antigua Via Férrea, Muelle
+                                   <a href="mailto:info@porttainobay.com" class="text-white cursor-pointer link text-sm">info@porttainobay.com</a>
+                                   <address class="text-xs">
+                                       Av. Antigua Via Férrea, Muelle
                                        Turístico entre Av.
                                        Penetración
-                                       Portuaria y Prolongación Duarte. Puerto Plata 57000 República Dominicana.</p>
-
+                                       Portuaria y Prolongación Duarte. Puerto Plata 57000 República Dominicana.
+                                   </address>
                                </div>
 
                            </div>

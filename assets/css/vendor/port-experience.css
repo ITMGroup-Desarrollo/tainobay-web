@@ -19,8 +19,8 @@
   width: 100%;
   height: 250px;
   object-fit: cover;
-    object-position: top;
-    display: block;
+  object-position: top;
+  display: block;
 }
 
 .card-img-wrapper {
@@ -47,43 +47,71 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgba(24, 53, 94, 0.8)  ,var(--blue-color) 70%);
-  transform: translateY(60%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgba(24, 53, 94, 0.8),
+    var(--blue-color) 70%
+  );
+  transform: translateY(74%);
+}
+.mt-5px {
+  margin-top: 10px;
 }
 
-.card-title {
+/* .card-title {
   font-size: 2.8rem;
-}
+} */
 
 .card-content-overlay .button-transparent {
   padding: 2px 8%;
 }
 
 .card-port:hover .card-content-overlay {
-  transform: translateY(20%);
+  transform: translateY(24%);
 }
 .wrapper-link-more a {
   margin-bottom: 10px;
 }
 
-
-.gradient-title {
+/* .gradient-title {
   background: linear-gradient(105deg, var(--primary-color) 45%, var(--blue-color) 0%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent !important;
-}
+} */
 
 #single-port-page .dashed-border {
   border-bottom: 2px dashed var(--blue-color);
 }
-
+#single-port-page .seccion-menu-img {
+  width: 100%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.icon-banner {
+  width: 60px;
+}
+.icon-banner svg,
+.wrapper-icon svg {
+  fill: white;
+  color: white;
+}
+.wrapper-icon {
+  width: 50px;
+}
+.brightness-9 {
+  filter: brightness(0.9);
+}
 /* sm */
-@media (min-width: 640px) {}
+@media (min-width: 640px) {
+}
 
 /* md 768px  */
 @media (min-width: 768px) {
@@ -91,7 +119,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   #port-page .card-img {
-    width: 400px;
+    width: 100%;
     height: 250px;
   }
   .dashed-border {
@@ -103,38 +131,22 @@
   #single-port-page .dashed-border:nth-child(odd) {
     border-right: 2px dashed var(--blue-color);
   }
-         /* #single-port-page .dashed-border {
-       position: relative;
-     }
-  
-         #single-port-page .dashed-border::before {
-       content: "";
-       position: absolute;
-       top: 0;
-       right: 0;
-       bottom: 0;
-       width: 2px;
-
-       background: repeating-linear-gradient(to bottom,
-           var(--blue-color),
-          var(--blue-color),
-
-           transparent 10px,
-           transparent 15px
-
-         );
-     } */
+  #single-port-page .seccion-menu-img {
+    height: 60vh;
+  }
 }
 
 /* lg 1024px  */
 @media (min-width: 1024px) {
   .grid-container-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* xl 1280px  */
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 /* 2xl 1536px  */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+}

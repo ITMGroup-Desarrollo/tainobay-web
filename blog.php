@@ -10,8 +10,6 @@ include_once("include/lang/{$idioma}-blog.php");
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/blog.css">
     <style>
-        
-        
     </style>
 </head>
 
@@ -40,7 +38,7 @@ include_once("include/lang/{$idioma}-blog.php");
                     <img src="assets/images/blog/playa-dorada-two.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." />
                 </div>
                 <!-- Overlay -->
-                <div class="overlay black-65"></div>
+                <div class="overlay-blue"></div>
             </div>
         </section>
         <!-- Blog Section -->
@@ -72,7 +70,7 @@ include_once("include/lang/{$idioma}-blog.php");
                         </ul>
                     </div>
 
-                    
+
                     <div class="col-lg-9">
                         <div class="swiper-container swiper slider stretched scheme-3 primary" data-columns="1,1,1,1">
                             <div class="swiper-wrapper">
