@@ -42,7 +42,7 @@ foreach ($points as $point) {
               <h1 class="title white text-1 banner-title text-uppercase fw-bold">
                 <?= $currentMenu['name'] ?>
               </h1>
-              <div class="mx-auto text-white mt-2" style="width: 60px;"><?= $currentMenu['icon'] ?></div>
+              <div class="mx-auto text-white mt-2 icon-banner"><?= $currentMenu['icon'] ?></div>
             </div>
           </div>
           <!-- Image -->
