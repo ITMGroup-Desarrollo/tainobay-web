@@ -1,6 +1,11 @@
+.active {
+    transform: translateY(0px);
+}
+
 .justificado {
     text-align: justify;
 }
+
 
 :root {
     --blog-icono: #1c355e;
@@ -34,11 +39,9 @@
     position: absolute;
     top: 0;
     right: 10px;
-    /* Ajusta para poner la línea al lado derecho */
     width: 3px;
     height: 100%;
     background-color: #949599;
-    /* Color de la línea */
 }
 
 .timeline-item .circle {
@@ -63,40 +66,45 @@
 }
 
 .timeline-item .content {
-    margin-left: 40px;
     position: relative;
     z-index: 1;
 }
-
+.shock-section .content h3{
+    font-weight: normal;
+}
 .diatitle {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 700 !important;
     margin-top: -20px;
 
 }
 
+
 .timeline-item.active {
-    /* estilos para los items activos */
     color: var(--blog-icono);
-    margin-top: -21%;
 }
 
-.timeline-item.active.circle {
+.timeline-item.active .circle {
     background-color: var(--blog-icono);
 }
 
-.timeline-item.active.diatitle {
+.timeline-text-container {
+    text-align: center;
+}
+
+.active .timeline-text-container {
+    margin: 0 2rem 6rem 0;
+}
+
+.timeline-item.active .diatitle {
     font-size: 4.5rem;
 }
 
-.timeline-item.active.mestitle {
-    padding-left: 5px;
+.timeline-item.active .mestitle {
+    font-size: 2rem;
 }
 
-.timeline-item.active h3 {
-    margin-top: -30%;
-    margin-left: -15%;
-}
+.timeline-item.active h3 {}
 
 .timeline-item:first-child:before {
     content: "";
@@ -110,7 +118,6 @@
 
 .timeline-item {
     cursor: pointer;
-    /* Cambia el cursor a una mano para indicar que es clickeable */
 }
 
 
@@ -215,14 +222,16 @@
     margin-left: 3rem;
     padding-right: 3rem;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 991px) {
 
     .timeline {
         flex-direction: row;
         justify-content: center;
         overflow-x: auto;
         flex-wrap: nowrap;
-        padding-left: 8rem;
+        padding-left: 11.5rem;
+        padding-bottom: 5em;
         -webkit-scrollbar-width: 0;
         /* hacer invisible el scroll en Chrome y Safari */
         scrollbar-width: none;
@@ -231,8 +240,7 @@
     }
 
     .timeline-item {
-        margin-bottom: 20px;
-        /* espacio entre items */
+        padding: 0 2rem 0 2rem;
     }
 
 
@@ -257,31 +265,38 @@
 
     .timeline-item .circle {
         top: auto;
-        bottom: -20px;
-        /* espacio entre círculo y timeline */
-        left: 50%;
+        bottom: -10px;
+        left: 48%;
         transform: translateX(-50%);
     }
 
+    .timeline-item.active .diatitle {
+        font-size: 3.5rem;
+    font-weight: 700;
+    }
+
+    .timeline-item.active .mestitle {
+        font-size: 1.5rem;
+    }
+    .timeline-item .diatitle {
+        font-size: 3.5rem;
+    font-weight: 700;
+    }
+
+    .timeline-item .mestitle {
+        font-size: 1.5rem;
+    }
 
     .timeline-item .content {
         margin-left: 0;
-        margin-bottom: 20px;
-        padding-right: 1.5rem;
-        /* espacio entre contenido y círculo */
     }
 
-    .timeline-item.active h3 {
-        margin-top: 0%;
-        margin-left: 0%;
+    .timeline-text-container {
+        text-align: center;
     }
 
-    .timeline-item.active {
-        margin-top: -7.3%;
-    }
-
-    .timeline-item.active .circle {
-        background-color: #1c355e;
+    .active .timeline-text-container {
+        margin: 0;
     }
 
     .swiper-button-prev,
@@ -320,3 +335,24 @@
 
 
 }
+@media (320px <= width <= 449px) {
+    .timeline {
+        padding-left: 13.5rem;
+    }
+}
+@media (450px <= width <= 550px) {
+    .timeline {
+        padding-left: 9rem;
+    }
+}
+@media (551px <= width <= 650px) {
+    .timeline {
+        padding-left: 6rem;
+    }
+}
+@media (651px <= width <= 991px) {
+    .timeline {
+        padding-left: 0rem;
+    }
+}
+
