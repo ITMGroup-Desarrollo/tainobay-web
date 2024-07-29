@@ -151,7 +151,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 </div>
                                 <picture>
                                     <source src="assets/images/blog/damajagua-two.jpg">
-                                    <img src="assets/images/blog/damajagua-two.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <img src="assets/images/blog/atv-expedition-two.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>

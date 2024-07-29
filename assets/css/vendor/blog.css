@@ -211,6 +211,10 @@
     right: 10px;
 }
 
+.swiper-slide {
+    margin-left: 3rem;
+    padding-right: 3rem;
+}
 @media (max-width: 768px) {
 
     .timeline {
@@ -259,13 +263,14 @@
         transform: translateX(-50%);
     }
 
-    
-    .timeline-item .content{
+
+    .timeline-item .content {
         margin-left: 0;
         margin-bottom: 20px;
         padding-right: 1.5rem;
         /* espacio entre contenido y círculo */
     }
+
     .timeline-item.active h3 {
         margin-top: 0%;
         margin-left: 0%;
@@ -275,7 +280,7 @@
         margin-top: -7.3%;
     }
 
-    .timeline-item.active .circle{
+    .timeline-item.active .circle {
         background-color: #1c355e;
     }
 
@@ -312,5 +317,6 @@
     .pagination-items {
         margin-right: 1rem;
     }
+
 
 }

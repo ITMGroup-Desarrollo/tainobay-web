@@ -183,7 +183,6 @@ h2.text-style-6.text-italic {
     margin-bottom: 3rem;
 }
 
-/* Estilos para el contenedor del listado */
 .listado ul {
     list-style-type: none;
     /* Cambia el tipo de viñeta a disco */
@@ -199,7 +198,6 @@ h2.text-style-6.text-italic {
     padding-left: 1rem;
 }
 
-/* Estilos para las viñetas */
 .listado ul li::before {
     content: '';
     /* Elimina el contenido predeterminado de la viñeta */
@@ -221,7 +219,6 @@ h2.text-style-6.text-italic {
     /* Hace la viñeta circular */
 }
 
-/* Estilos adicionales para el texto */
 .listado ul li p {
     margin: 0;
     /* Elimina el margen del párrafo */

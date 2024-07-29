@@ -2,6 +2,9 @@
 include_once("include/config.php");
 include_once("include/lang/{$idioma}-blog.php");
 ?>
+<?php
+$title = isset($_GET['title']) ? $_GET['title'] : '';
+?>
 <!DOCTYPE HTML>
 <html lang="<?php echo $idioma; ?>">
 
@@ -10,8 +13,8 @@ include_once("include/lang/{$idioma}-blog.php");
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/blog.css">
     <style>
-        
-        
+
+
     </style>
 </head>
 
@@ -44,7 +47,7 @@ include_once("include/lang/{$idioma}-blog.php");
             </div>
         </section>
         <!-- Blog Section -->
-        <section class="blog-section mt-4 mb-4">
+        <section class="shock-section blog-section mt-4 mb-4">
             <div class="container">
                 <div class="row">
                     <!-- timeline-->
@@ -72,186 +75,17 @@ include_once("include/lang/{$idioma}-blog.php");
                         </ul>
                     </div>
 
-                    
+
                     <div class="col-lg-9">
-                        <div class="swiper-container swiper slider stretched scheme-3 primary" data-columns="1,1,1,1">
-                            <div class="swiper-wrapper">
-                                <!-- Slide 1 con la imagen -->
-                                <div class="swiper-slide blog-content">
-                                    <div class="title-image">
-                                        <img src="assets/images/blog/playa-dorada-two.jpg" class="img-fluid imgRound" alt="title image" style="width: 100%; height: auto;  ">
-                                        <div class="dropdown azulBlog">
-                                            <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                                    <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                                                </svg>
-                                            </button>
-                                            <div class="dropdown-content" id="dropdownContent">
-                                                <a href="https://www.facebook.com" target="_blank">
-                                                    <i class="fab fa-facebook"></i>
-                                                </a>
-                                                <a href="https://www.whatsapp.com" target="_blank">
-                                                    <i class="fab fa-whatsapp"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="blog-post">
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-lg-4">
-                                                    <img src="assets/images/blog/mojito-bar-one.jpg" class=" mb-1 imgRound" alt="" style="max-width: 100%; height: auto;   ">
-                                                </div>
-                                                <div class="col-lg-8 mb-1">
-
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <!-- Slide 2 -->
-                                <div class="swiper-slide blog-content">
-                                    <div>
-                                        <img src="assets/images/blog/monkey-island-four.jpg" class="img-fluid imgRound" alt="title image">
-                                        <i class="fa fa-th-list"></i>
-                                    </div>
-
-                                    <div class="blog-post">
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <div class="container mb-1">
-                                            <div class="row">
-                                                <div class="col-lg-4">
-                                                    <img src="assets/images/blog/mojito-bar-two.jpg" class="imgRound" alt="" style="max-width: 100%; height: auto;  ">
-                                                </div>
-                                                <div class="col-lg-8">
-
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <!-- Slide 3 -->
-                                <div class="swiper-slide blog-content">
-                                    <img src="assets/images/blog/playa-dorada-two.jpg" class="img-fluid imgRound" alt="Descripción de la imagen">
-                                    <div class="blog-post">
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-lg-4">
-                                                    <img src="assets/images/blog/mojito-bar-one.jpg" alt="" class="mb-1 imgRound" style="max-width: 100%; height: auto;  ">
-                                                </div>
-                                                <div class="col-lg-8">
-
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                    <p class="justificado">
-                                                        Aliqua reprehenderit tempor est enim laborum ea voluptate ea. Fugiat labore mollit veniam voluptate deserunt dolor et sit nostrud. Excepteur sit nulla ex amet ea aliqua voluptate magna. Ullamco exercitation dolore mollit pariatur deserunt eiusmod mollit cupidatat eiusmod exercitation est magna ullamco.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                        <p class="justificado">
-                                            Quis adipisicing officia do nisi consequat consequat velit. Nostrud esse dolore cupidatat voluptate eiusmod reprehenderit culpa tempor. Do nostrud consectetur tempor laboris sit consectetur. Pariatur in commodo enim fugiat. Fugiat nisi consequat dolore mollit deserunt irure voluptate in reprehenderit ex laboris.
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div style="display: flex; ">
-                                <a href="blog_all.php" class=" button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
-                                <!-- Botones de navegación y paginación -->
-
-                                <div class="container mt-3 d-flex justify-content-end pagination-items" style="margin-top:-40%;">
-                                    <div class="row">
-                                        <div class="col-auto">
-
-                                            <img class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev">
-
-                                        </div>
-                                        <div class="col-auto">
-
-                                            <img class="swiper-button-next" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                        <div class="shock-section container" id="blog-container">
+                            <!-- Posts se cargarán aquí -->
                         </div>
+                        <div class="pagination">
+                            <button id="prev-page">Anterior</button>
+                            <button id="next-page">Siguiente</button>
+                        </div>
+
+
                     </div>
 
                 </div>
@@ -297,6 +131,63 @@ include_once("include/lang/{$idioma}-blog.php");
                 // Agrega la clase.active al elemento clickeado
                 item.classList.add('active');
             });
+        });
+    </script>
+    <script>
+        function loadPost(title, pushState = true) {
+            $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
+                const data = response.posts[0]; // Asumimos que solo hay un post con el título dado
+                const hasPrevPost = response.has_prev_post;
+                const hasNextPost = response.has_next_post;
+                const prevPostTitle = response.prev_post_title;
+                const nextPostTitle = response.next_post_title;
+
+                $('#blog-container').empty(); // Limpiar el contenedor antes de agregar nuevos posts
+
+                $('#blog-container').append(`
+            <div class="blog-post">
+                <img src="${data.image_url}" alt="${data.title}" class="img-fluid imgRound">
+                <h2>${data.title}</h2>
+                <p>${data.content}</p>
+                <p>${data.day} ${data.month}</p>
+            </div>
+        `);
+
+                // Controlar la habilitación de los botones de navegación
+                $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
+                $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
+
+                // Actualizar la URL
+                if (pushState) {
+                    const url = new URL(window.location);
+                    url.pathname = '/tainobay/blog/' + title;
+                    window.history.pushState({
+                        title: title
+                    }, '', url);
+                }
+            });
+        }
+
+        function changePost(title) {
+            loadPost(title);
+        }
+
+        // Manejar la navegación del historial
+        window.onpopstate = function(event) {
+            if (event.state && event.state.title) {
+                loadPost(event.state.title, false);
+            }
+        }
+
+        // Cargar los posts al iniciar
+        $(document).ready(function() {
+            const pathSegments = window.location.pathname.split('/');
+            const title = pathSegments[pathSegments.length - 1];
+            if (title) {
+                loadPost(title, false);
+            } else {
+                loadPost('Playa-dorada', false); // Cargar una publicación predeterminada si no hay título en la URL
+            }
         });
     </script>
 </body>
