@@ -72,7 +72,7 @@
 }
 
 .azulBlog {
-    color: var(--blog-icono);
+    color: white;
 }
 
 .pagination-items {
@@ -100,8 +100,6 @@
     position: relative;
     z-index: 10;
     background-color: transparent !important;
-    width: auto !important;
-    height: 1rem !important;
 }
 
 .swiper-container {
@@ -128,10 +126,13 @@
     margin-top: -20px;
 
 }
-
+.swiper-container {
+    width: 100%;
+}
 .mestitle {
     margin-bottom: 10px;
 }
+
 @media (max-width: 768px) {
     .container {
         display: flex;

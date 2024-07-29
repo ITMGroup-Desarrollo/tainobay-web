@@ -3,7 +3,7 @@ define('TITULOS_BLOG', array(
     'NEWS TITLE',
     'News subtitle',
     'JUNE   ',
-    'BACK'
+    'MENU'
 ));
 define('TITULOS_BLOG_ALL', array(
     'BLOG',
@@ -12,5 +12,5 @@ define('TITULOS_BLOG_ALL', array(
 ));
 define('SECTION_BLOG_ALL', array(
     'UPCOMING NEWS',
-    'READ MORE DETAILS'
+    'READ MORE'
 ));

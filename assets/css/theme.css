@@ -145,9 +145,8 @@ h1, h2, h3, h4, h5, h6 {
 .text-style-12 { font-size: 1.2rem; font-weight: 400; }
 .text-style-13 { font-size: 1.5rem; font-weight: 400; }
 .text-style-14 { font-size: 2rem;}
-.text-style-15 {
-	font-size: 3.2rem;
-}
+.text-style-15 { font-size: 3.2rem;}
+.text-style-16 { font-size: 1.5rem; }
 
 @media (max-width: 767px) {
 	.text-style-1 { font-size: 3rem; }
