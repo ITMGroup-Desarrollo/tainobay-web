@@ -13,8 +13,8 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/blog.css">
     <style>
-        
-        
+
+
     </style>
 </head>
 
@@ -51,7 +51,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             <div class="container">
                 <div class="row">
                     <!-- timeline-->
-                    <div class="col-lg-2">
+                    <div class="col-lg-2" >
                         <ul class="timeline">
                             <?php
                             $dias = array(25, 24, 23, 22, 21);
@@ -80,16 +80,35 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                         <div class="shock-section container" id="blog-container">
                             <!-- Posts se cargarán aquí -->
                         </div>
-                        <div class="pagination">
-                            <button id="prev-page">Anterior</button>
-                            <button id="next-page">Siguiente</button>
+                        <div style="display: flex; ">
+                            <a href="blog_all.php" class=" button-transparent button-orange text-center" style=""><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
+                            <!-- Botones de navegación y paginación -->
+                            <div class="container mt-3 d-flex justify-content-end pagination-items" >
+                                <div class="row">
+                                    <div class="col-4 col-md-3 col-lg-6">
+                                        <svg id="prev-page" class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+                                            <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
+                                            <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="col-4 col-md-3 col-lg-6">
+
+                                        <svg id="next-page" class="swiper-button-next" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+                                            <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
+                                            <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
                     </div>
 
                 </div>
+
             </div>
+
         </section>
         <div>
 
@@ -165,10 +184,15 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     </div>
                 </div>
             </div>
-            <div class="blog-post">
-                <h2>${data.title}</h2>
+            <div class="blog-post blog-texto">
                 <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.day} ${data.month}</p>
+                <p class="justificado">${data.content}</p>
+                <p class="justificado">${data.content}</p>
+                <p class="justificado">${data.content}</p>
+                <p class="justificado">${data.content}</p>
+                <p class="justificado">${data.content}</p>
+                <p class="justificado">${data.content}</p>
+                <p class="justificado">${data.content}</p>
             </div>
             
         `);

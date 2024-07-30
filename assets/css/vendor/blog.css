@@ -69,9 +69,11 @@
     position: relative;
     z-index: 1;
 }
-.shock-section .content h3{
+
+.shock-section .content h3 {
     font-weight: normal;
 }
+
 .diatitle {
     font-size: 3.5rem;
     font-weight: 700 !important;
@@ -121,23 +123,25 @@
 }
 
 
-.swiper-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
     position: relative;
     z-index: 10;
     background-color: transparent !important;
+    padding: 0 2rem;
     width: auto !important;
-    height: 2rem !important;
+    height: 4rem !important;
+    color: #1c355e;
+    transition: color 0.5s ease-in-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #f5a23a;
+    transition: color 0.5s ease-in-out;
 }
 
 .pagination-items .row {
-    padding-top: 1.5rem;
     border-top: 2px solid;
 }
 
@@ -223,6 +227,15 @@
     padding-right: 3rem;
 }
 
+.button-transparent.button-orange.text-center {
+    height: 3rem;
+    margin-top: 5%;
+}
+.blog-post.blog-texto {
+    margin-top: 3rem;
+    color: #1c355e;
+    padding: 0 0.5rem;
+}
 @media (max-width: 991px) {
 
     .timeline {
@@ -272,15 +285,16 @@
 
     .timeline-item.active .diatitle {
         font-size: 3.5rem;
-    font-weight: 700;
+        font-weight: 700;
     }
 
     .timeline-item.active .mestitle {
         font-size: 1.5rem;
     }
+
     .timeline-item .diatitle {
         font-size: 3.5rem;
-    font-weight: 700;
+        font-weight: 700;
     }
 
     .timeline-item .mestitle {
@@ -299,9 +313,8 @@
         margin: 0;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        display: none;
+    .pagination-items .row {
+        border: none;
     }
 
     .title-icons img {
@@ -329,30 +342,31 @@
         margin-left: 1rem;
     }
 
-    .pagination-items {
-        margin-right: 1rem;
-    }
+    
 
 
 }
-@media (320px <= width <= 449px) {
+
+@media (320px <=width <=449px) {
     .timeline {
         padding-left: 13.5rem;
     }
 }
-@media (450px <= width <= 550px) {
+
+@media (450px <=width <=550px) {
     .timeline {
         padding-left: 9rem;
     }
 }
-@media (551px <= width <= 650px) {
+
+@media (551px <=width <=650px) {
     .timeline {
         padding-left: 6rem;
     }
 }
-@media (651px <= width <= 991px) {
+
+@media (651px <=width <=991px) {
     .timeline {
         padding-left: 0rem;
     }
 }
-

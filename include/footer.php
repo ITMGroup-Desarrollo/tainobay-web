@@ -7,7 +7,7 @@
         <div class="footer-content focus-trigger">
             <div class="container">
                 <div class="row g-3">
-                    <div class="col-12 col-md-12 col-lg-2 footer-first-list">
+                    <div class="col-12 col-md-12 col-lg-3 footer-first-list">
                         <div class="footer-item">
                             <!-- Links list -->
                             <ul class="nav-list list-unstyled">
@@ -41,7 +41,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12 col-lg-8 footer-main">
+                    <div class="col-12 col-md-12 col-lg-6 footer-main">
                         <div class="footer-item">
                             <!-- Brand -->
                             <a href="index.php" class="footer-brand">
@@ -52,7 +52,7 @@
                             <!-- Text -->
                             <div class="footer-textbox-container" style="height: 7rem">
                                 <div class="footer-textbox">
-                                    <input type="text" placeholder="<?php echo FOOTER_DESCRIP[2]; ?>">
+                                    <input type="text" class="form-control  px-4 py-3" placeholder="<?php echo FOOTER_DESCRIP[2]; ?>">
                                 </div>
                                 <div class="footer-textbox-button">
                                     <div class="button-container"><a class="button-sub"><?php echo FOOTER_DESCRIP[1]; ?></a></div>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12 col-lg-2 footer-second-list">
+                    <div class="col-12 col-md-12 col-lg-3 footer-second-list">
                         <div class="footer-item">
                             <!-- Tag Cloud -->
                             <ul class="nav-list list-unstyled">
@@ -92,9 +92,9 @@
                                             </a>
                                         </div>
                                         <div class="item-social">
-                                            <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link black black-hover" target="_blank"><i class="icon fab fa-facebook-f" style="color: white;"></i></a>
-                                            <a href="https://www.instagram.com/tainobay_puertoplata/" class="link black black-hover" target="_blank"><i class="icon fab fa-instagram" style="color: white;"></i></a>
-                                            <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html" class="link black black-hover" target="_blank"><img src="assets/images/icons/tripadvisor-blanco.png" width="18" height="18" alt="Icono Tripadvisor"></a>
+                                            <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link black black-hover" target="_blank"><i class="icon fab fa-facebook-f" style="color: white; font-size:2rem"></i></a>
+                                            <a href="https://www.instagram.com/tainobay_puertoplata/" class="link black black-hover" target="_blank"><i class="icon fab fa-instagram" style="color: white; font-size:2rem;"></i></a>
+                                            <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html" class="link black black-hover" target="_blank"><img src="assets/images/icons/tripadvisor-blanco.png" width="30" height="30" alt="Icono Tripadvisor"></a>
 
                                         </div>
 

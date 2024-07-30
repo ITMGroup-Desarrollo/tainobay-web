@@ -91,7 +91,7 @@ include_once("include/lang/{$idioma}-blog.php");
                                         <h3><?php echo TITULOS_BLOG_ALL[2];  ?></h3>
                                     </div>
                                     <p class="justificado">Adipisicing irure irure aliqua aliqua anim officia veniam ipsum minim in culpa ullamco. Et voluptate esse velit in culpa et irure ut cupidatat. Excepteur laborum in occaecat eu incididunt cillum incididunt. Aliquip cupidatat do aliqua sint sit irure.</p>
-                                    <a href=" blog.php" class=" button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo SECTION_BLOG_ALL[1];  ?></strong></a>
+                                    <a href=" blog/Playa-dorada" class=" button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo SECTION_BLOG_ALL[1];  ?></strong></a>
 
                                 </div>
                                 <div class="col-11 col-md-2 col-lg-1 single-blog-icon">

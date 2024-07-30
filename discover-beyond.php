@@ -40,16 +40,16 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <img src="assets/images/blog/playa-dorada-two.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." />
                 </div>
                 <!-- Overlay -->
-                <div class="overlay black-65"></div>
+                <div class="overlay-blue"></div>
             </div>
         </section>
         <!--Welcome-->
         <section class="shock-section pt-2 pb-4">
             <div class="container text-center my-5">
-                <div class="container-title mx-auto mb-2">
-                    <h2 class="text-style-2 lh-1 text-blue"><span class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
+                <div class="container-title mx-auto mb-2 gradient-animated-title animation-duration-2">
+                    <h2 class="text-style-2 lh-1 "><span class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
                         <span class="d-flex justify-content-end gap-2">
-                            <h2 class="text-style-2 lh-1  text-blue"><span class="d-block text-start"><?php echo DISCOVER_WELCOME[1];  ?></span>
+                            <h2 class="text-style-2 lh-1  "><span class="d-block text-start"><?php echo DISCOVER_WELCOME[1];  ?></span>
                         </span>
                     </h2>
                 </div>
