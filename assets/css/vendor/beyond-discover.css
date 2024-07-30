@@ -8,11 +8,9 @@
 
 .title-carrusel {
     color: var(--blog-icono);
-}
-
-.text-start {
     padding-left: 3rem;
 }
+
 
 .display-button {
     color: white;
@@ -138,23 +136,28 @@ a.slide-navigation-item-prev4.d-block.text-blue:hover {
     width: fit-content;
     padding: 0 3rem 3rem 3rem;
 }
-.what-to-bring-list h2{
+
+.what-to-bring-list h2 {
     padding-top: 2rem;
     color: #fff;
 }
-.what-to-bring-list p{
+
+.what-to-bring-list p {
     justify-content: center;
     color: #fff;
     padding: 1.5rem 2rem;
 }
+
 .what-to-bring-duration svg {
     align-self: center;
     margin-right: 1rem;
 }
-.what-to-bring-list-container{
-display: flex;
-flex-direction:row-reverse ;
+
+.what-to-bring-list-container {
+    display: flex;
+    flex-direction: row-reverse;
 }
+
 .duration-text h2 {
     color: #1c355e;
     margin-bottom: 0%;
@@ -170,13 +173,14 @@ h2.text-style-6.text-italic {
     justify-content: end;
 }
 
-.listado h2, .note-container h2 {
+.listado h2,
+.note-container h2 {
     color: #1c355e;
 }
 
 .listado p {
     color: black;
-    
+
 }
 
 .listado-highlights {
@@ -226,51 +230,171 @@ h2.text-style-6.text-italic {
     /* Elimina el relleno del párrafo */
 }
 
-.list-item-container{
+.list-item-container {
     display: inline-flex;
     align-items: center;
 }
-.list-container{
+
+.list-container {
     display: grid;
-    justify-content:center;
+    justify-content: center;
 }
-.listado-row{
+
+.listado-row {
     margin-bottom: 3rem;
 }
-.note-container{
+
+.note-container {
     margin-bottom: 3rem;
-}
-.gallery-general-container{
-    text-align: center;
-}
-.gallery-general-container h2{
-    color: #1c355e;
-}
-.gallery-general-container {
-    text-align: center; 
-    padding: 20px; 
-}
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 10px; 
-    justify-content: center; /
 }
 
 .gallery-container img {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
+    cursor: pointer;
 }
-.gallery-container{
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+    transition: opacity 0.5s;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 1000px;
+    max-height: 700px;
+    transition: transform 0.5s;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 8rem;
+}
+
+.next {
+    right: 8rem;
+}
+
+.prev:hover, .next:hover {
+    color: #bbb;
+}
+
+/* Transiciones */
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal.hide {
+    opacity: 0;
+    display: none;
+}
+
+.modal-content.show {
+    transform: scale(1);
+}
+
+.modal-content.hide {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+.gallery-general-container {
+    text-align: center;
+}
+
+.gallery-general-container h2 {
+    color: #1c355e;
+}
+
+.gallery-general-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-content: center;/
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-container {
     margin-bottom: 5rem;
 }
+
 a.button-transparent.button-orange.text-center:hover {
     background-color: #f5a23a;
 }
+
 .carousel-image-wrapper {
-    width: 60rem !important;
-    height: 60rem !important;
+    width: auto;
+    height: 45rem !important;
     overflow: hidden !important;
     position: relative !important;
 }
@@ -287,6 +411,11 @@ a.button-transparent.button-orange.text-center:hover {
     margin-bottom: 3rem;
 }
 
+.basic-intro {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
 
-
-
+.container-text.mx-auto.px-5.bg-orange.pb-3.pt-3 p {
+    font-size: 20px;
+}

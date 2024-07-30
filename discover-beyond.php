@@ -44,12 +44,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
         </section>
         <!--Welcome-->
-        <section class="shock-section pt-2 pb-4">
+        <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="container text-center my-5">
-                <div class="container-title mx-auto mb-2 gradient-animated-title animation-duration-2">
-                    <h2 class="text-style-2 lh-1 "><span class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
-                        <span class="d-flex justify-content-end gap-2">
-                            <h2 class="text-style-2 lh-1  "><span class="d-block text-start"><?php echo DISCOVER_WELCOME[1];  ?></span>
+                <div class="container-title mx-auto mb-2">
+                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
+                        <span class="d-flex justify-content-end gap-3">
+                            <?php echo DISCOVER_WELCOME[1];  ?>
                         </span>
                     </h2>
                 </div>
@@ -66,15 +66,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-2 lh-1 title-carrusel">
-                            <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
-                            <span class="d-flex justify-content-end gap-5">
+                        <h3 class=" lh-1 title-carrusel left">
+                            <span class="d-block text-start text-style-3"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
+                            <span class="d-flex justify-content-center ">
                                 <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL[1]; ?></span>
                             </span>
                         </h3>
-                        <div class="description gray"></div>
                     </div>
-                    <div class="d-flex align-items-center gap-3 w-75">
+                    <div class="d-flex align-items-center w-75">
                         <!-- Arrow Left -->
                         <a href="#" class="slide-navigation-item-prev1 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -84,7 +83,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-7" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL[2]; ?></span>
                             </p>
                         </div>
@@ -359,19 +358,30 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
 
                 </div>
-                <div class="gallery-general-container  ">
-                    <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[37];  ?></h2>
+                <div class="gallery-general-container">
+                    <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
                     <div class="gallery-container">
-                        <img src="assets\images\blog\atv-expedition-two.jpg" alt="atv-expedition">
-                        <img src="assets\images\blog\atv-expedition-six.jpg" alt="atv-expedition">
-                        <img src="assets\images\blog\atv-expedition-five.jpg" alt="atv-expedition">
-                        <img src="assets\images\blog\atv-expedition-four.jpg" alt="atv-expedition">
-                        <img src="assets\images\blog\atv-expedition-one.jpg" alt="atv-expedition">
-                        <img src="assets\images\blog\atv-expedition-three.jpg" alt="atv-expedition">
+                        <img src="assets/images/blog/atv-expedition-two.jpg" alt="atv-expedition">
+                        <img src="assets/images/blog/atv-expedition-six.jpg" alt="atv-expedition">
+                        <img src="assets/images/blog/atv-expedition-five.jpg" alt="atv-expedition">
+                        <img src="assets/images/blog/atv-expedition-four.jpg" alt="atv-expedition">
+                        <img src="assets/images/blog/atv-expedition-one.jpg" alt="atv-expedition">
+                        <img src="assets/images/blog/atv-expedition-three.jpg" alt="atv-expedition">
                     </div>
-                    <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo DISCOVER_CARRUSEL[38];  ?></strong></a>
-
+                    <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
+                        <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
+                    </a>
                 </div>
+
+                <!-- Modal para la primera galería -->
+                <div class="modal" id="modal0">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImage0">
+                    <div id="caption0"></div>
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
+                </div>
+
             </div>
 
         </section>
@@ -478,7 +488,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-2 lh-1 title-carrusel">
+                        <h3 class="text-style-3 lh-1 title-carrusel right">
                             <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL2[0]; ?></span>
                             <span class="d-flex justify-content-end gap-5">
                                 <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL2[1]; ?></span>
@@ -496,7 +506,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-7" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL2[2]; ?></span>
                             </p>
                         </div>
@@ -665,6 +675,15 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo DISCOVER_CARRUSEL[38];  ?></strong></a>
 
                 </div>
+                <!-- Modal para la segunda galería -->
+                <div class="modal" id="modal1">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImage1">
+                    <div id="caption1"></div>
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
+                </div>
+
             </div>
         </section>
         <!--Third Carrusel-->
@@ -672,12 +691,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-2 lh-1 title-carrusel">
+                        <h3 class="text-style-3 lh-1 title-carrusel left">
                             <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL3[0]; ?></span>
                             <span class="d-flex justify-content-end gap-5">
-                            <span class="d-flex justify-content-end gap-5">
-                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL3[1]; ?></span>
-                            </span>
+                                <span class="d-flex justify-content-end gap-5">
+                                    <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL3[1]; ?></span>
+                                </span>
                             </span>
                         </h3>
                         <div class="description gray"></div>
@@ -692,7 +711,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-7" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL3[2]; ?></span>
                             </p>
                         </div>
@@ -960,6 +979,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo DISCOVER_CARRUSEL[38];  ?></strong></a>
 
                 </div>
+                <!-- Modal para la tercera galería -->
+                <div class="modal" id="modal2">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImage2">
+                    <div id="caption2"></div>
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
+                </div>
             </div>
         </section>
         <!--Fourth Carrusel-->
@@ -1065,12 +1092,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-2 lh-1 title-carrusel">
+                        <h3 class="text-style-3 lh-1 title-carrusel right">
                             <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL4[0]; ?></span>
                             <span class="d-flex justify-content-end gap-5">
-                            <span class="d-flex justify-content-end gap-5">
-                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL4[1]; ?></span>
-                            </span>
+                                <span class="d-flex justify-content-end gap-5">
+                                    <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL4[1]; ?></span>
+                                </span>
                             </span>
                         </h3>
                         <div class="description gray"></div>
@@ -1085,7 +1112,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-7" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL4[2]; ?></span>
                             </p>
                         </div>
@@ -1253,6 +1280,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo DISCOVER_CARRUSEL[38];  ?></strong></a>
 
+                </div>
+                <!-- Modal para la cuarta galería -->
+                <div class="modal" id="modal3">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImage3">
+                    <div id="caption3"></div>
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
                 </div>
             </div>
         </section>
@@ -1423,7 +1458,63 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener todas las galerías
+            var galleries = document.querySelectorAll('.gallery-general-container');
 
+            galleries.forEach((gallery, galleryIndex) => {
+                // Obtener el modal correspondiente a esta galería
+                var modal = document.getElementById(`modal${galleryIndex}`);
+                var modalImg = modal.querySelector('.modal-content');
+                var captionText = modal.querySelector(`#caption${galleryIndex}`);
+                var images = gallery.querySelectorAll('.gallery-container img');
+                var currentIndex = 0;
+
+                images.forEach((img, imgIndex) => {
+                    img.onclick = function() {
+                        currentIndex = imgIndex;
+                        showModal();
+                    }
+                });
+
+                // Obtener los botones de cierre y navegación
+                var span = modal.querySelector('.close');
+                var prev = modal.querySelector('.prev');
+                var next = modal.querySelector('.next');
+
+                span.onclick = function() {
+                    closeModal();
+                }
+
+                prev.onclick = function() {
+                    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+                    showModal();
+                }
+
+                next.onclick = function() {
+                    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+                    showModal();
+                }
+
+                function showModal() {
+                    modalImg.src = images[currentIndex].src;
+                    captionText.innerHTML = images[currentIndex].alt;
+                    modal.classList.remove('hide');
+                    modal.classList.add('show');
+                    modalImg.classList.remove('hide');
+                    modalImg.classList.add('show');
+                }
+
+                function closeModal() {
+                    modal.classList.remove('show');
+                    modal.classList.add('hide');
+                    modalImg.classList.remove('show');
+                    modalImg.classList.add('hide');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

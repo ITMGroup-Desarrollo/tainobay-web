@@ -86,7 +86,7 @@ define('DISCOVER_CARRUSEL3', array(
 define('DISCOVER_CARRUSEL4', array(
     'THE ULTIMATE',
     'ADVENTURE IN NATURE!',
-    'Experiencie the wonders of Puerto Plata',
+    'Experience the wonders of Puerto Plata',
     'The perfect combo to enjoy the beauty of Puerto Plata! Enjoy the city % discover the secluded Damajagua
     Waterfalls in the Dominican Republic´s mountains',
     'VIEW MORE',
