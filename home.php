@@ -3,6 +3,7 @@
 include_once("include/config.php");
 include_once("include/lang/{$idioma}-home.php");
 include_once("include/lang/{$idioma}-points-of-interest.php");
+include_once("include/lang/{$idioma}-port-experience.php");
 
 ?>
 <!DOCTYPE HTML>
@@ -86,7 +87,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
 
             <div class="carousel-content bg-orange d-flex flex-column justify-content-evenly align-items-center">
                 <h2 class="text-uppercase text-center text-style-3"><strong>Port experience</strong></h2>
-                <div class="d-flex align-items-center gap-3 w-75 max-w-2xl-60">
+                <div class="d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-block text-blue">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -96,7 +97,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                     </a>
                     <!-- Text Carousel -->
                     <div class="flex-grow-1">
-                        <p class="text-style-6" style="line-height: 55px;"><span class="d-block">Discover</span><span class="text-end ml-4 d-block">things to do</span></p>
+                        <p class="text-style-6 text-arrows"><span class="d-block">Discover</span><span class="text-end ml-4 d-block">things to do</span></p>
                     </div>
                     <!-- Arrow Right -->
                     <a href="#" class="slide-navigation-item-next d-block text-blue">
@@ -106,7 +107,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                         </svg>
                     </a>
                 </div>
-                <a href="#" class="text-uppercase button-transparent button-blue text-center"><strong>Explore more</strong></a>
+                <a href="#" class="d-block text-uppercase button-transparent button-blue text-center button-carousel"><strong>Explore more</strong></a>
             </div>
             <div class="carousel-image-wrapper">
                 <!-- share -->
@@ -121,7 +122,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                 <div class="content-wrapper-carousel">
                     <h2 class="mb-0 text-style-2">01</h2>
                     <h3 class="mb-0 text-style-15">Blue Parrot</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
+                    <p class="text-style-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
                 </div>
                 <picture>
                     <source src="assets/images/points-of-interest/ParqueCentral.jpg">
@@ -150,7 +151,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
         <section id="discover-beyond-cruise" class="shock-section pt-2 pb-4 dynamic-carousel">
             <div class="carousel-image-wrapper">
                 <!-- share -->
-                <div class="position-absolute top-0 start-0 p-1 button-share">
+                <div class="position-absolute top-0 end-0 p-1 button-share">
                     <button class="border-0 text-white bg-transparent">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
                             <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
@@ -161,7 +162,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                 <div class="content-wrapper-carousel">
                     <h2 class="mb-0 text-style-2">01</h2>
                     <h3 class="mb-0 text-style-15">Blue Parrot</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
+                    <p class="text-style-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
                 </div>
                 <picture>
                     <source src="assets/images/points-of-interest/ParqueCentral.jpg">
@@ -171,7 +172,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
 
             <div class="carousel-content bg-blue d-flex flex-column justify-content-evenly align-items-center">
                 <h2 class="text-uppercase text-center text-style-3"><strong>Discover Beyond The Cruise</strong></h2>
-                <div class="d-flex align-items-center gap-3 w-75 max-w-2xl-60">
+                <div class="d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-block text-orange">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -181,7 +182,7 @@ include_once("include/lang/{$idioma}-points-of-interest.php");
                     </a>
                     <!-- Text Carousel -->
                     <div class="flex-grow-1">
-                        <p class="text-style-6" style="line-height: 55px;"><span class="d-block">Discover</span><span class="text-end ml-4 d-block">things to do</span></p>
+                        <p class="text-style-6 text-arrows"><span class="d-block">Discover</span><span class="text-end ml-4 d-block">things to do</span></p>
                     </div>
                     <!-- Arrow Right -->
                     <a href="#" class="slide-navigation-item-next d-block text-orange">

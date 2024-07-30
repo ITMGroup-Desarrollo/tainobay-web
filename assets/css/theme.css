@@ -25,79 +25,73 @@ Support : codings.dev
 /* #region Color */
 
 :root {
+  /* Primary */
+  --primary-color: #f3a033;
+  --primary-15-color: #07beb826;
+  --primary-25-color: #07beb840;
+  --primary-50-color: #18355e;
+  --primary-75-color: #07beb8bf;
+  --primary-tainobayBlue-color: #1c355e;
 
-	/* Primary */
-	--primary-color: #f3a033;
-	--primary-15-color: #07beb826;
-	--primary-25-color: #07beb840;
-	--primary-50-color: #18355e;
-	--primary-75-color: #07beb8bf;
-	--primary-tainobayBlue-color:#1c355e;
+  /* Secondary */
+  --secondary-color: #6917d0;
+  --secondary-15-color: #6917d026;
+  --secondary-25-color: #6917d040;
+  --secondary-50-color: #6917d080;
+  --secondary-75-color: #6917d0bf;
 
-	/* Secondary */
-	--secondary-color: #6917d0;
-	--secondary-15-color: #6917d026;
-	--secondary-25-color: #6917d040;
-	--secondary-50-color: #6917d080;
-	--secondary-75-color: #6917d0bf;
+  /* Tertiary */
+  --tertiary-color: #ff1791;
+  --tertiary-15-color: #ff179126;
+  --tertiary-25-color: #ff179140;
+  --tertiary-50-color: #ff179180;
+  --tertiary-75-color: #ff1791bf;
 
-	/* Tertiary */
-	--tertiary-color: #ff1791;
-	--tertiary-15-color: #ff179126;
-	--tertiary-25-color: #ff179140;
-	--tertiary-50-color: #ff179180;
-	--tertiary-75-color: #ff1791bf;
+  /* Auxiliary */
+  --accent-color: #f3a033;
+  --success-color: #007a4d;
+  --info-color: #023e8a;
+  --warning-color: #ff9800;
+  --danger-color: #e63946;
 
-	/* Auxiliary */
-	--accent-color: #f3a033;
-	--success-color: #007a4d;
-	--info-color: #023e8a;
-	--warning-color: #ff9800;
-	--danger-color: #e63946;
+  /* White */
+  --white-color: #fff;
+  --white-10-color: rgba(255, 255, 255, 0.1);
+  --white-25-color: rgba(255, 255, 255, 0.25);
+  --white-50-color: rgba(255, 255, 255, 0.5);
+  --white-65-color: rgba(255, 255, 255, 0.65);
+  --white-75-color: rgba(255, 255, 255, 0.75);
+  --white-85-color: rgba(255, 255, 255, 0.85);
 
-	/* White */
-	--white-color: #fff;
-	--white-10-color: rgba(255, 255, 255, 0.1);
-	--white-25-color: rgba(255, 255, 255, 0.25);
-	--white-50-color: rgba(255, 255, 255, 0.50);
-	--white-65-color: rgba(255, 255, 255, 0.65);
-	--white-75-color: rgba(255, 255, 255, 0.75);
-	--white-85-color: rgba(255, 255, 255, 0.85);
+  /* Gray */
+  --gray-color: #8f93a5;
+  --gray-10-color: rgba(143, 147, 165, 0.1);
+  --gray-25-color: rgba(143, 147, 165, 0.25);
+  --gray-50-color: rgba(143, 147, 165, 0.5);
+  --gray-65-color: rgba(143, 147, 165, 0.65);
+  --gray-75-color: rgba(143, 147, 165, 0.75);
+  --gray-85-color: rgba(143, 147, 165, 0.85);
 
-	/* Gray */	
-	--gray-color: #8f93a5;
-	--gray-10-color: rgba(143, 147, 165, 0.1);
-	--gray-25-color: rgba(143, 147, 165, 0.25);
-	--gray-50-color: rgba(143, 147, 165, 0.50);
-	--gray-65-color: rgba(143, 147, 165, 0.65);
-	--gray-75-color: rgba(143, 147, 165, 0.75);
-	--gray-85-color: rgba(143, 147, 165, 0.85);
+  /* Black */
+  --black-color: #1a1a20;
+  --black-10-color: rgba(26, 26, 32, 0.1);
+  --black-25-color: rgba(26, 26, 32, 0.25);
+  --black-50-color: rgba(26, 26, 32, 0.5);
+  --black-65-color: rgba(26, 26, 32, 0.65);
+  --black-75-color: rgba(26, 26, 32, 0.75);
+  --black-85-color: rgba(26, 26, 32, 0.85);
 
-	/* Black */
-	--black-color: #1a1a20;
-	--black-10-color: rgba(26, 26, 32, 0.1);
-	--black-25-color: rgba(26, 26, 32, 0.25);
-	--black-50-color: rgba(26, 26, 32, 0.50);
-	--black-65-color: rgba(26, 26, 32, 0.65);
-	--black-75-color: rgba(26, 26, 32, 0.75);
-	--black-85-color: rgba(26, 26, 32, 0.85);
-
-
-		/* blue */
-		--blue-color: #18355e;
-		--blue-10-color: rgba(24, 53, 94, 0.1);
-		--blue-25-color: rgba(24, 53, 94, 0.25);
-		--blue-50-color: rgba(24, 53, 94, 0.50);
-		--blue-65-color: rgba(24, 53, 94, 0.65);
-		--blue-75-color: rgba(24, 53, 94, 0.75);
-		--blue-85-color: rgba(24, 53, 94, 0.85);
-
-
-
+  /* blue */
+  --blue-color: #18355e;
+  --blue-10-color: rgba(24, 53, 94, 0.1);
+  --blue-25-color: rgba(24, 53, 94, 0.25);
+  --blue-50-color: rgba(24, 53, 94, 0.5);
+  --blue-65-color: rgba(24, 53, 94, 0.65);
+  --blue-75-color: rgba(24, 53, 94, 0.75);
+  --blue-85-color: rgba(24, 53, 94, 0.85);
+  --blue-90-color: rgba(24, 53, 94, 0.9);
+  --blue-95-color: rgba(24, 53, 94, 0.95);
 }
-
-
-
 
 /* #endregion Color */
 
@@ -108,59 +102,134 @@ Support : codings.dev
 /* #region Typography */
 
 :root {
-	--primary-font: lato, sans-serif;
-	--secondary-font: proxima-nova, sans-serif;
+  --primary-font: lato, sans-serif;
+  --secondary-font: proxima-nova, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 1.5rem;
-	font-family: var(--secondary-font);  
+  font-family: var(--secondary-font);
   line-height: 1.2;
 }
 
-.text-style-1, 
-.text-style-2, 
-.text-style-3, 
-.text-style-4, 
-.text-style-5, 
-.text-style-6, 
-.text-style-7, 
+.text-style-1,
+.text-style-2,
+.text-style-3,
+.text-style-4,
+.text-style-5,
+.text-style-6,
+.text-style-7,
 .text-style-8 {
-	font-family: var(--secondary-font);  
-	line-height: 1.2;
+  font-family: var(--secondary-font);
+  line-height: 1.2;
 }
 
-.text-style-1 { font-size: 6.2rem; font-weight: 800; }
-.text-style-2 { font-size: 5.2rem; font-weight: 800; }
-.text-style-3 { font-size: 4.2rem; font-weight: 800; }
-.text-style-4 { font-size: 4.2rem; font-weight: 100; }
-.text-style-5 { font-size: 3.2rem; font-weight: 800; }
-.text-style-6 { font-size: 3.2rem; font-weight: 100; }
-.text-style-7 { font-size: 2.2rem; font-weight: 700; }
-.text-style-8 { font-size: 2.2rem; font-weight: 100; }
-.text-style-9 { font-size: 1.75rem; font-weight: 700; }
-.text-style-10 { font-size: 1.75rem; font-weight: 100; }
-.text-style-11 { font-size: 1.2rem; font-weight: 700; }
-.text-style-12 { font-size: 1.2rem; font-weight: 400; }
-.text-style-13 { font-size: 1.5rem; font-weight: 400; }
-.text-style-14 { font-size: 2rem;}
-.text-style-15 { font-size: 3.2rem;}
-.text-style-16 { font-size: 1.5rem; }
+.text-style-1 {
+  font-size: 6.2rem;
+  font-weight: 800;
+}
+.text-style-2 {
+  font-size: 5.2rem;
+  font-weight: 800;
+}
+.text-style-3 {
+  font-size: 4.2rem;
+  font-weight: 800;
+}
+.text-style-4 {
+  font-size: 4.2rem;
+  font-weight: 100;
+}
+.text-style-5 {
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+.text-style-6 {
+  font-size: 3.2rem;
+  font-weight: 100;
+}
+.text-style-7 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.text-style-8 {
+  font-size: 2.2rem;
+  font-weight: 100;
+}
+.text-style-9 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.text-style-10 {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+.text-style-11 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.text-style-12 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.text-style-13 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.text-style-14 {
+  font-size: 2rem;
+}
+.text-style-15 {
+  font-size: 3.2rem;
+}
+.text-style-16 {
+  font-size: 1.5rem;
+}
 
 @media (max-width: 767px) {
-	.text-style-1 { font-size: 3rem; }
-	.text-style-2 { font-size: 3rem; }
-	.text-style-3 { font-size: 3rem; }
-	.text-style-4 { font-size: 3rem; }
-	.text-style-5 { font-size: 2.2rem; font-weight: 700; }
-	.text-style-6 { font-size: 2.2rem; }
-	.text-style-7 { font-size: 1.75rem; }
-	.text-style-8 { font-size: 1.75rem; }	
-	.text-style-9 { font-size: 1.5rem; }
-	.text-style-10 { font-size: 1.5rem; }
-	.text-style-11 { font-size: 1.2rem; }
-	.text-style-12 { font-size: 1rem; }
+  .text-style-1 {
+    font-size: 3rem;
+  }
+  .text-style-2 {
+    font-size: 3rem;
+  }
+  .text-style-3 {
+    font-size: 3rem;
+  }
+  .text-style-4 {
+    font-size: 3rem;
+  }
+  .text-style-5 {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  .text-style-6 {
+    font-size: 2.2rem;
+  }
+  .text-style-7 {
+    font-size: 1.75rem;
+  }
+  .text-style-8 {
+    font-size: 1.75rem;
+  }
+  .text-style-9 {
+    font-size: 1.5rem;
+  }
+  .text-style-10 {
+    font-size: 1.5rem;
+  }
+  .text-style-11 {
+    font-size: 1.2rem;
+  }
+  .text-style-12 {
+    font-size: 1rem;
+  }
 }
 
 p {
@@ -169,7 +238,7 @@ p {
 }
 
 p:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 b,
@@ -177,7 +246,8 @@ strong {
   font-weight: 700;
 }
 
-small, .small {
+small,
+.small {
   font-size: 0.85rem;
 }
 

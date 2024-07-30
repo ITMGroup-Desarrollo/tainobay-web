@@ -1,21 +1,34 @@
 @keyframes arrowLeft {
-  0% {transform: translate(0px, 0px);}
+  0% {
+    transform: translate(0px, 0px);
+  }
 
-  50% {transform: translate(-10px, 0px);}
+  50% {
+    transform: translate(-10px, 0px);
+  }
 
-  100% {transform: translate(0px, 0px);}
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 @keyframes arrowRight {
-  0% {transform: translate(0px, 0px);}
+  0% {
+    transform: translate(0px, 0px);
+  }
 
-  50% {transform: translate(10px, 0px);}
+  50% {
+    transform: translate(10px, 0px);
+  }
 
-  100% {transform: translate(0px, 0px);}
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
-#port-experience, .dynamic-carousel {
+
+#port-experience,
+.dynamic-carousel {
   color: white;
   display: grid;
-
 }
 .bg-orange {
   background-color: var(--primary-color);
@@ -23,21 +36,23 @@
 .bg-blue {
   background-color: var(--blue-color);
 }
-#port-experience .carousel-image-wrapper, .dynamic-carousel .carousel-image-wrapper {
-max-width: 100%;
-position: relative;
+#port-experience .carousel-image-wrapper,
+.dynamic-carousel .carousel-image-wrapper {
+  max-width: 100%;
+  position: relative;
 }
-#port-experience .carousel-image-wrapper img, .dynamic-carousel .carousel-image-wrapper img {
+#port-experience .carousel-image-wrapper img,
+.dynamic-carousel .carousel-image-wrapper img {
   object-fit: contain;
   max-width: 100%;
 }
 .content-wrapper-carousel {
   bottom: 0;
   position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: auto;
-    padding: 1rem;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
 }
 .carousel-image-wrapper::after {
   content: "";
@@ -47,7 +62,7 @@ position: relative;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue-color))
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue-color));
 }
 .button-share {
   z-index: 3;
@@ -86,27 +101,54 @@ position: relative;
 .w-75 {
   max-width: 75%;
 }
+.carousel-content {
+  padding: 2rem 1rem;
+  row-gap: 1rem;
+}
+.text-arrows {
+  line-height: normal;
+}
+.wrapper-arrows {
+  margin-bottom: 2rem;
+}
+.content-wrapper-carousel p {
+  text-align: justify;
+}
 
 /* sm */
 @media (min-width: 640px) {
-
 }
 
 /* md 768px  */
 @media (min-width: 768px) {
-#port-experience, .dynamic-carousel {
+  #port-experience,
+  .dynamic-carousel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .carousel-content {
+    padding: 0;
+    row-gap: 0;
+  }
+  .w-md-75 {
+    max-width: 75%;
+  }
+  .text-arrows {
+    line-height: 55px;
+  }
+  .wrapper-arrows {
+    margin-bottom: 0;
+  }
+  .content-wrapper-carousel {
+    padding: 5rem;
   }
 }
 
 /* lg 1024px  */
 @media (min-width: 1024px) {
-
 }
 
 /* xl 1280px  */
 @media (min-width: 1280px) {
- 
 }
 
 /* 2xl 1536px  */
