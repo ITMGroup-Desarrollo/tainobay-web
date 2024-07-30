@@ -67,7 +67,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
                         <h3 class=" lh-1 title-carrusel left">
-                            <span class="d-block text-start text-style-3"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
+                            <span class="d-block text-start text-style-3 gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
                             <span class="d-flex justify-content-center ">
                                 <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL[1]; ?></span>
                             </span>
@@ -226,7 +226,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
-                    <div class="container-title container-title-display mx-auto mb-2">
+                    <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
                         <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[6];  ?></span>
 
                             <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
