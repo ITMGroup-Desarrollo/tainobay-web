@@ -1,13 +1,40 @@
 .justificado {
     text-align: justify;
 }
+
 .imgRound {
     border: none;
     border-radius: 1.5rem;
 }
 
+.blog-icons {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 1rem;
+}
+.list-icon, .grid-icon{
+    height: 4rem;
+}
 .blog-menu {
     margin-bottom: 5rem;
+}
+
+.blog-icons svg {
+    margin: 0 1.5rem;
+    cursor: pointer;
+}
+
+.blog-icons svg path {
+    fill: #1c355e;
+}
+
+.blog-icons svg:hover  {
+    fill: #f5a23a;
+}
+.shock-section .content {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .image-blog-container {
@@ -72,7 +99,7 @@
 }
 
 .azulBlog {
-    color: white;
+    color: #1c355e;
 }
 
 .pagination-items {
@@ -110,13 +137,17 @@
     margin-top: -20px !important;
 }
 
-.blogDate {
+.single-blog-date {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.blogDate .content {
+.single-blog-date .content {
     text-align: center;
+    color: var(--blog-icono);
+}
+
+.single-grid-blog-date .content {
     color: var(--blog-icono);
 }
 
@@ -126,9 +157,11 @@
     margin-top: -20px;
 
 }
+
 .swiper-container {
     width: 100%;
 }
+
 .mestitle {
     margin-bottom: 10px;
 }
@@ -166,7 +199,7 @@
         align-self: center;
     }
 
-    .blogDate {
+    .single-blog-date {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -177,5 +210,92 @@
     .swiper-button-next {
         display: none;
     }
-    
+
+
+}
+
+.single-grid-blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 38rem);
+    gap: 5rem;
+    justify-content: center;
+
+}
+
+.container.grid-container {
+    margin: 0;
+    width: 38rem;
+    margin: 0 0 4rem 0;
+}
+
+.container.grid-container .image-blog-container {
+    height: 27rem;
+    margin-bottom: 2rem;
+}
+
+.container.grid-container .row {
+    display: flex;
+    flex-direction: column;
+    width: 38rem;
+
+}
+
+.container.grid-container .row .single-grid-blog-icon {
+    order: 0;
+    text-align: end;
+
+}
+
+.container.grid-container .row .single-grid-blog-icon .azulBlog {
+    position: relative;
+    z-index: 2;
+    left: -2rem;
+    top: 3rem;
+
+}
+
+.container.grid-container .row .single-grid-blog-image {
+    order: 1;
+    z-index: 1;
+}
+
+.container.grid-container .row .single-grid-blog-date {
+    position: relative;
+    order: 2;
+    text-align: end;
+    z-index: 2;
+    left: -1.5rem;
+    top: 6.5rem;
+    margin-top: -6rem;
+}
+
+.container.grid-container .row .single-grid-blog-content {
+    order: 3;
+    z-index: 1;
+}
+
+.container.grid-container .single-grid-blog-content {
+    padding: 0 2rem;
+    color: var(--blog-icono);
+}
+
+.container.grid-container .single-grid-blog-content p {
+    margin-bottom: 2rem;
+}
+
+.container.grid-container .single-grid-blog-content .single-blog-title {
+    width: 80%;
+}
+
+@media (max-width: 1250px) {
+    .single-grid-blog-container {
+        display: grid;
+        grid-template-columns: repeat(1, 38rem);
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .blog-icons {
+        display: none !important;
+    }
 }
