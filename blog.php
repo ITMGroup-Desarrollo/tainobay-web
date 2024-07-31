@@ -51,7 +51,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             <div class="container">
                 <div class="row">
                     <!-- timeline-->
-                    <div class="col-lg-2" >
+                    <div class="col-lg-2">
                         <ul class="timeline">
                             <?php
                             $dias = array(25, 24, 23, 22, 21);
@@ -83,7 +83,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                         <div style="display: flex; ">
                             <a href="blog_all.php" class=" button-transparent button-orange text-center" style=""><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
                             <!-- Botones de navegación y paginación -->
-                            <div class="container mt-3 d-flex justify-content-end pagination-items" >
+                            <div class="container mt-3 d-flex justify-content-end pagination-items">
                                 <div class="row">
                                     <div class="col-4 col-md-3 col-lg-6">
                                         <svg id="prev-page" class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -155,6 +155,11 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     <script>
         function loadPost(title, pushState = true) {
             $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
+                if (!response.posts || response.posts.length === 0) {
+                    $('#blog-container').html('<p>No se encontró el post.</p>');
+                    return;
+                }
+
                 const data = response.posts[0]; // Asumimos que solo hay un post con el título dado
                 const hasPrevPost = response.has_prev_post;
                 const hasNextPost = response.has_next_post;
@@ -164,38 +169,35 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 $('#blog-container').empty(); // Limpiar el contenedor antes de agregar nuevos posts
 
                 $('#blog-container').append(`
-            <div class="blog-post">
-                <div class="title-image">
-                    <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" style="width: 100%; height: auto;  ">
-                    <div class="dropdown azulBlog">
-                        <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                            </svg>
-                        </button>
-                        <div class="dropdown-content" id="dropdownContent">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://www.whatsapp.com" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
+                <div class="blog-post">
+                    <div class="title-image">
+                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" ">
+                        <div class="dropdown azulBlog">
+                            <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                    <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-content" id="dropdownContent">
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://www.whatsapp.com" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="blog-post blog-texto">
-                <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.content}</p>
-                <p class="justificado">${data.content}</p>
-            </div>
-            
-        `);
+                <div class="blog-post blog-texto">
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                </div>
+            `);
 
                 // Controlar la habilitación de los botones de navegación
                 $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
@@ -204,11 +206,13 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 // Actualizar la URL
                 if (pushState) {
                     const url = new URL(window.location);
-                    url.pathname = '/tainobay/blog/' + title;
+                    url.pathname = '/tainobay/blog/' + encodeURIComponent(title);
                     window.history.pushState({
                         title: title
                     }, '', url);
                 }
+            }).fail(function() {
+                $('#blog-container').html('<p>Error al cargar el post.</p>');
             });
         }
 
@@ -226,7 +230,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         // Cargar los posts al iniciar
         $(document).ready(function() {
             const pathSegments = window.location.pathname.split('/');
-            const title = pathSegments[pathSegments.length - 1];
+            const title = decodeURIComponent(pathSegments[pathSegments.length - 1]);
             if (title) {
                 loadPost(title, false);
             } else {
@@ -234,6 +238,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             }
         });
     </script>
+
 </body>
 
 </html>
