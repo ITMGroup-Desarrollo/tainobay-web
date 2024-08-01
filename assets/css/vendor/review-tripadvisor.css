@@ -45,6 +45,7 @@
 #reviews {
   overflow-y: visible;
   height: 400px;
+  width: 85%;
 }
 
 /* sm */
@@ -53,19 +54,15 @@
 
 /* md 768px  */
 @media (min-width: 768px) {
-  .card-review {
-    /* max-width: 30%; */
-    /* padding: 20px 35px 20px 35px; */
-  }
-
   #reviews .active-card-review,
   #reviews .swiper-slide-next,
   #reviews .swiper-slide-duplicate-next {
-    transform: translateY(35px) !important;
+    transform: translateY(30px) !important;
   }
   #reviews {
     overflow-y: visible;
     height: 450px;
+    width: 90%;
   }
 }
 

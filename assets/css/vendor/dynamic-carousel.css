@@ -69,9 +69,15 @@
 }
 .slide-navigation-item-prev {
   animation: arrowLeft 1.5s ease-in-out infinite;
+  height: 100px;
 }
 .slide-navigation-item-next {
   animation: arrowRight 1.5s ease-in-out infinite;
+  height: 100px;
+}
+#container-reviews .swiper-button-prev,
+#container-reviews .swiper-button-next {
+  top: 44%;
 }
 
 .button-transparent {
