@@ -29,6 +29,7 @@ $points = [
       </svg>',
     'cover' => '/blue-parrot/cover-blue-parrot-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -78,6 +79,7 @@ $points = [
         </svg>',
     'cover' => '/boat-bar/cover-boat-bar-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -125,6 +127,7 @@ $points = [
       </svg>',
     'cover' => '/cantina-latina/cover-cantina-latina-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -174,6 +177,8 @@ $points = [
         </svg>',
     'cover' => '/coffe-factory/cover-coffe-bar-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
+    'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -220,6 +225,8 @@ $points = [
       </svg>',
     'cover' => '/mexican-grill/mexican-grill-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
+    'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -268,6 +275,8 @@ $points = [
         </svg>',
     'cover' => '/dom-dom-bar/cover-dom-dom-bar-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
+    'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -316,6 +325,7 @@ $points = [
         </svg>',
     'cover' => '/margarita-bar/cover-margarita-bar-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -365,6 +375,7 @@ $points = [
         </svg>',
     'cover' => '/rum-rum-bar/cover-rum-rum-bar-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -414,6 +425,7 @@ $points = [
         </svg>',
     'cover' => '/rum-rum-bar/cover-rum-rum-bar-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -463,6 +475,7 @@ $points = [
         </svg>',
     'cover' => '/tiki-tiki/cover-tiki-tiki-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -510,6 +523,7 @@ $points = [
       </svg>',
     'cover' => '/taco-lover/cover-taco-lover-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -562,6 +576,7 @@ $points = [
         </svg>',
     'cover' => '/lazy-river/cover-lazy-river-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -612,6 +627,7 @@ $points = [
       </svg>',
     'cover' => '/splash-surfing/cover-splash-surfing-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -659,6 +675,7 @@ $points = [
       </svg>',
     'cover' => '/spa-wellness/cover-spa-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -707,6 +724,7 @@ $points = [
       </svg>',
     'cover' => '/pool/cover-pool-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [
@@ -754,6 +772,7 @@ $points = [
       </svg>',
     'cover' => '/beach/cover-beach-port-experience.webp',
     'title' => 'Menu',
+    'gallery' => [],
     'text_home' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.',
     'menu' => [
       [

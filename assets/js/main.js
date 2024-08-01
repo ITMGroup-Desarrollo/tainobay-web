@@ -455,6 +455,13 @@ jQuery(function ($) {
       var columns = [1, 1, 1, 1];
     }
 
+    // spacebetween
+    if ($(this).is("[data-space]")) {
+      var spaceBetween = $(this).data("space");
+    } else {
+      var spaceBetween = 0;
+    }
+
     // Navigation
     if ($(this).hasClass("has-navigation")) {
       has_navigation = {
@@ -492,7 +499,7 @@ jQuery(function ($) {
       pagination: has_pagination,
       scrollbar: has_scrollbar,
       grabCursor: true,
-      spaceBetween: 0,
+      spaceBetween: spaceBetween,
       autoHeight: true,
       centerInsufficientSlides: true,
       slidesPerView: columns[3],
