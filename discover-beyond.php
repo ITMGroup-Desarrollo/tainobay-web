@@ -11,48 +11,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     <?php include("include/header.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
     <style>
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            /* Asegurar que los elementos hijos estén posicionados correctamente */
-        }
 
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-        }
-
-        .image-wrapper {
-            width: 100%;
-            height: 250px;
-            /* Ajusta la altura según tus necesidades */
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
-        }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: #000;
-            /* Cambiar el color de los botones si es necesario */
-        }
-
-        .swiper-scrollbar {
-            position: absolute;
-            bottom: 10px;
-            /* Ajusta la posición vertical de la barra de desplazamiento */
-            left: 0;
-            width: 100%;
-        }
     </style>
 </head>
 
@@ -176,8 +135,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\atv-expedition-one.jpg">
-                                    <img src="assets\images\blog\atv-expedition-one.jpg" class="d-block w-100" alt="Parque Central">
+                                    <source src="assets/images/blog/atv-expedition-one.jpg">
+                                    <img src="assets/images/blog/atv-expedition-one.jpg" class="d-block w-100" alt="Parque Central">
                                 </picture>
                             </div>
                         </div>
@@ -208,8 +167,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\atv-expedition-three.jpg">
-                                    <img src="assets\images\blog\atv-expedition-three.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/atv-expedition-three.jpg">
+                                    <img src="assets/images/blog/atv-expedition-three.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -224,8 +183,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\atv-expedition-four.jpg">
-                                    <img src="assets\images\blog\atv-expedition-four.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/atv-expedition-four.jpg">
+                                    <img src="assets/images/blog/atv-expedition-four.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -240,8 +199,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\atv-expedition-five.jpg">
-                                    <img src="assets\images\blog\atv-expedition-five.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/atv-expedition-five.jpg">
+                                    <img src="assets/images/blog/atv-expedition-five.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -256,8 +215,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\atv-expedition-six.jpg">
-                                    <img src="assets\images\blog\atv-expedition-six.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/atv-expedition-six.jpg">
+                                    <img src="assets/images/blog/atv-expedition-six.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -399,31 +358,77 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <p class="text-black text-style-16 text-italic justificado"><?php echo DISCOVER_CARRUSEL[36];  ?></p>
 
                     </div>
+                    <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
+                        <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                            <div class="swiper-wrapper">
 
-                </div>
-                <div class="gallery-general-container">
-                    <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
-                    <div class="gallery-container">
-                        <img src="assets/images/blog/atv-expedition-two.jpg" alt="atv-expedition">
-                        <img src="assets/images/blog/atv-expedition-six.jpg" alt="atv-expedition">
-                        <img src="assets/images/blog/atv-expedition-five.jpg" alt="atv-expedition">
-                        <img src="assets/images/blog/atv-expedition-four.jpg" alt="atv-expedition">
-                        <img src="assets/images/blog/atv-expedition-one.jpg" alt="atv-expedition">
-                        <img src="assets/images/blog/atv-expedition-three.jpg" alt="atv-expedition">
+
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\atv-expedition-one.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\atv-expedition-one.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\atv-expedition-two.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\atv-expedition-two.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\atv-expedition-three.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\atv-expedition-three.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\atv-expedition-four.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\atv-expedition-four.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\atv-expedition-five.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\atv-expedition-five.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\atv-expedition-six.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\atv-expedition-six.jpg" alt="damajagua">
+                                        </div>
+                                    </a>
+                                </div>
+
+
+
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
+                            <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
+                        </a>
                     </div>
-                    <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
-                        <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
-                    </a>
                 </div>
 
-                <!-- Modal para la primera galería -->
-                <div class="modal" id="modal0">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="modalImage0">
-                    <div id="caption0"></div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-                </div>
 
 
             </div>
@@ -457,8 +462,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\countryside-one.jpg">
-                                    <img src="assets\images\blog\countryside-one.jpg" class="d-block w-100" alt="Parque Central">
+                                    <source src="assets/images/blog/countryside-one.jpg">
+                                    <img src="assets/images/blog/countryside-one.jpg" class="d-block w-100" alt="Parque Central">
                                 </picture>
                             </div>
                         </div>
@@ -473,8 +478,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\countryside-two.jpg">
-                                    <img src="assets\images\blog\countryside-two.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/countryside-two.jpg">
+                                    <img src="assets/images/blog/countryside-two.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -489,8 +494,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\countryside-three.jpg">
-                                    <img src="assets\images\blog\countryside-three.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/countryside-three.jpg">
+                                    <img src="assets/images/blog/countryside-three.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -505,8 +510,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\countryside-five.jpg">
-                                    <img src="assets\images\blog\countryside-five.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/countryside-five.jpg">
+                                    <img src="assets/images/blog/countryside-five.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -521,8 +526,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\countryside-six.jpg">
-                                    <img src="assets\images\blog\countryside-six.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/countryside-six.jpg">
+                                    <img src="assets/images/blog/countryside-six.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -705,30 +710,70 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <p class="text-black text-style-16 text-italic justificado"><?php echo DISCOVER_CARRUSEL[36];  ?></p>
 
                     </div>
+                    <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
+                        <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                            <div class="swiper-wrapper">
 
-                </div>
-                <div class="gallery-general-container  ">
-                    <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[37];  ?></h2>
-                    <div class="gallery-container">
-                        <img src="assets\images\blog\countryside-one.jpg" alt="countryside">
-                        <img src="assets\images\blog\countryside-two.jpg" alt="countryside">
-                        <img src="assets\images\blog\countryside-three.jpg" alt="countryside">
-                        <img src="assets\images\blog\countryside-five.jpg" alt="countryside">
-                        <img src="assets\images\blog\countryside-six.jpg" alt="countryside">
+
+
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\countryside-one.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\countryside-one.jpg" alt="damajagua">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\countryside-two.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\countryside-two.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\countryside-three.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\countryside-three.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\countryside-five.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\countryside-five.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\countryside-six.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\countryside-six.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
+                            <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
+                        </a>
                     </div>
-                    <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo DISCOVER_CARRUSEL[38];  ?></strong></a>
 
                 </div>
-                <!-- Modal para la segunda galería -->
-                <div class="modal" id="modal1">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="modalImage1">
-                    <div id="caption1"></div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-                </div>
-
-            </div>
         </section>
         <!--Third Carrusel-->
         <section class="carousel-section">
@@ -803,8 +848,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\a-walk-through-puerto-plata-one.jpg">
-                                    <img src="assets\images\blog\a-walk-through-puerto-plata-one.jpg" class="d-block w-100" alt="Parque Central">
+                                    <source src="assets/images/blog/a-walk-through-puerto-plata-one.jpg">
+                                    <img src="assets/images/blog/a-walk-through-puerto-plata-one.jpg" class="d-block w-100" alt="Parque Central">
                                 </picture>
                             </div>
                         </div>
@@ -819,8 +864,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\a-walk-through-puerto-plata-six.jpg">
-                                    <img src="assets\images\blog\a-walk-through-puerto-plata-six.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/a-walk-through-puerto-plata-six.jpg">
+                                    <img src="assets/images/blog/a-walk-through-puerto-plata-six.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -835,8 +880,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\a-walk-through-puerto-plata-seven.jpg">
-                                    <img src="assets\images\blog\a-walk-through-puerto-plata-seven.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/a-walk-through-puerto-plata-seven.jpg">
+                                    <img src="assets/images/blog/a-walk-through-puerto-plata-seven.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -851,8 +896,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\a-walk-through-puerto-plata-eight.jpg">
-                                    <img src="assets\images\blog\a-walk-through-puerto-plata-eight.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/a-walk-through-puerto-plata-eight.jpg">
+                                    <img src="assets/images/blog/a-walk-through-puerto-plata-eight.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -867,8 +912,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\a-walk-through-puerto-plata-nine.jpg">
-                                    <img src="assets\images\blog\a-walk-through-puerto-plata-nine.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/a-walk-through-puerto-plata-nine.jpg">
+                                    <img src="assets/images/blog/a-walk-through-puerto-plata-nine.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -1009,29 +1054,67 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <p class="text-black text-style-16 text-italic justificado"><?php echo DISCOVER_CARRUSEL[36];  ?></p>
 
                     </div>
+                    <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
+                        <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                            <div class="swiper-wrapper">
 
-                </div>
-                <div class="gallery-general-container  ">
-                    <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[37];  ?></h2>
-                    <div class="gallery-container">
-                        <img src="assets\images\blog\a-walk-through-puerto-plata-one.jpg" alt="a-walk-through-puerto-plata">
-                        <img src="assets\images\blog\a-walk-through-puerto-plata-six.jpg" alt="a-walk-through-puerto-plata">
-                        <img src="assets\images\blog\a-walk-through-puerto-plata-seven.jpg" alt="a-walk-through-puerto-plata">
-                        <img src="assets\images\blog\a-walk-through-puerto-plata-eight.jpg" alt="a-walk-through-puerto-plata">
-                        <img src="assets\images\blog\a-walk-through-puerto-plata-nine.jpg" alt="a-walk-through-puerto-plata">
+
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\a-walk-through-puerto-plata-one.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\a-walk-through-puerto-plata-one.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\a-walk-through-puerto-plata-six.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\a-walk-through-puerto-plata-six.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\a-walk-through-puerto-plata-seven.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\a-walk-through-puerto-plata-seven.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\a-walk-through-puerto-plata-eight.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\a-walk-through-puerto-plata-eight.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets\images\blog\a-walk-through-puerto-plata-nine.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets\images\blog\a-walk-through-puerto-plata-nine.jpg" alt="damajagua">
+                                        </div>
+                                    </a>
+                                </div>
+
+
+
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
+                            <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
+                        </a>
                     </div>
-                    <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo DISCOVER_CARRUSEL[38];  ?></strong></a>
-
                 </div>
-                <!-- Modal para la tercera galería -->
-                <div class="modal" id="modal2">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="modalImage2">
-                    <div id="caption2"></div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-                </div>
-            </div>
         </section>
         <!--Fourth Carrusel-->
         <section class="carousel-section">
@@ -1061,8 +1144,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\damajagua-one.jpg">
-                                    <img src="assets\images\blog\damajagua-one.jpg" class="d-block w-100" alt="Parque Central">
+                                    <source src="assets/images/blog/damajagua-one.jpg">
+                                    <img src="assets/images/blog/damajagua-one.jpg" class="d-block w-100" alt="Parque Central">
                                 </picture>
                             </div>
                         </div>
@@ -1077,8 +1160,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\damajagua-two.jpg">
-                                    <img src="assets\images\blog\damajagua-two.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/damajagua-two.jpg">
+                                    <img src="assets/images/blog/damajagua-two.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -1093,8 +1176,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\damajua-three.jpg">
-                                    <img src="assets\images\blog\damajua-three.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/damajua-three.jpg">
+                                    <img src="assets/images/blog/damajua-three.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -1109,8 +1192,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\damajagua-four.jpg">
-                                    <img src="assets\images\blog\damajagua-four.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/damajagua-four.jpg">
+                                    <img src="assets/images/blog/damajagua-four.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -1125,8 +1208,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets\images\blog\damajagua-five.jpg">
-                                    <img src="assets\images\blog\damajagua-five.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets/images/blog/damajagua-five.jpg">
+                                    <img src="assets/images/blog/damajagua-five.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -1311,29 +1394,69 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         <p class="text-black text-style-16 text-italic justificado"><?php echo DISCOVER_CARRUSEL[36];  ?></p>
 
                     </div>
+                    <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
+                        <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                            <div class="swiper-wrapper">
 
-                </div>
-                <div class="gallery-general-container ">
-                    <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[37];  ?></h2>
-                    <div class="gallery-container">
-                        <img src="assets\images\blog\damajagua-one.jpg" alt="damajagua">
-                        <img src="assets\images\blog\damajagua-two.jpg" alt="damajagua">
-                        <img src="assets\images\blog\damajua-three.jpg" alt="damajagua">
-                        <img src="assets\images\blog\damajagua-four.jpg" alt="damajagua">
-                        <img src="assets\images\blog\damajagua-five.jpg" alt="damajagua">
+
+
+                                <div class="swiper-slide">
+                                    <a href="assets/images/blog/damajagua-one.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/blog/damajagua-one.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/blog/damajagua-two.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/blog/damajagua-two.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/blog/damajagua-three.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/blog/damajua-three.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/blog/damajagua-four.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/blog/damajagua-four.jpg" alt="damajagua">
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/blog/damajagua-five.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/blog/damajagua-five.jpg" alt="damajagua">
+                                        </div>
+                                    </a>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
+                            <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
+                        </a>
                     </div>
-                    <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?php echo DISCOVER_CARRUSEL[38];  ?></strong></a>
-
                 </div>
-                <!-- Modal para la cuarta galería -->
-                <div class="modal" id="modal3">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="modalImage3">
-                    <div id="caption3"></div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-                </div>
-            </div>
         </section>
 
 
