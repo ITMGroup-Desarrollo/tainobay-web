@@ -98,16 +98,13 @@
 .icon-banner {
   width: 60px;
 }
-.icon-banner svg,
-.wrapper-icon svg {
+#single-port-page .icon-banner svg,
+#port-page .wrapper-icon svg {
   fill: white;
   color: white;
 }
-.wrapper-icon {
+#port-page .wrapper-icon {
   width: 50px;
-}
-.brightness-9 {
-  filter: brightness(0.9);
 }
 /* sm */
 @media (min-width: 640px) {

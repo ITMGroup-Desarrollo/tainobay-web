@@ -151,9 +151,9 @@ $points = [
     ]
   ],
   [
-    'name' => 'Coffe Factory',
-    'path' => 'coffe-factory',
-    'logo' => 'Coffe Factory',
+    'name' => 'Coffee Factory',
+    'path' => 'coffee-factory',
+    'logo' => 'Coffee Factory',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
           <path d="M123.34,124.05c7.09-2.04,14.72-2.53,22.09-1.38,2.5.4,4.95.97,7.36,1.65v-20.21h-40.17l10.73,19.95Z"/>
           <path d="M159.66,126.17c1.63.55,3.25,1.13,4.86,1.7,3.35,1.2,6.81,2.44,10.23,3.4l14.6-27.17h-29.69v22.06Z"/>
