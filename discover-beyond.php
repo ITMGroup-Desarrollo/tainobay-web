@@ -10,7 +10,50 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     <?php include("include/head.php"); ?>
     <?php include("include/header.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /* Asegurar que los elementos hijos estén posicionados correctamente */
+        }
 
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 250px;
+            /* Ajusta la altura según tus necesidades */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #000;
+            /* Cambiar el color de los botones si es necesario */
+        }
+
+        .swiper-scrollbar {
+            position: absolute;
+            bottom: 10px;
+            /* Ajusta la posición vertical de la barra de desplazamiento */
+            left: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body class="shock-body">
@@ -67,9 +110,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
                         <h3 class=" lh-1 title-carrusel left">
-                            <span class="d-block text-start text-style-3 gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
+                            <span class="d-block  text-style-3 gradient-animated-title animation-duration-1" style="text-align: center;"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
                             <span class="d-flex justify-content-center ">
-                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL[1]; ?></span>
+                                <span class="text-style-4 lh-1 text-italic" style="padding: 0;"><?php echo DISCOVER_CARRUSEL[1]; ?></span>
                             </span>
                         </h3>
                     </div>
@@ -382,6 +425,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <a class="next">&#10095;</a>
                 </div>
 
+
             </div>
 
         </section>
@@ -489,9 +533,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
                         <h3 class="text-style-3 lh-1 title-carrusel right">
-                            <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL2[0]; ?></span>
-                            <span class="d-flex justify-content-end gap-5">
-                                <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL2[1]; ?></span>
+                            <span class="d-block " style="text-align: center;"><?php echo DISCOVER_CARRUSEL2[0]; ?></span>
+                            <span class="d-flex" style="justify-content: center;">
+                                <span class="text-style-4 lh-1 text-italic" style="text-align: center; padding:0;"><?php echo DISCOVER_CARRUSEL2[1]; ?></span>
                             </span>
                         </h3>
                         <div class="description gray"></div>
@@ -691,13 +735,13 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel left">
-                            <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL3[0]; ?></span>
-                            <span class="d-flex justify-content-end gap-5">
-                                <span class="d-flex justify-content-end gap-5">
-                                    <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL3[1]; ?></span>
-                                </span>
+                        <h3 class="text-style-3 lh-1 title-carrusel left" style="text-align: center;">
+                            <span class="d-block "><?php echo DISCOVER_CARRUSEL3[0]; ?></span>
+
+                            <span class="d-flex" style="justify-content: center; ">
+                                <span class="text-style-4 lh-1 text-italic" style="padding:0 3rem;"><?php echo DISCOVER_CARRUSEL3[1]; ?></span>
                             </span>
+
                         </h3>
                         <div class="description gray"></div>
                     </div>
@@ -1092,13 +1136,13 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel right">
-                            <span class="d-block text-start"><?php echo DISCOVER_CARRUSEL4[0]; ?></span>
-                            <span class="d-flex justify-content-end gap-5">
-                                <span class="d-flex justify-content-end gap-5">
-                                    <span class="text-style-4 lh-1 text-italic"><?php echo DISCOVER_CARRUSEL4[1]; ?></span>
-                                </span>
+                        <h3 class="text-style-3 lh-1 title-carrusel left" style="text-align: center;">
+                            <span class="d-block "><?php echo DISCOVER_CARRUSEL4[0]; ?></span>
+
+                            <span class="d-flex" style="justify-content: center; ">
+                                <span class="text-style-4 lh-1 text-italic" style="padding:0 2rem;"><?php echo DISCOVER_CARRUSEL4[1]; ?></span>
                             </span>
+
                         </h3>
                         <div class="description gray"></div>
                     </div>
@@ -1269,7 +1313,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
 
                 </div>
-                <div class="gallery-general-container  ">
+                <div class="gallery-general-container ">
                     <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[37];  ?></h2>
                     <div class="gallery-container">
                         <img src="assets\images\blog\damajagua-one.jpg" alt="damajagua">
@@ -1513,6 +1557,43 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     modalImg.classList.add('hide');
                 }
             });
+        });
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4, // Mostrar 4 imágenes al inicio
+            spaceBetween: 10, // Espacio entre las imágenes
+            slidesPerGroup: 4, // Desplazar 4 imágenes por vez
+            loop: true, // Habilitar bucle continuo
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+            },
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false, // No desactivar autoplay al interactuar
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    slidesPerGroup: 1, // Ajuste para pantallas pequeñas
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    slidesPerGroup: 2, // Ajuste para pantallas medianas
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                    slidesPerGroup: 4, // Ajuste para pantallas grandes
+                }
+            }
         });
     </script>
 </body>

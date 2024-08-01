@@ -45,11 +45,11 @@ include_once("include/lang/{$idioma}-blog.php");
         </section>
         <!-- Blog titles -->
         <section class="shock-section blog-section mt-4 mb-4">
-            <div class="titles">
+            <div class="titles blog-scroll-view">
                 <div class="container">
                     <div class="row">
                         <!-- timeline-->
-                        <div class="col-12 col-md-6 col-lg-3">
+                        <div class="col-12 col-md-6 col-lg-3 ">
                             <div class="content blog-menu">
                                 <h3 class="mestitle" style="color:#1c355e"><?php echo SECTION_BLOG_ALL[0]; ?></h3>
                             </div>
@@ -74,7 +74,7 @@ include_once("include/lang/{$idioma}-blog.php");
 
 
         <!-- Blog Section -->
-        <section class="shock-section blog-list-section">
+        <section class="shock-section blog-list-section ">
             <div id="blog-container" style="margin-bottom: 6rem;">
 
                 <div class="">
@@ -168,25 +168,23 @@ include_once("include/lang/{$idioma}-blog.php");
         const prevButton = $('#prev-page');
         const nextButton = $('#next-page');
 
-        if (currentPage <= 1) {
-            prevButton.prop('disabled', true);
-            prevButton.off('click');
-        } else {
-            prevButton.prop('disabled', false);
-            prevButton.off('click').on('click', function() {
-                loadPosts(currentPage - 1);
+        prevButton.prop('disabled', currentPage <= 1)
+            .off('click')
+            .on('click', function() {
+                if (currentPage > 1) {
+                    loadPosts(currentPage - 1);
+                    scrollToBlogMenu();
+                }
             });
-        }
 
-        if (currentPage >= totalPages) {
-            nextButton.prop('disabled', true);
-            nextButton.off('click');
-        } else {
-            nextButton.prop('disabled', false);
-            nextButton.off('click').on('click', function() {
-                loadPosts(currentPage + 1);
+        nextButton.prop('disabled', currentPage >= totalPages)
+            .off('click')
+            .on('click', function() {
+                if (currentPage < totalPages) {
+                    loadPosts(currentPage + 1);
+                    scrollToBlogMenu();
+                }
             });
-        }
     }
 
     function renderPageNumbers(totalPages, currentPage) {
@@ -200,9 +198,18 @@ include_once("include/lang/{$idioma}-blog.php");
                 .toggleClass('active', i === currentPage)
                 .on('click', function() {
                     loadPosts(i);
+                    scrollToBlogMenu();
                 });
             pageNumbersDiv.append(pageNumber);
         }
+    }
+
+    function scrollToBlogMenu() {
+        const blogMenu = document.querySelector('.blog-scroll-view');
+        blogMenu.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
     }
 
     function updateBlogLayout() {
