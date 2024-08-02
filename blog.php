@@ -32,7 +32,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     <!-- Intro -->
                     <div class="basic-intro text-center">
                         <h1 class="title white">
-                            <span class="text-1 text-style-3"><?php echo TITULOS_BLOG[0];  ?></span>
+                            <span class="text-1 text-style-3 blog-title"></span>
                             <br>
                             <span class="text-2 text-style-8 "><?php echo TITULOS_BLOG[1];  ?> </span>
                         </h1>
@@ -104,7 +104,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
     <?php include("include/js.php"); ?>
-    <script src="assets/js/vendor/blog.js"></script>
     <script>
         function toggleDropdown() {
             var dropdown = document.getElementById("dropdownContent");
@@ -125,10 +124,8 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         }
         // Selecciona todos los elementos.timeline-item
         const timelineItems = document.querySelectorAll('.timeline-item');
-
-        
     </script>
-     <script>
+    <script>
         function loadPost(title, pushState = true) {
             console.log('Cargando post:', title);
             $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
@@ -186,10 +183,18 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 // Actualizar la clase active del timeline
                 updateActiveTimelineItem(title);
 
+                // Reemplaza los guiones por espacios en blanco
+                data.title = data.title.replace(/-/g, ' ');
+
+                // Establece el texto del título en el elemento con la clase 'blog-title'
+                $('.blog-title').text(data.title);
+
                 if (pushState) {
                     const url = new URL(window.location);
                     url.pathname = '/tainobay/blog/' + encodeURIComponent(title);
-                    window.history.pushState({ title: title }, '', url);
+                    window.history.pushState({
+                        title: title
+                    }, '', url);
                 }
             }).fail(function() {
                 console.log('Error al cargar el post.');
