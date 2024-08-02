@@ -12,28 +12,28 @@
                             <!-- Links list -->
                             <ul class="nav-list list-unstyled">
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/port-experience" class="nav-link">
                                         <span class="text"><?php echo FOOTER_OURS[0]; ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="nav-link">
                                         <span class="text"><?php echo FOOTER_OURS[1]; ?></span>
 
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/arrivals" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[2]; ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog_all" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[3]; ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[4]; ?></span>
                                     </a>
                                 </li>
@@ -65,18 +65,18 @@
                             <!-- Tag Cloud -->
                             <ul class="nav-list list-unstyled">
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/what-to-do" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/contact" class="nav-link">
                                         <span class="text"><?php echo FOOTER_OURS[5]; ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/points-of-interest" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/home" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[6]; ?></span>
 
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/points-of-interest" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/home" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[7]; ?></span>
 
                                     </a>

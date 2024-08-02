@@ -129,13 +129,18 @@
     position: relative;
     z-index: 10;
     background-color: transparent !important;
-    padding: 0 2rem;
+    padding: 0 1rem;
     width: auto !important;
     height: 4rem !important;
     color: #1c355e;
     transition: color 0.5s ease-in-out;
 }
-
+.swiper-button-prev{
+    padding-left:0%;
+}
+.swiper-button-next{
+    padding-right:0%;
+}
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
     color: #f5a23a;
@@ -146,7 +151,9 @@
     border-top: 2px solid;
     margin-right: 2rem;
 }
-
+.pagination-items .col-4.col-md-3.col-lg-6 {
+    padding: 0;
+}
 .imgRound {
     border: none;
     border-radius: 1.5rem;

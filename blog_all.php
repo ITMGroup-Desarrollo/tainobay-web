@@ -128,6 +128,14 @@ include_once("include/lang/{$idioma}-blog.php");
             $('#blog-container .posts-wrapper').empty();
 
             posts.forEach(post => {
+                // Asumiendo que 'data.title' es el título que obtienes de tu fuente de datos
+                let title = post.title;
+
+                // Reemplaza los guiones por espacios en blanco
+                title = title.replace(/-/g, ' ');
+
+                // Establece el texto del título en el elemento con la clase 'blog-title'
+                $('.blog-title').text(title);
                 $('#blog-container .posts-wrapper').append(`
                     <div class="container list-container">
                         <div class="row">
@@ -139,12 +147,12 @@ include_once("include/lang/{$idioma}-blog.php");
                             </div>
                             <div class="col-11 col-md-8 col-lg-4 single-list-blog-image">
                                 <div class="image-blog-container">
-                                    <img src="${post.image_url}" class="imgRound" alt="${post.title}">
+                                    <img src="${post.image_url}" class="imgRound" alt="${title}">
                                 </div>
                             </div>
                             <div class="col-11 col-md-10 col-lg-5 single-blog-content">
                                 <div class="single-blog-title">
-                                    <h3 class="text-style-7">${post.title}</h3>
+                                    <h3 class="text-style-7">${title}</h3>
                                 </div>
                                 <p class="justificado">${post.description}</p>
                                 <a href="blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong>Leer más</strong></a>
