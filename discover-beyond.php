@@ -77,7 +77,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="d-flex align-items-center w-75">
                         <!-- Arrow Left -->
-                        <a href="#" class="slide-navigation-item-prev1 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-prev slide-navigation-item-prev1 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                                 <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
@@ -90,7 +90,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             </p>
                         </div>
                         <!-- Arrow Right -->
-                        <a href="#" class="slide-navigation-item-next1 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-next slide-navigation-item-next1 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                                 <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
@@ -228,8 +228,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
-                    <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[6];  ?></span>
+                    <div class="container-title container-title-display mx-auto mb-2 ">
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL[6];  ?></span>
 
                             <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
 
@@ -537,8 +537,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel right">
-                            <span class="d-block " style="text-align: center;"><?php echo DISCOVER_CARRUSEL2[0]; ?></span>
+                        <h3 class="text-style-3 lh-1 title-carrusel right ">
+                            <span class="d-block gradient-animated-title animation-duration-1" style="text-align: center;"><?php echo DISCOVER_CARRUSEL2[0]; ?></span>
                             <span class="d-flex" style="justify-content: center;">
                                 <span class="text-style-4 lh-1 text-italic" style="text-align: center; padding:0;"><?php echo DISCOVER_CARRUSEL2[1]; ?></span>
                             </span>
@@ -547,7 +547,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="d-flex align-items-center gap-3 w-75">
                         <!-- Arrow Left -->
-                        <a href="#" class="slide-navigation-item-prev2 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-prev slide-navigation-item-prev2 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                                 <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
@@ -560,7 +560,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             </p>
                         </div>
                         <!-- Arrow Right -->
-                        <a href="#" class="slide-navigation-item-next2 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-next slide-navigation-item-next2 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                                 <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
@@ -580,8 +580,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
-                    <div class="container-title container-title-display mx-auto mb-2">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[6];  ?></span>
+                    <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span>
 
                             <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
 
@@ -765,7 +765,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
 
                             </div>
-                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-prev">
+                                
+                            </div>
                             <div class="swiper-button-next"></div>
                         </div>
                         <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
@@ -780,8 +782,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel left" style="text-align: center;">
-                            <span class="d-block "><?php echo DISCOVER_CARRUSEL3[0]; ?></span>
+                        <h3 class="text-style-3 lh-1 title-carrusel left " style="text-align: center; ">
+                            <span class="d-block gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL3[0]; ?></span>
 
                             <span class="d-flex" style="justify-content: center; ">
                                 <span class="text-style-4 lh-1 text-italic" style="padding:0 3rem;"><?php echo DISCOVER_CARRUSEL3[1]; ?></span>
@@ -792,7 +794,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="d-flex align-items-center gap-3 w-75">
                         <!-- Arrow Left -->
-                        <a href="#" class="slide-navigation-item-prev3 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-prev slide-navigation-item-prev3 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                                 <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
@@ -805,7 +807,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             </p>
                         </div>
                         <!-- Arrow Right -->
-                        <a href="#" class="slide-navigation-item-next3 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-next slide-navigation-item-next3 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                                 <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
@@ -924,8 +926,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
-                    <div class="container-title container-title-display mx-auto mb-2">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[6];  ?></span>
+                    <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span>
 
                             <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
 
@@ -1219,8 +1221,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel left" style="text-align: center;">
-                            <span class="d-block "><?php echo DISCOVER_CARRUSEL4[0]; ?></span>
+                        <h3 class="text-style-3 lh-1 title-carrusel left " style="text-align: center;">
+                            <span class="d-block gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL4[0]; ?></span>
 
                             <span class="d-flex" style="justify-content: center; ">
                                 <span class="text-style-4 lh-1 text-italic" style="padding:0 2rem;"><?php echo DISCOVER_CARRUSEL4[1]; ?></span>
@@ -1231,7 +1233,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="d-flex align-items-center gap-3 w-75">
                         <!-- Arrow Left -->
-                        <a href="#" class="slide-navigation-item-prev4 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-prev slide-navigation-item-prev4 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                                 <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
@@ -1244,7 +1246,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             </p>
                         </div>
                         <!-- Arrow Right -->
-                        <a href="#" class="slide-navigation-item-next4 d-block text-blue">
+                        <a href="#" class="slide-navigation-item-next slide-navigation-item-next4 d-block text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                 <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                                 <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
@@ -1264,8 +1266,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
-                    <div class="container-title container-title-display mx-auto mb-2">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[6];  ?></span>
+                    <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span>
 
                             <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
 

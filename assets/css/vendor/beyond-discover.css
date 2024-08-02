@@ -419,7 +419,7 @@ a.button-transparent.button-orange.text-center:hover {
 }
 
 .d-flex.align-items-center.w-75 {
-    max-width: 60%;
+    max-width: 80%;
 }
 
 .swiper-slide {
@@ -442,4 +442,13 @@ a.button-transparent.button-orange.text-center:hover {
 .image-wrapper .image {
     width: 100%;
     display: block;
+}
+.title-carrusel span{
+    text-align: center;
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+.container-text.bg-orange {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
 }

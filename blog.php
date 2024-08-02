@@ -188,6 +188,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="blog-post blog-texto">
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
@@ -197,6 +198,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
+                <div class="title-image">
+                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" ">
+                    </div>
             `);
 
                 // Controlar la habilitación de los botones de navegación
