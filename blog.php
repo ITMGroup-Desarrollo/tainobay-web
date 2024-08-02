@@ -55,31 +55,11 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 <div class="row">
                     <!-- timeline-->
                     <div class="col-lg-2">
-                        <ul class="timeline">
-                            <?php
-                            $dias = array(25, 24, 23, 22, 21);
-                            $first = true;
-                            foreach ($dias as $dia) {
-                                $active = $first ? ' active' : '';
-                                $first = false;
-                            ?>
-                                <li class="timeline-item<?php echo $active; ?>">
-                                    <div class="content timeline-text-container">
-                                        <h3 class="mestitle"><?php echo TITULOS_BLOG[2]; ?></h3>
-                                        <h3 class="diatitle"><?php echo $dia; ?></h3>
-                                    </div>
-                                    <div class="circle">
-                                        <i class="fa-regular fa-circle"></i>
-                                    </div>
-                                </li>
-                            <?php
-                            }
-                            ?>
-                        </ul>
+                        <ul class="timeline" id="timeline"></ul>
                     </div>
 
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-9">
                         <div class="shock-section container" id="blog-container">
                             <!-- Posts se cargarán aquí -->
                         </div>
@@ -87,6 +67,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                             <a href="blog_all.php" class=" button-transparent button-orange text-center" style=""><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
                             <!-- Botones de navegación y paginación -->
                             <div class="container mt-3 d-flex justify-content-end pagination-items">
+
                                 <div class="row">
                                     <div class="col-4 col-md-3 col-lg-6">
                                         <svg id="prev-page" class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -102,12 +83,15 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                                         </svg>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
 
                     </div>
+                    <div class="col-lg-1">
 
+                    </div>
                 </div>
 
             </div>
@@ -142,110 +126,153 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         // Selecciona todos los elementos.timeline-item
         const timelineItems = document.querySelectorAll('.timeline-item');
 
-        // Agrega un evento de clic a cada elemento.timeline-item
-        timelineItems.forEach((item) => {
-            item.addEventListener('click', () => {
-                // Remueve la clase.active de todos los elementos.timeline-item
-                timelineItems.forEach((otherItem) => {
-                    otherItem.classList.remove('active');
-                });
-
-                // Agrega la clase.active al elemento clickeado
-                item.classList.add('active');
-            });
-        });
+        
     </script>
-    <script>
+     <script>
         function loadPost(title, pushState = true) {
+            console.log('Cargando post:', title);
             $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
+                console.log('Respuesta de loadPost:', response);
                 if (!response.posts || response.posts.length === 0) {
                     $('#blog-container').html('<p>No se encontró el post.</p>');
                     return;
                 }
 
-                const data = response.posts[0]; // Asumimos que solo hay un post con el título dado
+                const data = response.posts[0];
                 const hasPrevPost = response.has_prev_post;
                 const hasNextPost = response.has_next_post;
                 const prevPostTitle = response.prev_post_title;
                 const nextPostTitle = response.next_post_title;
 
-                $('#blog-container').empty(); // Limpiar el contenedor antes de agregar nuevos posts
+                $('#blog-container').empty();
 
                 $('#blog-container').append(`
-                <div class="blog-post">
-                    <div class="title-image">
-                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" ">
-                        <div class="dropdown azulBlog">
-                            <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                    <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                                </svg>
-                            </button>
-                            <div class="dropdown-content" id="dropdownContent">
-                                <a href="https://www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="https://www.whatsapp.com" target="_blank">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
+                    <div class="blog-post">
+                        <div class="title-image">
+                            <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                            <div class="dropdown azulBlog">
+                                <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                        <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                                    </svg>
+                                </button>
+                                <div class="dropdown-content" id="dropdownContent">
+                                    <a href="https://www.facebook.com" target="_blank">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://www.whatsapp.com" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                </div>
-                <div class="blog-post blog-texto">
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                </div>
-                <div class="title-image">
-                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" ">
+                    <div class="blog-post blog-texto">
+                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                     </div>
-            `);
+                    <div class="title-image">
+                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                    </div>
+                `);
 
-                // Controlar la habilitación de los botones de navegación
                 $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
                 $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
 
-                // Actualizar la URL
+                // Actualizar la clase active del timeline
+                updateActiveTimelineItem(title);
+
                 if (pushState) {
                     const url = new URL(window.location);
                     url.pathname = '/tainobay/blog/' + encodeURIComponent(title);
-                    window.history.pushState({
-                        title: title
-                    }, '', url);
+                    window.history.pushState({ title: title }, '', url);
                 }
             }).fail(function() {
+                console.log('Error al cargar el post.');
                 $('#blog-container').html('<p>Error al cargar el post.</p>');
             });
         }
 
         function changePost(title) {
+            console.log('Cambiando a post:', title);
             loadPost(title);
         }
 
-        // Manejar la navegación del historial
+        function loadTimeline(callback) {
+            console.log('Cargando timeline...');
+            $.getJSON('include/get_blog_posts.php?page=1', function(response) {
+                console.log('Respuesta de loadTimeline:', response);
+                if (!response.posts || response.posts.length === 0) {
+                    $('#timeline').html('<p>No se encontraron posts.</p>');
+                    return;
+                }
+
+                $('#timeline').empty();
+
+                response.posts.forEach((post, index) => {
+                    const active = index === 0 ? ' active' : '';
+                    $('#timeline').append(`
+                        <li class="timeline-item${active}" onclick="changePost('${post.title}')">
+                            <div class="content timeline-text-container">
+                                <h3 class="mestitle">${post.month}</h3>
+                                <h3 class="diatitle">${post.day}</h3>
+                                <input type="hidden" value="${post.title}">
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-circle"></i>
+                            </div>
+                        </li>
+                    `);
+                });
+
+                if (typeof callback === 'function') {
+                    callback();
+                }
+            }).fail(function() {
+                console.log('Error al cargar el timeline.');
+                $('#timeline').html('<p>Error al cargar los posts.</p>');
+            });
+        }
+
+        function updateActiveTimelineItem(title) {
+            console.log('Actualizando elemento activo del timeline:', title);
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item) => {
+                const itemTitle = item.querySelector('input[type="hidden"]').value;
+                if (itemTitle === title) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
         window.onpopstate = function(event) {
             if (event.state && event.state.title) {
+                console.log('onpopstate:', event.state.title);
                 loadPost(event.state.title, false);
             }
         }
 
-        // Cargar los posts al iniciar
         $(document).ready(function() {
-            const pathSegments = window.location.pathname.split('/');
-            const title = decodeURIComponent(pathSegments[pathSegments.length - 1]);
-            if (title) {
-                loadPost(title, false);
-            } else {
-                loadPost('Playa-dorada', false); // Cargar una publicación predeterminada si no hay título en la URL
-            }
+            console.log('Cargando timeline al iniciar...');
+            loadTimeline(function() {
+                const pathSegments = window.location.pathname.split('/');
+                const title = decodeURIComponent(pathSegments[pathSegments.length - 1]);
+                if (title) {
+                    console.log('Cargando post al iniciar:', title);
+                    loadPost(title, false);
+                } else {
+                    console.log('No se especificó un título en la URL, cargando primer post por defecto...');
+                    changePost(response.posts[0].title);
+                }
+            });
         });
     </script>
-
 </body>
 
 </html>
