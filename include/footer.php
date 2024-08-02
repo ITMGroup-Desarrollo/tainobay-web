@@ -1,6 +1,6 @@
     <link rel="stylesheet" href="assets/css/vendor/footer.css">
     <style>
-        
+
     </style>
     <!-- Footer -->
     <footer id="footer" class="shock-footer scheme-1 primary">
