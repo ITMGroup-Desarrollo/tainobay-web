@@ -39,7 +39,10 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <img src="assets/images/blog/playa-dorada-two.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
+
+                    </div>
+                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-blue"></div>
@@ -766,7 +769,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
                             </div>
                             <div class="swiper-button-prev">
-                                
+
                             </div>
                             <div class="swiper-button-next"></div>
                         </div>
