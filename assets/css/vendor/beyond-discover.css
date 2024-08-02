@@ -247,22 +247,21 @@ h2.text-style-6.text-italic {
     margin-bottom: 3rem;
 }
 
-.gallery-container img {
-    cursor: pointer;
-}
+
+
 /* Estilos para el modal */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 60px; 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.9); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: opacity 0.5s;
 }
 
@@ -303,7 +302,8 @@ h2.text-style-6.text-italic {
 }
 
 /* Botones de navegación */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -325,7 +325,8 @@ h2.text-style-6.text-italic {
     right: 8rem;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     color: #bbb;
 }
 
@@ -367,10 +368,18 @@ h2.text-style-6.text-italic {
     justify-content: center;/
 }
 
-.gallery-container img {
-    width: 100%;
-    height: 200px;
+.gallery img {
+    width: 15rem;
+    
+    height: 15rem;
     object-fit: cover;
+    cursor: pointer;
+}
+.gallery  {
+    margin-bottom: 6rem;
+}
+.gallery .image-wrapper {
+    width: 100%;
 }
 
 .gallery-container {
@@ -408,10 +417,38 @@ a.button-transparent.button-orange.text-center:hover {
 .container-text.mx-auto.px-5.bg-orange.pb-3.pt-3 p {
     font-size: 20px;
 }
+
 .d-flex.align-items-center.w-75 {
-    max-width: 60%;
+    max-width: 80%;
 }
+
 .swiper-slide {
     display: flex !important;
     justify-content: center !important;
+}
+
+.shock-section {
+    height: auto;
+}
+
+.image-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-wrapper .image {
+    width: 100%;
+    display: block;
+}
+.title-carrusel span{
+    text-align: center;
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+.container-text.bg-orange {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
 }

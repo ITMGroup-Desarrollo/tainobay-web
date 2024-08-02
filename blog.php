@@ -40,7 +40,10 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <img src="assets/images/blog/playa-dorada-two.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
+
+                    </div>
+                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-blue"></div>
@@ -188,6 +191,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="blog-post blog-texto">
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
@@ -197,6 +201,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
+                <div class="title-image">
+                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" ">
+                    </div>
             `);
 
                 // Controlar la habilitación de los botones de navegación
