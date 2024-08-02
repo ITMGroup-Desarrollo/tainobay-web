@@ -81,7 +81,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
                     </div>
                     <h2 class="card-title"><?= $point["name"]; ?></h2>
                     <div class="w-100 wrapper-link-more">
-                      <a href="<?= $idioma ?>/single-port-experience" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= BUTTON_EXPLORE ?></strong></a>
+                      <a href="<?= $idioma ?>/port-experience/<?= $point["path"]; ?>" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= BUTTON_EXPLORE ?></strong></a>
                       <!-- Icon aino Bay -->
                       <div class="mt-5px">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 286.26" width="130" fill="white">
