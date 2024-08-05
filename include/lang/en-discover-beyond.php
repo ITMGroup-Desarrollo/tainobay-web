@@ -77,7 +77,7 @@ define('DISCOVER_CARRUSEL2', array(
 define('DISCOVER_CARRUSEL3', array(
     'DISCOVER THE HOTTEST',
     'PUERTO PLATA SPOTS!',
-    'The Bride of the Atlantic is waiting you',
+    'The Bride of the Atlantic',
     'Explore the most representative landmarks of Puerto Plata in this fun tour through its downtown.
     On your way you will discover this amazing spots',
     'VIEW MORE',

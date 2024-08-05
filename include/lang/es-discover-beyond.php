@@ -66,7 +66,7 @@ define('DISCOVER_CARRUSEL2', array(
 define('DISCOVER_CARRUSEL3', array(
     '¡DESCUBRE LOS LUGARES',
     'MÁS ESPECTACULARES DE PUERTO PLATA!',
-    'La Novia del Atlántico te está esperando',
+    'La Novia del Atlántico',
     'Explora los lugares más representativos de Puerto Plata en este 
     divertido recorrido por su centro. En tu camino descubrirás estos asombrosos lugares',
     'VER MÁS',

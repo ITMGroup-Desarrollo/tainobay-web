@@ -33,8 +33,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             <br>
                             <span class="text-1 text-style-3"><?php echo TITULOS_DISCOVER[1];  ?></span>
                             <br>
-                            <span class="text-2 text-style-8 "><?php echo TITULOS_DISCOVER[2];  ?> </span>
+
                         </h1>
+                        <h2 class="title white"><span class="text-2 text-style-8 "><?php echo TITULOS_DISCOVER[2];  ?> </span></h2>
                     </div>
                 </div>
                 <!-- Image -->
@@ -71,12 +72,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class=" lh-1 title-carrusel left">
+                        <h2 class=" lh-1 title-carrusel left">
                             <span class="d-block  text-style-3 gradient-animated-title animation-duration-1" style="text-align: center;"><?php echo DISCOVER_CARRUSEL[0]; ?></span>
                             <span class="d-flex justify-content-center ">
                                 <span class="text-style-4 lh-1 text-italic" style="padding: 0;"><?php echo DISCOVER_CARRUSEL[1]; ?></span>
                             </span>
-                        </h3>
+                        </h2>
                     </div>
                     <div class="d-flex align-items-center w-75">
                         <!-- Arrow Left -->
@@ -88,9 +89,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <h2 class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL[2]; ?></span>
-                            </p>
+                            </h2>
                         </div>
                         <!-- Arrow Right -->
                         <a href="#" class="slide-navigation-item-next slide-navigation-item-next1 d-block text-blue">
@@ -231,12 +232,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
-                    <div class="container-title container-title-display mx-auto mb-2 ">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL[6];  ?></span>
-
-                            <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
-
-                            </h2>
+                    <div class="container-title container-title-display mx-auto mb-2 centrado gradient-animated-title animation-duration-1">
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start "><?php echo DISCOVER_CARRUSEL[6];  ?></span></h2>
+                        <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span></h2>
                     </div>
                     <div class="container-text mx-auto px-5 ">
 
@@ -363,59 +361,59 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
                         <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
-                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary"  data-columns="5,2,1,5" data-autoplay="10000" data-loop="true" data-space="20">
                             <div class="swiper-wrapper">
 
 
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\atv-expedition-one.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/atv-expedition-one.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\atv-expedition-one.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/atv-expedition-one.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\atv-expedition-two.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/atv-expedition-two.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\atv-expedition-two.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/atv-expedition-two.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\atv-expedition-three.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/atv-expedition-three.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\atv-expedition-three.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/atv-expedition-three.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\atv-expedition-four.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/atv-expedition-four.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\atv-expedition-four.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/atv-expedition-four.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\atv-expedition-five.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/atv-expedition-five.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\atv-expedition-five.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/atv-expedition-five.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\atv-expedition-six.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/atv-expedition-six.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\atv-expedition-six.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/atv-expedition-six.jpg"  >
                                         </div>
                                     </a>
                                 </div>
@@ -540,12 +538,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel right ">
+                        <h2 class="text-style-3 lh-1 title-carrusel right ">
                             <span class="d-block gradient-animated-title animation-duration-1" style="text-align: center;"><?php echo DISCOVER_CARRUSEL2[0]; ?></span>
                             <span class="d-flex" style="justify-content: center;">
                                 <span class="text-style-4 lh-1 text-italic" style="text-align: center; padding:0;"><?php echo DISCOVER_CARRUSEL2[1]; ?></span>
                             </span>
-                        </h3>
+                        </h2>
                         <div class="description gray"></div>
                     </div>
                     <div class="d-flex align-items-center gap-3 w-75">
@@ -558,9 +556,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <h2 class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL2[2]; ?></span>
-                            </p>
+                            </h2>
                         </div>
                         <!-- Arrow Right -->
                         <a href="#" class="slide-navigation-item-next slide-navigation-item-next2 d-block text-blue">
@@ -584,11 +582,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
                     <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span>
-
-                            <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
-
-                            </h2>
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span></h2>
+                        <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span></h2>
                     </div>
                     <div class="container-text mx-auto px-5 ">
 
@@ -715,49 +710,49 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
                         <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
-                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary"  data-columns="5,2,1,5" data-autoplay="10000" data-loop="true" data-space="20">
                             <div class="swiper-wrapper">
 
 
 
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\countryside-one.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/countryside-one.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\countryside-one.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/countryside-one.jpg"  >
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\countryside-two.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/countryside-two.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\countryside-two.jpg" alt="damajagua">
-
-
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets\images\blog\countryside-three.jpg" class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets\images\blog\countryside-three.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/countryside-two.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\countryside-five.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/countryside-three.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\countryside-five.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/countryside-three.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\countryside-six.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/countryside-five.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\countryside-six.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/countryside-five.jpg"  >
+
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/blog/countryside-six.jpg" class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/blog/countryside-six.jpg"  >
 
 
                                         </div>
@@ -785,14 +780,13 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div id="port-experience" class="shock-section pt-2 pb-4">
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel left " style="text-align: center; ">
+                        <h2 class="text-style-3 lh-1 title-carrusel left " style="text-align: center; ">
                             <span class="d-block gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL3[0]; ?></span>
-
                             <span class="d-flex" style="justify-content: center; ">
                                 <span class="text-style-4 lh-1 text-italic" style="padding:0 3rem;"><?php echo DISCOVER_CARRUSEL3[1]; ?></span>
                             </span>
 
-                        </h3>
+                        </h2>
                         <div class="description gray"></div>
                     </div>
                     <div class="d-flex align-items-center gap-3 w-75">
@@ -805,9 +799,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <h2 class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL3[2]; ?></span>
-                            </p>
+                            </h2>
                         </div>
                         <!-- Arrow Right -->
                         <a href="#" class="slide-navigation-item-next slide-navigation-item-next3 d-block text-blue">
@@ -930,11 +924,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
                     <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span>
-
-                            <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
-
-                            </h2>
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span></h2>
+                        <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span></h2>
                     </div>
                     <div class="container-text mx-auto px-5 ">
 
@@ -1061,50 +1052,50 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
                         <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
-                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary"  data-columns="5,2,1,5" data-autoplay="10000" data-loop="true" data-space="20">
                             <div class="swiper-wrapper">
 
 
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\a-walk-through-puerto-plata-one.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/a-walk-through-puerto-plata-one.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\a-walk-through-puerto-plata-one.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/a-walk-through-puerto-plata-one.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\a-walk-through-puerto-plata-six.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/a-walk-through-puerto-plata-six.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\a-walk-through-puerto-plata-six.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/a-walk-through-puerto-plata-six.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\a-walk-through-puerto-plata-seven.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/a-walk-through-puerto-plata-seven.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\a-walk-through-puerto-plata-seven.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/a-walk-through-puerto-plata-seven.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\a-walk-through-puerto-plata-eight.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/a-walk-through-puerto-plata-eight.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\a-walk-through-puerto-plata-eight.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/a-walk-through-puerto-plata-eight.jpg"  >
 
 
                                         </div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="assets\images\blog\a-walk-through-puerto-plata-nine.jpg" class="item lightbox-link hover-zoom-rotate">
+                                    <a href="assets/images/blog/a-walk-through-puerto-plata-nine.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets\images\blog\a-walk-through-puerto-plata-nine.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/a-walk-through-puerto-plata-nine.jpg"  >
                                         </div>
                                     </a>
                                 </div>
@@ -1181,8 +1172,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                     </button>
                                 </div>
                                 <picture>
-                                    <source src="assets/images/blog/damajua-three.jpg">
-                                    <img src="assets/images/blog/damajua-three.jpg" class="d-block w-100" alt="Otra Imagen">
+                                    <source src="assets\images\blog\damajagua-three.jpg">
+                                    <img src="assets\images\blog\damajagua-three.jpg" class="d-block w-100" alt="Otra Imagen">
                                 </picture>
                             </div>
                         </div>
@@ -1224,14 +1215,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                     <div class="basic-intro mb-35">
-                        <h3 class="text-style-3 lh-1 title-carrusel left " style="text-align: center;">
+                        <h2 class="text-style-3 lh-1 title-carrusel left " style="text-align: center;">
                             <span class="d-block gradient-animated-title animation-duration-1"><?php echo DISCOVER_CARRUSEL4[0]; ?></span>
 
                             <span class="d-flex" style="justify-content: center; ">
                                 <span class="text-style-4 lh-1 text-italic" style="padding:0 2rem;"><?php echo DISCOVER_CARRUSEL4[1]; ?></span>
                             </span>
 
-                        </h3>
+                        </h2>
                         <div class="description gray"></div>
                     </div>
                     <div class="d-flex align-items-center gap-3 w-75">
@@ -1244,9 +1235,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </a>
                         <!-- Text Carousel -->
                         <div class="flex-grow-1">
-                            <p class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
+                            <h2 class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
                                 <span class="d-block"><?php echo DISCOVER_CARRUSEL4[2]; ?></span>
-                            </p>
+                            </h2>
                         </div>
                         <!-- Arrow Right -->
                         <a href="#" class="slide-navigation-item-next slide-navigation-item-next4 d-block text-blue">
@@ -1270,11 +1261,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             <div class="shock-section displayed-blog">
                 <div class="container text-center my-5  pt-2 pb-4 ">
                     <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
-                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span>
-
-                            <h2 class="text-style-3 lh-1  text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span>
-
-                            </h2>
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado "><?php echo DISCOVER_CARRUSEL[6];  ?></span></h2>
+                        <h2 class="text-style-3 lh-1 text-blue "><span class="d-block text-start centrado"><?php echo DISCOVER_CARRUSEL[7];  ?></span></h2>
                     </div>
                     <div class="container-text mx-auto px-5 ">
 
@@ -1401,7 +1389,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                     <div class="col-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
                         <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
-                        <div class="gallery swiper slider has-navigation  scheme-1 primary" data-columns="4,2,1,4" data-autoplay="10000" data-loop="true" data-space="20">
+                        <div class="gallery swiper slider has-navigation  scheme-1 primary"  data-columns="5,2,1,5" data-autoplay="10000" data-loop="true" data-space="1">
                             <div class="swiper-wrapper">
 
 
@@ -1409,7 +1397,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 <div class="swiper-slide">
                                     <a href="assets/images/blog/damajagua-one.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets/images/blog/damajagua-one.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/damajagua-one.jpg"  >
 
 
                                         </div>
@@ -1418,7 +1406,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 <div class="swiper-slide">
                                     <a href="assets/images/blog/damajagua-two.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets/images/blog/damajagua-two.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/damajagua-two.jpg"  >
 
 
                                         </div>
@@ -1427,7 +1415,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 <div class="swiper-slide">
                                     <a href="assets/images/blog/damajagua-three.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets/images/blog/damajua-three.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/damajagua-three.jpg" alt="">
 
 
                                         </div>
@@ -1436,7 +1424,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 <div class="swiper-slide">
                                     <a href="assets/images/blog/damajagua-four.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets/images/blog/damajagua-four.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/damajagua-four.jpg"  >
 
 
                                         </div>
@@ -1445,7 +1433,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 <div class="swiper-slide">
                                     <a href="assets/images/blog/damajagua-five.jpg" class="item lightbox-link hover-zoom-rotate">
                                         <div class="image-wrapper">
-                                            <img src="assets/images/blog/damajagua-five.jpg" alt="damajagua">
+                                            <img src="assets/images/blog/damajagua-five.jpg"  >
                                         </div>
                                     </a>
                                 </div>
