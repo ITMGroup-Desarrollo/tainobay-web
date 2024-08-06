@@ -255,7 +255,7 @@
 .shock-header .navbar.scrolled-down.auto-hide {
   top: 0 !important;
 }
-.shock-header .navbar.scrolled-up,
+
 .shock-header .navbar.fixed-on-scroll.fixed-top {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -919,7 +919,7 @@
   .shock-header .navbar .navbar-toggler:hover .navbar-toggler-icon .line {
     width: 100%;
   }
-  .shock-header .navbar.scrolled-up .navbar-toggler .navbar-toggler-icon .line,
+  .navbar-toggler .navbar-toggler-icon .line,
   .shock-header
     .navbar.scrolled-down
     .navbar-toggler
