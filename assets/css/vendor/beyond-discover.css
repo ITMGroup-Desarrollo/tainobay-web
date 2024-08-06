@@ -461,28 +461,38 @@ a.button-transparent.button-orange.text-center:hover {
 .button-next, .button-prev {
     position: absolute;
     top: 50%;
-    width: calc(var(--swiper-navigation-size) / 44* 27);
-    height: var(--swiper-navigation-size);
     margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+    color: #1c355e;
     
 }
 .button-next{
     right: 0;
+    padding-left: 2rem;
 }
 .button-prev{
     left: 0;
+    padding-right: 2rem;
 }
   
-  .shock-section.left .carousel-content.order {
+  .shock-section.left-side .carousel-content.order {
     order: -1 !important;
   }
   
-  .shock-section.right .carousel-content.order {
+  .shock-section.right-side .carousel-content.order {
     order: 1 !important;
   }
+  .swiper-button-next:after, .swiper-button-prev:after {
+    content: '';
+}
+.swiper .swiper-button-next, .swiper .swiper-button-prev {
+    top: 50%;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #1c355e;
+}
+.swiper .swiper-button-next:hover, .swiper .swiper-button-prev:hover {
+    background-color: transparent;
+    color: #f5a23a;
+}
