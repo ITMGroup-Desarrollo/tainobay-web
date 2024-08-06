@@ -2383,7 +2383,7 @@ svg {
 .link:hover,
 .link:hover > * {
   color: var(--hover-color);
-  fill: var(--hover-color);
+  fill: var(--primary-color);
 }
 .link .icon {
   margin-right: 7.5px;

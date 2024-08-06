@@ -51,7 +51,6 @@ include_once("include/lang/reviews.php");
                                     <h1 class="text-white banner-title mb-0"><?= HOME_TEXT_BANNER[0] ?></h1>
                                     <h2 class="text-white mb-0 banner-subtitle"><?= HOME_TEXT_BANNER[1] ?></h2>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -144,7 +143,7 @@ include_once("include/lang/reviews.php");
                 </div>
                 <!-- carousel info -->
                 <div class="content-wrapper-carousel">
-                    <h2 class="mb-0 text-style-2">01</h2>
+                    <h3 class="mb-0 text-style-2">01</h3>
                     <h3 class="mb-0 text-style-15">Blue Parrot</h3>
                     <p class="text-style-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
                 </div>
@@ -179,7 +178,8 @@ include_once("include/lang/reviews.php");
                     <div class="container-btn">
                         <div class="redes">
                             <a target="_blank" class="bg-blue" href="https://www.facebook.com/sharer/sharer.php?u=https://www.porttainobay.com/"><i class="icon fab fa-facebook-f"></i></a>
-                            <a target="_blank" class="bg-blue" href="https://twitter.com/intent/tweet?url=https://example.com&text=Echa%20un%20vistazo%20a%20Taino%20Bay"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                            <a target="_blank" class="bg-blue" href="https://twitter.com/intent/tweet?url=https://example.com&text=Echa%20un%20vistazo%20a%20Taino%20Bay">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
                                     <g fill="none">
                                         <g clipPath="url(#IconifyId19113fe36724382401)">
                                             <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
@@ -190,7 +190,8 @@ include_once("include/lang/reviews.php");
                                             </clipPath>
                                         </defs>
                                     </g>
-                                </svg></a>
+                                </svg>
+                            </a>
                             <a target="_blank" class="bg-blue" href="https://api.whatsapp.com/send?text=https://www.porttainobay.com/">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
                                     <path fill="currentColor" d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
@@ -207,7 +208,7 @@ include_once("include/lang/reviews.php");
                 </div>
                 <!-- carousel info -->
                 <div class="content-wrapper-carousel">
-                    <h2 class="mb-0 text-style-2">01</h2>
+                    <h3 class="mb-0 text-style-2">01</h3>
                     <h3 class="mb-0 text-style-15">Blue Parrot</h3>
                     <p class="text-style-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
                 </div>
@@ -349,7 +350,6 @@ include_once("include/lang/reviews.php");
                                         <?php echo FAQS_1[0];  ?>
                                     </h3>
 
-
                                 </a>
                                 <div id="collapse-1" class="collapse-content collapse text-blue">
                                     <div class="d-block w-50 mx-auto">
@@ -397,7 +397,6 @@ include_once("include/lang/reviews.php");
                                         <?php echo FAQS_2[0];  ?>
                                     </h3>
 
-
                                 </a>
                                 <div id="collapse-2" class="collapse-content collapse text-blue">
                                     <div class="d-block w-50 mx-auto">
@@ -444,7 +443,6 @@ include_once("include/lang/reviews.php");
                                         <?php echo FAQS_3[0];  ?>
                                     </h3>
 
-
                                 </a>
                                 <div id="collapse-3" class="collapse-content collapse text-blue">
                                     <div class="d-block w-50 mx-auto">
@@ -483,13 +481,9 @@ include_once("include/lang/reviews.php");
         document.addEventListener('DOMContentLoaded', () => {
             // Seleccionamos todos los botones de compartir
             const shareButtons = document.querySelectorAll('.toggle-share');
-            console.log(shareButtons);
-
 
             shareButtons.forEach(button => {
                 button.addEventListener('click', () => {
-
-                    // Seleccionamos el contenedor de redes sociales correspondiente
                     const shareContainer = button.closest('.container-btn').querySelector('.redes');
 
                     // Alternamos la visibilidad del contenedor de redes sociales
