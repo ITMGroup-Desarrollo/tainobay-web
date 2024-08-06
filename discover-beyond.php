@@ -79,90 +79,86 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     <script>
         $(document).ready(function() {
             // Función para manejar el clic en los botones de visualización
+            // Función para manejar el clic en los botones de visualización
             function handleDisplayButtonClick(button) {
                 const section = button.closest('.carousel-section');
-                const displayedBlog = section.querySelector('.displayed-blog');
-                const textElement = button.querySelector('b');
-                const icon = button.querySelector('.fa-xmark');
+                const displayedBlog = section.find('.displayed-blog');
+                const textElement = button.find('b');
+                const icon = button.find('.fa-xmark');
 
                 // Verifica si todas las secciones están visibles o alguna está oculta
-                const areAllSectionsVisible = Array.from(carouselSections).every(sec => sec.style.display !== 'none');
+                const areAllSectionsVisible = $('.carousel-section').toArray().every(sec => $(sec).is(':visible'));
 
                 // Alterna la visibilidad del displayed-blog en la sección actual
-                if (displayedBlog.style.display === 'none' || displayedBlog.style.display === '') {
-                    displayedBlog.style.display = 'block';
-                    textElement.textContent = "<?php echo DISCOVER_CARRUSEL[5]; ?>";
+                if (displayedBlog.is(':hidden')) {
+                    displayedBlog.show();
+                    textElement.text("<?php echo DISCOVER_CARRUSEL[5]; ?>");
                 } else {
-                    displayedBlog.style.display = 'none';
-                    textElement.textContent = "<?php echo DISCOVER_CARRUSEL[4]; ?>";
+                    displayedBlog.hide();
+                    textElement.text("<?php echo DISCOVER_CARRUSEL[4]; ?>");
                 }
 
                 // Rotea el icono
-                if (icon) {
-                    icon.classList.toggle('rotate-90');
+                if (icon.length) {
+                    icon.toggleClass('rotate-90');
                 }
 
-                // Alterna la visibilidad de las secciones del carrusel
-                carouselSections.forEach(sec => {
+                // Alterna la visibilidad de las secciones del carrusel, excepto la actual
+                $('.carousel-section').each(function() {
                     if (areAllSectionsVisible) {
-                        if (sec !== section) {
-                            sec.style.display = 'none';
+                        if (this !== section[0]) {
+                            $(this).hide();
                         }
                     } else {
-                        sec.style.display = 'block';
+                        $(this).show();
                     }
                 });
 
                 // Desplaza la vista al h2 dentro del displayed-blog
-                const blogHeading = displayedBlog.querySelector('p');
-                if (blogHeading) {
-                    blogHeading.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
+                const blogHeading = displayedBlog.find('p').first();
+                if (blogHeading.length) {
+                    $('html, body').animate({
+                        scrollTop: blogHeading.offset().top - ($(window).height() / 2) + (blogHeading.height() / 2)
+                    }, 'smooth');
                 }
             }
+
 
             // Función para manejar el clic en los botones de ocultación
             function handleHideButtonClick(button) {
                 const section = button.closest('.carousel-section');
-                const displayedBlog = section.querySelector('.displayed-blog');
-                const displayButtonTextElement = section.querySelector('.display-button b');
-                const icon = section.querySelector('.display-button .fa-xmark');
+                const displayedBlog = section.find('.displayed-blog');
+                const displayButtonTextElement = section.find('.display-button b');
+                const icon = section.find('.display-button .fa-xmark');
 
                 // Muestra todas las secciones
-                carouselSections.forEach(sec => {
-                    sec.style.display = 'block';
-                });
+                $('.carousel-section').show();
 
                 // Alterna la visibilidad del displayed-blog en la sección actual
-                if (displayedBlog.style.display === 'none' || displayedBlog.style.display === '') {
-                    displayedBlog.style.display = 'block';
-                } else {
-                    displayedBlog.style.display = 'none';
-                }
+                displayedBlog.hide();
 
                 // Cambia el texto del botón display-button
-                if (displayButtonTextElement) {
-                    displayButtonTextElement.textContent = "<?php echo DISCOVER_CARRUSEL[4]; ?>";
+                if (displayButtonTextElement.length) {
+                    displayButtonTextElement.text("<?php echo DISCOVER_CARRUSEL[4]; ?>");
                 }
 
                 // Rotea el icono del button-hide-display
-                if (icon) {
-                    icon.classList.remove('rotate-90');
+                if (icon.length) {
+                    icon.removeClass('rotate-90');
                 }
 
                 // Desplaza la vista al botón de display
-                displayButtonTextElement.closest('.display-button').scrollIntoView({
+                displayButtonTextElement.closest('.display-button').get(0).scrollIntoView({
                     behavior: 'smooth',
                     block: 'center'
                 });
             }
 
+
             // Cargar contenido dinámico desde el archivo JSON
             $.getJSON('include/data-discover.json', function(data) {
                 const container = $('#carousel-sections-container');
-                container.empty();  // Limpiar el contenedor antes de agregar nuevas secciones
+                container.empty(); // Limpiar el contenedor antes de agregar nuevas secciones
 
                 data.carouselSections.forEach((section, sectionIndex) => {
                     const sectionId = `carouselExampleIndicators${sectionIndex + 1}`;
@@ -280,7 +276,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             </div>
                         </section>
 
-                        <div class="shock-section displayed-blog">
+                        <div class="shock-section ">
                             <div class="container text-center my-5 pt-2 pb-4">
                                 <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
                                     ${displayT}
@@ -355,6 +351,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                             <svg id="next-page" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="4rem" height="4rem" viewBox="0 0 231.26 729.5">
                                                 <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
                                                 <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
+                                            </svg>
                                         </div>
                                     </div>
                                     <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
@@ -420,12 +417,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
                 // Adjunta eventos a los botones de visualización
                 $(document).on('click', '.display-button', function() {
-                    handleDisplayButtonClick(this);
+                    handleDisplayButtonClick($(this));
                 });
 
                 // Adjunta eventos a los botones de ocultación
                 $(document).on('click', '.display-hide-button', function() {
-                    handleHideButtonClick(this);
+                    handleHideButtonClick($(this));
                 });
 
             }).fail(function() {
@@ -436,7 +433,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
         // Función para rotar el icono
         function rotateIcon(element) {
-            element.querySelector('.fa-xmark').classList.toggle('rotate-90');
+            $(element).find('.fa-xmark').toggleClass('rotate-90');
         }
     </script>
 </body>
