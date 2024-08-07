@@ -148,9 +148,9 @@ a.slide-navigation-item-prev4.d-block.text-blue:hover {
     padding: 1.5rem 2rem;
 }
 
-.what-to-bring-duration svg {
-    align-self: center;
-    margin-right: 1rem;
+.what-to-bring-duration img {
+    align-self: center !important;
+    margin-right: 1rem !important;
 }
 
 .what-to-bring-list-container {
@@ -162,6 +162,7 @@ a.slide-navigation-item-prev4.d-block.text-blue:hover {
     color: #1c355e;
     margin-bottom: 0%;
     padding-bottom: 0%;
+    text-align: end;
 }
 
 
@@ -496,4 +497,22 @@ a.button-transparent.button-orange.text-center:hover {
 .swiper .swiper-button-next:hover, .swiper .swiper-button-prev:hover {
     background-color: transparent;
     color: #f5a23a;
+}
+.d-flex.justify-content-end.shortIcons {
+    align-items: center;
+}
+.d-flex.justify-content-end.shortIcons img{
+    margin: 0 1rem;
+}
+.d-flex.justify-content-end.shortIcons img:last-child{
+    margin: 0 0 0 1rem;
+}
+.d-flex.justify-content-start.shortIcons {
+    align-items: center;
+}
+.d-flex.justify-content-start.shortIcons img{
+    margin: 0 1rem;
+}
+.d-flex.justify-content-start.shortIcons img:first-child{
+    margin: 0 1rem 0 0;
 }

@@ -40,7 +40,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
+                    <div class="banner-fixed" style="background-image:url('assets/images/discover-deyond/banner-header-discovery-beyond-the-cruise.webp')">
 
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
@@ -190,10 +190,24 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         displayI += `<li><p class="text-style-13">${displayIncludes}</p></li>`;
                     });
                     section.displayWhatToBring.forEach((displayWhatToBrings) => {
-                        displayW += `<div class="list-item-container">${displayWhatToBrings.iconPath}<p>${displayWhatToBrings.text}</p></div>`;
+                        displayW += `<div class="list-item-container">
+                        <img class:"wtbIcon" src=${displayWhatToBrings.iconPath} width="48" height="48" alt="Icono">
+                        <p>${displayWhatToBrings.text}</p>
+                        </div>`;
                     });
                     section.displayNote.forEach((displayNotes) => {
                         displayN += `<p class="text-black text-style-16 text-italic justificado">${displayNotes}</p>`;
+                    });
+                    section.galleryImages.forEach((galleryImage) => {
+                        gallery += `
+                            <div class="swiper-slide">
+                                <a href="${galleryImage}" class="item lightbox-link hover-zoom-rotate">
+                                    <div class="image-wrapper">
+                                        <img src="${galleryImage}">
+                                    </div>
+                                </a>
+                            </div>
+                        `;
                     });
 
                     section.images.forEach((image, index) => {
@@ -216,17 +230,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 </div>
                             </div>
                         `;
-                        gallery += `
-                            <div class="swiper-slide">
-                                <a href="${image}" class="item lightbox-link hover-zoom-rotate">
-                                    <div class="image-wrapper">
-                                        <img src="${image}">
-                                    </div>
-                                </a>
-                            </div>
-                        `;
+                        
                     });
-
+                    const justifyClass = section.side === 'left-side' ? 'justify-content-end' : 'justify-content-start';
                     const sectionHTML = `
                         <section class="carousel-section ">
                             <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
@@ -259,9 +265,16 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 </svg>
                                             </a>
                                         </div>
+                                        
                                         <div class="container-text mx-auto px-5 bg-orange pb-3 pt-3" style="width: 100%;">
+                                        
+                                            <div class="d-flex ${justifyClass} shortIcons">
+                                                <img src="${section.shortIconSchedule}" width="65" height="65" alt="Icono">
+                                                <img src="${section.shortIconIntensity}" width="32" height="32" alt="Icono">
+                                                <img src="${section.shortIconCategory}" width="48" height="48" alt="Icono">
+                                            </div>
                                             <p class="text-black black text-style-13 justificado">${section.content}</p>
-                                            <div class="d-flex justify-content-end">
+                                            <div class="d-flex ${justifyClass}">
                                                 <a class="display-button" >
                                                     <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
                                                     <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
@@ -313,9 +326,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 <div class="what-to-bring">
                                                     <div class="duration-container">
                                                         <div class="what-to-bring-duration rounded">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 512 512">
-                                                                <path fill="#1c355e" d="M256 0Q150 0 75 75T0 256t75 181t181 75t181-75t75-181t-75-181T256 0m192 277h19q-8 76-61.5 130T277 467v-19q0-21-21-21t-21 21v19q-76-8-130-61.5T45 277h19q21 0 21-21t-21-21H45q6-76 60-130t130-60v19q0 21 21 21t21-21V45q76 8 130 61.5T467 235h-19q-21 0-21 21t21 21m-169-23l39-96q3-9-.5-17T305 130q-20-7-28 13l-47 117l92 137q5 8 17 8q5 0 13-4q19-10 6-30z"/>
-                                                            </svg>
+                                                            <img class:"wtbIcon" src="assets/images/discover-deyond/icon-clock-blue.svg" width="48" height="48" alt="Icono">
                                                             <div class="duration-text">
                                                                 <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
                                                                 <h2 class="text-style-5">${section.displayDuration}</h2>
@@ -376,6 +387,17 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         thumbnail: false,
                         share: false,
                         download: false,
+                    });
+                    $(".gradient-animated-title").each(function() {
+                        var $this = $(this);
+
+                        $this.one("inview", function(event, isInView) {
+                            if (isInView) {
+                                setTimeout(function() {
+                                    $this.addClass("active-animation");
+                                }, 200);
+                            }
+                        });
                     });
                 });
                 // Inicializar eventos de clic después de cargar las secciones
