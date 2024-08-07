@@ -40,7 +40,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/discover-deyond/banner-header-discovery-beyond-the-cruise.webp')">
+                    <div class="banner-fixed" style="background-image:url('assets/images/discover-deyond/banner-header-discovery-beyond-the-cruise.jpg')">
 
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->

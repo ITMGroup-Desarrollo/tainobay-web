@@ -326,6 +326,161 @@
                 "Lockers and water shoes are available for rent at extra cost. The minimum age to participate is 8 years old. Guests with claustrophobia, limited sight, and/or impaired hearing must be accompanied by an assistant or friend or a family member.",
                 "All tour participants must return to the port with the group guide at the end of the activities. Guests must be in good physical condition and be able to walk long distances. Guests must wear/use safety equipment during the water portion. Watch your step. People with recent surgeries, and back problems, to mention some, are not recommended to participate. Mobility devices, such as wheelchairs, electric scooters, walkers, and/or canes are not allowed on this tour."
             ]
+        },
+        {
+            "Tour": "MONKEY ISLAND",
+            "title": "IT’S ALWAYS ",
+            "subtitle": "A GOOD TIME!",
+            "button": "Let’s make new friends!",
+            "content": "A 30-minute experience to remember. The cutest friends you’ll make on your visit.",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-deyond/monkey-island/monkey-island-main-one.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-main-two.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-main-three.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-main-four.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-deyond/monkey-island/monkey-island-gallery-one.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-gallery-two.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-gallery-three.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-gallery-four.webp",
+                "assets/images/discover-deyond/monkey-island/monkey-island-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-deyond/monkey-island/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-deyond/monkey-island/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-deyond/monkey-island/icon/icon-monkey-white.svg",
+            "displayTitle": [
+                "MONKEY ISLAND"
+            ],
+            "displayContent": [
+                "This 30-minute experience allows you to enjoy our friendly squirrel monkeys at Taino Bay Port.",
+                "Discover their habitat and feel free to pet, hold, pose and learn about our adorable friends. At the end of the tour, visit our photo booth to choose your favorite shots."
+            ],
+            "displayHighlights": [
+                "Brief about interaction",
+                "Pet and hold squirrel monkeys",
+                "Take pictures"
+            ],
+            "displayIncluded": [
+                "Access to a 30-minute interaction with squirrel monkeys",
+                "Certified bilingual guide",
+                "Access to port facilities",
+                "Access to shopping area",
+                "<b>Photo package at extra cost</b>"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-deyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Biodegradable sunscreen"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Comfy clothing"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Bug repellent"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/country/icon/icon-money-white.svg",
+                    "text": "Extra spending money"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/country/icon/icon-hat-white.svg",
+                    "text": "Hat"
+                }
+            ],
+            "displayDuration": "30 MINUTES",
+            "displayNote": [
+                "Bling guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Avoid wearing flashy or dangling accessories during the activity. "
+            ]
+        },
+        {
+            "Tour": "Old town & beach ",
+            "title": "ENJOY A FUN WALK",
+            "subtitle": "THROUGH PUERTO PLATA.",
+            "button": "Have a fresh day at the beach!",
+            "content": "The perfect combo to discover the beautiful Puerto Plata. Visit downtown, take the coolest shots, and relax at the beach!",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-deyond/old-town/old-town-main-one.webp",
+                "assets/images/discover-deyond/old-town/old-town-main-two.webp",
+                "assets/images/discover-deyond/old-town/old-town-main-three.webp",
+                "assets/images/discover-deyond/old-town/old-town-main-four.webp",
+                "assets/images/discover-deyond/old-town/old-town-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-deyond/old-town/old-town-gallery-one.webp",
+                "assets/images/discover-deyond/old-town/old-town-gallery-two.webp",
+                "assets/images/discover-deyond/old-town/old-town-gallery-three.webp",
+                "assets/images/discover-deyond/old-town/old-town-gallery-four.webp",
+                "assets/images/discover-deyond/old-town/old-town-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-deyond/old-town/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-deyond/old-town/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-deyond/old-town/icon/icon-explorer-white.svg",
+            "displayTitle": [
+                "OLD TOWN",
+                "& BEACH"
+            ],
+            "displayContent": [
+                "<b>Central Park</b>: The perfect spot to fall in love with Dominican Culture. View the City Hall, the Catholic Church and learn about important holidays.",
+                "<b>Doña Blanca´s Alley</b>: This boardwalk takes you to the historic Victorian Houses of Puerto Plata and a beautiful hot pink location!",
+                "<b>Umbrella Street</b>: A fun street with plenty of activities. From artisanal ice cream to coffee & chocolate tasting in the Coffee Corner, enjoy the Dominican flavor. ",
+                "Enjoy the rest of the experience at the Beach Club, where you can work on that perfect Dominican tan and have a fresh swim, or...relax while sipping your favorite cocktail!"
+            ],
+            "displayHighlights": [
+                "Learn about Dominican culture at Puerto Plata’s Central Park",
+                "Visit the most famous Pink alley in Dominican Republic",
+                "Take pictures at Umbrella Street",
+                "Have a drink and relax at the beach"
+            ],
+            "displayIncluded": [
+                "Roundtrip transportation",
+                "Certified bilingual guide",
+                "Walking guided tour",
+                "Access to all interest spots",
+                "1 bottle of water",
+                "1 welcome drink at the club",
+                "Lounge chairs and parasol per couple",
+                "<b>Photo package at extra cost</b>"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-deyond/old-town/icon/icon-sunprotector-white.svg",
+                    "text": "Biodegradable sunscreen"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/old-town/icon/icon-comfty-clothes-white.svg",
+                    "text": "Comfy clothing"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/old-town/icon/icon-bug-repelent-white.svg",
+                    "text": "Bug repellent"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/old-town/icon/icon-money-white.svg",
+                    "text": "Extra spending money"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/old-town/icon/icon-hat-white.svg",
+                    "text": "Hat"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/old-town/icon/icon-swimsuit-white.svg",
+                    "text": "Swimwear"
+                },
+                {
+                    "iconPath": "assets/images/discover-deyond/old-town/icon/icon-towel-white.svg",
+                    "text": "Towel"
+                }
+            ],
+            "displayDuration": "3 HOURS",
+            "displayNote": [
+                "All tour participants must return to port with the group guide at the end of the activities. Wheelchairs, scooters, walkers, and/or canes are not allowed on this tour. Bling guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member."
+            ]
         }
     ]
 }
