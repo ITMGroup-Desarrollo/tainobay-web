@@ -21,6 +21,7 @@
 
 .rotate-90 {
     --fa-rotate-angle: 90deg !important;
+    transform: rotate(90deg);
 }
 
 .fa-rotate-by {

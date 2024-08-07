@@ -69,7 +69,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
         </section>
         <!--First Carrusel-->
 
-        <section id="carousel-sections-container" class="carousel-section"></section>
+        <section id="carousel-sections-container" class=""></section>
 
 
     </main>
@@ -78,13 +78,18 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     <?php include("include/js.php"); ?>
     <script>
         $(document).ready(function() {
-            // Función para manejar el clic en los botones de visualización
+            console.log("Document is ready");
             // Función para manejar el clic en los botones de visualización
             function handleDisplayButtonClick(button) {
+                console.log("Button clicked", button);
                 const section = button.closest('.carousel-section');
                 const displayedBlog = section.find('.displayed-blog');
                 const textElement = button.find('b');
-                const icon = button.find('.fa-xmark');
+                const icon = find('.fa-xmark');
+                console.log("Section:", section);
+                console.log("Displayed Blog:", displayedBlog);
+                console.log("Text Element:", textElement);
+                console.log("Icon:", icon);
 
                 // Verifica si todas las secciones están visibles o alguna está oculta
                 const areAllSectionsVisible = $('.carousel-section').toArray().every(sec => $(sec).is(':visible'));
@@ -223,7 +228,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     });
 
                     const sectionHTML = `
-                        <section class="carousel-section">
+                        <section class="carousel-section ">
                             <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                                 <div id="port-experience" class="shock-section ${section.side} pt-2 pb-4">
                                     <div class="carousel-content order bg-white d-flex flex-column justify-content-evenly align-items-center">
@@ -257,9 +262,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                         <div class="container-text mx-auto px-5 bg-orange pb-3 pt-3" style="width: 100%;">
                                             <p class="text-black black text-style-13 justificado">${section.content}</p>
                                             <div class="d-flex justify-content-end">
-                                                <a class="display-button" onclick="rotateIcon(this)">
+                                                <a class="display-button" >
                                                     <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
-                                                    <b class="text-style-13">VIEW MORE</b>
+                                                    <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
                                                 </a>
                                             </div>
                                         </div>
@@ -273,98 +278,106 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                         </div>
                                     </div>
                                 </div>
+                                <div class="shock-section displayed-blog">
+                                    <div class="container text-center my-5 pt-2 pb-4">
+                                        <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
+                                            ${displayT}
+                                        </div>
+                                        <div class="container-text mx-auto px-5">
+                                            ${displayC}
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row listado-row">
+                                            <div class="col-12 col-md-12 col-lg-6">
+                                                <div class="listado">
+                                                    <div class="listado-highlights">
+                                                        <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[13]; ?></h2>
+                                                        <div class="lista">
+                                                            <ul>
+                                                                ${displayH}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="listado-included">
+                                                        <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[19]; ?></h2>
+                                                        <div class="lista">
+                                                            <ul>
+                                                                ${displayI}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-12 col-lg-6">
+                                                <div class="what-to-bring">
+                                                    <div class="duration-container">
+                                                        <div class="what-to-bring-duration rounded">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 512 512">
+                                                                <path fill="#1c355e" d="M256 0Q150 0 75 75T0 256t75 181t181 75t181-75t75-181t-75-181T256 0m192 277h19q-8 76-61.5 130T277 467v-19q0-21-21-21t-21 21v19q-76-8-130-61.5T45 277h19q21 0 21-21t-21-21H45q6-76 60-130t130-60v19q0 21 21 21t21-21V45q76 8 130 61.5T467 235h-19q-21 0-21 21t21 21m-169-23l39-96q3-9-.5-17T305 130q-20-7-28 13l-47 117l92 137q5 8 17 8q5 0 13-4q19-10 6-30z"/>
+                                                            </svg>
+                                                            <div class="duration-text">
+                                                                <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
+                                                                <h2 class="text-style-5">${section.displayDuration}</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="what-to-bring-list-container">
+                                                        <div class="what-to-bring-list">
+                                                            <h2 class="text-style-8 text-italic"><?php echo DISCOVER_CARRUSEL[29]; ?></h2>
+                                                            <div class="list-container">
+                                                                ${displayW}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="note-container">
+                                            <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[34]; ?></h2>
+                                            ${displayN}
+                                        </div>
+                                        <div class="col-12 col-md-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
+                                            <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
+                                            <div class="gallery swiper swiper-container slider has-navigation scheme-1 primary"  >
+                                                <div class="swiper-wrapper">
+                                                    ${gallery}
+                                                </div>
+                                                <div class="swiper-button-prev button-prev">
+                                                    <svg id="prev-page" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="4rem" height="4rem" viewBox="0 0 231.26 729.5">
+                                                        <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
+                                                        <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="swiper-button-next button-next">
+                                                    <svg id="next-page" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="4rem" height="4rem" viewBox="0 0 231.26 729.5">
+                                                        <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
+                                                        <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
+                                                <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
 
-                        <div class="shock-section ">
-                            <div class="container text-center my-5 pt-2 pb-4">
-                                <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
-                                    ${displayT}
-                                </div>
-                                <div class="container-text mx-auto px-5">
-                                    ${displayC}
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="row listado-row">
-                                    <div class="col-12 col-md-12 col-lg-6">
-                                        <div class="listado">
-                                            <div class="listado-highlights">
-                                                <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[13]; ?></h2>
-                                                <div class="lista">
-                                                    <ul>
-                                                        ${displayH}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="listado-included">
-                                                <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[19]; ?></h2>
-                                                <div class="lista">
-                                                    <ul>
-                                                        ${displayI}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-12 col-lg-6">
-                                        <div class="what-to-bring">
-                                            <div class="duration-container">
-                                                <div class="what-to-bring-duration rounded">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 512 512">
-                                                        <path fill="#1c355e" d="M256 0Q150 0 75 75T0 256t75 181t181 75t181-75t75-181t-75-181T256 0m192 277h19q-8 76-61.5 130T277 467v-19q0-21-21-21t-21 21v19q-76-8-130-61.5T45 277h19q21 0 21-21t-21-21H45q6-76 60-130t130-60v19q0 21 21 21t21-21V45q76 8 130 61.5T467 235h-19q-21 0-21 21t21 21m-169-23l39-96q3-9-.5-17T305 130q-20-7-28 13l-47 117l92 137q5 8 17 8q5 0 13-4q19-10 6-30z"/>
-                                                    </svg>
-                                                    <div class="duration-text">
-                                                        <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
-                                                        <h2 class="text-style-5">${section.displayDuration}</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="what-to-bring-list-container">
-                                                <div class="what-to-bring-list">
-                                                    <h2 class="text-style-8 text-italic"><?php echo DISCOVER_CARRUSEL[29]; ?></h2>
-                                                    <div class="list-container">
-                                                        ${displayW}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="note-container">
-                                    <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[34]; ?></h2>
-                                    ${displayN}
-                                </div>
-                                <div class="col-12 col-md-12 col-lg-12" data-aos="zoom-in-up" data-aos-delay="600" style="text-align: center;">
-                                    <h2 class="text-style-4 text-italic text-blue"><?php echo DISCOVER_CARRUSEL[37]; ?></h2>
-                                    <div class="gallery swiper slider has-navigation scheme-1 primary" data-columns="5,3,1,5" data-autoplay="10000" data-loop="true" data-space="1">
-                                        <div class="swiper-wrapper">
-                                            ${gallery}
-                                        </div>
-                                        <div class="swiper-button-prev button-prev">
-                                            <svg id="prev-page" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="4rem" height="4rem" viewBox="0 0 231.26 729.5">
-                                                <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
-                                                <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="swiper-button-next button-next">
-                                            <svg id="next-page" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="4rem" height="4rem" viewBox="0 0 231.26 729.5">
-                                                <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
-                                                <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <a class="display-hide-button button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;">
-                                        <strong><?php echo DISCOVER_CARRUSEL[38]; ?></strong>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        
                     `;
 
                     container.append(sectionHTML);
-                });
 
+                    // Re-initialize the lightGallery plugin on the updated content
+                    $('.shock-section .gallery').lightGallery({
+                        selector: '.shock-section .gallery .lightbox-link:not(.prevent)',
+                        thumbnail: false,
+                        share: false,
+                        download: false,
+                    });
+                });
                 // Inicializar eventos de clic después de cargar las secciones
                 $(document).on('click', '.slide-navigation-item-prev', function(event) {
                     event.preventDefault();
@@ -382,7 +395,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 var swiper = new Swiper('.swiper-container', {
                     slidesPerView: 4, // Mostrar 4 imágenes al inicio
                     spaceBetween: 10, // Espacio entre las imágenes
-                    slidesPerGroup: 4, // Desplazar 4 imágenes por vez
+                    slidesPerGroup: 1, // Desplazar 4 imágenes por vez
                     loop: true, // Habilitar bucle continuo
                     navigation: {
                         nextEl: '.swiper-button-next',
@@ -410,16 +423,18 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         1024: {
                             slidesPerView: 4,
                             spaceBetween: 10,
-                            slidesPerGroup: 4, // Ajuste para pantallas grandes
+                            slidesPerGroup: 1, // Ajuste para pantallas grandes
                         }
                     }
                 });
 
+
+
                 // Adjunta eventos a los botones de visualización
                 $(document).on('click', '.display-button', function() {
                     handleDisplayButtonClick($(this));
+                    rotateIcon($(this));
                 });
-
                 // Adjunta eventos a los botones de ocultación
                 $(document).on('click', '.display-hide-button', function() {
                     handleHideButtonClick($(this));
