@@ -40,7 +40,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/discover-deyond/banner-header-discovery-beyond-the-cruise.jpg')">
+                    <div class="banner-fixed" style="background-image:url('assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg')">
 
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
@@ -247,7 +247,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                             </h2>
                                         </div>
                                         <div class="d-flex align-items-center w-75">
-                                            <a href="#" class="slide-navigation-item-prev slide-navigation-item-prev${sectionIndex + 1} d-block text-blue" data-carousel="#${sectionId}">
+                                            <a href="#" class="slide-navigation-item-prev slide-navigation-item-prev${sectionIndex + 1} d-block text-blue boton-prev" data-carousel="#${sectionId}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                                     <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"/>
                                                     <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"/>
@@ -258,7 +258,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                     <span class="d-block">${section.button}</span>
                                                 </h2>
                                             </div>
-                                            <a href="#" class="slide-navigation-item-next slide-navigation-item-next${sectionIndex + 1} d-block text-blue" data-carousel="#${sectionId}">
+                                            <a href="#" class="slide-navigation-item-next slide-navigation-item-next${sectionIndex + 1} d-block text-blue boton-next" data-carousel="#${sectionId}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                                                     <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z"/>
                                                     <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z"/>
@@ -326,7 +326,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 <div class="what-to-bring">
                                                     <div class="duration-container">
                                                         <div class="what-to-bring-duration rounded">
-                                                            <img class:"wtbIcon" src="assets/images/discover-deyond/icon-clock-blue.svg" width="48" height="48" alt="Icono">
+                                                            <img class:"wtbIcon" src="assets/images/discover-beyond/icon-clock-blue.svg" width="48" height="48" alt="Icono">
                                                             <div class="duration-text">
                                                                 <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
                                                                 <h2 class="text-style-5">${section.displayDuration}</h2>

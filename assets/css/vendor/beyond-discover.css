@@ -92,14 +92,11 @@ span.text-style-4.lh-1.text-italic {
     transform: translate(-50%, -50%) !important;
 }
 
-a.slide-navigation-item-next1.d-block.text-blue:hover,
-a.slide-navigation-item-prev1.d-block.text-blue:hover,
-a.slide-navigation-item-next2.d-block.text-blue:hover,
-a.slide-navigation-item-prev2.d-block.text-blue:hover,
-a.slide-navigation-item-next3.d-block.text-blue:hover,
-a.slide-navigation-item-prev3.d-block.text-blue:hover,
-a.slide-navigation-item-next4.d-block.text-blue:hover,
-a.slide-navigation-item-prev4.d-block.text-blue:hover {
+
+a.boton-next:hover {
+    color: #f5a23a !important;
+}
+a.boton-prev:hover {
     color: #f5a23a !important;
 }
 
@@ -494,7 +491,7 @@ a.button-transparent.button-orange.text-center:hover {
     background-color: transparent;
     color: #1c355e;
 }
-.swiper .swiper-button-next:hover, .swiper .swiper-button-prev:hover {
+.swiper-button-next:hover,.swiper-button-prev:hover {
     background-color: transparent;
     color: #f5a23a;
 }
