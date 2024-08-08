@@ -273,6 +273,7 @@
     z-index: 2;
     left: -2rem;
     top: 3rem;
+    color: #fff ;
 
 }
 
@@ -357,4 +358,17 @@
 #prev-page[disabled], #next-page[disabled] {
     pointer-events: none;
     opacity: 0.5;
+}
+.image-blog-container {
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    position: relative;
+    cursor: pointer;
+}
+
+.image-blog-container img {
+    transition: transform 0.5s ease; /* Duración y tipo de transición */
+}
+
+.image-blog-container:hover img {
+    transform: scale(1.1) rotate(5deg); /* Zoom y rotación al hacer hover */
 }

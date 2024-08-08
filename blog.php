@@ -34,8 +34,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                         <h1 class="title white">
                             <span class="text-1 text-style-3 blog-title"></span>
                             <br>
-                            <span class="text-2 text-style-8 "><?php echo TITULOS_BLOG[1];  ?> </span>
+
                         </h1>
+                        <h2 class="title white"><span class="text-2 text-style-8 "><?php echo TITULOS_BLOG[1];  ?> </span></h2>
                     </div>
                 </div>
                 <!-- Image -->
@@ -64,9 +65,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                             <!-- Posts se cargarán aquí -->
                         </div>
                         <div style="display: flex; ">
-                            <a href="blog_all.php" class=" button-transparent button-orange text-center" style=""><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
+                            <a href="<?php echo $idioma; ?>/blog_all" class=" button-transparent button-orange text-center" style=""><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
                             <!-- Botones de navegación y paginación -->
-                            <div class="container mt-3 d-flex justify-content-end pagination-items">
+                            <div class="container mt-3 d-flex justify-content-center pagination-items">
 
                                 <div class="row">
                                     <div class="col-4 col-md-3 col-lg-6">
@@ -122,162 +123,191 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 }
             }
         }
-        // Selecciona todos los elementos.timeline-item
-        const timelineItems = document.querySelectorAll('.timeline-item');
     </script>
     <script>
-        function loadPost(title, pushState = true) {
-            console.log('Cargando post:', title);
-            $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
-                console.log('Respuesta de loadPost:', response);
-                if (!response.posts || response.posts.length === 0) {
-                    $('#blog-container').html('<p>No se encontró el post.</p>');
-                    return;
-                }
+    // Inserta el valor de la variable PHP en una variable JavaScript
+    const idioma = '<?php echo $idioma; ?>';
 
-                const data = response.posts[0];
-                const hasPrevPost = response.has_prev_post;
-                const hasNextPost = response.has_next_post;
-                const prevPostTitle = response.prev_post_title;
-                const nextPostTitle = response.next_post_title;
+    function loadPost(title, pushState = true) {
+        console.log('Cargando post:', title);
+        $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
+            console.log('Respuesta de loadPost:', response);
+            if (!response.posts || response.posts.length === 0) {
+                $('#blog-container').html('<p>No se encontró el post.</p>');
+                return;
+            }
 
-                $('#blog-container').empty();
+            const data = response.posts[0];
+            const hasPrevPost = response.has_prev_post;
+            const hasNextPost = response.has_next_post;
+            const prevPostTitle = response.prev_post_title;
+            const nextPostTitle = response.next_post_title;
 
-                $('#blog-container').append(`
-                    <div class="blog-post">
-                        <div class="title-image">
-                            <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
-                            <div class="dropdown azulBlog">
-                                <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                        <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                                    </svg>
-                                </button>
-                                <div class="dropdown-content" id="dropdownContent">
-                                    <a href="https://www.facebook.com" target="_blank">
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
-                                    <a href="https://www.whatsapp.com" target="_blank">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                </div>
+            $('#blog-container').empty();
+
+            $('#blog-container').append(`
+                <div class="blog-post">
+                    <div class="title-image">
+                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                        <div class="dropdown azulBlog">
+                            <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                    <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-content" id="dropdownContent">
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://www.whatsapp.com" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="blog-post blog-texto">
-                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                        ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    </div>
-                    <div class="title-image">
-                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
-                    </div>
-                `);
+                </div>
+                <div class="blog-post blog-texto">
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                </div>
+                <div class="title-image">
+                    <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                </div>
+            `);
 
-                $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
-                $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
+            $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
+            $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
 
-                // Actualizar la clase active del timeline
-                updateActiveTimelineItem(title);
+            // Actualizar la clase active del timeline
+            updateActiveTimelineItem(title);
 
-                // Reemplaza los guiones por espacios en blanco
-                data.title = data.title.replace(/-/g, ' ');
+            // Reemplaza los guiones por espacios en blanco
+            data.title = data.title.replace(/-/g, ' ');
 
-                // Establece el texto del título en el elemento con la clase 'blog-title'
-                $('.blog-title').text(data.title);
+            // Establece el texto del título en el elemento con la clase 'blog-title'
+            $('.blog-title').text(data.title);
 
-                if (pushState) {
-                    const url = new URL(window.location);
-                    url.pathname = '/tainobay/blog/' + encodeURIComponent(title);
-                    window.history.pushState({
-                        title: title
-                    }, '', url);
-                }
-            }).fail(function() {
-                console.log('Error al cargar el post.');
-                $('#blog-container').html('<p>Error al cargar el post.</p>');
-            });
-        }
-
-        function changePost(title) {
-            console.log('Cambiando a post:', title);
-            loadPost(title);
-        }
-
-        function loadTimeline(callback) {
-            console.log('Cargando timeline...');
-            $.getJSON('include/get_blog_posts.php?page=1', function(response) {
-                console.log('Respuesta de loadTimeline:', response);
-                if (!response.posts || response.posts.length === 0) {
-                    $('#timeline').html('<p>No se encontraron posts.</p>');
-                    return;
-                }
-
-                $('#timeline').empty();
-
-                response.posts.forEach((post, index) => {
-                    const active = index === 0 ? ' active' : '';
-                    $('#timeline').append(`
-                        <li class="timeline-item${active}" onclick="changePost('${post.title}')">
-                            <div class="content timeline-text-container">
-                                <h3 class="mestitle">${post.month}</h3>
-                                <h3 class="diatitle">${post.day}</h3>
-                                <input type="hidden" value="${post.title}">
-                            </div>
-                            <div class="circle">
-                                <i class="fa-regular fa-circle"></i>
-                            </div>
-                        </li>
-                    `);
-                });
-
-                if (typeof callback === 'function') {
-                    callback();
-                }
-            }).fail(function() {
-                console.log('Error al cargar el timeline.');
-                $('#timeline').html('<p>Error al cargar los posts.</p>');
-            });
-        }
-
-        function updateActiveTimelineItem(title) {
-            console.log('Actualizando elemento activo del timeline:', title);
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            timelineItems.forEach((item) => {
-                const itemTitle = item.querySelector('input[type="hidden"]').value;
-                if (itemTitle === title) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
-            });
-        }
-
-        window.onpopstate = function(event) {
-            if (event.state && event.state.title) {
-                console.log('onpopstate:', event.state.title);
-                loadPost(event.state.title, false);
+            if (pushState) {
+                const url = new URL(window.location);
+                url.pathname = `/tainobay/${idioma}/blog/` + encodeURIComponent(title);
+                window.history.pushState({
+                    title: title
+                }, '', url);
             }
-        }
-
-        $(document).ready(function() {
-            console.log('Cargando timeline al iniciar...');
-            loadTimeline(function() {
-                const pathSegments = window.location.pathname.split('/');
-                const title = decodeURIComponent(pathSegments[pathSegments.length - 1]);
-                if (title) {
-                    console.log('Cargando post al iniciar:', title);
-                    loadPost(title, false);
-                } else {
-                    console.log('No se especificó un título en la URL, cargando primer post por defecto...');
-                    changePost(response.posts[0].title);
-                }
-            });
+        }).fail(function() {
+            console.log('Error al cargar el post.');
+            $('#blog-container').html('<p>Error al cargar el post.</p>');
         });
-    </script>
+    }
+
+    function changePost(title) {
+        console.log('Cambiando a post:', title);
+        loadPost(title);
+    }
+
+    const itemsPerPage = 4;
+    let currentPage = 1;
+
+    function loadTimeline(callback) {
+        console.log('Cargando timeline...');
+        $.getJSON(`include/get_blog_posts.php?page=${currentPage}`, function(response) {
+            console.log('Respuesta de loadTimeline:', response);
+            if (!response.posts || response.posts.length === 0) {
+                console.log('No hay más posts para cargar.');
+                return;
+            }
+
+            if (currentPage > 1) {
+                $('#timeline').find('li:lt(' + (itemsPerPage - 1) + ')').remove();
+            } else {
+                $('#timeline').empty();
+            }
+
+            response.posts.forEach((post, index) => {
+                const active = (index === 0 && currentPage === 1) ? ' active' : '';
+                $('#timeline').append(`
+                    <li class="timeline-item${active}" onclick="changePost('${post.title}')">
+                        <div class="content timeline-text-container">
+                            <h3 class="mestitle">${post.month}</h3>
+                            <h3 class="diatitle">${post.day}</h3>
+                            <input type="hidden" value="${post.title}">
+                        </div>
+                        <div class="circle">
+                            <i class="fa-regular fa-circle"></i>
+                        </div>
+                    </li>
+                `);
+            });
+
+            if (typeof callback === 'function') {
+                callback(response.posts);
+            }
+        }).fail(function() {
+            console.log('Error al cargar el timeline.');
+            $('#timeline').html('<p>Error al cargar los posts.</p>');
+        });
+    }
+
+    function updateActiveTimelineItem(title) {
+        console.log('Actualizando elemento activo del timeline:', title);
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        let activeIndex = -1;
+
+        timelineItems.forEach((item, index) => {
+            const itemTitle = item.querySelector('input[type="hidden"]').value;
+            if (itemTitle === title) {
+                item.classList.add('active');
+                activeIndex = index;
+            } else {
+                item.classList.remove('active');
+            }
+        });
+
+        if (activeIndex === -1) {
+            console.log('Post no encontrado en los elementos cargados del timeline, cargando más elementos...');
+            currentPage++;
+            loadTimeline(() => updateActiveTimelineItem(title));
+        } else if (activeIndex >= itemsPerPage - 1) {
+            console.log('Último elemento visible activo, cargando más elementos del timeline...');
+            currentPage++;
+            loadTimeline();
+        }
+    }
+
+    window.onpopstate = function(event) {
+        if (event.state && event.state.title) {
+            console.log('onpopstate:', event.state.title);
+            loadPost(event.state.title, false);
+        }
+    }
+
+    $(document).ready(function() {
+        console.log('Cargando timeline al iniciar...');
+        loadTimeline(function(posts) {
+            const pathSegments = window.location.pathname.split('/');
+            const title = decodeURIComponent(pathSegments[pathSegments.length - 1]);
+
+            if (title && title !== 'blog') {
+                console.log('Cargando post al iniciar:', title);
+                loadPost(title, false);
+            } else {
+                console.log('No se especificó un título en la URL, cargando primer post por defecto...');
+                const firstPostTitle = posts.length > 0 ? posts[0].title : '';
+                if (firstPostTitle) {
+                    changePost(firstPostTitle);
+                }
+            }
+        });
+    });
+</script>
+
+
+
+
+
 </body>
 
 </html>

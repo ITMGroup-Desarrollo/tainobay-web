@@ -77,7 +77,7 @@ define('DISCOVER_CARRUSEL2', array(
 define('DISCOVER_CARRUSEL3', array(
     'DISCOVER THE HOTTEST',
     'PUERTO PLATA SPOTS!',
-    'The Bride of the Atlantic is waiting you',
+    'The Bride of the Atlantic',
     'Explore the most representative landmarks of Puerto Plata in this fun tour through its downtown.
     On your way you will discover this amazing spots',
     'VIEW MORE',
@@ -87,7 +87,7 @@ define('DISCOVER_CARRUSEL4', array(
     'THE ULTIMATE',
     'ADVENTURE IN NATURE!',
     'Experience the wonders of Puerto Plata',
-    'The perfect combo to enjoy the beauty of Puerto Plata! Enjoy the city % discover the secluded Damajagua
+    'The perfect combo to enjoy the beauty of Puerto Plata! Enjoy the city & discover the secluded Damajagua
     Waterfalls in the Dominican Republic´s mountains',
     'VIEW MORE',
     'VIEW LESS'

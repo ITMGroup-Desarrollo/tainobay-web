@@ -31,8 +31,9 @@ include_once("include/lang/{$idioma}-blog.php");
                         <h1 class="title white">
                             <span class="text-1 text-style-3"><?php echo TITULOS_BLOG_ALL[0];  ?></span>
                             <br>
-                            <span class="text-2 text-style-8 "><?php echo TITULOS_BLOG_ALL[1];  ?> </span>
+
                         </h1>
+                        <h2 class="text-2 text-style-8 title white"><?php echo TITULOS_BLOG_ALL[1];  ?> </h2>
                     </div>
                 </div>
                 <!-- Image -->
@@ -145,17 +146,17 @@ include_once("include/lang/{$idioma}-blog.php");
                                     <h3 class="diatitle">${post.day}</h3>
                                 </div>
                             </div>
-                            <div class="col-11 col-md-8 col-lg-4 single-list-blog-image">
-                                <div class="image-blog-container">
-                                    <img src="${post.image_url}" class="imgRound" alt="${title}">
+                            <div class="col-11 col-md-8 col-lg-4 single-list-blog-image">                                  
+                                <div class="image-blog-container imgRound">
+                                    <a href="<?php echo $idioma; ?>/blog/${post.title}"><img src="${post.image_url}" class="imgRound " alt="${title}"></a>
                                 </div>
                             </div>
                             <div class="col-11 col-md-10 col-lg-5 single-blog-content">
                                 <div class="single-blog-title">
-                                    <h3 class="text-style-7">${title}</h3>
+                                    <h2 class="text-style-7">${title}</h2>
                                 </div>
                                 <p class="justificado">${post.description}</p>
-                                <a href="blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong>Leer más</strong></a>
+                                <a href="<?php echo $idioma; ?>/blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong>Leer más</strong></a>
                             </div>
                             <div class="col-11 col-md-2 col-lg-1 single-blog-icon">
                                 <i class="fa fa-share-alt fa-2x azulBlog"></i>
