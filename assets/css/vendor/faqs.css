@@ -1,5 +1,6 @@
 .faq-card {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .content-icon {
@@ -31,38 +32,43 @@ a.button-plus.collapsed .rotate-icon {
   border-top: solid 2px var(--blue-color);
 }
 
- #faq-page .collapsible .collapse-group .wrapper-icon {
-   margin-top: 0.8rem;
- }
+#faq-page .collapsible .collapse-group .wrapper-icon {
+  margin-top: 0.8rem;
+}
 
- #faq-page .faq-answer {
+#faq-page .faq-answer {
   margin: 5px 0 15px 0;
- }
+}
 
- #faq-page .form-title {
+#faq-page .form-title {
   font-size: 2rem;
   margin-top: 5rem;
- }
+}
 
 /* sm */
-@media (min-width: 640px) {}
+@media (min-width: 640px) {
+}
 
 /* md 768px  */
 @media (min-width: 768px) {
   .faq-card {
-      width: 25%;
-    }
+    width: 25%;
+    margin-bottom: 1rem;
+  }
   #faq-page .form-title {
     font-size: 3rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
 /* lg 1024px  */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+}
 
 /* xl 1280px  */
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 /* 2xl 1536px  */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+}
