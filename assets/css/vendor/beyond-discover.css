@@ -1,7 +1,9 @@
 .justificado {
     text-align: justify;
 }
-
+body{
+    overflow-x:hidden !important;
+}
 :root {
     --blog-icono: #1c355e;
 }
@@ -513,3 +515,47 @@ a.button-transparent.button-orange.text-center:hover {
 .d-flex.justify-content-start.shortIcons img:first-child{
     margin: 0 1rem 0 0;
 }
+.carousel-section {
+    opacity: 0;
+    transform: translateX(100%);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.carousel-section {
+    opacity: 0;
+    transform: translateX(100%);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/*
+.right-side {
+    animation-name: slideInRight;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.left-side {
+    animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+*/
