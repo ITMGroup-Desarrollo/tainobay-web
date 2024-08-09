@@ -310,7 +310,7 @@ Support : codings.dev
   color: var(--color);
 }
 .side-intro .description {
-  margin: 2rem 0 0 2rem;
+  /* margin: 2rem 0 0 2rem; */
   line-height: 1.5;
   color: var(--color);
 }
@@ -4157,9 +4157,6 @@ table {
 .dynamic-slider.scheme-1 {
   height: auto;
   margin-bottom: 50px;
-}
-.dynamic-slider .slide-navigation {
-  margin-top: 40px;
 }
 
 /* #region Text */

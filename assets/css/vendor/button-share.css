@@ -6,9 +6,16 @@
 .redes {
   position: absolute;
   z-index: 10;
-  display: none; /* Ocultamos por defecto */
-  top: 55px; /* Ajustar según tu diseño */
+  /* display: none; */
+  top: 55px;
   right: 0;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.show-container {
+  opacity: 1;
+  visibility: visible;
 }
 
 .redes a {

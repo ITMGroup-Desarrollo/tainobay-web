@@ -809,6 +809,10 @@
   text-align: left;
 }
 @media (min-width: 992px) {
+  #menu-fixed .language a,
+  #menu-fixed .social-media a {
+    font-size: 14px;
+  }
   .menu-toggle .menu-toggle-icon {
     padding-top: 0;
   }

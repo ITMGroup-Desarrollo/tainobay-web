@@ -479,7 +479,6 @@ include_once("include/lang/reviews.php");
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Seleccionamos todos los botones de compartir
             const shareButtons = document.querySelectorAll('.toggle-share');
 
             shareButtons.forEach(button => {
@@ -487,21 +486,23 @@ include_once("include/lang/reviews.php");
                     const shareContainer = button.closest('.container-btn').querySelector('.redes');
 
                     // Alternamos la visibilidad del contenedor de redes sociales
-                    const isVisible = shareContainer.style.display === 'block';
+                    const isVisible = shareContainer.classList.contains('show-container');
                     document.querySelectorAll('.redes').forEach(container => {
-                        container.style.display = 'none'; // Ocultamos todos los contenedores
+                        container.classList.remove('show-container'); // Ocultamos todos los contenedores
                     });
 
-                    // Mostramos o ocultamos el contenedor correspondiente
-                    shareContainer.style.display = isVisible ? 'none' : 'block';
+                    // Mostramos u ocultamos el contenedor correspondiente
+                    if (!isVisible) {
+                        shareContainer.classList.add('show-container');
+                    }
 
                     // Alternamos la clase activa en el botón
-                    document.querySelectorAll('.toggle-share').forEach(btn => {
-                        btn.classList.remove('active'); // Quitamos la clase activa de todos los botones
-                    });
-                    if (!isVisible) {
-                        button.classList.add('active'); // Añadimos la clase activa al botón clicado
-                    }
+                    // document.querySelectorAll('.toggle-share').forEach(btn => {
+                    //     btn.classList.remove('active'); // Quitamos la clase activa de todos los botones
+                    // });
+                    // if (!isVisible) {
+                    //     button.classList.add('active'); // Añadimos la clase activa al botón clicado
+                    // }
                 });
             });
         });

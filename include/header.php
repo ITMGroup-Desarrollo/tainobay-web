@@ -23,7 +23,7 @@
                </a>
                <!-- Menu fixed on screen lg -->
                <!-- <div id="menu-fixed" class="w-85 justify-content-evenly d-none d-lg-flex"> -->
-               <div id="menu-fixed" class="w-85 justify-content-evenly">
+               <div id="menu-fixed" class="w-80 justify-content-evenly">
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/port-experience" class="menu-main-item-fixed"><?php echo MENU[8]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="menu-main-item-fixed"><?php echo MENU[9]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="menu-main-item-fixed"><?php echo MENU[3]; ?></a>
