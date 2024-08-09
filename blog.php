@@ -105,6 +105,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
     <?php include("include/js.php"); ?>
+    </body>
     <script>
         function toggleDropdown() {
             var dropdown = document.getElementById("dropdownContent");
@@ -308,6 +309,5 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
 
 
-</body>
 
 </html>

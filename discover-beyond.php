@@ -230,7 +230,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 </div>
                             </div>
                         `;
-                        
+
                     });
                     const justifyClass = section.side === 'left-side' ? 'justify-content-end' : 'justify-content-start';
                     const sectionHTML = `
@@ -381,13 +381,22 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
                     container.append(sectionHTML);
 
-                    // Re-initialize the lightGallery plugin on the updated content
-                    $('.shock-section .gallery').lightGallery({
-                        selector: '.shock-section .gallery .lightbox-link:not(.prevent)',
-                        thumbnail: false,
-                        share: false,
-                        download: false,
-                    });
+                    console.log("Section side:", section.side);
+
+                    var newSection = container.find('.carousel-section');
+
+                    if (section.side === 'right-side') {
+                        newSection
+                            .addClass('right-side')
+                            .attr('data-aos', 'fade-left');
+                    } else if (section.side === 'left-side') {
+                        newSection
+                            .addClass('left-side')
+                            .attr('data-aos', 'fade-right');
+                    }
+
+                    AOS.init();
+
                     $(".gradient-animated-title").each(function() {
                         var $this = $(this);
 
@@ -472,6 +481,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
         function rotateIcon(element) {
             $(element).find('.fa-xmark').toggleClass('rotate-90');
         }
+        // Función para crear la sección dinámicamente y agregarla al DOM
     </script>
 </body>
 

@@ -2,7 +2,7 @@
 define('TITULOS_DISCOVER', array(
     'DISCOVER BEYOND',
     'THE CRUISE',
-    'Book your tours upon arrival at the last minute booths!',
+    'Book your tours and excursions upon arrival at the last-minute booths!',
     'BACK'
 ));
 define('DISCOVER_WELCOME', array(
