@@ -22,6 +22,22 @@
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas: "static-content ..." "static-content slide-content" "static-content slide-content" "static-content slide-content";
 }
+.dynamic-slider .static-content {
+  padding: 5rem 1rem;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "static-title" "static-arrows" "static-button";
+}
+.dynamic-slider .static-title {
+  grid-area: static-title;
+}
+.dynamic-slider .static-arrows {
+  grid-area: static-arrows;
+}
+.dynamic-slider .static-button {
+  grid-area: static-button;
+}
 .dynamic-slider .slide-info-menu {
   position: relative;
   z-index: 4;
@@ -101,9 +117,9 @@
 }
 .dynamic-slider .slide-index {
   position: relative;
-  z-index: 1;
-  top: 30px;
-  right: 30px;
+  z-index: 5;
+  top: -100px;
+  right: 20px;
   width: auto;
   min-width: 120px;
   height: 22px;
@@ -118,12 +134,15 @@
   letter-spacing: 1px;
 }
 .dynamic-slider .slide-index-current {
+  color: white;
   position: relative;
   width: 50%;
   text-align: left;
 }
 .dynamic-slider .slide-index-current::before {
   content: "";
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   position: absolute;
   right: 0;
   bottom: 11px;
@@ -138,10 +157,13 @@
   position: relative;
   width: 50%;
   text-align: right;
+  color: white;
 }
 .dynamic-slider .slide-index-total:before {
   content: "";
   position: absolute;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   z-index: 1;
   left: 0;
   bottom: 11px;
@@ -152,7 +174,7 @@
 .dynamic-slider .slide-navigation {
   z-index: 2;
   /* padding: 0 5vw; */
-  grid-area: slide-navigation;
+  /* grid-area: slide-navigation; */
   /* text-align: right; */
 }
 .dynamic-slider .static-content {
@@ -168,7 +190,7 @@
   grid-area: 1 / 1 / 5 / 4;
   grid-template-columns: 50% 22% 28%;
   grid-template-rows: 26% 54% 20%;
-  grid-template-areas: "slide-content slide-image-wrapper slide-image-wrapper" "slide-content slide-image-wrapper slide-image-wrapper" "... slide-image-wrapper slide-image-wrapper";
+  grid-template-areas: "slide-content slide-image-wrapper slide-image-wrapper" "slide-content slide-image-wrapper slide-image-wrapper" "static-button  slide-image-wrapper slide-image-wrapper";
   pointer-events: none;
 }
 .dynamic-slider .slide-item:not(.current-slide) {
@@ -218,6 +240,12 @@
   margin-right: 5vw;
 }
 .dynamic-slider .slide-item:not(.current-slide) .slide-description {
+  opacity: 0;
+}
+.dynamic-slider .slide-item:not(.current-slide) .slide-share {
+  opacity: 0;
+}
+.dynamic-slider .slide-item:not(.current-slide) .slide-button {
   opacity: 0;
 }
 .dynamic-slider mark.active:before {

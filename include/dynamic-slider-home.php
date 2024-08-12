@@ -7,9 +7,10 @@
                 <span class="slide-index-total"></span>
             </div>
 
-            <div class="static-content bg-orange d-flex flex-column justify-content-evenly align-items-center">
-                <h2 class="text-uppercase text-center text-style-3 text-white"><strong>Port experience</strong></h2>
-                <nav class="slide-navigation d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows">
+            <!-- <div class="static-content bg-orange d-flex flex-column justify-content-evenly align-items-center"> -->
+            <div class="static-content bg-orange">
+                <h2 class="text-uppercase text-center text-style-3 text-white static-title"><strong>Port experience</strong></h2>
+                <nav class="slide-navigation d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-inline-block text-blue" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
@@ -69,8 +70,10 @@
                         </div>
                     </div>
                     <!-- button more -->
-                    <div class="slide-button ">
-                        <a href="<?= $point['path'] ?>" class="d-block text-uppercase button-transparent button-blue text-center button-carousel"><strong>Explore more</strong></a>
+                    <div class="slide-button static-button" style="z-index: 9;">
+                        <div class="container-button text-center">
+                            <a href="<?= $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong>Explore more</strong></a>
+                        </div>
                     </div>
                     <!-- Intro -->
                     <div class="slide-content" style="<?= $point['id'] == '1' ? 'background: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue-color));' : '' ?>">
