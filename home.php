@@ -83,77 +83,7 @@ include_once("include/lang/reviews.php");
         </section>
 
         <!-- New Carousel -->
-        <section id="port-experience" class="shock-section pt-2 pb-4">
-
-            <div class="carousel-content bg-orange d-flex flex-column justify-content-evenly align-items-center">
-                <h2 class="text-uppercase text-center text-style-3"><strong>Port experience</strong></h2>
-                <div class="d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows">
-                    <!-- Arrow Left -->
-                    <a href="#" class="slide-navigation-item-prev d-block text-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
-                            <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                            <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                        </svg>
-                    </a>
-                    <!-- Text Carousel -->
-                    <div class="flex-grow-1">
-                        <p class="text-style-6 text-arrows"><span class="d-block">Discover</span><span class="text-end ml-4 d-block">things to do</span></p>
-                    </div>
-                    <!-- Arrow Right -->
-                    <a href="#" class="slide-navigation-item-next d-block text-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
-                            <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                            <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                        </svg>
-                    </a>
-                </div>
-                <a href="#" class="d-block text-uppercase button-transparent button-blue text-center button-carousel"><strong>Explore more</strong></a>
-            </div>
-            <div class="carousel-image-wrapper">
-                <!-- share -->
-                <div class="position-absolute top-0 end-0 p-1 button-share">
-                    <div class="container-btn">
-                        <div class="redes">
-                            <a target="_blank" class="bg-orange" href="https://www.facebook.com/sharer/sharer.php?u=https://www.porttainobay.com/"><i class="icon fab fa-facebook-f"></i></a>
-                            <a target="_blank" class="bg-orange" href="https://twitter.com/intent/tweet?url=https://example.com&text=Echa%20un%20vistazo%20a%20Taino%20Bay"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
-                                    <g fill="none">
-                                        <g clipPath="url(#IconifyId19113fe36724382401)">
-                                            <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="IconifyId19113fe36724382401">
-                                                <path fill="#fff" d="M0 0h14v14H0z" />
-                                            </clipPath>
-                                        </defs>
-                                    </g>
-                                </svg></a>
-                            <a target="_blank" class="bg-orange" href="https://api.whatsapp.com/send?text=https://www.porttainobay.com/">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
-                                    <path fill="currentColor" d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
-                                    <path fill="currentColor" d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7" />
-                                </svg>
-                            </a>
-                        </div>
-                        <button class="border-0 text-white bg-transparent toggle-share">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <!-- carousel info -->
-                <div class="content-wrapper-carousel">
-                    <h3 class="mb-0 text-style-2">01</h3>
-                    <h3 class="mb-0 text-style-15">Blue Parrot</h3>
-                    <p class="text-style-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
-                </div>
-                <picture>
-                    <source src="assets/images/points-of-interest/ParqueCentral.jpg">
-                    <img src="assets/images/points-of-interest/ParqueCentral.jpg" alt="">
-                </picture>
-            </div>
-
-        </section>
+        <?php include("include/dynamic-slider-home.php"); ?>
 
         <!-- New Scrolling text -->
         <section class="shock-section pt-2 pb-4">
@@ -171,80 +101,7 @@ include_once("include/lang/reviews.php");
         </section>
 
         <!-- New Second Carousel -->
-        <section id="discover-beyond-cruise" class="shock-section pt-2 pb-4 dynamic-carousel">
-            <div class="carousel-image-wrapper">
-                <!-- share -->
-                <div class="position-absolute top-0 end-0 p-1 button-share">
-                    <div class="container-btn">
-                        <div class="redes">
-                            <a target="_blank" class="bg-blue" href="https://www.facebook.com/sharer/sharer.php?u=https://www.porttainobay.com/"><i class="icon fab fa-facebook-f"></i></a>
-                            <a target="_blank" class="bg-blue" href="https://twitter.com/intent/tweet?url=https://example.com&text=Echa%20un%20vistazo%20a%20Taino%20Bay">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
-                                    <g fill="none">
-                                        <g clipPath="url(#IconifyId19113fe36724382401)">
-                                            <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="IconifyId19113fe36724382401">
-                                                <path fill="#fff" d="M0 0h14v14H0z" />
-                                            </clipPath>
-                                        </defs>
-                                    </g>
-                                </svg>
-                            </a>
-                            <a target="_blank" class="bg-blue" href="https://api.whatsapp.com/send?text=https://www.porttainobay.com/">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
-                                    <path fill="currentColor" d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
-                                    <path fill="currentColor" d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7" />
-                                </svg>
-                            </a>
-                        </div>
-                        <button class="border-0 text-white bg-transparent toggle-share">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <!-- carousel info -->
-                <div class="content-wrapper-carousel">
-                    <h3 class="mb-0 text-style-2">01</h3>
-                    <h3 class="mb-0 text-style-15">Blue Parrot</h3>
-                    <p class="text-style-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quod ab consequatur praesentium, unde quas nostrum tenetur natus adipisci, hic fuga laudantium magni maxime molestiae amet ex a possimus assumenda.</p>
-                </div>
-                <picture>
-                    <source src="assets/images/points-of-interest/ParqueCentral.jpg">
-                    <img src="assets/images/points-of-interest/ParqueCentral.jpg" alt="">
-                </picture>
-            </div>
-
-            <div class="carousel-content bg-blue d-flex flex-column justify-content-evenly align-items-center">
-                <h2 class="text-uppercase text-center text-style-3"><strong>Discover Beyond The Cruise</strong></h2>
-                <div class="d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows">
-                    <!-- Arrow Left -->
-                    <a href="#" class="slide-navigation-item-prev d-block text-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
-                            <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                            <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                        </svg>
-                    </a>
-                    <!-- Text Carousel -->
-                    <div class="flex-grow-1">
-                        <p class="text-style-6 text-arrows"><span class="d-block">Discover</span><span class="text-end ml-4 d-block">things to do</span></p>
-                    </div>
-                    <!-- Arrow Right -->
-                    <a href="#" class="slide-navigation-item-next d-block text-orange">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
-                            <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                            <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                        </svg>
-                    </a>
-                </div>
-                <a href="#" class="text-uppercase button-transparent button-orange text-center"><strong>Explore more</strong></a>
-            </div>
-
-
-        </section>
+        <?php include("include/dynamic-slider-home-r.php"); ?>
 
         <!-- Reviews Tripadvisor -->
         <section class="shock-section pt-2 pb-4 mb-3">
@@ -469,8 +326,62 @@ include_once("include/lang/reviews.php");
             </div>
         </section>
 
-        <!-- Dynamic slider -->
-        <?php include("include/dynamic-slider-home.php"); ?>
+
+        <section class="shock-section pt-2 pb-4">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12" data-aos="zoom-in-up" data-aos-delay="600">
+
+                        <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary"
+                            data-columns="1,1,1,1" data-autoplay="10000" data-loop="true">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="assets/images/welcome/Welcome-1.jpg"
+                                        class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/welcome/Welcome-1.jpg" class="image"
+                                                alt="<?php echo "SITIO"; ?>" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/welcome/Welcome-2.jpg"
+                                        class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/welcome/Welcome-2.jpg" class="image"
+                                                alt="<?php echo "SITIO"; ?>" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/welcome/Welcome-3.jpg"
+                                        class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/welcome/Welcome-3.jpg" class="image"
+                                                alt="<?php echo "SITIO"; ?>" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="assets/images/welcome/Welcome-4.jpg"
+                                        class="item lightbox-link hover-zoom-rotate">
+                                        <div class="image-wrapper">
+                                            <img src="assets/images/welcome/Welcome-4.jpg" class="image"
+                                                alt="<?php echo "test"; ?>" />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <?php include("include/widget.php"); ?>
@@ -479,7 +390,6 @@ include_once("include/lang/reviews.php");
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Seleccionamos todos los botones de compartir
             const shareButtons = document.querySelectorAll('.toggle-share');
 
             shareButtons.forEach(button => {
@@ -487,21 +397,23 @@ include_once("include/lang/reviews.php");
                     const shareContainer = button.closest('.container-btn').querySelector('.redes');
 
                     // Alternamos la visibilidad del contenedor de redes sociales
-                    const isVisible = shareContainer.style.display === 'block';
+                    const isVisible = shareContainer.classList.contains('show-container');
                     document.querySelectorAll('.redes').forEach(container => {
-                        container.style.display = 'none'; // Ocultamos todos los contenedores
+                        container.classList.remove('show-container'); // Ocultamos todos los contenedores
                     });
 
-                    // Mostramos o ocultamos el contenedor correspondiente
-                    shareContainer.style.display = isVisible ? 'none' : 'block';
+                    // Mostramos u ocultamos el contenedor correspondiente
+                    if (!isVisible) {
+                        shareContainer.classList.add('show-container');
+                    }
 
                     // Alternamos la clase activa en el botón
-                    document.querySelectorAll('.toggle-share').forEach(btn => {
-                        btn.classList.remove('active'); // Quitamos la clase activa de todos los botones
-                    });
-                    if (!isVisible) {
-                        button.classList.add('active'); // Añadimos la clase activa al botón clicado
-                    }
+                    // document.querySelectorAll('.toggle-share').forEach(btn => {
+                    //     btn.classList.remove('active'); // Quitamos la clase activa de todos los botones
+                    // });
+                    // if (!isVisible) {
+                    //     button.classList.add('active'); // Añadimos la clase activa al botón clicado
+                    // }
                 });
             });
         });

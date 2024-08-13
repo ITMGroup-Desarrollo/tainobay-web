@@ -23,11 +23,7 @@
   transform: translateY(0);
   transition: all 0.3s ease-in-out;
 }
-.shock-header .fixed-on-scroll.fixed-top {
-  top: -60px;
-  transform: translateY(60px);
-  transition: transform 0.3s;
-}
+
 .shock-header .navbar:hover {
   z-index: 40;
 }
@@ -115,6 +111,7 @@
     transition: background-position 0.4s ease;
     color: white;
     font-weight: 500;
+    font-size: 14px;
     text-transform: uppercase;
   }
   .shock-header .nav-item.hover .dropdown-menu.animate {
@@ -148,9 +145,11 @@
     opacity: 0;
     visibility: hidden;
   }
+
   .shock-header #menu-fixed.show,
   .shock-header #menu-toggle.show {
     display: flex;
+    align-items: center;
     transition: 0.4s;
     opacity: 1;
     visibility: visible;
@@ -250,6 +249,12 @@
 }
 .shock-header .navbar.absolute {
   position: absolute;
+}
+.shock-header .fixed-on-scroll.fixed-top {
+  position: fixed;
+  top: -62px;
+  transform: translateY(60px);
+  transition: transform 0.3s;
 }
 .shock-header .navbar.scrolled-up.auto-hide,
 .shock-header .navbar.scrolled-down.auto-hide {

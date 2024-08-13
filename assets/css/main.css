@@ -310,7 +310,7 @@ Support : codings.dev
   color: var(--color);
 }
 .side-intro .description {
-  margin: 2rem 0 0 2rem;
+  /* margin: 2rem 0 0 2rem; */
   line-height: 1.5;
   color: var(--color);
 }
@@ -681,8 +681,9 @@ Support : codings.dev
   width: 60px;
 }
 .swiper .swiper-pagination-bullets {
-  position: relative;
-  top: 0;
+  z-index: 999;
+  position: absolute;
+  top: 10px;
   padding: 5px;
 }
 .swiper .swiper-pagination-bullets.absolute {
@@ -697,9 +698,9 @@ Support : codings.dev
   vertical-align: middle;
   border-radius: 50%;
   border: 2px solid;
-  border-color: var(--color-1);
+  border-color: white;
   background-color: transparent;
-  opacity: 0.25;
+  opacity: 1;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -707,16 +708,16 @@ Support : codings.dev
 }
 .swiper .swiper-pagination-bullet:hover {
   border: 2px solid;
-  border-color: var(--color);
-  background-color: var(--color);
+  border-color: white;
+  background-color: white;
   opacity: 1;
 }
 .swiper .swiper-pagination-bullet-active {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   border: 2px solid;
-  border-color: var(--color);
-  background-color: var(--color);
+  border-color: white;
+  background-color: white;
   opacity: 1;
 }
 .swiper .swiper-scrollbar {
@@ -4157,9 +4158,6 @@ table {
 .dynamic-slider.scheme-1 {
   height: auto;
   margin-bottom: 50px;
-}
-.dynamic-slider .slide-navigation {
-  margin-top: 40px;
 }
 
 /* #region Text */
