@@ -6,10 +6,11 @@
                 </span>
                 <span class="slide-index-total"></span>
             </div>
-
+            <!-- content static -->
             <!-- <div class="static-content bg-orange d-flex flex-column justify-content-evenly align-items-center"> -->
             <div class="static-content bg-orange">
                 <h2 class="text-uppercase text-center text-style-3 text-white static-title"><strong>Port experience</strong></h2>
+                <!-- Controls carousel -->
                 <nav class="slide-navigation d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows">
                     <!-- Arrow Left -->
                     <a href="#" class="slide-navigation-item-prev d-inline-block text-blue" role="button">
@@ -30,7 +31,6 @@
                         </svg>
                     </a>
                 </nav>
-
             </div>
 
             <?php
@@ -69,7 +69,7 @@
                             </button>
                         </div>
                     </div>
-                    <!-- button more -->
+                    <!-- button explore more -->
                     <div class="slide-button static-button" style="z-index: 9;">
                         <div class="container-button text-center">
                             <a href="<?= $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong>Explore more</strong></a>
@@ -88,7 +88,7 @@
                     <!-- Image -->
                     <div class="slide-image-wrapper">
                         <div class="slide-image-inner">
-                            <div class="gallery swiper slider has-navigation has-scrollbar scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
+                            <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
                                 <div class="swiper-wrapper">
                                     <?php foreach ($point['gallery'] as $img) { ?>
                                         <div class="swiper-slide">
@@ -98,7 +98,7 @@
                                         </div>
                                     <?php } ?>
                                 </div>
-                                <div class="swiper-scrollbar"></div>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
