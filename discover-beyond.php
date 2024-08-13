@@ -265,7 +265,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 });
                 const justifyClass = section.side === 'left-side' ? 'justify-content-end' : 'justify-content-start';
                 const sectionHTML = `
-                        <section class="carousel-section data-id=${section.id} data-aos="fade-up"">
+                        <section data-id=${section.id} class="carousel-section  data-aos="fade-up"">
                             <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
                                 <div id="port-experience" class="shock-section ${section.side} pt-2 pb-4">
                                     <div class="carousel-content order bg-white d-flex flex-column justify-content-evenly align-items-center">
@@ -437,7 +437,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 });
             });
 
-            
+
             // Inicializar eventos de clic después de cargar las secciones
             $(document).on('click', '.slide-navigation-item-prev', function(event) {
                 event.preventDefault();
@@ -504,27 +504,28 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             console.log('Error al cargar el archivo JSON.');
             $('#carousel-sections-container').html('<p>Error al cargar las secciones del carrusel.</p>');
         });
+        
         function scrollToPostIfNeeded() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('post_id');
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('post_id');
 
-    if (postId) {
-        // Esperar a que todos los posts estén listos en el DOM
-        const postElement = $(`.carousel-section[data-id="${postId}"]`);
-console.log('carrusel', postElement);
-        if (postElement.length) {
-            // Scroll hacia el elemento correspondiente
-            $('html, body').animate({
-                scrollTop: postElement.offset().top
-            }, 1000);
+            if (postId) {
+                // Esperar a que todos los posts estén listos en el DOM
+                const postElement = $(`.carousel-section[data-id="${postId}"]`);
+                console.log('carrusel', postElement);
+                if (postElement.length) {
+                    // Scroll hacia el elemento correspondiente
+                    $('html, body').animate({
+                        scrollTop: postElement.offset().top
+                    }, 1000);
 
-            // Opcional: Resaltar el post o agregar alguna animación
-            postElement.addClass('highlight');
-        } else {
-            console.error(`Post con id ${postId} no encontrado.`);
+                    // Opcional: Resaltar el post o agregar alguna animación
+                    postElement.addClass('highlight');
+                } else {
+                    console.error(`Post con id ${postId} no encontrado.`);
+                }
+            }
         }
-    }
-}
     });
 
     // Función para rotar el icono
@@ -550,7 +551,7 @@ console.log('carrusel', postElement);
     });
 </script>
 <script>
-    $(document).ready(function() {
+    /* $(document).ready(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get('post_id');
 
@@ -570,7 +571,7 @@ console.log('carrusel', postElement);
             console.error(`Post con id ${postId} no encontrado.`);
         }
     }
-});
+});*/
 </script>
 
 </html>
