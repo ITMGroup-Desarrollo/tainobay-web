@@ -251,82 +251,76 @@ include_once("include/lang/{$idioma}-blog.php");
         });
     }
 
+    var skipInitialAnimation = true; // Bandera para saltar la animación al cargar el HTML
+
     function updateBlogLayout() {
-        var blogSections = document.querySelectorAll('.blog-list-section, .blog-grid-section');
+        var blogSections = $('.blog-list-section, .blog-grid-section');
 
         if (blogSections.length === 0) {
             return;
         }
 
-        var isList = blogSections[0].classList.contains('blog-list-section');
+        var isList = blogSections.first().hasClass('blog-list-section');
 
         var elementsToUpdate = {
-            singleList: document.querySelectorAll('.single-list-blog-container'),
-            singleGrid: document.querySelectorAll('.single-grid-blog-container'),
-            listContainer: document.querySelectorAll('.list-container'),
-            gridContainer: document.querySelectorAll('.grid-container'),
-            listBlogDate: document.querySelectorAll('.single-blog-date'),
-            gridBlogDate: document.querySelectorAll('.single-grid-blog-date'),
-            listBlogImage: document.querySelectorAll('.single-list-blog-image'),
-            gridBlogImage: document.querySelectorAll('.single-grid-blog-image'),
-            listBlogContent: document.querySelectorAll('.single-blog-content'),
-            gridBlogContent: document.querySelectorAll('.single-grid-blog-content'),
-            listBlogIcon: document.querySelectorAll('.single-blog-icon'),
-            gridBlogIcon: document.querySelectorAll('.single-grid-blog-icon')
+            singleList: $('.single-list-blog-container'),
+            singleGrid: $('.single-grid-blog-container'),
+            listContainer: $('.list-container'),
+            gridContainer: $('.grid-container'),
+            listBlogDate: $('.single-blog-date'),
+            gridBlogDate: $('.single-grid-blog-date'),
+            listBlogImage: $('.single-list-blog-image'),
+            gridBlogImage: $('.single-grid-blog-image'),
+            listBlogContent: $('.single-blog-content'),
+            gridBlogContent: $('.single-grid-blog-content'),
+            listBlogIcon: $('.single-blog-icon'),
+            gridBlogIcon: $('.single-grid-blog-icon')
         };
 
-        if (isList) {
-            elementsToUpdate.singleGrid.forEach(el => {
-                el.classList.add('single-list-blog-container');
-                el.classList.remove('single-grid-blog-container');
-            });
-            elementsToUpdate.gridContainer.forEach(el => {
-                el.classList.add('list-container');
-                el.classList.remove('grid-container');
-            });
-            elementsToUpdate.gridBlogDate.forEach(el => {
-                el.classList.add('col-11', 'col-md-4', 'col-lg-2', 'single-blog-date');
-                el.classList.remove('single-grid-blog-date');
-            });
-            elementsToUpdate.gridBlogImage.forEach(el => {
-                el.classList.add('col-11', 'col-md-8', 'col-lg-4', 'single-list-blog-image');
-                el.classList.remove('single-grid-blog-image');
-            });
-            elementsToUpdate.gridBlogContent.forEach(el => {
-                el.classList.add('col-11', 'col-md-10', 'col-lg-5', 'single-blog-content');
-                el.classList.remove('single-grid-blog-content');
-            });
-            elementsToUpdate.gridBlogIcon.forEach(el => {
-                el.classList.add('col-11', 'col-md-2', 'col-lg-1', 'single-blog-icon');
-                el.classList.remove('single-grid-blog-icon');
-            });
-        } else {
-            elementsToUpdate.singleList.forEach(el => {
-                el.classList.add('single-grid-blog-container');
-                el.classList.remove('single-list-blog-container');
-            });
-            elementsToUpdate.listContainer.forEach(el => {
-                el.classList.add('grid-container');
-                el.classList.remove('list-container');
-            });
-            elementsToUpdate.listBlogDate.forEach(el => {
-                el.classList.add('single-grid-blog-date');
-                el.classList.remove('col-11', 'col-md-4', 'col-lg-2', 'single-blog-date');
-            });
-            elementsToUpdate.listBlogImage.forEach(el => {
-                el.classList.add('single-grid-blog-image');
-                el.classList.remove('col-11', 'col-md-8', 'col-lg-4', 'single-list-blog-image');
-            });
-            elementsToUpdate.listBlogContent.forEach(el => {
-                el.classList.add('single-grid-blog-content');
-                el.classList.remove('col-11', 'col-md-10', 'col-lg-5', 'single-blog-content');
-            });
-            elementsToUpdate.listBlogIcon.forEach(el => {
-                el.classList.add('single-grid-blog-icon');
-                el.classList.remove('col-11', 'col-md-2', 'col-lg-1', 'single-blog-icon');
-            });
+        var fadeDuration = 150;
+        var elements = $.map(elementsToUpdate, function(el) {
+            return el.get();
+        });
+
+        // Verificar si debemos saltar la animación inicial
+        if (skipInitialAnimation) {
+            skipInitialAnimation = false; // Desactivar la bandera después de la carga inicial
+            return;
         }
+
+        // Aplicar fade-out a todos los elementos antes de cambiar las clases
+        $(elements).fadeOut(fadeDuration, function() {
+            if (isList) {
+                elementsToUpdate.singleGrid.addClass('single-list-blog-container').removeClass('single-grid-blog-container');
+                elementsToUpdate.gridContainer.addClass('list-container').removeClass('grid-container');
+                elementsToUpdate.gridBlogDate.addClass('col-11 col-md-4 col-lg-2 single-blog-date').removeClass('single-grid-blog-date');
+                elementsToUpdate.gridBlogImage.addClass('col-11 col-md-8 col-lg-4 single-list-blog-image').removeClass('single-grid-blog-image');
+                elementsToUpdate.gridBlogContent.addClass('col-11 col-md-10 col-lg-5 single-blog-content').removeClass('single-grid-blog-content');
+                elementsToUpdate.gridBlogIcon.addClass('col-11 col-md-2 col-lg-1 single-blog-icon').removeClass('single-grid-blog-icon');
+            } else {
+                elementsToUpdate.singleList.addClass('single-grid-blog-container').removeClass('single-list-blog-container');
+                elementsToUpdate.listContainer.addClass('grid-container').removeClass('list-container');
+                elementsToUpdate.listBlogDate.addClass('single-grid-blog-date').removeClass('col-11 col-md-4 col-lg-2 single-blog-date');
+                elementsToUpdate.listBlogImage.addClass('single-grid-blog-image').removeClass('col-11 col-md-8 col-lg-4 single-list-blog-image');
+                elementsToUpdate.listBlogContent.addClass('single-grid-blog-content').removeClass('col-11 col-md-10 col-lg-5 single-blog-content');
+                elementsToUpdate.listBlogIcon.addClass('single-grid-blog-icon').removeClass('col-11 col-md-2 col-lg-1 single-blog-icon');
+            }
+
+            // Aplicar fade-in a todos los elementos después de cambiar las clases
+            $(elements).fadeIn(fadeDuration);
+        });
     }
+
+    // Ejecutar `updateBlogLayout` inicialmente para configurar las clases iniciales, sin animación
+    updateBlogLayout();
+
+    // Luego, llama a `updateBlogLayout` cada vez que sea necesario (cuando el usuario cambia entre grid y list)
+
+
+
+
+
+
 
     $(document).ready(function() {
         loadPosts(1);
