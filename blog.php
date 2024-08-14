@@ -97,10 +97,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
             </div>
 
-        </section>
-        <div>
 
-        </div>
+        </section>
+
     </main>
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
@@ -130,9 +129,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     const idioma = '<?php echo $idioma; ?>';
 
     function loadPost(title, pushState = true) {
-        console.log('Cargando post:', title);
         $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
-            console.log('Respuesta de loadPost:', response);
             if (!response.posts || response.posts.length === 0) {
                 $('#blog-container').html('<p>No se encontró el post.</p>');
                 return;
@@ -150,34 +147,54 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 <div class="blog-post">
                     <div class="title-image">
                         <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
-                        <div class="dropdown azulBlog">
-                            <button class="border-0 text-white bg-transparent azulBlog" onclick="toggleDropdown()">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                    <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                                </svg>
-                            </button>
-                            <div class="dropdown-content" id="dropdownContent">
-                                <a href="https://www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="https://www.whatsapp.com" target="_blank">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
+                        <!-- share -->
+                        <div class="slide-share position-absolute top-0 end-0 p-1 button-share">
+                            <div class="container-btn">
+                                <div class="redes">
+                                    <a target="_blank" class="bg-orange" href="https://www.facebook.com/sharer/sharer.php?u=http://10.11.190.36/es/blog/${data.title}">
+                                        <i class="icon fab fa-facebook-f"></i>
+                                    </a>
+                                    <a target="_blank" class="bg-orange" href="https://twitter.com/intent/tweet?url=http://10.11.190.36/es/blog/${data.title}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                            <g fill="none">
+                                                <g clip-path="url(#IconifyId19113fe36724382401)">
+                                                    <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="IconifyId19113fe36724382401">
+                                                        <path fill="#fff" d="M0 0h14v14H0z" />
+                                                    </clipPath>
+                                                </defs>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                    <a target="_blank" class="bg-orange" href="https://api.whatsapp.com/send?text=http://10.11.190.36/es/blog/${data.title}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+                                            <path fill="currentColor" d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
+                                            <path fill="currentColor" d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <button class="border-0 text-white bg-transparent toggle-share">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                        <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="blog-post blog-texto">
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
                 <div class="title-image">
                     <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
                 </div>
             `);
+
+
+
+
 
             $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
             $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
@@ -199,13 +216,11 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 }, '', url);
             }
         }).fail(function() {
-            console.log('Error al cargar el post.');
             $('#blog-container').html('<p>Error al cargar el post.</p>');
         });
     }
 
     function changePost(title) {
-        console.log('Cambiando a post:', title);
         loadPost(title);
     }
 
@@ -213,11 +228,8 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     let currentPage = 1;
 
     function loadTimeline(callback) {
-        console.log('Cargando timeline...');
         $.getJSON(`include/get_blog_posts.php?page=${currentPage}`, function(response) {
-            console.log('Respuesta de loadTimeline:', response);
             if (!response.posts || response.posts.length === 0) {
-                console.log('No hay más posts para cargar.');
                 return;
             }
 
@@ -247,13 +259,11 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 callback(response.posts);
             }
         }).fail(function() {
-            console.log('Error al cargar el timeline.');
             $('#timeline').html('<p>Error al cargar los posts.</p>');
         });
     }
 
     function updateActiveTimelineItem(title) {
-        console.log('Actualizando elemento activo del timeline:', title);
         const timelineItems = document.querySelectorAll('.timeline-item');
         let activeIndex = -1;
 
@@ -268,11 +278,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         });
 
         if (activeIndex === -1) {
-            console.log('Post no encontrado en los elementos cargados del timeline, cargando más elementos...');
             currentPage++;
             loadTimeline(() => updateActiveTimelineItem(title));
         } else if (activeIndex >= itemsPerPage - 1) {
-            console.log('Último elemento visible activo, cargando más elementos del timeline...');
             currentPage++;
             loadTimeline();
         }
@@ -280,22 +288,18 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
     window.onpopstate = function(event) {
         if (event.state && event.state.title) {
-            console.log('onpopstate:', event.state.title);
             loadPost(event.state.title, false);
         }
     }
 
     $(document).ready(function() {
-        console.log('Cargando timeline al iniciar...');
         loadTimeline(function(posts) {
             const pathSegments = window.location.pathname.split('/');
             const title = decodeURIComponent(pathSegments[pathSegments.length - 1]);
 
             if (title && title !== 'blog') {
-                console.log('Cargando post al iniciar:', title);
                 loadPost(title, false);
             } else {
-                console.log('No se especificó un título en la URL, cargando primer post por defecto...');
                 const firstPostTitle = posts.length > 0 ? posts[0].title : '';
                 if (firstPostTitle) {
                     changePost(firstPostTitle);
@@ -306,7 +310,25 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 </script>
 
 
+<script>
+    $(document).ready(function() {
+    $(document).on('click', '.toggle-share', function() {
+        const $shareContainer = $(this).closest('.container-btn').find('.redes');
 
+        // Alternamos la visibilidad del contenedor de redes sociales
+        const isVisible = $shareContainer.hasClass('show-container');
+        $('.redes').removeClass('show-container'); // Ocultamos todos los contenedores
+
+        // Mostramos u ocultamos el contenedor correspondiente
+        if (!isVisible) {
+            $shareContainer.addClass('show-container');
+        }
+    });
+});
+
+
+
+</script>
 
 
 
