@@ -227,6 +227,11 @@ Support : codings.dev
   bottom: initial;
   left: initial;
 }
+.side-widget .widget.label-icons {
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+}
 .side-widget .widget.label-icons .icon {
   margin: 0;
 }

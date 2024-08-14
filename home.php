@@ -58,7 +58,7 @@ include_once("include/lang/reviews.php");
                 <!-- Video -->
                 <div class="image-wrapper over-gradient">
                     <video class="video vh-100 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                        <source src="assets/videos/video-puerto-taino.mp4" type="video/mp4">
+                        <source src="assets/videos/TainoBay.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>

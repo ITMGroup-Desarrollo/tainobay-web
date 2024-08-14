@@ -1,5 +1,5 @@
     <!-- Side Widget -->
-    <div class="side-widget to-left invert-color mix-blend-difference d-only-desktop">
+    <div class="side-widget to-left d-only-desktop">
         <div class="item">
             <span class="widget label-icons">
                 <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link black black-hover" target="_blank"><i class="icon fab fa-facebook-f"></i></a>
