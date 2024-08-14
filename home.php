@@ -325,63 +325,6 @@ include_once("include/lang/reviews.php");
                 </div>
             </div>
         </section>
-
-
-        <section class="shock-section pt-2 pb-4">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-12" data-aos="zoom-in-up" data-aos-delay="600">
-
-                        <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary"
-                            data-columns="1,1,1,1" data-autoplay="10000" data-loop="true">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-1.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-1.jpg" class="image"
-                                                alt="<?php echo "SITIO"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-2.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-2.jpg" class="image"
-                                                alt="<?php echo "SITIO"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-3.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-3.jpg" class="image"
-                                                alt="<?php echo "SITIO"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-4.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-4.jpg" class="image"
-                                                alt="<?php echo "test"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-pagination"></div>
-                            <!-- <div class="swiper-scrollbar"></div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <?php include("include/widget.php"); ?>
