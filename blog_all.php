@@ -50,7 +50,7 @@ include_once("include/lang/{$idioma}-blog.php");
         <!-- Blog titles -->
         <section class="shock-section blog-section mt-4 mb-4">
             <div class="titles blog-scroll-view">
-                <div class="container">
+                <div class="container" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
                     <div class="row">
                         <!-- timeline-->
                         <div class="col-12 col-md-6 col-lg-3 ">

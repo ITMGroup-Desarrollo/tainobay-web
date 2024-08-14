@@ -55,13 +55,13 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             <div class="container">
                 <div class="row">
                     <!-- timeline-->
-                    <div class="col-lg-2">
+                    <div class="col-lg-2" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                         <ul class="timeline" id="timeline"></ul>
                     </div>
 
 
                     <div class="col-lg-9">
-                        <div class="shock-section container" id="blog-container">
+                        <div class="shock-section container" id="blog-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                             <!-- Posts se cargarán aquí -->
                         </div>
                         <div style="display: flex; ">
@@ -105,27 +105,27 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
     <?php include("include/js.php"); ?>
-    </body>
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById("dropdownContent");
-            dropdown.classList.toggle("show");
-        }
+</body>
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownContent");
+        dropdown.classList.toggle("show");
+    }
 
-        // Cerrar el dropdown si se hace clic fuera de él
-        window.onclick = function(event) {
-            if (!event.target.matches('.border-0') && !event.target.closest('.dropdown')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains("show")) {
-                        openDropdown.classList.remove("show");
-                    }
+    // Cerrar el dropdown si se hace clic fuera de él
+    window.onclick = function(event) {
+        if (!event.target.matches('.border-0') && !event.target.closest('.dropdown')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains("show")) {
+                    openDropdown.classList.remove("show");
                 }
             }
         }
-    </script>
-    <script>
+    }
+</script>
+<script>
     // Inserta el valor de la variable PHP en una variable JavaScript
     const idioma = '<?php echo $idioma; ?>';
 
