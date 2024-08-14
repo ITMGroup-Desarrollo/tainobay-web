@@ -186,6 +186,10 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 <div class="blog-post blog-texto">
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
                 <div class="title-image">
                     <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
