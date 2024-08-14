@@ -227,18 +227,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                     <i class="icon fab fa-facebook-f"></i>
                                                 </a>
                                                 <a target="_blank" class="bg-orange" href="https://twitter.com/intent/tweet?url=https://localhost/tainobay/es/discover-beyond?post_id=${section.id}">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
-                                                        <g fill="none">
-                                                            <g clip-path="url(#IconifyId19113fe36724382401)">
-                                                                <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
-                                                            </g>
-                                                            <defs>
-                                                                <clipPath id="IconifyId19113fe36724382401">
-                                                                    <path fill="#fff" d="M0 0h14v14H0z" />
-                                                                </clipPath>
-                                                            </defs>
-                                                        </g>
-                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+
                                                 </a>
                                                 <a target="_blank" class="bg-orange" href="https://api.whatsapp.com/send?text=https://localhost/tainobay/es/discover-beyond?post_id=${section.id}">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
