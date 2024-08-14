@@ -45,7 +45,7 @@ include_once("include/lang/{$idioma}-contact.php");
     </section>
 
     <!-- Title -->
-    <section class="shock-section has-holder pb-2">
+    <section class="shock-section has-holder pb-2" data-aos="fade-down" data-aos-delay="200">
       <div class="container max-w-85">
 
         <div class="basic-intro text-center">
@@ -58,7 +58,7 @@ include_once("include/lang/{$idioma}-contact.php");
     </section>
 
     <!-- Main -->
-    <section class="shock-section pb-5">
+    <section class="shock-section pb-5" data-aos="fade-up" data-aos-duration="800">
       <div class="container max-w-85">
         <div class="mb-1 text-center">
           <a href="mailto:info@porttainobay.com" class="text-blue text-center"><strong>info@porttainobay.com</strong></a>

@@ -104,7 +104,7 @@ include_once("include/lang/reviews.php");
         <?php include("include/dynamic-slider-home-r.php"); ?>
 
         <!-- Reviews Tripadvisor -->
-        <section class="shock-section pt-2 pb-4 mb-3">
+        <section class="shock-section pt-2 pb-4 mb-3" data-aos="fade-right" data-aos-duration="500">
             <div id="container-reviews" class="container">
                 <!-- Arrow Left -->
                 <div class="text-blue d-block">

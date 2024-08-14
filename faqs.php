@@ -44,7 +44,7 @@ include_once("include/lang/{$idioma}-contact.php");
         </section>
 
         <!-- Title -->
-        <section class="shock-section has-holder pb-2">
+        <section class="shock-section has-holder pb-2" data-aos="fade-down" data-aos-delay="200">
             <div class="container max-w-85">
 
                 <div class="basic-intro">
@@ -57,7 +57,7 @@ include_once("include/lang/{$idioma}-contact.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-5 pb-5">
+        <section class="shock-section pt-5 pb-5" data-aos="zoom-in" data-aos-delay="200">
             <div class="container max-w-65">
                 <!-- Collapse -->
                 <div class="collapsible">

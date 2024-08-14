@@ -641,7 +641,8 @@
                 }
             }
         </style>
-        <section id="home" class="shock-section dynamic-slider-r scheme-1" data-autoplay="6000">
+        <section id="home" class="shock-section dynamic-slider-r scheme-1" data-autoplay="6000" data-aos="fade-up"
+            data-aos-duration="2000">
             <!-- Index -->
             <div id="slide-index" class="slide-index">
                 <span class="slide-index-current">
