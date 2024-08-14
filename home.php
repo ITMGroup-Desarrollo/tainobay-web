@@ -65,7 +65,7 @@ include_once("include/lang/reviews.php");
         </section>
 
         <!-- Welcome Text -->
-        <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
+        <section class="shock-section pt-2 pb-4" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
                     <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>
@@ -104,7 +104,7 @@ include_once("include/lang/reviews.php");
         <?php include("include/dynamic-slider-home-r.php"); ?>
 
         <!-- Reviews Tripadvisor -->
-        <section class="shock-section pt-2 pb-4 mb-3" data-aos="fade-right" data-aos-duration="500">
+        <section class="shock-section pt-2 pb-4 mb-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">
             <div id="container-reviews" class="container">
                 <!-- Arrow Left -->
                 <div class="text-blue d-block">
@@ -171,7 +171,7 @@ include_once("include/lang/reviews.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-delay="200">
+        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="200">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="mb-0 text-blue text-style-2 gradient-animated-title animation-duration-3" style="line-height: 70px;"><?= FAQS_TEXT[0] ?></h2>

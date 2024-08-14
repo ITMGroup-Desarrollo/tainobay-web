@@ -62,7 +62,7 @@ foreach ($points as $point) {
     </section>
 
     <!-- Welcome Text -->
-    <section class="shock-section pt-2 pb-2">
+    <section class="shock-section pt-2 pb-2" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
       <div class="container text-center my-3">
         <div class="mx-auto">
           <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= TITULOS_SINGLE_EXPERIENCE ?>

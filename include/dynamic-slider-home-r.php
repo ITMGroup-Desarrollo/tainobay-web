@@ -1,9 +1,4 @@
         <style>
-            /**
- * Dynamic Slider 1.0.0 (https://codings.dev)
- * Copyright 2022 Codings
- */
-
             :root .dynamic-slider-r.scheme-1 {
                 --color-1: var(--blue-color);
                 --color-2: var(--blue-color);
@@ -642,7 +637,7 @@
             }
         </style>
         <section id="home" class="shock-section dynamic-slider-r scheme-1" data-autoplay="6000" data-aos="fade-up"
-            data-aos-duration="2000">
+            data-aos-duration="1000" data-aos-delay="200">
             <!-- Index -->
             <div id="slide-index" class="slide-index">
                 <span class="slide-index-current">

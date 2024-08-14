@@ -46,7 +46,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
     </section>
 
     <!-- Welcome Text -->
-    <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
+    <section class="shock-section pt-2 pb-4" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
       <div class="container text-center my-5">
         <div class="mx-auto mb-2">
           <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-2"><?= TITULOS_PORT_EXPERIENCE[0] ?><br>
@@ -62,7 +62,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
     </section>
 
     <!-- Cards -->
-    <section class="shock-section pb-5" data-aos="fade-up" data-aos-delay="400">
+    <section class="shock-section pb-5" data-aos="fade-up" data-aos-delay="400" data-aos-duration="500">
       <div class="container max-w-85">
         <div class="container text-center">
           <div class="row row-cols-3 g-2">
