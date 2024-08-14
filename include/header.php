@@ -6,7 +6,13 @@
         $logo = "logo-white.svg";
         $menu = "scheme-1";
     }
+        
+                // Incluir el archivo que carga las variables de entorno
+        include_once("include/loadEnv.php");
 
+        // Obtener las variables de entorno
+        $baseUrlLocal = getenv('BASE_URL_LOCAL');
+        $baseUrlProd = getenv('BASE_URL_PROD');
     ?>
    <!-- Preloader -->
    <div id="preloader" class="preloader black" data-bg-image="assets/images/media/precarga.png"></div>
