@@ -46,9 +46,11 @@ foreach ($points as $point) {
         <div class="content-wrapper top-zero ">
           <!-- Intro -->
           <div class="basic-intro text-center">
-            <h1 class="title white text-1 banner-title text-uppercase fw-bold">
-              <?= $currentMenu['name'] ?>
-            </h1>
+            <?php if ($currentMenu['logo']) { ?>
+              <img src="assets/images/port-experience/<?= $currentMenu['logo'] ?>" width="500" height="200" alt="">
+            <?php } else { ?>
+              <h1 class="title white text-1 banner-title text-uppercase fw-bold"><?= $currentMenu['name'] ?></h1>
+            <?php } ?>
             <div class="mx-auto text-white mt-2 icon-banner"><?= $currentMenu['icon'] ?></div>
           </div>
         </div>
