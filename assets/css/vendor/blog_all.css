@@ -199,7 +199,9 @@
         overflow: hidden;
         margin-left: 0;
     }
-
+    .single-blog-date h3 {
+        margin-left: 0rem !important;
+    }
     .row {
         display: flex;
         flex-direction: column;
