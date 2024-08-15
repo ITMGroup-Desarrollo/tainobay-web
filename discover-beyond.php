@@ -291,19 +291,20 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                             </a>
                                         </div>
                                         
-                                        <div class="container-text mx-auto px-5 bg-orange pb-3 pt-3" style="width: 100%;">
-                                        
-                                            <div class="d-flex ${justifyClass} shortIcons">
-                                                <img src="${section.shortIconSchedule}" width="65" height="65" alt="Icono">
-                                                <img src="${section.shortIconIntensity}" width="32" height="32" alt="Icono">
-                                                <img src="${section.shortIconCategory}" width="48" height="48" alt="Icono">
-                                            </div>
-                                            <p class="text-black black text-style-13 justificado">${section.content}</p>
-                                            <div class="d-flex ${justifyClass}">
-                                                <a class="display-button" >
-                                                    <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
-                                                    <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
-                                                </a>
+                                        <div class="container-text mx-auto px-5 bg-orange pb-3 pt-3" style="width: 100%; height: auto;">
+                                            <div class="orange-items-container">
+                                                <div class="d-flex ${justifyClass} shortIcons">
+                                                    <img src="${section.shortIconSchedule}" width="65" height="65" alt="Icono">
+                                                    <img src="${section.shortIconIntensity}" width="32" height="32" alt="Icono">
+                                                    <img src="${section.shortIconCategory}" width="48" height="48" alt="Icono">
+                                                </div>
+                                                <div class="text-black black text-style-13 justificado text-content-container d-flex ${justifyClass}"><p>${section.content}</p></div>
+                                                <div class="d-flex ${justifyClass}">
+                                                    <a class="display-button" >
+                                                        <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
+                                                        <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -316,7 +317,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shock-section displayed-blog">
+                                <div class="shock-section displayed-blog col-sm-12 col-md-12">
                                     <div class="container text-center my-5 pt-2 pb-4">
                                         <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
                                             ${displayT}
@@ -369,7 +370,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="note-container">
+                                        <div class="note-container px-5">
                                             <h2 class="text-style-4 text-italic"><?php echo DISCOVER_CARRUSEL[34]; ?></h2>
                                             ${displayN}
                                         </div>
