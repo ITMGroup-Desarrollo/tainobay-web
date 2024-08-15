@@ -6,7 +6,8 @@
         $logo = "logo-white.svg";
         $menu = "scheme-1";
     }
-
+        
+        
     ?>
    <!-- Preloader -->
    <div id="preloader" class="preloader black" data-bg-image="assets/images/media/precarga.png"></div>
