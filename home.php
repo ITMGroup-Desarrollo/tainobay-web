@@ -65,7 +65,7 @@ include_once("include/lang/reviews.php");
         </section>
 
         <!-- Welcome Text -->
-        <section class="shock-section pt-2 pb-4" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
+        <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
                     <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>

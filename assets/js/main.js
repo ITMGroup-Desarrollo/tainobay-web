@@ -683,6 +683,8 @@ jQuery(function ($) {
         translateX: [
           ["elInY", "elOutY"],
           [75, -100],
+
+          // [0, "screenWidth/2", "screenWidth"],
         ],
       },
     });
