@@ -110,6 +110,7 @@
 
 .single-blog-content .button-transparent {
     align-self: flex-start;
+    z-index: 1;
 }
 
 .justificado {
@@ -227,12 +228,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 3rem;
+        margin-top: 0rem;
     }
 
     .swiper-button-prev,
     .swiper-button-next {
         display: none;
+    }
+    .container.list-container {
+        margin-top: 0rem;
+        margin-bottom: 6rem;
+    }
+    .titles.blog-scroll-view{
+        height: 5rem;
+    }
+    .single-blog-icon {
+        z-index: -1;
+        text-align: start;
+        margin-top: -4rem;
+        padding-left: 2rem;
+        padding-top: 0.5rem;
+    }
+    .button-orange{
+        margin-top: 0% !important;
     }
 
 

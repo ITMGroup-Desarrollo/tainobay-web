@@ -174,8 +174,9 @@ footer {
   border-left: none;
 }
 @media (max-width: 990px) {
+  
   .footer-textbox-container {
-    padding: 0 2rem 0 4rem;
+    padding: 0 2rem 0 2rem;
   }
   .footer-first-list,
   .footer-second-list {
@@ -227,5 +228,10 @@ footer {
 @media (min-width: 768px) {
   .footer-content .container {
     padding: 3rem 5rem 0 5rem;
+  }
+}
+@media (max-width: 550px) {
+  .form-control::placeholder {
+    visibility: hidden;
   }
 }

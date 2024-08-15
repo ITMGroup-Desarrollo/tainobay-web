@@ -14,3 +14,7 @@ define('SECTION_BLOG_ALL', array(
     'PROXIMAS NOTICIAS',
     'LEER MÁS',
 ));
+define('PAGINATION', array(
+    'Prev',
+    'Sig',
+));
