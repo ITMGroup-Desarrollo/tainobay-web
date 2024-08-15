@@ -14,3 +14,7 @@ define('SECTION_BLOG_ALL', array(
     'UPCOMING NEWS',
     'READ MORE'
 ));
+define('PAGINATION', array(
+    'Prev',
+    'Next',
+));

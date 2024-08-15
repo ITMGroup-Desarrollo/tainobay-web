@@ -3,6 +3,7 @@
         {
             "id": 1,
             "title": "Playa-dorada",
+            "subtitle":"subtitle",
             "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
             "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
             "image_url": "assets/images/blog/playa-dorada-two.jpg",
@@ -12,6 +13,7 @@
         {
             "id": 2,
             "title": "Mojito-Bar",
+            "subtitle":"subtitle",
             "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
             "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
             "image_url": "assets/images/blog/mojito-bar-one.jpg",
@@ -21,6 +23,7 @@
         {
             "id": 3,
             "title": "Damajagua",
+            "subtitle":"subtitle",
             "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
             "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
             "image_url": "assets/images/discover-beyond/damajagua/damajagua-main-four.webp",
@@ -30,6 +33,7 @@
         {
             "id": 4,
             "title": "Old-Town",
+            "subtitle":"subtitle",
             "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
             "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
             "image_url": "assets/images/discover-beyond/old-town/old-town-main-one.webp",
@@ -39,6 +43,7 @@
         {
             "id": 5,
             "title": "atv",
+            "subtitle":"subtitle",
             "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
             "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
             "image_url": "assets/images/discover-beyond/atv-exp/atv-expedition-main-four.webp",
@@ -48,6 +53,7 @@
         {
             "id": 6,
             "title": "country",
+            "subtitle":"subtitle",
             "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
             "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
             "image_url": "assets/images/discover-beyond/country/countryside-main-five.webp",
@@ -57,6 +63,7 @@
         {
             "id": 7,
             "title": "puerto-plata",
+            "subtitle":"subtitle",
             "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
             "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
             "image_url": "assets/images/discover-beyond/playa-dorada/playa-dorada-main-one.webp",
