@@ -57,7 +57,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/blue-parrot.pdf'
   ],
   [
     'name' => 'Boat Bar',
@@ -105,7 +106,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/the-boat-bar.pdf'
   ],
   [
     'name' => 'Cantina Latina',
@@ -151,7 +153,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/cantina-latina.pdf'
   ],
   [
     'name' => 'Coffee Factory',
@@ -199,7 +202,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/coffee-bar.pdf'
   ],
   [
     'name' => 'Mexican Grill',
@@ -244,8 +248,8 @@ $points = [
           ]
         ]
       ]
-
-    ]
+    ],
+    'pdf' => ''
   ],
   [
     'name' => 'Dom Dom Bar',
@@ -293,7 +297,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => ''
   ],
   [
     'name' => 'Margarita Bar',
@@ -341,7 +346,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/margarita-bar.pdf'
   ],
   [
     'name' => 'Rum Rum Bar',
@@ -389,7 +395,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => ''
   ],
   [
     'name' => 'Mojito Bar',
@@ -437,7 +444,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/mojito-bar.pdf'
   ],
   [
     'name' => 'Tiki Tiki',
@@ -485,7 +493,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/tiki-tiki.pdf'
   ],
   [
     'name' => 'Taco Lover',
@@ -531,7 +540,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/taco-lover.pdf'
   ],
   [
     'name' => 'Lazy River',
