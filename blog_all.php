@@ -155,7 +155,7 @@ include_once("include/lang/{$idioma}-blog.php");
                                     <h2 class="text-style-7">${title}</h2>
                                 </div>
                                 <p class="justificado">${post.description}</p>
-                                <a href="<?php echo $idioma; ?>/blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong>Leer más</strong></a>
+                                <a href="<?php echo $idioma; ?>/blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?= SECTION_BLOG_ALL[1] ?></strong></a>
                             </div>
 
                             <!-- Share -->
