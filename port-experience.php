@@ -71,7 +71,9 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
                 <div class="card-port text-bg-dark">
 
                   <div class="card-img-wrapper">
-                    <img src="assets/images/port-experience/<?= $point['cover'] ?>" class="card-img brightness-9" alt="Cover <?= $point['name'] ?>">
+                    <a href="<?= $idioma ?>/port-experience/<?= $point["path"]; ?>">
+                      <img src="assets/images/port-experience/<?= $point['cover'] ?>" class="card-img brightness-9" alt="Cover <?= $point['name'] ?>">
+                    </a>
                   </div>
 
                   <div class="card-content-overlay d-flex flex-column align-items-center justify-content-end">
@@ -79,7 +81,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
                     <div class="wrapper-icon mx-auto">
                       <?= $point["icon"]; ?>
                     </div>
-                    <h2 class="card-title"><?= $point["name"]; ?></h2>
+                    <h2 class="card-title"><a href="<?= $idioma ?>/port-experience/<?= $point["path"]; ?>" class="text-white"><?= $point["name"]; ?></a></h2>
                     <div class="w-100 wrapper-link-more">
                       <a href="<?= $idioma ?>/port-experience/<?= $point["path"]; ?>" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= BUTTON_EXPLORE ?></strong></a>
                       <!-- Icon aino Bay -->

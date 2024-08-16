@@ -2,7 +2,6 @@
 
 include_once("include/config.php");
 include_once("include/lang/{$idioma}-home.php");
-include_once("include/lang/{$idioma}-points-of-interest.php");
 include_once("include/lang/{$idioma}-port-experience.php");
 include_once("include/lang/reviews.php");
 
@@ -104,7 +103,7 @@ include_once("include/lang/reviews.php");
         <?php include("include/dynamic-slider-home-r.php"); ?>
 
         <!-- Reviews Tripadvisor -->
-        <section class="shock-section pt-2 pb-4 mb-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">
+        <section class="shock-section pt-2 pb-4 mb-3" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
             <div id="container-reviews" class="container">
                 <!-- Arrow Left -->
                 <div class="text-blue d-block">
@@ -171,7 +170,7 @@ include_once("include/lang/reviews.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="200">
+        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-duration="400" data-aos-delay="300">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="mb-0 text-blue text-style-2 gradient-animated-title animation-duration-3" style="line-height: 70px;"><?= FAQS_TEXT[0] ?></h2>
@@ -349,16 +348,9 @@ include_once("include/lang/reviews.php");
                     if (!isVisible) {
                         shareContainer.classList.add('show-container');
                     }
-
-                    // Alternamos la clase activa en el botón
-                    // document.querySelectorAll('.toggle-share').forEach(btn => {
-                    //     btn.classList.remove('active'); // Quitamos la clase activa de todos los botones
-                    // });
-                    // if (!isVisible) {
-                    //     button.classList.add('active'); // Añadimos la clase activa al botón clicado
-                    // }
                 });
             });
+
         });
     </script>
 </body>

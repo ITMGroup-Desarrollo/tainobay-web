@@ -10,7 +10,7 @@
             <!-- content static -->
             <!-- <div class="static-content bg-orange d-flex flex-column justify-content-evenly align-items-center"> -->
             <div class="static-content bg-orange">
-                <h2 class="text-uppercase text-center text-style-3 text-white static-title"><strong>Port experience</strong></h2>
+                <h2 class="text-uppercase text-center text-style-3 text-white static-title"><strong><?= CAROUSEL_PORT_EXPERIENCE[0]; ?></strong></h2>
                 <!-- Controls carousel -->
                 <!-- <nav class="slide-navigation d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows"> -->
                 <nav class="slide-navigation d-flex align-items-md-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows">
@@ -23,7 +23,7 @@
                     </a>
                     <!-- Text Carousel -->
                     <div class="flex-grow-1">
-                        <p class="text-style-6 text-arrows text-white"><span class="d-block text-center text-md-start">Discover</span><span class="text-md-end text-center ml-4 d-block">things to do</span></p>
+                        <p class="text-style-6 text-arrows text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[1]; ?></span><span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_PORT_EXPERIENCE[2]; ?></span></p>
                     </div>
                     <!-- Arrow Right -->
                     <a href="#" class="slide-navigation-item-next d-inline-block text-blue" role="button">
@@ -74,7 +74,7 @@
                     <!-- button explore more -->
                     <div class="slide-button static-button" style="z-index: 9;">
                         <div class="container-button text-center">
-                            <a href="<?= $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong>Explore more</strong></a>
+                            <a href="<?= $idioma . '/port-experience/' . $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong><?= BUTTON_EXPLORE; ?></strong></a>
                         </div>
                     </div>
                     <!-- Intro -->

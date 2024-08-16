@@ -635,11 +635,11 @@ Support : codings.dev
 .swiper.has-scrollbar .swiper-button-prev {
   top: calc(50% - 10px);
 }
-.swiper .swiper-button-next:hover,
+/* .swiper .swiper-button-next:hover,
 .swiper .swiper-button-prev:hover {
   background-color: var(--color-2);
   color: var(--color-4);
-}
+} */
 .swiper .swiper-button-next {
   right: 0;
 }

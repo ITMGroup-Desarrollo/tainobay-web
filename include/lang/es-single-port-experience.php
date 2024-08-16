@@ -74,7 +74,7 @@ $points = [
     'title' => 'Menu',
     'menu' => [
       [
-        'image' => 'cantina-latina-menu-1.jpg',
+        'image' => 'boat-bar-five.jpg',
         'image-position' => 'center',
         'items' => [
           [
@@ -88,8 +88,8 @@ $points = [
         ]
       ],
       [
-        'image' => 'cantina-latina-menu-2.jpg',
-        'image-position' => 'bottom',
+        'image' => 'baot-bar-one.jpg',
+        'image-position' => 'center',
         'items' => [
           [
             'name' => 'Dominican D',
