@@ -71,19 +71,19 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
                                 <div class="row">
                                     <div id="prev-page" class="col-4 col-md-3 col-lg-6">
-                                        <svg  class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 231.26 729.5">
+                                        <svg class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 231.26 729.5">
                                             <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
                                             <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z"></path>
                                         </svg>
-                                        <span >
-                                        <?php echo PAGINATION[0];  ?>
+                                        <span>
+                                            <?php echo PAGINATION[0];  ?>
                                         </span>
                                     </div>
                                     <div id="next-page" class="col-4 col-md-3 col-lg-6">
                                         <span>
-                                        <?php echo PAGINATION[1];  ?>
+                                            <?php echo PAGINATION[1];  ?>
                                         </span>
-                                        <svg  class="swiper-button-next" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 231.26 729.5">
+                                        <svg class="swiper-button-next" src="assets/icons/icon_arrows_blue_right.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 231.26 729.5">
                                             <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
                                             <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z"></path>
                                         </svg>
@@ -220,11 +220,18 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
             if (pushState) {
                 const url = new URL(window.location);
-                url.pathname = `/tainobay/${idioma}/blog/` + encodeURIComponent(title);
+                const isLocalhost = url.hostname === "localhost"; // Verifica si estás en localhost
+                const carpetaRaiz = isLocalhost ? "/tainobay" : ""; // Usa la carpeta raíz solo en localhost
+
+                // Construye el nuevo pathname con o sin la carpeta raíz
+                url.pathname = `${carpetaRaiz}/${idioma}/blog/` + encodeURIComponent(title);
+
+                // Actualiza la URL en la barra de direcciones sin recargar la página
                 window.history.pushState({
                     title: title
                 }, '', url);
             }
+
         }).fail(function() {
             $('#blog-container').html('<p>Error al cargar el post.</p>');
         });
@@ -322,22 +329,19 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
 <script>
     $(document).ready(function() {
-    $(document).on('click', '.toggle-share', function() {
-        const $shareContainer = $(this).closest('.container-btn').find('.redes');
+        $(document).on('click', '.toggle-share', function() {
+            const $shareContainer = $(this).closest('.container-btn').find('.redes');
 
-        // Alternamos la visibilidad del contenedor de redes sociales
-        const isVisible = $shareContainer.hasClass('show-container');
-        $('.redes').removeClass('show-container'); // Ocultamos todos los contenedores
+            // Alternamos la visibilidad del contenedor de redes sociales
+            const isVisible = $shareContainer.hasClass('show-container');
+            $('.redes').removeClass('show-container'); // Ocultamos todos los contenedores
 
-        // Mostramos u ocultamos el contenedor correspondiente
-        if (!isVisible) {
-            $shareContainer.addClass('show-container');
-        }
+            // Mostramos u ocultamos el contenedor correspondiente
+            if (!isVisible) {
+                $shareContainer.addClass('show-container');
+            }
+        });
     });
-});
-
-
-
 </script>
 
 
