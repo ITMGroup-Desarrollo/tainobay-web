@@ -15,7 +15,7 @@
 
             .dynamic-slider-r {
                 overflow: hidden;
-                /* height: 100vh; */
+                height: 85vh;
                 display: grid;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 25% 25% 25% 25%;
