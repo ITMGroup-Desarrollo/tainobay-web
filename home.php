@@ -3,6 +3,7 @@
 include_once("include/config.php");
 include_once("include/lang/{$idioma}-home.php");
 include_once("include/lang/{$idioma}-port-experience.php");
+include_once("include/lang/{$idioma}-discover-beyond.php");
 include_once("include/lang/reviews.php");
 
 ?>

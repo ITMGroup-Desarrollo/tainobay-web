@@ -603,6 +603,8 @@ Support : codings.dev
 .swiper .swiper-slide .image {
   width: 100%;
   display: block;
+  height: 85vh;
+  object-fit: cover;
 }
 .swiper .swiper-slide .image.large {
   position: relative;

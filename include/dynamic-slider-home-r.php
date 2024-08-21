@@ -672,14 +672,14 @@
             </div>
 
             <?php
-            foreach ($points as $point) { ?>
-                <div class="slide-item side-intro <?= $point['id'] == '1' ? 'current-slide' : '' ?>">
+            foreach ($tours as $tour) { ?>
+                <div class="slide-item side-intro <?= $tour['id'] == '1' ? 'current-slide' : '' ?>">
                     <!-- share -->
                     <div class="slide-share position-absolute p-1 share-r button-share">
                         <div class="container-btn">
                             <div class="redes">
                                 <a target="_blank" class="bg-blue" href="https://www.facebook.com/sharer/sharer.php?u=https://www.porttainobay.com/"><i class="icon fab fa-facebook-f"></i></a>
-                                <a target="_blank" class="bg-blue" href="https://twitter.com/intent/tweet?url=https://example.com&text=Echa%20un%20vistazo%20a%20<?= $point['name'] ?>">
+                                <a target="_blank" class="bg-blue" href="https://twitter.com/intent/tweet?url=https://example.com&text=Echa%20un%20vistazo%20a%20<?= $tour['tourName'] ?>">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
                                         <g fill="none">
                                             <g clipPath="url(#IconifyId19113fe36724382401)">
@@ -714,12 +714,15 @@
                         </div>
                     </div>
                     <!-- Intro -->
-                    <div class="slide-content" style="<?= $point['id'] == '1' ? 'background: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue-color));' : '' ?>">
-                        <span class="slide-title text-1 text-style-1 text-white"><?= $point['id'] > 9 ? $point['id'] : '0' . $point['id']; ?></span>
+                    <div class="slide-content" style="<?= $tour['id'] == '1' ? 'background: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue-color));' : '' ?>">
+                        <span class="slide-title text-1 text-style-1 text-white"><?= $tour['id'] > 9 ? $tour['id'] : '0' . $tour['id']; ?></span>
                         <div class="slide-description">
-                            <span class="text-style-4 text-white"><?= $point['name'] ?></span>
+                            <span class="text-style-4 text-white"><?= $tour['tourName'] ?></span>
                             <div class="description text-white">
-                                <?= $point['text_home'] ?>
+                                <p class="text-style-12">
+
+                                    <?= $tour['content'] ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -728,10 +731,10 @@
                         <div class="slide-image-inner">
                             <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
                                 <div class="swiper-wrapper">
-                                    <?php foreach ($point['gallery'] as $img) { ?>
+                                    <?php foreach ($tour['images'] as $img) { ?>
                                         <div class="swiper-slide">
                                             <div class="image-wrapper">
-                                                <img src=<?= $img ?> class="image" alt="<?= $point['name'] ?>" />
+                                                <img src=<?= $img ?> class="image" alt="<?= $tour['tourName'] ?>" />
                                             </div>
                                         </div>
                                     <?php } ?>

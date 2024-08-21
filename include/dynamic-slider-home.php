@@ -83,7 +83,9 @@
                         <div class="slide-description">
                             <span class="text-style-4 text-white"><?= $point['name'] ?></span>
                             <div class="description text-white">
-                                <?= $point['text_home'] ?>
+                                <p class="text-style-12">
+                                    <?= $point['text_home'] ?>
+                                </p>
                             </div>
                         </div>
                     </div>

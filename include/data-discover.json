@@ -4,6 +4,7 @@
             
             "id": "1",
             "Tour": "atv-expedition",
+            "tourName": "ATV Expedition",
             "title": "AN ADRENALINE",
             "subtitle": "FUELED ESCAPE!",
             "button": "GET YOUR RUSH ON",
@@ -80,6 +81,7 @@
         {
             "id": "2",
             "Tour": "countryside",
+            "tourName": "Countryside",
             "title": "GET WILD",
             "subtitle": "& FEEL THE RUSH!",
             "button": "Ready for the buggy?",
@@ -173,6 +175,7 @@
         {
             "id": "3",
             "Tour": "a-walk-through-puerto-plata",
+            "tourName": "Countryside",
             "title": "DISCOVER THE HOTTEST",
             "subtitle": "PUERTO PLATA SPOTS!",
             "button": "The Bride of the Atlantic",
@@ -252,6 +255,7 @@
         {
             "id": "4",
             "Tour": "damajagua",
+            "tourName": "Damajagua",
             "title": "THE ULTIMATE",
             "subtitle": "ADVENTURE IN NATURE!",
             "button": "Experience the wonders of Puerto Plata",
@@ -335,6 +339,7 @@
         {
             "id": "5",
             "Tour": "MONKEY ISLAND",
+            "tourName": "Monkey Island",
             "title": "IT’S ALWAYS ",
             "subtitle": "A GOOD TIME!",
             "button": "Let’s make new friends!",
@@ -406,6 +411,7 @@
         {
             "id": "6",
             "Tour": "Old town & beach ",
+            "tourName": "Old Town & Beach",
             "title": "ENJOY A FUN WALK",
             "subtitle": "THROUGH PUERTO PLATA.",
             "button": "Have a fresh day at the beach!",
@@ -490,8 +496,9 @@
             ]
         },
         {
-            "id": "6",
+            "id": "7",
             "Tour": "Old town & beach ",
+            "tourName": "Old Town & Beach",
             "title": "VISIT ONE OF THE",
             "subtitle": "MOST ICONIC BEACHES!",
             "button": "Enjoy yourself! ",
