@@ -311,12 +311,6 @@ include_once("include/lang/{$idioma}-blog.php");
 
     // Luego, llama a `updateBlogLayout` cada vez que sea necesario (cuando el usuario cambia entre grid y list)
 
-
-
-
-
-
-
     $(document).ready(function() {
         loadPosts(1);
     });

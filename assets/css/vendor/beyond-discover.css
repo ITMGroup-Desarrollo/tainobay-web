@@ -559,6 +559,9 @@ a.button-transparent.button-orange.text-center:hover {
     }
 }
 */
+.w-md-100 {
+    width: auto;
+}
 @media (max-width: 576px) {
     .col-sm-12 {
         flex: 0 0 auto;
@@ -599,5 +602,9 @@ a.button-transparent.button-orange.text-center:hover {
     .col-md-12 {
         padding: 3rem;
     }
-
+}
+@media (min-width: 768px) {
+  .w-md-100 {
+    width: 100%;
+  }
 }
