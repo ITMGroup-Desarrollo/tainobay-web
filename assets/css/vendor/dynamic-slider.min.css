@@ -20,13 +20,14 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: "static-content ..." "static-content slide-content" "static-content slide-content" "static-content slide-content";
+  grid-template-areas: "static-content slide-content" "static-content slide-content" "static-content slide-content" "static-content slide-content";
 }
 .dynamic-slider .static-content {
   padding: 5rem 1rem;
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 100%;
   grid-template-areas: "static-title" "static-arrows" "static-button";
 }
 .dynamic-slider .static-title {
@@ -190,7 +191,7 @@
   grid-area: 1 / 1 / 5 / 4;
   grid-template-columns: 50% 22% 28%;
   grid-template-rows: 26% 54% 20%;
-  grid-template-areas: "slide-content slide-image-wrapper slide-image-wrapper" "slide-content slide-image-wrapper slide-image-wrapper" "static-button  slide-image-wrapper slide-image-wrapper";
+  grid-template-areas: "slide-content slide-image-wrapper slide-image-wrapper" "slide-content slide-image-wrapper slide-image-wrapper" "static-button slide-image-wrapper slide-image-wrapper";
   pointer-events: none;
 }
 .dynamic-slider .slide-item:not(.current-slide) {
@@ -445,17 +446,34 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
 }
 @media (max-width: 1199px) {
   .dynamic-slider .slide-content {
-    padding: 3vw 3vw 0 3vw;
+    padding: 8vw;
   }
 }
 @media (max-width: 991px) {
+  .slide-navigation-item-next svg,
+  .slide-navigation-item-prev svg {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .text-arrows {
+    font-size: 22px !important;
+  }
+  .dynamic-slider .static-content {
+    padding: 2rem 1rem;
+    justify-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "static-title" "static-arrows" "...";
+  }
   .dynamic-slider {
     overflow: initial;
     height: auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "static-content" "slide-content";
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "static-content"
+      "slide-content";
     /* align-items: flex-start; */
   }
   .dynamic-slider .slide-index {
@@ -465,7 +483,7 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
     /* position: absolute; */
     bottom: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
   .dynamic-slider.is-banner .slide-navigation {
     display: none;
@@ -477,21 +495,27 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
     display: none;
   }
   .dynamic-slider .slide-item {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
-    padding-bottom: 44px;
-    width: 100vw;
+    /* padding-bottom: 44px; */
+    /* width: 100vw; */
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 10% 50%;
+    grid-template-areas:
+      "slide-content"
+      "static-button"
+      "slide-image-wrapper";
   }
   .dynamic-slider.is-banner .slide-item {
     padding-bottom: 0;
   }
-  .dynamic-slider .slide-content {
+  /* .dynamic-slider .slide-content {
     width: 100%;
     margin-bottom: 2rem;
     padding: 1rem 2rem 2rem 2rem;
     flex: 0 0 auto;
     order: 2;
-  }
+  } */
   .dynamic-slider.is-banner .slide-content {
     margin-bottom: 0;
   }
@@ -500,38 +524,20 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
   }
   .dynamic-slider .slide-image-wrapper {
     width: 100%;
-    height: 50vh;
+    height: 100%;
+    /* height: 50vh; */
     flex: 0 0 auto;
     order: 1;
   }
-  .dynamic-slider .slide-action {
-    width: 100%;
-    padding: 2rem 2rem 0;
-    display: block;
-    flex: 0 0 auto;
-    order: 1;
-    font-size: 0.95rem;
-  }
-  .dynamic-slider .slide-action-inner {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .dynamic-slider .slide-action-title {
-    margin: 0 1rem 0 0;
-    display: block;
-  }
+
   .dynamic-slider .slide-info {
     display: none;
   }
-  .dynamic-slider .slide-info-item {
-    transform: none !important;
-    opacity: 1 !important;
-  }
   .dynamic-slider .slide-gallery {
     display: none;
+  }
+  .dynamic-slider .slide-item {
+    position: initial;
   }
 }
 @media (max-width: 424px) {

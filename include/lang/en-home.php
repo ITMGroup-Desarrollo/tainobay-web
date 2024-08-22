@@ -1,23 +1,33 @@
 <?php
 
 define('HOME_TEXT_BANNER', array(
-    'A cruise port like no other',
-    'The ultimate port experience in Puerto Plata, República Dominicana.',
+    'Welcome to port Taino Bay',
+    'The ultimate port experience in Puerto Plata, Dominican Republic.',
 ));
 
 define('HOME_TEXT_WELCOME', array(
-    'Welcome',
-    'to',
+    'Welcome to',
+    'port',
     'Taino Bay!',
-    'Located in the <strong>Bride of the Atlantic</strong>, Puerto Plata, Taino Bay brings the fun to your vacation!',
-    'With unique attractions, Lazy river, pools, lounge areas and more, Taino Bay will become your next favorite stop to create new memories on your next cruise.',
+    'Located in the <strong>Bride of the Atlantic</strong>, Puerto Plata, port Taino Bay brings the fun to your vacation!',
+    'With unique attractions, Lazy river, pools, lounge areas and more, Taino Bay will become your next favorite cruise stop to create new memories!',
+));
+
+define('CAROUSEL_PORT_EXPERIENCE', array(
+    'Port experience',
+    'Discover',
+    'things to do',
+));
+
+define('CAROUSEL_DISCOVER_BEYOND', array(
+    'Discover Beyond The Cruise',
+    'The best',
+    'things to do',
 ));
 
 define("SCROLLING_TEXT", array(
     'Taino Bay is a must.',
     'Must party, must do, must enjoy. ',
-    'Taino Bay is a must. Must party, must do, must enjoy. Taino Bay is a must. Must party,
-    must do, must enjoy. Taino Bay is a must.'
 ));
 
 define('HOME_TEXTOS', array(

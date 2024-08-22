@@ -29,6 +29,7 @@
 .dynamic-carousel {
   color: white;
   display: grid;
+  width: 100%;
 }
 .bg-orange {
   background-color: var(--primary-color);

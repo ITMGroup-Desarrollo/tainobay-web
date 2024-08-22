@@ -55,13 +55,13 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             <div class="container">
                 <div class="row">
                     <!-- timeline-->
-                    <div class="col-lg-2">
+                    <div class="col-lg-2" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                         <ul class="timeline" id="timeline"></ul>
                     </div>
 
 
                     <div class="col-lg-9">
-                        <div class="shock-section container" id="blog-container">
+                        <div class="shock-section container" id="blog-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                             <!-- Posts se cargarán aquí -->
                         </div>
                         <div class="items-container" style="display: flex; ">

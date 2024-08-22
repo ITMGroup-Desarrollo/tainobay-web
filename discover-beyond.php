@@ -1,9 +1,6 @@
 <?php
 include_once("include/config.php");
 include_once("include/lang/{$idioma}-discover-beyond.php");
-
-
-
 ?>
 
 <!DOCTYPE HTML>
@@ -20,8 +17,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 </head>
 
 <body class="shock-body">
-
-
 
     <!-- Main -->
     <main id="main" class="shock-main">
@@ -47,7 +42,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <div class="banner-fixed" style="background-image:url('assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg')">
 
                     </div>
-                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-blue"></div>
@@ -72,12 +66,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             </div>
         </section>
 
-
         <!--Cargas de Carrusel-->
-
         <section id="carousel-sections-container" class=""></section>
-
-
     </main>
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
@@ -86,7 +76,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
 <script>
     $(document).ready(function() {
-        console.log("Document is ready");
+        // console.log("Document is ready");
         // Función para manejar el clic en los botones de visualización
         function handleDisplayButtonClick(button) {
             console.log("Button clicked", button);
@@ -94,10 +84,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             const displayedBlog = section.find('.displayed-blog');
             const textElement = button.find('b');
             const icon = find('.fa-xmark');
-            console.log("Section:", section);
-            console.log("Displayed Blog:", displayedBlog);
-            console.log("Text Element:", textElement);
-            console.log("Icon:", icon);
 
             // Verifica si todas las secciones están visibles o alguna está oculta
             const areAllSectionsVisible = $('.carousel-section').toArray().every(sec => $(sec).is(':visible'));
@@ -136,7 +122,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             }
         }
 
-
         // Función para manejar el clic en los botones de ocultación
         function handleHideButtonClick(button) {
             const section = button.closest('.carousel-section');
@@ -166,7 +151,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 block: 'center'
             });
         }
-
 
         // Cargar contenido dinámico desde el archivo JSON
         $.getJSON('include/data-discover.json', function(data) {
@@ -255,7 +239,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 </div>
                             </div>
                         `;
-
                 });
                 const justifyClass = section.side === 'left-side' ? 'justify-content-end' : 'justify-content-start';
                 const sectionHTML = `
@@ -401,8 +384,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 </div>
                             </div>
                         </section>
-
-                        
                     `;
 
                 container.append(sectionHTML);
@@ -431,7 +412,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     });
                 });
             });
-
 
             // Inicializar eventos de clic después de cargar las secciones
             $(document).on('click', '.slide-navigation-item-prev', function(event) {
@@ -483,8 +463,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 }
             });
 
-
-
             // Adjunta eventos a los botones de visualización
             $(document).on('click', '.display-button', function() {
                 handleDisplayButtonClick($(this));
@@ -499,7 +477,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             console.log('Error al cargar el archivo JSON.');
             $('#carousel-sections-container').html('<p>Error al cargar las secciones del carrusel.</p>');
         });
-        
+
         function scrollToPostIfNeeded() {
             const urlParams = new URLSearchParams(window.location.search);
             const postId = urlParams.get('post_id');
@@ -507,7 +485,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             if (postId) {
                 // Esperar a que todos los posts estén listos en el DOM
                 const postElement = $(`.carousel-section[data-id="${postId}"]`);
-                console.log('carrusel', postElement);
+                // console.log('carrusel', postElement);
                 if (postElement.length) {
                     // Scroll hacia el elemento correspondiente
                     $('html, body').animate({
@@ -544,29 +522,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             }
         });
     });
-</script>
-<script>
-    /* $(document).ready(function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('post_id');
-
-    if (postId) {
-        // Busca el post correspondiente usando el postId
-        const postElement = $(`.carousel-section[data-id="${postId}"]`);
-
-        if (postElement.length) {
-            // Scroll hacia el elemento correspondiente
-            $('html, body').animate({
-                scrollTop: postElement.offset().top
-            }, 1000);
-
-            // Opcional: Resaltar el post o agregar alguna animación
-            postElement.addClass('highlight');
-        } else {
-            console.error(`Post con id ${postId} no encontrado.`);
-        }
-    }
-});*/
 </script>
 
 </html>

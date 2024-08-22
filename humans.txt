@@ -6,7 +6,7 @@
     Cristian Mendoza
     - Desarrollador
     
-    Adrian Morales
+    Adrian Moreno
     - Diseñador
     
 <!-----------------------------

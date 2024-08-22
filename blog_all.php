@@ -50,7 +50,7 @@ include_once("include/lang/{$idioma}-blog.php");
         <!-- Blog titles -->
         <section class="shock-section blog-section mt-4 mb-4">
             <div class="titles blog-scroll-view">
-                <div class="container">
+                <div class="container" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
                     <div class="row">
                         <!-- timeline-->
                         <div class="col-12 col-md-6 col-lg-3 ">
@@ -155,7 +155,7 @@ include_once("include/lang/{$idioma}-blog.php");
                                     <h2 class="text-style-7">${title}</h2>
                                 </div>
                                 <p class="justificado">${post.description}</p>
-                                <a href="<?php echo $idioma; ?>/blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong>Leer más</strong></a>
+                                <a href="<?php echo $idioma; ?>/blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?= SECTION_BLOG_ALL[1] ?></strong></a>
                             </div>
 
                             <!-- Share -->

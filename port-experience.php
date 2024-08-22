@@ -46,7 +46,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
     </section>
 
     <!-- Welcome Text -->
-    <section class="shock-section pt-2 pb-4">
+    <section class="shock-section pt-2 pb-4" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
       <div class="container text-center my-5">
         <div class="mx-auto mb-2">
           <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-2"><?= TITULOS_PORT_EXPERIENCE[0] ?><br>
@@ -62,7 +62,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
     </section>
 
     <!-- Cards -->
-    <section class="shock-section pb-5">
+    <section class="shock-section pb-5" data-aos="fade-up" data-aos-delay="400" data-aos-duration="500">
       <div class="container max-w-85">
         <div class="container text-center">
           <div class="row row-cols-3 g-2">
@@ -71,7 +71,9 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
                 <div class="card-port text-bg-dark">
 
                   <div class="card-img-wrapper">
-                    <img src="assets/images/port-experience/<?= $point['cover'] ?>" class="card-img brightness-9" alt="Cover <?= $point['name'] ?>">
+                    <a href="<?= $idioma ?>/port-experience/<?= $point["path"]; ?>">
+                      <img src="assets/images/port-experience/<?= $point['cover'] ?>" class="card-img brightness-9" alt="Cover <?= $point['name'] ?>">
+                    </a>
                   </div>
 
                   <div class="card-content-overlay d-flex flex-column align-items-center justify-content-end">
@@ -79,7 +81,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
                     <div class="wrapper-icon mx-auto">
                       <?= $point["icon"]; ?>
                     </div>
-                    <h2 class="card-title"><?= $point["name"]; ?></h2>
+                    <h2 class="card-title"><a href="<?= $idioma ?>/port-experience/<?= $point["path"]; ?>" class="text-white"><?= $point["name"]; ?></a></h2>
                     <div class="w-100 wrapper-link-more">
                       <a href="<?= $idioma ?>/port-experience/<?= $point["path"]; ?>" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= BUTTON_EXPLORE ?></strong></a>
                       <!-- Icon aino Bay -->

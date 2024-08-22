@@ -13,11 +13,21 @@ define('HOME_TEXT_WELCOME', array(
     'Con atracciones únicas, Lazy river, piscinas, zonas de descanso y mucho más, Taino Bay se convertirá en su próxima parada favorita para crear nuevos recuerdos en su próximo crucero.',
 ));
 
+define('CAROUSEL_PORT_EXPERIENCE', array(
+    'Port experience',
+    'Discover',
+    'things to do',
+));
+
+define('CAROUSEL_DISCOVER_BEYOND', array(
+    'Discover Beyond The Cruise',
+    'The best',
+    'things to do',
+));
+
 define("SCROLLING_TEXT", array(
     'Taino Bay is a must.',
     'Must party, must do, must enjoy. ',
-    'Taino Bay is a must. Must party, must do, must enjoy. Taino Bay is a must. Must party,
-    must do, must enjoy. Taino Bay is a must.'
 ));
 
 define('HOME_TEXTOS', array(

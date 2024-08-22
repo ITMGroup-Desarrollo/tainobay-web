@@ -39,10 +39,37 @@
   color: white;
 }
 
+div.share-r {
+  top: 50%;
+  right: 0;
+  /* transform: translateX(-50%) !important; */
+}
+div.share {
+  top: 50%;
+  right: 0;
+}
 .button-share button {
   /* background: var(--blue-color); */
   border: none;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.5s ease;
+}
+
+/* md 768px  */
+@media (min-width: 768px) {
+  div.share-r {
+    right: auto;
+    top: 0;
+    left: 48%;
+    transform: translateX(-50%) !important;
+  }
+  div.share {
+    top: 0;
+    right: 0;
+  }
+}
+
+/* lg 1024px  */
+@media (min-width: 1024px) {
 }

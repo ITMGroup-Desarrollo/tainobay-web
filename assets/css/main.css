@@ -227,6 +227,11 @@ Support : codings.dev
   bottom: initial;
   left: initial;
 }
+.side-widget .widget.label-icons {
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+}
 .side-widget .widget.label-icons .icon {
   margin: 0;
 }
@@ -598,6 +603,8 @@ Support : codings.dev
 .swiper .swiper-slide .image {
   width: 100%;
   display: block;
+  height: 85vh;
+  object-fit: cover;
 }
 .swiper .swiper-slide .image.large {
   position: relative;
@@ -630,11 +637,11 @@ Support : codings.dev
 .swiper.has-scrollbar .swiper-button-prev {
   top: calc(50% - 10px);
 }
-.swiper .swiper-button-next:hover,
+/* .swiper .swiper-button-next:hover,
 .swiper .swiper-button-prev:hover {
   background-color: var(--color-2);
   color: var(--color-4);
-}
+} */
 .swiper .swiper-button-next {
   right: 0;
 }

@@ -39,22 +39,27 @@ foreach ($points as $point) {
 
   <!-- Main -->
   <main id="single-port-page" class="shock-main">
-
     <!-- banner -->
     <section class="shock-section has-overlay">
       <div class="banner d-flex align-items-center">
         <div class="content-wrapper top-zero ">
           <!-- Intro -->
           <div class="basic-intro text-center">
-            <h1 class="title white text-1 banner-title text-uppercase fw-bold">
-              <?= $currentMenu['name'] ?>
-            </h1>
-            <div class="mx-auto text-white mt-2 icon-banner"><?= $currentMenu['icon'] ?></div>
+            <?php if ($currentMenu['logo']) { ?>
+              <img class="port-logo fit-content object-fit-contain" src="assets/images/port-experience/<?= $currentMenu['logo'] ?>" alt="Logo <?= $currentMenu['name'] ?>" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500">
+            <?php } else { ?>
+              <h1 class="title mx-auto white text-1 banner-title text-uppercase fw-bold port-logo" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500"><?= $currentMenu['name'] ?></h1>
+            <?php } ?>
+            <div class="mx-auto text-white mt-2 icon-banner" data-aos="fade-up" data-aos-delay="800" data-aos-duration="500"><?= $currentMenu['icon'] ?></div>
           </div>
         </div>
         <!-- Image -->
         <div class="image-wrapper">
-          <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+          <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+
+          </div> -->
+          <img src="<?= empty($currentMenu['banner']) ? 'assets/images/media/bg-faqs.jpg' : ("assets/images/port-experience/{$currentMenu['banner']}") ?>" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+
         </div>
         <!-- Overlay -->
         <div class="overlay-blue"></div>
@@ -62,11 +67,23 @@ foreach ($points as $point) {
     </section>
 
     <!-- Welcome Text -->
-    <section class="shock-section pt-2 pb-2">
+    <section class="shock-section pt-2 pb-2" data-aos="fade-down" data-aos-delay="500" data-aos-duration="800">
       <div class="container text-center my-3">
-        <div class="mx-auto">
-          <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= TITULOS_SINGLE_EXPERIENCE ?>
-          </h2>
+        <div class="mx-auto row align-items-center gap-3">
+          <div class="col-12 col-md-3">
+            <a href="<?= $idioma ?>/port-experience" class="d-inline-block text-uppercase button-transparent button-orange text-center" style="padding: 8px 25px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 30">
+                <path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z" />
+              </svg>
+              <span><strong><?= 'REGRESAR' ?></strong></span>
+            </a>
+          </div>
+          <div class="col-12 col-md-6">
+            <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= TITULOS_SINGLE_EXPERIENCE ?>
+            </h2>
+          </div>
+          <div class="col">
+          </div>
         </div>
       </div>
     </section>
@@ -98,20 +115,32 @@ foreach ($points as $point) {
           </div>
         <?php } ?>
 
-        <div class="text-center d-block mt-4">
-          <a href="javascript:void(0)" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_SINGLE_PORT ?></strong></a>
-        </div>
+        <?php if (isset($currentMenu['pdf'])) { ?>
+          <div class="text-center d-block mt-4">
+            <a href="<?= empty($currentMenu['pdf']) ? 'javascript:void(0)' : ("assets/pdf/{$currentMenu['pdf']}") ?>" target="_blank" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_SINGLE_PORT ?></strong></a>
+          </div>
+        <?php } ?>
       </div>
     </section>
 
 
   </main>
 
-
   <?php include("include/widget.php"); ?>
   <?php include("include/footer.php"); ?>
   <?php include("include/js.php"); ?>
+  <script>
+    const logo = document.querySelector('.port-logo');
+    const documentScroll = () => {
+      let {
+        scrollY
+      } = window;
 
+      logo.style.marginTop = `${scrollY}px`;
+    };
+
+    document.addEventListener('scroll', documentScroll);
+  </script>
 </body>
 
 </html>

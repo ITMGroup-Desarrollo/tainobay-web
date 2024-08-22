@@ -126,7 +126,7 @@ input::placeholder {
 
 span.text {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .shock-footer .footer-content .nav-link .text {
@@ -174,7 +174,6 @@ footer {
   border-left: none;
 }
 @media (max-width: 990px) {
-  
   .footer-textbox-container {
     padding: 0 2rem 0 2rem;
   }

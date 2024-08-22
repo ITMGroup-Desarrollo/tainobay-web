@@ -2,8 +2,8 @@
 
 include_once("include/config.php");
 include_once("include/lang/{$idioma}-home.php");
-include_once("include/lang/{$idioma}-points-of-interest.php");
 include_once("include/lang/{$idioma}-port-experience.php");
+include_once("include/lang/{$idioma}-discover-beyond.php");
 include_once("include/lang/reviews.php");
 
 ?>
@@ -58,14 +58,14 @@ include_once("include/lang/reviews.php");
                 <!-- Video -->
                 <div class="image-wrapper over-gradient">
                     <video class="video vh-100 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                        <source src="assets/videos/video-puerto-taino.mp4" type="video/mp4">
+                        <source src="assets/videos/TainoBay.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
         </section>
 
         <!-- Welcome Text -->
-        <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
+        <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
                     <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>
@@ -104,7 +104,7 @@ include_once("include/lang/reviews.php");
         <?php include("include/dynamic-slider-home-r.php"); ?>
 
         <!-- Reviews Tripadvisor -->
-        <section class="shock-section pt-2 pb-4 mb-3">
+        <section class="shock-section pt-2 pb-4 mb-3" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
             <div id="container-reviews" class="container">
                 <!-- Arrow Left -->
                 <div class="text-blue d-block">
@@ -171,7 +171,7 @@ include_once("include/lang/reviews.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-delay="200">
+        <section class="shock-section pt-2 pb-4 mb-5" data-aos="zoom-in-up" data-aos-duration="400" data-aos-delay="300">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="mb-0 text-blue text-style-2 gradient-animated-title animation-duration-3" style="line-height: 70px;"><?= FAQS_TEXT[0] ?></h2>
@@ -325,63 +325,6 @@ include_once("include/lang/reviews.php");
                 </div>
             </div>
         </section>
-
-
-        <section class="shock-section pt-2 pb-4">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-12" data-aos="zoom-in-up" data-aos-delay="600">
-
-                        <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary"
-                            data-columns="1,1,1,1" data-autoplay="10000" data-loop="true">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-1.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-1.jpg" class="image"
-                                                alt="<?php echo "SITIO"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-2.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-2.jpg" class="image"
-                                                alt="<?php echo "SITIO"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-3.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-3.jpg" class="image"
-                                                alt="<?php echo "SITIO"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-4.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-4.jpg" class="image"
-                                                alt="<?php echo "test"; ?>" />
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-pagination"></div>
-                            <!-- <div class="swiper-scrollbar"></div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <?php include("include/widget.php"); ?>
@@ -406,16 +349,9 @@ include_once("include/lang/reviews.php");
                     if (!isVisible) {
                         shareContainer.classList.add('show-container');
                     }
-
-                    // Alternamos la clase activa en el botón
-                    // document.querySelectorAll('.toggle-share').forEach(btn => {
-                    //     btn.classList.remove('active'); // Quitamos la clase activa de todos los botones
-                    // });
-                    // if (!isVisible) {
-                    //     button.classList.add('active'); // Añadimos la clase activa al botón clicado
-                    // }
                 });
             });
+
         });
     </script>
 </body>

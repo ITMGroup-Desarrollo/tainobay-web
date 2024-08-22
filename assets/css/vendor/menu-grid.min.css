@@ -814,6 +814,8 @@
     font-size: 14px;
   }
   .menu-toggle .menu-toggle-icon {
+    height: 68px;
+    width: 68px;
     padding-top: 0;
   }
   .menu-grid {
@@ -905,7 +907,7 @@
     padding: 1rem;
     line-height: 1;
     font-family: var(--secondary-font);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
   }
 }
