@@ -77,7 +77,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
   const data = [
     ...points.map(item => ({
       name: item.name,
-      path: item.path
+      path: `<?= $idioma ?>/port-experience/${item.path}`
     })),
     ...tours.map(item => ({
       name: item.tourName,
