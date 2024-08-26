@@ -87,3 +87,5 @@ define('FAQS_3', array(
     to the general public. We will let you know if we have activities so you can
     come and visit us.</p>'
 ));
+
+define('BTN_REVIEW', 'See more');

@@ -29,3 +29,5 @@
     <link rel="stylesheet" href="assets/css/theme.css" />
     <link rel="stylesheet" href="assets/css/core.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="manifest" href="manifest.json">

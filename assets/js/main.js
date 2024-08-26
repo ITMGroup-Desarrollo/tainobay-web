@@ -42,6 +42,19 @@ Support : codings.dev
 
 // #region Preloader
 
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").then(
+      function (registration) {
+        console.log("Service Worker registrado con éxito:", registration);
+      },
+      function (error) {
+        console.log("Error en el registro del Service Worker:", error);
+      }
+    );
+  });
+}
+
 jQuery(function ($) {
   "use strict";
 

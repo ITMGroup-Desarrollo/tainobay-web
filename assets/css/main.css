@@ -4169,10 +4169,10 @@ table {
 
 /* #region Text */
 .text-orange {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 .text-blue {
-  color: var(--blue-color);
+  color: var(--blue-color) !important;
 }
 .banner .banner-title {
   font-size: 1.5em;
@@ -4211,9 +4211,9 @@ table {
 .bg-orange {
   background-color: var(--primary-color);
 }
-a:hover {
+/* a:hover {
   color: initial;
-}
+} */
 .z-15 {
   z-index: 15;
 }

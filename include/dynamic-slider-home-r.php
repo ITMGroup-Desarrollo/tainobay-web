@@ -213,6 +213,7 @@
             }
 
             .dynamic-slider-r .slide-item {
+                background-color: var(--blue-color);
                 position: relative;
                 display: grid;
                 grid-area: 1 / 1 / 5 / 4;
@@ -566,7 +567,7 @@
 
                 .dynamic-slider-r .slide-content {
                     width: 100%;
-                    margin-bottom: 2rem;
+                    /* margin-bottom: 2rem; */
                     padding: 1rem 2rem 2rem 2rem;
                     flex: 0 0 auto;
                     order: 2;

@@ -116,6 +116,7 @@ include_once("include/lang/reviews.php");
                     <!-- </a> -->
                 </div>
                 <div id="reviews" class="container d-flex align-items-center swiper slider has-navigation" data-columns="3,2,1,3" data-loop="true" data-space="50">
+                    <!-- data-autoplay="4000" -->
                     <!-- review content -->
                     <div class=" justify-content-evenly swiper-wrapper">
 
@@ -123,7 +124,7 @@ include_once("include/lang/reviews.php");
                             <div class="card-review rounded-5 d-flex flex-column position-relative swiper-slide">
                                 <!-- Image wrapper -->
                                 <div class="card-header mb-1">
-                                    <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img" alt="">
+                                    <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img" alt="Avatar de <?= $review['name'] ?>">
                                 </div>
 
                                 <!-- Quotes left -->
@@ -137,11 +138,19 @@ include_once("include/lang/reviews.php");
                                 <div class="card-body text-center">
                                     <h4 class="mb-0"><strong><?= $review['name'] ?></strong></h4>
                                     <h6 class=""><?= $review['date'] ?></h6>
-                                    <p class="text-justify text-xs bold"><?= $review['review'] ?></p>
+                                    <?php
+                                    if (strlen($review['review']) > 150) {
+                                        $short_text = substr($review['review'], 0, 140) . '...';
+                                    ?>
+                                        <p class='text-justify text-xs bold'><?= $short_text ?></p>
+                                        <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer' class='button-transparent-reviews button-orange text-center d-inline-block'><?= BTN_REVIEW ?></a>
+                                    <?php  } else { ?>
+                                        <p class='text-justify text-xs bold'><?= $review['review'] ?></p>
+                                        <a href='javascript:void(0)' target='_blank' rel='noopener noreferrer' class='invisible button-transparent-reviews'><?= BTN_REVIEW ?></a>
+                                    <?php } ?>
                                 </div>
-
                                 <!-- Quotes Right -->
-                                <div class="text-orange text-end mt-2">
+                                <div class="text-orange text-end mt-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
                                         <path fill="currentColor" d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.248-5.621c-.537.278-1.24.375-1.93.311c-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179m-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621c-.537.278-1.24.375-1.929.311C4.591 12.323 3.17 10.842 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179" />
                                     </svg>
@@ -149,12 +158,6 @@ include_once("include/lang/reviews.php");
 
                             </div>
                         <?php } ?>
-
-                        <!-- card active -->
-                        <!-- <div class="card-review rounded-5 d-flex flex-column position-relative active-card-review">
-                    </div> -->
-
-
                     </div>
                 </div>
                 <!-- Arrow Right -->

@@ -75,3 +75,5 @@ define('FAQS_3', array(
     '¿Puedo visitar Taino Bay aunque no viaje en crucero?',
     '<p>Nos alegra saber que deseas visitarnos. Actualmente, Taino Bay no está abierto al público en general. Con gusto te avisaremos si tenemos actividades para que pueda venir a visitarnos.</p>'
 ));
+
+define('BTN_REVIEW', 'Ver más');
