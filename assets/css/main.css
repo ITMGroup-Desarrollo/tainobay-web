@@ -4162,6 +4162,23 @@ table {
 
 /* #endregion Footer */
 
+.prompt {
+  /* background-image: url("../images/icons/pwa/isotipo-tainobay-192.png"); */
+  /* background-position-x: 1rem;
+    background-position-y: 2rem;
+    background-repeat: no-repeat;
+    background-size: auto 45%; */
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px 0 rgba(91, 107, 174, 0.15);
+  padding: 0.85rem;
+  position: fixed;
+  transition: all 1.5s ease-in-out;
+  width: 100vw;
+}
+.prompt .content-prompt {
+  margin-bottom: 0.75rem;
+}
+
 .dynamic-slider.scheme-1 {
   height: auto;
   margin-bottom: 50px;
@@ -4205,6 +4222,17 @@ table {
     height: 80vh;
     background-position: center;
     background-size: cover;
+  }
+  .prompt {
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px 0 rgba(91, 107, 174, 0.15);
+    padding: 1.5rem 5rem 1.5rem 3rem;
+    position: fixed;
+    transition: all 1.5s ease-in-out;
+    width: 100vw;
+  }
+  .prompt .content-prompt {
+    margin-bottom: 0;
   }
 }
 
@@ -4275,4 +4303,40 @@ table {
 
 .brightness-9 {
   filter: brightness(0.9);
+}
+
+.prompt.show {
+  transition-delay: 3s;
+  bottom: 0;
+  opacity: 1;
+}
+
+.prompt.hide {
+  bottom: -100%;
+  opacity: 0;
+}
+
+.button-orange-solid {
+  color: white;
+  background-color: var(--primary-color);
+  border: solid 2px var(--primary-color);
+  border-radius: 25px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  padding: 0.375rem 1rem;
+}
+.button-orange-solid:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: solid 2px var(--primary-color);
+}
+.button-secondary {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: solid 2px transparent;
+  border-radius: 25px;
+  padding: 0.375rem 1rem;
+  transition: border 0.5s ease;
+}
+.button-secondary:hover {
+  border: solid 2px var(--primary-color);
 }
