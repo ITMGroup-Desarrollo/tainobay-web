@@ -37,10 +37,10 @@ Support : codings.dev
 ----------------------------------------------*/
 
 /*----------------------------------------------
-1. Preloader
+Service Worker
 ----------------------------------------------*/
 
-// #region Preloader
+// #region Service Worker
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
@@ -54,6 +54,71 @@ if ("serviceWorker" in navigator) {
     );
   });
 }
+
+// #endregion Preloader
+
+/*----------------------------------------------
+  Alert Install PWA
+----------------------------------------------*/
+
+// #region Alert PWA
+
+const promptToggle = (element, toAdd, toRemove) => {
+  element.classList.add(toAdd);
+  element.classList.remove(toRemove);
+};
+
+const statusPrompt = {
+  get: () => {
+    return localStorage.getItem("statusPrompt") || null;
+  },
+  set: (status) => {
+    localStorage.setItem("statusPrompt", status);
+    return;
+  },
+};
+
+const prompt = document.querySelector("#prompt");
+const buttonAdd = document.querySelector("#buttonAdd");
+const buttonCancel = document.querySelector("#buttonCancel");
+
+if (prompt && buttonAdd && buttonCancel) {
+  let deferredPrompt;
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!statusPrompt.get()) {
+      promptToggle(prompt, "show", "hide");
+    }
+  });
+
+  buttonCancel.addEventListener("click", (e) => {
+    promptToggle(prompt, "hide", "show");
+    statusPrompt.set("dismissed");
+  });
+
+  buttonAdd.addEventListener("click", (e) => {
+    promptToggle(prompt, "hide", "show");
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        statusPrompt.set("accepted");
+        console.log("User accepted the A2HS prompt");
+      } else {
+        statusPrompt.set("dismissed");
+        console.log("User dismissed the A2HS prompt");
+      }
+      deferredPrompt = null;
+    });
+  });
+}
+// #endregion Preloader
+
+/*----------------------------------------------
+1. Preloader
+----------------------------------------------*/
+
+// #region Preloader
 
 jQuery(function ($) {
   "use strict";

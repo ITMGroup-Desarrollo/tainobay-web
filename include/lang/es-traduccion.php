@@ -55,3 +55,10 @@ define("FRASE", array(
     enjoy. Taino Bay is a must. Must party, must do, must enjoy. Taino Bay is a must. Must party,
     must do, must enjoy. Taino Bay is a must.'
 ));
+
+define("ALERT_PWA", array(
+    'Añadir a la pantalla de inicio',
+    'Esta aplicación se puede instalar en tu pantalla de inicio',
+    'INSTALAR',
+    'CANCELAR'
+));

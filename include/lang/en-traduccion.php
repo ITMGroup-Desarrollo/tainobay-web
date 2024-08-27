@@ -55,3 +55,10 @@ define("FRASE", array(
     enjoy. Taino Bay is a must. Must party, must do, must enjoy. Taino Bay is a must. Must party,
     must do, must enjoy. Taino Bay is a must.'
 ));
+
+define("ALERT_PWA", array(
+    'Add to Home screen',
+    'This app can be installed in your home screen',
+    'ADD',
+    'CANCEL'
+));
