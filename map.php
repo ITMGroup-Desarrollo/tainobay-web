@@ -7,7 +7,39 @@ include_once("include/lang/{$idioma}-map.php");
 
 <head>
     <?php include("include/head.php"); ?>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
 </head>
+<style>
+    .filter-icon {
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    #filterTable {
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #filterTable table {
+        margin: 0;
+        border-collapse: collapse;
+    }
+
+    #filterTable td {
+        padding: 5px;
+        color: azure;
+    }
+
+    #filterTable img {
+        width: 30px;
+        height: 30px;
+    }
+</style>
 
 <body class="shock-body">
     <?php include("include/header.php"); ?>
@@ -35,14 +67,21 @@ include_once("include/lang/{$idioma}-map.php");
                 <!-- Image -->
                 <div class="stretched-section">
                     <figure class="figure">
-                        <img src="assets/images/media/Mapa-Taino-Bay.jpg" class="image shadow rounded" alt="<?php echo SITIO; ?>">
+                        <div id="map" style="height: 900px; width: 1400px" class="stretched-section">
+                        </div>
                     </figure>
                 </div>
+
+            </div>
+        </section>
+
     </main>
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
     <?php include("include/js.php"); ?>
 
 </body>
+
+<script src="assets/js/vendor/map.js"></script>
 
 </html>
