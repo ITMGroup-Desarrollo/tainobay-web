@@ -12,33 +12,55 @@ include_once("include/lang/{$idioma}-map.php");
 
 </head>
 <style>
-    .filter-icon {
-        background: transparent;
-        border: none;
-        padding: 0;
-    }
-
-    #filterTable {
-        background-color: transparent;
-        padding: 10px;
+    /* Estilos para el control personalizado */
+    .leaflet-control-filter {
+        background: white;
+        padding: 5px 5px 20px 5px;
         border-radius: 5px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     }
 
-    #filterTable table {
+    .leaflet-control-filter table {
         margin: 0;
         border-collapse: collapse;
+        width: 100%;
     }
 
-    #filterTable td {
+    .leaflet-control-filter td {
         padding: 5px;
-        color: azure;
     }
 
-    #filterTable img {
-        width: 30px;
-        height: 30px;
+    .leaflet-control-filter img {
+        width: 24px;
+        height: 24px;
     }
+
+    .tabla-icons tr {
+        cursor: pointer;
+    }
+
+    /* Estilo para el hover de la fila */
+    .leaflet-control-filter tr:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+
+    .filter-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .minimize-btn {
+        margin-bottom: -1rem;
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .filter-content {
+        margin-top: 10px;
 </style>
 
 <body class="shock-body">

@@ -1,24 +1,49 @@
+// Detectar si es un dispositivo móvil
+var isMobile = window.innerWidth <= 768;
+
+// Configurar el mapa
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -0.5,
+    minZoom: -2, // Permitir un zoom más alejado
     maxZoom: 1,
-    attributionControl: false // Quita la marca de agua de leaflet
+    attributionControl: false,
+    maxBounds: [
+        [-500, -500],  // Límites más amplios
+        [1500, 2000]
+    ],
+    maxBoundsViscosity: 0.3, // Restringir el movimiento fuera de los límites
 });
 
-var bounds = [
-    [0, 0],
-    [900, 1400]
-];
-var image = L.imageOverlay('assets/images/media/Mapa-Taino-Bay.jpg', bounds).addTo(map);
+// Configurar los límites y el zoom según el dispositivo
+var bounds = [[0, 0], [900, 1400]];
 
-map.fitBounds(bounds);
+if (isMobile) {
+    map.setView([0, 0], -2); // Centrar en la esquina superior izquierda con un zoom más alejado
+    document.getElementById('map').style.height = '400px'; // Tamaño más pequeño para mobile
+    document.getElementById('map').style.width = '85vw'; // Tamaño más pequeño para mobile
+} else {
+    map.fitBounds(bounds); // Ajuste normal en escritorio
+    document.getElementById('map').style.height = '900px'; // Tamaño normal para desktop
+}
 
-// Crear un ícono con HTML que contenga la tabla de filtrado
-var filterIcon = L.divIcon({
-    className: 'filter-icon', // Clases CSS personalizadas para el ícono
-    html: `
-        <div id="filterTable">
-            <table>
+// Establecer límites estrictos para evitar que el mapa se desplace demasiado hacia afuera
+map.setMaxBounds(bounds);
+
+// Agregar la imagen del mapa
+L.imageOverlay('assets/images/media/Mapa-Taino-Bay.jpg', bounds).addTo(map);
+
+map.fitBounds(bounds); // Asegurarse de que los bounds estén ajustados correctamente en ambos dispositivos
+
+var filterControl = L.control({position: 'topleft'});
+
+filterControl.onAdd = function(map) {
+    var container = L.DomUtil.create('div', 'leaflet-control-filter');
+    container.innerHTML = `
+        <div class="filter-header">
+            <button class="minimize-btn">X</button>
+        </div>
+        <div class="filter-content">
+            <table class="tabla-icons">
                 <tr data-marker-id="1">
                     <td><img src="assets/icons/map/retail.svg" alt="retail"></td>
                     <td>RETAIL</td>
@@ -29,76 +54,78 @@ var filterIcon = L.divIcon({
                 </tr>
             </table>
         </div>
-    `,
-    iconSize: [200, 200], // Ajusta el tamaño del ícono según sea necesario
-    iconAnchor: [100, 100], // Anclaje del ícono en relación con su punto central
-    popupAnchor: [0, -100] // Ajusta el punto de apertura del popup si es necesario
+    `;
+    L.DomEvent.disableClickPropagation(container);
+    return container;
+};
+
+filterControl.addTo(map);
+
+$(document).on('click', '.minimize-btn', function() {
+    var $filterContent = $(this).closest('.leaflet-control-filter').find('.filter-content');
+    if ($filterContent.is(':visible')) {
+        $filterContent.hide();
+        $(this).text('☰');
+    } else {
+        $filterContent.show();
+        $(this).text('X');
+    }
 });
 
-// Agregar el ícono al mapa como un marcador
-var filterMarker = L.marker([0, 0], {
-    icon: filterIcon
-}).addTo(map);
-
-// Establecer la posición del marcador en el mapa
-filterMarker.setLatLng([10, 120]); // Cambia la latitud y longitud según tu mapa
-
-// Definir un icono personalizado
 var retailIcon = L.icon({
-    iconUrl: 'assets/icons/map/retail.svg', // Reemplaza con la ruta de tu icono
-    iconSize: [38, 38], // Tamaño del icono
-    iconAnchor: [22, 38], // Punto de anclaje del icono (coordenadas donde estará el "pie" del icono)
-    popupAnchor: [0, -30] // Punto donde se abrirá el popup en relación al icono
+    iconUrl: 'assets/icons/map/retail.svg',
+    iconSize: [38, 38],
+    iconAnchor: [22, 38],
+    popupAnchor: [0, -30]
 });
+
 var restroomsIcon = L.icon({
-    iconUrl: 'assets/icons/map/restrooms.svg', // Reemplaza con la ruta de tu icono
-    iconSize: [38, 38], // Tamaño del icono
-    iconAnchor: [22, 38], // Punto de anclaje del icono (coordenadas donde estará el "pie" del icono)
-    popupAnchor: [0, -30] // Punto donde se abrirá el popup en relación al icono
+    iconUrl: 'assets/icons/map/restrooms.svg',
+    iconSize: [38, 38],
+    iconAnchor: [22, 38],
+    popupAnchor: [0, -30]
 });
 
-// Crear un objeto para almacenar los marcadores por data-marker-id
-var markers = {};
+var markers = {
+    1: [
+        L.marker([493, 315], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([362, 233], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([225, 215], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+    ],
+    2: [
+        L.marker([450, 497], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([637, 770], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+    ]
+};
 
-// Crear y agregar un marcador con un data-marker-id específico
-var marker = L.marker([493, 315], {
-        icon: retailIcon
-    }) // Aplica el icono personalizado
-    .addTo(map)
-    .bindPopup('Find our store. Come visit us and enjoy exclusive offers!');
-var marker = L.marker([225, 215], {
-        icon: retailIcon
-    }) // Aplica el icono personalizado
-    .addTo(map)
-    .bindPopup('Find our store. Come visit us and enjoy exclusive offers!');
-var marker = L.marker([400, 400], {
-        icon: retailIcon
-    }) // Aplica el icono personalizado
-    .addTo(map)
-    .bindPopup('Find our store. Come visit us and enjoy exclusive offers!');
+var lastClickedId = null;
+var markersVisible = true;
 
-// Asociar el marcador al data-marker-id en el objeto
-markers[1] = marker; // 1 es el data-marker-id
+$(document).on('click', '.leaflet-control-filter tr', function() {
+    var markerId = $(this).data('marker-id');
+    var selectedMarkers = markers[markerId];
 
-// Repite este proceso para cada marcador que necesites
-var marker2 = L.marker([500, 700], {
-        icon: restroomsIcon
-    })
-    .addTo(map)
-    .bindPopup('Find the restrooms. Please follow the signs for easy access.');
-
-markers[2] = marker2; // 2 es el data-marker-id
-
-// Función para manejar el clic en la tabla dentro del ícono
-document.querySelector('#filterTable').addEventListener('click', function(event) {
-    var row = event.target.closest('tr');
-    if (row) {
-        var markerId = row.getAttribute('data-marker-id');
-        var selectedMarker = markers[markerId];
-
-        if (selectedMarker) {
-            selectedMarker.openPopup();
-            map.setView(selectedMarker.getLatLng(), map.getZoom());
-        }
+    if (lastClickedId === markerId && !markersVisible) {
+        // Si se hace clic en el mismo ícono y los marcadores están ocultos, mostrar todos los marcadores
+        $.each(markers, function(id, markerGroup) {
+            markerGroup.forEach(function(marker) {
+                map.addLayer(marker);
+            });
+        });
+        markersVisible = true; // Marcar que los marcadores están visibles
+        lastClickedId = null;  // Resetear lastClickedId para permitir nueva selección
+    } else {
+        // Ocultar todos los marcadores
+        $.each(markers, function(id, markerGroup) {
+            markerGroup.forEach(function(marker) {
+                map.removeLayer(marker);
+            });
+        });
+        // Mostrar solo los marcadores seleccionados
+        selectedMarkers.forEach(function(marker) {
+            map.addLayer(marker);
+        });
+        markersVisible = false; // Marcar que los marcadores están ocultos
+        lastClickedId = markerId; // Marcar el ícono seleccionado
     }
 });
