@@ -2,7 +2,7 @@
 session_start();
 header("X-UA-Compatible: IE=edge,chrome=1");
 $carpetaRaiz = "/tainobay/";
-$path = 'https://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
+$path = 'http://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
 $page = basename($_SERVER['SCRIPT_NAME']);
 //Detectar idioma
 if (isset($_GET['lang'])) {

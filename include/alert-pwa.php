@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="text-center">
-    <button id="buttonAdd" type="button" class="button-orange-solid me-1"><?= ALERT_PWA[2] ?></button>
+    <button id="buttonAdd" type="button" class="button-orange-solid"><?= ALERT_PWA[2] ?></button>
     <button id="buttonCancel" type="button" class="button-secondary"><?= ALERT_PWA[3] ?></button>
   </div>
 </section>
