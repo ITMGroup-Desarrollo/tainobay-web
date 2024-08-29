@@ -61,6 +61,7 @@ include_once("include/lang/{$idioma}-map.php");
 
     .filter-content {
         margin-top: 10px;
+    }
 </style>
 
 <body class="shock-body">

@@ -4,12 +4,12 @@ var isMobile = window.innerWidth <= 768;
 // Configurar el mapa
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -2, // Permitir un zoom más alejado
+    minZoom: -1, // Permitir un zoom más alejado
     maxZoom: 1,
     attributionControl: false,
     maxBounds: [
-        [-500, -500],  // Límites más amplios
-        [1500, 2000]
+        [-100, -100],  // Límites más amplios
+        [1100, 1500]
     ],
     maxBoundsViscosity: 0.3, // Restringir el movimiento fuera de los límites
 });
@@ -18,16 +18,14 @@ var map = L.map('map', {
 var bounds = [[0, 0], [900, 1400]];
 
 if (isMobile) {
-    map.setView([0, 0], -2); // Centrar en la esquina superior izquierda con un zoom más alejado
     document.getElementById('map').style.height = '400px'; // Tamaño más pequeño para mobile
-    document.getElementById('map').style.width = '85vw'; // Tamaño más pequeño para mobile
+    document.getElementById('map').style.width = '400px'; // Tamaño más pequeño para mobile
+    console.log('Estoy en mobile')
 } else {
     map.fitBounds(bounds); // Ajuste normal en escritorio
     document.getElementById('map').style.height = '900px'; // Tamaño normal para desktop
 }
 
-// Establecer límites estrictos para evitar que el mapa se desplace demasiado hacia afuera
-map.setMaxBounds(bounds);
 
 // Agregar la imagen del mapa
 L.imageOverlay('assets/images/media/Mapa-Taino-Bay.jpg', bounds).addTo(map);
