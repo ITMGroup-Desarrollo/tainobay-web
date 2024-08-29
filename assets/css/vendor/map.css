@@ -1,0 +1,62 @@
+
+section.map-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+/* Estilos para el control personalizado */
+.leaflet-control-filter {
+    background: white;
+    padding: 5px 5px 20px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.leaflet-control-filter table {
+    margin: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.leaflet-control-filter td {
+    padding: 5px;
+}
+
+.leaflet-control-filter img {
+    width: 24px;
+    height: 24px;
+}
+
+.tabla-icons tr {
+    cursor: pointer;
+}
+
+/* Estilo para el hover de la fila */
+.leaflet-control-filter tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.minimize-btn {
+    margin-bottom: -1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-content {
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    section.map-section {
+        margin-bottom: 3rem;
+    }
+}

@@ -9,29 +9,33 @@ var map = L.map('map', {
     attributionControl: false,
     maxBounds: [
         [-100, -100],  // Límites más amplios
-        [1100, 1500]
+        [1200, 1600]
     ],
     maxBoundsViscosity: 0.3, // Restringir el movimiento fuera de los límites
 });
 
 // Configurar los límites y el zoom según el dispositivo
-var bounds = [[0, 0], [900, 1400]];
+var bounds = [[0, 0], [1100, 1500]];
 
 if (isMobile) {
-    document.getElementById('map').style.height = '400px'; // Tamaño más pequeño para mobile
-    document.getElementById('map').style.width = '400px'; // Tamaño más pequeño para mobile
-    console.log('Estoy en mobile')
+    document.getElementById('map').style.height = '40vh'; // Tamaño más pequeño para mobile
+    document.getElementById('map').style.width = '92vw'; // Tamaño más pequeño para mobile
 } else {
-    map.fitBounds(bounds); // Ajuste normal en escritorio
-    document.getElementById('map').style.height = '900px'; // Tamaño normal para desktop
+    document.getElementById('map').style.height = '100vh'; // Tamaño normal para desktop
+    document.getElementById('map').style.width = '75vw'; // Tamaño normal para desktop
 }
-
 
 // Agregar la imagen del mapa
 L.imageOverlay('assets/images/media/Mapa-Taino-Bay.jpg', bounds).addTo(map);
 
-map.fitBounds(bounds); // Asegurarse de que los bounds estén ajustados correctamente en ambos dispositivos
+map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
+// Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
+if (!isMobile) {
+    map.setZoom(0); // Zoom inicial en escritorio
+}
+
+// Resto del código...
 var filterControl = L.control({position: 'topleft'});
 
 filterControl.onAdd = function(map) {
@@ -72,27 +76,27 @@ $(document).on('click', '.minimize-btn', function() {
 
 var retailIcon = L.icon({
     iconUrl: 'assets/icons/map/retail.svg',
-    iconSize: [38, 38],
-    iconAnchor: [22, 38],
+    iconSize: [23, 23],
+    iconAnchor: [22, 23],
     popupAnchor: [0, -30]
 });
 
 var restroomsIcon = L.icon({
     iconUrl: 'assets/icons/map/restrooms.svg',
-    iconSize: [38, 38],
-    iconAnchor: [22, 38],
+    iconSize: [23, 23],
+    iconAnchor: [14, 23],
     popupAnchor: [0, -30]
 });
 
 var markers = {
     1: [
-        L.marker([493, 315], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([362, 233], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([225, 215], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+        L.marker([496, 325], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([365, 243], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([228, 225], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
     ],
     2: [
-        L.marker([450, 497], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([637, 770], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+        L.marker([451, 497], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([640, 770], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
     ]
 };
 

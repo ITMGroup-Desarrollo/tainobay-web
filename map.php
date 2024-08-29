@@ -7,62 +7,11 @@ include_once("include/lang/{$idioma}-map.php");
 
 <head>
     <?php include("include/head.php"); ?>
+    <link rel="stylesheet" href="assets/css/vendor/map.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 </head>
-<style>
-    /* Estilos para el control personalizado */
-    .leaflet-control-filter {
-        background: white;
-        padding: 5px 5px 20px 5px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .leaflet-control-filter table {
-        margin: 0;
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    .leaflet-control-filter td {
-        padding: 5px;
-    }
-
-    .leaflet-control-filter img {
-        width: 24px;
-        height: 24px;
-    }
-
-    .tabla-icons tr {
-        cursor: pointer;
-    }
-
-    /* Estilo para el hover de la fila */
-    .leaflet-control-filter tr:hover {
-        background-color: #f0f0f0;
-        cursor: pointer;
-    }
-
-    .filter-header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .minimize-btn {
-        margin-bottom: -1rem;
-        background-color: transparent;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .filter-content {
-        margin-top: 10px;
-    }
-</style>
 
 <body class="shock-body">
     <?php include("include/header.php"); ?>
@@ -84,17 +33,8 @@ include_once("include/lang/{$idioma}-map.php");
             </div>
         </section>
         <!-- Content -->
-        <section class="shock-section pb-5">
-            <div class="container max-w-85">
-
-                <!-- Image -->
-                <div class="stretched-section">
-                    <figure class="figure">
-                        <div id="map" style="height: 900px; width: 1400px" class="stretched-section">
-                        </div>
-                    </figure>
-                </div>
-
+        <section class="shock-section map-section">
+            <div id="map">
             </div>
         </section>
 
