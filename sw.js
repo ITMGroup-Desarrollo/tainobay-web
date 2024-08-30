@@ -34,6 +34,8 @@ const assets = [
   "assets/images/media/img-menu-1.jpg",
   "assets/images/media/img-menu-2.jpg",
   "assets/images/media/precarga.png",
+  "assets/images/errors/lost-connection-cat.png",
+  "assets/images/errors/lost-connection.png",
   "assets/js/main.js",
   "assets/js/vendor/anime.min.js",
   "assets/js/vendor/aos.min.js",
@@ -78,14 +80,12 @@ self.addEventListener("fetch", function (event) {
         return cachedResponse;
       }
 
-      // Si no hay caché, verifica si el esquema es http o https
       if (event.request.url.startsWith("http")) {
         return fetch(event.request)
           .then(function (networkResponse) {
-            // Clona la respuesta antes de usarla
             let clonedResponse = networkResponse.clone();
 
-            // Verifica que la respuesta sea válida y almacénala en la caché
+            // Valida en la caché
             if (networkResponse && networkResponse.status === 200) {
               caches.open(app).then(function (cache) {
                 cache.put(event.request, clonedResponse);
@@ -94,15 +94,12 @@ self.addEventListener("fetch", function (event) {
             return networkResponse;
           })
           .catch(function () {
-            // Respuesta de error si no hay conexión a internet
-            // return new Response(
-            //   "No se puede acceder al recurso y no hay conexión a internet",
-            //   {
-            //     status: 404,
-            //     statusText: "Not Found",
-            //   }
-            // );
-            return caches.match("offline.php");
+            const urlPath = new URL(event.request.url).pathname;
+            // console.log(urlPath);
+
+            const isSpanish = urlPath.startsWith("/es/");
+
+            return caches.match(isSpanish ? "/es/offline" : "/en/offline");
           });
       }
     })

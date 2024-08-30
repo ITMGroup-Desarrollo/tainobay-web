@@ -62,3 +62,17 @@ define("ALERT_PWA", array(
     'INSTALAR',
     'CANCELAR'
 ));
+
+define("OFFLINE", array(
+    '¡Oops!',
+    'Parece que estás desconectado',
+    'No pudimos cargar la página que solicitaste porque no tienes conexión a Internet. Por favor, verifica tu conexión y vuelve a intentarlo.',
+    'Inicio'
+));
+
+define("TEXT_404", array(
+    '¡Oops!',
+    'Página no encontrada',
+    'Lo sentimos, la página que busca no existe',
+    'Inicio'
+));
