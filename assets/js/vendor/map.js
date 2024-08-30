@@ -1,7 +1,10 @@
+// #region Detección de dispositivo
 // Detectar si es un dispositivo móvil
 var isMobile = window.innerWidth <= 768;
+// #endregion
 
-// Configurar el mapa
+// #region Configuración del mapa
+// Configuración del mapa
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: -1, // Permitir un zoom más alejado
@@ -13,35 +16,38 @@ var map = L.map('map', {
     ],
     maxBoundsViscosity: 0.3, // Restringir el movimiento fuera de los límites
 });
+// #endregion
 
-// Configurar los límites y el zoom según el dispositivo
+// #region Configuración de tamaño y zoom según el dispositivo
 var bounds = [[0, 0], [1100, 1500]];
 
 if (isMobile) {
     document.getElementById('map').style.height = '40vh'; // Tamaño más pequeño para mobile
-    document.getElementById('map').style.width = '92vw'; // Tamaño más pequeño para mobile
+    document.getElementById('map').style.width = '92vw';  // Tamaño más pequeño para mobile
 } else {
     document.getElementById('map').style.height = '100vh'; // Tamaño normal para desktop
-    document.getElementById('map').style.width = '75vw'; // Tamaño normal para desktop
+    document.getElementById('map').style.width = '75vw';   // Tamaño normal para desktop
 }
+// #endregion
 
-// Agregar la imagen del mapa
+// #region Agregar la imagen del mapa
 L.imageOverlay('assets/images/media/Mapa-Taino-Bay.jpg', bounds).addTo(map);
-
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
 if (!isMobile) {
     map.setZoom(0); // Zoom inicial en escritorio
 }
+// #endregion
 
-// Resto del código...
-var filterControl = L.control({position: 'topleft'});
+// #region Control de filtrado
+var filterControl = L.control({ position: 'topleft' });
 
 filterControl.onAdd = function(map) {
-    var container = L.DomUtil.create('div', 'leaflet-control-filter');
+    var container = L.DomUtil.create('div', 'leaflet-control-filter service');
     container.innerHTML = `
         <div class="filter-header">
+            <span class="header-text">First Container</span>
             <button class="minimize-btn">X</button>
         </div>
         <div class="filter-content">
@@ -62,7 +68,37 @@ filterControl.onAdd = function(map) {
 };
 
 filterControl.addTo(map);
+// segunda tabla
+var filterControl = L.control({ position: 'topleft' });
 
+filterControl.onAdd = function(map) {
+    var container = L.DomUtil.create('div', 'leaflet-control-filter restaurants');
+    container.innerHTML = `
+        <div class="filter-header">
+            <span class="header-text">Second Container</span>
+            <button class="minimize-btn">X</button>
+        </div>
+        <div class="filter-content">
+            <table class="tabla-icons">
+                <tr data-marker-id="3">
+                    <td><img src="assets/icons/map/bar.svg" alt="retail"></td>
+                    <td>RETAIL</td>
+                </tr>
+                <tr data-marker-id="4">
+                    <td><img src="assets/icons/map/food.svg" alt="restrooms"></td>
+                    <td>RESTROOMS</td>
+                </tr>
+            </table>
+        </div>
+    `;
+    L.DomEvent.disableClickPropagation(container);
+    return container;
+};
+
+filterControl.addTo(map);
+// #endregion
+
+// #region Evento para minimizar o expandir el contenido del filtro
 $(document).on('click', '.minimize-btn', function() {
     var $filterContent = $(this).closest('.leaflet-control-filter').find('.filter-content');
     if ($filterContent.is(':visible')) {
@@ -73,7 +109,9 @@ $(document).on('click', '.minimize-btn', function() {
         $(this).text('X');
     }
 });
+// #endregion
 
+// #region Definición de íconos
 var retailIcon = L.icon({
     iconUrl: 'assets/icons/map/retail.svg',
     iconSize: [23, 23],
@@ -87,7 +125,21 @@ var restroomsIcon = L.icon({
     iconAnchor: [14, 23],
     popupAnchor: [0, -30]
 });
+var barIcon = L.icon({
+    iconUrl: 'assets/icons/map/bar.svg',
+    iconSize: [23, 23],
+    iconAnchor: [14, 23],
+    popupAnchor: [0, -30]
+});
+var foodIcon = L.icon({
+    iconUrl: 'assets/icons/map/food.svg',
+    iconSize: [23, 23],
+    iconAnchor: [14, 23],
+    popupAnchor: [0, -30]
+});
+// #endregion
 
+// #region Marcadores y sus eventos
 var markers = {
     1: [
         L.marker([608, 347], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
@@ -97,9 +149,19 @@ var markers = {
     2: [
         L.marker([556, 534], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
         L.marker([786, 825], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+    ],
+    3: [
+        L.marker([640, 507], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([730, 770], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+    ],
+    4: [
+        L.marker([728, 501], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
+        L.marker([758, 751], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
     ]
 };
+// #endregion
 
+// #region Manejo de la visibilidad de los marcadores al hacer clic en el filtro
 var lastClickedId = null;
 var markersVisible = true;
 
@@ -131,3 +193,4 @@ $(document).on('click', '.leaflet-control-filter tr', function() {
         lastClickedId = markerId; // Marcar el ícono seleccionado
     }
 });
+// #endregion
