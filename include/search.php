@@ -71,8 +71,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 <script>
   const points = <?php echo json_encode($points); ?>;
   const tours = <?php echo json_encode($tours); ?>;
-  // const blogs = <?php echo json_encode('./data.json'); ?>;
-  // console.log(blogs);
 
   const data = [
     ...points.map(item => ({
@@ -89,7 +87,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     let query = this.value.toLowerCase();
 
     if (query.length > 2) {
-      let results = data.filter(item => item.name.toLowerCase().includes(query));
+      let results = data.filter(item => fuzzyMatch(item.name.toLowerCase(), query));
 
       let output = '';
       if (results.length > 0) {
@@ -103,6 +101,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
     } else {
       document.getElementById('results').innerHTML = '';
     }
-
   });
+
+  // Función de coincidencia difusa
+  function fuzzyMatch(text, search) {
+    const pattern = search.split('').join('.*');
+    const regex = new RegExp(pattern);
+    return regex.test(text);
+  }
 </script>
