@@ -41,9 +41,9 @@ if (!isMobile) {
 // #endregion
 
 // #region Control de filtrado
-var filterControl = L.control({ position: 'topleft' });
+var filterControl1 = L.control({ position: 'topleft' });
 
-filterControl.onAdd = function(map) {
+filterControl1.onAdd = function(map) {
     var container = L.DomUtil.create('div', 'leaflet-control-filter service');
     container.innerHTML = `
         <div class="filter-header">
@@ -67,11 +67,11 @@ filterControl.onAdd = function(map) {
     return container;
 };
 
-filterControl.addTo(map);
-// segunda tabla
-var filterControl = L.control({ position: 'topleft' });
+filterControl1.addTo(map);
 
-filterControl.onAdd = function(map) {
+var filterControl2 = L.control({ position: 'topleft' });
+
+filterControl2.onAdd = function(map) {
     var container = L.DomUtil.create('div', 'leaflet-control-filter restaurants');
     container.innerHTML = `
         <div class="filter-header">
@@ -95,7 +95,7 @@ filterControl.onAdd = function(map) {
     return container;
 };
 
-filterControl.addTo(map);
+filterControl2.addTo(map);
 // #endregion
 
 // #region Evento para minimizar o expandir el contenido del filtro
@@ -190,7 +190,32 @@ $(document).on('click', '.leaflet-control-filter tr', function() {
             map.addLayer(marker);
         });
         markersVisible = false; // Marcar que los marcadores están ocultos
-        lastClickedId = markerId; // Marcar el ícono seleccionado
+        lastClickedId = markerId; // Actualizar lastClickedId al último marcador clicado
     }
+});
+
+// Nueva funcionalidad para filtrar por tabla al hacer clic en el span.header-text
+$(document).on('click', '.header-text', function() {
+    var table = $(this).closest('.leaflet-control-filter').find('table');
+    var markerIds = table.find('tr').map(function() {
+        return $(this).data('marker-id');
+    }).get();
+
+    // Ocultar todos los marcadores antes de aplicar el nuevo filtro
+    $.each(markers, function(id, markerGroup) {
+        markerGroup.forEach(function(marker) {
+            map.removeLayer(marker);
+        });
+    });
+
+    // Mostrar solo los marcadores correspondientes a la tabla seleccionada
+    markerIds.forEach(function(markerId) {
+        markers[markerId].forEach(function(marker) {
+            map.addLayer(marker);
+        });
+    });
+
+    markersVisible = false; // Marcar que los marcadores están ocultos
+    lastClickedId = 'table-' + table.index(); // Actualizar lastClickedId al último marcador clicado
 });
 // #endregion

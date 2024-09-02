@@ -54,6 +54,9 @@ section.map-section {
 .filter-content {
     margin-top: 10px;
 }
+.header-text {
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     section.map-section {
         margin-bottom: 3rem;
