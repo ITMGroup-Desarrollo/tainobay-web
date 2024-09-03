@@ -400,6 +400,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 }
 
                 AOS.init();
+                $('.shock-section .gallery').lightGallery({
+                        selector: '.shock-section .gallery .lightbox-link:not(.prevent)',
+                        thumbnail: false,
+                        share: false,
+                        download: false,
+                    });
                 $(".gradient-animated-title").each(function() {
                     var $this = $(this);
 

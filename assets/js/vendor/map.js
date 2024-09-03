@@ -78,7 +78,7 @@ filterControl2.onAdd = function(map) {
             <span class="header-text">Second Container</span>
             <button class="minimize-btn">X</button>
         </div>
-        <div class="filter-content">
+        <div  class="filter-content">
             <table class="tabla-icons">
                 <tr data-marker-id="3">
                     <td><img src="assets/icons/map/bar.svg" alt="retail"></td>
@@ -111,30 +111,56 @@ $(document).on('click', '.minimize-btn', function() {
 });
 // #endregion
 
-// #region Definición de íconos
-var retailIcon = L.icon({
-    iconUrl: 'assets/icons/map/retail.svg',
+// #region Definición de íconos usando L.divIcon
+var retailIcon = L.divIcon({
+    html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="200"
+     data-aos-offset="0">
+               <img src="assets/icons/map/retail.svg" alt="retail" width="23" height="23">
+           </div>`,
+    className: '', // Puedes usar tu propia clase CSS o dejarla vacía
     iconSize: [23, 23],
-    iconAnchor: [22, 23],
+    iconAnchor: [11.5, 23], // Ajusta el anclaje como en L.icon
+    popupAnchor: [0, -30]   // Ajusta el anclaje del popup como en L.icon
+});
+
+var restroomsIcon = L.divIcon({
+    html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="400"
+     data-aos-offset="0">
+               <img src="assets/icons/map/restrooms.svg" alt="restrooms" width="23" height="23">
+           </div>`,
+    className: '', // Puedes usar tu propia clase CSS o dejarla vacía
+    iconSize: [23, 23],
+    iconAnchor: [11.5, 23],
     popupAnchor: [0, -30]
 });
 
-var restroomsIcon = L.icon({
-    iconUrl: 'assets/icons/map/restrooms.svg',
+var barIcon = L.divIcon({
+    html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="800"
+     data-aos-offset="0">
+               <img src="assets/icons/map/bar.svg" alt="bar" width="23" height="23">
+           </div>`,
+    className: '', // Puedes usar tu propia clase CSS o dejarla vacía
     iconSize: [23, 23],
-    iconAnchor: [14, 23],
+    iconAnchor: [11.5, 23],
     popupAnchor: [0, -30]
 });
-var barIcon = L.icon({
-    iconUrl: 'assets/icons/map/bar.svg',
+
+var foodIcon = L.divIcon({
+    html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="600"
+     data-aos-offset="0">
+               <img src="assets/icons/map/food.svg" alt="food" width="23" height="23">
+           </div>`,
+    className: '', // Puedes usar tu propia clase CSS o dejarla vacía
     iconSize: [23, 23],
-    iconAnchor: [14, 23],
-    popupAnchor: [0, -30]
-});
-var foodIcon = L.icon({
-    iconUrl: 'assets/icons/map/food.svg',
-    iconSize: [23, 23],
-    iconAnchor: [14, 23],
+    iconAnchor: [11.5, 23],
     popupAnchor: [0, -30]
 });
 // #endregion
@@ -160,6 +186,7 @@ var markers = {
     ]
 };
 // #endregion
+
 
 // #region Manejo de la visibilidad de los marcadores al hacer clic en el filtro
 var lastClickedId = null;
