@@ -9,9 +9,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
   <?php include("include/head.php"); ?>
-
 </head>
 
 <body class="shock-body">
@@ -41,7 +39,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
           <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
         </div>
         <!-- Overlay -->
-        <div class="overlay-blue"></div>
+        <div class="overlay-banner"></div>
       </div>
     </section>
 

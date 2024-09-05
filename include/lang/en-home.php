@@ -1,7 +1,7 @@
 <?php
 
 define('HOME_TEXT_BANNER', array(
-    'Welcome to port Taino Bay',
+    'Welcome to Port Taino Bay',
     'The ultimate port experience in Puerto Plata, Dominican Republic.',
 ));
 
@@ -9,7 +9,7 @@ define('HOME_TEXT_WELCOME', array(
     'Welcome to',
     'port',
     'Taino Bay!',
-    'Located in the <strong>Bride of the Atlantic</strong>, Puerto Plata, port Taino Bay brings the fun to your vacation!',
+    'Located in the <strong>Bride of the Atlantic</strong>, Puerto Plata, Port Taino Bay brings the fun to your vacation!',
     'With unique attractions, Lazy river, pools, lounge areas and more, Taino Bay will become your next favorite cruise stop to create new memories!',
 ));
 

@@ -108,15 +108,12 @@ include_once("include/lang/reviews.php");
             <div id="container-reviews" class="container">
                 <!-- Arrow Left -->
                 <div class="text-blue d-block">
-                    <!-- <a href="javascript:void(0)" class="slide-navigation-item-prev d-block swiper-button-prev text-blue"> -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
                         <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                         <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                     </svg>
-                    <!-- </a> -->
                 </div>
-                <div id="reviews" class="container d-flex align-items-center swiper slider has-navigation" data-columns="3,2,1,3" data-loop="true" data-space="50">
-                    <!-- data-autoplay="4000" -->
+                <div id="reviews" class="container d-flex align-items-center swiper slider has-navigation" data-columns="3,2,1,3" data-loop="true" data-space="50" data-autoplay="4000">
                     <!-- review content -->
                     <div class=" justify-content-evenly swiper-wrapper">
 
@@ -143,11 +140,11 @@ include_once("include/lang/reviews.php");
                                         $short_text = substr($review['review'], 0, 140) . '...';
                                     ?>
                                         <p class='text-justify text-xs bold'><?= $short_text ?></p>
-                                        <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer' class='button-transparent-reviews button-orange text-center d-inline-block'><?= BTN_REVIEW ?></a>
+
                                     <?php  } else { ?>
                                         <p class='text-justify text-xs bold'><?= $review['review'] ?></p>
-                                        <a href='javascript:void(0)' target='_blank' rel='noopener noreferrer' class='invisible button-transparent-reviews'><?= BTN_REVIEW ?></a>
                                     <?php } ?>
+                                    <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer' class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase' style="font-size: 12px;"><?= BTN_REVIEW ?></a>
                                 </div>
                                 <!-- Quotes Right -->
                                 <div class="text-orange text-end mt-1">
@@ -162,13 +159,10 @@ include_once("include/lang/reviews.php");
                 </div>
                 <!-- Arrow Right -->
                 <div class="text-blue">
-                    <!-- <a href="#" class="slide-navigation-item-next d-block text-blue"> -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                         <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                         <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                     </svg>
-
-                    <!-- </a> -->
                 </div>
             </div>
         </section>

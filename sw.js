@@ -1,3 +1,5 @@
+// Para borrar cache cambiar el nombre de la constante "app"
+
 const app = "taino-bay";
 const assets = [
   "en/home",
@@ -58,10 +60,9 @@ const assets = [
   "assets/js/vendor/stickybits.min.js",
   "assets/js/vendor/swiper.min.js",
   "assets/js/vendor/typed.min.js",
-  "manifest.json",
   "es/offline",
   "en/offline",
-  "offline.php",
+  "manifest.json",
 ];
 
 self.addEventListener("install", function (event) {
@@ -71,6 +72,21 @@ self.addEventListener("install", function (event) {
     })
   );
 });
+
+// self.addEventListener("activate", (event) => {
+//   // Elimina la caché vieja cuando se active una nueva versión
+//   event.waitUntil(
+//     caches.keys().then((cacheNames) => {
+//       return Promise.all(
+//         cacheNames.map((cache) => {
+//           if (cache !== app) {
+//             return caches.delete(cache);
+//           }
+//         })
+//       );
+//     })
+//   );
+// });
 
 self.addEventListener("fetch", function (event) {
   event.respondWith(

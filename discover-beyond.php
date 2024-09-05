@@ -7,16 +7,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
     <?php include("include/head.php"); ?>
-    <?php include("include/header.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
-    <style>
-
-    </style>
 </head>
 
 <body class="shock-body">
+    <?php include("include/header.php"); ?>
 
     <!-- Main -->
     <main id="main" class="shock-main">
@@ -44,7 +40,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </div>
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
         <!--Welcome-->
@@ -400,6 +396,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 }
 
                 AOS.init();
+                $('.shock-section .gallery').lightGallery({
+                    selector: '.shock-section .gallery .lightbox-link:not(.prevent)',
+                    thumbnail: false,
+                    share: false,
+                    download: false,
+                });
                 $(".gradient-animated-title").each(function() {
                     var $this = $(this);
 

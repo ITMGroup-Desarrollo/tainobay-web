@@ -9,13 +9,8 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/blog.css">
-    <style>
-
-
-    </style>
 </head>
 
 <body class="shock-body">
@@ -47,7 +42,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
         <!-- Blog Section -->

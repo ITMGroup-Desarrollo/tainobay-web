@@ -62,7 +62,7 @@ foreach ($points as $point) {
 
         </div>
         <!-- Overlay -->
-        <div class="overlay-blue"></div>
+        <div class="overlay-banner"></div>
       </div>
     </section>
 
