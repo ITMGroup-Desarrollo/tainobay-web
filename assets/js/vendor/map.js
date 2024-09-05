@@ -22,7 +22,7 @@ var map = L.map('map', {
 var bounds = [[0, 0], [1100, 1500]];
 
 if (isMobile) {
-    document.getElementById('map').style.height = '40vh'; // Tamaño más pequeño para mobile
+    document.getElementById('map').style.height = '70vh'; // Tamaño más pequeño para mobile
     document.getElementById('map').style.width = '92vw';  // Tamaño más pequeño para mobile
 } else {
     document.getElementById('map').style.height = '100vh'; // Tamaño normal para desktop
@@ -37,169 +37,143 @@ map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamen
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
 if (!isMobile) {
     map.setZoom(0); // Zoom inicial en escritorio
+} else {
+    map.setZoom(-1)
 }
 // #endregion
 
-// #region Control de filtrado
-var filterControl1 = L.control({ position: 'topleft' });
-
-filterControl1.onAdd = function(map) {
-    var container = L.DomUtil.create('div', 'leaflet-control-filter service');
-    container.innerHTML = `
-        <div class="filter-header">
-            <span class="header-text">First Container</span>
-            <button class="minimize-btn">X</button>
-        </div>
-        <div class="filter-content">
-            <table class="tabla-icons">
-                <tr data-marker-id="1">
-                    <td><img src="assets/icons/map/retail.svg" alt="retail"></td>
-                    <td>RETAIL</td>
-                </tr>
-                <tr data-marker-id="2">
-                    <td><img src="assets/icons/map/restrooms.svg" alt="restrooms"></td>
-                    <td>RESTROOMS</td>
-                </tr>
-            </table>
-        </div>
-    `;
-    L.DomEvent.disableClickPropagation(container);
-    return container;
-};
-
-filterControl1.addTo(map);
-
-var filterControl2 = L.control({ position: 'topleft' });
-
-filterControl2.onAdd = function(map) {
-    var container = L.DomUtil.create('div', 'leaflet-control-filter restaurants');
-    container.innerHTML = `
-        <div class="filter-header">
-            <span class="header-text">Second Container</span>
-            <button class="minimize-btn">X</button>
-        </div>
-        <div  class="filter-content">
-            <table class="tabla-icons">
-                <tr data-marker-id="3">
-                    <td><img src="assets/icons/map/bar.svg" alt="retail"></td>
-                    <td>RETAIL</td>
-                </tr>
-                <tr data-marker-id="4">
-                    <td><img src="assets/icons/map/food.svg" alt="restrooms"></td>
-                    <td>RESTROOMS</td>
-                </tr>
-            </table>
-        </div>
-    `;
-    L.DomEvent.disableClickPropagation(container);
-    return container;
-};
-
-filterControl2.addTo(map);
-// #endregion
-
 // #region Evento para minimizar o expandir el contenido del filtro
-$(document).on('click', '.minimize-btn', function() {
-    var $filterContent = $(this).closest('.leaflet-control-filter').find('.filter-content');
-    if ($filterContent.is(':visible')) {
-        $filterContent.hide();
-        $(this).text('☰');
-    } else {
-        $filterContent.show();
-        $(this).text('X');
-    }
-});
+if(!isMobile){
+    $(document).on('click', '.minimize-btn', function () {
+        var $filter = $(this).closest('.leaflet-control-filter');
+        var $filterContent = $filter.find('.filter-content');
+        var $headerText = $filter.find('.header-text');
+    
+        if ($filterContent.is(':visible')) {
+            $filterContent.hide();
+            $headerText.hide(); // Ocultar el span con clase header-text
+            $(this).text('☰');
+            $filter.css('width', 'fit-content'); // Aplicar width: fit-content cuando se oculta
+        } else {
+            $filterContent.show();
+            $headerText.show(); // Mostrar el span con clase header-text
+            $(this).text('X');
+            $filter.css('width', ''); // Restablecer el width cuando el contenido se muestra
+        }
+    });
+}
+
 // #endregion
+
 
 // #region Definición de íconos usando L.divIcon
 var retailIcon = L.divIcon({
     html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="200"
+     data-aos-delay="0"
      data-aos-offset="0">
                <img src="assets/icons/map/retail.svg" alt="retail" width="23" height="23">
            </div>`,
     className: '', // Puedes usar tu propia clase CSS o dejarla vacía
     iconSize: [23, 23],
-    iconAnchor: [11.5, 23], // Ajusta el anclaje como en L.icon
-    popupAnchor: [0, -30]   // Ajusta el anclaje del popup como en L.icon
+    iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
+    popupAnchor: [12, -20]   // Ajusta el anclaje del popup como en L.icon
 });
 
 var restroomsIcon = L.divIcon({
     html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="400"
+     data-aos-delay="200"
      data-aos-offset="0">
                <img src="assets/icons/map/restrooms.svg" alt="restrooms" width="23" height="23">
            </div>`,
     className: '', // Puedes usar tu propia clase CSS o dejarla vacía
     iconSize: [23, 23],
-    iconAnchor: [11.5, 23],
-    popupAnchor: [0, -30]
+    iconAnchor: [0, 0],
+    popupAnchor: [12, -20]
 });
 
 var barIcon = L.divIcon({
     html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="800"
+     data-aos-delay="400"
      data-aos-offset="0">
                <img src="assets/icons/map/bar.svg" alt="bar" width="23" height="23">
            </div>`,
-    className: '', // Puedes usar tu propia clase CSS o dejarla vacía
+    className: '',
     iconSize: [23, 23],
-    iconAnchor: [11.5, 23],
-    popupAnchor: [0, -30]
+    iconAnchor: [0, 0],
+    popupAnchor: [12, -20]
 });
 
 var foodIcon = L.divIcon({
     html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="600"
+     data-aos-delay="100"
      data-aos-offset="0">
                <img src="assets/icons/map/food.svg" alt="food" width="23" height="23">
            </div>`,
-    className: '', // Puedes usar tu propia clase CSS o dejarla vacía
+    className: '',
     iconSize: [23, 23],
-    iconAnchor: [11.5, 23],
-    popupAnchor: [0, -30]
+    iconAnchor: [0, 0],
+    popupAnchor: [12, -20]
 });
 // #endregion
 
 // #region Marcadores y sus eventos
 var markers = {
     1: [
-        L.marker([608, 347], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([450, 258], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([278, 240], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+        L.marker([630, 325], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([472, 236], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([300, 218], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ],
     2: [
-        L.marker([556, 534], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([786, 825], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+        L.marker([578, 520], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([810, 811], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ],
     3: [
-        L.marker([640, 507], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([730, 770], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+        L.marker([662, 507], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([752, 770], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ],
     4: [
-        L.marker([728, 501], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); }),
-        L.marker([758, 751], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function() { this.openPopup(); }).on('mouseout', function() { this.closePopup(); })
+        L.marker([750, 501], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([780, 751], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ]
 };
+// Evento para ajustar el tamaño de los íconos en función del zoom
+map.on('zoom', function() {
+    var currentZoom = map.getZoom();
+
+    // Define el tamaño base y la escala para ajustar el tamaño de los íconos
+    var baseSize = 23; // Tamaño base de los íconos
+    var scale = Math.pow(1.5, currentZoom); // Escala para aumentar o reducir el tamaño según el zoom
+
+    // Actualiza el tamaño de los íconos según el nivel de zoom
+    document.querySelectorAll('.custom-icon img').forEach(icon => {
+        var newSize = baseSize * scale;
+        icon.style.width = newSize + 'px';
+        icon.style.height = newSize + 'px';
+    });
+});
+
 // #endregion
 
 
+
 // #region Manejo de la visibilidad de los marcadores al hacer clic en el filtro
+// Variable global para almacenar el último ID clickado y el estado de visibilidad de los marcadores
 var lastClickedId = null;
 var markersVisible = true;
 
-$(document).on('click', '.leaflet-control-filter tr', function() {
+// Evento para manejar el click en las filas de la tabla
+$(document).on('click', '.tabla-icons tr', function () {
     var markerId = $(this).data('marker-id');
-    var selectedMarkers = markers[markerId];
+    var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
 
     if (lastClickedId === markerId && !markersVisible) {
         // Si se hace clic en el mismo ícono y los marcadores están ocultos, mostrar todos los marcadores
-        $.each(markers, function(id, markerGroup) {
-            markerGroup.forEach(function(marker) {
+        $.each(markers, function (id, markerGroup) {
+            markerGroup.forEach(function (marker) {
                 map.addLayer(marker);
             });
         });
@@ -207,13 +181,13 @@ $(document).on('click', '.leaflet-control-filter tr', function() {
         lastClickedId = null;  // Resetear lastClickedId para permitir nueva selección
     } else {
         // Ocultar todos los marcadores
-        $.each(markers, function(id, markerGroup) {
-            markerGroup.forEach(function(marker) {
+        $.each(markers, function (id, markerGroup) {
+            markerGroup.forEach(function (marker) {
                 map.removeLayer(marker);
             });
         });
         // Mostrar solo los marcadores seleccionados
-        selectedMarkers.forEach(function(marker) {
+        selectedMarkers.forEach(function (marker) {
             map.addLayer(marker);
         });
         markersVisible = false; // Marcar que los marcadores están ocultos
@@ -222,22 +196,22 @@ $(document).on('click', '.leaflet-control-filter tr', function() {
 });
 
 // Nueva funcionalidad para filtrar por tabla al hacer clic en el span.header-text
-$(document).on('click', '.header-text', function() {
+$(document).on('click', '.header-text', function () {
     var table = $(this).closest('.leaflet-control-filter').find('table');
-    var markerIds = table.find('tr').map(function() {
+    var markerIds = table.find('tr').map(function () {
         return $(this).data('marker-id');
     }).get();
 
     // Ocultar todos los marcadores antes de aplicar el nuevo filtro
-    $.each(markers, function(id, markerGroup) {
-        markerGroup.forEach(function(marker) {
+    $.each(markers, function (id, markerGroup) {
+        markerGroup.forEach(function (marker) {
             map.removeLayer(marker);
         });
     });
 
     // Mostrar solo los marcadores correspondientes a la tabla seleccionada
-    markerIds.forEach(function(markerId) {
-        markers[markerId].forEach(function(marker) {
+    markerIds.forEach(function (markerId) {
+        markers[markerId].forEach(function (marker) {
             map.addLayer(marker);
         });
     });
@@ -245,4 +219,25 @@ $(document).on('click', '.header-text', function() {
     markersVisible = false; // Marcar que los marcadores están ocultos
     lastClickedId = 'table-' + table.index(); // Actualizar lastClickedId al último marcador clicado
 });
+
+// Evento para manejar la activación visual de las filas
+document.querySelectorAll('.tabla-icons tr').forEach(row => {
+    row.addEventListener('click', function () {
+        // Si la fila ya tiene la clase 'active', se la quita
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else {
+            // Si no, se la quita de todas las filas y la añade solo a la fila actual
+            document.querySelectorAll('.tabla-icons tr.active').forEach(activeRow => {
+                activeRow.classList.remove('active');
+            });
+
+            // Añade la clase 'active' solo a la fila clickeada
+            this.classList.add('active');
+        }
+    });
+});
+
+
+
 // #endregion
