@@ -4215,9 +4215,7 @@ table {
   .container-title {
     width: 700px;
   }
-  .container-text {
-    width: 1100px;
-  }
+
   .banner-fixed {
     height: 80vh;
     background-position: center;
@@ -4233,6 +4231,11 @@ table {
   }
   .prompt .content-prompt {
     margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container-text {
+    width: 1100px;
   }
 }
 
