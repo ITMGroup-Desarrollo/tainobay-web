@@ -45,22 +45,28 @@ if (!isMobile) {
 // #region Evento para minimizar o expandir el contenido del filtro
 if(!isMobile){
     $(document).on('click', '.minimize-btn', function () {
-        var $filter = $(this).closest('.leaflet-control-filter');
+        var $minimizeBtn = $(this); // Store the minimize-btn element
+        var $filter = $minimizeBtn.closest('.leaflet-control-filter');
         var $filterContent = $filter.find('.filter-content');
         var $headerText = $filter.find('.header-text');
-    
-        if ($filterContent.is(':visible')) {
+
+        // Toggle the "show" and "hide" classes on the minimize-btn element
+        $minimizeBtn.toggleClass('show').toggleClass('hide');
+
+        if ($minimizeBtn.hasClass('hide')) {
             $filterContent.hide();
             $headerText.hide(); // Ocultar el span con clase header-text
-            $(this).text('☰');
+            $minimizeBtn.text('☰');
             $filter.css('width', 'fit-content'); // Aplicar width: fit-content cuando se oculta
         } else {
             $filterContent.show();
             $headerText.show(); // Mostrar el span con clase header-text
-            $(this).text('X');
+            $minimizeBtn.text('X');
             $filter.css('width', ''); // Restablecer el width cuando el contenido se muestra
         }
     });
+
+
 }
 
 // #endregion
@@ -123,21 +129,111 @@ var foodIcon = L.divIcon({
 // #region Marcadores y sus eventos
 var markers = {
     1: [
-        L.marker([630, 325], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
-        L.marker([472, 236], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
-        L.marker([300, 218], { icon: retailIcon }).addTo(map).bindPopup('Find our store.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        L.marker([630, 325], { icon: retailIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([472, 236], { icon: retailIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([300, 218], { icon: retailIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ],
     2: [
-        L.marker([578, 520], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
-        L.marker([810, 811], { icon: restroomsIcon }).addTo(map).bindPopup('Find the restrooms.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        L.marker([578, 520], { icon: restroomsIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([810, 811], { icon: restroomsIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ],
     3: [
-        L.marker([662, 507], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
-        L.marker([752, 770], { icon: barIcon }).addTo(map).bindPopup('Find the bar.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        L.marker([661, 495], { icon: barIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([751, 756], { icon: barIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ],
     4: [
-        L.marker([750, 501], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
-        L.marker([780, 751], { icon: foodIcon }).addTo(map).bindPopup('Find the food.').on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        L.marker([750, 487], { icon: foodIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        L.marker([780, 737], { icon: foodIcon }).addTo(map).bindPopup(`
+            <div style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Find our store</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
     ]
 };
 // Evento para ajustar el tamaño de los íconos en función del zoom
@@ -237,7 +333,26 @@ document.querySelectorAll('.tabla-icons tr').forEach(row => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    // Selecciona todas las tablas con la clase 'tabla-icons'
+    var tablas = document.querySelectorAll('.tabla-icons');
 
-
+    if(!isMobile){
+        tablas.forEach(function(tabla) {
+            // Cuenta el número de filas en el tbody de la tabla
+            var filas = tabla.querySelectorAll('tbody tr').length;
+    
+            // Aplica el estilo CSS si hay más de 5 filas
+            if (filas > 6) {
+                tabla.querySelector('tbody').style.display = 'grid';
+                tabla.querySelector('tbody').style.gridTemplateColumns = 'repeat(2, 1fr)';
+            } else {
+                // Asegúrate de que se use el estilo original si hay 5 o menos filas
+                tabla.querySelector('tbody').style.display = 'block';
+                tabla.querySelector('tbody').style.gridTemplateColumns = '';
+            }
+        });
+    }
+});
 
 // #endregion

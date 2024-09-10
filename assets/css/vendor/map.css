@@ -4,12 +4,19 @@ section.map-section {
     margin-bottom: 10rem;
 }
 
-/* Estilos para el control personalizado */
+button.minimize-btn.show{
+    font-size: larger;
+    margin: -25px -15px 0px 10px;
+}
+    
 .leaflet-control-filter {
     background: white;
     padding: 5px 5px 20px 5px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 1rem 0;
+    opacity: 80%;
+    z-index: 1001;
 }
 
 .leaflet-control-filter table {
@@ -31,6 +38,12 @@ section.map-section {
     cursor: pointer;
 }
 
+/*
+.tabla-icons tbody{
+    display: grid;
+    grid-template-columns: repeat(2,20vh);
+}
+    */
 /* Estilo para el hover de la fila */
 .leaflet-control-filter tr:hover {
     background-color: #f0f0f0;
@@ -41,6 +54,8 @@ section.map-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: -1rem;
+
 }
 
 .minimize-btn {
@@ -54,32 +69,79 @@ section.map-section {
     margin-top: 1.5rem;
 }
 
-.filter-header {
-    margin-bottom: -1rem;
-}
+
 
 .header-text {
     cursor: pointer;
+    padding-left: 5px;
 }
 
 .leaflet-control-filter tr.active {
     background-color: #ddd;
 }
 
-
-.filter-container {
-    position: absolute;
-    z-index: 1001;
-    left: 15%;
-    top: 6%;
+td:first-child {
+    text-align: center;
 }
 
-.leaflet-control-filter {
-    margin: 1rem 0;
-    opacity: 80%;
+@media (min-width: 769px) {
+    .filter-container {
+        display: grid;
+        
+        position: absolute;
+        z-index: 1001;
+        gap: 10px;
+        left: 15%;
+        top: 35%;
+        grid-template-areas:
+            "a . ."
+            "b c d";
+        grid-template-rows: auto auto;
+        /* Ajusta las filas según el contenido */
+        grid-template-columns: auto auto auto;
+        /* Ajusta las columnas según el contenido */
+        overflow: visible;
+        /* Permite el desbordamiento si los elementos son grandes */
+    }
+
+    .filter-container .service {
+        grid-area: a;
+        height: fit-content;
+        align-self: end;
+        z-index: 999;
+    }
+
+    .filter-container .restaurants {
+        grid-area: b;
+        height: fit-content;
+        align-self: end;
+
+    }
+
+    .filter-container .fun {
+        grid-area: c;
+        height: fit-content;
+        align-self: end;
+    }
+
+    .filter-container .shop {
+        grid-area: d;
+        height: fit-content;
+        align-self: end;
+    }
 }
+
+@media (max-height: 769px) {
+    .filter-container {
+        left: 17%;
+        top: 5%;
+    }
+
+}
+
 .custom-icon img {
-    transition: width 0.3s ease, height 0.3s ease; /* Ajusta la duración y tipo de transición según tu preferencia */
+    transition: width 0.2s ease, height 0.2s ease;
+    /* Ajusta la duración y tipo de transición según tu preferencia */
 }
 
 @media (max-width: 768px) {
@@ -127,12 +189,14 @@ section.map-section {
         display: none;
     }
 }
+
 @media (max-width: 367px) {
-    .filter-container{
-       grid-template-columns: 1fr; 
+    .filter-container {
+        grid-template-columns: 1fr;
     }
+
     div#map {
         margin: 0 1rem 1rem 1rem;
     }
-    
+
 }
