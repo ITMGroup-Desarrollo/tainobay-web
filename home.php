@@ -68,14 +68,15 @@ include_once("include/lang/reviews.php");
         <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
-                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?= HOME_TEXT_WELCOME[0] ?></span>
-                        <span class="d-flex justify-content-end gap-3">
+                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-md-start"><?= HOME_TEXT_WELCOME[0] ?></span>
+                        <span class="d-none d-lg-flex justify-content-end gap-3">
                             <span class="text-style-3 lh-1"><?= HOME_TEXT_WELCOME[1] ?></span> <?= HOME_TEXT_WELCOME[2] ?>
                         </span>
+
+                        <span class="lh-1 d-lg-none"><?= HOME_TEXT_WELCOME[1] ?> <?= HOME_TEXT_WELCOME[2] ?></span>
                     </h2>
                 </div>
-                <div class="container-text mx-auto px-5">
-
+                <div class="container-text mx-auto">
                     <p class="text-black black text-style-13"><?= HOME_TEXT_WELCOME[3] ?></p>
                     <p class="text-black black text-style-13"><?= HOME_TEXT_WELCOME[4] ?></p>
                 </div>

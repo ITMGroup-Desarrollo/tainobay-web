@@ -23,7 +23,7 @@
   position: relative;
   z-index: 70;
   top: 0;
-  right: -1rem;
+  /* right: -1rem; */
   overflow: hidden;
   transform: scale(1);
   display: block;
