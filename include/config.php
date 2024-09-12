@@ -7,8 +7,9 @@ $cache_duration = 60 * 1; // 60 * 60 hora
 header("Cache-Control: public, max-age=$cache_duration");
 header("Expires: " . gmdate("D, d M Y H:i:s", time() + $cache_duration) . " GMT");
 
-$carpetaRaiz = "/tainobay/";
-$path = 'http://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
+$carpetaRaiz = "/";
+$path = 'https://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
+
 $page = basename($_SERVER['SCRIPT_NAME']);
 //Detectar idioma
 if (isset($_GET['lang'])) {
