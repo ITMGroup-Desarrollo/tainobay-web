@@ -55,15 +55,40 @@ if(!isMobile){
 
         if ($minimizeBtn.hasClass('hide')) {
             $filterContent.hide();
-            $headerText.hide(); // Ocultar el span con clase header-text
             $minimizeBtn.text('☰');
-            $filter.css('width', 'fit-content'); // Aplicar width: fit-content cuando se oculta
+            $filter.css('width');
         } else {
             $filterContent.show();
-            $headerText.show(); // Mostrar el span con clase header-text
-            $minimizeBtn.text('X');
-            $filter.css('width', ''); // Restablecer el width cuando el contenido se muestra
+            $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">');
         }
+        // Selecciona los elementos
+const hideElement = document.querySelector('.service .hide');
+const headerText = document.querySelector('.service .header-text');
+
+// Comprueba si el elemento 'hide' está presente y tiene la clase 'hide'
+if (hideElement && hideElement.classList.contains('hide')) {
+    headerText.style.paddingRight = '0.7rem';
+}
+// Selecciona todos los elementos .service dentro de .filter-container
+const serviceElements = document.querySelectorAll('.filter-container .service');
+
+serviceElements.forEach(service => {
+    // Busca un hijo con la clase .hide dentro del .service actual
+    const hideChild = service.querySelector('.hide');
+    
+    // Si se encuentra un hijo con la clase .hide, aplica el estilo
+    if (hideChild) {
+        service.style.position = 'absolute'; // Asegúrate de que tenga 'position: absolute' para poder moverlo
+        service.style.bottom = '60vh'; // Mueve el .service a 60vh
+    } else {
+        // Si no tiene la clase .hide, asegúrate de restaurar a su posición original
+        service.style.position = 'absolute';
+        service.style.bottom = '40vh'; // Estilo por defecto
+        headerText.style.paddingRight = '3rem';
+    }
+});
+
+
     });
 
 
@@ -130,7 +155,7 @@ var foodIcon = L.divIcon({
 var markers = {
     1: [
         L.marker([630, 325], { icon: retailIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
                 <p>Et dolor deserunt esse cupidatat nostrud est nulla. Qui occaecat dolor aliquip aliqua nulla. Pariatur occaecat dolor labore laborum.</p>
                 <a href="https://example.com" target="_blank">
@@ -139,103 +164,131 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        }),
         L.marker([472, 236], { icon: retailIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Qui adipisicing do ut pariatur labore commodo. Consequat est sit anim anim cupidatat velit sit voluptate labore veniam non. Adipisicing et magna sit sunt minim commodo quis duis qui in tempor nisi.</p>
+                <p>Qui adipisicing do ut pariatur labore commodo.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        }),
         L.marker([300, 218], { icon: retailIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Reprehenderit eiusmod esse amet duis. Quis ullamco laboris duis id. Anim consequat Lorem Lorem consectetur velit est sunt est et aute minim occaecat.</p>
+                <p>Reprehenderit eiusmod esse amet duis.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        })
     ],
     2: [
         L.marker([578, 520], { icon: restroomsIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Aliquip exercitation ullamco deserunt Lorem sit ea culpa adipisicing quis laborum laboris. Excepteur dolore veniam et adipisicing consectetur occaecat ipsum deserunt et veniam Lorem. Ullamco ut est id id duis.</p>
+                <p>Aliquip exercitation ullamco deserunt Lorem sit ea culpa.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        }),
         L.marker([810, 811], { icon: restroomsIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Consectetur sit est excepteur aute laborum amet minim pariatur ullamco cillum consectetur enim. Ad aliqua esse labore enim fugiat magna nulla minim cillum id aliqua labore velit laborum. Ex aute in ipsum sunt aliquip commodo est reprehenderit. Consequat est excepteur veniam pariatur anim laboris tempor commodo mollit mollit.</p>
+                <p>Consectetur sit est excepteur aute laborum.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        })
     ],
     3: [
         L.marker([661, 495], { icon: barIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Veniam incididunt commodo veniam commodo officia. Nulla eu enim nostrud Lorem non id ex ea nisi adipisicing quis do. Est tempor labore officia commodo. Exercitation nisi deserunt sit officia voluptate incididunt fugiat minim tempor minim reprehenderit. Sit eu Lorem tempor proident ipsum exercitation. Sit adipisicing do qui dolor fugiat voluptate excepteur enim sint eu exercitation reprehenderit non.</p>
+                <p>Veniam incididunt commodo veniam commodo officia.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        }),
         L.marker([751, 756], { icon: barIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Veniam ea in veniam quis. Nulla deserunt irure dolor incididunt consequat cillum ea consectetur ex. Consectetur velit do anim anim. Est enim magna velit mollit velit laborum irure pariatur quis officia esse. Ut magna ad laborum ut veniam dolor velit duis qui dolore. Minim cupidatat dolor est qui ex incididunt ea quis esse consequat.</p>
+                <p>Veniam ea in veniam quis.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        })
     ],
     4: [
         L.marker([750, 487], { icon: foodIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris. Adipisicing ex duis enim incididunt voluptate labore nostrud mollit nostrud excepteur. Pariatur in in nisi ea ex et. Commodo adipisicing nostrud aliqua deserunt sit minim culpa et ex fugiat reprehenderit nulla Lorem. Ut velit mollit qui deserunt nulla veniam esse reprehenderit ullamco aute ex sit.</p>
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); }),
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        }),
         L.marker([780, 737], { icon: foodIcon }).addTo(map).bindPopup(`
-            <div style="text-align: center;">
+            <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Excepteur elit nostrud voluptate laboris esse irure qui dolore officia dolor dolore consequat aliquip dolor. Amet commodo et labore dolor aliqua nostrud cupidatat sint id Lorem. Ex nulla aliqua labore voluptate incididunt duis. Nulla veniam nulla sunt pariatur. Magna voluptate officia enim velit aute dolore est nisi. Elit excepteur officia ad amet est ex commodo amet ipsum deserunt aute.</p>
+                <p>Excepteur elit nostrud voluptate laboris esse irure qui dolore.</p>
                 <a href="https://example.com" target="_blank">
                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
                         Visit our store
                     </button>
                 </a>
             </div>
-        `).on('mouseover', function () { this.openPopup(); }).on('mouseout', function () { this.closePopup(); })
+        `).on('click', function (e) {
+            this.openPopup();
+            map.setView(this.getLatLng(), map.getZoom(), { animate: true, pan: { duration: 1 } });
+        })
     ]
 };
+
 // Evento para ajustar el tamaño de los íconos en función del zoom
 map.on('zoom', function() {
     var currentZoom = map.getZoom();
@@ -348,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 tabla.querySelector('tbody').style.gridTemplateColumns = 'repeat(2, 1fr)';
             } else {
                 // Asegúrate de que se use el estilo original si hay 5 o menos filas
-                tabla.querySelector('tbody').style.display = 'block';
+                tabla.querySelector('tbody').style.display = 'table-row-group';
                 tabla.querySelector('tbody').style.gridTemplateColumns = '';
             }
         });

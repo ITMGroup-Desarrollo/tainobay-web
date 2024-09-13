@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-  <ellipse fill="rgb(88, 36, 0)" transform="matrix(0.9,0,0,0.9,12.4,9.8)" cx="152.2" cy="156.8" rx="165.8" ry="165.2">
+  <ellipse fill="#ffffff" transform="matrix(0.9,0,0,0.9,12.4,9.8)" cx="152.2" cy="156.8" rx="165.8" ry="165.2">
         </ellipse>
     <defs>
         <style>
             .cls-1 {
-        fill: #ff7000ff;
+        fill: #1c355e;
         stroke-width: 0px;
       }
         </style>

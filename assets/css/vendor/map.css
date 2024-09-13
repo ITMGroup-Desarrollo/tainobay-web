@@ -1,3 +1,6 @@
+:root {
+    --blog-icono: #1c355e;
+}
 section.map-section {
     display: flex;
     justify-content: center;
@@ -5,18 +8,18 @@ section.map-section {
 }
 
 button.minimize-btn.show{
-    font-size: larger;
     margin: -25px -15px 0px 10px;
 }
-    
+
 .leaflet-control-filter {
     background: white;
     padding: 5px 5px 20px 5px;
-    border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px ;
     margin: 1rem 0;
-    opacity: 80%;
+    opacity: 90%;
     z-index: 1001;
+    color: var(--blog-icono);
 }
 
 .leaflet-control-filter table {
@@ -30,20 +33,17 @@ button.minimize-btn.show{
 }
 
 .leaflet-control-filter img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .tabla-icons tr {
     cursor: pointer;
 }
 
-/*
 .tabla-icons tbody{
     display: grid;
-    grid-template-columns: repeat(2,20vh);
 }
-    */
 /* Estilo para el hover de la fila */
 .leaflet-control-filter tr:hover {
     background-color: #f0f0f0;
@@ -53,7 +53,7 @@ button.minimize-btn.show{
 .filter-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     margin-bottom: -1rem;
 
 }
@@ -73,7 +73,9 @@ button.minimize-btn.show{
 
 .header-text {
     cursor: pointer;
-    padding-left: 5px;
+    padding-left: 1rem;
+    font-weight: bolder;
+    width: max-content;
 }
 
 .leaflet-control-filter tr.active {
@@ -83,25 +85,72 @@ button.minimize-btn.show{
 td:first-child {
     text-align: center;
 }
-
+.leaflet-popup-content-wrapper {
+    height: auto !important;
+    width: 15vw !important;
+}
+.leaflet-popup-content p {
+    margin: 0 0 1rem 0 !important;
+}
+.leaflet-popup-content {
+    margin: 5px 19px 10px !important;
+}
 @media (min-width: 769px) {
-    .filter-container {
-        display: grid;
-        
+    .filter-container p{
+font-size: 10px;
+    }
+    .filter-container span{
+font-size: 10px;
+    }
+    .filter-container td{
+font-size: 10px;
+    }
+    .filter-container .fun{
         position: absolute;
+        left: 17vw;
+        bottom: 0%;
+    }
+    .filter-container .shop{
+        position: absolute;
+        left: 32vw;
+        bottom: 0%;
+    }
+    .filter-container .restaurants{
+        position: absolute;
+        left: 80%;
+        bottom: 0%;
+    }
+    .filter-container .service{
+        position: absolute;
+        bottom: 40vh;
+    }
+    .leaflet-control-filter{
+        width: fit-content;
+    }
+    /*
+    .restaurants .header-text {
+        padding-right: 1rem;
+    }
+        */
+    .service .header-text {
+        padding-right: 1rem;
+    }
+    .filter-container {
         z-index: 1001;
+        position: absolute;
         gap: 10px;
         left: 15%;
         top: 35%;
+        /*
+        display: grid;
+        
         grid-template-areas:
             "a . ."
             "b c d";
         grid-template-rows: auto auto;
-        /* Ajusta las filas según el contenido */
         grid-template-columns: auto auto auto;
-        /* Ajusta las columnas según el contenido */
         overflow: visible;
-        /* Permite el desbordamiento si los elementos son grandes */
+        */
     }
 
     .filter-container .service {
@@ -118,11 +167,6 @@ td:first-child {
 
     }
 
-    .filter-container .fun {
-        grid-area: c;
-        height: fit-content;
-        align-self: end;
-    }
 
     .filter-container .shop {
         grid-area: d;
@@ -133,8 +177,21 @@ td:first-child {
 
 @media (max-height: 769px) {
     .filter-container {
-        left: 17%;
-        top: 5%;
+        left: 15%;
+        bottom: 0%;
+    }
+    .filter-container .service{
+        position: absolute;
+        left: 2vw;
+        bottom: 50vh;
+    }
+    .filter-container .restaurants{
+        position: absolute;
+        left: 2vw;
+    }
+    .filter-container .fun{
+        position: absolute;
+        left: 18vw;
     }
 
 }
@@ -145,6 +202,12 @@ td:first-child {
 }
 
 @media (max-width: 768px) {
+    .header-text {
+        padding: 5px 10px;
+    }
+    .filter-header {
+        justify-content: center;
+    }
     section.map-section {
         margin-top: 10rem;
         margin-bottom: 3rem;
@@ -168,7 +231,7 @@ td:first-child {
     }
 
     .leaflet-control-filter {
-        margin: 1rem 1rem;
+        margin: 0.5rem 0.5rem;
         opacity: 80%;
     }
 

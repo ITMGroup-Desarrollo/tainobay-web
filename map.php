@@ -34,11 +34,11 @@ include_once("include/lang/{$idioma}-map.php");
         </section>
         <!-- Content -->
         <section class="shock-section map-section">
-            <div class="filter-container" >
-                <div class="leaflet-control-filter service" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <div class="filter-container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
+                <div class="leaflet-control-filter service" >
                     <div class="filter-header">
-                        <span class="header-text">Port Experience</span>
-                        <button class="minimize-btn show">X</button>
+                        <span class="header-text">PORT EXPERIENCE</span>
+                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -77,10 +77,10 @@ include_once("include/lang/{$idioma}-map.php");
                         </table>
                     </div>
                 </div>
-                <div class="leaflet-control-filter restaurants" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="leaflet-control-filter restaurants" >
                     <div class="filter-header">
-                        <span class="header-text">Restaurants</span>
-                        <button class="minimize-btn show">X</button>
+                        <span class="header-text">RESTAURANTS</span>
+                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -135,10 +135,11 @@ include_once("include/lang/{$idioma}-map.php");
                         </table>
                     </div>
                 </div>
-                <div class="leaflet-control-filter fun" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                
+                <div class="leaflet-control-filter fun" >
                     <div class="filter-header">
-                        <span class="header-text">Entertainment</span>
-                        <button class="minimize-btn show">X</button>
+                        <span class="header-text">ENTERTAINMENT</span>
+                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -153,10 +154,11 @@ include_once("include/lang/{$idioma}-map.php");
                         </table>
                     </div>
                 </div>
-                <div class="leaflet-control-filter shop" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <div class="leaflet-control-filter shop" >
                     <div class="filter-header">
-                        <span class="header-text">Shopping Experience</span>
-                        <button class="minimize-btn show">X</button>
+                        <span class="header-text">SHOPPING EXPERIENCE</span>
+                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close">
+                        </button>
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
