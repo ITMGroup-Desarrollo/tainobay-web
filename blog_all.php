@@ -33,7 +33,7 @@ include_once("include/lang/{$idioma}-blog.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
+                    <div class="banner-fixed" style="background-image:url('assets/images/blog/header-blog-port-taino-bay.webp')">
 
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->

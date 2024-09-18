@@ -4,22 +4,6 @@ include_once("include/config.php");
 include_once("include/lang/{$idioma}-single-port-experience.php");
 include_once("include/lang/{$idioma}-port-experience.php");
 
-// $currentUri = $_SERVER['REQUEST_URI'];
-// $currentMenu = null;
-// $point = isset($_GET['point']) ? $_GET['point'] : '';
-// $single_point = explode('.', $point);
-
-// $currentUri = $single_point[0];
-// if ($currentUri == null) {
-//   header("Location: port-experience");
-//   die();
-// }
-// foreach ($points as $point) {
-//   if ($currentUri == strtolower($point['path'])) {
-//     $currentMenu = $point;
-//     break;
-//   }
-// }
 $currentUri = explode('.', $_GET['point'] ?? '')[0] ?? '';
 
 if (!$currentUri) {
@@ -81,7 +65,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
           <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
 
           </div> -->
-          <img src="<?= empty($currentMenu['banner']) ? 'assets/images/media/bg-faqs.jpg' : ("assets/images/port-experience/{$currentMenu['banner']}") ?>" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+          <img src="<?= empty($currentMenu['banner']) ? 'assets/images/media/bg-faqs.jpg' : ("assets/images/port-experience/{$currentMenu['banner']}") ?>" class="image vh-65 fit-cover brightness-8" alt="This is an example description for this item." />
 
         </div>
         <!-- Overlay -->
