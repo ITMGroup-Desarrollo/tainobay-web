@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" href="login.css" media="screen">
+
+
+</head>
+
+<body style="position: relative;">
+	<div class="img-border-container left">
+		<picture>
+			<!-- Imagen para pantallas grandes -->
+			<source srcset="img/pleca-izquierda.png" class="img-border" media="(min-width: 769px)">
+			<!-- Imagen para pantallas pequeñas -->
+			<img src="img/wifi-i.jpg" alt="Imagen WiFi" class="img-border">
+		</picture>
+	</div>
+	<div class="login">
+		<!--$(if chap-id)-->
+		<form name="sendin" action="$(link-login-only)" method="post">
+			<!-- <input type="hidden" name="username" /> -->
+			<input type="hidden" name="password" />
+			<input type="hidden" name="dst" value="www.porttainobay.com" />
+			<input type="hidden" name="popup" value="true" />
+		</form>
+
+		<script type="text/javascript" src="md5.js"></script>
+		<script type="text/javascript">
+			//<!--
+					function doLogin() {
+				document.sendin.username.value = document.login.username.value;
+				document.sendin.password.value = hexMD5('$(chap-id)' + document.login.username.value + '$(chap-challenge)');
+				document.sendin.submit();
+				return false;
+					}
+			//-->
+		</script>
+		<!--$(endif)-->
+
+		<form class="vertical-form" name="login" action="$(link-login-only)" method="post" background="#A03472" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+			<div style="text-align: center;">
+				<a href="https://www.instagram.com/caborojoport" class="text-social"	style="text-decoration: none;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" class="icon-social" viewBox="0 0 24 24">
+						<path fill="currentColor"
+							d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+					</svg><span style="display: block;">@caborojoport</span>
+				</a>
+			</div>
+			<input type="hidden" name="dst" value="www.porttainobay.com" />
+			<input type="hidden" name="popup" value="true" />
+			<div style="margin:0;padding:0;display:inline"></div>
+			<legend>
+				<!--<img class="logo" src="img/logo.jpg" />-->
+				<aqui se puede escribir>
+			</legend>
+			<input autocomplete="on" name="username" type="text" placeholder=" Access Code" size="15" />
+			<!--<input autocomplete="off" name="password" type="hidden" label="false" value="21" placeholder=" Password" size="15" />-->
+			<input name="submit" type="submit" value=" " />
+
+		</form>
+
+		<script type="text/javascript">
+			//<!--
+				document.login.username.focus();
+			//-->
+		</script>
+		<script type="text/javascript">
+			document.oncontextmenu = function () { return false; }
+		</script>
+	</div>
+	<div class="img-border-container right">
+		<picture>
+			<!-- Imagen para pantallas grandes -->
+			<source srcset="img/pleca-derecha.jpg" class="img-border" media="(min-width: 769px)">
+			<!-- Imagen para pantallas pequeñas -->
+			<img src="img/wifi-d.jpg" alt="Imagen WiFi" class="img-border">
+		</picture>
+	</div>
+</body>
+
+</html>
