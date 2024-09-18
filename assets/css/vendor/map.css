@@ -1,5 +1,6 @@
 :root {
     --blog-icono: #1c355e;
+    --blog-yellow: #f5a23a;
 }
 section.map-section {
     display: flex;
@@ -95,6 +96,9 @@ td:first-child {
 .leaflet-popup-content {
     margin: 5px 19px 10px !important;
 }
+.minimize-btn{
+color: var(--blog-yellow);
+}
 @media (min-width: 769px) {
     .filter-container p{
 font-size: 10px;
@@ -140,7 +144,7 @@ font-size: 10px;
         position: absolute;
         gap: 10px;
         left: 15%;
-        top: 35%;
+        top: 95%;
         /*
         display: grid;
         
@@ -183,7 +187,7 @@ font-size: 10px;
     .filter-container .service{
         position: absolute;
         left: 2vw;
-        bottom: 50vh;
+        bottom: 52vh;
     }
     .filter-container .restaurants{
         position: absolute;

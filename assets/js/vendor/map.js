@@ -31,7 +31,7 @@ if (isMobile) {
 // #endregion
 
 // #region Agregar la imagen del mapa
-L.imageOverlay('assets/images/media/Mapa-Taino-Bay.jpg', bounds).addTo(map);
+L.imageOverlay('assets/images/media/Mapa-Taino-Bay-efectos.jpg', bounds).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
@@ -43,7 +43,7 @@ if (!isMobile) {
 // #endregion
 
 // #region Evento para minimizar o expandir el contenido del filtro
-if(!isMobile){
+if (!isMobile) {
     $(document).on('click', '.minimize-btn', function () {
         var $minimizeBtn = $(this); // Store the minimize-btn element
         var $filter = $minimizeBtn.closest('.leaflet-control-filter');
@@ -54,11 +54,11 @@ if(!isMobile){
         $minimizeBtn.toggleClass('show').toggleClass('hide');
 
         if ($minimizeBtn.hasClass('hide')) {
-            $filterContent.hide();
+            $filterContent.slideUp(200); // Use slideUp with a 300ms transition
             $minimizeBtn.text('☰');
-            $filter.css('width');
+            $filter.css('width'); // Optional, depending on other style logic
         } else {
-            $filterContent.show();
+            $filterContent.slideDown(200); // Use slideDown with a 300ms transition
             $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">');
         }
         // Selecciona los elementos
@@ -83,8 +83,8 @@ serviceElements.forEach(service => {
     } else {
         // Si no tiene la clase .hide, asegúrate de restaurar a su posición original
         service.style.position = 'absolute';
-        service.style.bottom = '40vh'; // Estilo por defecto
-        headerText.style.paddingRight = '3rem';
+        service.style.bottom = '55vh'; // Estilo por defecto
+        headerText.style.paddingRight = '1rem';
     }
 });
 
