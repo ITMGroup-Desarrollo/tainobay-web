@@ -2,16 +2,26 @@
     --blog-icono: #1c355e;
     --blog-yellow: #f5a23a;
 }
-div#map{
+
+div#map {
     border-radius: 10px;
 }
+
 section.map-section {
     display: flex;
     justify-content: center;
     margin-bottom: 10rem;
 }
 
-button.minimize-btn.show{
+button.minimize-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--blog-yellow);
+}
+
+button.minimize-btn.show {
     margin: -25px -15px 0px 10px;
 }
 
@@ -19,7 +29,7 @@ button.minimize-btn.show{
     background: white;
     padding: 5px 5px 20px 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px ;
+    border-radius: 15px;
     margin: 1rem 0;
     opacity: 90%;
     z-index: 1001;
@@ -41,17 +51,13 @@ button.minimize-btn.show{
     height: 20px;
 }
 
-.tabla-icons tr {
-    cursor: pointer;
-}
-
-.tabla-icons tbody{
-    display: grid;
-}
-/* Estilo para el hover de la fila */
 .leaflet-control-filter tr:hover {
     background-color: #f0f0f0;
     cursor: pointer;
+}
+
+.leaflet-control-filter tr.active {
+    background-color: #ddd;
 }
 
 .filter-header {
@@ -59,21 +65,11 @@ button.minimize-btn.show{
     align-items: center;
     justify-content: end;
     margin-bottom: -1rem;
-
-}
-
-.minimize-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 .filter-content {
     margin-top: 1.5rem;
 }
-
-
 
 .header-text {
     cursor: pointer;
@@ -82,98 +78,86 @@ button.minimize-btn.show{
     width: max-content;
 }
 
-.leaflet-control-filter tr.active {
-    background-color: #ddd;
+.tabla-icons tr {
+    cursor: pointer;
+}
+
+.tabla-icons tbody {
+    display: grid;
 }
 
 td:first-child {
     text-align: center;
 }
+
 .leaflet-popup-content-wrapper {
     height: auto !important;
     width: 15vw !important;
 }
-.leaflet-popup-content p {
-    margin: 0 0 1rem 0 !important;
-}
+
 .leaflet-popup-content {
     margin: 5px 19px 10px !important;
 }
-.minimize-btn{
-color: var(--blog-yellow);
+
+.leaflet-popup-content p {
+    margin: 0 0 1rem 0 !important;
 }
+
 @media (min-width: 769px) {
-    .filter-container p{
-font-size: 10px;
+    .filter-container p,
+    .filter-container span,
+    .filter-container td {
+        font-size: 10px;
     }
-    .filter-container span{
-font-size: 10px;
-    }
-    .filter-container td{
-font-size: 10px;
-    }
-    .filter-container .fun{
-        position: absolute;
-        left: 17vw;
-        bottom: 0%;
-    }
-    .filter-container .shop{
-        position: absolute;
-        left: 32vw;
-        bottom: 0%;
-    }
-    .filter-container .restaurants{
-        position: absolute;
-        left: 80%;
-        bottom: 0%;
-    }
-    .filter-container .service{
-        position: absolute;
-        bottom: 40vh;
-    }
-    .leaflet-control-filter{
-        width: fit-content;
-    }
-    /*
-    .restaurants .header-text {
-        padding-right: 1rem;
-    }
-        */
-    .service .header-text {
-        padding-right: 1rem;
-    }
+
     .filter-container {
         z-index: 1001;
         position: absolute;
         gap: 10px;
         left: 15%;
         top: 95%;
-        /*
-        display: grid;
-        
-        grid-template-areas:
-            "a . ."
-            "b c d";
-        grid-template-rows: auto auto;
-        grid-template-columns: auto auto auto;
-        overflow: visible;
-        */
+    }
+
+    .filter-container .fun {
+        position: absolute;
+        left: 17vw;
+        bottom: 0%;
+    }
+
+    .filter-container .shop {
+        position: absolute;
+        left: 32vw;
+        bottom: 0%;
+    }
+
+    .filter-container .restaurants {
+        position: absolute;
+        left: 80%;
+        bottom: 0%;
     }
 
     .filter-container .service {
+        position: absolute;
+        bottom: 40vh;
         grid-area: a;
         height: fit-content;
         align-self: end;
         z-index: 999;
     }
 
+    .leaflet-control-filter {
+        width: fit-content;
+    }
+
+    .service .header-text {
+        padding-right: 1rem;
+    }
+
     .filter-container .restaurants {
         grid-area: b;
         height: fit-content;
         align-self: end;
-
     }
-
 
     .filter-container .shop {
         grid-area: d;
@@ -181,6 +165,7 @@ font-size: 10px;
         align-self: end;
     }
 }
+
 
 @media (max-height: 769px) {
     .filter-container {
@@ -202,7 +187,6 @@ font-size: 10px;
     }
 
 }
-
 .custom-icon img {
     transition: width 0.2s ease, height 0.2s ease;
     /* Ajusta la duración y tipo de transición según tu preferencia */
@@ -213,25 +197,30 @@ font-size: 10px;
         height: auto !important;
         width: auto !important;
     }
+
     .leaflet-popup-content {
         width: auto !important;
         min-width: 8rem !important;
     }
+
     .header-text {
         padding: 5px 10px;
     }
+
     .filter-header {
         justify-content: center;
     }
+
     section.map-section {
         margin-top: 10rem;
         margin-bottom: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
 
-    .leaflet-control-filter.service.leaflet-control {
-        opacity: 100%;
-    }
-
+    .leaflet-control-filter.service.leaflet-control,
     .leaflet-control-filter.restaurants.leaflet-control {
         opacity: 100%;
     }
@@ -250,15 +239,6 @@ font-size: 10px;
         opacity: 80%;
     }
 
-    section.map-section {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        justify-content: center;
-        margin-bottom: 3rem;
-        margin-top: 3rem;
-    }
-
     div#map {
         margin: 0 1rem 1rem 1rem;
     }
@@ -266,11 +246,16 @@ font-size: 10px;
     .minimize-btn {
         display: none;
     }
+    section.map-section {
+        margin-top: 2rem;
+    }
 }
+
 
 @media (max-width: 376px) {
     .filter-container {
         width: 96vw;
+        left: 0%;
         grid-template-columns: 1fr;
         margin: auto;
     }
