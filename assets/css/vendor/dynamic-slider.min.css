@@ -505,6 +505,7 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
       "slide-content"
       "static-button"
       "slide-image-wrapper";
+    height: 800px;
   }
   .dynamic-slider.is-banner .slide-item {
     padding-bottom: 0;
