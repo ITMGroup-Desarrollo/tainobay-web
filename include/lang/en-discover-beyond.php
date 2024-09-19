@@ -591,7 +591,7 @@ $tours = [
     [
         "id" => "7",
         "Tour" => "Old town & beach ",
-        "tourName" => "Old Town & Beach",
+        "tourName" => "Playa Dorada",
         "title" => "VISIT ONE OF THE",
         "subtitle" => "MOST ICONIC BEACHES!",
         "button" => "Enjoy yourself! ",
