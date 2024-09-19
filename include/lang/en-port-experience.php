@@ -31,7 +31,7 @@ $points = [
     'banner' => 'blue-parrot/header-blue-parrot-port-experience.webp',
     'cover' => 'blue-parrot/cover-blue-parrot-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/points-of-interest/ParqueCentral.jpg'],
+    'gallery' => ['assets/images/port-experience/blue-parrot/blue-parrot-six.jpg'],
     'text_home' => "A colorful vibe is ready to welcome you at Blue Parrot! With a Caribbean-inspired seafood menu, you'll find a taste you'll remember forever!",
     'menu' => [
       [
@@ -83,7 +83,7 @@ $points = [
     'banner' => 'boat-bar/header-boat-bar-port-experience.webp',
     'cover' => 'boat-bar/cover-boat-bar-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets/images/port-experience/boat-bar/carousel-boat-bar.webp'],
     'text_home' => 'Ready, sail, drink! Sip a margarita or freshen up with a beer while you relax before enjoying a day at the port. Find the Boat Bar right next to the Lazy River! ',
     'menu' => [
       [
@@ -134,7 +134,7 @@ $points = [
     'banner' => 'cantina-latina/header-cantina-latina-port-experience.webp',
     'cover' => 'cantina-latina/cover-cantina-latina-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/points-of-interest/UmbrellaStreet.jpg', 'assets/images/points-of-interest/UmbrellaStreet.jpg'],
+    'gallery' => ['assets/images/port-experience/cantina-latina/carousel-cantina-latina_.webp'],
     'text_home' => 'Have a taste of Puerto Plata! Cantina Latina has a delicious menu with Dominican Cuisine, grilled dishes, and drinks in a comfy atmosphere ready to welcome everybody!',
     'menu' => [
       [
@@ -187,7 +187,7 @@ $points = [
     'banner' => 'coffe-factory/header-coffee-factory-port-experience.webp',
     'cover' => 'coffe-factory/cover-coffe-bar-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/points-of-interest/BlancaAlley.jpg', 'assets/images/points-of-interest/BlancaAlley.jpg'],
+    'gallery' => ['assets\images\port-experience\coffe-factory\carousel-coffe-factory.webp'],
     'text_home' => 'Fuel up with a cup of Dominican coffee! From espresso to frappés and some desserts, Coffee Factory will give a sweet touch to your day at the port. ',
     'menu' => [
       [
@@ -290,7 +290,7 @@ $points = [
     'banner' => 'dom-dom-bar/header-dom-dom-bar-port-experience.webp',
     'cover' => 'dom-dom-bar/cover-dom-dom-bar-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets\images\port-experience\dom-dom-bar\carousel-dom-dom-bar.webp'],
     'text_home' => "Need a drink by the pool? Dom Dom Bar is your place to go. Located right in the pool, enjoy the shows, join the party, and have fun while sippin' your favorite drink.",
     'menu' => [
       [
@@ -449,7 +449,7 @@ $points = [
     'banner' => 'mojito-bar/header-mojito-bar-port-experience.webp',
     'cover' => 'mojito-bar/mojito-bar-one.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets\images\port-experience\mojito-bar\carousel-mojito-bar.webp'],
     'text_home' => "Salud to Dominican Rum! You'll need a fresh drink after all the shopping and having a good time, right? Visit Rum Rum for your favorite drinks!",
     'menu' => [
       [
