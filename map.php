@@ -34,7 +34,7 @@ include_once("include/lang/{$idioma}-map.php");
         </section>
         <!-- Content -->
         <section class="shock-section map-section">
-            <div class="filter-container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" >
+            <div class="filter-container" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" >
                 <div class="leaflet-control-filter service" >
                     <div class="filter-header">
                         <span class="header-text">PORT EXPERIENCE</span>

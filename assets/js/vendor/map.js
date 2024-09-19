@@ -11,7 +11,7 @@ var map = L.map('map', {
     maxZoom: 1,
     attributionControl: false,
     maxBounds: [
-        [-100, -100],  // Límites más amplios
+        [-150, -150],  // Límites más amplios
         [1200, 1600]
     ],
     maxBoundsViscosity: 0.3, // Restringir el movimiento fuera de los límites
@@ -30,7 +30,7 @@ if (isMobile) {
 }
 // #endregion
 
-// #region Agregar la imagen del mapa
+// #region Agrega la imagen del mapa
 L.imageOverlay('assets/images/media/Mapa-Taino-Bay-efectos.jpg', bounds).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
@@ -78,12 +78,12 @@ serviceElements.forEach(service => {
     
     // Si se encuentra un hijo con la clase .hide, aplica el estilo
     if (hideChild) {
-        service.style.position = 'absolute'; // Asegúrate de que tenga 'position: absolute' para poder moverlo
-        service.style.bottom = '60vh'; // Mueve el .service a 60vh
+        service.style.position = 'absolute';
+        service.style.bottom = '70vh'; 
     } else {
         // Si no tiene la clase .hide, asegúrate de restaurar a su posición original
         service.style.position = 'absolute';
-        service.style.bottom = '55vh'; // Estilo por defecto
+        service.style.bottom = '55vh'; 
         headerText.style.paddingRight = '1rem';
     }
 });
