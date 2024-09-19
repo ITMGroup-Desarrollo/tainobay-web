@@ -67,7 +67,8 @@ $points = [
         ]
       ]
 
-    ]
+    ],
+    'pdf' => 'port-experience/blue-parrot.pdf'
   ],
   [
     'id' => 2,
