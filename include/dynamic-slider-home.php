@@ -37,7 +37,7 @@
 
             <?php
             foreach ($points as $point) {
-                if ($point['type'] == 'restaurant') { ?>
+                if ($point['type'] == 'restaurant' && $point['id'] < 8) { ?>
                     <div class="slide-item side-intro <?= $point['id'] == '1' ? 'current-slide' : '' ?>">
                         <!-- share -->
                         <div class="slide-share position-absolute share p-1 button-share">
@@ -93,18 +93,7 @@
                         <!-- Image -->
                         <div class="slide-image-wrapper">
                             <div class="slide-image-inner">
-                                <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
-                                    <div class="swiper-wrapper">
-                                        <?php foreach ($point['gallery'] as $img) { ?>
-                                            <div class="swiper-slide">
-                                                <div class="image-wrapper">
-                                                    <img src=<?= $img ?> class="image" alt="<?= $point['name'] ?>" />
-                                                </div>
-                                            </div>
-                                        <?php } ?>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
+                                <img src=<?= $point['gallery'][0] ?> class="image slide-image" alt="<?= $point['name'] ?>" />
                             </div>
                         </div>
                     </div>

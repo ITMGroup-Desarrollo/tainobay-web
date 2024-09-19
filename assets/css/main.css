@@ -600,7 +600,7 @@ Support : codings.dev
 .swiper.has-gap .swiper-slide {
   padding: 15px;
 }
-.swiper .swiper-slide .image {
+.slide-image-wrapper .slide-image-inner .image {
   width: 100%;
   display: block;
   height: 85vh;

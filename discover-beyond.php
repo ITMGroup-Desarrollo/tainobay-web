@@ -36,7 +36,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <!-- Image -->
                 <div class="image-wrapper">
                     <div class="banner-fixed" style="background-image:url('assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg')">
-
                     </div>
                 </div>
                 <!-- Overlay -->
@@ -54,7 +53,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </h2>
                 </div>
                 <div class="container-text mx-auto px-5">
-
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[2];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[3];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[4];  ?></p>

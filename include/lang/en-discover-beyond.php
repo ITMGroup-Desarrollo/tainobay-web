@@ -174,7 +174,7 @@ $tours = [
     [
         "id" => "2",
         "Tour" => "countryside",
-        "tourName" => "Countryside",
+        "tourName" => "Countryside Buggy",
         "title" => "GET WILD",
         "subtitle" => "& FEEL THE RUSH!",
         "button" => "Ready for the buggy?",
@@ -268,7 +268,7 @@ $tours = [
     [
         "id" => "3",
         "Tour" => "a-walk-through-puerto-plata",
-        "tourName" => "Countryside",
+        "tourName" => "A Walk Through Puerto Plata",
         "title" => "DISCOVER THE HOTTEST",
         "subtitle" => "PUERTO PLATA SPOTS!",
         "button" => "The Bride of the Atlantic",
