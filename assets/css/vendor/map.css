@@ -103,6 +103,10 @@ td:first-child {
     margin: 0 0 1rem 0 !important;
 }
 
+.custom-icon:hover img {
+    transform: scale(1.40); /* Escala el tamaño del icono en un 5% */
+}
+
 @media (min-width: 769px) {
     .filter-container p,
     .filter-container span,
@@ -193,6 +197,9 @@ td:first-child {
 }
 
 @media (max-width: 768px) {
+    .header-text {
+        width: auto;
+    }
     .leaflet-popup-content-wrapper {
         height: auto !important;
         width: auto !important;
