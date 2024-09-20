@@ -101,68 +101,41 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
     <section class="shock-section pb-5">
       <!-- <div class="container max-w-85"> -->
       <div class="w-100">
-        <?php
-        if ($currentMenu['type'] == "restaurant") {
-          foreach ($currentMenu['menu'] as $menuItem) { ?>
-            <div class="seccion-menu-img w-100" style="background-image: url(<?= "assets/images/port-experience/{$currentMenu['path']}/{$menuItem['image']}" ?>); background-position: <?= $menuItem['image-position'] ?>;">
-              <!-- <img src="<?= "assets/images/port-experience/{$currentMenu['path']}/{$menuItem['img']}" ?>" class="w-100" alt="imagen del menu"> -->
-            </div>
-            <div class="row row-cols-2 p-md-5 g-0 max-w-100">
-              <?php foreach ($menuItem['items'] as $item) { ?>
-                <div class="col-12 col-md-6 dashed-border">
-                  <div class="card w-100">
-                    <div class="card-body">
-                      <h5 class="card-title text-blue"><strong><?= $item['name'] ?></strong></h5>
-                      <ul class="row row-cols-2 text-blue text-uppercase">
-                        <?php foreach ($item['ingredients'] as $ingredient) { ?>
-                          <li class="list-group-item mb-2"><?= $ingredient ?></li>
-                        <?php } ?>
-                      </ul>
+        <!-- galleria -->
+        <div class="container" data-aos="zoom-in-up" data-aos-delay="400">
+          <!-- Arrow Left -->
+          <div class="text-blue d-block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
+              <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+              <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+            </svg>
+          </div>
+          <div id="gallery" class="gallery swiper slider has-navigation primary"
+            data-columns="3,1,1,1" data-autoplay="5000" data-space="20" data-loop="true">
+            <div class="swiper-wrapper">
+              <?php foreach ($currentMenu['single_gallery'] as $img) { ?>
+                <div class="swiper-slide">
+                  <a href="<?= $img ?>"
+                    class="item lightbox-link hover-zoom-rotate">
+                    <div class="image-wrapper">
+                      <img src="<?= $img ?>" class="image"
+                        alt="example" />
                     </div>
-                  </div>
+                  </a>
                 </div>
               <?php } ?>
 
             </div>
-          <?php }
-        } else { ?>
-          <!-- galleria -->
-          <div class="container" data-aos="zoom-in-up" data-aos-delay="400">
-            <!-- Arrow Left -->
-            <div class="text-blue d-block">
-              <svg xmlns="http://www.w3.org/2000/svg" class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
-                <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-              </svg>
-            </div>
-
-            <div id="gallery" class="gallery swiper slider has-navigation primary"
-              data-columns="3,1,1,1" data-autoplay="5000" data-space="20" data-loop="true">
-              <div class="swiper-wrapper">
-                <?php foreach ($currentMenu['gallery'] as $img) { ?>
-                  <div class="swiper-slide">
-                    <a href="<?= $img ?>"
-                      class="item lightbox-link hover-zoom-rotate">
-                      <div class="image-wrapper">
-                        <img src="<?= $img ?>" class="image"
-                          alt="example" />
-                      </div>
-                    </a>
-                  </div>
-                <?php } ?>
-
-              </div>
-            </div>
-
-            <!-- Arrow Right -->
-            <div class="text-blue">
-              <svg xmlns="http://www.w3.org/2000/svg" class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
-                <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-              </svg>
-            </div>
           </div>
-        <?php } ?>
+
+          <!-- Arrow Right -->
+          <div class="text-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+              <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+              <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+            </svg>
+          </div>
+        </div>
 
         <?php if (isset($currentMenu['pdf'])) { ?>
           <div class="text-center d-block mt-4">

@@ -802,7 +802,9 @@ Support : codings.dev
   position: relative;
   z-index: 0;
   width: 100%;
-  height: auto;
+  /* height: auto; */
+  height: 350px;
+  object-fit: cover;
   display: block;
   transition: transform 2s cubic-bezier(0.2, 1, 0.2, 1);
 }

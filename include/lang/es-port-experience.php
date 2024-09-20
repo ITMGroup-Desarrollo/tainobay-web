@@ -68,7 +68,12 @@ $points = [
       ]
 
     ],
-    'pdf' => 'port-experience/blue-parrot.pdf'
+    'pdf' => 'port-experience/blue-parrot.pdf',
+    'single_gallery' => [
+      'assets\images\port-experience\blue-parrot\gallery\GALLERY_BLUE_PARROT.webp',
+      'assets\images\port-experience\blue-parrot\gallery\IMG_1.webp',
+      'assets\images\port-experience\blue-parrot\gallery\GALLERY_BLUE_PARROT.webp'
+    ]
   ],
   [
     'id' => 2,
@@ -400,7 +405,7 @@ $points = [
     'banner' => 'rum-rum-bar/header-rum-rum-bar-port-experience.webp',
     'cover' => 'rum-rum-bar/cover-rum-rum-bar-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets\images\port-experience\rum-rum-bar\carousel-rum-rum-bar.webp'],
     'text_home' => "Salud to Dominican Rum! You'll need a fresh drink after all the shopping and having a good time, right? Visit Rum Rum for your favorite drinks!",
     'menu' => [
       [
@@ -451,7 +456,7 @@ $points = [
     'banner' => 'mexican-grill/header-mexican-grill-port-experience.webp',
     'cover' => 'mexican-grill/mexican-grill-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets\images\port-experience\mexican-grill\carousel-mexican-grill.webp'],
     'text_home' => "Tacos and grilled snacks, it doesn't get any better than that! Mexican Grill serves tasty and classic options, from fries to a classic beef burger, don't forget to stop by!",
     'menu' => [
       [
@@ -503,7 +508,7 @@ $points = [
     'banner' => 'tiki-tiki/header-tiki-tiki-port-experience.webp',
     'cover' => 'tiki-tiki/cover-tiki-tiki-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets\images\port-experience\tiki-tiki\carousel-tiki-tiki.webp'],
     'text_home' => 'Located in our beach-inspired area, a few steps from the Lazy River, Tiki Tiki serves fresh drinks and beverages for a relaxing day at port.',
     'menu' => [
       [
@@ -554,7 +559,7 @@ $points = [
     'banner' => 'taco-lover/header-taco-lover-port-experience.webp',
     'cover' => 'taco-lover/cover-taco-lover-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets\images\port-experience\taco-lover\carousel-taco-lover.webp'],
     'text_home' => "Here, every day is taco day! Fresh tortillas, savory stews, and the authentic Mexican flavor, Taco Lover is the top spot for street tacos. Don't miss it!",
     'menu' => [
       [
@@ -595,6 +600,57 @@ $points = [
   ],
   [
     'id' => 12,
+    'type' => 'restaurant',
+    'name' => 'Icekery',
+    'path' => 'icekery',
+    'logo' => 'icekery\icekery-white.svg',
+    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM120.17,87.24c3.72-12.43,9.93-21.51,17.22-25.35v55.25c0,8.33.16,26.27.47,35.5h-8.55c-.02-.96-.04-1.37-.08-4.64-.04-3.72-1.31-7.18-3.67-9.99-8.93-10.65-11.14-31.52-5.38-50.76ZM141.5,234.57c-2.04,2.28-4.79,3.54-7.74,3.54s-5.7-1.26-7.74-3.54c-2.04-2.28-3.08-5.27-2.93-8.41l3.84-67.47h13.67l3.84,67.45c.15,3.15-.89,6.14-2.93,8.42ZM172.74,234.57c-2.04,2.29-4.79,3.54-7.74,3.54-5.71,0-10.4-4.75-10.67-10.83,0,0,0,0,0,0h0c-.02-.37-.02-.75,0-1.12l3.87-67.47h13.61l3.61,62.12h0l.25,5.33c.15,3.15-.89,6.13-2.92,8.42ZM174.55,118.95c-4.53,3.48-7.01,8.95-6.65,14.6l.56,19.08h-6.93l.56-19.04c.36-5.69-2.13-11.17-6.65-14.64-5.76-4.43-8.91-11.39-8.42-18.65l2.11-36.11c.08-1.3,1.14-2.3,2.43-2.3h.05c1.33.03,2.4,1.13,2.39,2.47l-.38,36.24c-.01,1.13.41,2.2,1.2,3,.77.78,1.79,1.21,2.88,1.21,2.2,0,4.03-1.82,4.08-4.06l.73-36.45c.03-1.31,1.12-2.39,2.44-2.39h.06c1.32,0,2.41,1.07,2.44,2.39l.73,36.45c.05,2.28,1.85,4.06,4.08,4.06,1.09,0,2.11-.43,2.88-1.21.79-.8,1.22-1.86,1.2-3l-.38-36.24c-.01-1.33,1.06-2.44,2.39-2.47h.05c1.29,0,2.36,1,2.43,2.3l2.11,36.12s0,0,0,.01c.49,7.25-2.66,14.21-8.42,18.63Z"/>
+      </svg>',
+    'banner' => 'icekery\header-icekery-port-experience.webp',
+    'cover' => 'icekery\cover-icekery.webp',
+    'title' => 'Menu',
+    'gallery' => ['assets\images\port-experience\icekery\carousel-icekery.webp'],
+    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'menu' => [
+      [
+        'image' => 'cantina-latina-menu-1.jpg',
+        'image-position' => 'center',
+        'items' => [
+          [
+            'name' => 'Nachos',
+            'ingredients' => ['Veggie', 'Shrimp', 'Chicken', 'Mixed', 'Beef'],
+          ],
+          [
+            'name' => 'Appetizers',
+            'ingredients' => ['Frenchfries', 'Chips & Salsa', 'Cheese Sticks', 'Guacamole'],
+          ]
+        ]
+      ],
+      [
+        'image' => 'cantina-latina-menu-2.jpg',
+        'image-position' => 'bottom',
+        'items' => [
+          [
+            'name' => 'Dominican D',
+            'ingredients' => ['Bandera', 'Fried Fish', 'Mofongo', 'San Mangú', 'Sancocho']
+          ],
+          [
+            'name' => 'Grilled Meat',
+            'ingredients' => ['Buffalo Wings', 'Chicken Breast', 'Chicken Fajitas', 'Beef Fajitas']
+          ],
+          [
+            'name' => 'Side Dish',
+            'ingredients' => ['French Fries', 'Fried Plantain', 'Rice']
+          ]
+        ]
+      ]
+
+    ],
+    'pdf' => ''
+  ],
+  [
+    'id' => 13,
     'type' => 'public',
     'name' => 'Lazy River',
     'path' => 'lazy-river',
@@ -608,12 +664,13 @@ $points = [
           <path d="M186.4,109.88c-10.88-7.03-23.07-9.62-35.77-10.24-.74,0-1.45.02-2.15,0-1.27-.06-2.29.3-2.33,1.75-.04,1.45.93,1.8,2.22,1.86,3.23.15,6.46.27,9.66.64,9.13,1.08,17.88,3.48,25.71,8.45,6.99,4.43,12.55,9.94,12.89,18.96.04,1.11.8,1.71,1.89,1.66,1.11-.05,1.83-.73,1.66-1.84-.35-2.37-.55-4.82-1.37-7.04-2.31-6.27-6.94-10.67-12.42-14.21Z"/>
         </svg>',
     'banner' => '',
-    'cover' => '/lazy-river/cover-lazy-river-port-experience.webp',
+    'cover' => 'icekery\carousel-icekery.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'gallery' => ['assets\images\port-experience\icekery\carousel-icekery.webp', 'assets\images\port-experience\icekery\carousel-icekery.webp'],
   ],
   [
-    'id' => 13,
+    'id' => 14,
     'type' => 'public',
     'name' => 'Splash Surfing',
     'path' => 'splash-surfing',
@@ -627,10 +684,11 @@ $points = [
     'banner' => 'splash-surfing/header-splash-surfing.webp',
     'cover' => '/splash-surfing/cover-splash-surfing-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'gallery' => ['assets\images\port-experience\splash-surfing\carousel-spash.webp'],
   ],
   [
-    'id' => 14,
+    'id' => 15,
     'type' => 'public',
     'name' => 'Spa Wellness',
     'path' => 'spa-wellness',
@@ -641,10 +699,11 @@ $points = [
     'banner' => 'spa-wellness/header-spa-wellness.webp',
     'cover' => '/spa-wellness/cover-spa-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'gallery' => ['assets\images\port-experience\spa-wellness\carousel-spa-wellness.webp'],
   ],
   [
-    'id' => 15,
+    'id' => 16,
     'type' => 'public',
     'name' => 'Pool',
     'path' => 'pool',
@@ -656,10 +715,10 @@ $points = [
     'banner' => 'pool/header-pool.webp',
     'cover' => '/pool/cover-pool-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
   ],
   [
-    'id' => 16,
+    'id' => 17,
     'type' => 'public',
     'name' => 'Beach',
     'path' => 'beach',
@@ -670,6 +729,8 @@ $points = [
     'banner' => 'beach/header-beach.webp',
     'cover' => '/beach/cover-beach-port-experience.webp',
     'title' => 'Gallery',
-    'gallery' => ['assets/images/welcome/Welcome-1.jpg', 'assets/images/welcome/Welcome-1.jpg'],
+    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
+    'single_gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
   ],
 ];
