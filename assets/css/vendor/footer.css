@@ -176,6 +176,7 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
+
 @media (max-width: 990px) {
   .footer-textbox-container {
     padding: 0 2rem 0 2rem;
