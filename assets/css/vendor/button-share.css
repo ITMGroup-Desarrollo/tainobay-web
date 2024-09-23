@@ -60,6 +60,20 @@ div.share {
 @media (min-width: 768px) {
   div.share-r {
     right: auto;
+    top: 50%;
+    /* left: 48%; */
+    right: 0;
+    /* transform: translateX(-50%) !important; */
+  }
+  div.share {
+    top: 50%;
+    right: 0;
+  }
+}
+
+@media (min-width: 990px) {
+  div.share-r {
+    right: auto;
     top: 0;
     left: 48%;
     transform: translateX(-50%) !important;

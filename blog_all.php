@@ -6,13 +6,8 @@ include_once("include/lang/{$idioma}-blog.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
     <?php include("include/head.php"); ?>
-
     <link rel="stylesheet" href="assets/css/vendor/blog_all.css">
-    <style>
-
-    </style>
 </head>
 
 <body class="shock-body">
@@ -38,13 +33,13 @@ include_once("include/lang/{$idioma}-blog.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
+                    <div class="banner-fixed" style="background-image:url('assets/images/blog/header-blog-port-taino-bay.webp')">
 
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
         <!-- Blog titles -->
@@ -310,12 +305,6 @@ include_once("include/lang/{$idioma}-blog.php");
     updateBlogLayout();
 
     // Luego, llama a `updateBlogLayout` cada vez que sea necesario (cuando el usuario cambia entre grid y list)
-
-
-
-
-
-
 
     $(document).ready(function() {
         loadPosts(1);

@@ -23,7 +23,7 @@
   position: relative;
   z-index: 70;
   top: 0;
-  right: -1rem;
+  /* right: -1rem; */
   overflow: hidden;
   transform: scale(1);
   display: block;
@@ -55,7 +55,7 @@
   width: 68px;
   mask: url(#menu-toggle-mask);
   -webkit-mask: url(#menu-toggle-mask);
-  -webkit-mask-box-image: url(../../svg/menu-toggle-mask.svg);
+  /* -webkit-mask-box-image: url(../../svg/menu-toggle-mask.svg); */
 }
 .menu-toggle .path-animation {
   position: absolute;

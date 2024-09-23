@@ -462,7 +462,7 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
     padding: 2rem 1rem;
     justify-items: center;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "static-title" "static-arrows" "...";
   }
   .dynamic-slider {
@@ -505,6 +505,7 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
       "slide-content"
       "static-button"
       "slide-image-wrapper";
+    height: 800px;
   }
   .dynamic-slider.is-banner .slide-item {
     padding-bottom: 0;

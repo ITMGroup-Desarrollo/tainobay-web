@@ -7,16 +7,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
     <?php include("include/head.php"); ?>
-    <?php include("include/header.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
-    <style>
-
-    </style>
 </head>
 
 <body class="shock-body">
+    <?php include("include/header.php"); ?>
 
     <!-- Main -->
     <main id="main" class="shock-main">
@@ -40,11 +36,10 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <!-- Image -->
                 <div class="image-wrapper">
                     <div class="banner-fixed" style="background-image:url('assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg')">
-
                     </div>
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
         <!--Welcome-->
@@ -58,7 +53,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     </h2>
                 </div>
                 <div class="container-text mx-auto px-5">
-
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[2];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[3];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[4];  ?></p>
@@ -243,8 +237,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 const justifyClass = section.side === 'left-side' ? 'justify-content-end' : 'justify-content-start';
                 const sectionHTML = `
                         <section data-id=${section.id} class="carousel-section  data-aos="fade-up"">
-                            <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
-                                <div id="port-experience" class="shock-section ${section.side} pt-2 pb-4">
+                            <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center w-md-100">
+                                <div id="port-experience" class="shock-section ${section.side} pt-2 pb-4 w-md-100">
                                     <div class="carousel-content order bg-white d-flex flex-column justify-content-evenly align-items-center">
                                         <div class="basic-intro mb-35">
                                             <h2 class="lh-1 title-carrusel left">
@@ -400,6 +394,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 }
 
                 AOS.init();
+                $('.shock-section .gallery').lightGallery({
+                    selector: '.shock-section .gallery .lightbox-link:not(.prevent)',
+                    thumbnail: false,
+                    share: false,
+                    download: false,
+                });
                 $(".gradient-animated-title").each(function() {
                     var $this = $(this);
 

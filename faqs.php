@@ -33,13 +33,13 @@ include_once("include/lang/{$idioma}-contact.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+                    <div class="banner-fixed" style="background-image:url('assets/images/media/header-faqs-port-raino-bay.webp')">
 
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
 
@@ -130,7 +130,7 @@ include_once("include/lang/{$idioma}-contact.php");
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <img src="assets/images/media/bg-faqs.jpg" class="image fit-cover" alt="This is an example description for this item." />
+                    <img src="assets/images/media/port-taino-bay-faqs.webp" class="image fit-cover brightness-6" alt="This is an example description for this item." />
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-blue"></div>

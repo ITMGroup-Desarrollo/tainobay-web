@@ -6,8 +6,8 @@
         $logo = "logo-white.svg";
         $menu = "scheme-1";
     }
-        
-        
+
+
     ?>
    <!-- Preloader -->
    <div id="preloader" class="preloader black" data-bg-image="assets/images/media/precarga.png"></div>
@@ -31,6 +31,9 @@
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog_all" class="menu-main-item-fixed"><?php echo MENU[5]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="menu-main-item-fixed"><?php echo MENU[6]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/contact" class="menu-main-item-fixed"><?php echo MENU[7]; ?></a>
+                   <div>
+                       <?php include("include/search.php"); ?>
+                   </div>
                    <div class="social-media">
                        <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link" target="_blank"><i class="icon fab fa-facebook-f"></i></a>
                        <a href="https://www.instagram.com/tainobay_puertoplata/" class="link" target="_blank"><i class="icon fab fa-instagram"></i></a>

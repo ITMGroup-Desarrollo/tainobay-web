@@ -23,12 +23,12 @@
   color: var(--blue-color);
   overflow: hidden;
 }
-.card-review .card-body p {
+/* .card-review .card-body p {
   display: -webkit-box;
   line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-}
+} */
 
 .card-review .text-justify {
   text-align: justify;
