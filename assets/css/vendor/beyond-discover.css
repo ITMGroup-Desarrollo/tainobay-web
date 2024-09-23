@@ -15,8 +15,14 @@ body{
 
 .display-button {
     color: white;
+    display: inline-flex;
+    align-items: baseline;
+    margin-top: 1rem;
 }
-
+.icon-container{
+    display: flex;
+    height: 1.5rem;
+}
 .display-button:hover {
     color: var(--blog-icono);
 }
@@ -24,6 +30,7 @@ body{
 .rotate-90 {
     --fa-rotate-angle: 90deg !important;
     transform: rotate(90deg);
+    margin-right: 0.5rem;
 }
 
 .fa-rotate-by {
@@ -39,8 +46,9 @@ span.text-style-4.lh-1.text-italic {
     padding-right: 2rem;
 }
 
-
-
+.text-style-3, .text-style-4{
+    line-height: 1 !important;
+}
 .carousel-indicators {
     position: absolute !important;
     bottom: 10px !important;
