@@ -111,7 +111,7 @@ include_once("include/lang/{$idioma}-home.php");
                             </svg>
                         </div>
 
-                        <div id="reviews" class="gallery swiper slider has-navigation scheme-1 primary"
+                        <div id="reviews" class="gallery swiper slider has-navigation scheme-1 primary d-flex align-items-center"
                             data-columns="3,3,1,3" data-autoplay="10000" data-space="50" data-loop="true">
                             <div class="swiper-wrapper">
 
