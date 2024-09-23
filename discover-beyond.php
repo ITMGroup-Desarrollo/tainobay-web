@@ -244,7 +244,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                             <h2 class="lh-1 title-carrusel left">
                                                 <span class="d-block text-style-3 gradient-animated-title animation-duration-1" style="text-align: center;">${section.title}</span>
                                                 <span class="d-flex justify-content-center">
-                                                    <span class="text-style-4 lh-1 text-italic" style="padding: 0;">${section.subtitle}</span>
+                                                    <span class="text-style-4 lh-1 text-italic" style="padding: 0 !important;">${section.subtitle}</span>
                                                 </span>
                                             </h2>
                                         </div>
