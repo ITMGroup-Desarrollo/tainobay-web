@@ -45,7 +45,7 @@ include_once("include/lang/{$idioma}-home.php");
                         <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                     </svg>
                 </div>
-                <div id="reviews" class="container d-flex align-items-center swiper slider has-navigation" data-columns="3,2,1,3" data-loop="true" data-space="50" data-autoplay="4000">
+                <div id="reviews" class="container d-flex align-items-center swiper slider has-navigation scheme-1 primary" data-columns="3,3,1,3" data-loop="true" data-space="50" data-autoplay="4000">
                     <!-- review content -->
                     <div class=" justify-content-evenly swiper-wrapper">
 
@@ -107,42 +107,49 @@ include_once("include/lang/{$idioma}-home.php");
                         <div class="gallery swiper slider has-navigation scheme-1 primary"
                             data-columns="3,3,1,3" data-autoplay="10000" data-space="50" data-loop="true">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-1.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-1.jpg" class="image"
-                                                alt="<?php echo SITIO; ?>" />
+
+
+
+                                <?php foreach ($reviews as $review) { ?>
+                                    <div class="card-review rounded-5 d-flex flex-column position-relative swiper-slide">
+                                        <!-- Image wrapper -->
+                                        <div class="card-header mb-1">
+                                            <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img" alt="Avatar de <?= $review['name'] ?>">
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-2.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-2.jpg" class="image"
-                                                alt="<?php echo SITIO; ?>" />
+
+                                        <!-- Quotes left -->
+                                        <div class=" text-orange mb-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179" />
+                                            </svg>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-3.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-3.jpg" class="image"
-                                                alt="<?php echo SITIO; ?>" />
+
+                                        <!-- Card content -->
+                                        <div class="card-body text-center">
+                                            <h4 class="mb-0"><strong><?= $review['name'] ?></strong></h4>
+                                            <h6 class=""><?= $review['date'] ?></h6>
+                                            <?php
+                                            if (strlen($review['review']) > 150) {
+                                                $short_text = substr($review['review'], 0, 140) . '...';
+                                            ?>
+                                                <p class='text-justify text-xs bold'><?= $short_text ?></p>
+
+                                            <?php  } else { ?>
+                                                <p class='text-justify text-xs bold'><?= $review['review'] ?></p>
+                                            <?php } ?>
+                                            <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer' class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase' style="font-size: 12px;"><?= BTN_REVIEW ?></a>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="assets/images/welcome/Welcome-4.jpg"
-                                        class="item lightbox-link hover-zoom-rotate">
-                                        <div class="image-wrapper">
-                                            <img src="assets/images/welcome/Welcome-4.jpg" class="image"
-                                                alt="<?php echo SITIO; ?>" />
+                                        <!-- Quotes Right -->
+                                        <div class="text-orange text-end mt-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.248-5.621c-.537.278-1.24.375-1.93.311c-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179m-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621c-.537.278-1.24.375-1.929.311C4.591 12.323 3.17 10.842 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179" />
+                                            </svg>
                                         </div>
-                                    </a>
-                                </div>
+
+                                    </div>
+                                <?php } ?>
+
+
                             </div>
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
