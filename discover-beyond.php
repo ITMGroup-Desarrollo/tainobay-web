@@ -278,7 +278,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 <div class="text-black black text-style-13 justificado text-content-container d-flex ${justifyClass}"><p>${section.content}</p></div>
                                                 <div class="d-flex ${justifyClass}">
                                                     <a class="display-button" >
-                                                        <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
+                                                        <div class="icon-container"><i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i></div>
                                                         <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
                                                     </a>
                                                 </div>
