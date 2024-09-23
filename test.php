@@ -103,12 +103,17 @@ include_once("include/lang/{$idioma}-home.php");
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="zoom-in-up" data-aos-delay="600">
+                        <!-- Arrow Left -->
+                        <div class="text-blue d-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
+                                <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                                <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                            </svg>
+                        </div>
 
                         <div id="reviews" class="gallery swiper slider has-navigation scheme-1 primary"
                             data-columns="3,3,1,3" data-autoplay="10000" data-space="50" data-loop="true">
                             <div class="swiper-wrapper">
-
-
 
                                 <?php foreach ($reviews as $review) { ?>
                                     <div class="card-review rounded-5 d-flex flex-column position-relative swiper-slide">
@@ -151,8 +156,14 @@ include_once("include/lang/{$idioma}-home.php");
 
 
                             </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        <!-- Arrow Right -->
+                        <div class="text-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
+                                <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                                <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                            </svg>
                         </div>
                     </div>
                 </div>
