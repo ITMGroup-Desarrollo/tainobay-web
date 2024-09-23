@@ -45,7 +45,7 @@ include_once("include/lang/{$idioma}-home.php");
                         <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                     </svg>
                 </div>
-                <div id="reviews" class="container d-flex align-items-center swiper slider has-navigation scheme-1 primary" data-columns="3,3,1,3" data-loop="true" data-space="50" data-autoplay="4000">
+                <div class="container d-flex align-items-center swiper slider has-navigation scheme-1 primary" data-columns="3,3,1,3" data-loop="true" data-space="50" data-autoplay="4000">
                     <!-- review content -->
                     <div class=" justify-content-evenly swiper-wrapper">
 
@@ -104,7 +104,7 @@ include_once("include/lang/{$idioma}-home.php");
                 <div class="row">
                     <div class="col-12" data-aos="zoom-in-up" data-aos-delay="600">
 
-                        <div class="gallery swiper slider has-navigation scheme-1 primary"
+                        <div id="reviews" class="gallery swiper slider has-navigation scheme-1 primary"
                             data-columns="3,3,1,3" data-autoplay="10000" data-space="50" data-loop="true">
                             <div class="swiper-wrapper">
 
