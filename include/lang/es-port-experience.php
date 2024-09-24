@@ -663,11 +663,11 @@ $points = [
           <path d="M228.45,137.13c.75,4.39.86,8.81.34,13.19,3.45-1.45,5.43-3.13,5.66-4.88.34-2.63-2.97-5.99-5.99-8.31Z"/>
           <path d="M186.4,109.88c-10.88-7.03-23.07-9.62-35.77-10.24-.74,0-1.45.02-2.15,0-1.27-.06-2.29.3-2.33,1.75-.04,1.45.93,1.8,2.22,1.86,3.23.15,6.46.27,9.66.64,9.13,1.08,17.88,3.48,25.71,8.45,6.99,4.43,12.55,9.94,12.89,18.96.04,1.11.8,1.71,1.89,1.66,1.11-.05,1.83-.73,1.66-1.84-.35-2.37-.55-4.82-1.37-7.04-2.31-6.27-6.94-10.67-12.42-14.21Z"/>
         </svg>',
-    'banner' => '',
-    'cover' => 'icekery\carousel-icekery.webp',
+    'banner' => 'lazy-river\header-lazy-river.webp',
+    'cover' => 'lazy-river\cover-lazy-river-port-experience.webp',
     'title' => 'Menu',
     'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
-    'gallery' => ['assets\images\port-experience\icekery\carousel-icekery.webp', 'assets\images\port-experience\icekery\carousel-icekery.webp'],
+    'gallery' => ['assets\images\port-experience\lazy-river\carousel-lazy-river.webp'],
   ],
   [
     'id' => 14,
@@ -705,7 +705,7 @@ $points = [
   [
     'id' => 16,
     'type' => 'public',
-    'name' => 'Pool',
+    'name' => 'Pool and Shows',
     'path' => 'pool',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -715,12 +715,13 @@ $points = [
     'banner' => 'pool/header-pool.webp',
     'cover' => '/pool/cover-pool-port-experience.webp',
     'title' => 'Menu',
+    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem",
     'gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
   ],
   [
     'id' => 17,
     'type' => 'public',
-    'name' => 'Beach',
+    'name' => 'Beach Playground',
     'path' => 'beach',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
