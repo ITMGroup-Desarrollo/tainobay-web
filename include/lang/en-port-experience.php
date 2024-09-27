@@ -611,7 +611,7 @@ $points = [
     'cover' => 'icekery\cover-icekery.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\icekery\carousel-icekery.webp'],
-    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'text_home' => "Beat the heat with an ice cream! Icekery is the top spot to enjoy a delicious ice cream. Pick your favorite flavor and toppings, and don't let your ice cream melt!",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -666,7 +666,7 @@ $points = [
     'banner' => 'lazy-river\header-lazy-river.webp',
     'cover' => 'lazy-river\cover-lazy-river-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'text_home' => "A new way to explore the port! Take a tub float and let yourself go in this relaxing experience at the port.",
     'gallery' => ['assets\images\port-experience\lazy-river\carousel-lazy-river.webp'],
   ],
   [
@@ -684,7 +684,7 @@ $points = [
     'banner' => 'splash-surfing/header-splash-surfing.webp',
     'cover' => '/splash-surfing/cover-splash-surfing-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'text_home' => "Catch a wave and get some sun! Our Splash surfing experience gives you the adrenaline rush you need while at the port! *Activity with extra cost.",
     'gallery' => ['assets\images\port-experience\splash-surfing\carousel-spash.webp'],
   ],
   [
@@ -699,7 +699,7 @@ $points = [
     'banner' => 'spa-wellness/header-spa-wellness.webp',
     'cover' => '/spa-wellness/cover-spa-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'text_home' => "The ultimate relaxing experience on your arrival. Enjoy, and let yourself go with unique techniques and get yourself in a state of pure bliss.",
     'gallery' => ['assets\images\port-experience\spa-wellness\carousel-spa-wellness.webp'],
   ],
   [
@@ -715,7 +715,7 @@ $points = [
     'banner' => 'pool/header-pool.webp',
     'cover' => '/pool/cover-pool-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem",
+    'text_home' => "Refreshing and relaxing has never looked this good! Catch some bun by our pools and watch our vibrant shows.",
     'gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
   ],
   [
@@ -730,7 +730,7 @@ $points = [
     'banner' => 'beach/header-beach.webp',
     'cover' => '/beach/cover-beach-port-experience.webp',
     'title' => 'Gallery',
-    'text_home' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugiat commodi aut obcaecati aliquam deserunt quidem, maiores esse repudiandae non debitis sapiente totam magnam aspernatur dolorem cupiditate temporibus nam! Odio.",
+    'text_home' => "A glimpse of beach lifestyle while you're having a good time. Enjoy playing in the sand and getting a new tan.",
     'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
     'single_gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
   ],

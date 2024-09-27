@@ -22,15 +22,16 @@ body{
 .icon-container{
     display: flex;
     height: 1.5rem;
+    margin-right: 3px;
 }
 .display-button:hover {
     color: var(--blog-icono);
 }
 
 .rotate-90 {
-    --fa-rotate-angle: 90deg !important;
-    transform: rotate(90deg);
-    margin-right: 0.5rem;
+    --fa-rotate-angle: 45deg !important;
+    transform: rotate(45deg);
+    /* margin-right: 0.5rem; */
 }
 
 .fa-rotate-by {

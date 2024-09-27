@@ -86,10 +86,8 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
             </a>
           </div>
           <div class="col-12 col-md-6">
-            <?php if ($currentMenu['type'] == "restaurant") { ?>
-              <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= TITULOS_SINGLE_EXPERIENCE ?>
-              </h2>
-            <?php } ?>
+            <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= $currentMenu['logo'] ? $currentMenu['name'] : "Gallery" ?>
+            </h2>
           </div>
           <div class="col">
           </div>
@@ -118,8 +116,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
                   <a href="<?= $img ?>"
                     class="item lightbox-link hover-zoom-rotate">
                     <div class="image-wrapper">
-                      <img src="<?= $img ?>" class="image"
-                        alt="example" />
+                      <img src="<?= $img ?>" class="image" />
                     </div>
                   </a>
                 </div>
