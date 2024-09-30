@@ -10,7 +10,7 @@ define('HOME_TEXT_WELCOME', array(
     'port',
     'Taino Bay!',
     'Located in the <strong>Bride of the Atlantic</strong>, Puerto Plata, Port Taino Bay brings the fun to your vacation!',
-    'With unique attractions, Lazy river, pools, lounge areas and more, Taino Bay will become your next favorite cruise stop to create new memories!',
+    'With unique attractions, Lazy River, pools, lounge areas and more, Taino Bay will become your next favorite cruise stop to create new memories!',
 ));
 
 define('CAROUSEL_PORT_EXPERIENCE', array(

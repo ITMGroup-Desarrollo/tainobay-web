@@ -174,7 +174,7 @@ $tours = [
     [
         "id" => "2",
         "Tour" => "countryside",
-        "tourName" => "Countryside Buggy",
+        "tourName" => "Countryside Buggy Adventure",
         "title" => "GET WILD",
         "subtitle" => "& FEEL THE RUSH!",
         "button" => "Ready for the buggy?",

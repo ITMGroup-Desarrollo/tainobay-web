@@ -353,7 +353,7 @@ $points = [
     'cover' => 'mojito-bar/mojito-bar-one.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\mojito-bar\carousel-mojito-bar.webp'],
-    'text_home' => "Salud to Dominican Rum! You'll need a fresh drink after all the shopping and having a good time, right? Visit Rum Rum for your favorite drinks!",
+    'text_home' => "When life gives you lemons, spice things up, and make Mojitos! Find cocktails, tequila, rum, and of course fresh mojitos with different flavors. Salud!",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
