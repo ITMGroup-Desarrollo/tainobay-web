@@ -70,9 +70,11 @@ $points = [
     ],
     'pdf' => 'port-experience/blue-parrot.pdf',
     'single_gallery' => [
-      'assets\images\port-experience\blue-parrot\gallery\GALLERY_BLUE_PARROT.webp',
-      'assets\images\port-experience\blue-parrot\gallery\IMG_1.webp',
-      'assets\images\port-experience\blue-parrot\gallery\GALLERY_BLUE_PARROT.webp'
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_1.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_4.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_2.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_3.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_5.webp',
     ]
   ],
   [
@@ -91,6 +93,13 @@ $points = [
     'title' => 'Menu',
     'gallery' => ['assets/images/port-experience/boat-bar/carousel-boat-bar.webp'],
     'text_home' => 'Ready, sail, drink! Sip a margarita or freshen up with a beer while you relax before enjoying a day at the port. Find the Boat Bar right next to the Lazy River! ',
+    'single_gallery' => [
+      'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_1.webp',
+      'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_2.webp',
+      'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_3.webp',
+      'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_4.webp',
+      'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_5.webp',
+    ],
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -177,6 +186,13 @@ $points = [
       ]
 
     ],
+    'single_gallery' => [
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_1.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_2.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_3.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_4.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_5.webp',
+    ],
     'pdf' => 'port-experience/cantina-latina.pdf'
   ],
   [
@@ -229,6 +245,12 @@ $points = [
         ]
       ]
 
+    ],
+    'single_gallery' => [
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_1.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_2.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_3.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_4.webp',
     ],
     'pdf' => 'port-experience/coffee-bar.pdf'
   ],
@@ -283,6 +305,12 @@ $points = [
       ]
 
     ],
+    'single_gallery' => [
+      'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_1.webp',
+      'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_2.webp',
+      'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_3.webp',
+      'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_4.webp',
+    ],
     'pdf' => ''
   ],
   [
@@ -336,6 +364,13 @@ $points = [
       ]
 
     ],
+    'single_gallery' => [
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_1.webp',
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_2.webp',
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_3.webp',
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_4.webp',
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_5.webp',
+    ],
     'pdf' => 'port-experience/margarita-bar.pdf'
   ],
   [
@@ -353,7 +388,7 @@ $points = [
     'cover' => 'mojito-bar/mojito-bar-one.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\mojito-bar\carousel-mojito-bar.webp'],
-    'text_home' => "Salud to Dominican Rum! You'll need a fresh drink after all the shopping and having a good time, right? Visit Rum Rum for your favorite drinks!",
+    'text_home' => "When life gives you lemons, spice things up, and make Mojitos! Find cocktails, tequila, rum, and of course fresh mojitos with different flavors. Salud!",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -388,6 +423,14 @@ $points = [
         ]
       ]
 
+    ],
+    'single_gallery' => [
+      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_1.webp',
+      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_2.webp',
+      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_3.webp',
+      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_4.webp',
+      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_5.webp',
+      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_6.webp',
     ],
     'pdf' => 'port-experience/mojito-bar.pdf'
   ],
@@ -442,6 +485,13 @@ $points = [
       ]
 
     ],
+    'single_gallery' => [
+      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_1.webp',
+      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_2.webp',
+      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_3.webp',
+      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_4.webp',
+
+    ],
     'pdf' => ''
   ],
   [
@@ -491,6 +541,13 @@ $points = [
           ]
         ]
       ]
+    ],
+    'single_gallery' => [
+      'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_2.webp',
+      'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_3.webp',
+      'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_4.webp',
+      'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_5.webp',
+      'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_6.webp',
     ],
     'pdf' => ''
   ],
@@ -545,6 +602,13 @@ $points = [
       ]
 
     ],
+    'single_gallery' => [
+      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_1.webp',
+      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_2.webp',
+      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_3.webp',
+      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_4.webp',
+      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_5.webp',
+    ],
     'pdf' => 'port-experience/tiki-tiki.pdf'
   ],
   [
@@ -595,6 +659,17 @@ $points = [
         ]
       ]
 
+    ],
+    'single_gallery' => [
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_1.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_2.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_3.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_4.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_5.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_6.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_7.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_8.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_9.webp',
     ],
     'pdf' => 'port-experience/taco-lover.pdf'
   ],
@@ -647,6 +722,13 @@ $points = [
       ]
 
     ],
+    'single_gallery' => [
+      'assets\images\port-experience\icekery\gallery\ICEKERY_1.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_2.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_3.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_4.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_5.webp',
+    ],
     'pdf' => ''
   ],
   [
@@ -668,6 +750,12 @@ $points = [
     'title' => 'Menu',
     'text_home' => "A new way to explore the port! Take a tub float and let yourself go in this relaxing experience at the port.",
     'gallery' => ['assets\images\port-experience\lazy-river\carousel-lazy-river.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_1.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_2.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_3.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_4.webp',
+    ],
   ],
   [
     'id' => 14,
@@ -686,6 +774,12 @@ $points = [
     'title' => 'Menu',
     'text_home' => "Catch a wave and get some sun! Our Splash surfing experience gives you the adrenaline rush you need while at the port! *Activity with extra cost.",
     'gallery' => ['assets\images\port-experience\splash-surfing\carousel-spash.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_1.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_3.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_2.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_4.webp',
+    ],
   ],
   [
     'id' => 15,
@@ -701,6 +795,12 @@ $points = [
     'title' => 'Menu',
     'text_home' => "The ultimate relaxing experience on your arrival. Enjoy, and let yourself go with unique techniques and get yourself in a state of pure bliss.",
     'gallery' => ['assets\images\port-experience\spa-wellness\carousel-spa-wellness.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_1.webp',
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_4.webp',
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_3.webp',
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_2.webp',
+    ],
   ],
   [
     'id' => 16,
@@ -717,6 +817,7 @@ $points = [
     'title' => 'Menu',
     'text_home' => "Refreshing and relaxing has never looked this good! Catch some bun by our pools and watch our vibrant shows.",
     'gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
+    'single_gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
   ],
   [
     'id' => 17,
