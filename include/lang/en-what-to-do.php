@@ -44,7 +44,7 @@ define('OLDTOWNANDBEACH', array(
 define('PLAYADORADA', array(
     'Playa Dorada',
     'Tour Duration: 4 Hours',
-    '<p>Visit one of the most beautiful beaches in Puerto Plata! Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... A must on your next visit!</p>
+    '<p>Visit one of the most beautiful beaches in Puerto Plata! Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... <br>A must on your next visit!</p>
     <p>Gran Ventana Beach Resort is in the center of Playa Dorada. Visit this exclusive getaway with a breathtaking beach area. The resort includes access to the pool, a private area for cruise passengers, a cocktail bar, lounge chairs, and non-motorized activities.</p>
     <p>Enjoy yourself! The hotel´s buffet and snacks are included.</p>'
 ));
