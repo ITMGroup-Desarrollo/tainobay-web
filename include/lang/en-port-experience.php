@@ -68,7 +68,7 @@ $points = [
       ]
 
     ],
-    'pdf' => 'port-experience/blue-parrot.pdf',
+    'pdf' => 'port-experience/blue-parrot-menu.pdf',
     'single_gallery' => [
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_1.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_4.webp',
