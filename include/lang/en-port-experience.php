@@ -621,7 +621,6 @@ $points = [
     ],
     'single_gallery' => [
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_1.webp',
-      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_3.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_4.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_5.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_6.webp',
