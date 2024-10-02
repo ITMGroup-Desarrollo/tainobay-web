@@ -757,7 +757,6 @@ $points = [
       'assets\images\port-experience\icekery\gallery\ICEKERY_14.webp',
       'assets\images\port-experience\icekery\gallery\ICEKERY_15.webp',
     ],
-    'pdf' => ''
   ],
   [
     'id' => 13,
