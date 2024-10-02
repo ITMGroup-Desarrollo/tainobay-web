@@ -75,6 +75,10 @@ $points = [
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_2.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_3.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_5.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_6.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_7.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_8.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_9.webp',
     ]
   ],
   [
@@ -99,6 +103,7 @@ $points = [
       'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_3.webp',
       'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_4.webp',
       'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_5.webp',
+      'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_6.webp',
     ],
     'menu' => [
       [
@@ -192,6 +197,13 @@ $points = [
       'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_3.webp',
       'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_4.webp',
       'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_5.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_6.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_7.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_8.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_9.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_10.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_11.webp',
+      'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_12.webp',
     ],
     'pdf' => 'port-experience/cantina-latina.pdf'
   ],
@@ -251,6 +263,7 @@ $points = [
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_2.webp',
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_3.webp',
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_4.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_5.webp',
     ],
     'pdf' => 'port-experience/coffee-bar.pdf'
   ],
@@ -310,6 +323,7 @@ $points = [
       'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_2.webp',
       'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_3.webp',
       'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_4.webp',
+      'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_5.webp',
     ],
     'pdf' => ''
   ],
@@ -370,6 +384,9 @@ $points = [
       'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_3.webp',
       'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_4.webp',
       'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_5.webp',
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_6.webp',
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_7.webp',
+      'assets\images\port-experience\margarita-bar\gallery\MARGARITA_BAR_8.webp',
     ],
     'pdf' => 'port-experience/margarita-bar.pdf'
   ],
@@ -431,6 +448,7 @@ $points = [
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_4.webp',
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_5.webp',
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_6.webp',
+      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_7.webp',
     ],
     'pdf' => 'port-experience/mojito-bar.pdf'
   ],
@@ -490,6 +508,7 @@ $points = [
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_2.webp',
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_3.webp',
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_4.webp',
+      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_5.webp',
 
     ],
     'pdf' => ''
@@ -543,6 +562,7 @@ $points = [
       ]
     ],
     'single_gallery' => [
+      'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_1.webp',
       'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_2.webp',
       'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_3.webp',
       'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_4.webp',
@@ -608,6 +628,7 @@ $points = [
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_3.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_4.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_5.webp',
+      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_6.webp',
     ],
     'pdf' => 'port-experience/tiki-tiki.pdf'
   ],
@@ -670,6 +691,7 @@ $points = [
       'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_7.webp',
       'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_8.webp',
       'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_9.webp',
+      'assets\images\port-experience\taco-lover\gallery\TACO_LOVER_10.webp',
     ],
     'pdf' => 'port-experience/taco-lover.pdf'
   ],
@@ -728,6 +750,16 @@ $points = [
       'assets\images\port-experience\icekery\gallery\ICEKERY_3.webp',
       'assets\images\port-experience\icekery\gallery\ICEKERY_4.webp',
       'assets\images\port-experience\icekery\gallery\ICEKERY_5.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_6.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_7.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_8.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_9.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_10.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_11.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_12.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_13.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_14.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_15.webp',
     ],
     'pdf' => ''
   ],
@@ -755,6 +787,19 @@ $points = [
       'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_2.webp',
       'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_3.webp',
       'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_4.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_5.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_6.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_7.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_8.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_9.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_10.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_11.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_12.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_13.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_14.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_15.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_16.webp',
+      'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_17.webp',
     ],
   ],
   [
@@ -775,9 +820,9 @@ $points = [
     'text_home' => "Catch a wave and get some sun! Our Splash surfing experience gives you the adrenaline rush you need while at the port! *Activity with extra cost.",
     'gallery' => ['assets\images\port-experience\splash-surfing\carousel-spash.webp'],
     'single_gallery' => [
-      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_1.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_3.webp',
-      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_2.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_1.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_5.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_4.webp',
     ],
   ],
@@ -800,6 +845,10 @@ $points = [
       'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_4.webp',
       'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_3.webp',
       'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_2.webp',
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_5.webp',
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_6.webp',
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_7.webp',
+      'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_8.webp',
     ],
   ],
   [
@@ -812,12 +861,25 @@ $points = [
         <path d="M170.63,133.55h-57.36v15.76h57.36v-15.76Z"/>
         <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM100.42,102.38c.02-12.6,10.08-22.27,22.69-21.89,11.3.34,20.79,10.11,20.79,21.4,0,3.75-2.7,6.62-6.29,6.67-3.54.05-6.32-2.65-6.5-6.3-.26-5.33-4.13-9.12-9.21-9.01-4.95.12-8.69,4.11-8.7,9.35-.02,5.95,0,11.91,0,18.03h57.57v-1.74c0-5.53-.02-11.06,0-16.6.05-11.37,8.39-20.54,19.75-21.74,10.7-1.14,20.75,6.21,23.21,17.01.31,1.34.47,2.73.51,4.1.11,3.9-2.55,6.81-6.19,6.9-3.66.09-6.4-2.63-6.58-6.55-.21-4.67-3.66-8.35-8.17-8.73-4.61-.39-8.69,2.72-9.58,7.35-.16.83-.15,1.69-.15,2.54,0,22.56,0,45.11-.03,67.67,0,1.1-.11,2.25-.48,3.27-1,2.79-4.05,4.46-6.92,3.97-3.03-.53-5.29-3.03-5.36-6.09-.07-3.19-.02-6.38-.02-9.68h-57.58c0,3.17.05,6.34-.01,9.51-.1,4.44-4.37,7.4-8.5,5.96-2.57-.9-4.25-3.27-4.26-6.14-.03-5.74,0-11.49,0-17.24,0-17.34-.02-34.68,0-52.03ZM219.63,207.55c-1.3,2.54-3.73,4.41-6.41,6.06-12.39,7.66-32.7,7.84-45.39.43-.63-.37-1.06-.74-2.01-.19-13.07,7.53-32.22,7.52-45.25,0-.62-.36-.99-.39-1.66-.04-12.11,6.6-25.11,7.32-38.61,3.08-5.86-1.84-10.74-4.77-13.53-9.36v-1.84c.17-.31.34-.63.52-.94,1.83-3.11,7.49-3.88,9.93-1.07,5.95,6.87,22.12,8.64,32.23,3.96.55-.25,1.08-.54,1.6-.85,1.28-.77,2.46-1.67,3.48-2.61,3.12-2.86,7.37-2.94,10.29.02,2.34,2.36,5.42,3.92,9.02,4.86,6.33,1.66,12.69,1.64,19-.08,3.65-.99,6.66-2.65,9.02-5.05,2.5-2.54,7.01-2.66,9.47-.15,1.49,1.51,3.21,2.69,5.1,3.63,2.59,1.28,5.51,2.09,8.73,2.51,6.47.84,12.73.3,18.41-2.36,1.83-.85,3.46-2.06,4.86-3.32,1.64-1.49,3.45-2.45,6.01-2.19,2.61.27,4.27,1.51,5.05,3.43.03.07.1.14.15.19v1.84ZM219.63,186.9c-2.79,4.59-7.67,7.52-13.53,9.36-3.26,1.02-6.49,1.74-9.68,2.18-10.05,1.36-19.74-.24-28.93-5.26-.66-.36-1.04-.31-1.66.05-13.09,7.52-32.24,7.52-45.25-.02-.86-.49-1.27-.23-1.89.12-6.88,3.99-15.88,5.81-24.66,5.46-7.1-.28-14.07-1.98-19.66-5.12-3.19-1.8-6.04-3.87-7.6-6.76v-1.84c.17-.31.34-.63.52-.94,1.24-2.11,4.22-3.1,6.78-2.68,1.22.2,2.36.7,3.15,1.61,5.96,6.88,22.15,8.64,32.23,3.96,1.91-.89,3.64-2.14,5.08-3.46,3.11-2.86,7.37-2.94,10.29.02,2.34,2.37,5.42,3.92,9.01,4.87,6.44,1.68,12.89,1.64,19.28-.17,3.48-.98,6.38-2.57,8.64-4.88,2.56-2.61,7.07-2.78,9.57-.24,3.52,3.58,8.25,5.41,13.83,6.14,6.47.84,12.73.29,18.41-2.36,1.83-.85,3.46-2.06,4.86-3.32,1.64-1.49,3.45-2.45,6.01-2.19.38.04.69.14,1.02.22,2.01.46,3.36,1.56,4.03,3.21.03.07.1.13.15.19v1.84Z"/>
       </svg>',
-    'banner' => 'pool/header-pool.webp',
-    'cover' => '/pool/cover-pool-port-experience.webp',
+    'banner' => 'pool\header-pool-snd-showsport-experience.webp',
+    'cover' => 'pool/cover-pool-port-experience.webp',
     'title' => 'Menu',
     'text_home' => "Refreshing and relaxing has never looked this good! Catch some bun by our pools and watch our vibrant shows.",
     'gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
-    'single_gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\pool\carousel-pool.webp',
+      'assets\images\port-experience\pool\gallery\POOL_1.webp',
+      'assets\images\port-experience\pool\gallery\POOL_2.webp',
+      'assets\images\port-experience\pool\gallery\POOL_3.webp',
+      'assets\images\port-experience\pool\gallery\POOL_4.webp',
+      'assets\images\port-experience\pool\gallery\POOL_5.webp',
+      'assets\images\port-experience\pool\gallery\POOL_6.webp',
+      'assets\images\port-experience\pool\gallery\POOL_7.webp',
+      'assets\images\port-experience\pool\gallery\POOL_8.webp',
+      'assets\images\port-experience\pool\gallery\POOL_9.webp',
+      'assets\images\port-experience\pool\gallery\POOL_10.webp',
+      'assets\images\port-experience\pool\gallery\POOL_11.webp',
+    ],
   ],
   [
     'id' => 17,
@@ -833,6 +895,12 @@ $points = [
     'title' => 'Gallery',
     'text_home' => "A glimpse of beach lifestyle while you're having a good time. Enjoy playing in the sand and getting a new tan.",
     'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
-    'single_gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
+      'assets\images\port-experience\beach\carousel-beach.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
+    ],
   ],
 ];
