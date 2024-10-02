@@ -73,7 +73,6 @@ $points = [
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_1.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_4.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_2.webp',
-      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_3.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_5.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_6.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_7.webp',
@@ -265,7 +264,7 @@ $points = [
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_4.webp',
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_5.webp',
     ],
-    'pdf' => 'port-experience/coffee-bar.pdf'
+    'pdf' => 'port-experience/coffee-factory.pdf'
   ],
   [
     "id" => 5,
@@ -322,10 +321,9 @@ $points = [
       'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_1.webp',
       'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_2.webp',
       'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_3.webp',
-      'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_4.webp',
       'assets\images\port-experience\dom-dom-bar\gallery\DOMDOM_BAR_5.webp',
     ],
-    'pdf' => ''
+    'pdf' => 'port-experience/dom-dom-bar.pdf'
   ],
   [
     'id' => 6,
@@ -447,7 +445,6 @@ $points = [
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_3.webp',
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_4.webp',
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_5.webp',
-      'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_6.webp',
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_7.webp',
     ],
     'pdf' => 'port-experience/mojito-bar.pdf'
@@ -511,7 +508,7 @@ $points = [
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_5.webp',
 
     ],
-    'pdf' => ''
+    'pdf' => 'port-experience/rum-rum-bar.pdf'
   ],
   [
     'id' => 9,
@@ -569,7 +566,7 @@ $points = [
       'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_5.webp',
       'assets\images\port-experience\mexican-grill\gallery\MEXICAN_GRILL_6.webp',
     ],
-    'pdf' => ''
+    'pdf' => 'port-experience/mexican-grill.pdf'
   ],
   [
     'id' => 10,
@@ -624,7 +621,6 @@ $points = [
     ],
     'single_gallery' => [
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_1.webp',
-      'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_2.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_3.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_4.webp',
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_5.webp',
