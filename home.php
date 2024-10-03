@@ -350,6 +350,17 @@ include_once("include/lang/reviews.php");
             </div>
         </section>
 
+        <section class="shock-section">
+            <div class="banner d-flex align-items-center">
+                <!-- Image -->
+                <div class="image-wrapper">
+                    <div class="banner-fixed" style="background-image:url('assets/images/media/footer_img.webp')"></div>
+                </div>
+                <!-- Overlay -->
+                <div class="overlay-banner"></div>
+            </div>
+        </section>
+
         <?php include("include/alert-pwa.php"); ?>
 
     </main>
