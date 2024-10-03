@@ -14,7 +14,9 @@
 .azulBlog {
     color: white;
 }
-
+.blog-subtitle{
+    max-width: 80vw !important;
+}
 .timeline {
     list-style: none;
     padding: 0;

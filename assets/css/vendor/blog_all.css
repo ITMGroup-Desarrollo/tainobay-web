@@ -120,7 +120,16 @@
 :root {
   --blog-icono: #1c355e;
 }
-
+h2.title.white {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.basic-intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
 .azulBlog {
   color: #1c355e;
 }

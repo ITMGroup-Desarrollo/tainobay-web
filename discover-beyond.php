@@ -25,7 +25,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <div class="basic-intro text-center">
                         <h1 class="title white">
                             <span class="text-1 text-style-3"><?php echo TITULOS_DISCOVER[0];  ?></span>
-                            <br>
                             <span class="text-1 text-style-3"><?php echo TITULOS_DISCOVER[1];  ?></span>
                             <br>
 
@@ -46,8 +45,9 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
         <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
-                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
-                        <span class="d-flex justify-content-end gap-3">
+                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1">
+                        <span id="welcome-span" class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
+                        <span id="welcome-span2" class="d-flex justify-content-end gap-3">
                             <?php echo DISCOVER_WELCOME[1];  ?>
                         </span>
                     </h2>
@@ -256,8 +256,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 </svg>
                                             </a>
                                             <div class="flex-grow-1">
-                                                <h2 class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
-                                                    <span class="d-block">${section.button}</span>
+                                                <h2 class="text-style-6" style=" text-align:center; color:#1c355e;">
+                                                    <span class="d-block subtitle-slider">${section.button}</span>
                                                 </h2>
                                             </div>
                                             <a href="#" class="slide-navigation-item-next slide-navigation-item-next${sectionIndex + 1} d-block text-blue boton-next" data-carousel="#${sectionId}">
@@ -304,7 +304,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                         <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
                                             ${displayT}
                                         </div>
-                                        <div class="container-text mx-auto px-5">
+                                        <div class="container-text container-text-displayH mx-auto px-5">
                                             ${displayC}
                                         </div>
                                     </div>
@@ -330,13 +330,16 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-12 col-lg-6">
+                                            <div class="col-12 col-md-12 col-lg-6 what-to-bring-container">
                                                 <div class="what-to-bring">
                                                     <div class="duration-container">
-                                                        <div class="what-to-bring-duration rounded">
-                                                            <img class:"wtbIcon" src="assets/images/discover-beyond/icon-clock-blue.svg" width="48" height="48" alt="Icono">
+                                                        <div class="what-to-bring-duration ">
+                                                            
                                                             <div class="duration-text">
-                                                                <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
+                                                                <div class="duration-img">
+                                                                    <img class:"wtbIcon" src="assets/images/discover-beyond/icon-clock-blue.svg" width="32" height="32" alt="Icono">
+                                                                    <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
+                                                                </div>
                                                                 <h2 class="text-style-5">${section.displayDuration}</h2>
                                                             </div>
                                                         </div>
@@ -527,6 +530,15 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             }
         });
     });
+    $(document).ready(function() {
+    // Detectar si el dispositivo es móvil
+    if ($(window).width() <= 768) {  // 768px es el ancho máximo para dispositivos móviles (md y menores en Bootstrap)
+      $('#welcome-span').removeClass('text-start');
+      $('#welcome-span2').removeClass('justify-content-end');
+      $('#welcome-span').addClass('justify-content-center');
+      $('#welcome-span2').addClass('justify-content-center');
+    }
+  });
 </script>
 
 </html>
