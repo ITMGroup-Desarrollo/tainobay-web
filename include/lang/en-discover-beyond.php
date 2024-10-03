@@ -9,7 +9,7 @@ define('DISCOVER_WELCOME', array(
     'THE BRIDE OF',
     'THE ATLANTIC',
     'A destination you will remember forever.',
-    'Welcome to Puerto PLata, a beautiful Dominican town know as the Bride of the Atlantic, with
+    'Welcome to Puerto Plata, a beautiful Dominican town know as the Bride of the Atlantic, with
     its unique Victorian Architecture and its historic landmarks.',
     '<b>Puerto Plata</b> invites you to enjoy and explore its wonders upon arrival.'
 

@@ -163,7 +163,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 let gallery = '';
 
                 section.displayTitle.forEach((displayTitles) => {
-                    displayT += `<h2 class="text-style-3 lh-1 text-blue"><span class="d-block text-start centrado">${displayTitles}</span></h2>`;
+                    displayT += `<h2 class="text-style-3 lh-1 text-blue mb-0"><span class="d-block text-start centrado">${displayTitles}</span></h2>`;
                 });
                 section.displayContent.forEach((displayContents) => {
                     displayC += `<p class="text-black black text-style-13">${displayContents}</p>`;
