@@ -9,7 +9,7 @@ define('DISCOVER_WELCOME', array(
     'THE BRIDE OF',
     'THE ATLANTIC',
     'A destination you will remember forever.',
-    'Welcome to Puerto PLata, a beautiful Dominican town know as the Bride of the Atlantic, with
+    'Welcome to Puerto Plata, a beautiful Dominican town know as the Bride of the Atlantic, with
     its unique Victorian Architecture and its historic landmarks.',
     '<b>Puerto Plata</b> invites you to enjoy and explore its wonders upon arrival.'
 
@@ -174,7 +174,7 @@ $tours = [
     [
         "id" => "2",
         "Tour" => "countryside",
-        "tourName" => "Countryside Buggy",
+        "tourName" => "Countryside Buggy Adventure",
         "title" => "GET WILD",
         "subtitle" => "& FEEL THE RUSH!",
         "button" => "Ready for the buggy?",
@@ -618,7 +618,7 @@ $tours = [
             "PLAYA DORADA"
         ],
         "displayContent" => [
-            "Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... A must on your next visit!",
+            "Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... <br>A must on your next visit!",
             "Gran Ventana Beach Resort is in the center of Playa Dorada. Visit this exclusive getaway with a breathtaking beach area. The resort includes access to the pool, a private area for cruise passengers, a cocktail bar, lounge chairs, and non-motorized activities. The hotel’s buffet and snacks are included."
         ],
         "displayHighlights" => [

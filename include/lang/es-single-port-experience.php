@@ -783,3 +783,5 @@ $points = [
     ]
   ],
 ];
+
+define('BUTTON_BACK', "REGRESAR");

@@ -69,8 +69,9 @@ include_once("include/lang/reviews.php");
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
                     <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-md-start"><?= HOME_TEXT_WELCOME[0] ?></span>
-                        <span class="d-none d-lg-flex justify-content-end gap-3">
-                            <span class="text-style-3 lh-1"><?= HOME_TEXT_WELCOME[1] ?></span> <?= HOME_TEXT_WELCOME[2] ?>
+                        <span class="d-none d-lg-flex justify-content-end">
+                            <!-- <span class="text-style-3 lh-1"><?= HOME_TEXT_WELCOME[1] ?></span>  -->
+                            <?= HOME_TEXT_WELCOME[2] ?>
                         </span>
 
                         <span class="lh-1 d-lg-none"><?= HOME_TEXT_WELCOME[1] ?> <?= HOME_TEXT_WELCOME[2] ?></span>
@@ -105,65 +106,90 @@ include_once("include/lang/reviews.php");
         <?php include("include/dynamic-slider-home-r.php"); ?>
 
         <!-- Reviews Tripadvisor -->
-        <section class="shock-section pt-2 pb-4 mb-3" data-aos="fade-right" data-aos-duration="400" data-aos-delay="300">
-            <div id="container-reviews" class="container">
-                <!-- Arrow Left -->
-                <div class="text-blue d-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
-                        <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                        <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
-                    </svg>
-                </div>
-                <div id="reviews" class="container d-flex align-items-center swiper slider has-navigation" data-columns="3,2,1,3" data-loop="true" data-space="50" data-autoplay="4000">
-                    <!-- review content -->
-                    <div class=" justify-content-evenly swiper-wrapper">
-
-                        <?php foreach ($reviews as $review) { ?>
-                            <div class="card-review rounded-5 d-flex flex-column position-relative swiper-slide">
-                                <!-- Image wrapper -->
-                                <div class="card-header mb-1">
-                                    <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img" alt="Avatar de <?= $review['name'] ?>">
-                                </div>
-
-                                <!-- Quotes left -->
-                                <div class=" text-orange mb-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179" />
-                                    </svg>
-                                </div>
-
-                                <!-- Card content -->
-                                <div class="card-body text-center">
-                                    <h4 class="mb-0"><strong><?= $review['name'] ?></strong></h4>
-                                    <h6 class=""><?= $review['date'] ?></h6>
-                                    <?php
-                                    if (strlen($review['review']) > 150) {
-                                        $short_text = substr($review['review'], 0, 140) . '...';
-                                    ?>
-                                        <p class='text-justify text-xs bold'><?= $short_text ?></p>
-
-                                    <?php  } else { ?>
-                                        <p class='text-justify text-xs bold'><?= $review['review'] ?></p>
-                                    <?php } ?>
-                                    <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer' class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase' style="font-size: 12px;"><?= BTN_REVIEW ?></a>
-                                </div>
-                                <!-- Quotes Right -->
-                                <div class="text-orange text-end mt-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.248-5.621c-.537.278-1.24.375-1.93.311c-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179m-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621c-.537.278-1.24.375-1.929.311C4.591 12.323 3.17 10.842 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179" />
-                                    </svg>
-                                </div>
-
-                            </div>
-                        <?php } ?>
+        <section class="shock-section pt-2 pb-4">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12 text-center" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="400">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2500 1563" width="120" fill="#1c355e">
+                            <g>
+                                <g id=" Layer_2">
+                                    <g>
+                                        <path d="M625.7,624.3c-173.3,0-313.4,140.1-313.4,312.9s140.1,312.9,312.9,312.9,312.9-140.1,312.9-312.9c.5-172.8-139.6-312.9-312.4-312.9h0ZM625.7,1161.2c-123.5,0-224-100.1-224-224s100.1-224,224-224,223.5,100.5,223.5,224-100.1,224-223.5,224Z" />
+                                        <circle cx="626.7" cy="936.7" r="155.7" />
+                                        <path d="M1875.2,624.3c-172.8,0-312.9,140.1-312.9,312.9s140.1,312.9,312.9,312.9,312.9-140.1,312.9-312.9-140.1-312.9-312.9-312.9ZM1875.2,1161.2c-123.5,0-224-100.1-224-224s100.1-224,224-224,223.5,100.5,223.5,224-100.1,224-223.5,224Z" />
+                                        <circle cx="1876.2" cy="936.7" r="155.7" />
+                                        <path d="M2315.5,494l184-182.5h-372.9C1917.7,141.6,1570.7,0,1249,0S582.8,141.6,373.9,311.5H0l184,182.5C70.3,607.3,0,763.9,0,937.2c0,345.6,280.2,625.7,625.7,625.7s303.6-59.1,413.9-156.7l211.8,155.7,209.4-152.3-2.4-5.9c110.8,98.6,256.2,158.6,416.3,158.6,345.6,0,625.7-280.2,625.7-625.7-.5-172.8-71.3-329.5-185-442.7h0ZM1796.2,316.3c-296.3,37.1-528.6,281.1-546.2,583.3-18.1-302.6-250.9-547.1-548.1-583.3,149.4-107.4,339.7-160.1,547.1-160.1s397.8,52.7,547.1,160.1ZM625.7,1406.7c-259.7,0-469.5-210.4-469.5-469.5s210.4-469.5,469.5-469.5,469.5,210.4,469.5,469.5c-.5,259.2-210.4,469.5-469.5,469.5ZM1875.2,1406.7c-259.2,0-469.5-210.4-469.5-469.5s210.4-469.5,469.5-469.5,469.5,210.4,469.5,469.5c-.5,259.2-210.4,469.5-469.5,469.5Z" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                 </div>
-                <!-- Arrow Right -->
-                <div class="text-blue">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
-                        <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                        <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
-                    </svg>
+                <div class="row">
+                    <div class="col-12" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="400">
+                        <!-- Arrow Left -->
+                        <div class="text-blue d-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
+                                <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                                <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+                            </svg>
+                        </div>
+
+                        <div id="reviews" class="gallery swiper slider has-navigation d-flex align-items-center"
+                            data-columns="3,3,1,3" data-autoplay="10000" data-space="50" data-loop="true">
+                            <div class="swiper-wrapper">
+
+                                <?php foreach ($reviews as $review) { ?>
+                                    <div class="card-review rounded-5 d-flex flex-column position-relative swiper-slide">
+                                        <!-- Image wrapper -->
+                                        <div class="card-header mb-1">
+                                            <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img" alt="Avatar de <?= $review['name'] ?>">
+                                        </div>
+
+                                        <!-- Quotes left -->
+                                        <div class=" text-orange mb-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179" />
+                                            </svg>
+                                        </div>
+
+                                        <!-- Card content -->
+                                        <div class="card-body text-center">
+                                            <h4 class="mb-0"><strong><?= $review['name'] ?></strong></h4>
+                                            <h6 class=""><?= $review['date'] ?></h6>
+                                            <?php
+                                            if (strlen($review['review']) > 150) {
+                                                $short_text = substr($review['review'], 0, 140) . '...';
+                                            ?>
+                                                <p class='text-justify text-xs bold'><?= $short_text ?></p>
+
+                                            <?php  } else { ?>
+                                                <p class='text-justify text-xs bold'><?= $review['review'] ?></p>
+                                            <?php } ?>
+                                            <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer' class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase' style="font-size: 12px;"><?= BTN_REVIEW ?></a>
+                                        </div>
+                                        <!-- Quotes Right -->
+                                        <div class="text-orange text-end mt-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.248-5.621c-.537.278-1.24.375-1.93.311c-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179m-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621c-.537.278-1.24.375-1.929.311C4.591 12.323 3.17 10.842 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179" />
+                                            </svg>
+                                        </div>
+
+                                    </div>
+                                <?php } ?>
+
+
+                            </div>
+                        </div>
+
+                        <!-- Arrow Right -->
+                        <div class="text-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
+                                <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                                <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

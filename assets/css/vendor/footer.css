@@ -172,7 +172,11 @@ footer {
   font-weight: 800;
   border: 2px solid #fff !important;
   border-left: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 @media (max-width: 990px) {
   .footer-textbox-container {
     padding: 0 2rem 0 2rem;

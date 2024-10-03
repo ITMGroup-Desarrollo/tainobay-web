@@ -163,7 +163,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 let gallery = '';
 
                 section.displayTitle.forEach((displayTitles) => {
-                    displayT += `<h2 class="text-style-3 lh-1 text-blue"><span class="d-block text-start centrado">${displayTitles}</span></h2>`;
+                    displayT += `<h2 class="text-style-3 lh-1 text-blue mb-0"><span class="d-block text-start centrado">${displayTitles}</span></h2>`;
                 });
                 section.displayContent.forEach((displayContents) => {
                     displayC += `<p class="text-black black text-style-13">${displayContents}</p>`;
@@ -244,7 +244,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                             <h2 class="lh-1 title-carrusel left">
                                                 <span class="d-block text-style-3 gradient-animated-title animation-duration-1" style="text-align: center;">${section.title}</span>
                                                 <span class="d-flex justify-content-center">
-                                                    <span class="text-style-4 lh-1 text-italic" style="padding: 0;">${section.subtitle}</span>
+                                                    <span class="text-style-4 lh-1 text-italic" style="padding: 0 !important;">${section.subtitle}</span>
                                                 </span>
                                             </h2>
                                         </div>
@@ -278,7 +278,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 <div class="text-black black text-style-13 justificado text-content-container d-flex ${justifyClass}"><p>${section.content}</p></div>
                                                 <div class="d-flex ${justifyClass}">
                                                     <a class="display-button" >
-                                                        <div class="icon-container"><i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i></div>
+                                                        <div class="icon-container">
+                                                         
+                                                            <svg class="rotate-icon fa-xmark fa-rotate-by" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 448 512">
+                                                                <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32" />
+                                                            </svg>
+                                                        </div>
                                                         <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
                                                     </a>
                                                 </div>
