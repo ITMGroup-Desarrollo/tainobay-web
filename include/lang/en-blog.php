@@ -7,7 +7,7 @@ define('TITULOS_BLOG', array(
 ));
 define('TITULOS_BLOG_ALL', array(
     'BLOG',
-    'News, updates, tips, and more...Get ready for your next Port Taino Bay visit!',
+    'News, updates, tips, and more...<br>Get ready for your next Port Taino Bay visit!',
     'Title of the event'
 ));
 define('SECTION_BLOG_ALL', array(
