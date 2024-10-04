@@ -513,9 +513,15 @@
                 .dynamic-slider-r .static-content {
                     padding: 2rem 1rem;
                     justify-items: center;
+                    margin-bottom: 18rem;
                     grid-template-columns: 100%;
-                    grid-template-rows: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
                     grid-template-areas: "static-title" "static-arrows" "...";
+                }
+
+                .side-intro .description {
+                    margin: 0 0 0;
+                    line-height: 1.5;
                 }
 
                 .dynamic-slider-r {
@@ -554,10 +560,10 @@
 
                 .dynamic-slider-r .slide-item {
                     grid-template-columns: 100%;
-                    grid-template-rows: 40% 10% 50%;
+                    grid-template-rows: 50% 50%;
+
                     grid-template-areas:
                         "slide-content"
-                        "static-button"
                         "slide-image-wrapper";
                 }
 
@@ -567,9 +573,6 @@
 
                 .dynamic-slider-r .slide-content {
                     width: 100%;
-                    /* margin-bottom: 2rem; */
-                    padding: 1rem 2rem 2rem 2rem;
-                    flex: 0 0 auto;
                     order: 2;
                 }
 
@@ -625,6 +628,14 @@
                 }
             }
 
+            @media (max-width: 991px) and (min-height: 800px) {
+                .dynamic-slider-r .static-content {
+                    margin-bottom: 5rem;
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-areas: "static-title" "static-arrows";
+                }
+            }
+
             @media (max-width: 424px) {
                 .dynamic-slider-r .slide-action-inner {
                     display: block;
@@ -635,6 +646,10 @@
                 .dynamic-slider-r .slide-item {
                     position: initial;
                 }
+            }
+
+            .button-mobile {
+                margin: 2rem 1rem;
             }
         </style>
         <section id="home" class="shock-section dynamic-slider-r scheme-1" data-autoplay="6000" data-aos="fade-up"
@@ -725,7 +740,16 @@
                                     <?= $tour['content'] ?>
                                 </p>
                             </div>
+
                         </div>
+                        <div class="slide-button button-mobile static-button d-md-none" style="z-index: 9;">
+                            <div class="container-button text-center">
+                                <a id="button-carrusel" href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel">
+                                    <strong><?= BUTTON_EXPLORE; ?></strong>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                     <!-- Image -->
                     <div class="slide-image-wrapper">
@@ -747,3 +771,6 @@
                 </div>
             <?php } ?>
         </section>
+        <script>
+
+        </script>

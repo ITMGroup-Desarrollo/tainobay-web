@@ -31,7 +31,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                             <br>
 
                         </h1>
-                        <h2 class="title white"><span class="text-2 text-style-8 blog-subtitle "></span></h2>
+                        <h2 class="title white"><span class="text-2 text-style-8 blog-subtitle banner-subtitle"></span></h2>
                     </div>
                 </div>
                 <!-- Image -->

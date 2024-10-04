@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <!-- button explore more -->
-                    <div class="slide-button static-button" style="z-index: 9;">
+                    <div class="slide-button static-button d-none d-md-block" style="z-index: 9;">
                         <div class="container-button text-center">
                             <a href="<?= $idioma . '/port-experience/' . $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong><?= BUTTON_EXPLORE; ?></strong></a>
                         </div>
@@ -86,6 +86,13 @@
                                 <p class="text-style-12">
                                     <?= $point['text_home'] ?>
                                 </p>
+                            </div>
+                        </div>
+                        <div class="slide-button button-mobile static-button d-md-none" style="z-index: 9;">
+                            <div class="container-button text-center">
+                                <a href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel">
+                                    <strong><?= BUTTON_EXPLORE; ?></strong>
+                                </a>
                             </div>
                         </div>
                     </div>
