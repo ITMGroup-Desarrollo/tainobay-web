@@ -50,7 +50,7 @@ include_once("include/lang/{$idioma}-contact.php");
             } */
 
             .m-0 {
-                margin: 1rem !important;
+                margin: .7rem !important;
             }
 
             .collapse-group {
@@ -109,7 +109,7 @@ include_once("include/lang/{$idioma}-contact.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-5 pb-5 pe-5 ps-5" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
+        <section class="shock-section p-3" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
             <div class="container max-w-65">
                 <!-- Collapse -->
                 <div class="collapsible">

@@ -1987,7 +1987,7 @@ button {
 }
 .form-area .form-control::placeholder {
   font-size: 1rem;
-  color: var(--gray-color);
+  /* color: var(--gray-color); */
 }
 .form-area .form-control::-webkit-search-decoration,
 .form-area .form-control::-webkit-search-cancel-button,
