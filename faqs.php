@@ -11,13 +11,13 @@ include_once("include/lang/{$idioma}-contact.php");
     <?php include("include/head.php"); ?>
 <style>
     .section-form{
-        min-height: 75vh;
+        min-height: 80vh;
     }
     .image-wrapper{
-        min-height: 75vh;
+        min-height: 80vh;
     }
     .image-wrapper img{
-        min-height: 75vh;
+        min-height: 80vh;
     }
     .content-wrapper{
         top: 10% !important;
