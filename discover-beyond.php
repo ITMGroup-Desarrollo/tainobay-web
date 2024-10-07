@@ -41,7 +41,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <div class="overlay-banner"></div>
             </div>
         </section>
-       
+
         <!--Welcome-->
         <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="container text-center my-5">
@@ -53,7 +53,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                         </span>
                     </h2>
                 </div>
-                <div class="container-text mx-auto px-5">
+                <div class="container-text mx-auto">
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[2];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[3];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[4];  ?></p>

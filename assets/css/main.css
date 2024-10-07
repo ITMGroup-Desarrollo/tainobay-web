@@ -137,6 +137,19 @@ Support : codings.dev
   max-width: 500px;
   margin: auto;
 }
+
+.banner .content-wrapper {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  top: 5%;
+}
 @media (max-width: 575px) {
   .popup-bar {
     padding: 0 1rem;
@@ -423,18 +436,6 @@ Support : codings.dev
   position: relative;
   width: 100%;
   height: 100%;
-}
-.banner .content-wrapper {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: auto;
-  padding: 1rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  top: 25%;
 }
 .top-zero {
   top: initial !important;
@@ -4353,11 +4354,16 @@ table {
 }
 @media only screen and (max-width: 768px) {
   .banner .banner-title {
-    font-size: 3em ;
+    font-size: 3em;
     margin-bottom: 1.5rem !important;
-}
+  }
 
-.banner .banner-subtitle {
-    font-size: 1.6em ;
+  .banner .banner-subtitle {
+    font-size: 1.6em;
+  }
 }
+@media (min-width: 768px) {
+  .banner .content-wrapper {
+    top: 15%;
+  }
 }

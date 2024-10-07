@@ -51,7 +51,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
             <?= TITULOS_PORT_EXPERIENCE[1] ?>
           </h2>
         </div>
-        <div class="container-text mx-auto px-5">
+        <div class="container-text mx-auto">
 
           <p class="text-black black text-style-13"><?= TEXT_PORT_EXPERIENCE[0] ?></p>
           <p class="text-black black text-style-13"><?= TEXT_PORT_EXPERIENCE[1] ?></p>
