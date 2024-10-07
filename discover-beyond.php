@@ -23,24 +23,25 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <div class="content-wrapper top-zero ">
                     <!-- Intro -->
                     <div class="basic-intro text-center">
-                        <h1 class="title white">
-                            <span class="text-1 text-style-3"><?php echo TITULOS_DISCOVER[0];  ?></span>
-                            <span class="text-1 text-style-3"><?php echo TITULOS_DISCOVER[1];  ?></span>
-                            <br>
-
+                        <h1 class="title white text-1 banner-title text-uppercase fw-bold">
+                            <?= TITULOS_DISCOVER[0] ?>
+                            <br><?= TITULOS_DISCOVER[1] ?>
                         </h1>
-                        <h2 class="title white"><span class="text-2 text-style-8 "><?php echo TITULOS_DISCOVER[2];  ?> </span></h2>
+                        <p class="text-white banner-subtitle"><?php echo TITULOS_DISCOVER[2];  ?></p>
                     </div>
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
                     <div class="banner-fixed" style="background-image:url('assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg')">
+
                     </div>
+                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-banner"></div>
             </div>
         </section>
+       
         <!--Welcome-->
         <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="container text-center my-5">
@@ -531,14 +532,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
         });
     });
     $(document).ready(function() {
-    // Detectar si el dispositivo es móvil
-    if ($(window).width() <= 768) {  // 768px es el ancho máximo para dispositivos móviles (md y menores en Bootstrap)
-      $('#welcome-span').removeClass('text-start');
-      $('#welcome-span2').removeClass('justify-content-end');
-      $('#welcome-span').addClass('justify-content-center');
-      $('#welcome-span2').addClass('justify-content-center');
-    }
-  });
+        // Detectar si el dispositivo es móvil
+        if ($(window).width() <= 768) { // 768px es el ancho máximo para dispositivos móviles (md y menores en Bootstrap)
+            $('#welcome-span').removeClass('text-start');
+            $('#welcome-span2').removeClass('justify-content-end');
+            $('#welcome-span').addClass('justify-content-center');
+            $('#welcome-span2').addClass('justify-content-center');
+        }
+    });
 </script>
 
 </html>

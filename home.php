@@ -18,15 +18,17 @@ include_once("include/lang/reviews.php");
 
             video.vh-100,
             .vh-100 {
-                height: 100% !important;
+                height: 65vh !important;
             }
+
+            
         }
 
         @media (max-width: 768px) {
 
             video.vh-100,
             .vh-100 {
-                height: 100% !important;
+                height: 65vh !important;
             }
         }
     </style>
@@ -70,7 +72,6 @@ include_once("include/lang/reviews.php");
                 <div class="container-title mx-auto mb-2">
                     <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-md-start"><?= HOME_TEXT_WELCOME[0] ?></span>
                         <span class="d-none d-lg-flex justify-content-end">
-                            <!-- <span class="text-style-3 lh-1"><?= HOME_TEXT_WELCOME[1] ?></span>  -->
                             <?= HOME_TEXT_WELCOME[2] ?>
                         </span>
 
@@ -108,7 +109,7 @@ include_once("include/lang/reviews.php");
         <!-- Reviews Tripadvisor -->
         <section class="shock-section pt-2 pb-4">
             <div class="container">
-                <div class="row mt-5">
+                <div class="row mt-5 mb-3">
                     <div class="col-12 text-center" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="400">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2500 1563" width="120" fill="#1c355e">
                             <g>
@@ -389,6 +390,14 @@ include_once("include/lang/reviews.php");
                     }
                 });
             });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            // Detectar si el dispositivo es móvil
+            if (window.innerWidth <= 991) {
+                var buttonCarrusel = document.getElementById('button-carrusel');
+                buttonCarrusel.classList.remove('button-orange');
+                buttonCarrusel.classList.add('button-white');
+            }
         });
     </script>
 </body>

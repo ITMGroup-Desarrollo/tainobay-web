@@ -4351,3 +4351,13 @@ table {
 .button-secondary:hover {
   border: solid 2px var(--primary-color);
 }
+@media only screen and (max-width: 768px) {
+  .banner .banner-title {
+    font-size: 3em ;
+    margin-bottom: 1.5rem !important;
+}
+
+.banner .banner-subtitle {
+    font-size: 1.6em ;
+}
+}

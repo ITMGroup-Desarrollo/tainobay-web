@@ -23,12 +23,10 @@ include_once("include/lang/{$idioma}-blog.php");
                 <div class="content-wrapper top-zero ">
                     <!-- Intro -->
                     <div class="basic-intro text-center">
-                        <h1 class="title white">
-                            <span class="text-1 text-style-3"><?php echo TITULOS_BLOG_ALL[0];  ?></span>
-                            <br>
-
+                        <h1 class="title white text-1 banner-title text-uppercase fw-bold">
+                        <?php echo TITULOS_BLOG_ALL[0];  ?>
                         </h1>
-                        <h2 class="text-2 text-style-8 title white"><?php echo TITULOS_BLOG_ALL[1];  ?> </h2>
+                        <p class="text-white banner-subtitle"><?php echo TITULOS_BLOG_ALL[1];  ?></p>
                     </div>
                 </div>
                 <!-- Image -->

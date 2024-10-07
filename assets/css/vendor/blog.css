@@ -15,7 +15,7 @@
     color: white;
 }
 .blog-subtitle{
-    max-width: 80vw !important;
+    max-width: auto !important;
 }
 .timeline {
     list-style: none;

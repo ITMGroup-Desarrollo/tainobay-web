@@ -44,12 +44,16 @@
 
 #reviews {
   overflow-y: visible;
-  height: 400px;
+  height: 550px;
   width: 85%;
+  margin-top: 1rem;
 }
 
 /* sm */
 @media (min-width: 640px) {
+  #reviews {
+    overflow-y: none;
+  }
 }
 
 /* md 768px  */
@@ -61,8 +65,9 @@
   }
   #reviews {
     overflow-y: visible;
-    height: 450px;
+    height: 500px;
     width: 90%;
+    margin-top: 1rem;
   }
 }
 
