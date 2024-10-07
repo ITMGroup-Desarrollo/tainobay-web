@@ -75,7 +75,7 @@ include_once("include/lang/reviews.php");
                             <?= HOME_TEXT_WELCOME[2] ?>
                         </span>
 
-                        <span class="lh-1 d-lg-none"><?= HOME_TEXT_WELCOME[1] ?> <?= HOME_TEXT_WELCOME[2] ?></span>
+                        <span class="lh-1 d-lg-none"><?= HOME_TEXT_WELCOME[2] ?></span>
                     </h2>
                 </div>
                 <div class="container-text mx-auto">
