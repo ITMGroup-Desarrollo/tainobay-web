@@ -239,7 +239,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 const sectionHTML = `
                         <section data-id=${section.id} class="carousel-section  data-aos="fade-up"">
                             <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center w-md-100">
-                                <div id="port-experience" class="shock-section ${section.side} pt-2 pb-4 w-md-100">
+                                <div id="port-experience" class="shock-section ${section.side} pt-2 w-md-100">
                                     <div class="carousel-content order bg-white d-flex flex-column justify-content-evenly align-items-center">
                                         <div class="basic-intro mb-35">
                                             <h2 class="lh-1 title-carrusel left">

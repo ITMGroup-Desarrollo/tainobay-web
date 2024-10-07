@@ -617,6 +617,14 @@ h2.title.white {
     padding-right: 2rem;
   }
 @media (max-width: 576px) {
+    .container-text.bg-orange {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+    .title-carrusel span {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
     .subtitle-slider {
         width: 100%;
     }
@@ -642,6 +650,7 @@ h2.title.white {
 
     .carousel-content {
         row-gap: 0rem;
+        padding: 0rem 0rem;
     }
 
     .orange-items-container {
@@ -694,10 +703,27 @@ h2.title.white {
     .container-text-displayH {
         text-align: left;
     }
+    .carousel-content {
+        row-gap: 0rem;
+        padding: 0rem 0rem;
+    }
+    .container-text.bg-orange {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+    .title-carrusel span {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
 }
 
-@media (min-width: 768px) {
-    .w-md-100 {
-        width: 100%;
+
+@media (max-width: 992px) {
+    .shock-section.left-side .carousel-content.order {
+        order: -1 !important;
+    }
+    
+    .shock-section.right-side .carousel-content.order {
+        order: 0 !important;
     }
 }
