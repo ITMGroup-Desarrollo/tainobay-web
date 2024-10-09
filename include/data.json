@@ -2,73 +2,58 @@
     "posts": [
         {
             "id": 1,
-            "title": "Playa-dorada",
-            "subtitle":"subtitle",
-            "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
-            "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
-            "image_url": "assets/images/blog/playa-dorada-two.jpg",
-            "day": 1,
-            "month": "January"
+            "title": "Let’s-Make-a-Splash-Together!",
+            "subtitle":"",
+            "description": "We’re thrilled to invite you to enjoy unforgettable moments in our new beach area! This vibrant space allows cruisers to experience a beach day right at the port, complete with board games, lounge chairs, and, of course, the excitement of Splash Surfing.",
+            "content": "We’re thrilled to invite you to enjoy unforgettable moments in our new beach area! This vibrant space allows cruisers to experience a beach day right at the port, complete with board games, lounge chairs, and, of course, the excitement of Splash Surfing.\n\nSplash Surfing is our wave simulator, where kids and adults can test their surfing skills and enjoy the rush. It’s the perfect way to add some thrill to your day at the harbor!\n\nWe can’t wait to share this amazing experience with you. Don't forget to capture the fun and tag us in your photos—let’s relive those memories together!",
+            "image_url": "assets/images/blog/Splash/Splash01.jpg",
+            "image_url2": "assets/images/blog/Splash/Splash3.jpg",
+            "day": 5,
+            "month": "September",
+            "images": [
+                "assets/images/blog/Splash/Splash4.jpg",
+                "assets/images/blog/Splash/Splash2.jpg",
+                "assets/images/blog/Splash/Splash3.jpg",
+                "assets/images/blog/Splash/Splash01.jpg"
+            ]
         },
         {
             "id": 2,
-            "title": "Mojito-Bar",
-            "subtitle":"subtitle",
-            "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
-            "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
-            "image_url": "assets/images/blog/mojito-bar-one.jpg",
-            "day": 2,
-            "month": "February"
+            "title": "Pride-celebration-at-Taino-Bay",
+            "subtitle":"",
+            "description": "June was a fantastic month! Throughout June, we commemorated Pride Month with events, and activities that celebrate the community. ",
+            "content": "June was a fantastic month! Throughout June, we commemorated Pride Month with events, and activities that celebrate the community. Diversity, equity, and acceptance are values that drive our commitment to creating a welcoming environment. It is a must for us to foster a space where both employees and visitors feel valued, respected, and happy.\n\nWe had a great time celebrating with you!",
+            "image_url": "assets/images/blog/Pride/pride1.jpg",
+            "image_url2": "assets/images/blog/Pride/pride5.jpg",
+            "day": 28,
+            "month": "June",
+            "images": [
+                "assets/images/blog/Pride/pride1.jpg",
+                "assets/images/blog/Pride/pride2.jpg",
+                "assets/images/blog/Pride/pride3.jpg",
+                "assets/images/blog/Pride/pride4.jpg",
+                "assets/images/blog/Pride/pride5.jpg"
+            ]
         },
         {
             "id": 3,
-            "title": "Damajagua",
-            "subtitle":"subtitle",
-            "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
-            "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
-            "image_url": "assets/images/discover-beyond/damajagua/damajagua-main-four.webp",
-            "day": 3,
-            "month": "March"
-        },
-        {
-            "id": 4,
-            "title": "Old-Town",
-            "subtitle":"subtitle",
-            "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
-            "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
-            "image_url": "assets/images/discover-beyond/old-town/old-town-main-one.webp",
-            "day": 4,
-            "month": "April"
-        },
-        {
-            "id": 5,
-            "title": "atv",
-            "subtitle":"subtitle",
-            "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
-            "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
-            "image_url": "assets/images/discover-beyond/atv-exp/atv-expedition-main-four.webp",
-            "day": 5,
-            "month": "April"
-        },
-        {
-            "id": 6,
-            "title": "country",
-            "subtitle":"subtitle",
-            "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
-            "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
-            "image_url": "assets/images/discover-beyond/country/countryside-main-five.webp",
-            "day": 6,
-            "month": "April"
-        },
-        {
-            "id": 7,
-            "title": "puerto-plata",
-            "subtitle":"subtitle",
-            "description": "Magna aliquip exercitation sunt irure deserunt esse eu nostrud dolor commodo esse incididunt duis adipisicing. Adipisicing ad aute et laboris ullamco. ",
-            "content": "Lorem nisi id elit in reprehenderit mollit in non do eu irure. Consequat nulla ullamco mollit Lorem nostrud consequat commodo. Deserunt anim irure ea veniam duis.Commodo labore qui et in culpa ea culpa id. Lorem pariatur aute anim ipsum non id amet reprehenderit. Officia cupidatat ullamco fugiat excepteur ullamco ex enim aliquip consequat enim sunt anim. Pariatur magna ex labore reprehenderit ex sit aute ipsum excepteur. Reprehenderit cillum aute commodo anim voluptate elit culpa incididunt id proident sint elit nisi.",
-            "image_url": "assets/images/discover-beyond/playa-dorada/playa-dorada-main-one.webp",
-            "day": 7,
-            "month": "April"
-        }
+            "title": "Icekery-is-OPEN!",
+            "subtitle":"",
+            "description": "Last May 15, we had a blast, enjoyin delicious ice cream at the brand new Icekery at the port. This fun ice cream shop offer a delicious artisanal ice cream variety for those who want to beat the Dominican heat.",
+            "content": "Last May 15, we had a blast, enjoyin delicious ice cream at the brand new Icekery at the port. This fun ice cream shop offer a delicious artisanal ice cream variety for those who want to beat the Dominican heat.\n\nYou can custom your ice cream by choosing your favorite toppings. From gummy bears, to chocolate sticks, and cookies, you can make it as yummy as you wish.\n\nIcekery is easy to find upon arrival...It is right in front of Monkey Island!\n\nSo here you have it. After enjoying a day filled with adventure, visit Icekery and freshen up before heading back to your cruise!",
+            "image_url": "assets/images/blog/icekery/Ice03.jpg",
+            "image_url2": "assets/images/blog/icekery/Ice02.jpg",
+            "day": 15,
+            "month": "May",
+            "images": [
+                "assets/images/blog/Icekery/Ice01.jpg",
+                "assets/images/blog/Icekery/Ice02.jpg",
+                "assets/images/blog/Icekery/Ice03.jpg",
+                "assets/images/blog/Icekery/Ice04.jpg",
+                "assets/images/blog/Icekery/Ice05.jpg",
+                "assets/images/blog/Icekery/Ice06.jpg"
+            ]
+          }        
+        
     ]
 }
