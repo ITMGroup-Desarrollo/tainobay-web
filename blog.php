@@ -36,7 +36,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
+                    <div class="banner-fixed">
 
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
@@ -186,15 +186,22 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 <div class="blog-post blog-texto">
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
-                <div class="title-image">
-                    <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                <div class="title-image mb-3">
+                    <img src="${data.image_url2}" class="img-fluid imgRound" alt="${data.title}">
                 </div>
+                <div class="gallery-section">
+                    <div class="gallery-title2 mb-2">
+                        <h2 class="title"><span class="text-2 text-style-6">Gallery</span></h2>
+                    </div>
+                    <div class="gallery-container2 mb-3">
+                        ${data.images.map(imageUrl => `<img src="${imageUrl}" class="img-fluid gallery-img" alt="Gallery image">`).join('')}
+                    </div>
+                </div>
+                
             `);
+            $('.banner-fixed').css('background-image', `url(${data.image_url})`);
+
 
 
 
@@ -318,6 +325,8 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 }
             }
         });
+        
+
     });
 </script>
 
