@@ -16,7 +16,7 @@ define('TEXT_PORT_EXPERIENCE', array(
 ));
 
 define('BUTTON_EXPLORE', 'Explore more');
-define('TEXT_BUTTON_PORT_EXPERIENCE', 'Discover our intereactive map');
+define('TEXT_BUTTON_PORT_EXPERIENCE', 'Discover our interactive map');
 
 $points = [
   [
