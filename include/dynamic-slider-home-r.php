@@ -511,7 +511,6 @@
 
             @media (max-width: 991px) {
                 .dynamic-slider-r .static-content {
-                    padding: 2rem 1rem;
                     justify-items: center;
                     margin-bottom: 18rem;
                     grid-template-columns: 100%;
@@ -630,7 +629,6 @@
 
             @media (max-width: 991px) and (min-height: 800px) {
                 .dynamic-slider-r .static-content {
-                    margin-bottom: 5rem;
                     grid-template-rows: repeat(2, 1fr);
                     grid-template-areas: "static-title" "static-arrows";
                 }
@@ -647,7 +645,25 @@
                     position: initial;
                 }
             }
-
+            @media (min-width: 991px) and (min-height: 500px) and (max-height: 600px){
+                .dynamic-slider-r .static-content {
+                padding: 2rem 1rem;
+            }
+                .text-style-3 {
+                font-size: 3rem;
+            }
+                .text-style-6 {
+                font-size: 2rem;
+            }
+        }
+            @media (min-width: 768px) and (min-height: 800px) and (max-height: 1000px){
+                .dynamic-slider-r .static-content {
+                padding: 2rem 1rem;
+            }
+                .text-style-3 {
+                font-size: 4rem;
+            }
+        }
             .button-mobile {
                 margin: 2rem 1rem;
             }
@@ -674,8 +690,13 @@
                         </svg>
                     </a>
                     <!-- Text Carousel -->
-                    <div class="flex-grow-1">
-                        <p class="text-style-6 text-arrows text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_DISCOVER_BEYOND[1]; ?></span><span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_DISCOVER_BEYOND[2]; ?></span></p>
+                    <div class="flex-grow-1 d-none d-md-block">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_DISCOVER_BEYOND[1];; ?></span>
+                            <span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_DISCOVER_BEYOND[2]; ?></span>
+                        </p>
+                    </div>
+                    <div class="flex-grow-1 d-md-none">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_DISCOVER_BEYOND[3];; ?></span></p>
                     </div>
                     <!-- Arrow Right -->
                     <a href="#" class="slide-navigation-item-next d-inline-block text-orange" role="button">
