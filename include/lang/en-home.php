@@ -1,7 +1,7 @@
 <?php
 
 define('HOME_TEXT_BANNER', array(
-    'Welcome to Port Taino Bay',
+    'Welcome&nbsp;to Port&nbsp;Taino&nbsp;Bay',
     'The ultimate port experience in Puerto Plata, Dominican Republic.',
 ));
 
@@ -16,13 +16,15 @@ define('HOME_TEXT_WELCOME', array(
 define('CAROUSEL_PORT_EXPERIENCE', array(
     'Port experience',
     'Discover',
-    'things to do',
+    'things&nbsp;to&nbsp;do',
+    'Discover things&nbsp;to&nbsp;do'
 ));
 
 define('CAROUSEL_DISCOVER_BEYOND', array(
-    'Discover Beyond The Cruise',
+    'Discover Beyond The&nbsp;Cruise',
     'The best',
-    'things to do',
+    'things&nbsp;to&nbsp;do',
+    'The&nbsp;best things&nbsp;to&nbsp;do',
 ));
 
 define("SCROLLING_TEXT", array(

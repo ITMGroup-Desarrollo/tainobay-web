@@ -684,11 +684,11 @@ h2.title.white {
 }
 
 @media (min-width: 574px) and (max-width: 654px) {
-    .subtitle-slider {
+    /* .subtitle-slider {
         align-self: center;
         width: 40vw;
         padding-left: 3rem;
-    }
+    } */
     .what-to-bring-container {
         display: flex;
         justify-content: center;

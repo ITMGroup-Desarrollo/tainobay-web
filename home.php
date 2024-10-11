@@ -21,7 +21,7 @@ include_once("include/lang/reviews.php");
                 height: 65vh !important;
             }
 
-            
+
         }
 
         @media (max-width: 768px) {

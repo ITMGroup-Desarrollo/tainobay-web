@@ -22,8 +22,13 @@
                         </svg>
                     </a>
                     <!-- Text Carousel -->
-                    <div class="flex-grow-1">
-                        <p class="text-style-6 text-arrows text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[1]; ?></span><span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_PORT_EXPERIENCE[2]; ?></span></p>
+                    <div class="flex-grow-1 d-none d-md-block">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[1]; ?></span>
+                            <span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_PORT_EXPERIENCE[2]; ?></span>
+                        </p>
+                    </div>
+                    <div class="flex-grow-1 d-md-none">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[3]; ?></span></p>
                     </div>
                     <!-- Arrow Right -->
                     <a href="#" class="slide-navigation-item-next d-inline-block text-blue" role="button">
@@ -72,7 +77,7 @@
                         </div>
                     </div>
                     <!-- button explore more -->
-                    <div class="slide-button static-button d-none d-md-block" style="z-index: 9;">
+                    <div class="slide-button static-button d-none d-lg-block" style="z-index: 9;">
                         <div class="container-button text-center">
                             <a href="<?= $idioma . '/port-experience/' . $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong><?= BUTTON_EXPLORE; ?></strong></a>
                         </div>
@@ -88,7 +93,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="slide-button button-mobile static-button d-md-none" style="z-index: 9;">
+                        <div class="slide-button button-mobile static-button d-lg-none" style="z-index: 9;">
                             <div class="container-button text-center">
                                 <a href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel">
                                     <strong><?= BUTTON_EXPLORE; ?></strong>
