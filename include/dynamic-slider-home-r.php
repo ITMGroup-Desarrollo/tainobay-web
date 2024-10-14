@@ -747,7 +747,7 @@
                     <!-- button explore more -->
                     <div class="slide-button static-button" style="z-index: 9;">
                         <div class="container-button text-center">
-                            <a href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel"><strong><?= BUTTON_EXPLORE; ?></strong></a>
+                            <a href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel"><strong><?= CAROUSEL_DISCOVER_BEYOND[4] ?></strong></a>
                         </div>
                     </div>
                     <!-- Intro -->
@@ -766,7 +766,7 @@
                         <div class="slide-button button-mobile static-button d-md-none" style="z-index: 9;">
                             <div class="container-button text-center">
                                 <a id="button-carrusel" href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel">
-                                    <strong><?= BUTTON_EXPLORE; ?></strong>
+                                    <strong><?= CAROUSEL_DISCOVER_BEYOND[4] ?></strong>
                                 </a>
                             </div>
                         </div>
