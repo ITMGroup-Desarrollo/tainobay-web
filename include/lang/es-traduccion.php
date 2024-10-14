@@ -22,8 +22,8 @@ define('TEXT_MENU', array(
 
 define('FOOTER_DESCRIP', array(
     '¡Trabaja con nosotros!',
-    'SUSCRIBETE',
-    'ÚNETE A NUESTRO BOLETÍN'
+    'SUSCRÍBETE',
+    '¡ÚNETE A NUESTRO NEWSLETTER!'
 ));
 
 define('FOOTER_OURS', array(
@@ -32,10 +32,10 @@ define('FOOTER_OURS', array(
     'Mapa',
     'Blog',
     'FAQ´s',
-    'Contactanos',
+    'Contacto',
     'Aviso Legal',
-    'Políticas de privacidad',
-    'SIGUENOS'
+    'Política de privacidad',
+    '¡Síguenos!'
 ));
 
 define('FOOTER_ACTIVITIES', array(

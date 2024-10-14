@@ -6,13 +6,13 @@ define('TITULOS_BANNER_PORT_EXPERIENCE', array(
 ));
 
 define('TITULOS_PORT_EXPERIENCE', array(
-  'Restaurants,',
-  'Bars & Experiences'
+  'Restaurantess,',
+  'Bares y experiencias'
 ));
 
 define('TEXT_PORT_EXPERIENCE', array(
-  'Comida para todos los gustos y bebidas para todas las necesidades.',
-  'Desde café helado y pasteles hasta margaritas y <strong>comida Dominicana</strong>, le esperan deliciosas experiencias culinarias. Disfrútelas en nuestros restaurantes y bares temáticos, o téngalas a su lado mientras se relaja junto a la piscina. ¡Nos vemos pronto!'
+  '¡Platillos para todos los gustos y drinks para toda ocasión!',
+  'Desde café helado y postres hasta margaritas refrescantes y <strong>auténtica comida dominicana</strong>, te invitamos a disfrutar de experiencias culinarias únicas. Saborea cada platillo en nuestros restaurantes y bares temáticos del puerto, o relájate con tus drinks favoritos. ¡Nos vemos pronto!'
 ));
 
 define('BUTTON_EXPLORE', 'Ver más');
@@ -32,7 +32,7 @@ $points = [
     'cover' => 'blue-parrot/cover-blue-parrot-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets/images/port-experience/blue-parrot/blue-parrot-six.jpg'],
-    'text_home' => "A colorful vibe is ready to welcome you at Blue Parrot! With a Caribbean-inspired seafood menu, you'll find a taste you'll remember forever!",
+    'text_home' => "¡Un ambiente único y colorido te da la bienvenida en Blue Parrot! Encuentra un sabor inolvidable en su increíble menú de mariscos inspirado en el Caribe.",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -95,7 +95,7 @@ $points = [
     'cover' => 'boat-bar/cover-boat-bar-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets/images/port-experience/boat-bar/carousel-boat-bar.webp'],
-    'text_home' => 'Ready, sail, drink! Sip a margarita or freshen up with a beer while you relax before enjoying a day at the port. Find the Boat Bar right next to the Lazy River! ',
+    'text_home' => 'Ready, set, drink! Disfruta de una margarita o refréscate con una cerveza mientras te relajas antes de disfrutar de un día en el puerto. ¡Encuentra el Boat Bar a un lado del Lazy River!',
     'single_gallery' => [
       'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_1.webp',
       'assets\images\port-experience\boat-bar\gallery\BOAT_BAR_2.webp',
@@ -154,7 +154,7 @@ $points = [
     'cover' => 'cantina-latina/cover-cantina-latina-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets/images/port-experience/cantina-latina/carousel-cantina-latina_.webp'],
-    'text_home' => 'Have a taste of Puerto Plata! Cantina Latina has a delicious menu with Dominican Cuisine, grilled dishes, and drinks in a comfy atmosphere ready to welcome everybody!',
+    'text_home' => '¡Disfruta el Puerto Plata! Cantina Latina te invita a disfrutar platillos a la parrilla, clásicos de cocina dominicana y bebidas refrescantes en una atmósfera acogedora, lista para recibir a todos.',
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -221,7 +221,7 @@ $points = [
     'cover' => 'coffe-factory/cover-coffe-bar-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\coffe-factory\carousel-coffe-factory.webp'],
-    'text_home' => 'Fuel up with a cup of Dominican coffee! From espresso to frappés and some desserts, Coffee Factory will give a sweet touch to your day at the port. ',
+    'text_home' => '¡Recarga energías con un café dominicano! Desde espresso hasta frappés y postres, Coffee Factory le dará un toque dulce a tu día en el puerto.',
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -281,7 +281,7 @@ $points = [
     'cover' => 'dom-dom-bar/cover-dom-dom-bar-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\dom-dom-bar\carousel-dom-dom-bar.webp'],
-    'text_home' => "Need a drink by the pool? Dom Dom Bar is your place to go. Located right in the pool, enjoy the shows, join the party, and have fun while sippin' your favorite drink.",
+    'text_home' => "¿Drinks junto a la piscina? Dom Dom Bar es tu lugar. Disfruta de los shows, únete a la fiesta y diviértete mientras tomas tu bebida favorita.",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -340,7 +340,7 @@ $points = [
     'cover' => 'margarita-bar/cover-margarita-bar-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\margarita-bar\carousel-margarita-bar.webp'],
-    'text_home' => 'One Margarita is not enough! Stop and have one on your way to the pool. Mango, strawberry, lime or passion fruit, all of them will take your breath away!',
+    'text_home' => '¡Una margarita nunca es suficiente! Detente y toma una de camino a la piscina. Mango, fresa, lima o maracuyá, ¡todas te encantarán!',
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -403,7 +403,7 @@ $points = [
     'cover' => 'mojito-bar/mojito-bar-one.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\mojito-bar\carousel-mojito-bar.webp'],
-    'text_home' => "When life gives you lemons, spice things up, and make Mojitos! Find cocktails, tequila, rum, and of course fresh mojitos with different flavors. Salud!",
+    'text_home' => "Si la vida te da limones, ¡mézclalos con ron y haz mojitos! Cócteles, tequila, ron y, por supuesto, frescos mojitos con diferentes sabores. ¡Salud!",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -464,7 +464,7 @@ $points = [
     'cover' => 'rum-rum-bar/cover-rum-rum-bar-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\rum-rum-bar\carousel-rum-rum-bar.webp'],
-    'text_home' => "Salud to Dominican Rum! You'll need a fresh drink after all the shopping and having a good time, right? Visit Rum Rum for your favorite drinks!",
+    'text_home' => "¡Salud por el ron dominicano! Necesitarás un drink después del shopping y la diversión, ¿verdad? Visita Rum Rum para tus bebidas favoritas.",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -523,7 +523,7 @@ $points = [
     'cover' => 'mexican-grill/mexican-grill-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\mexican-grill\carousel-mexican-grill.webp'],
-    'text_home' => "Tacos and grilled snacks, it doesn't get any better than that! Mexican Grill serves tasty and classic options, from fries to a classic beef burger, don't forget to stop by!",
+    'text_home' => "¡Tacos y snacks a la parrilla, no puede ser mejor! Mexican Grill ofrece opciones sabrosas y clásicas, desde papas fritas hasta una hamburguesa de res clásica, ¡no olvides pasar!",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -583,7 +583,7 @@ $points = [
     'cover' => 'tiki-tiki/cover-tiki-tiki-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\tiki-tiki\carousel-tiki-tiki.webp'],
-    'text_home' => 'Located in our beach-inspired area, a few steps from the Lazy River, Tiki Tiki serves fresh drinks and beverages for a relaxing day at port.',
+    'text_home' => 'Ubicado en nuestra área inspirada en la playa, a pasos del Lazy River, en Tiki Tiki encontrarás tus drinks favoritos para tu día en Taino Bay.',
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -641,7 +641,7 @@ $points = [
     'cover' => 'taco-lover/cover-taco-lover-port-experience.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\taco-lover\carousel-taco-lover.webp'],
-    'text_home' => "Here, every day is taco day! Fresh tortillas, savory stews, and the authentic Mexican flavor, Taco Lover is the top spot for street tacos. Don't miss it!",
+    'text_home' => "¡Aquí, todos los días son días de tacos! Tortillas frescas, guisos sabrosos y el auténtico sabor mexicano, Taco Lover es el lugar perfecto para tacos callejeros. ¡No te lo pierdas!",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -704,7 +704,7 @@ $points = [
     'cover' => 'icekery\cover-icekery.webp',
     'title' => 'Menu',
     'gallery' => ['assets\images\port-experience\icekery\carousel-icekery.webp'],
-    'text_home' => "Beat the heat with an ice cream! Icekery is the top spot to enjoy a delicious ice cream. Pick your favorite flavor and toppings, and don't let your ice cream melt!",
+    'text_home' => "¡Encontramos la solución para el calor! Icekery es el lugar perfecto para disfrutar de un delicioso helado. Elige tu sabor y toppings favoritos, ¡y no dejes que se derrita!  ",
     'menu' => [
       [
         'image' => 'cantina-latina-menu-1.jpg',
@@ -775,7 +775,7 @@ $points = [
     'banner' => 'lazy-river\header-lazy-river.webp',
     'cover' => 'lazy-river\cover-lazy-river-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "A new way to explore the port! Take a tub float and let yourself go in this relaxing experience at the port.",
+    'text_home' => "¡Una nueva forma de explorar el puerto! Toma un flotador y déjate llevar en esta experiencia en el puerto.",
     'gallery' => ['assets\images\port-experience\lazy-river\carousel-lazy-river.webp'],
     'single_gallery' => [
       'assets\images\port-experience\lazy-river\gallery\LAZY_RIVER_1.webp',
@@ -812,7 +812,7 @@ $points = [
     'banner' => 'splash-surfing/header-splash-surfing.webp',
     'cover' => '/splash-surfing/cover-splash-surfing-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "Catch a wave and get some sun! Our Splash surfing experience gives you the adrenaline rush you need while at the port! *Activity with extra cost.",
+    'text_home' => "¡Adrenalina y olas! Nuestro Splash Surfing te brinda el rush que necesitas mientras estás en el puerto. ",
     'gallery' => ['assets\images\port-experience\splash-surfing\carousel-spash.webp'],
     'single_gallery' => [
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_3.webp',
@@ -824,7 +824,7 @@ $points = [
   [
     'id' => 15,
     'type' => 'public',
-    'name' => 'Spa Wellness',
+    'name' => 'Wellness Spa',
     'path' => 'spa-wellness',
     'logo' => 'spa-wellness/spa-wellness.svg',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -833,7 +833,7 @@ $points = [
     'banner' => 'spa-wellness/header-spa-wellness.webp',
     'cover' => '/spa-wellness/cover-spa-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "The ultimate relaxing experience on your arrival. Enjoy, and let yourself go with unique techniques and get yourself in a state of pure bliss.",
+    'text_home' => "La experiencia de relajación definitiva al llegar. Descansa con técnicas únicas que te llevarán a alcanzar un estado de máxima tranquilidad.",
     'gallery' => ['assets\images\port-experience\spa-wellness\carousel-spa-wellness.webp'],
     'single_gallery' => [
       'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_1.webp',
@@ -849,7 +849,7 @@ $points = [
   [
     'id' => 16,
     'type' => 'public',
-    'name' => 'Pool and Shows',
+    'name' => 'Piscina y Shows',
     'path' => 'pool',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -859,7 +859,7 @@ $points = [
     'banner' => 'pool\header-pool-snd-showsport-experience.webp',
     'cover' => 'pool/cover-pool-port-experience.webp',
     'title' => 'Menu',
-    'text_home' => "Refreshing and relaxing has never looked this good! Catch some bun by our pools and watch our vibrant shows.",
+    'text_home' => "¡Refrescarse y relajarse nunca fue tan cool! Disfruta del sol junto a nuestras piscinas y únete a la fiesta con nuestros shows en vivo.",
     'gallery' => ['assets\images\port-experience\pool\carousel-pool.webp'],
     'single_gallery' => [
       'assets\images\port-experience\pool\carousel-pool.webp',
@@ -879,7 +879,7 @@ $points = [
   [
     'id' => 17,
     'type' => 'public',
-    'name' => 'Beach Playground',
+    'name' => 'Zona de Playa',
     'path' => 'beach',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -888,7 +888,7 @@ $points = [
     'banner' => 'beach/header-beach.webp',
     'cover' => '/beach/cover-beach-port-experience.webp',
     'title' => 'Gallery',
-    'text_home' => "A glimpse of beach lifestyle while you're having a good time. Enjoy playing in the sand and getting a new tan.",
+    'text_home' => "Un vistazo al estilo de vida de playa mientras te diviertes. Nuevo bronceado, juegos en la arena y todo lo que necesitas para disfrutar tu visita.",
     'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
     'single_gallery' => [
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
