@@ -253,3 +253,8 @@ small,
 }
 
 /* #endregion Typography */
+@media (max-width: 991px) {
+  .m-position-right {
+    background-position: -980px center;
+  }
+}

@@ -9,47 +9,59 @@ include_once("include/lang/{$idioma}-contact.php");
 <head>
 
     <?php include("include/head.php"); ?>
-<style>
-    .section-form{
-        min-height: 80vh;
-    }
-    .image-wrapper{
-        min-height: 80vh;
-    }
-    .image-wrapper img{
-        min-height: 80vh;
-    }
-    .content-wrapper{
-        top: 10% !important;
-        padding: 1rem 5rem !important;
-    }
-    @media (max-width: 991px){
-        .section-form{
-        min-height: 75vh;
-        max-height: 80vh;
-    }
-    .image-wrapper{
-        min-height: 75vh;
-        max-height: 80vh;
-    }
-    .image-wrapper img{
-        min-height: 75vh;
-        max-height: 80vh;
-    }
-    .content-wrapper{
-        top: 0% !important;
-    }
-  .m-0 {
-    margin: 1rem !important;
-}
-.collapse-group{
-    align-items: center;
-}
-.faq-title-container{
-    padding-right: 1rem;
-}
-}
-</style>
+    <style>
+        .section-form {
+            min-height: 80vh;
+        }
+
+        .image-wrapper-form {
+            min-height: 80vh;
+            width: 100%;
+        }
+
+        .image-wrapper-form img {
+            min-height: 80vh;
+            width: 100%;
+        }
+
+        /* .content-wrapper {
+            top: 10% !important;
+            padding: 1rem 5rem !important;
+        } */
+
+        @media (max-width: 991px) {
+            .section-form {
+                min-height: 75vh;
+                max-height: 80vh;
+            }
+
+            /* .image-wrapper {
+                min-height: 75vh;
+                max-height: 80vh;
+            }
+
+            .image-wrapper img {
+                min-height: 75vh;
+                max-height: 80vh;
+            } */
+
+            /* .content-wrapper {
+                top: 0% !important;
+            } */
+
+            .m-0 {
+                margin: .7rem !important;
+            }
+
+            .collapse-group {
+                align-items: center;
+            }
+
+            .faq-title-container {
+                padding-right: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="shock-body">
@@ -68,7 +80,7 @@ include_once("include/lang/{$idioma}-contact.php");
                         <h1 class="title white text-1 banner-title text-uppercase fw-bold">
                             <?= TITULOS_BANNER_FAQS[0];  ?>
                         </h1>
-                        <p class="text-white banner-subtitle"><?php echo TITULOS_BANNER_FAQS[1];  ?></p>
+                        <p class="text-white banner-subtitle"><?= TITULOS_BANNER_FAQS[1]; ?></p>
                     </div>
                 </div>
                 <!-- Image -->
@@ -97,7 +109,7 @@ include_once("include/lang/{$idioma}-contact.php");
         </section>
 
         <!-- FAQ's -->
-        <section class="shock-section pt-5 pb-5 pe-5 ps-5" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
+        <section class="shock-section p-3" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
             <div class="container max-w-65">
                 <!-- Collapse -->
                 <div class="collapsible">
@@ -169,7 +181,7 @@ include_once("include/lang/{$idioma}-contact.php");
                     </div>
                 </div>
                 <!-- Image -->
-                <div class="image-wrapper">
+                <div class="image-wrapper-form">
                     <img src="assets/images/media/port-taino-bay-faqs.webp" class="image fit-cover brightness-6" alt="This is an example description for this item." />
                 </div>
                 <!-- Overlay -->
