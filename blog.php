@@ -129,111 +129,73 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     const idioma = '<?php echo $idioma; ?>';
 
     function loadPost(title, pushState = true) {
-        $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
-            if (!response.posts || response.posts.length === 0) {
+        // Determina el archivo JSON a cargar basado en el idioma
+        const jsonFile = idioma === "en" ? 'include/data.json' : 'include/es-data.json';
+
+        $.getJSON(jsonFile, function(response) {
+            const post = response.posts.find(post => post.title === title);
+            if (!post) {
                 $('#blog-container').html('<p>No se encontró el post.</p>');
                 return;
             }
-
-            const data = response.posts[0];
-            const hasPrevPost = response.has_prev_post;
-            const hasNextPost = response.has_next_post;
-            const prevPostTitle = response.prev_post_title;
-            const nextPostTitle = response.next_post_title;
 
             $('#blog-container').empty();
 
             $('#blog-container').append(`
                 <div class="blog-post">
                     <div class="title-image">
-                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                        <img src="${post.image_url}" class="img-fluid imgRound" alt="${post.title}">
                         <!-- share -->
                         <div class="slide-share position-absolute top-0 end-0 p-1 button-share">
                             <div class="container-btn">
+                                <!-- Social Media Buttons -->
                                 <div class="redes">
-                                    <a target="_blank" class="bg-orange" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $path; ?>es/blog/${data.title}">
+                                    <a target="_blank" class="bg-orange" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $path; ?>${idioma}/blog/${post.title}">
                                         <i class="icon fab fa-facebook-f"></i>
                                     </a>
-                                    <a target="_blank" class="bg-orange" href="https://twitter.com/intent/tweet?url=<?php echo $path; ?>es/blog/${data.title}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
-                                            <g fill="none">
-                                                <g clip-path="url(#IconifyId19113fe36724382401)">
-                                                    <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="IconifyId19113fe36724382401">
-                                                        <path fill="#fff" d="M0 0h14v14H0z" />
-                                                    </clipPath>
-                                                </defs>
-                                            </g>
-                                        </svg>
+                                    <a target="_blank" class="bg-orange" href="https://twitter.com/intent/tweet?url=<?php echo $path; ?>${idioma}/blog/${post.title}">
+                                        <i class="fab fa-twitter"></i>
                                     </a>
-                                    <a target="_blank" class="bg-orange" href="https://api.whatsapp.com/send?text=<?php echo $path; ?>es/blog/${data.title}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
-                                            <path fill="currentColor" d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
-                                            <path fill="currentColor" d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7" />
-                                        </svg>
+                                    <a target="_blank" class="bg-orange" href="https://api.whatsapp.com/send?text=<?php echo $path; ?>${idioma}/blog/${post.title}">
+                                        <i class="fab fa-whatsapp"></i>
                                     </a>
                                 </div>
-                                <button class="border-0 text-white bg-transparent toggle-share">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                        <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                                    </svg>
-                                </button>
                             </div>
+                            <button class="border-0 text-white bg-transparent toggle-share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="blog-post blog-texto">
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
+                    ${post.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
                 <div class="title-image mb-3">
-                    <img src="${data.image_url2}" class="img-fluid imgRound" alt="${data.title}">
+                    <img src="${post.image_url2}" class="img-fluid imgRound" alt="${post.title}">
                 </div>
                 <div class="gallery-section">
                     <div class="gallery-title2 mb-2">
                         <h2 class="title"><span class="text-2 text-style-6">Gallery</span></h2>
                     </div>
                     <div class="gallery-container2 mb-3">
-                        ${data.images.map(imageUrl => `<img src="${imageUrl}" class="img-fluid gallery-img" alt="Gallery image">`).join('')}
+                        ${post.images.map(imageUrl => `<img src="${imageUrl}" class="img-fluid gallery-img" alt="Gallery image">`).join('')}
                     </div>
                 </div>
-                
             `);
-            $('.banner-fixed').css('background-image', `url(${data.image_url})`);
-
-
-
-
-
-
-            $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
-            $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
-
-            // Actualizar la clase active del timeline
-            updateActiveTimelineItem(title);
-
-            // Reemplaza los guiones por espacios en blanco
-            data.title = data.title.replace(/-/g, ' ');
-
-            // Establece el texto del título en el elemento con la clase 'blog-title'
-            $('.blog-title').text(data.title);
-            $('.blog-subtitle').text(data.subtitle);
+            $('.banner-fixed').css('background-image', `url(${post.image_url})`);
+            // Establece el título y subtítulo del post
+            $('.blog-title').text(post.title.replace(/-/g, ' '));
+            $('.blog-subtitle').text(post.subtitle);
 
             if (pushState) {
                 const url = new URL(window.location);
-                const isLocalhost = url.hostname === "localhost"; // Verifica si estás en localhost
-                const carpetaRaiz = isLocalhost ? "/tainobay" : ""; // Usa la carpeta raíz solo en localhost
-
-                // Construye el nuevo pathname con o sin la carpeta raíz
+                const isLocalhost = url.hostname === "localhost";
+                const carpetaRaiz = isLocalhost ? "/tainobay" : "";
                 url.pathname = `${carpetaRaiz}/${idioma}/blog/` + encodeURIComponent(title);
-
-                // Actualiza la URL en la barra de direcciones sin recargar la página
                 window.history.pushState({
                     title: title
                 }, '', url);
             }
-
         }).fail(function() {
             $('#blog-container').html('<p>Error al cargar el post.</p>');
         });
@@ -247,10 +209,10 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     let currentPage = 1;
 
     function loadTimeline(callback) {
-        $.getJSON(`include/get_blog_posts.php?page=${currentPage}`, function(response) {
-            if (!response.posts || response.posts.length === 0) {
-                return;
-            }
+        const jsonFile = idioma === "en" ? 'include/data.json' : 'include/es-data.json';
+
+        $.getJSON(jsonFile, function(response) {
+            const posts = response.posts || [];
 
             if (currentPage > 1) {
                 $('#timeline').find('li:lt(' + (itemsPerPage - 1) + ')').remove();
@@ -258,7 +220,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 $('#timeline').empty();
             }
 
-            response.posts.forEach((post, index) => {
+            posts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).forEach((post, index) => {
                 const active = (index === 0 && currentPage === 1) ? ' active' : '';
                 $('#timeline').append(`
                     <li class="timeline-item${active}" onclick="changePost('${post.title}')">
@@ -275,35 +237,15 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             });
 
             if (typeof callback === 'function') {
-                callback(response.posts);
+                callback(posts);
             }
+
+            updatePaginationControls(posts.length);
         }).fail(function() {
             $('#timeline').html('<p>Error al cargar los posts.</p>');
         });
     }
 
-    function updateActiveTimelineItem(title) {
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        let activeIndex = -1;
-
-        timelineItems.forEach((item, index) => {
-            const itemTitle = item.querySelector('input[type="hidden"]').value;
-            if (itemTitle === title) {
-                item.classList.add('active');
-                activeIndex = index;
-            } else {
-                item.classList.remove('active');
-            }
-        });
-
-        if (activeIndex === -1) {
-            currentPage++;
-            loadTimeline(() => updateActiveTimelineItem(title));
-        } else if (activeIndex >= itemsPerPage - 1) {
-            currentPage++;
-            loadTimeline();
-        }
-    }
 
     window.onpopstate = function(event) {
         if (event.state && event.state.title) {
@@ -325,13 +267,15 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 }
             }
         });
-        
-
     });
 </script>
 
 
+
+
+
 <script>
+
     $(document).ready(function() {
         $(document).on('click', '.toggle-share', function() {
             const $shareContainer = $(this).closest('.container-btn').find('.redes');
