@@ -201,9 +201,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         });
     }
 
-    function changePost(title) {
-        loadPost(title);
-    }
 
     const itemsPerPage = 4;
     let currentPage = 1;
@@ -212,7 +209,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         const jsonFile = idioma === "en" ? 'include/data.json' : 'include/es-data.json';
 
         $.getJSON(jsonFile, function(response) {
-            const posts = response.posts || [];
+            posts = response.posts || [];
 
             if (currentPage > 1) {
                 $('#timeline').find('li:lt(' + (itemsPerPage - 1) + ')').remove();
@@ -246,6 +243,21 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         });
     }
 
+    function changePost(title) {
+        // Cargar el post correspondiente
+        loadPost(title);
+
+        // Remover la clase 'active' de todos los elementos del timeline
+        $('.timeline-item').removeClass('active');
+
+        // Buscar el elemento que tiene el título del post clickeado y agregarle la clase 'active'
+        $('.timeline-item').each(function() {
+            const postTitle = $(this).find('input[type="hidden"]').val();
+            if (postTitle === title) {
+                $(this).addClass('active');
+            }
+        });
+    }
 
     window.onpopstate = function(event) {
         if (event.state && event.state.title) {
@@ -274,8 +286,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 
 
 
-<script>
 
+
+<script>
     $(document).ready(function() {
         $(document).on('click', '.toggle-share', function() {
             const $shareContainer = $(this).closest('.container-btn').find('.redes');
