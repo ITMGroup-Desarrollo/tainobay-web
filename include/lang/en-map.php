@@ -1,6 +1,5 @@
 <?php
 define('TITULOS_MAP', array(
-    'Explore',
-    'and',
-    'discover.'
+    'Map',
+    'Explore and discover',
 ));

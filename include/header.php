@@ -1,5 +1,5 @@
    <?php
-    if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == 'map.php' or $page == 'thecoffeefactorymenu.php') {
+    if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == 'thecoffeefactorymenu.php') {
         $logo = "logo-dark.svg";
         $menu = "scheme-2";
     } else {
