@@ -1,8 +1,11 @@
-<?php
+<?php 
 header('Content-Type: application/json');
 
-// Leer el archivo JSON
-$json_file = __DIR__ . '/data.json';
+// Definir el archivo JSON según el idioma
+$idioma = isset($_GET['idioma']) ? $_GET['idioma'] : 'en';
+$json_file = __DIR__ . ($idioma === 'en' ? '/data.json' : '/es-data.json');
+
+// Verificar si el archivo existe
 if (!file_exists($json_file)) {
     echo json_encode(['error' => 'Archivo JSON no encontrado.']);
     exit;
@@ -28,7 +31,6 @@ if (!isset($all_posts['posts'])) {
 $all_posts = $all_posts['posts'];
 
 if (isset($_GET['title'])) {
-    // Funcionalidad para obtener un único post basado en el título (usada en blog.php)
     $title = urldecode($_GET['title']);
     $posts = array_values(array_filter($all_posts, function ($post) use ($title) {
         return stripos($post['title'], $title) !== false;
@@ -58,7 +60,6 @@ if (isset($_GET['title'])) {
     ]);
 
 } else if (isset($_GET['page'])) {
-    // Funcionalidad para obtener posts paginados (usada en blog_all.php)
     $page = (int)$_GET['page'];
     $perPage = 4;
     $totalPosts = count($all_posts);

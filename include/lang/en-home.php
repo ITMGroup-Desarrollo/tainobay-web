@@ -17,14 +17,16 @@ define('CAROUSEL_PORT_EXPERIENCE', array(
     'Port experience',
     'Discover',
     'things&nbsp;to&nbsp;do',
-    'Discover things&nbsp;to&nbsp;do'
+    'Discover things&nbsp;to&nbsp;do',
+    'Explore more'
 ));
 
 define('CAROUSEL_DISCOVER_BEYOND', array(
     'Discover Beyond The&nbsp;Cruise',
-    'The best',
-    'things&nbsp;to&nbsp;do',
-    'The&nbsp;best things&nbsp;to&nbsp;do',
+    'Find&nbsp;your',
+    'next&nbsp;adventure',
+    'Find&nbsp;your next&nbsp;adventure',
+    'Explore more'
 ));
 
 define("SCROLLING_TEXT", array(

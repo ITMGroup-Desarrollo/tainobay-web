@@ -1,28 +1,33 @@
 <?php
 
 define('HOME_TEXT_BANNER', array(
-    'Un puerto de cruceros único',
-    'La experiencia portuaria definitiva en Puerto Plata, República Dominicana.',
+    '¡Bienvenido a Taino Bay!',
+    'Un puerto con increíbles experiencias en Puerto Plata, República Dominicana.',
 ));
 
 define('HOME_TEXT_WELCOME', array(
     '¡Bienvenido a',
     'a',
-    'Puerto Taino Bay!',
-    'Localizado en <strong>La Novia del Atlántico</strong>, Puerto Plata, Taino Bay ¡trae la diversión a tus vacaciones!',
-    'Con atracciones únicas, Lazy river, piscinas, zonas de descanso y mucho más, Taino Bay se convertirá en su próxima parada favorita para crear nuevos recuerdos en su próximo crucero.',
+    'Taino Bay!',
+    'Ubicado en <strong>La Novia del Atlántico</strong>, Puerto Plata, Port Taino Bay transforma tus vacaciones en una experiencia inolvidable.',
+    'Con atracciones únicas como nuestro Lazy River, piscinas, espacios inspirados en la playa y mucho más, Taino Bay se convertirá en tu destino favorito para crear nuevos recuerdos.',
 ));
 
 define('CAROUSEL_PORT_EXPERIENCE', array(
     'Port experience',
-    'Discover',
-    'things to do',
+    'Diversión',
+    'en&nbsp;el&nbsp;puerto',
+    'Diversión en&nbsp;el&nbsp;puerto',
+    'Descubre más '
 ));
 
 define('CAROUSEL_DISCOVER_BEYOND', array(
     'Discover Beyond The Cruise',
-    'The best',
-    'things to do',
+    '¡Vive',
+    'Puerto&nbsp;Plata!',
+    '¡Vive&nbsp;Puerto&nbsp;Plata!',
+    'Descubre más',
+
 ));
 
 define("SCROLLING_TEXT", array(
@@ -57,8 +62,8 @@ define('WELCOME_TEXT', array(
 define('FAQS_TEXT', array(
     "FAQ's",
     "¿Necesitas ayuda?",
-    "Tenemos lo que necesitas",
-    "LEER MÁS PREGUNTAS"
+    "¡Llegaste al lugar correcto!",
+    "Leer más"
 ));
 
 define('FAQS_1', array(
@@ -67,7 +72,7 @@ define('FAQS_1', array(
 ));
 
 define('FAQS_2', array(
-    ' ¿Cuentan con actividades en el puerto? ',
+    ' ¿Hay actividades dentro del puerto? ',
     '<p>¡Por supuesto que sí! En nuestro puerto podrás disfrutar de piscinas y espectáculos recreativos durante su estancia. También tenemos la experiencia Monkey Island. Aquí podrás interactuar con monos ardilla y conocer un poquito más sobre ellos. ¡Recomendamos esta actividad a los visitantes a partir de 5 años!</p>'
 ));
 
