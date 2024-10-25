@@ -3,7 +3,8 @@ define('TITULOS_BLOG', array(
     'TITULO NOTICIA',
     'Subtitulo noticia',
     'JUNIO',
-    'MENU'
+    'MENU',
+    'Galería'
 ));
 define('TITULOS_BLOG_ALL', array(
     'BLOG',

@@ -172,7 +172,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 <div class="gallery-section">
                     <div class="gallery-title2 mb-2">
-                        <h2 class="title"><span class="text-2 text-style-6">Gallery</span></h2>
+                        <h2 class="title"><span class="text-2 text-style-6"><?php echo TITULOS_BLOG[4];  ?></span></h2>
                     </div>
                     <div class="gallery-container2 mb-3">
                         ${data.images.map(imageUrl => `<img src="${imageUrl}" class="img-fluid gallery-img" alt="Gallery image">`).join('')}
