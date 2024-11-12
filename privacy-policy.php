@@ -144,7 +144,6 @@ include_once("include/lang/{$idioma}-privacy-policy.php");
                                 <?php echo PRIVACY_POLICY_TXT[35]; ?>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
