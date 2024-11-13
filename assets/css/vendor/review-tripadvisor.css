@@ -6,9 +6,9 @@
 }
 
 .card-review .card-header {
-  position: absolute;
-  max-width: 30%;
-  left: 35%;
+  /* position: absolute; */
+  max-width: 100%;
+  /* left: 35%; */
   margin: -20% auto 0 auto;
 }
 .card-review .user-img {
@@ -44,7 +44,7 @@
 
 #reviews {
   overflow-y: visible;
-  height: 550px;
+  height: 445px;
   width: 85%;
   margin-top: 1rem;
 }
@@ -68,6 +68,12 @@
     height: 500px;
     width: 90%;
     margin-top: 1rem;
+  }
+  .card-review .card-header {
+    position: absolute;
+    max-width: 30%;
+    left: 35%;
+    margin: -20% auto 0 auto;
   }
 }
 

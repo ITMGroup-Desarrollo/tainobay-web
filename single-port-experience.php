@@ -38,6 +38,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
       }
     }
   </style>
+
 </head>
 
 <body class="shock-body">
@@ -134,11 +135,6 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
           </div>
         </div>
 
-        <?php if (isset($currentMenu['pdf'])) { ?>
-          <div class="text-center d-block mt-4">
-            <a href="<?= empty($currentMenu['pdf']) ? 'javascript:void(0)' : ("assets/pdf/{$currentMenu['pdf']}") ?>" target="_blank" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_SINGLE_PORT ?></strong></a>
-          </div>
-        <?php } ?>
       </div>
     </section>
 
@@ -146,7 +142,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
 
   <?php include("include/widget.php"); ?>
   <?php include("include/footer.php"); ?>
-  <?php include("include/js.php"); ?>
+  <?php include("include/modalPopup.php"); ?>
   <script>
     const logo = document.querySelector('.port-logo');
     const documentScroll = () => {

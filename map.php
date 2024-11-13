@@ -13,19 +13,27 @@ include_once("include/lang/{$idioma}-map.php");
     <?php include("include/header.php"); ?>
     <!-- Main -->
     <main id="main" class="shock-main">
-        <!-- Banner -->
-        <section class="shock-section has-holder">
-            <div class="container max-w-85">
-                <!-- Intro -->
-                <div class="basic-intro mb-35 text-center">
-                    <h1 class="title black">
-                        <span class="text-1 text-style-3"><?php echo TITULOS_MAP[0]; ?>
-                        </span>
-                        <span class="text-2 text-style-4 text-italic"><?php echo TITULOS_MAP[1]; ?> <mark class="animated-underline primary">
-                                <?php echo TITULOS_MAP[2]; ?> </mark></span>
-                    </h1>
-                    <hr class="gray-25">
+        <!-- banner -->
+        <section class="shock-section has-overlay">
+            <div class="banner d-flex align-items-center">
+                <div class="content-wrapper top-zero ">
+                    <!-- Intro -->
+                    <div class="basic-intro text-center">
+                        <h1 class="title white text-1 banner-title text-uppercase fw-bold">
+                            <?= TITULOS_MAP[0]; ?>
+                        </h1>
+                        <p class="text-white banner-subtitle"><?= TITULOS_MAP[1]; ?></p>
+                    </div>
                 </div>
+                <!-- Image -->
+                <div class="image-wrapper">
+                    <div class="banner-fixed" style="background-image:url('assets/images/media/header-contacto.jpg')">
+
+                    </div>
+                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
+                </div>
+                <!-- Overlay -->
+                <div class="overlay-banner"></div>
             </div>
         </section>
         <!-- Content -->

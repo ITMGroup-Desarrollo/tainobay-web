@@ -25,25 +25,25 @@
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
     <script>
-function ventanaModal(id, title) {
-    let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById(
-        'modal')) // Returns a Bootstrap modal instance
+        function ventanaModal(id, title) {
+            let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById(
+                'modal')) // Returns a Bootstrap modal instance
 
-    $("#title-modal").html(title);
-    $.ajax({
-        cache: false,
-        url: "ajax/ajax-descripcion.php",
-        data: {
-            id: id
-        },
-        dataType: "html",
-        type: "post",
-        success: function(retorno) {
-            modal.show();
-            $("#modal-body").html(retorno);
+            $("#title-modal").html(title);
+            $.ajax({
+                cache: false,
+                url: "ajax/ajax-descripcion.php",
+                data: {
+                    id: id
+                },
+                dataType: "html",
+                type: "post",
+                success: function(retorno) {
+                    modal.show();
+                    $("#modal-body").html(retorno);
+                }
+
+            })
+
         }
-
-    })
-
-}
     </script>
