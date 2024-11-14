@@ -50,6 +50,10 @@ define('FOOTER_PRIVACY', array(
     'PRIVACY',
     'Privacy Policy',
 ));
+define(
+    'FOOTER_RESERVED',
+    'All right reserved.'
+);
 
 define("FRASE", array(
     'Taino Bay is a must. Must party, must do, must enjoy. ',

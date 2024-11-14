@@ -7,7 +7,7 @@ define('TITULOS_SINGLE_BANNER_PORT_EXPERIENCE', array(
 
 define(
   'TITULOS_SINGLE_EXPERIENCE',
-  'Menú'
+  'Galería'
 );
 
 define('TEXT_BUTTON_SINGLE_PORT', 'Ver el menú completo');
@@ -690,7 +690,7 @@ $points = [
     ]
   ],
   [
-    'name' => 'Pool',
+    'name' => 'Alberca',
     'path' => 'pool',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -737,7 +737,7 @@ $points = [
     ]
   ],
   [
-    'name' => 'Beach',
+    'name' => 'Área de playa',
     'path' => 'beach',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">

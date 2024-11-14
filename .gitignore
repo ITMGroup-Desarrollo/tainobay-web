@@ -5,3 +5,5 @@ logs
 *.log
 .env
 vendor/*
+.htaccess
+include/config.php

@@ -7,7 +7,7 @@ define('TITULOS_SINGLE_BANNER_PORT_EXPERIENCE', array(
 
 define(
   'TITULOS_SINGLE_EXPERIENCE',
-  'Menu'
+  'Gallery'
 );
 
 define('BUTTON_BACK', "GO BACK");

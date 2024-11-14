@@ -98,7 +98,7 @@
         </div>
         <div class="bottom-bar">
             <div class="text">© <?php echo date("Y"); ?> - <?php echo SITIO ?>
-                All right reserved.
+                <?= FOOTER_RESERVED ?>
             </div>
         </div>
     </footer>
