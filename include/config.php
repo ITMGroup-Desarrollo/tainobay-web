@@ -37,3 +37,4 @@ switch ($lang) {
 }
 
 include_once("include/lang/{$idioma}-traduccion.php");
+
