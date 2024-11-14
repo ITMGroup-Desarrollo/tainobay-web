@@ -66,7 +66,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/home" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/privacy-policy" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[7]; ?></span>
 
                                     </a>
