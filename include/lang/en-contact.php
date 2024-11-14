@@ -6,5 +6,5 @@ define('TITULOS_BANNER_CONTACT', array(
 ));
 
 define('TITULOS_CONTACT', array(
-  'Say Keloké',
+  'Keloké',
 ));
