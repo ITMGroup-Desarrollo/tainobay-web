@@ -147,8 +147,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             });
         }
 
+        // Inserta el valor de la variable PHP en una variable JavaScript
+        const idioma = '<?php echo $idioma; ?>';
+        console.log(idioma);
+        // Seleccionar el archivo JSON según el idioma
+        const dataFile = idioma === 'es' ? 'es-data-discover.json' : 'data-discover.json';
         // Cargar contenido dinámico desde el archivo JSON
-        $.getJSON('include/data-discover.json', function(data) {
+        $.getJSON('include/'+ dataFile , function(data) {
+            console.log(data);
             const container = $('#carousel-sections-container');
             container.empty(); // Limpiar el contenedor antes de agregar nuevas secciones
             data.carouselSections.forEach((section, sectionIndex) => {

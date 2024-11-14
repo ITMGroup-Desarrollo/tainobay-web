@@ -590,7 +590,7 @@ $tours = [
     ],
     [
         "id" => "7",
-        "Tour" => "Old town & beach ",
+        "Tour" => "Playa Dorada",
         "tourName" => "Playa Dorada",
         "title" => "VISIT ONE OF THE",
         "subtitle" => "MOST ICONIC BEACHES!",
