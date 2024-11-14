@@ -25,7 +25,7 @@ define('CAROUSEL_DISCOVER_BEYOND', array(
     'Discover Beyond The Cruise',
     '¡Vive',
     'Puerto&nbsp;Plata!',
-    '¡Vive&nbsp;Puerto&nbsp;Plata!',
+    '¡Vive Puerto&nbsp;Plata!',
     'Descubre más',
 
 ));

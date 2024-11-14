@@ -2,6 +2,8 @@
 
 define('SITIO', 'Taino Bay');
 
+define('SEARCH_TEXT', 'WHAT TO FIND?');
+
 define('MENU', array(
     'Home',
     'What to do',

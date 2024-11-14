@@ -22,11 +22,7 @@
 
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="nav-link">
-                                        <span class="text"><?php echo  FOOTER_OURS[2]; ?></span>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog_all" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[3]; ?></span>

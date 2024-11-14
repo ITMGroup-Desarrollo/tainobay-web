@@ -15,7 +15,7 @@
                 <!-- <nav class="slide-navigation d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows"> -->
                 <nav class="slide-navigation d-flex align-items-md-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows">
                     <!-- Arrow Left -->
-                    <a href="#" class="slide-navigation-item-prev d-inline-block text-blue" role="button">
+                    <a href="#" class="slide-navigation-item-prev d-flex align-items-center text-blue" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                             <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                             <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
@@ -31,7 +31,7 @@
                         <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[3]; ?></span></p>
                     </div>
                     <!-- Arrow Right -->
-                    <a href="#" class="slide-navigation-item-next d-inline-block text-blue" role="button">
+                    <a href="#" class="slide-navigation-item-next d-flex align-items-center text-blue" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                             <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                             <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
