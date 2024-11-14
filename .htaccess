@@ -4,7 +4,6 @@ Options +SymLinksIfOwnerMatch
 Options -Multiviews
 Options -Indexes
 RewriteEngine on
-
 RewriteBase /
 
 RewriteRule ^/$ index.php [L]
@@ -18,7 +17,6 @@ RewriteRule ^blog/([^/]+)$ blog.php?title=$1 [L,QSA]
 #RewriteCond %{REQUEST_URI} !^/(en|es)/404$#
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
 RewriteRule ^(.*)$ /en/404 [L,QSA]
 
 AddType video/ogg .ogv
