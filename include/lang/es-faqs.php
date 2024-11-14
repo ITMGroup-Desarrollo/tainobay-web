@@ -1,7 +1,7 @@
 <?php
 define('TITULOS_BANNER_FAQS', array(
     "FAQ's",
-    '¿Alguna duda para sus próximas vacaciones? Nosotros te ayudamos.',
+    '¿Alguna duda para tus próximas vacaciones? Nosotros te ayudamos.',
 ));
 
 define('TITULOS_FAQS', array(

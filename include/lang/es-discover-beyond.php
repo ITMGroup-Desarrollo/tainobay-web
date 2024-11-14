@@ -7,7 +7,7 @@ define('TITULOS_DISCOVER', array(
 ));
 define('DISCOVER_WELCOME', array(
     'LA NOVIA',
-    'DEL ATLANTICO',
+    'DEL ATLÁNTICO',
     'Un destino que recordarás para siempre.',
     'Bienvenido a Puerto Plata, un hermoso pueblo dominicano conocido como la Novia del Atlántico, con su única arquitectura victoriana y sus monumentos históricos.',
     '<b>Puerto Plata</b> te invita a disfrutar y explorar sus maravillas a tu llegada.'
