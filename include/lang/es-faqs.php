@@ -46,7 +46,7 @@ define('FAQS_TOURS_2', array(
 
 define('FAQS_TOURS_3', array(
     'Me encantaría conocer Puerto Plata, ¿cuentan con tours a la ciudad? ',
-    'Sí. "Un paseo por Puerto Plata" te lleva desde el Paseo de Doña Blanca hasta la Fortaleza de San Felipe. Este recorrido es excelente para conocer los spots más emblemáticos de la ciudad.',
+    'Sí. "A walk through Puerto Plata" te lleva desde el Paseo de Doña Blanca hasta la Fortaleza de San Felipe. Este recorrido es excelente para conocer los spots más emblemáticos de la ciudad.',
 ));
 
 #Activities
