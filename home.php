@@ -134,7 +134,9 @@ include_once("include/lang/reviews.php");
                                     <div class="card-review rounded-5 d-flex flex-column position-relative swiper-slide">
                                         <!-- Image wrapper -->
                                         <div class="card-header mb-1">
-                                            <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img" alt="Avatar de <?= $review['name'] ?>">
+                                            <img src="<?= $review['avatar'] ?>"
+                                                    class="rounded-circle user-img"
+                                                    alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>" onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
                                         </div>
 
                                         <!-- Quotes left -->
