@@ -4,3 +4,9 @@ define('TITULOS_MAP', array(
     'and',
     'discover.'
 ));
+define('TABLAS_MAP', array(
+    'SHOPPING',
+    'RESTAURANTS',
+    'SERVICES',
+    'EXPERIENCES'
+));

@@ -39,7 +39,7 @@ button.minimize-btn.show {
 .leaflet-control-filter table {
     margin: 0;
     border-collapse: collapse;
-    width: 100%;
+    width: max-content;
 }
 
 .leaflet-control-filter td {
@@ -77,13 +77,16 @@ button.minimize-btn.show {
     font-weight: bolder;
     width: max-content;
 }
-
+/* .shop .header-text{
+    padding-right: 20%;
+} */
 .tabla-icons tr {
     cursor: pointer;
 }
 
 .tabla-icons tbody {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 td:first-child {
@@ -128,13 +131,13 @@ td:first-child {
         bottom: 0%;
     }
 
-    .filter-container .shop {
+    .filter-container .restaurants {
         position: absolute;
         left: 32vw;
         bottom: 0%;
     }
 
-    .filter-container .restaurants {
+    .filter-container .shop {
         position: absolute;
         left: 80%;
         bottom: 0%;
@@ -176,18 +179,17 @@ td:first-child {
         left: 15%;
         bottom: 0%;
     }
-    .filter-container .service{
-        position: absolute;
-        left: 2vw;
-        bottom: 52vh;
-    }
-    .filter-container .restaurants{
+    .filter-container .shop{
         position: absolute;
         left: 2vw;
     }
     .filter-container .fun{
         position: absolute;
-        left: 18vw;
+        left: 43vw;
+    }
+    .filter-container .restaurants{
+        position: absolute;
+        left: 56vw;
     }
 
 }
