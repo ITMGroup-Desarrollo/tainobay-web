@@ -34,7 +34,7 @@ if (isMobile) {
 // #endregion
 
 // #region Agrega la imagen del mapa
-L.imageOverlay("assets/images/media/mapa-taino-sin-nombres.jpg", bounds).addTo(
+L.imageOverlay("assets/images/media/nuevo-mapa-taino-sin-nombres.jpg", bounds).addTo(
   map
 );
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
@@ -49,49 +49,43 @@ if (!isMobile) {
 
 // #region Evento para minimizar o expandir el contenido del filtro
 if (!isMobile) {
-  $(document).on("click", ".minimize-btn", function () {
-    var $minimizeBtn = $(this); // Store the minimize-btn element
-    var $filter = $minimizeBtn.closest(".leaflet-control-filter");
-    var $filterContent = $filter.find(".filter-content");
-    var $headerText = $filter.find(".header-text");
-
-    // Toggle the "show" and "hide" classes on the minimize-btn element
-    $minimizeBtn.toggleClass("show").toggleClass("hide");
-
-    if ($minimizeBtn.hasClass("hide")) {
-      $filterContent.slideUp(200); // Use slideUp with a 300ms transition
-      $minimizeBtn.text("☰");
-      $filter.css("width"); // Optional, depending on other style logic
-    } else {
-      $filterContent.slideDown(200); // Use slideDown with a 300ms transition
-      $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">');
-    }
-    // Selecciona los elementos
-    const hideElement = document.querySelector(".fun .hide");
-    const headerText = document.querySelector(".fun .header-text");
-
-    // Comprueba si el elemento 'hide' está presente y tiene la clase 'hide'
-    if (hideElement && hideElement.classList.contains("hide")) {
-      headerText.style.paddingRight = "0.7rem";
-    }
-    // Selecciona todos los elementos .service dentro de .filter-container
-    const funElements = document.querySelectorAll(".filter-container .fun");
-    const serviceElements = document.querySelectorAll(
-      ".filter-container .restaurants"
-    );
-
-    funElements.forEach((funs) => {
-      // Busca un hijo con la clase .hide dentro del .service actual
-      const hideChild = funs.querySelector(".hide");
-
-      // Si se encuentra un hijo con la clase .hide, aplica el estilo
-      if (hideChild) {
-        funs.style.position = "absolute";
-        //funs.style.paddingRight= '20vw'
+  $(document).on('click', '.minimize-btn', function () {
+      var $minimizeBtn = $(this); // Store the minimize-btn element
+      var $filter = $minimizeBtn.closest('.leaflet-control-filter');
+      var $filterContent = $filter.find('.filter-content');
+      var $headerText = $filter.find('.header-text');
+      // Toggle the "show" and "hide" classes on the minimize-btn element
+      $minimizeBtn.toggleClass('show').toggleClass('hide');
+      if ($minimizeBtn.hasClass('hide')) {
+          $filterContent.slideUp(200); // Use slideUp with a 300ms transition
+          $minimizeBtn.text('☰');
+          $filter.css('width'); // Optional, depending on other style logic
+      } else {
+          $filterContent.slideDown(200); // Use slideDown with a 300ms transition
+          $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">');
+      }
+      // Selecciona los elementos
+const hideElement = document.querySelector('.service .hide');
+const headerText = document.querySelector('.service .header-text');
+// Comprueba si el elemento 'hide' está presente y tiene la clase 'hide'
+if (hideElement && hideElement.classList.contains('hide')) {
+  headerText.style.paddingRight = '0.7rem';
+}
+// Selecciona todos los elementos .service dentro de .filter-container
+const serviceElements = document.querySelectorAll('.filter-container .service');
+serviceElements.forEach(service => {
+  // Busca un hijo con la clase .hide dentro del .service actual
+  const hideChild = service.querySelector('.hide');
+  
+  // Si se encuentra un hijo con la clase .hide, aplica el estilo
+  if (hideChild) {
+      service.style.position = 'absolute';
+      service.style.bottom = '70vh'; 
       } else {
         // Si no tiene la clase .hide, asegúrate de restaurar a su posición original
-        funs.style.position = "absolute";
-        //headerText.style.paddingRight = '1rem';
+        service.style.position = 'absolute';
+        service.style.bottom = '55vh'; 
+        headerText.style.paddingRight = '1rem';
       }
     });
   });
@@ -177,217 +171,88 @@ var experienceIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
+
+var showIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/show.svg" alt="experience" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+
+var fruitIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/fruits.svg" alt="experience" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+
+var camaraIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/camara.svg" alt="experience" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+
+var starIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/star.svg" alt="experience" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+
+var taxiIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/taxi.svg" alt="experience" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+
+var shorexIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/shorex.svg" alt="experience" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
 // #endregion
 
 // #region Marcadores y sus eventos
 var markers = {
-  // 1: [
-  //     L.marker([630, 325], { icon: retailIcon })
-  //       .addTo(map)
-  //       .bindPopup(
-  //         `
-  //             <div class="pop" style="text-align: center;">
-  //                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //                 <p>Et dolor deserunt esse cupidatat nostrud est nulla. Qui occaecat dolor aliquip aliqua nulla. Pariatur occaecat dolor labore laborum.</p>
-  //                 <a href="https://example.com" target="_blank">
-  //                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                         Visit our store
-  //                     </button>
-  //                 </a>
-  //             </div>
-  //         `
-  //       )
-  //       .on("click", function (e) {
-  //         this.openPopup();
-  //         map.setView(this.getLatLng(), map.getZoom(), {
-  //           animate: true,
-  //           pan: { duration: 1 },
-  //         });
-  //       }),
-  //     L.marker([472, 236], { icon: retailIcon })
-  //       .addTo(map)
-  //       .bindPopup(
-  //         `
-  //             <div class="pop" style="text-align: center;">
-  //                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //                 <p>Qui adipisicing do ut pariatur labore commodo.</p>
-  //                 <a href="https://example.com" target="_blank">
-  //                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                         Visit our store
-  //                     </button>
-  //                 </a>
-  //             </div>
-  //         `
-  //       )
-  //       .on("click", function (e) {
-  //         this.openPopup();
-  //         map.setView(this.getLatLng(), map.getZoom(), {
-  //           animate: true,
-  //           pan: { duration: 1 },
-  //         });
-  //       }),
-  //     L.marker([300, 218], { icon: retailIcon })
-  //       .addTo(map)
-  //       .bindPopup(
-  //         `
-  //             <div class="pop" style="text-align: center;">
-  //                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //                 <p>Reprehenderit eiusmod esse amet duis.</p>
-  //                 <a href="https://example.com" target="_blank">
-  //                     <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                         Visit our store
-  //                     </button>
-  //                 </a>
-  //             </div>
-  //         `
-  //       )
-  //       .on("click", function (e) {
-  //         this.openPopup();
-  //         map.setView(this.getLatLng(), map.getZoom(), {
-  //           animate: true,
-  //           pan: { duration: 1 },
-  //         });
-  //       }),
-  //   ],
-  // 2: [
-  //   L.marker([578, 520], { icon: restroomsIcon })
-  //     .addTo(map)
-  //     .bindPopup(
-  //       `
-  //           <div class="pop" style="text-align: center;">
-  //               <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //               <p>Aliquip exercitation ullamco deserunt Lorem sit ea culpa.</p>
-  //               <a href="https://example.com" target="_blank">
-  //                   <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                       Visit our store
-  //                   </button>
-  //               </a>
-  //           </div>
-  //       `
-  //     )
-  //     .on("click", function (e) {
-  //       this.openPopup();
-  //       map.setView(this.getLatLng(), map.getZoom(), {
-  //         animate: true,
-  //         pan: { duration: 1 },
-  //       });
-  //     }),
-  //   L.marker([810, 811], { icon: restroomsIcon })
-  //     .addTo(map)
-  //     .bindPopup(
-  //       `
-  //           <div class="pop" style="text-align: center;">
-  //               <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //               <p>Consectetur sit est excepteur aute laborum.</p>
-  //               <a href="https://example.com" target="_blank">
-  //                   <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                       Visit our store
-  //                   </button>
-  //               </a>
-  //           </div>
-  //       `
-  //     )
-  //     .on("click", function (e) {
-  //       this.openPopup();
-  //       map.setView(this.getLatLng(), map.getZoom(), {
-  //         animate: true,
-  //         pan: { duration: 1 },
-  //       });
-  //     }),
-  // ],
-  // 3: [
-  //   L.marker([661, 495], { icon: barIcon })
-  //     .addTo(map)
-  //     .bindPopup(
-  //       `
-  //           <div class="pop" style="text-align: center;">
-  //               <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //               <p>Veniam incididunt commodo veniam commodo officia.</p>
-  //               <a href="https://example.com" target="_blank">
-  //                   <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                       Visit our store
-  //                   </button>
-  //               </a>
-  //           </div>
-  //       `
-  //     )
-  //     .on("click", function (e) {
-  //       this.openPopup();
-  //       map.setView(this.getLatLng(), map.getZoom(), {
-  //         animate: true,
-  //         pan: { duration: 1 },
-  //       });
-  //     }),
-  //   L.marker([751, 756], { icon: barIcon })
-  //     .addTo(map)
-  //     .bindPopup(
-  //       `
-  //           <div class="pop" style="text-align: center;">
-  //               <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //               <p>Veniam ea in veniam quis.</p>
-  //               <a href="https://example.com" target="_blank">
-  //                   <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                       Visit our store
-  //                   </button>
-  //               </a>
-  //           </div>
-  //       `
-  //     )
-  //     .on("click", function (e) {
-  //       this.openPopup();
-  //       map.setView(this.getLatLng(), map.getZoom(), {
-  //         animate: true,
-  //         pan: { duration: 1 },
-  //       });
-  //     }),
-  // ],
-  // 4: [
-  //   L.marker([750, 487], { icon: foodIcon })
-  //     .addTo(map)
-  //     .bindPopup(
-  //       `
-  //           <div class="pop" style="text-align: center;">
-  //               <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //               <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
-  //               <a href="https://example.com" target="_blank">
-  //                   <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                       Visit our store
-  //                   </button>
-  //               </a>
-  //           </div>
-  //       `
-  //     )
-  //     .on("click", function (e) {
-  //       this.openPopup();
-  //       map.setView(this.getLatLng(), map.getZoom(), {
-  //         animate: true,
-  //         pan: { duration: 1 },
-  //       });
-  //     }),
-  //   L.marker([780, 737], { icon: foodIcon })
-  //     .addTo(map)
-  //     .bindPopup(
-  //       `
-  //           <div class="pop" style="text-align: center;">
-  //               <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-  //               <p>Excepteur elit nostrud voluptate laboris esse irure qui dolore.</p>
-  //               <a href="https://example.com" target="_blank">
-  //                   <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  //                       Visit our store
-  //                   </button>
-  //               </a>
-  //           </div>
-  //       `
-  //     )
-  //     .on("click", function (e) {
-  //       this.openPopup();
-  //       map.setView(this.getLatLng(), map.getZoom(), {
-  //         animate: true,
-  //         pan: { duration: 1 },
-  //       });
-  //     }),
-  // ],
-
   1: [
     L.marker([910, 565], { icon: experienceIcon })
       .addTo(map)
@@ -510,6 +375,773 @@ var markers = {
   ],
   6: [
     L.marker([1030, 770], { icon: experienceIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  7: [
+    L.marker([750, 580], { icon: experienceIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([360, 390], { icon: experienceIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  8: [
+    L.marker([830, 900], { icon: experienceIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([650, 680], { icon: experienceIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([560, 395], { icon: experienceIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([330, 315], { icon: experienceIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  9: [
+    L.marker([863, 1290], { icon: restroomsIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([1000, 1100], { icon: restroomsIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([585, 490], { icon: restroomsIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([800, 760], { icon: restroomsIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  10: [
+    L.marker([883, 1260], { icon: showIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([975, 1070], { icon: showIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([825, 495], { icon: showIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([745, 605], { icon: showIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([445, 395], { icon: showIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  11: [
+    L.marker([865, 1205], { icon: fruitIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([975, 755], { icon: fruitIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([415, 310], { icon: fruitIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([430, 275], { icon: fruitIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([255, 305], { icon: fruitIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  12: [
+    L.marker([800, 1300], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([940, 1090], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([945, 940], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([1040, 845], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([645, 715], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([900, 535], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([410, 430], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([300, 260], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([220, 335], { icon: camaraIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  13: [
+    L.marker([810, 1230], { icon: starIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([835, 1295], { icon: starIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([900, 1130], { icon: starIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    
+  ],
+  14: [
+    L.marker([185, 270], { icon: taxiIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  15: [
+    L.marker([920, 1280], { icon: shorexIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1093,28 +1725,7 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([945, 590], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
-                <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
+      
       L.marker([910, 788], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
@@ -1541,7 +2152,7 @@ var markers = {
       }),
   ],
   60: [
-    L.marker([990, 1250], { icon: foodIcon })
+    L.marker([990, 1250], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1613,7 +2224,29 @@ var markers = {
       }),
   ],
   63: [
-    L.marker([908, 703], { icon: foodIcon })
+    L.marker([908, 703], { icon: barIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([662, 472], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1733,7 +2366,7 @@ var markers = {
       }),
   ],
   68: [
-    L.marker([938, 815], { icon: foodIcon })
+    L.marker([938, 815], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1781,7 +2414,7 @@ var markers = {
       }),
   ],
   70: [
-    L.marker([665, 565], { icon: foodIcon })
+    L.marker([665, 565], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1805,7 +2438,7 @@ var markers = {
       }),
   ],
   71: [
-    L.marker([550, 300], { icon: foodIcon })
+    L.marker([550, 300], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -1830,6 +2463,30 @@ var markers = {
   ],
   72: [
     L.marker([380, 347], { icon: foodIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <a href="https://example.com" target="_blank">
+                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  73: [
+    L.marker([945, 590], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `

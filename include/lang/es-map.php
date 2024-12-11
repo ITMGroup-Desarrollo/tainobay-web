@@ -6,7 +6,7 @@ define('TITULOS_MAP', array(
 ));
 define('TABLAS_MAP', array(
     'SHOPPING',
-    'RESTAURANTES',
+    'ALIMENTOS Y BEBIDAS',
     'SERVICIOS',
     'EXPERIENCIAS'
 ));
