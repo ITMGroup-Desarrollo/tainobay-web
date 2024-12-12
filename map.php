@@ -340,5 +340,10 @@ include_once("include/lang/{$idioma}-map.php");
 </body>
 
 <script src="assets/js/vendor/map.js"></script>
-
+<script>
+    document.querySelector('.leaflet-control-filter.shop .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.fun .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.restaurants .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .minimize-btn.show')?.click();
+  </script>
 </html>

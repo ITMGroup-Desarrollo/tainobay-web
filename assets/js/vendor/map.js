@@ -48,7 +48,11 @@ if (!isMobile) {
 // #endregion
 
 // #region Evento para minimizar o expandir el contenido del filtro
+
 if (!isMobile) {
+ 
+
+
   $(document).on('click', '.minimize-btn', function () {
       var $minimizeBtn = $(this); // Store the minimize-btn element
       var $filter = $minimizeBtn.closest('.leaflet-control-filter');
@@ -60,16 +64,20 @@ if (!isMobile) {
           $filterContent.slideUp(200); // Use slideUp with a 300ms transition
           $minimizeBtn.text('☰');
           $filter.css('width'); // Optional, depending on other style logic
+          $headerText.get(0).style.paddingRight = '0rem';
       } else {
           $filterContent.slideDown(200); // Use slideDown with a 300ms transition
           $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">');
+          $headerText.get(0).style.paddingRight = ''; // Remove the paddingRight style
+
       }
       // Selecciona los elementos
 const hideElement = document.querySelector('.service .hide');
 const headerText = document.querySelector('.service .header-text');
 // Comprueba si el elemento 'hide' está presente y tiene la clase 'hide'
 if (hideElement && hideElement.classList.contains('hide')) {
-  headerText.style.paddingRight = '0.7rem';
+  console.log(headerText)
+  headerText.style.paddingRight = '0rem';
 }
 // Selecciona todos los elementos .service dentro de .filter-container
 const serviceElements = document.querySelectorAll('.filter-container .service');
@@ -78,15 +86,15 @@ serviceElements.forEach(service => {
   const hideChild = service.querySelector('.hide');
   
   // Si se encuentra un hijo con la clase .hide, aplica el estilo
-  if (hideChild) {
-      service.style.position = 'absolute';
-      service.style.bottom = '70vh'; 
-      } else {
-        // Si no tiene la clase .hide, asegúrate de restaurar a su posición original
-        service.style.position = 'absolute';
-        service.style.bottom = '55vh'; 
-        headerText.style.paddingRight = '1rem';
-      }
+  // if (hideChild) {
+  //     service.style.position = 'absolute';
+  //     service.style.bottom = '70vh'; 
+  //     } else {
+  //       // Si no tiene la clase .hide, asegúrate de restaurar a su posición original
+  //       service.style.position = 'absolute';
+  //       service.style.bottom = '55vh'; 
+  //       headerText.style.paddingRight = '1rem';
+  //     }
     });
   });
 }
