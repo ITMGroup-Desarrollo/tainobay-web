@@ -183,16 +183,16 @@ include_once("include/lang/{$idioma}-map.php");
                         <table class="tabla-icons">
                             <tr data-marker-id="73">
                                 <td><img src="assets/icons/map/bar.svg" alt="RUM-BAR"></td>
-                                <td>RUM BAR</td>
+                                <td>RUM RUM BAR</td>
                             </tr>
                             <tr data-marker-id="60">
                                 <td><img src="assets/icons/map/bar.svg" alt="BAR-KELOKE"></td>
-                                <td>BAR KELOKÉ</td>
+                                <td>KELOKÉ BAR</td>
                             </tr>
-                            
+
                             <tr data-marker-id="61">
                                 <td><img src="assets/icons/map/food.svg" alt="CORTAITO"></td>
-                                <td>COFFEE FACTORY</td>
+                                <td>THE COFFEE FACTORY</td>
                             </tr>
                             <tr data-marker-id="62">
                                 <td><img src="assets/icons/map/food.svg" alt="ICEKERY"></td>
@@ -224,7 +224,7 @@ include_once("include/lang/{$idioma}-map.php");
                             </tr>
                             <tr data-marker-id="69">
                                 <td><img src="assets/icons/map/food.svg" alt="DOM-DOM"></td>
-                                <td>DOM DOM</td>
+                                <td>DOM DOM BAR</td>
                             </tr>
                             <tr data-marker-id="70">
                                 <td><img src="assets/icons/map/bar.svg" alt="HURACAN-LOUNGE-BAR"></td>
@@ -236,7 +236,7 @@ include_once("include/lang/{$idioma}-map.php");
                             </tr>
                             <tr data-marker-id="72">
                                 <td><img src="assets/icons/map/food.svg" alt="TIKI-TIKI"></td>
-                                <td>TIKI TIKI</td>
+                                <td>TIKI TIKI BAR</td>
                             </tr>
                         </table>
                     </div>
@@ -245,7 +245,12 @@ include_once("include/lang/{$idioma}-map.php");
                 <div class="leaflet-control-filter fun">
                     <div class="filter-header">
                         <span class="header-text"><?php echo TABLAS_MAP[3]; ?></span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
                         <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
+                        
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -292,31 +297,31 @@ include_once("include/lang/{$idioma}-map.php");
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
-                        <tr data-marker-id="9">
+                            <tr data-marker-id="9">
                                 <td><img src="assets/icons/map/restrooms.svg" alt="RESTROOMS"></td>
                                 <td>RESTROOMS</td>
                             </tr>
-                        <tr data-marker-id="10">
+                            <tr data-marker-id="10">
                                 <td><img src="assets/icons/map/show.svg" alt="SHOWS"></td>
                                 <td>SHOWS</td>
                             </tr>
-                        <tr data-marker-id="11">
+                            <tr data-marker-id="11">
                                 <td><img src="assets/icons/map/fruits.svg" alt="MARKET-PLACE"></td>
                                 <td>MARKET PLACE</td>
                             </tr>
-                        <tr data-marker-id="12">
+                            <tr data-marker-id="12">
                                 <td><img src="assets/icons/map/camara.svg" alt="PHOTO-SPOT"></td>
                                 <td>PHOTO SPOT</td>
                             </tr>
-                        <tr data-marker-id="13">
+                            <tr data-marker-id="13">
                                 <td><img src="assets/icons/map/star.svg" alt="LAST-MINUTE"></td>
                                 <td>LAST MINUTE</td>
                             </tr>
-                        <tr data-marker-id="14">
+                            <tr data-marker-id="14">
                                 <td><img src="assets/icons/map/taxi.svg" alt="SHUTTLE"></td>
                                 <td>SHUTTLE</td>
                             </tr>
-                        <tr data-marker-id="15">
+                            <tr data-marker-id="15">
                                 <td><img src="assets/icons/map/shorex.svg" alt="SHOREX"></td>
                                 <td>PRE-BOOKED SHOREX</td>
                             </tr>
@@ -345,5 +350,6 @@ include_once("include/lang/{$idioma}-map.php");
     document.querySelector('.leaflet-control-filter.fun .filter-header .minimize-btn.show')?.click();
     document.querySelector('.leaflet-control-filter.restaurants .filter-header .minimize-btn.show')?.click();
     document.querySelector('.leaflet-control-filter.service .filter-header .minimize-btn.show')?.click();
-  </script>
+</script>
+
 </html>

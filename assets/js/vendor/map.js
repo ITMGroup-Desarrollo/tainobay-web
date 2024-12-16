@@ -50,53 +50,39 @@ if (!isMobile) {
 // #region Evento para minimizar o expandir el contenido del filtro
 
 if (!isMobile) {
- 
-
-
   $(document).on('click', '.minimize-btn', function () {
-      var $minimizeBtn = $(this); // Store the minimize-btn element
-      var $filter = $minimizeBtn.closest('.leaflet-control-filter');
-      var $filterContent = $filter.find('.filter-content');
-      var $headerText = $filter.find('.header-text');
-      // Toggle the "show" and "hide" classes on the minimize-btn element
-      $minimizeBtn.toggleClass('show').toggleClass('hide');
-      if ($minimizeBtn.hasClass('hide')) {
-          $filterContent.slideUp(200); // Use slideUp with a 300ms transition
-          $minimizeBtn.text('☰');
-          $filter.css('width'); // Optional, depending on other style logic
-          $headerText.get(0).style.paddingRight = '0rem';
-      } else {
-          $filterContent.slideDown(200); // Use slideDown with a 300ms transition
-          $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">');
-          $headerText.get(0).style.paddingRight = ''; // Remove the paddingRight style
+    var $minimizeBtn = $(this); // Botón que disparó el evento
+    var $filter = $minimizeBtn.closest('.leaflet-control-filter'); // Contenedor asociado
+    var $filterContent = $filter.find('.filter-content');
+    var $headerText = $filter.find('.header-text');
 
-      }
-      // Selecciona los elementos
-const hideElement = document.querySelector('.service .hide');
-const headerText = document.querySelector('.service .header-text');
-// Comprueba si el elemento 'hide' está presente y tiene la clase 'hide'
-if (hideElement && hideElement.classList.contains('hide')) {
-  console.log(headerText)
-  headerText.style.paddingRight = '0rem';
-}
-// Selecciona todos los elementos .service dentro de .filter-container
-const serviceElements = document.querySelectorAll('.filter-container .service');
-serviceElements.forEach(service => {
-  // Busca un hijo con la clase .hide dentro del .service actual
-  const hideChild = service.querySelector('.hide');
-  
-  // Si se encuentra un hijo con la clase .hide, aplica el estilo
-  // if (hideChild) {
-  //     service.style.position = 'absolute';
-  //     service.style.bottom = '70vh'; 
-  //     } else {
-  //       // Si no tiene la clase .hide, asegúrate de restaurar a su posición original
-  //       service.style.position = 'absolute';
-  //       service.style.bottom = '55vh'; 
-  //       headerText.style.paddingRight = '1rem';
-  //     }
+    // Verifica si el botón clicado actualmente está en estado "hide"
+    var isExpanding = !$minimizeBtn.hasClass('show');
+
+    // Cambia todos los demás botones a "hide"
+    $('.minimize-btn.show').not($minimizeBtn).each(function () {
+        var $otherBtn = $(this);
+        $otherBtn.removeClass('show').addClass('hide');
+        var $otherFilter = $otherBtn.closest('.leaflet-control-filter');
+        $otherFilter.find('.filter-content').slideUp(200); // Contrae contenido de otros botones
+        $otherBtn.text('☰'); // Restablece el texto
+        $otherFilter.find('.header-text').get(0).style.paddingRight = '0rem'; // Ajusta estilo
     });
-  });
+
+    // Alternar el estado del botón clicado
+    if (isExpanding) {
+        $minimizeBtn.removeClass('hide').addClass('show'); // Cambia a "show"
+        $filterContent.slideDown(200); // Expande el contenido
+        $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">'); // Cambia el contenido del botón
+        $headerText.get(0).style.paddingRight = ''; // Restablece el relleno
+    } else {
+        $minimizeBtn.removeClass('show').addClass('hide'); // Cambia a "hide"
+        $filterContent.slideUp(200); // Contrae el contenido
+        $minimizeBtn.text('☰'); // Cambia el texto
+        $headerText.get(0).style.paddingRight = '0rem'; // Ajusta el relleno
+    }
+});
+
 }
 
 // #endregion
@@ -114,7 +100,6 @@ var retailIcon = L.divIcon({
   iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
   popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
 });
-
 var restroomsIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -127,7 +112,6 @@ var restroomsIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var barIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -140,7 +124,6 @@ var barIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var foodIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -153,7 +136,6 @@ var foodIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var drugstoreIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -166,7 +148,6 @@ var drugstoreIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var experienceIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -179,7 +160,6 @@ var experienceIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var showIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -192,7 +172,6 @@ var showIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var fruitIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -205,7 +184,6 @@ var fruitIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var camaraIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -218,7 +196,6 @@ var camaraIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var starIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -231,7 +208,6 @@ var starIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var taxiIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -244,7 +220,6 @@ var taxiIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
-
 var shorexIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -270,7 +245,10 @@ var markers = {
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
                 <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2575,6 +2553,7 @@ $(document).on("click", ".tabla-icons tr", function () {
 // Nueva funcionalidad para filtrar por tabla al hacer clic en el span.header-text
 $(document).on("click", ".header-text", function () {
   var table = $(this).closest(".leaflet-control-filter").find("table");
+  var tableIndex = table.index();
   var markerIds = table
     .find("tr")
     .map(function () {
@@ -2582,43 +2561,57 @@ $(document).on("click", ".header-text", function () {
     })
     .get();
 
-  // Ocultar todos los marcadores antes de aplicar el nuevo filtro
-  $.each(markers, function (id, markerGroup) {
-    markerGroup.forEach(function (marker) {
-      map.removeLayer(marker);
+  // Verificar si el filtro ya está activo para esta tabla
+  if (lastClickedId === "table-" + tableIndex && !markersVisible) {
+    // Mostrar todos los marcadores (quitar filtro)
+    $.each(markers, function (id, markerGroup) {
+      markerGroup.forEach(function (marker) {
+        map.addLayer(marker);
+      });
     });
-  });
 
-  // Mostrar solo los marcadores correspondientes a la tabla seleccionada
-  markerIds.forEach(function (markerId) {
-    markers[markerId].forEach(function (marker) {
-      map.addLayer(marker);
+    markersVisible = true; // Marcar que los marcadores están visibles
+    lastClickedId = null; // Resetear el último clic
+  } else {
+    // Aplicar filtro: ocultar todos los marcadores
+    $.each(markers, function (id, markerGroup) {
+      markerGroup.forEach(function (marker) {
+        map.removeLayer(marker);
+      });
     });
-  });
 
-  markersVisible = false; // Marcar que los marcadores están ocultos
-  lastClickedId = "table-" + table.index(); // Actualizar lastClickedId al último marcador clicado
+    // Mostrar solo los marcadores correspondientes a la tabla seleccionada
+    markerIds.forEach(function (markerId) {
+      markers[markerId].forEach(function (marker) {
+        map.addLayer(marker);
+      });
+    });
+
+    markersVisible = false; // Marcar que los marcadores están filtrados
+    lastClickedId = "table-" + tableIndex; // Actualizar lastClickedId
+  }
 });
 
-// Evento para manejar la activación visual de las filas
-document.querySelectorAll(".tabla-icons tr").forEach((row) => {
-  row.addEventListener("click", function () {
-    // Si la fila ya tiene la clase 'active', se la quita
-    if (this.classList.contains("active")) {
-      this.classList.remove("active");
-    } else {
-      // Si no, se la quita de todas las filas y la añade solo a la fila actual
-      document
-        .querySelectorAll(".tabla-icons tr.active")
-        .forEach((activeRow) => {
-          activeRow.classList.remove("active");
-        });
 
-      // Añade la clase 'active' solo a la fila clickeada
-      this.classList.add("active");
-    }
-  });
-});
+// // Evento para manejar la activación visual de las filas
+// document.querySelectorAll(".tabla-icons tr").forEach((row) => {
+//   row.addEventListener("click", function () {
+//     // Si la fila ya tiene la clase 'active', se la quita
+//     if (this.classList.contains("active")) {
+//       this.classList.remove("active");
+//     } else {
+//       // Si no, se la quita de todas las filas y la añade solo a la fila actual
+//       document
+//         .querySelectorAll(".tabla-icons tr.active")
+//         .forEach((activeRow) => {
+//           activeRow.classList.remove("active");
+//         });
+
+//       // Añade la clase 'active' solo a la fila clickeada
+//       this.classList.add("active");
+//     }
+//   });
+// });
 document.addEventListener("DOMContentLoaded", function () {
   // Selecciona todas las tablas con la clase 'tabla-icons'
   var tablas = document.querySelectorAll(".tabla-icons");

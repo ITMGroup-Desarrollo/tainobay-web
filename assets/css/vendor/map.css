@@ -6,7 +6,10 @@
 div#map {
     border-radius: 10px;
 }
-
+.pop button:hover{
+background-color: #f5a23a;
+color: black;
+}
 section.map-section {
     display: flex;
     justify-content: center;
@@ -77,18 +80,7 @@ button.minimize-btn.show {
     font-weight: bolder;
     width: max-content;
 }
- .service .header-text{
-    padding-right: 30% ;
-} 
- .fun .header-text{
-    padding-right: 30% ;
-} 
- .restaurants .header-text{
-    padding-right: 25% ;
-} 
- .shop .header-text{
-    padding-right: 40% ;
-} 
+ 
 .tabla-icons tr {
     cursor: pointer;
 }
@@ -118,8 +110,82 @@ td:first-child {
 .custom-icon:hover img {
     transform: scale(1.40); /* Escala el tamaño del icono en un 5% */
 }
-
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 5px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--blog-icono);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--blog-yellow);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--blog-yellow);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 @media (min-width: 769px) {
+    .service .header-text{
+        padding-right: 30% ;
+    } 
+     .fun .header-text{
+        padding-right: 30% ;
+    } 
+     .restaurants .header-text{
+        padding-right: 25% ;
+    } 
+     .shop .header-text{
+        padding-right: 40% ;
+    } 
     .filter-container p,
     .filter-container span,
     .filter-container td {
@@ -127,7 +193,8 @@ td:first-child {
     }
 .filter-container{
     position: absolute;
-    width: 75vw;
+    width: fit-content;
+    left: 13%;
     /* background-color: black; */
     display: flex;
     flex-direction: column;
@@ -219,6 +286,9 @@ td:first-child {
 }
 
 @media (max-width: 768px) {
+    .filter-content{
+        font-size: .8rem;
+    }
     .header-text {
         width: auto;
     }
