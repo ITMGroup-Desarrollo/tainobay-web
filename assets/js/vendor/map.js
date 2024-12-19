@@ -235,23 +235,16 @@ var shorexIcon = L.divIcon({
 // #endregion
 
 // #region Marcadores y sus eventos
+const idioma = "es";
 var markers = {
   1: [
     L.marker([910, 565], { icon: experienceIcon })
       .addTo(map)
       .bindPopup(
         `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+            <div class="pop" style="text-align: center; ">
+                <p>FISH SPA</p>
+                <p>Cuidado personal</p>
             </div>
         `
       )
@@ -269,13 +262,9 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
-                <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                        Visit our store
-                    </button>
-                </a>
+                <p>MR. RUM QUEST</p>
+                <p>Experiencia</p>
+                
             </div>
         `
       )
@@ -293,10 +282,12 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
-                <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                <p>LAZY RIVER</p>
+                <a href="${idioma}/port-experience/lazy-river" target="_blank">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -318,9 +309,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -342,9 +336,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -366,9 +363,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -390,9 +390,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -412,9 +415,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -436,9 +442,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -458,9 +467,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -480,9 +492,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -502,9 +517,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -526,9 +544,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -548,9 +569,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -570,9 +594,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -592,9 +619,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -616,9 +646,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -638,9 +671,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -660,9 +696,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -682,9 +721,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -704,9 +746,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -728,9 +773,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -750,9 +798,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -772,9 +823,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -794,9 +848,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -816,9 +873,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -840,9 +900,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -862,9 +925,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -884,9 +950,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -906,9 +975,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -928,9 +1000,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -950,9 +1025,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -972,9 +1050,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -994,9 +1075,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1016,9 +1100,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1040,9 +1127,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1062,9 +1152,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1084,9 +1177,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1109,9 +1205,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1133,9 +1232,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1157,9 +1259,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1181,9 +1286,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1205,9 +1313,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1227,9 +1338,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1251,9 +1365,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1273,9 +1390,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1295,9 +1415,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1319,9 +1442,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1343,9 +1469,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1367,9 +1496,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1391,9 +1523,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1415,9 +1550,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1437,9 +1575,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1459,9 +1600,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1483,9 +1627,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1507,9 +1654,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1531,9 +1681,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1555,9 +1708,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1579,9 +1735,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1601,9 +1760,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1625,9 +1787,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1649,9 +1814,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1671,9 +1839,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1695,9 +1866,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1718,9 +1892,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1742,9 +1919,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1766,9 +1946,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1790,9 +1973,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1812,9 +1998,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1834,9 +2023,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1858,9 +2050,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1882,9 +2077,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1906,9 +2104,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1930,9 +2131,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1952,9 +2156,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -1976,9 +2183,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2000,9 +2210,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2024,9 +2237,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2048,9 +2264,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2072,9 +2291,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2096,9 +2318,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2114,15 +2339,18 @@ var markers = {
       }),
   ],
   50: [
-    L.marker([930, 1157], { icon: retailIcon })
+    L.marker([533, 273], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2144,9 +2372,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2168,9 +2399,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2192,9 +2426,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2216,9 +2453,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2238,9 +2478,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2262,9 +2505,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2286,9 +2532,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2310,9 +2559,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2334,9 +2586,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2358,9 +2613,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2382,9 +2640,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2406,9 +2667,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2430,9 +2694,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2454,9 +2721,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2478,9 +2748,39 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat sunt eiusmod dolor consectetur cillum laboris.</p>
+                <p>Fugiat </p>
                 <a href="https://example.com" target="_blank">
-                    <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
+                        Visit our store
+                    </button>
+                </a>
+            </div>
+        `
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  74: [
+    L.marker([420, 240], { icon: foodIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>Fugiat </p>
+                <a href="https://example.com" target="_blank">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
                         Visit our store
                     </button>
                 </a>
@@ -2550,8 +2850,8 @@ $(document).on("click", ".tabla-icons tr", function () {
   }
 });
 
-// Nueva funcionalidad para filtrar por tabla al hacer clic en el span.header-text
-$(document).on("click", ".header-text", function () {
+// Nueva funcionalidad para filtrar por tabla al cambiar el estado del switch
+$(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
   var table = $(this).closest(".leaflet-control-filter").find("table");
   var tableIndex = table.index();
   var markerIds = table
@@ -2561,36 +2861,76 @@ $(document).on("click", ".header-text", function () {
     })
     .get();
 
-  // Verificar si el filtro ya está activo para esta tabla
-  if (lastClickedId === "table-" + tableIndex && !markersVisible) {
-    // Mostrar todos los marcadores (quitar filtro)
-    $.each(markers, function (id, markerGroup) {
-      markerGroup.forEach(function (marker) {
-        map.addLayer(marker);
-      });
-    });
-
-    markersVisible = true; // Marcar que los marcadores están visibles
-    lastClickedId = null; // Resetear el último clic
-  } else {
-    // Aplicar filtro: ocultar todos los marcadores
+  if ($(this).is(":checked")) {
+    // Switch activado: aplicar filtro y mostrar solo los marcadores de esta tabla
     $.each(markers, function (id, markerGroup) {
       markerGroup.forEach(function (marker) {
         map.removeLayer(marker);
       });
     });
 
-    // Mostrar solo los marcadores correspondientes a la tabla seleccionada
     markerIds.forEach(function (markerId) {
       markers[markerId].forEach(function (marker) {
         map.addLayer(marker);
       });
     });
 
-    markersVisible = false; // Marcar que los marcadores están filtrados
+    markersVisible = false; // Indicar que los marcadores están filtrados
     lastClickedId = "table-" + tableIndex; // Actualizar lastClickedId
+  } else {
+    // Switch desactivado: mostrar todos los marcadores
+    $.each(markers, function (id, markerGroup) {
+      markerGroup.forEach(function (marker) {
+        map.addLayer(marker);
+      });
+    });
+
+    markersVisible = true; // Indicar que todos los marcadores están visibles
+    lastClickedId = null; // Resetear lastClickedId
   }
 });
+
+// // Nueva funcionalidad para filtrar por tabla al hacer clic en el span.header-text
+// $(document).on("click", ".header-text", function () {
+//   var table = $(this).closest(".leaflet-control-filter").find("table");
+//   var tableIndex = table.index();
+//   var markerIds = table
+//     .find("tr")
+//     .map(function () {
+//       return $(this).data("marker-id");
+//     })
+//     .get();
+
+//   // Verificar si el filtro ya está activo para esta tabla
+//   if (lastClickedId === "table-" + tableIndex && !markersVisible) {
+//     // Mostrar todos los marcadores (quitar filtro)
+//     $.each(markers, function (id, markerGroup) {
+//       markerGroup.forEach(function (marker) {
+//         map.addLayer(marker);
+//       });
+//     });
+
+//     markersVisible = true; // Marcar que los marcadores están visibles
+//     lastClickedId = null; // Resetear el último clic
+//   } else {
+//     // Aplicar filtro: ocultar todos los marcadores
+//     $.each(markers, function (id, markerGroup) {
+//       markerGroup.forEach(function (marker) {
+//         map.removeLayer(marker);
+//       });
+//     });
+
+//     // Mostrar solo los marcadores correspondientes a la tabla seleccionada
+//     markerIds.forEach(function (markerId) {
+//       markers[markerId].forEach(function (marker) {
+//         map.addLayer(marker);
+//       });
+//     });
+
+//     markersVisible = false; // Marcar que los marcadores están filtrados
+//     lastClickedId = "table-" + tableIndex; // Actualizar lastClickedId
+//   }
+// });
 
 
 // // Evento para manejar la activación visual de las filas

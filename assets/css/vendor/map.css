@@ -29,6 +29,8 @@ button.minimize-btn.show {
 }
 
 .leaflet-control-filter {
+    
+    /* align-self: end; */
     background: white;
     padding: 5px 5px 20px 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -173,18 +175,21 @@ td:first-child {
   .slider.round:before {
     border-radius: 50%;
   }
+  .pop{
+    padding: 10px 0px 0px 0px;
+  }
 @media (min-width: 769px) {
     .service .header-text{
-        padding-right: 30% ;
+        padding-right: 20% ;
     } 
      .fun .header-text{
-        padding-right: 30% ;
+        padding-right: 15% ;
     } 
      .restaurants .header-text{
-        padding-right: 25% ;
+        padding-right: 15% ;
     } 
      .shop .header-text{
-        padding-right: 40% ;
+        padding-right: 30% ;
     } 
     .filter-container p,
     .filter-container span,
@@ -201,10 +206,6 @@ td:first-child {
     z-index: 1000;
     bottom: 0%;
     padding-left: 10px;
-}
-.filter-container .fun {
-    
-    
 }
     /* .filter-container {
         z-index: 1001;
@@ -351,7 +352,7 @@ td:first-child {
 }
 
 
-@media (max-width: 376px) {
+@media (max-width: 450px) {
     .filter-container {
         width: 96vw;
         left: 0%;

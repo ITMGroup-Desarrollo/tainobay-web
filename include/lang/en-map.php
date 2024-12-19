@@ -5,8 +5,8 @@ define('TITULOS_MAP', array(
     'discover.'
 ));
 define('TABLAS_MAP', array(
-    'SHOPPING',
+    'SHOPPING EXPERIENCE',
     'FOOD & BEVERAGES',
     'SERVICES',
-    'EXPERIENCES'
+    'FUN EXPERIENCE'
 ));

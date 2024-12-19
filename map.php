@@ -38,6 +38,10 @@ include_once("include/lang/{$idioma}-map.php");
                 <div class="leaflet-control-filter shop">
                     <div class="filter-header">
                         <span class="header-text"><?php echo TABLAS_MAP[0]; ?></span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
                         <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close">
                         </button>
                     </div>
@@ -144,7 +148,10 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/retail.svg" alt="NATURAL-BEAUTY"></td>
                                 <td>NATURAL BEAUTY</td>
                             </tr>
-
+                            <tr data-marker-id="45">
+                                <td><img src="assets/icons/map/retail.svg" alt="HARD-ROCK-CAFÉ"></td>
+                                <td>HARD ROCK CAFÉ</td>
+                            </tr>
                             <tr data-marker-id="46">
                                 <td><img src="assets/icons/map/retail.svg" alt="DEL-SOL"></td>
                                 <td>DEL SOL</td>
@@ -165,10 +172,7 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/retail.svg" alt="VELASCO-HABANOS"></td>
                                 <td>VELASCO HABANOS</td>
                             </tr>
-                            <tr data-marker-id="45">
-                                <td><img src="assets/icons/map/retail.svg" alt="HARD-ROCK-CAFÉ"></td>
-                                <td>HARD ROCK CAFÉ</td>
-                            </tr>
+                            
 
                         </table>
                     </div>
@@ -177,6 +181,10 @@ include_once("include/lang/{$idioma}-map.php");
                 <div class="leaflet-control-filter restaurants">
                     <div class="filter-header">
                         <span class="header-text"><?php echo TABLAS_MAP[1]; ?></span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
                         <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
                     </div>
                     <div class="filter-content">
@@ -238,6 +246,10 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/food.svg" alt="TIKI-TIKI"></td>
                                 <td>TIKI TIKI BAR</td>
                             </tr>
+                            <tr data-marker-id="74">
+                                <td><img src="assets/icons/map/food.svg" alt="CHOCOLATE-WORLD"></td>
+                                <td>CHOCOLATE WORLD</td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -293,6 +305,10 @@ include_once("include/lang/{$idioma}-map.php");
                 <div class="leaflet-control-filter service">
                     <div class="filter-header">
                         <span class="header-text"><?php echo TABLAS_MAP[2]; ?></span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
                         <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
                     </div>
                     <div class="filter-content">
