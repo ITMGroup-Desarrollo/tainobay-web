@@ -199,7 +199,7 @@ include_once("include/lang/{$idioma}-map.php");
                             </tr>
 
                             <tr data-marker-id="61">
-                                <td><img src="assets/icons/map/food.svg" alt="CORTAITO"></td>
+                                <td><img src="assets/icons/map/food.svg" alt="THE COFFEE FACTORY"></td>
                                 <td>THE COFFEE FACTORY</td>
                             </tr>
                             <tr data-marker-id="62">
@@ -268,11 +268,11 @@ include_once("include/lang/{$idioma}-map.php");
                         <table class="tabla-icons">
                             <tr data-marker-id="7">
                                 <td><img src="assets/icons/map/experience.svg" alt="POOL"></td>
-                                <td>POOL</td>
+                                <td><?php echo $idioma === 'es' ? 'PISCINA' : 'POOL'; ?></td>
                             </tr>
                             <tr data-marker-id="8">
                                 <td><img src="assets/icons/map/experience.svg" alt="BEACH"></td>
-                                <td>BEACH</td>
+                                <td><?php echo $idioma === 'es' ? 'PLAYA' : 'BEACH'; ?></td>
                             </tr>
                             <tr data-marker-id="1">
                                 <td><img src="assets/icons/map/experience.svg" alt="FISH-SPA"></td>
@@ -315,7 +315,7 @@ include_once("include/lang/{$idioma}-map.php");
                         <table class="tabla-icons">
                             <tr data-marker-id="9">
                                 <td><img src="assets/icons/map/restrooms.svg" alt="RESTROOMS"></td>
-                                <td>RESTROOMS</td>
+                                <td><?php echo $idioma === 'es' ? 'BAÑOS' : 'RESTROOMS'; ?></td>
                             </tr>
                             <tr data-marker-id="10">
                                 <td><img src="assets/icons/map/show.svg" alt="SHOWS"></td>
@@ -359,7 +359,10 @@ include_once("include/lang/{$idioma}-map.php");
     <?php include("include/js.php"); ?>
 
 </body>
-
+<script>
+    const idioma = "<?php echo $idioma; ?>";
+    
+</script>
 <script src="assets/js/vendor/map.js"></script>
 <script>
     document.querySelector('.leaflet-control-filter.shop .filter-header .minimize-btn.show')?.click();
@@ -367,5 +370,6 @@ include_once("include/lang/{$idioma}-map.php");
     document.querySelector('.leaflet-control-filter.restaurants .filter-header .minimize-btn.show')?.click();
     document.querySelector('.leaflet-control-filter.service .filter-header .minimize-btn.show')?.click();
 </script>
+
 
 </html>

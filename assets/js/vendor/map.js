@@ -235,7 +235,7 @@ var shorexIcon = L.divIcon({
 // #endregion
 
 // #region Marcadores y sus eventos
-const idioma = "es";
+
 var markers = {
   1: [
     L.marker([910, 565], { icon: experienceIcon })
@@ -244,7 +244,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center; ">
                 <p>FISH SPA</p>
-                <p>Cuidado personal</p>
+                <p>${idioma === 'es' ? 'Cuidado personal' : 'Wellness'}</p>
             </div>
         `
       )
@@ -263,7 +263,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p>MR. RUM QUEST</p>
-                <p>Experiencia</p>
+                <p>${idioma === 'es' ? 'Experiencia' : 'Experience'}</p>
                 
             </div>
         `
@@ -283,12 +283,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p>LAZY RIVER</p>
-                <a href="${idioma}/port-experience/lazy-river" target="_blank">
+                <a href="${idioma}/port-experience/lazy-river" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -308,14 +308,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>SPLASH SURFING</p>
+                <a href="${idioma}/port-experience/splash-surfing" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -335,14 +335,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <p>SPA WELLNESS</p>
+                <a href="${idioma}/port-experience/spa-wellness" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -362,16 +362,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+            <p>MONKEY ISLAND</p>
             </div>
         `
       )
@@ -386,47 +377,30 @@ var markers = {
   7: [
     L.marker([750, 580], { icon: experienceIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //       <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
           animate: true,
           pan: { duration: 1 },
         });
-      }),
+      })
+      ,
     L.marker([360, 390], { icon: experienceIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //       <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -438,22 +412,22 @@ var markers = {
   8: [
     L.marker([830, 900], { icon: experienceIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -463,22 +437,22 @@ var markers = {
       }),
     L.marker([650, 680], { icon: experienceIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -488,22 +462,22 @@ var markers = {
       }),
     L.marker([560, 395], { icon: experienceIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -513,22 +487,22 @@ var markers = {
       }),
     L.marker([330, 315], { icon: experienceIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -540,22 +514,22 @@ var markers = {
   9: [
     L.marker([863, 1290], { icon: restroomsIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -565,22 +539,22 @@ var markers = {
       }),
     L.marker([1000, 1100], { icon: restroomsIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -590,22 +564,22 @@ var markers = {
       }),
     L.marker([585, 490], { icon: restroomsIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -615,22 +589,22 @@ var markers = {
       }),
     L.marker([800, 760], { icon: restroomsIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -642,22 +616,22 @@ var markers = {
   10: [
     L.marker([883, 1260], { icon: showIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -667,22 +641,22 @@ var markers = {
       }),
     L.marker([975, 1070], { icon: showIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -692,22 +666,22 @@ var markers = {
       }),
     L.marker([825, 495], { icon: showIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -717,22 +691,22 @@ var markers = {
       }),
     L.marker([745, 605], { icon: showIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -742,22 +716,22 @@ var markers = {
       }),
     L.marker([445, 395], { icon: showIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -769,22 +743,22 @@ var markers = {
   11: [
     L.marker([865, 1205], { icon: fruitIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -794,22 +768,22 @@ var markers = {
       }),
     L.marker([975, 755], { icon: fruitIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -819,22 +793,22 @@ var markers = {
       }),
     L.marker([415, 310], { icon: fruitIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -844,22 +818,22 @@ var markers = {
       }),
     L.marker([430, 275], { icon: fruitIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -869,22 +843,22 @@ var markers = {
       }),
     L.marker([255, 305], { icon: fruitIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -896,22 +870,22 @@ var markers = {
   12: [
     L.marker([800, 1300], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -921,22 +895,22 @@ var markers = {
       }),
     L.marker([940, 1090], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -946,22 +920,22 @@ var markers = {
       }),
     L.marker([945, 940], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -971,22 +945,22 @@ var markers = {
       }),
     L.marker([1040, 845], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -996,22 +970,22 @@ var markers = {
       }),
     L.marker([645, 715], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1021,22 +995,22 @@ var markers = {
       }),
     L.marker([900, 535], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1046,22 +1020,22 @@ var markers = {
       }),
     L.marker([410, 430], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1071,22 +1045,22 @@ var markers = {
       }),
     L.marker([300, 260], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1096,22 +1070,22 @@ var markers = {
       }),
     L.marker([220, 335], { icon: camaraIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1123,22 +1097,22 @@ var markers = {
   13: [
     L.marker([810, 1230], { icon: starIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1148,22 +1122,22 @@ var markers = {
       }),
     L.marker([835, 1295], { icon: starIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1173,22 +1147,22 @@ var markers = {
       }),
     L.marker([900, 1130], { icon: starIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1201,22 +1175,22 @@ var markers = {
   14: [
     L.marker([185, 270], { icon: taxiIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1228,22 +1202,22 @@ var markers = {
   15: [
     L.marker([920, 1280], { icon: shorexIcon })
       .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
-            </div>
-        `
-      )
+      // .bindPopup(
+      //   `
+      //       <div class="pop" style="text-align: center;">
+      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
+      //           <p>Fugiat </p>
+      //           <a href="https://example.com" target="_blank">
+      //               <button 
+      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseout="this.style.backgroundColor='#1c355e';">
+      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //               </button>
+      //           </a>
+      //       </div>
+      //   `
+      // )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1258,16 +1232,9 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+            <p>DIAMONDS</p>
+            <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
+            
             </div>
         `
       )
@@ -1285,16 +1252,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>DUFRY</p>
+                <p>${idioma === 'es' ? 'Supermercado' : 'Big Retailer'}</p>
             </div>
         `
       )
@@ -1312,16 +1271,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>BLUE STONE</p>
+                <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
             </div>
         `
       )
@@ -1337,16 +1288,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>BLUE STONE</p>
+                <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
             </div>
         `
       )
@@ -1364,16 +1307,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>MORENA MIA</p>
+                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
       )
@@ -1389,16 +1324,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>MORENA MIA</p>
+                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
       )
@@ -1414,16 +1341,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>MORENA MIA</p>
+                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
       )
@@ -1441,16 +1360,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>PAWS BY THE SEA</p>
+                <p>${idioma === 'es' ? 'Gift Shop' : 'Gift Shop'}</p>
             </div>
         `
       )
@@ -1468,16 +1379,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>TSUNAMI XL</p>
+                <p>${idioma === 'es' ? 'Conveniencia' : 'Convenience'}</p>
             </div>
         `
       )
@@ -1495,16 +1398,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>PIRAÑA JOE</p>
+                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
       )
@@ -1522,16 +1417,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>ISLAND LIFE - SURF SHOP</p>
+                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
       )
@@ -1549,16 +1436,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'DOMINICAN THINGS' : 'DOMINICAN THINGS'}</p>
+                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
       )
@@ -1574,16 +1453,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'DOMINICAN THINGS' : 'DOMINICAN THINGS'}</p>
+                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
       )
@@ -1599,16 +1470,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'DOMINICAN THINGS' : 'DOMINICAN THINGS'}</p>
+                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
       )
@@ -1626,16 +1489,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'CHRISTMAS BY THE SEA' : 'CHRISTMAS BY THE SEA'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -1653,16 +1508,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'RUTA DE LAS INDAS' : 'RUTA DE LAS INDAS'}</p>
+                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
       )
@@ -1680,16 +1527,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'THE TIE DYE HUT' : 'THE TIE DYE HUT'}</p>
+                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
       )
@@ -1707,16 +1546,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'PIÑA COLADA BOUTIQUE' : 'PIÑA COLADA BOUTIQUE'}</p>
+                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
       )
@@ -1734,16 +1565,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'SHARK ATTACK' : 'SHARK ATTACK'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -1759,16 +1582,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'SHARK ATTACK' : 'SHARK ATTACK'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -1786,16 +1601,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'BLOSSOM SOAP' : 'BLOSSOM SOAP'}</p>
+                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
       )
@@ -1813,16 +1620,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'SEA SALT' : 'SEA SALT'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -1838,16 +1637,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'SEA SALT' : 'SEA SALT'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -1865,16 +1656,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'LOCAL ITM' : 'LOCAL ITM'}</p>
+                <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
             </div>
         `
       )
@@ -1891,16 +1674,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'LOCAL ITM' : 'LOCAL ITM'}</p>
+                <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
             </div>
         `
       )
@@ -1918,16 +1693,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'MEXICAN EXPERIENCE' : 'EXPERIENCIA MEXICANA'}</p>
+                <p>${idioma === 'es' ? 'Gift Shop/Tabaco' : 'Gift Shop/Tobacco'}</p>
             </div>
         `
       )
@@ -1945,16 +1712,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'MUSEO DEL TABACO' : 'TOBACCO MUSEUM'}</p>
+                <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
             </div>
         `
       )
@@ -1972,16 +1731,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'SILVER BY THE SEA' : 'SILVER BY THE SEA'}</p>
+                <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
             </div>
         `
       )
@@ -1997,16 +1748,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'SILVER BY THE SEA' : 'SILVER BY THE SEA'}</p>
+                <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
             </div>
         `
       )
@@ -2022,16 +1765,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'SILVER BY THE SEA' : 'SILVER BY THE SEA'}</p>
+                <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
             </div>
         `
       )
@@ -2049,16 +1784,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'FARMACIA TAINO BAY' : 'TAINO BAY DRUGSTORE'}</p>
             </div>
         `
       )
@@ -2076,16 +1802,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'TAINO LOGO SHOP' : 'TAINO LOGO SHOP'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -2103,16 +1821,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'DOMINICAN YUCAYAQUE' : 'DOMINICAN YUCAYAQUE'}</p>
+                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
       )
@@ -2130,16 +1840,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'TURQUESA' : 'TURQUESA'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -2155,16 +1857,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'TURQUESA' : 'TURQUESA'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -2182,16 +1876,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'NATURAL BEAUTY' : 'NATURAL BEAUTY'}</p>
+                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
       )
@@ -2209,16 +1895,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'HARD ROCK CAFÉ' : 'HARD ROCK CAFE'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
       )
@@ -2236,16 +1914,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'DEL SOL' : 'DEL SOL'}</p>
+                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
       )
@@ -2263,16 +1933,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'FARMACIA' : 'DRUGSTORE'}</p>
             </div>
         `
       )
@@ -2290,16 +1951,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'VEARI PIEL' : 'VEARI PIEL'}</p>
+                <p>${idioma === 'es' ? 'Artículos de Piel ' : 'Leather goods store'}</p>
             </div>
         `
       )
@@ -2317,16 +1970,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'ABYSSAL' : 'ABYSSAL'}</p>
+                <p>${idioma === 'es' ? 'Tienda destino ' : 'Store'}</p>
             </div>
         `
       )
@@ -2344,16 +1989,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'VELASCO HABANOS' : 'VELASCO HABANOS'}</p>
+                <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
             </div>
         `
       )
@@ -2371,16 +2008,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'KELOKÉ BAR' : 'KELOKÉ BAR'}</p>
             </div>
         `
       )
@@ -2396,16 +2024,16 @@ var markers = {
     L.marker([890, 860], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+        `   <div class="pop" style="text-align: center;">
+                <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'THE COFFEE FACTORY' : 'THE COFFEE FACTORY'}</p>
+                <p>${idioma === 'es' ? 'Fuel up with a cup of Dominican coffee!' : 'Fuel up with a cup of Dominican coffee!'}</p>
+                <a href="${idioma}/port-experience/coffee-factory" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2425,14 +2053,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'ICEKERY' : 'ICEKERY'}</p>
+                <p>${idioma === 'es' ? 'Beat the heat with an ice cream! ' : 'Beat the heat with an ice cream! '}</p>
+                <a href="${idioma}/port-experience/icekery" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2452,14 +2081,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'MOJITO BAR' : 'MOJITO BAR'}</p>
+                <p>${idioma === 'es' ? 'Find cocktails, tequila, rum, and of course fresh mojitos!' : 'Find cocktails, tequila, rum, and of course fresh mojitos!'}</p>
+                <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2477,14 +2107,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'MOJITO BAR' : 'MOJITO BAR'}</p>
+                <p>${idioma === 'es' ? 'Find cocktails, tequila, rum, and of course fresh mojitos!' : 'Find cocktails, tequila, rum, and of course fresh mojitos!'}</p>
+                <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2504,14 +2135,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/cantina-latina-white.png" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'CANTINA LATINA' : 'CANTINA LATINA'}</p>
+                <p>${idioma === 'es' ? 'Cantina Latina has a delicious menu with Dominican Cuisine' : 'Cantina Latina has a delicious menu with Dominican Cuisine'}</p>
+                <a href="${idioma}/port-experience/cantina-latina" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2531,14 +2163,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/mexican-grill.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'MEXICAN GRILL' : 'MEXICAN GRILL'}</p>
+                <p>${idioma === 'es' ? 'Tacos and grilled snacks, it doesn\'t get any better than that!' : 'Tacos and grilled snacks, it doesn\'t get any better than that!'}</p>
+                <a href="${idioma}/port-experience/mexican-grill" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2558,14 +2191,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'BLUE PARROT' : 'BLUE PARROT'}</p>
+                <p>${idioma === 'es' ? 'A Caribbean-inspired seafood menu' : 'A Caribbean-inspired seafood menu'}</p>
+                <a href="${idioma}/port-experience/blue-parrot" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2585,14 +2219,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'TACO LOVER' : 'TACO LOVER'}</p>
+                <p>${idioma === 'es' ? 'Top spot for street tacos' : 'Top spot for street tacos'}</p>
+                <a href="${idioma}/port-experience/taco-lover" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2612,14 +2247,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'MARGARITA BAR' : 'MARGARITA BAR'}</p>
+                <p>${idioma === 'es' ? 'One Margarita is not enough! ' : 'One Margarita is not enough! '}</p>
+                <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2639,14 +2275,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/dom-dom-bar.svg" alt="Logo" style="width: 90px; height: 90px; ">
+                <p>${idioma === 'es' ? 'DOM DOM BAR' : 'DOM DOM BAR'}</p>
+                <p>${idioma === 'es' ? 'Join the party, and have fun while sippin\' your favorite drink' : 'Join the party, and have fun while sippin\' your favorite drink'}</p>
+                <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2666,16 +2303,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'HURACÁN LOUNGE BAR' : 'HURACÁN LOUNGE BAR'}</p>
+
             </div>
         `
       )
@@ -2693,14 +2322,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'THE BOAT BAR' : 'THE BOAT BAR'}</p>
+                <p>${idioma === 'es' ? 'Ready, sail, drink!' : 'Ready, sail, drink!'}</p>
+                <a href="${idioma}/port-experience/boat-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2720,14 +2350,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'TIKI TIKI BAR' : 'TIKI TIKI BAR'}</p>
+                <p>${idioma === 'es' ? 'Fresh drinks and beverages for a relaxing day at port' : 'Fresh drinks and beverages for a relaxing day at port'}</p>
+                <a href="${idioma}/port-experience/tiki-tiki" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2747,14 +2378,15 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
+                <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 80px; height: 80px; ">
+                <p>${idioma === 'es' ? 'RUM RUM BAR' : 'RUM RUM BAR'}</p>
+                <p>${idioma === 'es' ? 'Salud to Dominican Rum! ' : 'Salud to Dominican Rum! '}</p>
+                <a href="${idioma}/port-experience/rum-rum-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
+                      ${idioma === 'es' ? 'Ver más' : 'See more'}
                     </button>
                 </a>
             </div>
@@ -2774,16 +2406,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>Fugiat </p>
-                <a href="https://example.com" target="_blank">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                        Visit our store
-                    </button>
-                </a>
+                <p>${idioma === 'es' ? 'CHOCOLATE WORLD' : 'CHOCOLATE WORLD'}</p>
             </div>
         `
       )
