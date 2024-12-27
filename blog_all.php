@@ -11,6 +11,7 @@ include_once("include/lang/{$idioma}-blog.php");
 </head>
 
 <body class="shock-body">
+    <?php include("include/gtm-body.php"); ?>
     <?php include("include/header.php"); ?>
     <!-- Main -->
     <main id="main" class="shock-main">
@@ -99,6 +100,7 @@ include_once("include/lang/{$idioma}-blog.php");
 <script>
     const idioma = "<?php echo $idioma; ?>";
     console.log(idioma);
+
     function loadPosts(page) {
         $.getJSON('include/get_blog_posts.php?page=' + page + '&idioma=' + idioma, function(response) {
             if (!response.posts || response.posts.length === 0) {

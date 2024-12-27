@@ -14,6 +14,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 </head>
 
 <body class="shock-body">
+    <?php include("include/gtm-body.php"); ?>
     <?php include("include/header.php"); ?>
     <!-- Main -->
     <main id="main" class="shock-main">
@@ -213,7 +214,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     let currentPage = 1;
 
     function loadTimeline(callback) {
-        $.getJSON(`include/get_blog_posts.php?page=${currentPage}`+ '&idioma=' + idioma, function(response) {
+        $.getJSON(`include/get_blog_posts.php?page=${currentPage}` + '&idioma=' + idioma, function(response) {
             if (!response.posts || response.posts.length === 0) {
                 return;
             }

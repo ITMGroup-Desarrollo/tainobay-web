@@ -10,6 +10,7 @@ include_once("include/lang/{$idioma}-map.php");
 </head>
 
 <body class="shock-body">
+    <?php include("include/gtm-body.php"); ?>
     <?php include("include/header.php"); ?>
     <!-- Main -->
     <main id="main" class="shock-main">

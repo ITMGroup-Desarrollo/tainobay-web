@@ -13,7 +13,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->

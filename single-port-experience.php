@@ -42,7 +42,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->

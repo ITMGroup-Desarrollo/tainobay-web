@@ -8,13 +8,11 @@ include_once("include/lang/{$idioma}-thecoffeefactorymenu.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
   <?php include("include/head.php"); ?>
-
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->

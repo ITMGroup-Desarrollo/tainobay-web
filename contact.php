@@ -14,7 +14,7 @@ include_once("include/lang/{$idioma}-contact.php");
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->
