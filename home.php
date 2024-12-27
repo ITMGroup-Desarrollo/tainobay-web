@@ -341,15 +341,40 @@ include_once("include/lang/reviews.php");
         </section>
 
         <section class="shock-section">
-            <div class="banner d-flex align-items-center">
-                <!-- Image -->
-                <div class="image-wrapper">
-                    <div class="banner-fixed m-position-right" style="background-image:url('assets/images/media/footer_img.webp')"></div>
-                </div>
-                <!-- Overlay -->
-                <div class="overlay-banner"></div>
+            <div class="contentBanner parallaxHolder" style="overflow: hidden; height: 600px;">
+                <img class="bannerImg" src="assets/images/media/footer_img.webp" width="100%" height="100%" alt="banner" style="object-fit: cover; height: 150%; filter: brightness(0.8); will-change: transform;">
             </div>
         </section>
+        <script>
+            function parallax() {
+                let parallaxHolders = document.querySelectorAll('.parallaxHolder');
+
+                parallaxHolders.forEach(holder => {
+                    let bannerImg = holder.querySelector('.bannerImg');
+
+                    if (bannerImg) {
+                        let holderRect = holder.getBoundingClientRect();
+                        let holderTopRelativeToViewport = holderRect.top;
+                        let holderHeight = holder.offsetHeight;
+
+                        // Verifica si el elemento está en la vista
+                        if (holderTopRelativeToViewport + holderHeight > 0 && holderTopRelativeToViewport < window.innerHeight) {
+                            let parallaxSpeed = 0.3;
+                            let transformAmount = (holderTopRelativeToViewport - window.innerHeight) * parallaxSpeed;
+
+                            // Limita el valor de `transformAmount` a la mitad de la altura del contenedor
+                            transformAmount = Math.min(Math.max(transformAmount, -holderHeight / 2), holderHeight / 2);
+
+                            // Aplica la transformación al banner para el efecto parallax
+                            bannerImg.style.transform = `translateY(${transformAmount}px)`;
+                        }
+                    }
+                });
+            }
+
+            // Activar el efecto parallax en cada scroll
+            window.onscroll = parallax;
+        </script>
 
     </main>
 

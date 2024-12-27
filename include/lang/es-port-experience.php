@@ -6,7 +6,7 @@ define('TITULOS_BANNER_PORT_EXPERIENCE', array(
 ));
 
 define('TITULOS_PORT_EXPERIENCE', array(
-  'Restaurantess,',
+  'Restaurantes,',
   'Bares y experiencias'
 ));
 
@@ -691,7 +691,7 @@ $points = [
     ],
     'pdf' => 'port-experience/taco-lover.pdf'
   ],
-  [
+[
     'id' => 12,
     'type' => 'restaurant',
     'name' => 'Icekery',
@@ -758,7 +758,7 @@ $points = [
       'assets\images\port-experience\icekery\gallery\ICEKERY_15.webp',
     ],
   ],
-  [
+    [
     'id' => 13,
     'type' => 'public',
     'name' => 'Lazy River',
