@@ -135,8 +135,8 @@ include_once("include/lang/reviews.php");
                                         <!-- Image wrapper -->
                                         <div class="card-header mb-1">
                                             <img src="<?= $review['avatar'] ?>"
-                                                    class="rounded-circle user-img"
-                                                    alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>" onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
+                                                class="rounded-circle user-img"
+                                                alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>" onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
                                         </div>
 
                                         <!-- Quotes left -->
