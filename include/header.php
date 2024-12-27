@@ -109,7 +109,11 @@
                        <div class="menu-grid-item-inner">
                            <!-- Image -->
                            <a href="javascript:void(0)" class="menu-grid-item-image">
-                               <img src="assets/images/media/img-menu-1.jpg" alt="Image name" class="image" />
+                               <!-- <img src="assets/images/media/img-menu-1-n.jpg" alt="Image name" class="image" /> -->
+                               <picture>
+                                   <source srcset="assets/images/media/img-menu-1-n.webp" type="image/webp">
+                                   <img src="assets/images/media/img-menu-1.jpg" alt="Taino Bay Port" class="image" />
+                               </picture>
                            </a>
                        </div>
                    </div>

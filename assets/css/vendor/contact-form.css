@@ -1,7 +1,15 @@
 #contact-form input,
-#contact-form textarea {
+#contact-form textarea,
+#contact-form select {
   border-color: var(--blue-color);
   border-width: 2px;
+}
+#contact-form select {
+  color: var(--blue-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 16px;
 }
 #contact-form input::placeholder,
 #contact-form textarea::placeholder {
