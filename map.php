@@ -172,7 +172,10 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/retail.svg" alt="VELASCO-HABANOS"></td>
                                 <td>VELASCO HABANOS</td>
                             </tr>
-                            
+                            <tr data-marker-id="74">
+                                <td><img src="assets/icons/map/retail.svg" alt="CHOCOLATE-WORLD"></td>
+                                <td>CHOCOLATE WORLD</td>
+                            </tr>
 
                         </table>
                     </div>
@@ -246,10 +249,7 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/food.svg" alt="TIKI-TIKI"></td>
                                 <td>TIKI TIKI BAR</td>
                             </tr>
-                            <tr data-marker-id="74">
-                                <td><img src="assets/icons/map/food.svg" alt="CHOCOLATE-WORLD"></td>
-                                <td>CHOCOLATE WORLD</td>
-                            </tr>
+                            
                         </table>
                     </div>
                 </div>
@@ -267,35 +267,31 @@ include_once("include/lang/{$idioma}-map.php");
                     <div class="filter-content">
                         <table class="tabla-icons">
                             <tr data-marker-id="7">
-                                <td><img src="assets/icons/map/experience.svg" alt="POOL"></td>
+                                <td><img src="assets/icons/map/port-experience/pool-marker.svg" alt="POOL"></td>
                                 <td><?php echo $idioma === 'es' ? 'PISCINA' : 'POOL'; ?></td>
                             </tr>
                             <tr data-marker-id="8">
-                                <td><img src="assets/icons/map/experience.svg" alt="BEACH"></td>
+                                <td><img src="assets/icons/map/port-experience/beach-marker.svg" alt="BEACH"></td>
                                 <td><?php echo $idioma === 'es' ? 'PLAYA' : 'BEACH'; ?></td>
                             </tr>
-                            <tr data-marker-id="1">
-                                <td><img src="assets/icons/map/experience.svg" alt="FISH-SPA"></td>
-                                <td>FISH SPA</td>
-                            </tr>
                             <tr data-marker-id="2">
-                                <td><img src="assets/icons/map/experience.svg" alt="MR-RUM-QUEST"></td>
+                                <td><img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="MR-RUM-QUEST"></td>
                                 <td>MR. RUM QUEST</td>
                             </tr>
                             <tr data-marker-id="3">
-                                <td><img src="assets/icons/map/experience.svg" alt="THE-RIVER"></td>
+                                <td><img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="THE-RIVER"></td>
                                 <td>THE RIVER</td>
                             </tr>
                             <tr data-marker-id="4">
-                                <td><img src="assets/icons/map/experience.svg" alt="SPLASH-SUFRING"></td>
+                                <td><img src="assets/icons/map/port-experience/splash-marker.svg" alt="SPLASH-SUFRING"></td>
                                 <td>SPLASH SURFING</td>
                             </tr>
                             <tr data-marker-id="5">
-                                <td><img src="assets/icons/map/experience.svg" alt="SPA WELLNESS RETREATS"></td>
+                                <td><img src="assets/icons/map/port-experience/spa-marker.svg" alt="SPA WELLNESS RETREATS"></td>
                                 <td>SPA WELLNESS RETREAT</td>
                             </tr>
                             <tr data-marker-id="6">
-                                <td><img src="assets/icons/map/experience.svg" alt="MONKEY-ISLAND"></td>
+                                <td><img src="assets/icons/map/port-experience/monkey-marker.svg" alt="MONKEY-ISLAND"></td>
                                 <td>MONKEY ISLAND</td>
                             </tr>
                         </table>

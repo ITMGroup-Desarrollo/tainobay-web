@@ -232,36 +232,103 @@ var shorexIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
+var poolIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/pool-marker.svg" alt="pool" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var beachIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/beach-marker.svg" alt="beach" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var rumquestIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="rum-quest" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var riverIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="rum-quest" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var splashIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/splash-marker.svg" alt="rum-quest" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var spaIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/spa-marker.svg" alt="rum-quest" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var monkeyIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="100"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/monkey-marker.svg" alt="rum-quest" width="20" height="20">
+           </div>`,
+  className: "",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
 // #endregion
 
 // #region Marcadores y sus eventos
 
 var markers = {
-  1: [
-    L.marker([910, 565], { icon: experienceIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center; ">
-                <p>FISH SPA</p>
-                <p>${idioma === 'es' ? 'Cuidado personal' : 'Wellness'}</p>
-            </div>
-        `
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
+  
   2: [
-    L.marker([890, 650], { icon: experienceIcon })
+    L.marker([890, 650], { icon: rumquestIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>MR. RUM QUEST</p>
                 <p>${idioma === 'es' ? 'Experiencia' : 'Experience'}</p>
                 
@@ -277,11 +344,12 @@ var markers = {
       }),
   ],
   3: [
-    L.marker([470, 300], { icon: experienceIcon })
+    L.marker([470, 300], { icon: riverIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+                <img src="assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>LAZY RIVER</p>
                 <a href="${idioma}/port-experience/lazy-river" >
                     <button 
@@ -303,7 +371,7 @@ var markers = {
       }),
   ],
   4: [
-    L.marker([520, 560], { icon: experienceIcon })
+    L.marker([520, 560], { icon: splashIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -330,7 +398,7 @@ var markers = {
       }),
   ],
   5: [
-    L.marker([880, 1105], { icon: experienceIcon })
+    L.marker([880, 1105], { icon: spaIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -357,12 +425,14 @@ var markers = {
       }),
   ],
   6: [
-    L.marker([1030, 770], { icon: experienceIcon })
+    L.marker([1030, 770], { icon: monkeyIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <p>MONKEY ISLAND</p>
+                <img src="assets/icons/map/port-experience/monkey-island.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>MONKEY ISLAND</p>
+                </a>
             </div>
         `
       )
@@ -375,15 +445,24 @@ var markers = {
       }),
   ],
   7: [
-    L.marker([750, 580], { icon: experienceIcon })
+    L.marker([750, 580], { icon: poolIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //       <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
+            <a href="${idioma}/port-experience/pool" >
+                     <button 
+                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                       onmouseover="this.style.backgroundColor='#f5a23a';" 
+                       onmouseout="this.style.backgroundColor='#1c355e';">
+                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                     </button>
+                 </a>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -392,15 +471,24 @@ var markers = {
         });
       })
       ,
-    L.marker([360, 390], { icon: experienceIcon })
+    L.marker([360, 390], { icon: poolIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //       <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
+            <a href="${idioma}/port-experience/pool" >
+                     <button 
+                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                       onmouseover="this.style.backgroundColor='#f5a23a';" 
+                       onmouseout="this.style.backgroundColor='#1c355e';">
+                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                     </button>
+                 </a>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -410,24 +498,24 @@ var markers = {
       }),
   ],
   8: [
-    L.marker([830, 900], { icon: experienceIcon })
+    L.marker([830, 900], { icon: beachIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <a href="${idioma}/port-experience/beach" >
+                     <button 
+                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                       onmouseover="this.style.backgroundColor='#f5a23a';" 
+                       onmouseout="this.style.backgroundColor='#1c355e';">
+                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                     </button>
+                 </a>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -435,24 +523,24 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-    L.marker([650, 680], { icon: experienceIcon })
+    L.marker([650, 680], { icon: beachIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <a href="${idioma}/port-experience/beach" >
+                     <button 
+                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                       onmouseover="this.style.backgroundColor='#f5a23a';" 
+                       onmouseout="this.style.backgroundColor='#1c355e';">
+                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                     </button>
+                 </a>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -460,24 +548,24 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-    L.marker([560, 395], { icon: experienceIcon })
+    L.marker([560, 395], { icon: beachIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <a href="${idioma}/port-experience/beach" >
+                     <button 
+                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                       onmouseover="this.style.backgroundColor='#f5a23a';" 
+                       onmouseout="this.style.backgroundColor='#1c355e';">
+                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                     </button>
+                 </a>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -485,24 +573,24 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-    L.marker([330, 315], { icon: experienceIcon })
+    L.marker([330, 315], { icon: beachIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <a href="${idioma}/port-experience/beach" >
+                     <button 
+                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                       onmouseover="this.style.backgroundColor='#f5a23a';" 
+                       onmouseout="this.style.backgroundColor='#1c355e';">
+                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                     </button>
+                 </a>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -2008,6 +2096,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'KELOKÉ BAR' : 'KELOKÉ BAR'}</p>
             </div>
         `
@@ -2135,7 +2224,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/cantina-latina-white.png" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <img src="assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 70px; height: 70px; ">
                 <p>${idioma === 'es' ? 'CANTINA LATINA' : 'CANTINA LATINA'}</p>
                 <p>${idioma === 'es' ? 'Cantina Latina has a delicious menu with Dominican Cuisine' : 'Cantina Latina has a delicious menu with Dominican Cuisine'}</p>
                 <a href="${idioma}/port-experience/cantina-latina" >
@@ -2303,6 +2392,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>${idioma === 'es' ? 'HURACÁN LOUNGE BAR' : 'HURACÁN LOUNGE BAR'}</p>
 
             </div>
@@ -2401,7 +2491,7 @@ var markers = {
       }),
   ],
   74: [
-    L.marker([420, 240], { icon: foodIcon })
+    L.marker([420, 240], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `

@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><ellipse cx="11.9" cy="11.9" rx="11.6" ry="11.7" fill="#1c355e">
-        
-    </ellipse>
-    <g stroke-width="1.5" stroke="#ffffff" fill="none">
-        <path d="M 13.9 18 h -3.8 a 0.6 0.6 0 0 1 -0.6 -0.6 v -2.3 a 0.6 0.6 0 0 0 -0.6 -0.6 H 6.6 a 0.6 0.6 0 0 1 -0.6 -0.6 v -3.8 a 0.6 0.6 0 0 1 0.6 -0.6 h 2.3 a 0.6 0.6 0 0 0 0.6 -0.6 V 6.6 a 0.6 0.6 0 0 1 0.6 -0.6 h 3.8 a 0.6 0.6 0 0 1 0.6 0.6 v 2.3 a 0.6 0.6 0 0 0 0.6 0.6 h 2.3 a 0.6 0.6 0 0 1 0.6 0.6 v 3.8 a 0.6 0.6 0 0 1 -0.6 0.6 h -2.3 a 0.6 0.6 0 0 0 -0.6 0.6 v 2.3 a 0.6 0.6 0 0 1 -0.6 0.6 Z"/>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M 12 22 c 5.5 0 10 -4.5 10 -10 S 17.5 2 12 2 S 2 6.5 2 12 s 4.5 10 10 10"/>
-    </g>
-    </svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <ellipse cx="437" cy="447" rx="362" ry="365" fill="rgb(255, 255, 255)">
+        </ellipse>
+  <defs>
+        <style>
+            .cls-1 {
+        fill: #c29552;
+        fill-rule: evenodd;
+      }
+        </style>
+    </defs>
+    <path class="cls-1" d="M 450 0 C 201.5 0 0 201.5 0 450 s 201.5 450 450 450 s 450 -201.5 450 -450 S 698.5 0 450 0 Z M 755.5 541.7 h -213.9 v 213.9 h -183.3 v -213.9 h -213.9 v -183.3 h 213.9 v -213.9 h 183.3 v 213.9 h 213.9 v 183.3 Z"/>
+</svg>
