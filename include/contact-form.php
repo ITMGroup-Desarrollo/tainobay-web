@@ -9,8 +9,21 @@ include_once("include/lang/{$idioma}-contact-form.php");
   <div class="mb-2 col-md-6">
     <input type="email" id="email" name="email" class="form-control rounded-pill px-4 py-3" placeholder="<?= EMAIL ?>" required>
   </div>
-  <div class="mb-2 col-12">
-    <input type="text" id="subject" name="subject" class="form-control rounded-pill px-4 py-3" placeholder="<?= SUBJECT ?>">
+  <div class="mb-2 col-md-6">
+    <select name="naviera" id="naviera" class="form-select rounded-pill px-4 py-3" required>
+      <option selected disabled value=""><?= SHIP ?></option>
+      <option value="CELEBRITY">CELEBRITY</option>
+      <option value="MSC">MSC</option>
+      <option value="NORWEGIAN">NORWEGIAN</option>
+      <option value="OCEANIA">OCEANIA</option>
+      <option value="REGENT">REGENT</option>
+      <option value="ROYAL CARIBBEAN">ROYAL CARIBBEAN</option>
+      <option value="VIRGIN VOYAGES">VIRGIN VOYAGES</option>
+    </select>
+  </div>
+  <div class="mb-2 col-md-6 position-relative">
+    <input type="date" id="arrival" name="date" class="form-control rounded-pill px-4 py-3" required>
+    <label for="arrival" class="placeholder" style="font-weight: bold; font-style: italic;"><?= ARRIVAL_DATE ?></label>
   </div>
   <div class="mb-2 col-12">
     <textarea id="message" name="message" class="form-control rounded-4 px-4 py-3" placeholder="<?= MESSAGE ?>" rows="3"></textarea>
