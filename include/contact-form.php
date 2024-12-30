@@ -2,6 +2,8 @@
 include_once("include/lang/{$idioma}-contact-form.php");
 ?>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <form id="contact-form" method="POST" class="row mt-4">
   <div class="mb-2 col-md-6">
     <input type="text" id="name" name="name" class="form-control rounded-pill px-4 py-3 text-blue" placeholder="<?= NAME ?>" required>
@@ -22,11 +24,15 @@ include_once("include/lang/{$idioma}-contact-form.php");
     </select>
   </div>
   <div class="mb-2 col-md-6 position-relative">
-    <input type="date" id="arrival" name="date" class="form-control rounded-pill px-4 py-3" required>
+    <input type="date" id="arrival" name="arrival" class="form-control rounded-pill px-4 py-3" required>
     <label for="arrival" class="placeholder" style="font-weight: bold; font-style: italic;"><?= ARRIVAL_DATE ?></label>
   </div>
   <div class="mb-2 col-12">
     <textarea id="message" name="message" class="form-control rounded-4 px-4 py-3" placeholder="<?= MESSAGE ?>" rows="3"></textarea>
+  </div>
+  <div
+    class="g-recaptcha"
+    data-sitekey="6LdxBKoqAAAAACIc3BrqzWZNwDnp248cJ9HUn5lr">
   </div>
   <div class="col-12 text-center">
     <button type="submit" id="submit-button" class="text-uppercase button-transparent button-orange text-center rounded-pill"><?= SEND ?></button>
