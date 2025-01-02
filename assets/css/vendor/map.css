@@ -305,20 +305,20 @@ td:first-child {
         min-width: 8rem !important;
     }
 
-    .header-text {
+    /* .header-text {
         padding: 5px 10px;
     }
 
     .filter-header {
         justify-content: center;
-    }
+    } */
 
     section.map-section {
         margin-top: 10rem;
         margin-bottom: 3rem;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column-reverse;
+        flex-direction: row;
         justify-content: center;
     }
 
@@ -327,27 +327,42 @@ td:first-child {
         opacity: 100%;
     }
 
-    .filter-container {
+    /* .filter-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         position: relative;
         z-index: 1001;
         width: 97vw;
         margin: auto;
+    } */
+    .filter-container {
+        display: flex;
+        flex-direction: row;
+        min-width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+        overflow-x: auto; /* Permite el desplazamiento horizontal */
+        scroll-snap-type: x mandatory; /* Añadido para el desplazamiento suave */
+        -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos táctiles */
+        justify-content: flex-start; /* Alinea los elementos al inicio */
+        margin-bottom: 10px;
+        scrollbar-width: none;
     }
-
+    
+    .filter-container > * {
+        scroll-snap-align: start; /* Añadido para el desplazamiento suave */
+        flex: 0 0 auto; /* Asegura que los elementos no se reduzcan */
+        min-width: 200px; /* Ajusta el ancho mínimo de los elementos */
+        margin-right: 10px; /* Espacio entre los elementos */
+    }
     .leaflet-control-filter {
         margin: 0.5rem 0.5rem;
         opacity: 80%;
+        height: min-content;
     }
 
     div#map {
         margin: 0 1rem 1rem 1rem;
     }
 
-    .minimize-btn {
-        display: none;
-    }
     section.map-section {
         margin-top: 2rem;
     }
@@ -360,6 +375,7 @@ td:first-child {
         left: 0%;
         grid-template-columns: 1fr;
         margin: auto;
+        margin-bottom: 10px;
     }
     .shop,
     .fun,

@@ -56,7 +56,7 @@ if (!isMobile) {
 
 // #region Evento para minimizar o expandir el contenido del filtro
 
-if (!isMobile) {
+
   $(document).on('click', '.minimize-btn', function () {
     
     
@@ -92,7 +92,7 @@ if (!isMobile) {
     }
 });
 
-}
+
 
 // #endregion
 
@@ -2531,6 +2531,7 @@ var lastClickedId = null;
 var markersVisible = true;
 
 // Evento para manejar el click en las filas de la tabla
+if(!isMobile){
 $(document).on("click", ".tabla-icons tr", function () {
   var markerId = $(this).data("marker-id");
   var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
@@ -2559,7 +2560,43 @@ $(document).on("click", ".tabla-icons tr", function () {
     lastClickedId = markerId; // Actualizar lastClickedId al último marcador clicado
   }
 });
-
+}
+if(isMobile){
+  $(document).on("click", ".tabla-icons tr", function () {
+    var markerId = $(this).data("marker-id");
+    var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
+  
+    if (lastClickedId === markerId && !markersVisible) {
+      // Si se hace clic en el mismo ícono y los marcadores están ocultos, mostrar todos los marcadores
+      $.each(markers, function (id, markerGroup) {
+        markerGroup.forEach(function (marker) {
+          map.addLayer(marker);
+        });
+      });
+      markersVisible = true; // Marcar que los marcadores están visibles
+      lastClickedId = null; // Resetear lastClickedId para permitir nueva selección
+    } else {
+      // Ocultar todos los marcadores
+      $.each(markers, function (id, markerGroup) {
+        markerGroup.forEach(function (marker) {
+          map.removeLayer(marker);
+        });
+      });
+      // Mostrar solo los marcadores seleccionados
+      selectedMarkers.forEach(function (marker) {
+        map.addLayer(marker);
+        map.setView(marker.getLatLng(), 15); // Centrar el mapa en el marcador seleccionado
+      });
+      markersVisible = false; // Marcar que los marcadores están ocultos
+      lastClickedId = markerId; // Actualizar lastClickedId al último marcador clicado
+    }
+  
+    // Desplazar la pantalla hacia el mapa
+    $('html, body').animate({
+      scrollTop: $("#map").offset().top
+    }, 500); // Ajusta la duración del desplazamiento según sea necesario
+  });
+}
 // Nueva funcionalidad para filtrar por tabla al cambiar el estado del switch
 $(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
   var table = $(this).closest(".leaflet-control-filter").find("table");
