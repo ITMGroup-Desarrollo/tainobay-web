@@ -8,5 +8,5 @@ define('TABLAS_MAP', array(
     'SHOPPING EXPERIENCE',
     'FOOD & BEVERAGES',
     'SERVICES',
-    'FUN EXPERIENCE'
+    'PORT EXPERIENCE'
 ));

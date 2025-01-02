@@ -34,9 +34,169 @@ include_once("include/lang/{$idioma}-map.php");
         <!-- Content -->
         <section class="shock-section map-section">
             <div class="filter-container" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+                <!-- Service -->
+                <div class="leaflet-control-filter service">
+                    <div class="filter-header">
+                        <span class="header-text"><?php echo TABLAS_MAP[2]; ?></span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
+                    </div>
+                    <div class="filter-content">
+                        <table class="tabla-icons">
+                            <tr data-marker-id="9">
+                                <td><img src="assets/icons/map/restrooms.svg" alt="RESTROOMS"></td>
+                                <td><?php echo $idioma === 'es' ? 'BAÑOS' : 'RESTROOMS'; ?></td>
+                            </tr>
+                            <tr data-marker-id="10">
+                                <td><img src="assets/icons/map/show.svg" alt="SHOWS"></td>
+                                <td>SHOWS</td>
+                            </tr>
+                            <tr data-marker-id="11">
+                                <td><img src="assets/icons/map/fruits.svg" alt="MARKET-PLACE"></td>
+                                <td>MARKET PLACE</td>
+                            </tr>
+                            <tr data-marker-id="12">
+                                <td><img src="assets/icons/map/camara.svg" alt="PHOTO-SPOT"></td>
+                                <td>PHOTO SPOT</td>
+                            </tr>
+                            <tr data-marker-id="13">
+                                <td><img src="assets/icons/map/star.svg" alt="LAST-MINUTE"></td>
+                                <td>LAST MINUTE</td>
+                            </tr>
+                            <tr data-marker-id="14">
+                                <td><img src="assets/icons/map/taxi.svg" alt="SHUTTLE"></td>
+                                <td>SHUTTLE</td>
+                            </tr>
+                            <tr data-marker-id="15">
+                                <td><img src="assets/icons/map/shorex.svg" alt="SHOREX"></td>
+                                <td>PRE-BOOKED SHOREX</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div> 
+                <!-- fun -->
+                <div class="leaflet-control-filter fun">
+                    <div class="filter-header">
+                        <span class="header-text"><?php echo TABLAS_MAP[3]; ?></span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
+                        
+                    </div>
+                    <div class="filter-content">
+                        <table class="tabla-icons">
+                            <tr data-marker-id="7">
+                                <td><img src="assets/icons/map/port-experience/pool-marker.svg" alt="POOL"></td>
+                                <td><?php echo $idioma === 'es' ? 'PISCINA' : 'POOL'; ?></td>
+                            </tr>
+                            <tr data-marker-id="8">
+                                <td><img src="assets/icons/map/port-experience/beach-marker.svg" alt="BEACH"></td>
+                                <td><?php echo $idioma === 'es' ? 'PLAYA' : 'BEACH'; ?></td>
+                            </tr>
+                            <tr data-marker-id="2">
+                                <td><img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="MR-RUM-QUEST"></td>
+                                <td>MR. RUM QUEST</td>
+                            </tr>
+                            <tr data-marker-id="3">
+                                <td><img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="THE-RIVER"></td>
+                                <td>THE RIVER</td>
+                            </tr>
+                            <tr data-marker-id="4">
+                                <td><img src="assets/icons/map/port-experience/splash-marker.svg" alt="SPLASH-SUFRING"></td>
+                                <td>SPLASH SURFING</td>
+                            </tr>
+                            <tr data-marker-id="5">
+                                <td><img src="assets/icons/map/port-experience/spa-marker.svg" alt="SPA WELLNESS RETREATS"></td>
+                                <td>SPA WELLNESS RETREAT</td>
+                            </tr>
+                            <tr data-marker-id="6">
+                                <td><img src="assets/icons/map/port-experience/monkey-marker.svg" alt="MONKEY-ISLAND"></td>
+                                <td>MONKEY ISLAND</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- restaurants -->
+                <div class="leaflet-control-filter restaurants">
+                    <div class="filter-header">
+                        <span class="header-text"><?php echo TABLAS_MAP[1]; ?></span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
+                    </div>
+                    <div class="filter-content">
+                        <table class="tabla-icons">
+                            <tr data-marker-id="73">
+                                <td><img src="assets/icons/map/bar.svg" alt="RUM-BAR"></td>
+                                <td>RUM RUM BAR</td>
+                            </tr>
+                            <tr data-marker-id="60">
+                                <td><img src="assets/icons/map/food.svg" alt="BAR-KELOKE"></td>
+                                <td>KELOKÉ BAR</td>
+                            </tr>
+
+                            <tr data-marker-id="61">
+                                <td><img src="assets/icons/map/food.svg" alt="THE COFFEE FACTORY"></td>
+                                <td>THE COFFEE FACTORY</td>
+                            </tr>
+                            <tr data-marker-id="62">
+                                <td><img src="assets/icons/map/food.svg" alt="ICEKERY"></td>
+                                <td>ICEKERY</td>
+                            </tr>
+                            <tr data-marker-id="63">
+                                <td><img src="assets/icons/map/bar.svg" alt="MOJITO-BAR"></td>
+                                <td>MOJITO BAR</td>
+                            </tr>
+                            <tr data-marker-id="64">
+                                <td><img src="assets/icons/map/food.svg" alt="CANTINA-LATINA"></td>
+                                <td>CANTINA LATINA</td>
+                            </tr>
+                            <tr data-marker-id="65">
+                                <td><img src="assets/icons/map/food.svg" alt="MEXICAN-GRILL"></td>
+                                <td>MEXICAN GRILL</td>
+                            </tr>
+                            <tr data-marker-id="66">
+                                <td><img src="assets/icons/map/food.svg" alt="BLUE-PARROT"></td>
+                                <td>BLUE PARROT</td>
+                            </tr>
+                            <tr data-marker-id="67">
+                                <td><img src="assets/icons/map/food.svg" alt="TACO-LOVER"></td>
+                                <td>TACO LOVER</td>
+                            </tr>
+                            <tr data-marker-id="68">
+                                <td><img src="assets/icons/map/bar.svg" alt="MARGARITA-BAR"></td>
+                                <td>MARGARITA BAR</td>
+                            </tr>
+                            <tr data-marker-id="69">
+                                <td><img src="assets/icons/map/bar.svg" alt="DOM-DOM"></td>
+                                <td>DOM DOM BAR</td>
+                            </tr>
+                            <tr data-marker-id="70">
+                                <td><img src="assets/icons/map/bar.svg" alt="HURACAN-LOUNGE-BAR"></td>
+                                <td>HURACÁN LOUNGE BAR</td>
+                            </tr>
+                            <tr data-marker-id="71">
+                                <td><img src="assets/icons/map/bar.svg" alt="THE-BOAT-BAR"></td>
+                                <td>THE BOAT BAR</td>
+                            </tr>
+                            <tr data-marker-id="72">
+                                <td><img src="assets/icons/map/bar.svg" alt="TIKI-TIKI"></td>
+                                <td>TIKI TIKI BAR</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
                 <!-- shop -->
                 <div class="leaflet-control-filter shop">
-                    <div class="filter-header">
+                        <div class="filter-header">
                         <span class="header-text"><?php echo TABLAS_MAP[0]; ?></span>
                         <label class="switch">
                             <input type="checkbox">
@@ -180,167 +340,6 @@ include_once("include/lang/{$idioma}-map.php");
                         </table>
                     </div>
                 </div>
-                <!-- restaurants -->
-                <div class="leaflet-control-filter restaurants">
-                    <div class="filter-header">
-                        <span class="header-text"><?php echo TABLAS_MAP[1]; ?></span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
-                    </div>
-                    <div class="filter-content">
-                        <table class="tabla-icons">
-                            <tr data-marker-id="73">
-                                <td><img src="assets/icons/map/bar.svg" alt="RUM-BAR"></td>
-                                <td>RUM RUM BAR</td>
-                            </tr>
-                            <tr data-marker-id="60">
-                                <td><img src="assets/icons/map/bar.svg" alt="BAR-KELOKE"></td>
-                                <td>KELOKÉ BAR</td>
-                            </tr>
-
-                            <tr data-marker-id="61">
-                                <td><img src="assets/icons/map/food.svg" alt="THE COFFEE FACTORY"></td>
-                                <td>THE COFFEE FACTORY</td>
-                            </tr>
-                            <tr data-marker-id="62">
-                                <td><img src="assets/icons/map/food.svg" alt="ICEKERY"></td>
-                                <td>ICEKERY</td>
-                            </tr>
-                            <tr data-marker-id="63">
-                                <td><img src="assets/icons/map/bar.svg" alt="MOJITO-BAR"></td>
-                                <td>MOJITO BAR</td>
-                            </tr>
-                            <tr data-marker-id="64">
-                                <td><img src="assets/icons/map/food.svg" alt="CANTINA-LATINA"></td>
-                                <td>CANTINA LATINA</td>
-                            </tr>
-                            <tr data-marker-id="65">
-                                <td><img src="assets/icons/map/food.svg" alt="MEXICAN-GRILL"></td>
-                                <td>MEXICAN GRILL</td>
-                            </tr>
-                            <tr data-marker-id="66">
-                                <td><img src="assets/icons/map/food.svg" alt="BLUE-PARROT"></td>
-                                <td>BLUE PARROT</td>
-                            </tr>
-                            <tr data-marker-id="67">
-                                <td><img src="assets/icons/map/food.svg" alt="TACO-LOVER"></td>
-                                <td>TACO LOVER</td>
-                            </tr>
-                            <tr data-marker-id="68">
-                                <td><img src="assets/icons/map/bar.svg" alt="MARGARITA-BAR"></td>
-                                <td>MARGARITA BAR</td>
-                            </tr>
-                            <tr data-marker-id="69">
-                                <td><img src="assets/icons/map/food.svg" alt="DOM-DOM"></td>
-                                <td>DOM DOM BAR</td>
-                            </tr>
-                            <tr data-marker-id="70">
-                                <td><img src="assets/icons/map/bar.svg" alt="HURACAN-LOUNGE-BAR"></td>
-                                <td>HURACÁN LOUNGE BAR</td>
-                            </tr>
-                            <tr data-marker-id="71">
-                                <td><img src="assets/icons/map/bar.svg" alt="THE-BOAT-BAR"></td>
-                                <td>THE BOAT BAR</td>
-                            </tr>
-                            <tr data-marker-id="72">
-                                <td><img src="assets/icons/map/food.svg" alt="TIKI-TIKI"></td>
-                                <td>TIKI TIKI BAR</td>
-                            </tr>
-                            
-                        </table>
-                    </div>
-                </div>
-                <!-- fun -->
-                <div class="leaflet-control-filter fun">
-                    <div class="filter-header">
-                        <span class="header-text"><?php echo TABLAS_MAP[3]; ?></span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
-                        
-                    </div>
-                    <div class="filter-content">
-                        <table class="tabla-icons">
-                            <tr data-marker-id="7">
-                                <td><img src="assets/icons/map/port-experience/pool-marker.svg" alt="POOL"></td>
-                                <td><?php echo $idioma === 'es' ? 'PISCINA' : 'POOL'; ?></td>
-                            </tr>
-                            <tr data-marker-id="8">
-                                <td><img src="assets/icons/map/port-experience/beach-marker.svg" alt="BEACH"></td>
-                                <td><?php echo $idioma === 'es' ? 'PLAYA' : 'BEACH'; ?></td>
-                            </tr>
-                            <tr data-marker-id="2">
-                                <td><img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="MR-RUM-QUEST"></td>
-                                <td>MR. RUM QUEST</td>
-                            </tr>
-                            <tr data-marker-id="3">
-                                <td><img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="THE-RIVER"></td>
-                                <td>THE RIVER</td>
-                            </tr>
-                            <tr data-marker-id="4">
-                                <td><img src="assets/icons/map/port-experience/splash-marker.svg" alt="SPLASH-SUFRING"></td>
-                                <td>SPLASH SURFING</td>
-                            </tr>
-                            <tr data-marker-id="5">
-                                <td><img src="assets/icons/map/port-experience/spa-marker.svg" alt="SPA WELLNESS RETREATS"></td>
-                                <td>SPA WELLNESS RETREAT</td>
-                            </tr>
-                            <tr data-marker-id="6">
-                                <td><img src="assets/icons/map/port-experience/monkey-marker.svg" alt="MONKEY-ISLAND"></td>
-                                <td>MONKEY ISLAND</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- Service -->
-                <div class="leaflet-control-filter service">
-                    <div class="filter-header">
-                        <span class="header-text"><?php echo TABLAS_MAP[2]; ?></span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
-                    </div>
-                    <div class="filter-content">
-                        <table class="tabla-icons">
-                            <tr data-marker-id="9">
-                                <td><img src="assets/icons/map/restrooms.svg" alt="RESTROOMS"></td>
-                                <td><?php echo $idioma === 'es' ? 'BAÑOS' : 'RESTROOMS'; ?></td>
-                            </tr>
-                            <tr data-marker-id="10">
-                                <td><img src="assets/icons/map/show.svg" alt="SHOWS"></td>
-                                <td>SHOWS</td>
-                            </tr>
-                            <tr data-marker-id="11">
-                                <td><img src="assets/icons/map/fruits.svg" alt="MARKET-PLACE"></td>
-                                <td>MARKET PLACE</td>
-                            </tr>
-                            <tr data-marker-id="12">
-                                <td><img src="assets/icons/map/camara.svg" alt="PHOTO-SPOT"></td>
-                                <td>PHOTO SPOT</td>
-                            </tr>
-                            <tr data-marker-id="13">
-                                <td><img src="assets/icons/map/star.svg" alt="LAST-MINUTE"></td>
-                                <td>LAST MINUTE</td>
-                            </tr>
-                            <tr data-marker-id="14">
-                                <td><img src="assets/icons/map/taxi.svg" alt="SHUTTLE"></td>
-                                <td>SHUTTLE</td>
-                            </tr>
-                            <tr data-marker-id="15">
-                                <td><img src="assets/icons/map/shorex.svg" alt="SHOREX"></td>
-                                <td>PRE-BOOKED SHOREX</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
             </div>
             <div id="map">
             </div>

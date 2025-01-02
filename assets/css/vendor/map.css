@@ -57,14 +57,16 @@ button.minimize-btn.show {
 }
 
 .leaflet-control-filter tr:hover {
-    background-color: #f0f0f0;
     cursor: pointer;
+    color: #f5a23a;
 }
-
+.popupTitle {
+    font-weight: bold;
+    color: #1c355e;
+}
 .leaflet-control-filter tr.active {
     background-color: #ddd;
 }
-
 .filter-header {
     display: flex;
     align-items: center;
@@ -199,7 +201,7 @@ td:first-child {
 .filter-container{
     position: absolute;
     width: fit-content;
-    left: 13%;
+    left: 12%;
     /* background-color: black; */
     display: flex;
     flex-direction: column;

@@ -9,6 +9,7 @@ var map = L.map("map", {
   crs: L.CRS.Simple,
   minZoom: -1, // Permitir un zoom más alejado
   maxZoom: 1,
+  zoomControl: false,
   attributionControl: false,
   maxBounds: [
     [-150, -150], // Límites más amplios
@@ -16,6 +17,11 @@ var map = L.map("map", {
   ],
   maxBoundsViscosity: 0.3, // Restringir el movimiento fuera de los límites
 });
+
+// Agrega un nuevo control de zoom en la posición deseada
+L.control.zoom({
+  position: 'topright' // Cambia 'topright' a la posición deseada ('topleft', 'bottomleft', 'bottomright')
+}).addTo(map);
 // #endregion
 
 // #region Configuración de tamaño y zoom según el dispositivo
@@ -45,12 +51,15 @@ if (!isMobile) {
 } else {
   map.setZoom(-1);
 }
+
 // #endregion
 
 // #region Evento para minimizar o expandir el contenido del filtro
 
 if (!isMobile) {
   $(document).on('click', '.minimize-btn', function () {
+    
+    
     var $minimizeBtn = $(this); // Botón que disparó el evento
     var $filter = $minimizeBtn.closest('.leaflet-control-filter'); // Contenedor asociado
     var $filterContent = $filter.find('.filter-content');
@@ -273,7 +282,7 @@ var riverIcon = L.divIcon({
      data-aos-easing="ease-in-back"
      data-aos-delay="100"
      data-aos-offset="0">
-               <img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="rum-quest" width="20" height="20">
+               <img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="lazy-river" width="20" height="20">
            </div>`,
   className: "",
   iconSize: [20, 20],
@@ -285,7 +294,7 @@ var splashIcon = L.divIcon({
      data-aos-easing="ease-in-back"
      data-aos-delay="100"
      data-aos-offset="0">
-               <img src="assets/icons/map/port-experience/splash-marker.svg" alt="rum-quest" width="20" height="20">
+               <img src="assets/icons/map/port-experience/splash-marker.svg" alt="splash-surfing" width="20" height="20">
            </div>`,
   className: "",
   iconSize: [20, 20],
@@ -297,7 +306,7 @@ var spaIcon = L.divIcon({
      data-aos-easing="ease-in-back"
      data-aos-delay="100"
      data-aos-offset="0">
-               <img src="assets/icons/map/port-experience/spa-marker.svg" alt="rum-quest" width="20" height="20">
+               <img src="assets/icons/map/port-experience/spa-marker.svg" alt="spa wellness" width="20" height="20">
            </div>`,
   className: "",
   iconSize: [20, 20],
@@ -309,7 +318,7 @@ var monkeyIcon = L.divIcon({
      data-aos-easing="ease-in-back"
      data-aos-delay="100"
      data-aos-offset="0">
-               <img src="assets/icons/map/port-experience/monkey-marker.svg" alt="rum-quest" width="20" height="20">
+               <img src="assets/icons/map/port-experience/monkey-marker.svg" alt="monkey-island" width="20" height="20">
            </div>`,
   className: "",
   iconSize: [20, 20],
@@ -328,8 +337,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>MR. RUM QUEST</p>
+            <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
                 <p>${idioma === 'es' ? 'Experiencia' : 'Experience'}</p>
                 
             </div>
@@ -350,13 +358,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>LAZY RIVER</p>
                 <a href="${idioma}/port-experience/lazy-river" >
+                <p class="popupTitle">LAZY RIVER</p>
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -376,14 +384,13 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>SPLASH SURFING</p>
+                <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <a href="${idioma}/port-experience/splash-surfing" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -404,13 +411,12 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 50px; height: 50px;">
-                <p>SPA WELLNESS</p>
                 <a href="${idioma}/port-experience/spa-wellness" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -431,7 +437,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/monkey-island.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>MONKEY ISLAND</p>
+                <p class="popupTitle">MONKEY ISLAND</p>
+                <a href="${idioma}/port-experience/monkey-island" >
+                  <button
+                  style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                  onmouseover="this.style.backgroundColor='#f5a23a';"
+                  onmouseout="this.style.backgroundColor='#1c355e';">
+                  ${idioma === 'es' ? 'Ver más' : 'View more'}
                 </a>
             </div>
         `
@@ -451,13 +463,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
+            <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                       ${idioma === 'es' ? 'Ver más' : 'View more'}
                      </button>
                  </a>
             </div>
@@ -477,13 +489,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p>${idioma === 'es' ? 'Piscina' : 'Pool'}</p>
+            <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                       ${idioma === 'es' ? 'Ver más' : 'View more'}
                      </button>
                  </a>
             </div>
@@ -504,13 +516,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                       ${idioma === 'es' ? 'Ver más' : 'View more'}
                      </button>
                  </a>
             </div>
@@ -529,13 +541,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                       ${idioma === 'es' ? 'Ver más' : 'View more'}
                      </button>
                  </a>
             </div>
@@ -554,13 +566,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                       ${idioma === 'es' ? 'Ver más' : 'View more'}
                      </button>
                  </a>
             </div>
@@ -579,13 +591,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p>${idioma === 'es' ? 'Playa' : 'Beach'}</p>
+            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'See more'}
+                       ${idioma === 'es' ? 'Ver más' : 'View more'}
                      </button>
                  </a>
             </div>
@@ -612,7 +624,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -637,7 +649,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -662,7 +674,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -687,7 +699,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -714,7 +726,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -739,7 +751,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -764,7 +776,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -789,7 +801,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -814,7 +826,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -841,7 +853,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -866,7 +878,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -891,7 +903,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -916,7 +928,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -941,7 +953,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -968,7 +980,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -993,7 +1005,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1018,7 +1030,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1043,7 +1055,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1068,7 +1080,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1093,7 +1105,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1118,7 +1130,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1143,7 +1155,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1168,7 +1180,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1195,7 +1207,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1220,7 +1232,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1245,7 +1257,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1273,7 +1285,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1300,7 +1312,7 @@ var markers = {
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'See more'}
+      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
       //           </a>
       //       </div>
@@ -1320,7 +1332,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <p>DIAMONDS</p>
+            <p class="popupTitle">DIAMONDS</p>
             <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
             
             </div>
@@ -1340,7 +1352,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>DUFRY</p>
+                <p class="popupTitle">DUFRY</p>
                 <p>${idioma === 'es' ? 'Supermercado' : 'Big Retailer'}</p>
             </div>
         `
@@ -1359,7 +1371,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>BLUE STONE</p>
+                <p class="popupTitle">BLUE STONE</p>
                 <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
             </div>
         `
@@ -1376,7 +1388,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>BLUE STONE</p>
+                <p class="popupTitle">BLUE STONE</p>
                 <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
             </div>
         `
@@ -1395,7 +1407,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>MORENA MIA</p>
+                <p class="popupTitle">MORENA MIA</p>
                 <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
@@ -1448,7 +1460,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>PAWS BY THE SEA</p>
+                <p class="popupTitle">PAWS BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Gift Shop' : 'Gift Shop'}</p>
             </div>
         `
@@ -1467,7 +1479,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>TSUNAMI XL</p>
+                <p class="popupTitle">TSUNAMI XL</p>
                 <p>${idioma === 'es' ? 'Conveniencia' : 'Convenience'}</p>
             </div>
         `
@@ -1486,7 +1498,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>PIRAÑA JOE</p>
+                <p class="popupTitle">PIRAÑA JOE</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
@@ -1505,7 +1517,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>ISLAND LIFE - SURF SHOP</p>
+                <p class="popupTitle">ISLAND LIFE - SURF SHOP</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
@@ -1524,7 +1536,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'DOMINICAN THINGS' : 'DOMINICAN THINGS'}</p>
+                <p class="popupTitle">DOMINICAN THINGS'</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
@@ -1541,7 +1553,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'DOMINICAN THINGS' : 'DOMINICAN THINGS'}</p>
+                <p class="popupTitle">DOMINICAN THINGS</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
@@ -1558,7 +1570,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'DOMINICAN THINGS' : 'DOMINICAN THINGS'}</p>
+                <p class="popupTitle">DOMINICAN THINGS</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
@@ -1577,7 +1589,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'CHRISTMAS BY THE SEA' : 'CHRISTMAS BY THE SEA'}</p>
+                <p class="popupTitle">CHRISTMAS BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1596,7 +1608,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'RUTA DE LAS INDAS' : 'RUTA DE LAS INDAS'}</p>
+                <p class="popupTitle">RUTA DE LAS INDAS</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
@@ -1615,7 +1627,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'THE TIE DYE HUT' : 'THE TIE DYE HUT'}</p>
+                <p class="popupTitle">THE TIE DYE HUT</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
@@ -1634,7 +1646,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'PIÑA COLADA BOUTIQUE' : 'PIÑA COLADA BOUTIQUE'}</p>
+                <p class="popupTitle">PIÑA COLADA BOUTIQUE</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
@@ -1653,7 +1665,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'SHARK ATTACK' : 'SHARK ATTACK'}</p>
+                <p class="popupTitle">SHARK ATTACK</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1670,7 +1682,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'SHARK ATTACK' : 'SHARK ATTACK'}</p>
+                <p class="popupTitle">SHARK ATTACK</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1689,7 +1701,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'BLOSSOM SOAP' : 'BLOSSOM SOAP'}</p>
+                <p class="popupTitle">BLOSSOM SOAP</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
         `
@@ -1708,7 +1720,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'SEA SALT' : 'SEA SALT'}</p>
+                <p class="popupTitle">SEA SALT</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1725,7 +1737,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'SEA SALT' : 'SEA SALT'}</p>
+                <p class="popupTitle">SEA SALT</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1744,7 +1756,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'LOCAL ITM' : 'LOCAL ITM'}</p>
+                <p class="popupTitle">LOCAL ITM</p>
                 <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
             </div>
         `
@@ -1762,7 +1774,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'LOCAL ITM' : 'LOCAL ITM'}</p>
+                <p class="popupTitle">LOCAL ITM</p>
                 <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
             </div>
         `
@@ -1781,7 +1793,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'MEXICAN EXPERIENCE' : 'EXPERIENCIA MEXICANA'}</p>
+                <p class="popupTitle">MEXICAN EXPERIENCE</p>
                 <p>${idioma === 'es' ? 'Gift Shop/Tabaco' : 'Gift Shop/Tobacco'}</p>
             </div>
         `
@@ -1800,7 +1812,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'MUSEO DEL TABACO' : 'TOBACCO MUSEUM'}</p>
+                <p class="popupTitle">MUSEO DEL TABACO</p>
                 <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
             </div>
         `
@@ -1819,7 +1831,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'SILVER BY THE SEA' : 'SILVER BY THE SEA'}</p>
+                <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
             </div>
         `
@@ -1836,7 +1848,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'SILVER BY THE SEA' : 'SILVER BY THE SEA'}</p>
+                <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
             </div>
         `
@@ -1853,7 +1865,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'SILVER BY THE SEA' : 'SILVER BY THE SEA'}</p>
+                <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
             </div>
         `
@@ -1872,7 +1884,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'FARMACIA TAINO BAY' : 'TAINO BAY DRUGSTORE'}</p>
+                <p class="popupTitle">${idioma === 'es' ? 'FARMACIA TAINO BAY' : 'TAINO BAY DRUGSTORE'}</p>
             </div>
         `
       )
@@ -1890,7 +1902,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'TAINO LOGO SHOP' : 'TAINO LOGO SHOP'}</p>
+                <p class="popupTitle">TAINO LOGO SHOP</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1909,7 +1921,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'DOMINICAN YUCAYAQUE' : 'DOMINICAN YUCAYAQUE'}</p>
+                <p class="popupTitle">DOMINICAN YUCAYAQUE</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
@@ -1928,7 +1940,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'TURQUESA' : 'TURQUESA'}</p>
+                <p class="popupTitle">TURQUESA</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1945,7 +1957,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'TURQUESA' : 'TURQUESA'}</p>
+                <p class="popupTitle">TURQUESA</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -1964,7 +1976,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'NATURAL BEAUTY' : 'NATURAL BEAUTY'}</p>
+                <p class="popupTitle">NATURAL BEAUTY</p>
                 <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
@@ -1983,7 +1995,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'HARD ROCK CAFÉ' : 'HARD ROCK CAFE'}</p>
+                <p class="popupTitle">HARD ROCK CAFE</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
         `
@@ -2002,7 +2014,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'DEL SOL' : 'DEL SOL'}</p>
+                <p class="popupTitle">DEL SOL</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
         `
@@ -2021,7 +2033,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'FARMACIA' : 'DRUGSTORE'}</p>
+                <p class="popupTitle">${idioma === 'es' ? 'FARMACIA' : 'DRUGSTORE'}</p>
             </div>
         `
       )
@@ -2039,7 +2051,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'VEARI PIEL' : 'VEARI PIEL'}</p>
+                <p class="popupTitle">VEARI PIEL</p>
                 <p>${idioma === 'es' ? 'Artículos de Piel ' : 'Leather goods store'}</p>
             </div>
         `
@@ -2058,7 +2070,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'ABYSSAL' : 'ABYSSAL'}</p>
+                <p class="popupTitle">ABYSSAL</p>
                 <p>${idioma === 'es' ? 'Tienda destino ' : 'Store'}</p>
             </div>
         `
@@ -2077,7 +2089,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'VELASCO HABANOS' : 'VELASCO HABANOS'}</p>
+                <p class="popupTitle" >VELASCO HABANOS</p>
                 <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
             </div>
         `
@@ -2091,13 +2103,12 @@ var markers = {
       }),
   ],
   60: [
-    L.marker([990, 1250], { icon: barIcon })
+    L.marker([990, 1250], { icon: foodIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'KELOKÉ BAR' : 'KELOKÉ BAR'}</p>
+            <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
             </div>
         `
       )
@@ -2114,15 +2125,14 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `   <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'THE COFFEE FACTORY' : 'THE COFFEE FACTORY'}</p>
+                <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'Fuel up with a cup of Dominican coffee!' : 'Fuel up with a cup of Dominican coffee!'}</p>
                 <a href="${idioma}/port-experience/coffee-factory" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2142,15 +2152,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'ICEKERY' : 'ICEKERY'}</p>
+                <img src="assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 70px; height: 70px;">
                 <p>${idioma === 'es' ? 'Beat the heat with an ice cream! ' : 'Beat the heat with an ice cream! '}</p>
                 <a href="${idioma}/port-experience/icekery" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2170,15 +2179,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'MOJITO BAR' : 'MOJITO BAR'}</p>
+                <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;" >
                 <p>${idioma === 'es' ? 'Find cocktails, tequila, rum, and of course fresh mojitos!' : 'Find cocktails, tequila, rum, and of course fresh mojitos!'}</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2196,15 +2204,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'MOJITO BAR' : 'MOJITO BAR'}</p>
+                <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'Find cocktails, tequila, rum, and of course fresh mojitos!' : 'Find cocktails, tequila, rum, and of course fresh mojitos!'}</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2224,15 +2231,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 70px; height: 70px; ">
-                <p>${idioma === 'es' ? 'CANTINA LATINA' : 'CANTINA LATINA'}</p>
+                <img src="assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 80px; height: 80px; ">
                 <p>${idioma === 'es' ? 'Cantina Latina has a delicious menu with Dominican Cuisine' : 'Cantina Latina has a delicious menu with Dominican Cuisine'}</p>
                 <a href="${idioma}/port-experience/cantina-latina" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2252,15 +2258,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/mexican-grill.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'MEXICAN GRILL' : 'MEXICAN GRILL'}</p>
+                <img src="assets/icons/map/port-experience/mexican-grill.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'Tacos and grilled snacks, it doesn\'t get any better than that!' : 'Tacos and grilled snacks, it doesn\'t get any better than that!'}</p>
                 <a href="${idioma}/port-experience/mexican-grill" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2280,15 +2285,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'BLUE PARROT' : 'BLUE PARROT'}</p>
+                <img src="assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'A Caribbean-inspired seafood menu' : 'A Caribbean-inspired seafood menu'}</p>
                 <a href="${idioma}/port-experience/blue-parrot" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2308,15 +2312,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'TACO LOVER' : 'TACO LOVER'}</p>
+                <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'Top spot for street tacos' : 'Top spot for street tacos'}</p>
                 <a href="${idioma}/port-experience/taco-lover" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2336,15 +2339,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'MARGARITA BAR' : 'MARGARITA BAR'}</p>
+                <img src="assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 80px; height: 80px;"">
                 <p>${idioma === 'es' ? 'One Margarita is not enough! ' : 'One Margarita is not enough! '}</p>
                 <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2359,20 +2361,19 @@ var markers = {
       }),
   ],
   69: [
-    L.marker([760, 638], { icon: foodIcon })
+    L.marker([760, 638], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/dom-dom-bar.svg" alt="Logo" style="width: 90px; height: 90px; ">
-                <p>${idioma === 'es' ? 'DOM DOM BAR' : 'DOM DOM BAR'}</p>
                 <p>${idioma === 'es' ? 'Join the party, and have fun while sippin\' your favorite drink' : 'Join the party, and have fun while sippin\' your favorite drink'}</p>
                 <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2392,8 +2393,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'HURACÁN LOUNGE BAR' : 'HURACÁN LOUNGE BAR'}</p>
+            <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px;"">
 
             </div>
         `
@@ -2412,15 +2412,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'THE BOAT BAR' : 'THE BOAT BAR'}</p>
+                <img src="assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'Ready, sail, drink!' : 'Ready, sail, drink!'}</p>
                 <a href="${idioma}/port-experience/boat-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2435,20 +2434,19 @@ var markers = {
       }),
   ],
   72: [
-    L.marker([380, 347], { icon: foodIcon })
+    L.marker([380, 347], { icon: barIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'TIKI TIKI BAR' : 'TIKI TIKI BAR'}</p>
+                <img src="assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${idioma === 'es' ? 'Fresh drinks and beverages for a relaxing day at port' : 'Fresh drinks and beverages for a relaxing day at port'}</p>
                 <a href="${idioma}/port-experience/tiki-tiki" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2468,15 +2466,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 80px; height: 80px; ">
-                <p>${idioma === 'es' ? 'RUM RUM BAR' : 'RUM RUM BAR'}</p>
+                <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 100px; height: 100px; ">
                 <p>${idioma === 'es' ? 'Salud to Dominican Rum! ' : 'Salud to Dominican Rum! '}</p>
                 <a href="${idioma}/port-experience/rum-rum-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'See more'}
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
                     </button>
                 </a>
             </div>
@@ -2496,7 +2493,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>${idioma === 'es' ? 'CHOCOLATE WORLD' : 'CHOCOLATE WORLD'}</p>
+                <p class="popupTitle">CHOCOLATE WORLD</p>
             </div>
         `
       )
