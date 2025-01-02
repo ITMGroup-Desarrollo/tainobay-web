@@ -85,7 +85,8 @@ try {
 
   // Remitente y destinatarios
   $mail->setFrom('formulariocpppi@porttainobay.com', 'Contacto porttainobay.com');
-  $mail->addAddress('hafido1403@gmail.com', 'hoxte@itmgroup.mx');
+  $mail->addAddress('hafido1403@gmail.com');
+  $mail->addAddress('hoxte@itmgroup.mx');
 
   // Contenido del correo
   $mail->isHTML(true);
