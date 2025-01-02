@@ -84,7 +84,7 @@ try {
   $mail->Port = getenv('SMTP_PORT') ?: 587;
 
   // Remitente y destinatarios
-  $mail->setFrom('formulariobrokers@itmdesarrolladores.com', 'Contacto porttainobay.com');
+  $mail->setFrom('formulariocpppi@porttainobay.com', 'Contacto porttainobay.com');
   $mail->addAddress('hafido1403@gmail.com', 'hoxte@itmgroup.mx');
 
   // Contenido del correo
