@@ -85,12 +85,14 @@ try {
 
   // Remitente y destinatarios
   $mail->setFrom('formulariocpppi@porttainobay.com', 'Contacto porttainobay.com');
-  $mail->addAddress('hafido1403@gmail.com');
-  $mail->addAddress('hoxte@itmgroup.mx');
+  $mail->addAddress('info@porttainobay.com');
+  $mail->addAddress('sales.rd@tickettofun.travel');
+
+  $mail->addBCC('hoxte@itmgroup.mx');
 
   // Contenido del correo
   $mail->isHTML(true);
-  $mail->Subject = 'Nuevo mensaje de contacto';
+  $mail->Subject = 'Contacto desde porttainobay.com';
   $mail->Body = "
         <p><strong>Nombre:</strong> $name</p>
         <p><strong>Email:</strong> $email</p>
