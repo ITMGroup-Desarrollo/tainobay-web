@@ -83,6 +83,8 @@ try {
   $mail->SMTPSecure = getenv('SMTP_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port = getenv('SMTP_PORT') ?: 587;
 
+  $mail->CharSet = 'UTF-8';
+
   // Remitente y destinatarios
   $mail->setFrom('formulariocpppi@porttainobay.com', 'Contacto porttainobay.com');
   $mail->addAddress('info@porttainobay.com');
