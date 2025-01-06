@@ -12,8 +12,8 @@ var map = L.map("map", {
   zoomControl: false,
   attributionControl: false,
   maxBounds: [
-    [-150, -150], // Límites más amplios
-    [1200, 1600],
+    [-200, -150], // Límites más amplios
+    [1250, 1600],
   ],
   maxBoundsViscosity: 0.3, // Restringir el movimiento fuera de los límites
 });
@@ -358,6 +358,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>Let’s float around and enjoy the ride!</p>
                 <a href="${idioma}/port-experience/lazy-river" >
                 <p class="popupTitle">LAZY RIVER</p>
                     <button 
@@ -385,6 +386,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 80px; height: 80px;">
+                <p>Get your adrenaline rush&nbsp;ON!</p>
                 <a href="${idioma}/port-experience/splash-surfing" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -410,7 +412,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 50px; height: 50px;">
+                <img src="assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 80px; height: 80px;">
+                <p>Treat yourself and relax with a massage.</p>
                 <a href="${idioma}/port-experience/spa-wellness" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -438,12 +441,14 @@ var markers = {
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/monkey-island.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MONKEY ISLAND</p>
+                <p>Make monkey friends and have a great time!</p>
                 <a href="${idioma}/port-experience/monkey-island" >
-                  <button
-                  style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                  onmouseover="this.style.backgroundColor='#f5a23a';"
-                  onmouseout="this.style.backgroundColor='#1c355e';">
-                  ${idioma === 'es' ? 'Ver más' : 'View more'}
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                    </button>
                 </a>
             </div>
         `
@@ -1333,7 +1338,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <p class="popupTitle">DIAMONDS</p>
-            <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
+            <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
             
             </div>
         `
@@ -1353,7 +1358,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">DUFRY</p>
-                <p>${idioma === 'es' ? 'Supermercado' : 'Big Retailer'}</p>
+                <p>${idioma === 'es' ? 'Big Retailer' : 'Big Retailer'}</p>
             </div>
         `
       )
@@ -1372,7 +1377,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">BLUE STONE</p>
-                <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
+                <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
             </div>
         `
       )
@@ -1389,7 +1394,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">BLUE STONE</p>
-                <p>${idioma === 'es' ? 'Joyería' : 'Jewlery'}</p>
+                <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
             </div>
         `
       )
@@ -1480,7 +1485,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">TSUNAMI XL</p>
-                <p>${idioma === 'es' ? 'Conveniencia' : 'Convenience'}</p>
+                <p>${idioma === 'es' ? 'Conveniencia' : 'Convenience Store'}</p>
             </div>
         `
       )
@@ -1832,7 +1837,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
+                <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
             </div>
         `
       )
@@ -1849,7 +1854,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
+                <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
             </div>
         `
       )
@@ -1866,7 +1871,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Joyeria' : 'Jewlery'}</p>
+                <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
             </div>
         `
       )
@@ -2052,7 +2057,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <p class="popupTitle">VEARI PIEL</p>
-                <p>${idioma === 'es' ? 'Artículos de Piel ' : 'Leather goods store'}</p>
+                <p>${idioma === 'es' ? 'Artículos de Piel ' : 'Leather goods'}</p>
             </div>
         `
       )
@@ -2126,7 +2131,7 @@ var markers = {
       .bindPopup(
         `   <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Fuel up with a cup of Dominican coffee!' : 'Fuel up with a cup of Dominican coffee!'}</p>
+                <p>Make a stop, and fuel up with Dominican coffee!</p>
                 <a href="${idioma}/port-experience/coffee-factory" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2153,7 +2158,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 70px; height: 70px;">
-                <p>${idioma === 'es' ? 'Beat the heat with an ice cream! ' : 'Beat the heat with an ice cream! '}</p>
+                <p>Have a delicious treat!</p>
                 <a href="${idioma}/port-experience/icekery" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2180,7 +2185,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;" >
-                <p>${idioma === 'es' ? 'Find cocktails, tequila, rum, and of course fresh mojitos!' : 'Find cocktails, tequila, rum, and of course fresh mojitos!'}</p>
+                <p>A mojito is always a great idea!</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2205,7 +2210,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Find cocktails, tequila, rum, and of course fresh mojitos!' : 'Find cocktails, tequila, rum, and of course fresh mojitos!'}</p>
+                <p>A mojito is always a great idea!</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2232,7 +2237,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 80px; height: 80px; ">
-                <p>${idioma === 'es' ? 'Cantina Latina has a delicious menu with Dominican Cuisine' : 'Cantina Latina has a delicious menu with Dominican Cuisine'}</p>
+                <p>The top spot for Caribbean food!</p>
                 <a href="${idioma}/port-experience/cantina-latina" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2286,7 +2291,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'A Caribbean-inspired seafood menu' : 'A Caribbean-inspired seafood menu'}</p>
+                <p>Fresh seafood and good vibes!</p>
                 <a href="${idioma}/port-experience/blue-parrot" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2313,7 +2318,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Top spot for street tacos' : 'Top spot for street tacos'}</p>
+                <p>Let’s get spicy!</p>
                 <a href="${idioma}/port-experience/taco-lover" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2340,7 +2345,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 80px; height: 80px;"">
-                <p>${idioma === 'es' ? 'One Margarita is not enough! ' : 'One Margarita is not enough! '}</p>
+                <p>Mango, strawberry, lime, and more, you choose!</p>
                 <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2367,8 +2372,8 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/dom-dom-bar.svg" alt="Logo" style="width: 90px; height: 90px; ">
-                <p>${idioma === 'es' ? 'Join the party, and have fun while sippin\' your favorite drink' : 'Join the party, and have fun while sippin\' your favorite drink'}</p>
-                <a href="${idioma}/port-experience/margarita-bar" >
+                <p>Drinks by the pool? We got you!</p>
+                <a href="${idioma}/port-experience/dom-dom-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
@@ -2413,7 +2418,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Ready, sail, drink!' : 'Ready, sail, drink!'}</p>
+                <p>Ready, sail, drink!</p>
                 <a href="${idioma}/port-experience/boat-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2440,7 +2445,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Fresh drinks and beverages for a relaxing day at port' : 'Fresh drinks and beverages for a relaxing day at port'}</p>
+                <p>Fresh drinks & fun!</p>
                 <a href="${idioma}/port-experience/tiki-tiki" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2467,7 +2472,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 100px; height: 100px; ">
-                <p>${idioma === 'es' ? 'Salud to Dominican Rum! ' : 'Salud to Dominican Rum! '}</p>
+                <p>Love, fun, and Dominican rum!</p>
                 <a href="${idioma}/port-experience/rum-rum-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
