@@ -7,16 +7,13 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
     <?php include("include/head.php"); ?>
-    <?php include("include/header.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/beyond-discover.css">
-    <style>
-
-    </style>
 </head>
 
 <body class="shock-body">
+    <?php include("include/gtm-body.php"); ?>
+    <?php include("include/header.php"); ?>
 
     <!-- Main -->
     <main id="main" class="shock-main">
@@ -27,14 +24,11 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 <div class="content-wrapper top-zero ">
                     <!-- Intro -->
                     <div class="basic-intro text-center">
-                        <h1 class="title white">
-                            <span class="text-1 text-style-3"><?php echo TITULOS_DISCOVER[0];  ?></span>
-                            <br>
-                            <span class="text-1 text-style-3"><?php echo TITULOS_DISCOVER[1];  ?></span>
-                            <br>
-
+                        <h1 class="title white text-1 banner-title text-uppercase fw-bold">
+                            <?= TITULOS_DISCOVER[0] ?>
+                            <br><?= TITULOS_DISCOVER[1] ?>
                         </h1>
-                        <h2 class="title white"><span class="text-2 text-style-8 "><?php echo TITULOS_DISCOVER[2];  ?> </span></h2>
+                        <p class="text-white banner-subtitle"><?php echo TITULOS_DISCOVER[2];  ?></p>
                     </div>
                 </div>
                 <!-- Image -->
@@ -42,23 +36,25 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <div class="banner-fixed" style="background-image:url('assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg')">
 
                     </div>
+                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
+
         <!--Welcome-->
         <section class="shock-section pt-2 pb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="container text-center my-5">
                 <div class="container-title mx-auto mb-2">
-                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1"><span class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
-                        <span class="d-flex justify-content-end gap-3">
+                    <h2 class="text-style-2 lh-1 text-uppercase gradient-animated-title animation-duration-1">
+                        <span id="welcome-span" class="d-block text-start"><?php echo DISCOVER_WELCOME[0];  ?></span>
+                        <span id="welcome-span2" class="d-flex justify-content-end gap-3">
                             <?php echo DISCOVER_WELCOME[1];  ?>
                         </span>
                     </h2>
                 </div>
-                <div class="container-text mx-auto px-5">
-
+                <div class="container-text mx-auto">
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[2];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[3];  ?></p>
                     <p class="text-black black text-style-13"><?php echo DISCOVER_WELCOME[4];  ?></p>
@@ -152,8 +148,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
             });
         }
 
+        // Inserta el valor de la variable PHP en una variable JavaScript
+        const idioma = '<?php echo $idioma; ?>';
+        console.log(idioma);
+        // Seleccionar el archivo JSON según el idioma
+        const dataFile = idioma === 'es' ? 'es-data-discover.json' : 'data-discover.json';
         // Cargar contenido dinámico desde el archivo JSON
-        $.getJSON('include/data-discover.json', function(data) {
+        $.getJSON('include/' + dataFile, function(data) {
+            console.log(data);
             const container = $('#carousel-sections-container');
             container.empty(); // Limpiar el contenedor antes de agregar nuevas secciones
             data.carouselSections.forEach((section, sectionIndex) => {
@@ -169,7 +171,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 let gallery = '';
 
                 section.displayTitle.forEach((displayTitles) => {
-                    displayT += `<h2 class="text-style-3 lh-1 text-blue"><span class="d-block text-start centrado">${displayTitles}</span></h2>`;
+                    displayT += `<h2 class="text-style-3 lh-1 text-blue mb-0"><span class="d-block text-start centrado">${displayTitles}</span></h2>`;
                 });
                 section.displayContent.forEach((displayContents) => {
                     displayC += `<p class="text-black black text-style-13">${displayContents}</p>`;
@@ -243,14 +245,14 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 const justifyClass = section.side === 'left-side' ? 'justify-content-end' : 'justify-content-start';
                 const sectionHTML = `
                         <section data-id=${section.id} class="carousel-section  data-aos="fade-up"">
-                            <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center">
-                                <div id="port-experience" class="shock-section ${section.side} pt-2 pb-4">
+                            <div class="carousel-content bg-white d-flex flex-column justify-content-evenly align-items-center w-md-100">
+                                <div id="port-experience" class="shock-section ${section.side} pt-2 w-md-100">
                                     <div class="carousel-content order bg-white d-flex flex-column justify-content-evenly align-items-center">
                                         <div class="basic-intro mb-35">
                                             <h2 class="lh-1 title-carrusel left">
                                                 <span class="d-block text-style-3 gradient-animated-title animation-duration-1" style="text-align: center;">${section.title}</span>
                                                 <span class="d-flex justify-content-center">
-                                                    <span class="text-style-4 lh-1 text-italic" style="padding: 0;">${section.subtitle}</span>
+                                                    <span class="text-style-4 lh-1 text-italic" style="padding: 0 !important;">${section.subtitle}</span>
                                                 </span>
                                             </h2>
                                         </div>
@@ -262,8 +264,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 </svg>
                                             </a>
                                             <div class="flex-grow-1">
-                                                <h2 class="text-style-6" style="line-height: 55px; text-align:center; color:#1c355e;">
-                                                    <span class="d-block">${section.button}</span>
+                                                <h2 class="text-style-6" style=" text-align:center; color:#1c355e;">
+                                                    <span class="d-block subtitle-slider">${section.button}</span>
                                                 </h2>
                                             </div>
                                             <a href="#" class="slide-navigation-item-next slide-navigation-item-next${sectionIndex + 1} d-block text-blue boton-next" data-carousel="#${sectionId}">
@@ -284,7 +286,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                 <div class="text-black black text-style-13 justificado text-content-container d-flex ${justifyClass}"><p>${section.content}</p></div>
                                                 <div class="d-flex ${justifyClass}">
                                                     <a class="display-button" >
-                                                        <i class="fa-solid fa-xmark fa-rotate-by" style="--fa-rotate-angle: 45deg; width:20px; height:auto;"></i>
+                                                        <div class="icon-container">
+                                                         
+                                                            <svg class="rotate-icon fa-xmark fa-rotate-by" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 448 512">
+                                                                <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32" />
+                                                            </svg>
+                                                        </div>
                                                         <b class="text-style-13"><?php echo DISCOVER_CARRUSEL[4]; ?></b>
                                                     </a>
                                                 </div>
@@ -305,7 +312,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                         <div class="container-title container-title-display mx-auto mb-2 gradient-animated-title animation-duration-1">
                                             ${displayT}
                                         </div>
-                                        <div class="container-text mx-auto px-5">
+                                        <div class="container-text container-text-displayH mx-auto px-5">
                                             ${displayC}
                                         </div>
                                     </div>
@@ -331,13 +338,16 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-12 col-lg-6">
+                                            <div class="col-12 col-md-12 col-lg-6 what-to-bring-container">
                                                 <div class="what-to-bring">
                                                     <div class="duration-container">
-                                                        <div class="what-to-bring-duration rounded">
-                                                            <img class:"wtbIcon" src="assets/images/discover-beyond/icon-clock-blue.svg" width="48" height="48" alt="Icono">
+                                                        <div class="what-to-bring-duration ">
+                                                            
                                                             <div class="duration-text">
-                                                                <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
+                                                                <div class="duration-img">
+                                                                    <img class:"wtbIcon" src="assets/images/discover-beyond/icon-clock-blue.svg" width="32" height="32" alt="Icono">
+                                                                    <h2 class="text-style-6 text-italic"><?php echo DISCOVER_CARRUSEL[27]; ?></h2>
+                                                                </div>
                                                                 <h2 class="text-style-5">${section.displayDuration}</h2>
                                                             </div>
                                                         </div>
@@ -401,11 +411,11 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
                 AOS.init();
                 $('.shock-section .gallery').lightGallery({
-                        selector: '.shock-section .gallery .lightbox-link:not(.prevent)',
-                        thumbnail: false,
-                        share: false,
-                        download: false,
-                    });
+                    selector: '.shock-section .gallery .lightbox-link:not(.prevent)',
+                    thumbnail: false,
+                    share: false,
+                    download: false,
+                });
                 $(".gradient-animated-title").each(function() {
                     var $this = $(this);
 
@@ -527,6 +537,15 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 $shareContainer.addClass('show-container');
             }
         });
+    });
+    $(document).ready(function() {
+        // Detectar si el dispositivo es móvil
+        if ($(window).width() <= 768) { // 768px es el ancho máximo para dispositivos móviles (md y menores en Bootstrap)
+            $('#welcome-span').removeClass('text-start');
+            $('#welcome-span2').removeClass('justify-content-end');
+            $('#welcome-span').addClass('justify-content-center');
+            $('#welcome-span2').addClass('justify-content-center');
+        }
     });
 </script>
 

@@ -461,10 +461,14 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
   .dynamic-slider .static-content {
     padding: 2rem 1rem;
     justify-items: center;
+    align-items: center;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "static-title" "static-arrows" "...";
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "static-title"
+      "static-arrows";
   }
+
   .dynamic-slider {
     overflow: initial;
     height: auto;
@@ -505,6 +509,7 @@ body:not(.dynamic-slider-open) .dynamic-slider .slide-info-item.disabled {
       "slide-content"
       "static-button"
       "slide-image-wrapper";
+    height: 800px;
   }
   .dynamic-slider.is-banner .slide-item {
     padding-bottom: 0;

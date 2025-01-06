@@ -1,0 +1,586 @@
+{
+    "carouselSections": [
+        {
+            
+            "id": "1",
+            "Tour": "atv-expedition",
+            "tourName": "ATV Expedition",
+            "title": "¡UN&nbsp;ESCAPE LLENO",
+            "subtitle": "DE&nbsp;ADRENALINA!",
+            "button": "¡Siente la&nbsp;emoción!",
+            "content": "Una increíble experiencia en ATV. Súbete a un camión safari al aire libre durante 25 minutos y disfruta de un recorrido panorámico a través del vibrante paisaje de Puerto Plata.",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/atv-exp/atv-expedition-main.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-main-two.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-main-three.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-main-four.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-one.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-two.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-three.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-four.webp",
+                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/atv-exp/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/atv-exp/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/atv-exp/icon/icon-buggy-white.svg",
+            "displayTitle": [
+                "ATV EXPEDITION BACK COUNTRY",
+                "RIDING & BEACH"
+            ],
+            "displayContent": [
+                "<b>Traslado al centro de ATV:</b>Súbete a un camión safari al aire libre durante 25 minutos y disfruta de un recorrido panorámico a través del vibrante paisaje de Puerto Plata. ",
+                "<b>Recorrido en ATV por la zona rural:</b> Después de la charla de seguridad y la prueba de manejo de tu guía, ponte el casco y las gafas, y súbete a tu ATV automático, ya sea individual o doble, para un emocionante paseo de una hora.",
+                "Visita la pintoresca zona rural de Puerto Plata, conduce a través de frondosos bosques tropicales y prepárate para mojarte un poco mientras cruzas arroyos poco profundos.",
+                "<b>Break de Café y Chocolate:</b> Prepárate para una parada de 15 minutos en una casa tradicional dominicana. Se incluirán degustaciones de café recién hecho, chocolate y puros.",
+                "<b>Sesión de fotos y descanso en la playa:</b> Descansa durante 30 minutos en una playa local, donde unas vistas impresionantes de la costa y las montañas te invitan a relajarte antes de regresar al puerto."
+            ],
+            "displayHighlights": [
+                "Camión safari por Puerto Plata",
+                "Aventuras en ATV por la selva tropical",
+                "Degustación de delicioso café y chocolate dominicano",
+                "Avistamiento de la costa atlántica",
+                "Descanso en la playa"
+            ],
+            "displayIncluded": [
+                "Transporte de ida y vuelta en camión safari al aire libre",
+                "Guía turístico certificado bilingüe",
+                "ATV automático, individual o doble",
+                "Casco y gafas",
+                "ATV por zonas rurales, finca privada en el campo, selva tropical y parada en la playa",
+                "Degustación de café, chocolate y cigarros",
+                "Una botella de agua"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-license-white.svg",
+                    "text": "Licencia de conducir válida (obligatoria)"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-pants-white.svg",
+                    "text": "Pantalones largos "
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-shoe-white.svg",
+                    "text": "Zapatos cerrados (obligatorios, no sandalias ni&nbsp;crocs)"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-cash-white.svg",
+                    "text": "Dinero extra"
+                }
+            ],
+            "displayDuration": "3.5 HORAS",
+            "displayNote": [
+                "Es obligatorio presentar una licencia de conducir válida y usar zapatos cerrados. La edad mínima para participar es de 18 años y la máxima es de 65 años. El peso máximo es de 260 libras o 117 kilogramos. El alcohol se distribuirá con moderación bajo supervisión. Los huéspedes deben ser ambulatorios. No se permiten sillas de ruedas (plegables ni eléctricas). Por razones de seguridad, las mujeres embarazadas, los huéspedes con problemas de cuello o espalda, cirugías recientes, o personas con diabetes, epilepsia, ceguera, asma o cualquier otro problema cardíaco o respiratorio no son aptos para participar en esta excursión.",
+                "Es obligatorio seguir las instrucciones del guía turístico y el personal. Los huéspedes que no respeten las reglas podrían enfrentar la cancelación del tour sin posibilidad de reembolso."
+            ]
+        },
+        {
+            "id": "2",
+            "Tour": "countryside",
+            "tourName": "Countryside",
+            "title": "¡VIVE LA&nbsp;AVENTURA",
+            "subtitle": "Y SIENTE LA&nbsp;ADRENALINA!",
+            "button": "¿Listo para un paseo en&nbsp;buggy?",
+            "content": "¡Únete a nosotros en esta divertida expedición por Puerto Plata! La experiencia Buggy Adventure es ideal para quienes disfrutan de la aventura. ",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/country/countryside-main-one.webp",
+                "assets/images/discover-beyond/country/countryside-main-two.webp",
+                "assets/images/discover-beyond/country/countryside-main-three.webp",
+                "assets/images/discover-beyond/country/countryside-main-four.webp",
+                "assets/images/discover-beyond/country/countryside-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/country/countryside-gallery-one.webp",
+                "assets/images/discover-beyond/country/countryside-gallery-two.webp",
+                "assets/images/discover-beyond/country/countryside-gallery-three.webp",
+                "assets/images/discover-beyond/country/countryside-gallery-four.webp",
+                "assets/images/discover-beyond/country/countryside-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/country/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/country/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/country/icon/icon-buggy-white.svg",
+            "displayTitle": [
+                "COUNTRYSIDE & HIDDEN",
+                "BEACH BUGGY ADVENTURE"
+            ],
+            "displayContent": [
+                "¡Únete a nosotros en esta divertida expedición por Puerto Plata!",
+                "La experiencia Buggy Adventure es ideal para quienes disfrutan de la aventura. Este tour te llevará por plantaciones, rutas de manglares y zonas rurales como San Piñé, Ruta de Tebaida&nbsp;y&nbsp;Bulula.",
+                "En la primera parada en Los Cacaos Road, podrás probar el delicioso café dominicano. Luego, nos dirigiremos al campo de Muñoz y tomaremos rutas fuera de carretera hasta llegar a una playa escondida en Playa Dorada. Después de un break de 30 minutos, un trago de Mamajuana te estará esperando en la estación. ¡Enamórate de los paisajes y no olvides tomar fotos de esta&nbsp;aventura!"
+            ],
+            "displayHighlights": [
+                "Paseo en buggy por San Piñé, Ruta de Tebaida&nbsp;y&nbsp;Bulula",
+                "Cata de café dominicano",
+                "Visita a Playa Dorada",
+                "Break y tasting de Mamajuana"
+            ],
+            "displayIncluded": [
+                "Transporte de ida y vuelta en camión safari&nbsp;abierto",
+                "Buggy para dos personas",
+                "Guía certificado bilingüe",
+                "Bebida de bienvenida no alcohólica",
+                "Pausa para frutas y café",
+                "Trago de Mamajuana",
+                "Casilleros y casco",
+                "<b>*Paquete de fotos con costo adicional</b>."
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-license-white.svg",
+                    "text": "Licencia de conducir física (obligatoria)"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Repelente de insectos"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Dinero extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunglases-white.svg",
+                    "text": "Gafas de sol"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
+                    "text": "Gorro o sombrero"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-shoe-white.svg",
+                    "text": "Zapatos cerrados antideslizantes"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-towel-white.svg",
+                    "text": "Toalla"
+                }
+            ],
+            "displayDuration": "3.5 HORAS",
+            "displayNote": [
+                "La edad mínima para conducir es de 18 años. La edad mínima para participar como pasajero es de 8 años. Es importante seguir siempre las instrucciones de los guías. Siempre usa el cinturón de seguridad, casco y gafas. Mantén la velocidad recomendada. Mantén la distancia entre los buggies.",
+                "Evita maniobras bruscas y zigzagueos. En caso de no respetar las normas, se te pedirá abandonar el tour sin derecho a reembolso."
+            ]
+        },
+        {
+            "id": "3",
+            "Tour": "a-walk-through-puerto-plata",
+            "tourName": "Countryside",
+            "title": "¡DESCUBRE LOS&nbsp;LUGARES",
+            "subtitle": "MÁS&nbsp;COOL&nbsp;DE PUERTO&nbsp;PLATA!",
+            "button": "La&nbsp;Novia del&nbsp;Atlántico",
+            "content": "Explora los spots más representativos de Puerto Plata en este divertido recorrido por el centro histórico",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-main-one.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-main-two.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-main-three.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-main-four.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-one.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-two.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-three.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-four.webp",
+                "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-explorer-white.svg",
+            "displayTitle": [
+                "A WALK-THROUGH",
+                "PUERTO PLATA"
+            ],
+            "displayContent": [
+                "Descubre estos increíbles lugares:",
+                "<b>Calle de las Sombrillas:</b> Una calle divertida llena de actividades. Conoce el sabor dominicano con helados artesanales. Saborea una cata de café y chocolate en el Coffee Corner. Visita la Fábrica de Cigarros, disfruta los bailes folclóricos y prueba la Mamajuana en BAR 1920.",
+                "<b>Callejón de Doña Blanca:</b> ¡La vida en rosa! Un rincón icónico que honra a Doña Blanca Franceschini, la fundadora del primer hotel en Puerto Plata.",
+                "<b>Parque Central:</b> El lugar perfecto para aprender más sobre la cultura dominicana. Observa el Ayuntamiento, la iglesia y conoce las festividades más importantes.",
+                "<b>Museo del Ámbar:</b> Reseña histórica y exposición sobre la historia del ámbar.",
+                "<b>Fortaleza San Felipe:</b> Construida por los españoles para proteger al país de los corsarios, es una de las estructuras militares coloniales más importantes."
+            ],
+            "displayHighlights": [
+                "Recorrido por la Calle de las Sombrillas",
+                "Visita al Callejón de Doña Blanca",
+                "Paseo por el Parque Central",
+                "Exposición histórica en el Museo del Ámbar",
+                "Entrada a la Fortaleza San Felipe"
+            ],
+            "displayIncluded": [
+                "Transporte de ida y vuelta",
+                "Guía certificado bilingüe",
+                "Recorrido guiado a pie",
+                "Acceso a los 5 puntos de interés",
+                "1 botella de agua"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-bugrepelent-white.svg",
+                    "text": "Repelente de insectos"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-money-white.svg",
+                    "text": "Dinero extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-hat-white.svg",
+                    "text": "Gorro o sombrero"
+                }
+            ],
+            "displayDuration": "3 HORAS",
+            "displayNote": [
+                "Todos los participantes del tour deben regresar al puerto con el guía del grupo al final de las actividades. Este tour es adecuado para personas que pueden caminar aproximadamente 700 metros. No se permiten sillas de ruedas, scooters, andadores o bastones en este tour.",
+                "Los invitados ciegos o con discapacidad auditiva deben ir acompañados de un asistente, amigo o familiar. Un adulto debe acompañar a los niños y adolescentes menores de 18 años. El alcohol se distribuirá con tolerancia controlada para todos."
+            ]
+        },
+        {
+            "id": "4",
+            "Tour": "damajagua",
+            "tourName": "Damajagua",
+            "title": "UNA INCREÍBLE AVENTURA",
+            "subtitle": "EN&nbsp;LA&nbsp;NATURALEZA",
+            "button": "Vive&nbsp;las maravillas&nbsp;de Puerto&nbsp;Plata",
+            "content": "¡La combinación perfecta para disfrutar de la belleza de Puerto Plata! Recorre la pintoresca ciudad y descubre las Cascadas de Damajagua en las montañas de la República Dominicana.",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/damajagua/damajagua-main-one.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-main-two.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-main-three.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-main-four.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/damajagua/damajagua-gallery-one.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-gallery-two.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-gallery-three.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-gallery-four.webp",
+                "assets/images/discover-beyond/damajagua/damajagua-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/damajagua/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/damajagua/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/damajagua/icon/icon-pine-white.svg",
+            "displayTitle": [
+                "DAMAJAGUA",
+                "& SCENIC DRIVE "
+            ],
+            "displayContent": [
+                "¡La combinación perfecta para disfrutar de la belleza de Puerto Plata! Recorre la pintoresca ciudad y descubre las Cascadas de Damajagua en las montañas de la República Dominicana.",
+                "Primero, tendrás la oportunidad de capturar la esencia de Puerto Plata y arquitectura victoriana en un recorrido panorámico por la zona del Parque Central.",
+                "Luego, tu guía te llevará a un hermoso paisaje natural durante una caminata de 25 minutos hacia dos cascadas vírgenes que caen sobre piedras calizas. ¡Salta, nada y crea nuevos recuerdos en esta maravilla dominicana!"
+            ],
+            "displayHighlights": [
+                "Visita a las Cascadas de&nbsp;Damajagua",
+                "Recorrido panorámico por el centro de Puerto&nbsp;Plata",
+                "Nado en la cascada"
+            ],
+            "displayIncluded": [
+                "Transporte de ida y vuelta",
+                "Guía certificado bilingüe durante el recorrido panorámico por la ciudad",
+                "Guía certificado bilingüe en las Cascadas de&nbsp;Damajagua",
+                "Equipo de seguridad en el campamento base de&nbsp;Damajagua",
+                "Acceso a una piscina natural y 2 cascadas",
+                "1 botella de agua"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-shoe-white.svg",
+                    "text": "Zapatos antiderrapantes "
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Repelente de insectos"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Dinero extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
+                    "text": "Gorro o sombrero"
+                }
+            ],
+            "displayDuration": "3.5 HORAS",
+            "displayNote": [
+                "Los lockers y zapatos acuáticos están disponibles para alquilar por un costo adicional. La edad mínima para participar es de 8 años. Los huéspedes con claustrofobia, problemas de vista y/o audición deben estar acompañados por un asistente, amigo o familiar. Los huéspedes con problemas de salud deben consultar con su médico antes de participar.",
+                "Todos los participantes del tour deben regresar al puerto con el guía del grupo al final de las actividades. Los huéspedes deben estar en buena condición física y ser capaces de caminar largas distancias. Los huéspedes deben usar el equipo de seguridad durante la parte acuática del tour. Cuidado al caminar. Se recomienda que personas con cirugías recientes o problemas de espalda, entre otros, no participen. No se permiten dispositivos de movilidad, como sillas de ruedas, scooters eléctricos, andadores y/o bastones, en este tour."
+            ]
+        },
+        {
+            "id": "5",
+            "Tour": "MONKEY ISLAND",
+            "tourName": "Monkey Island",
+            "title": "¡UNA INCREÍBLE",
+            "subtitle": "EXPERIENCIA!",
+            "button": "¡Hagamos nuevos&nbsp;amigos!",
+            "content": "Una experiencia de 30 minutos para recordar por siempre. Conoce tiernos amigos en tu visita.",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/monkey-island/monkey-island-main-one.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-main-two.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-main-three.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-main-four.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/monkey-island/monkey-island-gallery-one.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-gallery-two.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-gallery-three.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-gallery-four.webp",
+                "assets/images/discover-beyond/monkey-island/monkey-island-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/monkey-island/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/monkey-island/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/monkey-island/icon/icon-monkey-white.svg",
+            "displayTitle": [
+                "MONKEY ISLAND"
+            ],
+            "displayContent": [
+                "Esta experiencia de 30 minutos te permite disfrutar de nuestros amigables monos ardilla en Taino Bay.",
+                "Descubre su hábitat y siéntete libre de acariciarlos, sostenerlos, posar con ellos y aprender sobre nuestros adorables amigos. Al final del tour, visita nuestro photobooth para elegir tus fotos favoritas."
+            ],
+            "displayHighlights": [
+                "Breve explicación sobre la interacción",
+                "Acariciar y sostener los monos ardilla",
+                "Tomar fotos"
+            ],
+            "displayIncluded": [
+                "Acceso a una interacción de 30 minutos con los monos ardilla",
+                "Guía certificado bilingüe",
+                "Acceso a las instalaciones del puerto",
+                "Acceso a la zona de compras",
+                "<b>*Paquete de fotos con costo adicional</b>"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Repelente de insectos"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Dinero extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
+                    "text": "Gorro o sombrero"
+                }
+            ],
+            "displayDuration": "30 MINUTOS",
+            "displayNote": [
+                "Los invitados ciegos o con discapacidad auditiva deben ir acompañados de un asistente, amigo o familiar. Evita usar accesorios llamativos o colgantes durante la actividad."
+            ]
+        },
+        {
+            "id": "6",
+            "Tour": "Old town & beach ",
+            "tourName": "Old Town & Beach",
+            "title": "DISFRUTA DE UN&nbsp;PASEO",
+            "subtitle": "DIVERTIDO POR PUERTO&nbsp;PLATA.",
+            "button": "¡Un día fresco en la&nbsp;playa!",
+            "content": "La combinación perfecta para descubrir Puerto Plata. ¡Visita el centro, toma las fotos más cool y relájate en la playa!",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/old-town/old-town-main-one.webp",
+                "assets/images/discover-beyond/old-town/old-town-main-two.webp",
+                "assets/images/discover-beyond/old-town/old-town-main-three.webp",
+                "assets/images/discover-beyond/old-town/old-town-main-four.webp",
+                "assets/images/discover-beyond/old-town/old-town-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/old-town/old-town-gallery-one.webp",
+                "assets/images/discover-beyond/old-town/old-town-gallery-two.webp",
+                "assets/images/discover-beyond/old-town/old-town-gallery-three.webp",
+                "assets/images/discover-beyond/old-town/old-town-gallery-four.webp",
+                "assets/images/discover-beyond/old-town/old-town-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/old-town/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/old-town/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/old-town/icon/icon-explorer-white.svg",
+            "displayTitle": [
+                "OLD TOWN",
+                "& BEACH"
+            ],
+            "displayContent": [
+                "<b>Parque Central: </b>El lugar perfecto para enamorarte de la cultura dominicana. Observa el Ayuntamiento, la iglesia y aprende sobre las festividades más importantes.",
+                "<b>Callejón de Doña Blanca: </b>Este paseo te lleva a las históricas Casas Victorianas de Puerto Plata y a un hermoso lugar de color rosa intenso.",
+                "<b>Calle de las Sombrillas: </b>Una calle divertida llena de actividades. Desde helados artesanales hasta tasting de café y chocolate en el Coffee Corner, disfruta del sabor dominicano.",
+                "Disfruta el resto de la experiencia en el Beach Club, donde podrás lograr ese bronceado perfecto y darte un refrescante baño, o... ¡relájate mientras tomas tu cóctel favorito!"
+            ],
+            "displayHighlights": [
+                "Aprende sobre la cultura dominicana en el Parque Central de Puerto Plata",
+                "Visita el famoso callejón rosa de la República Dominicana",
+                "Toma fotos en la Calle de las Sombrillas",
+                "Disfruta de una bebida y relájate en la playa"
+            ],
+            "displayIncluded": [
+                "Transporte de ida y vuelta",
+                "Guía certificado bilingüe",
+                "Recorrido guiado a pie",
+                "Acceso a todos los puntos de interés",
+                "1 botella de agua",
+                "1 bebida de bienvenida en el club",
+                "Sillas de descanso y sombrilla por pareja",
+                "<b>*Paquete de fotos con costo adicional.</b>"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
+                    "text": "Repelente de insectos"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
+                    "text": "Dinero extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
+                    "text": "Gorro o sombrero"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
+                    "text": "Toalla"
+                }
+            ],
+            "displayDuration": "3 HORAS",
+            "displayNote": [
+                "Todos los participantes del tour deben regresar al puerto con el guía del grupo al final de las actividades. No se permiten sillas de ruedas, scooters, andadores o bastones en este tour. Los invitados ciegos o con discapacidad auditiva deben ir acompañados de un asistente, amigo o familiar."
+            ]
+        },
+        {
+            "id": "7",
+            "Tour": "Playa Dorada",
+            "tourName": "Playa Dorada",
+            "title": "¡VISITA UNA DE&nbsp;LAS",
+            "subtitle": "PLAYAS MÁS&nbsp;ICÓNICAS!",
+            "button": "¡Disfruta al&nbsp;máximo!",
+            "content": "Arena blanca y agua cristalina... ¡bienvenido a Playa Dorada!",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-main-one.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-main-two.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-main-three.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-main-four.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-main-five.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-one.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-two.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-three.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-four.webp",
+                "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-five.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/playa-dorada/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/playa-dorada/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/playa-dorada/icon/icon-palm-white.svg",
+            "displayTitle": [
+                "PLAYA DORADA"
+            ],
+            "displayContent": [
+                "Playa Dorada es un paraíso con arena blanca y agua cristalina... <br>¡Un MUST en tu próxima visita!<br>",
+                "El Gran Ventana Beach Resort está en el centro de Playa Dorada. Visita este exclusivo refugio con una impresionante zona de playa. El resort incluye acceso a la piscina, una zona privada para pasajeros de cruceros, un bar de cócteles, sillas de descanso y actividades no motorizadas. El buffet y los refrigerios del hotel están incluidos."
+            ],
+            "displayHighlights": [
+                "Relájate en la playa",
+                "Disfruta de tu bebida refrescante favorita",
+                "Disfruta de las instalaciones del hotel"
+            ],
+            "displayIncluded": [
+                "Transporte de ida y vuelta",
+                "Acceso al hotel y resort Gran Ventana",
+                "Instalaciones de playa y hotel (piscina o playa, sillas de descanso, duchas, baños, área&nbsp;sombreada)",
+                "Barra libre en la zona de la playa (bebidas&nbsp;seleccionadas)",
+                "Refrigerios y buffet del hotel",
+                "Actividades acuáticas no motorizadas"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
+                    "text": "Repelente de insectos"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
+                    "text": "Dinero extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
+                    "text": "Gorro o sombrero"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
+                    "text": "Toalla"
+                }
+            ],
+            "displayDuration": "4 HORAS",
+            "displayNote": [
+                "Este es un tour no guiado. Está a 20 minutos del puerto. El hotel está equipado con rampas que permitirán a los huéspedes con movilidad reducida acceder a la mayoría de las áreas de la propiedad. Este tour es adecuado para personas que pueden caminar aproximadamente 100 metros, pero también pueden viajar con una silla de ruedas manual plegable, scooter ligero, silla de ruedas eléctrica, andador o bastón. Un adulto debe acompañar a los niños y adolescentes menores de 18 años. El alcohol se distribuirá con tolerancia controlada para todos.",
+                "Los invitados ciegos o con discapacidad auditiva deben ir acompañados de un asistente, amigo o familiar. Los huéspedes deben tener al menos 18 años para consumir alcohol."
+            ]
+        }
+    ]
+}

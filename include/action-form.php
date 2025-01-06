@@ -1,7 +1,11 @@
 <script>
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-
+    var respuesta = grecaptcha.getResponse();
+    if (!respuesta) {
+      document.getElementById('response-message').innerHTML = '<p class="text-danger">Por favor, completa el captcha.</p>';
+      return;
+    }
     const submitButton = document.getElementById('submit-button');
     submitButton.disabled = true;
 
@@ -12,6 +16,7 @@
     xhr.onload = function() {
       if (xhr.status === 200) {
         document.getElementById('response-message').innerHTML = `<p class="text-success">${xhr.responseText}</p>`;
+        document.forms['contact-form'].reset();
       } else {
         document.getElementById('response-message').innerHTML = `<p class="text-danger">Error: ${xhr.statusText}</p>`;
       }

@@ -3,11 +3,12 @@ define('TITULOS_BLOG', array(
     'TITULO NOTICIA',
     'Subtitulo noticia',
     'JUNIO',
-    'MENU'
+    'MENU',
+    'Galería'
 ));
 define('TITULOS_BLOG_ALL', array(
     'BLOG',
-    'Noticias, actualizaciones, consejos y más... ¡Prepárate para tu próxima visita a Taino Bay!',
+    'Noticias, tips y más…<br>¡Prepárate para tu próxima&nbsp;visita!',
     'Titulo del evento'
 ));
 define('SECTION_BLOG_ALL', array(

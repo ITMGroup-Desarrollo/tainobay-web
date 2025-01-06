@@ -9,22 +9,15 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
     <?php include("include/head.php"); ?>
     <link rel="stylesheet" href="assets/css/vendor/blog.css">
-    <style>
-
-
-    </style>
 </head>
 
 <body class="shock-body">
-
+    <?php include("include/gtm-body.php"); ?>
     <?php include("include/header.php"); ?>
-
     <!-- Main -->
     <main id="main" class="shock-main">
-
         <!-- Banner -->
         <section class="shock-section has-overlay">
             <div class="banner d-flex align-items-center">
@@ -34,20 +27,18 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                         <h1 class="title white">
                             <span class="text-1 text-style-3 blog-title"></span>
                             <br>
-
                         </h1>
-                        <h2 class="title white"><span class="text-2 text-style-8 blog-subtitle "></span></h2>
+                        <h2 class="title white"><span class="text-2 text-style-8 blog-subtitle banner-subtitle"></span></h2>
                     </div>
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
-
+                    <div class="banner-fixed">
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
         <!-- Blog Section -->
@@ -58,8 +49,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     <div class="col-lg-2" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                         <ul class="timeline" id="timeline"></ul>
                     </div>
-
-
                     <div class="col-lg-9">
                         <div class="shock-section container" id="blog-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                             <!-- Posts se cargarán aquí -->
@@ -68,7 +57,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                             <a href="<?php echo $idioma; ?>/blog_all" class=" button-transparent button-orange text-center" style=""><strong><?php echo TITULOS_BLOG[3];  ?></strong></a>
                             <!-- Botones de navegación y paginación -->
                             <div class="container mt-3 d-flex justify-content-center pagination-items">
-
                                 <div class="row">
                                     <div id="prev-page" class="col-4 col-md-3 col-lg-6">
                                         <svg class="swiper-button-prev" src="assets/icons/icon_arrows_blue_left.svg" alt="Prev" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 231.26 729.5">
@@ -89,22 +77,14 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                                         </svg>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
-
                     </div>
                     <div class="col-lg-1">
-
                     </div>
                 </div>
-
             </div>
-
-
         </section>
-
     </main>
     <?php include("include/widget.php"); ?>
     <?php include("include/footer.php"); ?>
@@ -115,7 +95,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         var dropdown = document.getElementById("dropdownContent");
         dropdown.classList.toggle("show");
     }
-
     // Cerrar el dropdown si se hace clic fuera de él
     window.onclick = function(event) {
         if (!event.target.matches('.border-0') && !event.target.closest('.dropdown')) {
@@ -134,20 +113,17 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     const idioma = '<?php echo $idioma; ?>';
 
     function loadPost(title, pushState = true) {
-        $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title), function(response) {
+        $.getJSON('include/get_blog_posts.php?title=' + encodeURIComponent(title) + '&idioma=' + idioma, function(response) {
             if (!response.posts || response.posts.length === 0) {
                 $('#blog-container').html('<p>No se encontró el post.</p>');
                 return;
             }
-
             const data = response.posts[0];
             const hasPrevPost = response.has_prev_post;
             const hasNextPost = response.has_next_post;
             const prevPostTitle = response.prev_post_title;
             const nextPostTitle = response.next_post_title;
-
             $('#blog-container').empty();
-
             $('#blog-container').append(`
                 <div class="blog-post">
                     <div class="title-image">
@@ -191,47 +167,41 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 <div class="blog-post blog-texto">
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
-                    ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
-                <div class="title-image">
-                    <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                <div class="title-image mb-3">
+                    <img src="${data.image_url2}" class="img-fluid imgRound" alt="${data.title}">
                 </div>
+                <div class="gallery-section">
+                    <div class="gallery-title2 mb-2">
+                        <h2 class="title"><span class="text-2 text-style-6"><?php echo TITULOS_BLOG[4];  ?></span></h2>
+                    </div>
+                    <div class="gallery-container2 mb-3">
+                        ${data.images.map(imageUrl => `<img src="${imageUrl}" class="img-fluid gallery-img" alt="Gallery image">`).join('')}
+                    </div>
+                </div>
+                
             `);
-
-
-
-
-
+            $('.banner-fixed').css('background-image', `url(${data.image_url})`);
             $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
             $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
-
             // Actualizar la clase active del timeline
             updateActiveTimelineItem(title);
-
             // Reemplaza los guiones por espacios en blanco
             data.title = data.title.replace(/-/g, ' ');
-
             // Establece el texto del título en el elemento con la clase 'blog-title'
             $('.blog-title').text(data.title);
             $('.blog-subtitle').text(data.subtitle);
-
             if (pushState) {
                 const url = new URL(window.location);
                 const isLocalhost = url.hostname === "localhost"; // Verifica si estás en localhost
                 const carpetaRaiz = isLocalhost ? "/tainobay" : ""; // Usa la carpeta raíz solo en localhost
-
                 // Construye el nuevo pathname con o sin la carpeta raíz
                 url.pathname = `${carpetaRaiz}/${idioma}/blog/` + encodeURIComponent(title);
-
                 // Actualiza la URL en la barra de direcciones sin recargar la página
                 window.history.pushState({
                     title: title
                 }, '', url);
             }
-
         }).fail(function() {
             $('#blog-container').html('<p>Error al cargar el post.</p>');
         });
@@ -240,22 +210,19 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     function changePost(title) {
         loadPost(title);
     }
-
     const itemsPerPage = 4;
     let currentPage = 1;
 
     function loadTimeline(callback) {
-        $.getJSON(`include/get_blog_posts.php?page=${currentPage}`, function(response) {
+        $.getJSON(`include/get_blog_posts.php?page=${currentPage}` + '&idioma=' + idioma, function(response) {
             if (!response.posts || response.posts.length === 0) {
                 return;
             }
-
             if (currentPage > 1) {
                 $('#timeline').find('li:lt(' + (itemsPerPage - 1) + ')').remove();
             } else {
                 $('#timeline').empty();
             }
-
             response.posts.forEach((post, index) => {
                 const active = (index === 0 && currentPage === 1) ? ' active' : '';
                 $('#timeline').append(`
@@ -271,7 +238,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     </li>
                 `);
             });
-
             if (typeof callback === 'function') {
                 callback(response.posts);
             }
@@ -283,7 +249,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
     function updateActiveTimelineItem(title) {
         const timelineItems = document.querySelectorAll('.timeline-item');
         let activeIndex = -1;
-
         timelineItems.forEach((item, index) => {
             const itemTitle = item.querySelector('input[type="hidden"]').value;
             if (itemTitle === title) {
@@ -293,7 +258,6 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 item.classList.remove('active');
             }
         });
-
         if (activeIndex === -1) {
             currentPage++;
             loadTimeline(() => updateActiveTimelineItem(title));
@@ -302,18 +266,15 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             loadTimeline();
         }
     }
-
     window.onpopstate = function(event) {
         if (event.state && event.state.title) {
             loadPost(event.state.title, false);
         }
     }
-
     $(document).ready(function() {
         loadTimeline(function(posts) {
             const pathSegments = window.location.pathname.split('/');
             const title = decodeURIComponent(pathSegments[pathSegments.length - 1]);
-
             if (title && title !== 'blog') {
                 loadPost(title, false);
             } else {
@@ -323,19 +284,16 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 }
             }
         });
+
     });
 </script>
-
-
 <script>
     $(document).ready(function() {
         $(document).on('click', '.toggle-share', function() {
             const $shareContainer = $(this).closest('.container-btn').find('.redes');
-
             // Alternamos la visibilidad del contenedor de redes sociales
             const isVisible = $shareContainer.hasClass('show-container');
             $('.redes').removeClass('show-container'); // Ocultamos todos los contenedores
-
             // Mostramos u ocultamos el contenedor correspondiente
             if (!isVisible) {
                 $shareContainer.addClass('show-container');
@@ -343,7 +301,5 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
         });
     });
 </script>
-
-
 
 </html>

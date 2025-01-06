@@ -6,45 +6,35 @@ include_once("include/lang/{$idioma}-blog.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
     <?php include("include/head.php"); ?>
-
     <link rel="stylesheet" href="assets/css/vendor/blog_all.css">
-    <style>
-
-    </style>
 </head>
 
 <body class="shock-body">
-
+    <?php include("include/gtm-body.php"); ?>
     <?php include("include/header.php"); ?>
-
     <!-- Main -->
     <main id="main" class="shock-main">
-
         <!-- Banner -->
         <section class="shock-section has-overlay">
             <div class="banner d-flex align-items-center">
                 <div class="content-wrapper top-zero ">
                     <!-- Intro -->
                     <div class="basic-intro text-center">
-                        <h1 class="title white">
-                            <span class="text-1 text-style-3"><?php echo TITULOS_BLOG_ALL[0];  ?></span>
-                            <br>
-
+                        <h1 class="title white text-1 banner-title text-uppercase fw-bold">
+                            <?php echo TITULOS_BLOG_ALL[0];  ?>
                         </h1>
-                        <h2 class="text-2 text-style-8 title white"><?php echo TITULOS_BLOG_ALL[1];  ?> </h2>
+                        <p class="text-white banner-subtitle"><?php echo TITULOS_BLOG_ALL[1];  ?></p>
                     </div>
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/blog/playa-dorada-two.jpg')">
-
+                    <div class="banner-fixed" style="background-image:url('assets/images/blog/header-blog-port-taino-bay.webp')">
                     </div>
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
-                <div class="overlay-blue"></div>
+                <div class="overlay-banner"></div>
             </div>
         </section>
         <!-- Blog titles -->
@@ -75,17 +65,13 @@ include_once("include/lang/{$idioma}-blog.php");
                 </div>
             </div>
         </section>
-
-
         <!-- Blog Section -->
         <section class="shock-section blog-list-section ">
             <div id="blog-container" style="margin-bottom: 6rem;">
-
                 <div class="">
                     <div class="single-list-blog-container posts-wrapper">
                         <!-- Aquí se cargarán los posts dinámicamente -->
                     </div>
-
                 </div>
                 <div class="pagination">
                     <div class="pagination-container">
@@ -111,29 +97,25 @@ include_once("include/lang/{$idioma}-blog.php");
     <?php include("include/footer.php"); ?>
     <?php include("include/js.php"); ?>
 </body>
-
 <script>
-    function loadPosts(page) {
-        $.getJSON('include/get_blog_posts.php?page=' + page, function(response) {
+    const idioma = "<?php echo $idioma; ?>";
+    console.log(idioma);
 
+    function loadPosts(page) {
+        $.getJSON('include/get_blog_posts.php?page=' + page + '&idioma=' + idioma, function(response) {
             if (!response.posts || response.posts.length === 0) {
                 $('#blog-container .posts-wrapper').html('<p>No se encontraron posts.</p>');
                 return;
             }
-
             const posts = response.posts;
             const totalPages = response.total_pages;
             const currentPage = response.current_page;
-
             $('#blog-container .posts-wrapper').empty();
-
             posts.forEach(post => {
                 // Asumiendo que 'data.title' es el título que obtienes de tu fuente de datos
                 let title = post.title;
-
                 // Reemplaza los guiones por espacios en blanco
                 title = title.replace(/-/g, ' ');
-
                 // Establece el texto del título en el elemento con la clase 'blog-title'
                 $('.blog-title').text(title);
                 $('#blog-container .posts-wrapper').append(`
@@ -157,7 +139,6 @@ include_once("include/lang/{$idioma}-blog.php");
                                 <p class="justificado">${post.description}</p>
                                 <a href="<?php echo $idioma; ?>/blog/${post.title}" class="button-transparent button-orange text-center" style="height: 3rem; margin-top:5%;"><strong><?= SECTION_BLOG_ALL[1] ?></strong></a>
                             </div>
-
                             <!-- Share -->
                             <div class="col-11 col-md-2 col-lg-1 single-blog-icon">
                                 <div class="container-btn azulBlog">
@@ -185,13 +166,10 @@ include_once("include/lang/{$idioma}-blog.php");
                         </div>
                     </div>
                 `);
-
             });
-
             $('#page-info').text(`Página ${currentPage} de ${totalPages}`);
             updatePaginationButtons(totalPages, currentPage);
             renderPageNumbers(totalPages, currentPage);
-
             setTimeout(updateBlogLayout, 100);
         }).fail(function() {
             $('#blog-container .posts-wrapper').html('<p>Error al cargar los posts.</p>');
@@ -201,7 +179,6 @@ include_once("include/lang/{$idioma}-blog.php");
     function updatePaginationButtons(totalPages, currentPage) {
         const prevButton = $('#prev-page');
         const nextButton = $('#next-page');
-
         prevButton.prop('disabled', currentPage <= 1)
             .off('click')
             .on('click', function() {
@@ -210,7 +187,6 @@ include_once("include/lang/{$idioma}-blog.php");
                     scrollToBlogMenu();
                 }
             });
-
         nextButton.prop('disabled', currentPage >= totalPages)
             .off('click')
             .on('click', function() {
@@ -224,7 +200,6 @@ include_once("include/lang/{$idioma}-blog.php");
     function renderPageNumbers(totalPages, currentPage) {
         const pageNumbersDiv = $('#page-numbers');
         pageNumbersDiv.empty();
-
         for (let i = 1; i <= totalPages; i++) {
             const pageNumber = $('<span>')
                 .text(i)
@@ -245,18 +220,13 @@ include_once("include/lang/{$idioma}-blog.php");
             block: 'center'
         });
     }
-
     var skipInitialAnimation = true; // Bandera para saltar la animación al cargar el HTML
-
     function updateBlogLayout() {
         var blogSections = $('.blog-list-section, .blog-grid-section');
-
         if (blogSections.length === 0) {
             return;
         }
-
         var isList = blogSections.first().hasClass('blog-list-section');
-
         var elementsToUpdate = {
             singleList: $('.single-list-blog-container'),
             singleGrid: $('.single-grid-blog-container'),
@@ -271,18 +241,15 @@ include_once("include/lang/{$idioma}-blog.php");
             listBlogIcon: $('.single-blog-icon'),
             gridBlogIcon: $('.single-grid-blog-icon')
         };
-
         var fadeDuration = 150;
         var elements = $.map(elementsToUpdate, function(el) {
             return el.get();
         });
-
         // Verificar si debemos saltar la animación inicial
         if (skipInitialAnimation) {
             skipInitialAnimation = false; // Desactivar la bandera después de la carga inicial
             return;
         }
-
         // Aplicar fade-out a todos los elementos antes de cambiar las clases
         $(elements).fadeOut(fadeDuration, function() {
             if (isList) {
@@ -300,32 +267,20 @@ include_once("include/lang/{$idioma}-blog.php");
                 elementsToUpdate.listBlogContent.addClass('single-grid-blog-content').removeClass('col-11 col-md-10 col-lg-5 single-blog-content');
                 elementsToUpdate.listBlogIcon.addClass('single-grid-blog-icon').removeClass('col-11 col-md-2 col-lg-1 single-blog-icon');
             }
-
             // Aplicar fade-in a todos los elementos después de cambiar las clases
             $(elements).fadeIn(fadeDuration);
         });
     }
-
     // Ejecutar `updateBlogLayout` inicialmente para configurar las clases iniciales, sin animación
     updateBlogLayout();
-
     // Luego, llama a `updateBlogLayout` cada vez que sea necesario (cuando el usuario cambia entre grid y list)
-
-
-
-
-
-
-
     $(document).ready(function() {
         loadPosts(1);
     });
-
     document.addEventListener('DOMContentLoaded', function() {
         var gridIcon = document.querySelector('.grid-icon');
         var listIcon = document.querySelector('.list-icon');
         var blogSections = document.querySelectorAll('.blog-list-section, .blog-grid-section');
-
         gridIcon.addEventListener('click', function() {
             blogSections.forEach(blogSection => {
                 blogSection.classList.remove('blog-list-section');
@@ -333,7 +288,6 @@ include_once("include/lang/{$idioma}-blog.php");
             });
             updateBlogLayout();
         });
-
         listIcon.addEventListener('click', function() {
             blogSections.forEach(blogSection => {
                 blogSection.classList.remove('blog-grid-section');
@@ -347,11 +301,9 @@ include_once("include/lang/{$idioma}-blog.php");
     $(document).ready(function() {
         $(document).on('click', '.toggle-share', function() {
             const $shareContainer = $(this).closest('.container-btn').find('.redes');
-
             // Alternamos la visibilidad del contenedor de redes sociales
             const isVisible = $shareContainer.hasClass('show-container');
             $('.redes').removeClass('show-container'); // Ocultamos todos los contenedores
-
             // Mostramos u ocultamos el contenedor correspondiente
             if (!isVisible) {
                 $shareContainer.addClass('show-container');
@@ -359,13 +311,5 @@ include_once("include/lang/{$idioma}-blog.php");
         });
     });
 </script>
-
-
-
-
-
-
-
-
 
 </html>

@@ -116,7 +116,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-family: var(--secondary-font);
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .text-style-1,
@@ -253,3 +253,8 @@ small,
 }
 
 /* #endregion Typography */
+@media (max-width: 991px) {
+  .m-position-right {
+    background-position: -980px center;
+  }
+}

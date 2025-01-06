@@ -213,6 +213,7 @@
             }
 
             .dynamic-slider-r .slide-item {
+                background-color: var(--blue-color);
                 position: relative;
                 display: grid;
                 grid-area: 1 / 1 / 5 / 4;
@@ -510,11 +511,16 @@
 
             @media (max-width: 991px) {
                 .dynamic-slider-r .static-content {
-                    padding: 2rem 1rem;
                     justify-items: center;
+                    margin-bottom: 18rem;
                     grid-template-columns: 100%;
-                    grid-template-rows: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
                     grid-template-areas: "static-title" "static-arrows" "...";
+                }
+
+                .side-intro .description {
+                    margin: 0 0 0;
+                    line-height: 1.5;
                 }
 
                 .dynamic-slider-r {
@@ -553,10 +559,10 @@
 
                 .dynamic-slider-r .slide-item {
                     grid-template-columns: 100%;
-                    grid-template-rows: 40% 10% 50%;
+                    grid-template-rows: 50% 50%;
+
                     grid-template-areas:
                         "slide-content"
-                        "static-button"
                         "slide-image-wrapper";
                 }
 
@@ -566,9 +572,6 @@
 
                 .dynamic-slider-r .slide-content {
                     width: 100%;
-                    margin-bottom: 2rem;
-                    padding: 1rem 2rem 2rem 2rem;
-                    flex: 0 0 auto;
                     order: 2;
                 }
 
@@ -624,6 +627,13 @@
                 }
             }
 
+            @media (max-width: 991px) and (min-height: 800px) {
+                .dynamic-slider-r .static-content {
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-areas: "static-title" "static-arrows";
+                }
+            }
+
             @media (max-width: 424px) {
                 .dynamic-slider-r .slide-action-inner {
                     display: block;
@@ -634,6 +644,34 @@
                 .dynamic-slider-r .slide-item {
                     position: initial;
                 }
+            }
+
+            @media (min-width: 991px) and (min-height: 500px) and (max-height: 600px) {
+                .dynamic-slider-r .static-content {
+                    padding: 2rem 1rem;
+                }
+
+                .text-style-3 {
+                    font-size: 3rem;
+                }
+
+                .text-style-6 {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (min-width: 768px) and (min-height: 800px) and (max-height: 1000px) {
+                .dynamic-slider-r .static-content {
+                    padding: 2rem 1rem;
+                }
+
+                .text-style-3 {
+                    font-size: 4rem;
+                }
+            }
+
+            .button-mobile {
+                margin: 2rem 1rem;
             }
         </style>
         <section id="home" class="shock-section dynamic-slider-r scheme-1" data-autoplay="6000" data-aos="fade-up"
@@ -651,18 +689,23 @@
                 <!-- Controls carousel -->
                 <nav class="slide-navigation d-flex align-items-md-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows">
                     <!-- Arrow Left -->
-                    <a href="#" class="slide-navigation-item-prev d-inline-block text-orange" role="button">
+                    <a href="#" class="slide-navigation-item-prev d-flex align-items-center text-orange" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                             <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                             <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                         </svg>
                     </a>
                     <!-- Text Carousel -->
-                    <div class="flex-grow-1">
-                        <p class="text-style-6 text-arrows text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_DISCOVER_BEYOND[1]; ?></span><span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_DISCOVER_BEYOND[2]; ?></span></p>
+                    <div class="flex-grow-1 d-none d-md-block">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_DISCOVER_BEYOND[1];; ?></span>
+                            <span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_DISCOVER_BEYOND[2]; ?></span>
+                        </p>
+                    </div>
+                    <div class="flex-grow-1 d-md-none">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_DISCOVER_BEYOND[3];; ?></span></p>
                     </div>
                     <!-- Arrow Right -->
-                    <a href="#" class="slide-navigation-item-next d-inline-block text-orange" role="button">
+                    <a href="#" class="slide-navigation-item-next d-flex align-items-center text-orange" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                             <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                             <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
@@ -710,7 +753,7 @@
                     <!-- button explore more -->
                     <div class="slide-button static-button" style="z-index: 9;">
                         <div class="container-button text-center">
-                            <a href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel"><strong><?= BUTTON_EXPLORE; ?></strong></a>
+                            <a href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel"><strong><?= CAROUSEL_DISCOVER_BEYOND[4] ?></strong></a>
                         </div>
                     </div>
                     <!-- Intro -->
@@ -724,7 +767,16 @@
                                     <?= $tour['content'] ?>
                                 </p>
                             </div>
+
                         </div>
+                        <div class="slide-button button-mobile static-button d-md-none" style="z-index: 9;">
+                            <div class="container-button text-center">
+                                <a id="button-carrusel" href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel">
+                                    <strong><?= CAROUSEL_DISCOVER_BEYOND[4] ?></strong>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                     <!-- Image -->
                     <div class="slide-image-wrapper">
@@ -746,3 +798,6 @@
                 </div>
             <?php } ?>
         </section>
+        <script>
+
+        </script>

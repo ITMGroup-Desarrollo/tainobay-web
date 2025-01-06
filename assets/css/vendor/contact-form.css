@@ -1,10 +1,61 @@
+#contact-form input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+.date-container {
+  position: relative;
+  display: inline-block;
+}
+#contact-form input[type="date"] {
+  position: relative;
+  width: 100%;
+  padding: 10px 12px;
+  background-color: transparent;
+}
+#contact-form .placeholder {
+  color: #18355e;
+  border-radius: 25px;
+  opacity: 1;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 1.7rem;
+  padding: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+input[type="date"]:valid + .placeholder {
+  display: none;
+  /* Oculta el placeholder si hay un valor */
+}
 #contact-form input,
-#contact-form textarea {
+#contact-form textarea,
+#contact-form select {
   border-color: var(--blue-color);
   border-width: 2px;
 }
+#contact-form select {
+  color: var(--blue-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 16px;
+  background-color: transparent;
+}
 #contact-form input::placeholder,
-#contact-form textarea::placeholder {
+#contact-form textarea::placeholder,
+.placeholder,
+input[type="date"] {
   color: var(--blue-color) !important;
   font-weight: bold;
   text-transform: uppercase;
@@ -25,12 +76,19 @@
 }
 
 /* Faq page */
+#faq-page .placeholder {
+  display: none;
+}
 #faq-page #contact-form input,
-#faq-page #contact-form textarea {
+#faq-page #contact-form textarea,
+#faq-page select {
   border-color: white;
   background-color: transparent;
   border-width: 2px;
   color: white !important;
+}
+#faq-page select option {
+  color: var(--blue-color);
 }
 #faq-page #contact-form input::placeholder,
 #faq-page #contact-form textarea::placeholder {

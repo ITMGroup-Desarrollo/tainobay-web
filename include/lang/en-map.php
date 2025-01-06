@@ -2,7 +2,9 @@
 define('TITULOS_MAP', array(
     'Explore',
     'and',
-    'discover.'
+    'discover.',
+    'Map',
+    'Explore and discover',
 ));
 define('TABLAS_MAP', array(
     'SHOPPING EXPERIENCE',

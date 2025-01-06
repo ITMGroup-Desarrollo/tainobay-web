@@ -7,7 +7,7 @@ define('TITULOS_DISCOVER', array(
 ));
 define('DISCOVER_WELCOME', array(
     'LA NOVIA',
-    'DEL ATLANTICO',
+    'DEL ATLÁNTICO',
     'Un destino que recordarás para siempre.',
     'Bienvenido a Puerto Plata, un hermoso pueblo dominicano conocido como la Novia del Atlántico, con su única arquitectura victoriana y sus monumentos históricos.',
     '<b>Puerto Plata</b> te invita a disfrutar y explorar sus maravillas a tu llegada.'
@@ -89,7 +89,7 @@ $tours = [
         "title" => "AN ADRENALINE",
         "subtitle" => "FUELED ESCAPE!",
         "button" => "GET YOUR RUSH ON",
-        "content" => "The ultimate ATV experience. Climb Aboard an open-air safari truck for 25 minutes and enjoy a scenic journey through vibrant landscape of Puerto Plata.",
+        "content" => "Una increíble experiencia en ATV. Súbete a un camión safari al aire libre durante 25 minutos y disfruta de un recorrido panorámico a través del vibrante paisaje de Puerto Plata.",
         "side" => "left-side",
         "images" => [
             "assets/images/discover-beyond/atv-exp/atv-expedition-main.webp",
@@ -166,7 +166,7 @@ $tours = [
         "title" => "GET WILD",
         "subtitle" => "& FEEL THE RUSH!",
         "button" => "Ready for the buggy?",
-        "content" => "Join us in this fun expedition through Puerto Plata! Our Buggy Adventure experience is perfect for people who love living life to its fullest!.",
+        "content" => "¡Únete a nosotros en esta divertida expedición por Puerto Plata! La experiencia Buggy Adventure es ideal para quienes disfrutan de la aventura.",
         "side" => "right-side",
         "images" => [
             "assets/images/discover-beyond/country/countryside-main-one.webp",
@@ -260,7 +260,7 @@ $tours = [
         "title" => "DISCOVER THE HOTTEST",
         "subtitle" => "PUERTO PLATA SPOTS!",
         "button" => "The Bride of the Atlantic",
-        "content" => "Explore the most representative landmarks of Puerto Plata in this fun tour through its downtown. ",
+        "content" => "Explora los spots más representativos de Puerto Plata en este divertido recorrido por el centro histórico",
         "side" => "left-side",
         "images" => [
             "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-main-one.webp",
@@ -340,7 +340,7 @@ $tours = [
         "title" => "THE ULTIMATE",
         "subtitle" => "ADVENTURE IN NATURE!",
         "button" => "Experience the wonders of Puerto Plata",
-        "content" => "The perfect combo to enjoy the beauty of Puerto Plata! Enjoy the city & discover the secluded Damajagua Waterfalls in the Dominican Republic´s mountains.",
+        "content" => "¡La combinación perfecta para disfrutar de la belleza de Puerto Plata! Recorre la pintoresca ciudad y descubre las Cascadas de Damajagua en las montañas de la República Dominicana.",
         "side" => "right-side",
         "images" => [
             "assets/images/discover-beyond/damajagua/damajagua-main-one.webp",
@@ -424,7 +424,7 @@ $tours = [
         "title" => "IT’S ALWAYS ",
         "subtitle" => "A GOOD TIME!",
         "button" => "Let’s make new friends!",
-        "content" => "A 30-minute experience to remember. The cutest friends you’ll make on your visit.",
+        "content" => "Una experiencia de 30 minutos para recordar por siempre. Conoce tiernos amigos en tu visita.",
         "side" => "left-side",
         "images" => [
             "assets/images/discover-beyond/monkey-island/monkey-island-main-one.webp",
@@ -496,7 +496,7 @@ $tours = [
         "title" => "ENJOY A FUN WALK",
         "subtitle" => "THROUGH PUERTO PLATA.",
         "button" => "Have a fresh day at the beach!",
-        "content" => "The perfect combo to discover the beautiful Puerto Plata. Visit downtown, take the coolest shots, and relax at the beach!",
+        "content" => "La combinación perfecta para descubrir Puerto Plata. ¡Visita el centro, toma las fotos más cool y relájate en la playa!",
         "side" => "right-side",
         "images" => [
             "assets/images/discover-beyond/old-town/old-town-main-one.webp",
@@ -578,12 +578,12 @@ $tours = [
     ],
     [
         "id" => "7",
-        "Tour" => "Old town & beach ",
-        "tourName" => "Old Town & Beach",
+        "Tour" => "Playa Dorada",
+        "tourName" => "Playa Dorada",
         "title" => "VISIT ONE OF THE",
         "subtitle" => "MOST ICONIC BEACHES!",
         "button" => "Enjoy yourself! ",
-        "content" => "2 miles of white sand and crystal-clear water…welcome to Playa Dorada! ",
+        "content" => "Arena blanca y agua cristalina... ¡bienvenido a Playa Dorada!",
         "side" => "left-side",
         "images" => [
             "assets/images/discover-beyond/playa-dorada/playa-dorada-main-one.webp",
@@ -606,7 +606,7 @@ $tours = [
             "PLAYA DORADA"
         ],
         "displayContent" => [
-            "Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... A must on your next visit!",
+            "Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... <br>A must on your next visit!",
             "Gran Ventana Beach Resort is in the center of Playa Dorada. Visit this exclusive getaway with a breathtaking beach area. The resort includes access to the pool, a private area for cruise passengers, a cocktail bar, lounge chairs, and non-motorized activities. The hotel’s buffet and snacks are included."
         ],
         "displayHighlights" => [

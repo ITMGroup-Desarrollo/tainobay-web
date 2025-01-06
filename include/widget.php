@@ -11,7 +11,7 @@
     </div>
 
     <!-- Scroll to Top -->
-    <div class="side-widget to-right invert-color mix-blend-difference">
+    <!-- <div class="side-widget to-right invert-color mix-blend-difference">
         <div class="item align-v-bottom">
             <a href="#" class="link hover-up">
                 <span class="widget float-icon">
@@ -20,6 +20,7 @@
             </a>
         </div>
     </div>
+-->
 
     <!-- Modal -->
     <div id="modal" class="modal fade" tabindex="-1" aria-hidden="true">

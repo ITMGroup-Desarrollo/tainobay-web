@@ -9,13 +9,11 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
 <html lang="<?php echo $idioma; ?>">
 
 <head>
-
   <?php include("include/head.php"); ?>
-
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->
@@ -41,7 +39,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
           <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
         </div>
         <!-- Overlay -->
-        <div class="overlay-blue"></div>
+        <div class="overlay-banner"></div>
       </div>
     </section>
 
@@ -53,7 +51,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
             <?= TITULOS_PORT_EXPERIENCE[1] ?>
           </h2>
         </div>
-        <div class="container-text mx-auto px-5">
+        <div class="container-text mx-auto">
 
           <p class="text-black black text-style-13"><?= TEXT_PORT_EXPERIENCE[0] ?></p>
           <p class="text-black black text-style-13"><?= TEXT_PORT_EXPERIENCE[1] ?></p>
@@ -105,9 +103,9 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
           </div>
         </div>
 
-        <div class="text-center d-block mt-4">
+        <!-- <div class="text-center d-block mt-4">
           <a href="<?= $idioma ?>/map" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_PORT_EXPERIENCE ?></strong></a>
-        </div>
+        </div> -->
       </div>
     </section>
 

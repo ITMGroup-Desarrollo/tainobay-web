@@ -2,27 +2,18 @@
 
 include_once("include/config.php");
 include_once("include/lang/{$idioma}-single-port-experience.php");
+include_once("include/lang/{$idioma}-port-experience.php");
 
-// $currentUri = $_SERVER['REQUEST_URI'];
-$currentMenu = null;
-// echo ($currentUri);
-$point = isset($_GET['point']) ? $_GET['point'] : '';
-$single_point = explode('.', $point);
-// echo ($single_point[0]);
+$currentUri = explode('.', $_GET['point'] ?? '')[0] ?? '';
 
-
-$currentUri = $single_point[0];
-if ($currentUri == null) {
+if (!$currentUri) {
   header("Location: port-experience");
-  die();
+  exit();
 }
-foreach ($points as $point) {
-  if ($currentUri == strtolower($point['path'])) {
-    $currentMenu = $point;
-    break;
-  }
-}
-// print_r($currentMenu);
+
+$currentMenu = current(array_filter($points, function ($point) use ($currentUri) {
+  return strtolower($point['path']) === $currentUri;
+}));
 ?>
 <!DOCTYPE HTML>
 <html lang="<?php echo $idioma; ?>">
@@ -30,11 +21,28 @@ foreach ($points as $point) {
 <head>
 
   <?php include("include/head.php"); ?>
+  <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+      height: 100px;
+      top: 40%;
+    }
+
+    #gallery {
+      width: 85%;
+    }
+
+    @media (min-width: 768px) {
+      #gallery {
+        width: 90%;
+      }
+    }
+  </style>
 
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->
@@ -58,11 +66,11 @@ foreach ($points as $point) {
           <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
 
           </div> -->
-          <img src="<?= empty($currentMenu['banner']) ? 'assets/images/media/bg-faqs.jpg' : ("assets/images/port-experience/{$currentMenu['banner']}") ?>" class="image vh-65 fit-cover" alt="This is an example description for this item." />
+          <img src="<?= empty($currentMenu['banner']) ? 'assets/images/media/bg-faqs.jpg' : ("assets/images/port-experience/{$currentMenu['banner']}") ?>" class="image vh-65 fit-cover brightness-8" alt="This is an example description for this item." />
 
         </div>
         <!-- Overlay -->
-        <div class="overlay-blue"></div>
+        <div class="overlay-banner"></div>
       </div>
     </section>
 
@@ -75,11 +83,11 @@ foreach ($points as $point) {
               <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 30">
                 <path fill="currentColor" d="m3.55 12l7.35 7.35q.375.375.363.875t-.388.875t-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675T.825 12t.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388t.375.875t-.375.875z" />
               </svg>
-              <span><strong><?= 'REGRESAR' ?></strong></span>
+              <span><strong><?= BUTTON_BACK ?></strong></span>
             </a>
           </div>
           <div class="col-12 col-md-6">
-            <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= TITULOS_SINGLE_EXPERIENCE ?>
+            <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= $currentMenu['logo'] ? $currentMenu['name'] : TITULOS_SINGLE_EXPERIENCE ?>
             </h2>
           </div>
           <div class="col">
@@ -92,43 +100,49 @@ foreach ($points as $point) {
     <section class="shock-section pb-5">
       <!-- <div class="container max-w-85"> -->
       <div class="w-100">
-        <?php foreach ($currentMenu['menu'] as $menuItem) { ?>
-          <div class="seccion-menu-img w-100" style="background-image: url(<?= "assets/images/port-experience/{$currentMenu['path']}/{$menuItem['image']}" ?>); background-position: <?= $menuItem['image-position'] ?>;">
-            <!-- <img src="<?= "assets/images/port-experience/{$currentMenu['path']}/{$menuItem['img']}" ?>" class="w-100" alt="imagen del menu"> -->
+        <!-- galleria -->
+        <div class="container" data-aos="zoom-in-up" data-aos-delay="400">
+          <!-- Arrow Left -->
+          <div class="text-blue d-block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor" width="200" height="500" viewBox="0 0 231.26 729.5">
+              <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+              <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
+            </svg>
           </div>
-          <div class="row row-cols-2 p-md-5 g-0 max-w-100">
-            <?php foreach ($menuItem['items'] as $item) { ?>
-              <div class="col-12 col-md-6 dashed-border">
-                <div class="card w-100">
-                  <div class="card-body">
-                    <h5 class="card-title text-blue"><strong><?= $item['name'] ?></strong></h5>
-                    <ul class="row row-cols-2 text-blue text-uppercase">
-                      <?php foreach ($item['ingredients'] as $ingredient) { ?>
-                        <li class="list-group-item mb-2"><?= $ingredient ?></li>
-                      <?php } ?>
-                    </ul>
-                  </div>
+          <div id="gallery" class="gallery swiper slider has-navigation primary"
+            data-columns="3,1,1,1" data-autoplay="5000" data-space="20" data-loop="true">
+            <div class="swiper-wrapper">
+              <?php foreach ($currentMenu['single_gallery'] as $img) { ?>
+                <div class="swiper-slide">
+                  <a href="<?= $img ?>"
+                    class="item lightbox-link hover-zoom-rotate">
+                    <div class="image-wrapper">
+                      <img src="<?= $img ?>" class="image" />
+                    </div>
+                  </a>
                 </div>
-              </div>
-            <?php } ?>
+              <?php } ?>
 
+            </div>
           </div>
-        <?php } ?>
 
-        <?php if (isset($currentMenu['pdf'])) { ?>
-          <div class="text-center d-block mt-4">
-            <a href="<?= empty($currentMenu['pdf']) ? 'javascript:void(0)' : ("assets/pdf/{$currentMenu['pdf']}") ?>" target="_blank" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_SINGLE_PORT ?></strong></a>
+          <!-- Arrow Right -->
+          <div class="text-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
+              <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+              <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
+            </svg>
           </div>
-        <?php } ?>
+        </div>
+
       </div>
     </section>
-
 
   </main>
 
   <?php include("include/widget.php"); ?>
   <?php include("include/footer.php"); ?>
-  <?php include("include/js.php"); ?>
+  <?php include("include/modalPopup.php"); ?>
   <script>
     const logo = document.querySelector('.port-logo');
     const documentScroll = () => {

@@ -137,6 +137,19 @@ Support : codings.dev
   max-width: 500px;
   margin: auto;
 }
+
+.banner .content-wrapper {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  top: 5%;
+}
 @media (max-width: 575px) {
   .popup-bar {
     padding: 0 1rem;
@@ -424,18 +437,6 @@ Support : codings.dev
   width: 100%;
   height: 100%;
 }
-.banner .content-wrapper {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: auto;
-  padding: 1rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  top: 25%;
-}
 .top-zero {
   top: initial !important;
 }
@@ -600,7 +601,7 @@ Support : codings.dev
 .swiper.has-gap .swiper-slide {
   padding: 15px;
 }
-.swiper .swiper-slide .image {
+.slide-image-wrapper .slide-image-inner .image {
   width: 100%;
   display: block;
   height: 85vh;
@@ -802,7 +803,9 @@ Support : codings.dev
   position: relative;
   z-index: 0;
   width: 100%;
-  height: auto;
+  /* height: auto; */
+  height: 350px;
+  object-fit: cover;
   display: block;
   transition: transform 2s cubic-bezier(0.2, 1, 0.2, 1);
 }
@@ -1984,7 +1987,7 @@ button {
 }
 .form-area .form-control::placeholder {
   font-size: 1rem;
-  color: var(--gray-color);
+  /* color: var(--gray-color); */
 }
 .form-area .form-control::-webkit-search-decoration,
 .form-area .form-control::-webkit-search-cancel-button,
@@ -4162,6 +4165,23 @@ table {
 
 /* #endregion Footer */
 
+.prompt {
+  /* background-image: url("../images/icons/pwa/isotipo-tainobay-192.png"); */
+  /* background-position-x: 1rem;
+    background-position-y: 2rem;
+    background-repeat: no-repeat;
+    background-size: auto 45%; */
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px 0 rgba(91, 107, 174, 0.15);
+  padding: 0.85rem;
+  position: fixed;
+  transition: all 1.5s ease-in-out;
+  width: 100vw;
+}
+.prompt .content-prompt {
+  margin-bottom: 0.75rem;
+}
+
 .dynamic-slider.scheme-1 {
   height: auto;
   margin-bottom: 50px;
@@ -4169,13 +4189,13 @@ table {
 
 /* #region Text */
 .text-orange {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 .text-blue {
-  color: var(--blue-color);
+  color: var(--blue-color) !important;
 }
 .banner .banner-title {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .banner .banner-subtitle {
   font-size: 0.8em;
@@ -4186,7 +4206,9 @@ table {
   background-attachment: fixed;
   width: 100%;
   height: 60vh;
-  filter: brightness(0.9);
+  filter: brightness(0.7);
+  will-change: transform;
+  -webkitkit-background-attachment: fixed;
 }
 @media (min-width: 768px) {
   .banner .banner-title {
@@ -4196,24 +4218,38 @@ table {
     font-size: 2em;
   }
   .container-title {
-    width: 700px;
+    width: 800px;
   }
-  .container-text {
-    width: 1100px;
-  }
+
   .banner-fixed {
     height: 80vh;
     background-position: center;
     background-size: cover;
+  }
+  .prompt {
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px 0 rgba(91, 107, 174, 0.15);
+    padding: 1.5rem 5rem 1.5rem 3rem;
+    position: fixed;
+    transition: all 1.5s ease-in-out;
+    width: 100vw;
+  }
+  .prompt .content-prompt {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container-text {
+    width: 1100px;
   }
 }
 
 .bg-orange {
   background-color: var(--primary-color);
 }
-a:hover {
+/* a:hover {
   color: initial;
-}
+} */
 .z-15 {
   z-index: 15;
 }
@@ -4273,6 +4309,63 @@ a:hover {
   animation-duration: 4s;
 }
 
+.brightness-6 {
+  filter: brightness(0.6);
+}
+.brightness-8 {
+  filter: brightness(0.8);
+}
 .brightness-9 {
   filter: brightness(0.9);
+}
+
+.prompt.show {
+  transition-delay: 3s;
+  bottom: 0;
+  opacity: 1;
+}
+
+.prompt.hide {
+  bottom: -100%;
+  opacity: 0;
+}
+
+.button-orange-solid {
+  color: white;
+  background-color: var(--primary-color);
+  border: solid 2px var(--primary-color);
+  border-radius: 25px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  padding: 0.375rem 1rem;
+}
+.button-orange-solid:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: solid 2px var(--primary-color);
+}
+.button-secondary {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: solid 2px transparent;
+  border-radius: 25px;
+  padding: 0.375rem 1rem;
+  transition: border 0.5s ease;
+}
+.button-secondary:hover {
+  border: solid 2px var(--primary-color);
+}
+@media only screen and (max-width: 768px) {
+  .banner .banner-title {
+    font-size: 3em;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .banner .banner-subtitle {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 768px) {
+  .banner .content-wrapper {
+    top: 15%;
+  }
 }

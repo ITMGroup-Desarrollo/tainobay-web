@@ -1,13 +1,13 @@
    <?php
-    if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == 'map.php' or $page == 'thecoffeefactorymenu.php') {
+    if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == 'thecoffeefactorymenu.php') {
         $logo = "logo-dark.svg";
         $menu = "scheme-2";
     } else {
         $logo = "logo-white.svg";
         $menu = "scheme-1";
     }
-        
-        
+
+
     ?>
    <!-- Preloader -->
    <div id="preloader" class="preloader black" data-bg-image="assets/images/media/precarga.png"></div>
@@ -27,10 +27,13 @@
                <div id="menu-fixed" class="w-80 justify-content-evenly">
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/port-experience" class="menu-main-item-fixed"><?php echo MENU[8]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="menu-main-item-fixed"><?php echo MENU[9]; ?></a>
-                   <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="menu-main-item-fixed"><?php echo MENU[3]; ?></a>
+
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog_all" class="menu-main-item-fixed"><?php echo MENU[5]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="menu-main-item-fixed"><?php echo MENU[6]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/contact" class="menu-main-item-fixed"><?php echo MENU[7]; ?></a>
+                   <div>
+                       <?php include("include/search.php"); ?>
+                   </div>
                    <div class="social-media">
                        <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link" target="_blank"><i class="icon fab fa-facebook-f"></i></a>
                        <a href="https://www.instagram.com/tainobay_puertoplata/" class="link" target="_blank"><i class="icon fab fa-instagram"></i></a>
@@ -84,7 +87,7 @@
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/points-of-interest" class="menu-grid-main-item menu-item"><?php echo MENU[2]; ?></a> -->
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/port-experience" class="menu-grid-main-item menu-item"><?php echo MENU[8]; ?></a>
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="menu-grid-main-item menu-item"><?php echo MENU[9]; ?></a>
-                               <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="menu-grid-main-item menu-item"><?php echo MENU[3]; ?></a>
+
                                <!--<a href="<?php //echo $path; 
                                             ?><?php //echo $idioma; 
                                                 ?>/arrivals"
@@ -106,7 +109,11 @@
                        <div class="menu-grid-item-inner">
                            <!-- Image -->
                            <a href="javascript:void(0)" class="menu-grid-item-image">
-                               <img src="assets/images/media/img-menu-1.jpg" alt="Image name" class="image" />
+                               <!-- <img src="assets/images/media/img-menu-1-n.jpg" alt="Image name" class="image" /> -->
+                               <picture class="image">
+                                   <source srcset="assets/images/media/img-menu-1-n.webp" class="image" type="image/webp">
+                                   <img src="assets/images/media/img-menu-1.jpg" alt="Taino Bay Port" class="image" />
+                               </picture>
                            </a>
                        </div>
                    </div>

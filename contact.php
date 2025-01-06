@@ -14,7 +14,7 @@ include_once("include/lang/{$idioma}-contact.php");
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->
@@ -34,13 +34,13 @@ include_once("include/lang/{$idioma}-contact.php");
         </div>
         <!-- Image -->
         <div class="image-wrapper">
-          <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+          <div class="banner-fixed" style="background-image:url('assets/images/media/header-contacto.jpg')">
 
           </div>
           <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
         </div>
         <!-- Overlay -->
-        <div class="overlay-blue"></div>
+        <div class="overlay-banner"></div>
       </div>
     </section>
 

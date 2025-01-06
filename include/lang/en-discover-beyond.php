@@ -9,7 +9,7 @@ define('DISCOVER_WELCOME', array(
     'THE BRIDE OF',
     'THE ATLANTIC',
     'A destination you will remember forever.',
-    'Welcome to Puerto PLata, a beautiful Dominican town know as the Bride of the Atlantic, with
+    'Welcome to Puerto Plata, a beautiful Dominican town know as the Bride of the Atlantic, with
     its unique Victorian Architecture and its historic landmarks.',
     '<b>Puerto Plata</b> invites you to enjoy and explore its wonders upon arrival.'
 
@@ -30,13 +30,13 @@ define('DISCOVER_CARRUSEL', array(
     'Visit the picturesque rural area of Puerto Plata, drive through the lush rainforests, and prepare to get a little wet as you cross shallow creeks.',
     'Coffee & Chocolate break=> Get ready for a 15-minute cultural stop at a traditional Dominican country house. Freshly brewed coffee, rich chocolate, and authentic cigar tastings are included.',
     'Photo shooting & break at the beach=> Rest for 30 minutes at a local beach, where incredible views of the Atlantic shoreline and mountains beckon you to relax and unwind before heading back to port.',
-    'Highlights=>',
+    'Highlights:',
     'Safari truck through Puerto Plata',
     'ATV rainforest adventures',
     'Delicious Dominican coffee & chocolate tasting',
     'Sightseeing of the Atlantic shoreline',
     'Beach break',
-    'Included=>',
+    'Included:',
     'Round trip transportation on open air safari truck',
     'Bilingual certified tour guide',
     'Single or double automatic ATV',
@@ -51,7 +51,7 @@ define('DISCOVER_CARRUSEL', array(
     'Long pants',
     'Closed shoes (mandatory, not sandals, or crocs)',
     'Extra spending money',
-    'Please note=>',
+    'Please note:',
     'Physical valid driver’s license and closed shoes are mandatory. The minimum age to participate 
     is 18 years old, and the maximum age is 65 years old. The maximum weight limit is 260 pounds or 
     117 kilograms. Alcohol will be distributed with careful tolerance to everyone. Guests must be 
@@ -174,7 +174,7 @@ $tours = [
     [
         "id" => "2",
         "Tour" => "countryside",
-        "tourName" => "Countryside",
+        "tourName" => "Countryside Buggy Adventure",
         "title" => "GET WILD",
         "subtitle" => "& FEEL THE RUSH!",
         "button" => "Ready for the buggy?",
@@ -268,7 +268,7 @@ $tours = [
     [
         "id" => "3",
         "Tour" => "a-walk-through-puerto-plata",
-        "tourName" => "Countryside",
+        "tourName" => "A Walk Through Puerto Plata",
         "title" => "DISCOVER THE HOTTEST",
         "subtitle" => "PUERTO PLATA SPOTS!",
         "button" => "The Bride of the Atlantic",
@@ -590,8 +590,8 @@ $tours = [
     ],
     [
         "id" => "7",
-        "Tour" => "Old town & beach ",
-        "tourName" => "Old Town & Beach",
+        "Tour" => "Playa Dorada",
+        "tourName" => "Playa Dorada",
         "title" => "VISIT ONE OF THE",
         "subtitle" => "MOST ICONIC BEACHES!",
         "button" => "Enjoy yourself! ",
@@ -618,7 +618,7 @@ $tours = [
             "PLAYA DORADA"
         ],
         "displayContent" => [
-            "Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... A must on your next visit!",
+            "Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... <br>A must on your next visit!",
             "Gran Ventana Beach Resort is in the center of Playa Dorada. Visit this exclusive getaway with a breathtaking beach area. The resort includes access to the pool, a private area for cruise passengers, a cocktail bar, lounge chairs, and non-motorized activities. The hotel’s buffet and snacks are included."
         ],
         "displayHighlights" => [

@@ -115,7 +115,7 @@ $faqs = [
         'answer' => 'Yes! From Paseo de Doña Blanca to the San Felipe Fortress, "A walk through Puerto Plata" takes you to the most iconic places in the city.'
     ],
     [
-        'title' => 'I would love to learn more about Puerto Plata... Are there any tours to the city?',
+        'title' => 'I would love to learn more about Puerto Plata... <br>Are there any tours to the city?',
         'answer' => 'Yes! From Paseo de Doña Blanca to the San Felipe Fortress, "A walk through Puerto Plata" takes you to the most iconic places in the city.'
     ],
     [

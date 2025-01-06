@@ -15,18 +15,23 @@
                 <!-- <nav class="slide-navigation d-flex align-items-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows"> -->
                 <nav class="slide-navigation d-flex align-items-md-center gap-md-3 w-100 w-md-75 max-w-2xl-60 wrapper-arrows static-arrows">
                     <!-- Arrow Left -->
-                    <a href="#" class="slide-navigation-item-prev d-inline-block text-blue" role="button">
+                    <a href="#" class="slide-navigation-item-prev d-flex align-items-center text-blue" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                             <path class="cls-1" d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                             <path class="cls-1" d="M224.12,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08l-118.63-342.14L230.91,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.77-1.22-7.78.85-8.98,4.61l-120.14,373.1,120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                         </svg>
                     </a>
                     <!-- Text Carousel -->
-                    <div class="flex-grow-1">
-                        <p class="text-style-6 text-arrows text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[1]; ?></span><span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_PORT_EXPERIENCE[2]; ?></span></p>
+                    <div class="flex-grow-1 d-none d-md-block">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[1]; ?></span>
+                            <span class="text-md-end text-center ml-4 d-block"><?= CAROUSEL_PORT_EXPERIENCE[2]; ?></span>
+                        </p>
+                    </div>
+                    <div class="flex-grow-1 d-md-none">
+                        <p class="text-style-6 text-white"><span class="d-block text-center text-md-start"><?= CAROUSEL_PORT_EXPERIENCE[3]; ?></span></p>
                     </div>
                     <!-- Arrow Right -->
-                    <a href="#" class="slide-navigation-item-next d-inline-block text-blue" role="button">
+                    <a href="#" class="slide-navigation-item-next d-flex align-items-center text-blue" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100" height="100" viewBox="0 0 231.26 729.5">
                             <path class="cls-1" d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                             <path class="cls-1" d="M7.14,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L.35,9.33C-.86,5.58,1.2,1.56,4.95.35c3.77-1.22,7.78.85,8.98,4.61l120.14,373.1L13.88,724.7c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
@@ -72,9 +77,9 @@
                         </div>
                     </div>
                     <!-- button explore more -->
-                    <div class="slide-button static-button" style="z-index: 9;">
+                    <div class="slide-button static-button d-none d-lg-block" style="z-index: 9;">
                         <div class="container-button text-center">
-                            <a href="<?= $idioma . '/port-experience/' . $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong><?= BUTTON_EXPLORE; ?></strong></a>
+                            <a href="<?= $idioma . '/port-experience/' . $point['path'] ?>" class="text-uppercase button-transparent button-blue text-center button-carousel"><strong><?= CAROUSEL_PORT_EXPERIENCE[4] ?></strong></a>
                         </div>
                     </div>
                     <!-- Intro -->
@@ -88,22 +93,18 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="slide-button button-mobile static-button d-lg-none" style="z-index: 9;">
+                            <div class="container-button text-center">
+                                <a href="<?= $idioma ?>/discover-beyond" class="text-uppercase button-transparent button-orange text-center button-carousel">
+                                    <strong><?= CAROUSEL_PORT_EXPERIENCE[4] ?></strong>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <!-- Image -->
                     <div class="slide-image-wrapper">
                         <div class="slide-image-inner">
-                            <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
-                                <div class="swiper-wrapper">
-                                    <?php foreach ($point['gallery'] as $img) { ?>
-                                        <div class="swiper-slide">
-                                            <div class="image-wrapper">
-                                                <img src=<?= $img ?> class="image" alt="<?= $point['name'] ?>" />
-                                            </div>
-                                        </div>
-                                    <?php } ?>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
+                            <img src=<?= $point['gallery'][0] ?> class="image slide-image" alt="<?= $point['name'] ?>" />
                         </div>
                     </div>
                 </div>
