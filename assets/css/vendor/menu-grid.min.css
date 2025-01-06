@@ -760,6 +760,7 @@
 }
 .menu-grid .menu-grid-item-image .image {
   filter: grayscale(0);
+  transition: transform 0.5s;
 }
 .menu-grid .menu-grid-item-image:hover .image {
   opacity: 0.5;

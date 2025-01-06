@@ -66,7 +66,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/home" class="nav-link">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/privacy-policy" class="nav-link">
                                         <span class="text"><?php echo  FOOTER_OURS[7]; ?></span>
 
                                     </a>
@@ -82,8 +82,8 @@
                                             </a>
                                         </div>
                                         <div class="item-social">
-                                            <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link black black-hover" target="_blank"><i class="icon fab fa-facebook-f" style="color: white; font-size:2rem"></i></a>
-                                            <a href="https://www.instagram.com/tainobay_puertoplata/" class="link black black-hover" target="_blank"><i class="icon fab fa-instagram" style="color: white; font-size:2rem;"></i></a>
+                                            <a href="https://www.facebook.com//tainobayport/" class="link black black-hover" target="_blank"><i class="icon fab fa-facebook-f" style="color: white; font-size:2rem"></i></a>
+                                            <a href="https://www.instagram.com/tainobayport/" class="link black black-hover" target="_blank"><i class="icon fab fa-instagram" style="color: white; font-size:2rem;"></i></a>
                                             <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html" class="link black black-hover" target="_blank"><img src="assets/images/icons/tripadvisor-blanco.png" width="30" height="30" alt="Icono Tripadvisor"></a>
 
                                         </div>
@@ -98,7 +98,7 @@
         </div>
         <div class="bottom-bar">
             <div class="text">© <?php echo date("Y"); ?> - <?php echo SITIO ?>
-                All right reserved.
+                <?= FOOTER_RESERVED ?>
             </div>
         </div>
     </footer>

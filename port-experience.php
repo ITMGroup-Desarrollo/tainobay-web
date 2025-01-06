@@ -13,7 +13,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->
@@ -103,9 +103,9 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
           </div>
         </div>
 
-        <div class="text-center d-block mt-4">
+        <!-- <div class="text-center d-block mt-4">
           <a href="<?= $idioma ?>/map" class="d-inline-block text-uppercase button-transparent button-orange text-center"><strong><?= TEXT_BUTTON_PORT_EXPERIENCE ?></strong></a>
-        </div>
+        </div> -->
       </div>
     </section>
 

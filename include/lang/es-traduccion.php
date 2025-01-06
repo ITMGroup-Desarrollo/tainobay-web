@@ -5,7 +5,7 @@ define('SITIO', 'Taino Bay');
 define('SEARCH_TEXT', 'WHAT TO FIND?');
 
 define('MENU', array(
-    'Home',
+    'Inicio',
     'Qué hacer',
     'Puntos de interés',
     'Mapa',
@@ -50,6 +50,10 @@ define('FOOTER_PRIVACY', array(
     'PRIVACIDAD',
     'Política de privacidad',
 ));
+define(
+    'FOOTER_RESERVED',
+    'Todos los derechos reservados'
+);
 
 define("FRASE", array(
     'Taino Bay is a must. Must party, must do, must enjoy. ',

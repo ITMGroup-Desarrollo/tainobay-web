@@ -7,7 +7,7 @@ define('TITULOS_SINGLE_BANNER_PORT_EXPERIENCE', array(
 
 define(
   'TITULOS_SINGLE_EXPERIENCE',
-  'Menú'
+  'Galería'
 );
 
 define('TEXT_BUTTON_SINGLE_PORT', 'Ver el menú completo');
@@ -543,6 +543,73 @@ $points = [
     ],
     'pdf' => 'port-experience/taco-lover.pdf'
   ],
+[
+    'id' => 12,
+    'type' => 'restaurant',
+    'name' => 'Icekery',
+    'path' => 'icekery',
+    'logo' => 'icekery\icekery-white.svg',
+    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM120.17,87.24c3.72-12.43,9.93-21.51,17.22-25.35v55.25c0,8.33.16,26.27.47,35.5h-8.55c-.02-.96-.04-1.37-.08-4.64-.04-3.72-1.31-7.18-3.67-9.99-8.93-10.65-11.14-31.52-5.38-50.76ZM141.5,234.57c-2.04,2.28-4.79,3.54-7.74,3.54s-5.7-1.26-7.74-3.54c-2.04-2.28-3.08-5.27-2.93-8.41l3.84-67.47h13.67l3.84,67.45c.15,3.15-.89,6.14-2.93,8.42ZM172.74,234.57c-2.04,2.29-4.79,3.54-7.74,3.54-5.71,0-10.4-4.75-10.67-10.83,0,0,0,0,0,0h0c-.02-.37-.02-.75,0-1.12l3.87-67.47h13.61l3.61,62.12h0l.25,5.33c.15,3.15-.89,6.13-2.92,8.42ZM174.55,118.95c-4.53,3.48-7.01,8.95-6.65,14.6l.56,19.08h-6.93l.56-19.04c.36-5.69-2.13-11.17-6.65-14.64-5.76-4.43-8.91-11.39-8.42-18.65l2.11-36.11c.08-1.3,1.14-2.3,2.43-2.3h.05c1.33.03,2.4,1.13,2.39,2.47l-.38,36.24c-.01,1.13.41,2.2,1.2,3,.77.78,1.79,1.21,2.88,1.21,2.2,0,4.03-1.82,4.08-4.06l.73-36.45c.03-1.31,1.12-2.39,2.44-2.39h.06c1.32,0,2.41,1.07,2.44,2.39l.73,36.45c.05,2.28,1.85,4.06,4.08,4.06,1.09,0,2.11-.43,2.88-1.21.79-.8,1.22-1.86,1.2-3l-.38-36.24c-.01-1.33,1.06-2.44,2.39-2.47h.05c1.29,0,2.36,1,2.43,2.3l2.11,36.12s0,0,0,.01c.49,7.25-2.66,14.21-8.42,18.63Z"/>
+      </svg>',
+    'banner' => 'icekery\header-icekery-port-experience.webp',
+    'cover' => 'icekery\cover-icekery.webp',
+    'title' => 'Menu',
+    'gallery' => ['assets\images\port-experience\icekery\carousel-icekery.webp'],
+    'text_home' => "¡Encontramos la solución para el calor! Icekery es el lugar perfecto para disfrutar de un delicioso helado. Elige tu sabor y toppings favoritos, ¡y no dejes que se derrita!  ",
+    'menu' => [
+      [
+        'image' => 'cantina-latina-menu-1.jpg',
+        'image-position' => 'center',
+        'items' => [
+          [
+            'name' => 'Nachos',
+            'ingredients' => ['Veggie', 'Shrimp', 'Chicken', 'Mixed', 'Beef'],
+          ],
+          [
+            'name' => 'Appetizers',
+            'ingredients' => ['Frenchfries', 'Chips & Salsa', 'Cheese Sticks', 'Guacamole'],
+          ]
+        ]
+      ],
+      [
+        'image' => 'cantina-latina-menu-2.jpg',
+        'image-position' => 'bottom',
+        'items' => [
+          [
+            'name' => 'Dominican D',
+            'ingredients' => ['Bandera', 'Fried Fish', 'Mofongo', 'San Mangú', 'Sancocho']
+          ],
+          [
+            'name' => 'Grilled Meat',
+            'ingredients' => ['Buffalo Wings', 'Chicken Breast', 'Chicken Fajitas', 'Beef Fajitas']
+          ],
+          [
+            'name' => 'Side Dish',
+            'ingredients' => ['French Fries', 'Fried Plantain', 'Rice']
+          ]
+        ]
+      ]
+
+    ],
+    'single_gallery' => [
+      'assets\images\port-experience\icekery\gallery\ICEKERY_1.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_2.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_3.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_4.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_5.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_6.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_7.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_8.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_9.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_10.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_11.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_12.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_13.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_14.webp',
+      'assets\images\port-experience\icekery\gallery\ICEKERY_15.webp',
+    ],
+  ],
   [
     'name' => 'Lazy River',
     'path' => 'lazy-river',
@@ -690,7 +757,7 @@ $points = [
     ]
   ],
   [
-    'name' => 'Pool',
+    'name' => 'Alberca',
     'path' => 'pool',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
@@ -737,7 +804,7 @@ $points = [
     ]
   ],
   [
-    'name' => 'Beach',
+    'name' => 'Área de playa',
     'path' => 'beach',
     'logo' => '',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">

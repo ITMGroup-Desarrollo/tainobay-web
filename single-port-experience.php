@@ -42,7 +42,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
 </head>
 
 <body class="shock-body">
-
+  <?php include("include/gtm-body.php"); ?>
   <?php include("include/header.php"); ?>
 
   <!-- Main -->
@@ -87,7 +87,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
             </a>
           </div>
           <div class="col-12 col-md-6">
-            <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= $currentMenu['logo'] ? $currentMenu['name'] : "Gallery" ?>
+            <h2 class="text-style-3 lh-1 text-uppercase text-blue text-uppercase mb-0"><?= $currentMenu['logo'] ? $currentMenu['name'] : TITULOS_SINGLE_EXPERIENCE ?>
             </h2>
           </div>
           <div class="col">

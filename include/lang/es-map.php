@@ -1,5 +1,12 @@
 <?php
 define('TITULOS_MAP', array(
-    'Mapa',
-    'Explora y descubre',
+    'Explora',
+    'y',
+    'descubre.'
+));
+define('TABLAS_MAP', array(
+    'SHOPPING',
+    'ALIMENTOS Y BEBIDAS',
+    'SERVICIOS',
+    'PORT EXPERIENCE'
 ));

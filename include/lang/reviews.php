@@ -40,7 +40,7 @@ El paseo desde el muelle es un poco a pie, pero no demasiado largo y en el puert
     'review' => 'Excelente servicio la pasamos muy bien, siempre presente desde el principio, excelente experiencia con Wilmer',
   ],
   [
-    'avatar' => 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e4/ca/default-avatar-2020-51.jpg?w=100&h=100&s=1',
+    'avatar' => '',
     'name' => 'Liliana N',
     'url' => 'https://www.tripadvisor.com.mx/ShowUserReviews-g147290-d23803203-r878418361-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
     'date' => 'Feb - 2023',

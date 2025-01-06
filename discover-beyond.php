@@ -12,6 +12,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 </head>
 
 <body class="shock-body">
+    <?php include("include/gtm-body.php"); ?>
     <?php include("include/header.php"); ?>
 
     <!-- Main -->
@@ -153,7 +154,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
         // Seleccionar el archivo JSON según el idioma
         const dataFile = idioma === 'es' ? 'es-data-discover.json' : 'data-discover.json';
         // Cargar contenido dinámico desde el archivo JSON
-        $.getJSON('include/'+ dataFile , function(data) {
+        $.getJSON('include/' + dataFile, function(data) {
             console.log(data);
             const container = $('#carousel-sections-container');
             container.empty(); // Limpiar el contenedor antes de agregar nuevas secciones
