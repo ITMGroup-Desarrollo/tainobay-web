@@ -821,7 +821,6 @@ $points = [
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_7.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_8.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_6.webp',
-      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_1.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_5.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_4.webp',
     ],
