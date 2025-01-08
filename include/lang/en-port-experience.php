@@ -501,12 +501,13 @@ $points = [
 
     ],
     'single_gallery' => [
+      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_6.webp',
+      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_7.webp',
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_1.webp',
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_2.webp',
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_3.webp',
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_4.webp',
       'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_5.webp',
-
     ],
     'pdf' => 'port-experience/rum-rum-bar.pdf'
   ],
@@ -814,8 +815,11 @@ $points = [
     'text_home' => "Catch a wave and get some sun! Our Splash surfing experience gives you the adrenaline rush you need while at the port! *Activity with extra cost.",
     'gallery' => ['assets\images\port-experience\splash-surfing\carousel-spash.webp'],
     'single_gallery' => [
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_9.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_3.webp',
-      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_1.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_7.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_8.webp',
+      'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_6.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_5.webp',
       'assets\images\port-experience\splash-surfing\gallery\SPLASH_SURFFING_4.webp',
     ],
@@ -895,6 +899,31 @@ $points = [
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
+    ],
+  ],
+  [
+    'id' => 18,
+    'type' => 'public',
+    'name' => 'Shopping Experience',
+    'path' => 'shopping-experience',
+    'logo' => '',
+    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <path class="cls-1" d="M450.18,238.19c-50.22,0-90.84,61.34-90.84,136.09h181.32c0-74.76-40.63-136.09-90.48-136.09Z"/>
+  <path class="cls-1" d="M343.99,404.58c-8.04,0-14.95,6.89-14.95,15.33s6.9,14.96,14.95,14.96c8.45,0,15.35-6.52,15.35-14.96s-6.9-15.33-15.35-15.33Z"/>
+  <path class="cls-1" d="M556,404.58c-8.42,0-15.34,6.89-15.34,15.33s6.91,14.96,15.34,14.96,14.96-6.52,14.96-14.96-6.53-15.33-14.96-15.33Z"/>
+  <path class="cls-1" d="M450,0C201.47,0,0,201.47,0,450.01s201.47,449.99,450,449.99,450-201.47,450-449.99S698.53,0,450,0ZM631.52,692.09h-363.03v-317.81h60.56c0-91.63,54.44-166.38,121.14-166.38s120.77,74.74,120.77,166.38h60.56v317.81Z"/>
+</svg>',
+    'banner' => 'shopping-experience/header-retail.webp',
+    'cover' => '/shopping-experience/cover-shopping-experience.webp',
+    'title' => 'Gallery',
+    'text_home' => "A shopping experience to enjoy. From beauty, to souvenirs, and jewelry, find amazing souvenirs at our stores!",
+    'gallery' => ['assets\images\port-experience\shopping-experience\carousel-shopping-experience.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\shopping-experience\gallery\retail_1.webp',
+      'assets\images\port-experience\shopping-experience\gallery\retail_2.webp',
+      'assets\images\port-experience\shopping-experience\gallery\retail_3.webp',
+      'assets\images\port-experience\shopping-experience\gallery\retail_4.webp',
+      'assets\images\port-experience\shopping-experience\gallery\retail_5.webp',
     ],
   ],
 ];

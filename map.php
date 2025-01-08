@@ -10,6 +10,44 @@ include_once("include/lang/{$idioma}-map.php");
     <link rel="stylesheet" href="assets/css/vendor/map.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        .shock-header .navbar {
+            background-color: var(--blue-color);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .shock-header .navbar.absolute {
+            position: relative;
+        }
+
+        .shock-header .navbar.fixed-on-scroll.fixed-top {
+            position: fixed !important;
+        }
+
+        section.map-section {
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .shock-header .navbar {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .shock-header #menu-toggle.show {
+                display: none;
+            }
+
+            .shock-header #menu-fixed,
+            .shock-header #menu-fixed.show {
+                display: flex;
+                visibility: visible;
+                opacity: 1;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 
 <body class="shock-body">
@@ -17,29 +55,7 @@ include_once("include/lang/{$idioma}-map.php");
     <?php include("include/header.php"); ?>
     <!-- Main -->
     <main id="main" class="shock-main">
-        <!-- banner -->
-        <section class="shock-section has-overlay">
-            <div class="banner d-flex align-items-center">
-                <div class="content-wrapper top-zero ">
-                    <!-- Intro -->
-                    <div class="basic-intro text-center">
-                        <h1 class="title white text-1 banner-title text-uppercase fw-bold">
-                            <?= TITULOS_MAP[0]; ?>
-                        </h1>
-                        <p class="text-white banner-subtitle"><?= TITULOS_MAP[1]; ?></p>
-                    </div>
-                </div>
-                <!-- Image -->
-                <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/media/header-contacto.jpg')">
 
-                    </div>
-                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
-                </div>
-                <!-- Overlay -->
-                <div class="overlay-banner"></div>
-            </div>
-        </section>
         <!-- Content -->
         <section class="shock-section map-section">
             <div class="filter-container" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
@@ -85,7 +101,7 @@ include_once("include/lang/{$idioma}-map.php");
                             </tr>
                         </table>
                     </div>
-                </div> 
+                </div>
                 <!-- fun -->
                 <div class="leaflet-control-filter fun">
                     <div class="filter-header">
@@ -95,7 +111,7 @@ include_once("include/lang/{$idioma}-map.php");
                             <span class="slider round"></span>
                         </label>
                         <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
-                        
+
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -199,13 +215,13 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/bar.svg" alt="TIKI-TIKI"></td>
                                 <td>TIKI TIKI BAR</td>
                             </tr>
-                            
+
                         </table>
                     </div>
                 </div>
                 <!-- shop -->
                 <div class="leaflet-control-filter shop">
-                        <div class="filter-header">
+                    <div class="filter-header">
                         <span class="header-text"><?php echo TABLAS_MAP[0]; ?></span>
                         <label class="switch">
                             <input type="checkbox">
@@ -365,7 +381,6 @@ include_once("include/lang/{$idioma}-map.php");
 </body>
 <script>
     const idioma = "<?php echo $idioma; ?>";
-    
 </script>
 <script src="assets/js/vendor/map.js"></script>
 <script>
