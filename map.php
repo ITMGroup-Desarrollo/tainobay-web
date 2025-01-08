@@ -129,7 +129,7 @@ include_once("include/lang/{$idioma}-map.php");
                             </tr>
                             <tr data-marker-id="3">
                                 <td><img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="THE-RIVER"></td>
-                                <td>THE RIVER</td>
+                                <td>LAZY RIVER</td>
                             </tr>
                             <tr data-marker-id="4">
                                 <td><img src="assets/icons/map/port-experience/splash-marker.svg" alt="SPLASH-SUFRING"></td>
