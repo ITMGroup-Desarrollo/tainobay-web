@@ -1,6 +1,26 @@
 {
     "posts": [
         {
+            "id": 4,
+            "title": "¡3-años-de-Taino-Bay!",
+            "subtitle":"",
+            "description": "¡Increíble cómo pasa el tiempo, verdad? Diciembre marcó nuestro tercer aniversario.",
+            "content": "¡Increíble cómo pasa el tiempo, verdad? Diciembre marcó nuestro tercer aniversario. Llegar a la hermosa Novia del Atlántico ha sido una experiencia mágica, y nos llena de orgullo haber crecido aquí. Crear experiencias inolvidables ha sido nuestra pasión desde siempre, y puedes verlo reflejado en cada rincón del puerto.\n\n¡En estos tres años hemos crecido tanto! Aquí te compartimos algunas de las experiencias que hemos creado especialmente para ti durante estos años:\n\nLazy River: El lugar perfecto para relajarte y divertirte al mismo tiempo. ¡Toma una dona y déjate llevar por la corriente!\nSplash Surfing: ¿En mood para surfear? Nuestro simulador de olas te espera para disfruta. Puedes encontrar esta atracción en nuestra nueva área inspirada en la playa.\nIcekery: ¡El calor de República Dominicana es incomparable! La mejor forma de combatirlo es con un delicioso helado. En Icekery podrás disfrutar de una gran variedad de sabores y toppings para consentir tu paladar.\nMr. Rum’s Quest: Una experiencia única con ron y tabaco que recordarás para siempre. Vive la aventura de Mr. Rum y descubre los sabores de nuestro exquisito ron dominicano.\nY, por supuesto, no podemos olvidar mencionar nuestros restaurantes y bares, siempre listos para ofrecerte comida fresca y un sabor único que hará que cada comida sea especial.\nQueremos agradecerte por ser parte de tantos momentos felices. Es un honor acompañarte en tus vacaciones y en tu tiempo en República Dominicana. Estamos agradecidos contigo y, por supuesto, con nuestro equipo, que ha sido un pilar fundamental en nuestro crecimiento.\n\n¡Por muchos más años de aventuras y recuerdos juntos! <3",
+            "image_url": "assets/images/blog/aniversary/blog-taino-7.webp",
+            "image_url2": "assets/images/blog/aniversary/blog-taino-3.webp",
+            "day": 15,
+            "month": "Dic.",
+            "images": [
+                "assets/images/blog/aniversary/blog-taino-1.webp",
+                "assets/images/blog/aniversary/blog-taino-2.webp",
+                "assets/images/blog/aniversary/blog-taino-3.webp",
+                "assets/images/blog/aniversary/blog-taino-4.webp",
+                "assets/images/blog/aniversary/blog-taino-5.webp",
+                "assets/images/blog/aniversary/blog-taino-6.webp",
+                "assets/images/blog/aniversary/blog-taino-7.webp"
+            ]
+        },
+        {
             "id": 1,
             "title": "La-playa-llegó-a-Taino-Bay",
             "subtitle":"",

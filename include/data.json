@@ -1,6 +1,26 @@
 {
     "posts": [
         {
+            "id": 4,
+            "title": "3-years-of-Taino-Bay!",
+            "subtitle":"",
+            "description": "Wow! Life has truly passed us by, hasn't it? December marks our 3rd anniversary! And what a ride it has been.",
+            "content": "Wow! Life has truly passed us by, hasn't it? December marks our 3rd anniversary! And what a ride it has been. Arriving to the beautiful Bride of the Atlantic has been something magic and we are proud to have grown here. Creating lifetime experiences has been a passion for us always, and you can see it in Taino Bay.\n\nDuring this time, we have grown so much! These are some of our the experiences we have created for you on these past few years!:\n\nLazy River: The top spot for relaxing while having fun. Grab a floatie and let yourself go!\nSplash Surfing: In the mood for surf? This wave simmulator is available for you to enjoy upon arrival. It is located on our brand new beach-inspired area.\nIcekery: Dominican heat is strong! The best way to fight it is while having a delicious ice cream. At Icekery you'll find delicious flavors and toppings to enjoy.\nMr Rum's Quest: A rum and tobacco experience you'll remember forever! Discover the adventure of Mr. Rum and taste the delicious Dominican rum.\nOf course, we can't forget to mention our restaurants and bars, that are always ready to serve fresh food and a unique taste to everything.\n\nTo many more! <3",
+            "image_url": "assets/images/blog/aniversary/blog-taino-7.webp",
+            "image_url2": "assets/images/blog/aniversary/blog-taino-3.webp",
+            "day": 15,
+            "month": "Dic.",
+            "images": [
+                "assets/images/blog/aniversary/blog-taino-1.webp",
+                "assets/images/blog/aniversary/blog-taino-2.webp",
+                "assets/images/blog/aniversary/blog-taino-3.webp",
+                "assets/images/blog/aniversary/blog-taino-4.webp",
+                "assets/images/blog/aniversary/blog-taino-5.webp",
+                "assets/images/blog/aniversary/blog-taino-6.webp",
+                "assets/images/blog/aniversary/blog-taino-7.webp"
+            ]
+        },
+        {
             "id": 1,
             "title": "Lets-Make-a-Splash-Together!",
             "subtitle":"",
