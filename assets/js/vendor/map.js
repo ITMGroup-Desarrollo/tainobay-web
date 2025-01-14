@@ -2,6 +2,7 @@
 // Detectar si es un dispositivo móvil
 var isMobile = window.innerWidth <= 768;
 // #endregion
+
 // #region Configuración del mapa
 // Configuración del mapa
 var map = L.map("map", {
@@ -26,6 +27,7 @@ if (!isMobile) {
   map.scrollWheelZoom.disable();
 }
 // #endregion
+
 // #region Configuración de tamaño y zoom según el dispositivo
 var bounds = [
   [0, 0],
@@ -471,6 +473,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
+            <p>Freshen up upon arrival. Grab a spot and don’t miss the party and shows</p>
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -497,6 +500,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
+            <p>Freshen up upon arrival. Grab a spot and don’t miss the party and shows</p>            
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -524,6 +528,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
+            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -549,6 +554,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
+            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -574,6 +580,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
+            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -599,6 +606,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
+            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -723,22 +731,13 @@ var markers = {
   10: [
     L.marker([883, 1260], { icon: showIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -748,22 +747,13 @@ var markers = {
       }),
     L.marker([975, 1070], { icon: showIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -773,22 +763,13 @@ var markers = {
       }),
     L.marker([825, 495], { icon: showIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -798,22 +779,13 @@ var markers = {
       }),
     L.marker([745, 605], { icon: showIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -823,22 +795,13 @@ var markers = {
       }),
     L.marker([445, 395], { icon: showIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -850,22 +813,13 @@ var markers = {
   11: [
     L.marker([865, 1205], { icon: fruitIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -875,22 +829,13 @@ var markers = {
       }),
     L.marker([975, 755], { icon: fruitIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -900,22 +845,13 @@ var markers = {
       }),
     L.marker([415, 310], { icon: fruitIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -925,22 +861,13 @@ var markers = {
       }),
     L.marker([430, 275], { icon: fruitIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -950,22 +877,13 @@ var markers = {
       }),
     L.marker([255, 305], { icon: fruitIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -977,22 +895,13 @@ var markers = {
   12: [
     L.marker([800, 1300], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1002,22 +911,13 @@ var markers = {
       }),
     L.marker([940, 1090], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1027,22 +927,13 @@ var markers = {
       }),
     L.marker([945, 940], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1052,22 +943,13 @@ var markers = {
       }),
     L.marker([1040, 845], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1077,22 +959,13 @@ var markers = {
       }),
     L.marker([645, 715], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1102,22 +975,13 @@ var markers = {
       }),
     L.marker([900, 535], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1127,22 +991,13 @@ var markers = {
       }),
     L.marker([410, 430], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1152,22 +1007,13 @@ var markers = {
       }),
     L.marker([300, 260], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1177,22 +1023,13 @@ var markers = {
       }),
     L.marker([220, 335], { icon: camaraIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1204,22 +1041,13 @@ var markers = {
   13: [
     L.marker([810, 1230], { icon: starIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to book your favorite tour upon arrival</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1229,22 +1057,13 @@ var markers = {
       }),
     L.marker([835, 1295], { icon: starIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to book your favorite tour upon arrival</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1254,22 +1073,13 @@ var markers = {
       }),
     L.marker([900, 1130], { icon: starIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Don't Forget to book your favorite tour upon arrival</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1282,22 +1092,13 @@ var markers = {
   14: [
     L.marker([185, 270], { icon: taxiIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Transportation services</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -1309,22 +1110,13 @@ var markers = {
   15: [
     L.marker([920, 1280], { icon: shorexIcon })
       .addTo(map)
-      // .bindPopup(
-      //   `
-      //       <div class="pop" style="text-align: center;">
-      //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
-      //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
-      //               <button 
-      //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
-      //                 onmouseout="this.style.backgroundColor='#1c355e';">
-      //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
-      //               </button>
-      //           </a>
-      //       </div>
-      //   `
-      // )
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <p>Find your excursion upon arrival!</p>
+            </div>
+        `
+      )
       .on("click", function (e) {
         this.openPopup();
         map.setView(this.getLatLng(), map.getZoom(), {
@@ -2116,6 +1908,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
+            <p>Let’s start this party with a drink</p>
             </div>
         `
       )
@@ -2400,8 +2193,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px;"">
-
+            <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
+            <p>Need a drink for the pool? We got you</p>
             </div>
         `
       )
