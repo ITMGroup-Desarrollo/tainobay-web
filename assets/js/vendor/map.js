@@ -2,7 +2,6 @@
 // Detectar si es un dispositivo móvil
 var isMobile = window.innerWidth <= 768;
 // #endregion
-
 // #region Configuración del mapa
 // Configuración del mapa
 var map = L.map("map", {
@@ -22,8 +21,11 @@ var map = L.map("map", {
 L.control.zoom({
   position: 'topright' // Cambia 'topright' a la posición deseada ('topleft', 'bottomleft', 'bottomright')
 }).addTo(map);
+// Deshabilitar el zoom con el scroll del mouse si no es un dispositivo móvil
+if (!isMobile) {
+  map.scrollWheelZoom.disable();
+}
 // #endregion
-
 // #region Configuración de tamaño y zoom según el dispositivo
 var bounds = [
   [0, 0],
@@ -148,7 +150,7 @@ var foodIcon = L.divIcon({
 var drugstoreIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="200"
      data-aos-offset="0">
                <img src="assets/icons/map/drugstore.svg" alt="drugstore" width="20" height="20">
            </div>`,
@@ -160,7 +162,7 @@ var drugstoreIcon = L.divIcon({
 var experienceIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="300"
      data-aos-offset="0">
                <img src="assets/icons/map/experience.svg" alt="experience" width="20" height="20">
            </div>`,
@@ -172,7 +174,7 @@ var experienceIcon = L.divIcon({
 var showIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="400"
      data-aos-offset="0">
                <img src="assets/icons/map/show.svg" alt="experience" width="20" height="20">
            </div>`,
@@ -196,7 +198,7 @@ var fruitIcon = L.divIcon({
 var camaraIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="200"
      data-aos-offset="0">
                <img src="assets/icons/map/camara.svg" alt="experience" width="20" height="20">
            </div>`,
@@ -208,7 +210,7 @@ var camaraIcon = L.divIcon({
 var starIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="300"
      data-aos-offset="0">
                <img src="assets/icons/map/star.svg" alt="experience" width="20" height="20">
            </div>`,
@@ -220,7 +222,7 @@ var starIcon = L.divIcon({
 var taxiIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="400"
      data-aos-offset="0">
                <img src="assets/icons/map/taxi.svg" alt="experience" width="20" height="20">
            </div>`,
@@ -244,7 +246,7 @@ var shorexIcon = L.divIcon({
 var poolIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="200"
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/pool-marker.svg" alt="pool" width="20" height="20">
            </div>`,
@@ -256,7 +258,7 @@ var poolIcon = L.divIcon({
 var beachIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="300"
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/beach-marker.svg" alt="beach" width="20" height="20">
            </div>`,
@@ -268,7 +270,7 @@ var beachIcon = L.divIcon({
 var rumquestIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="400"
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="rum-quest" width="20" height="20">
            </div>`,
@@ -292,7 +294,7 @@ var riverIcon = L.divIcon({
 var splashIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="200"
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/splash-marker.svg" alt="splash-surfing" width="20" height="20">
            </div>`,
@@ -304,7 +306,7 @@ var splashIcon = L.divIcon({
 var spaIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="300"
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/spa-marker.svg" alt="spa wellness" width="20" height="20">
            </div>`,
@@ -316,7 +318,7 @@ var spaIcon = L.divIcon({
 var monkeyIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="100"
+     data-aos-delay="400"
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/monkey-marker.svg" alt="monkey-island" width="20" height="20">
            </div>`,
@@ -358,9 +360,9 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">LAZY RIVER</p>
                 <p>Let’s float around and enjoy the ride!</p>
                 <a href="${idioma}/port-experience/lazy-river" >
-                <p class="popupTitle">LAZY RIVER</p>
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
@@ -2536,35 +2538,38 @@ var lastClickedId = null;
 var markersVisible = true;
 
 // Evento para manejar el click en las filas de la tabla
-if(!isMobile){
-$(document).on("click", ".tabla-icons tr", function () {
-  var markerId = $(this).data("marker-id");
-  var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
+if (!isMobile) {
+  $(document).on("click", ".tabla-icons tr", function () {
+    var markerId = $(this).data("marker-id");
+    var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
 
-  if (lastClickedId === markerId && !markersVisible) {
-    // Si se hace clic en el mismo ícono y los marcadores están ocultos, mostrar todos los marcadores
-    $.each(markers, function (id, markerGroup) {
-      markerGroup.forEach(function (marker) {
+    if (lastClickedId === markerId && !markersVisible) {
+      // Si se hace clic en el mismo ícono y los marcadores están ocultos, mostrar todos los marcadores
+      $.each(markers, function (id, markerGroup) {
+        markerGroup.forEach(function (marker) {
+          map.addLayer(marker);
+        });
+      });
+      markersVisible = true; // Marcar que los marcadores están visibles
+      lastClickedId = null; // Resetear lastClickedId para permitir nueva selección
+
+      // Cambiar el estado de los checkboxes de todas las tablas a activo
+      $(".filter-header .switch input[type='checkbox']").prop("checked", true);
+    } else {
+      // Ocultar todos los marcadores
+      $.each(markers, function (id, markerGroup) {
+        markerGroup.forEach(function (marker) {
+          map.removeLayer(marker);
+        });
+      });
+      // Mostrar solo los marcadores seleccionados
+      selectedMarkers.forEach(function (marker) {
         map.addLayer(marker);
       });
-    });
-    markersVisible = true; // Marcar que los marcadores están visibles
-    lastClickedId = null; // Resetear lastClickedId para permitir nueva selección
-  } else {
-    // Ocultar todos los marcadores
-    $.each(markers, function (id, markerGroup) {
-      markerGroup.forEach(function (marker) {
-        map.removeLayer(marker);
-      });
-    });
-    // Mostrar solo los marcadores seleccionados
-    selectedMarkers.forEach(function (marker) {
-      map.addLayer(marker);
-    });
-    markersVisible = false; // Marcar que los marcadores están ocultos
-    lastClickedId = markerId; // Actualizar lastClickedId al último marcador clicado
-  }
-});
+      markersVisible = false; // Marcar que los marcadores están ocultos
+      lastClickedId = markerId; // Actualizar lastClickedId al último marcador clicado
+    }
+  });
 }
 if(isMobile){
   $(document).on("click", ".tabla-icons tr", function () {
@@ -2603,6 +2608,7 @@ if(isMobile){
   });
 }
 // Nueva funcionalidad para filtrar por tabla al cambiar el estado del switch
+if(isMobile){
 $(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
   var table = $(this).closest(".leaflet-control-filter").find("table");
   var tableIndex = table.index();
@@ -2641,69 +2647,38 @@ $(document).on("change", ".filter-header .switch input[type='checkbox']", functi
     lastClickedId = null; // Resetear lastClickedId
   }
 });
+}
+if (!isMobile) {
+  // Activar todos los checkboxes al inicio
+  $(".filter-header .switch input[type='checkbox']").prop("checked", true);
 
-// // Nueva funcionalidad para filtrar por tabla al hacer clic en el span.header-text
-// $(document).on("click", ".header-text", function () {
-//   var table = $(this).closest(".leaflet-control-filter").find("table");
-//   var tableIndex = table.index();
-//   var markerIds = table
-//     .find("tr")
-//     .map(function () {
-//       return $(this).data("marker-id");
-//     })
-//     .get();
+  $(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
+    var table = $(this).closest(".leaflet-control-filter").find("table");
+    var markerIds = table
+      .find("tr")
+      .map(function () {
+        return $(this).data("marker-id");
+      })
+      .get();
 
-//   // Verificar si el filtro ya está activo para esta tabla
-//   if (lastClickedId === "table-" + tableIndex && !markersVisible) {
-//     // Mostrar todos los marcadores (quitar filtro)
-//     $.each(markers, function (id, markerGroup) {
-//       markerGroup.forEach(function (marker) {
-//         map.addLayer(marker);
-//       });
-//     });
-
-//     markersVisible = true; // Marcar que los marcadores están visibles
-//     lastClickedId = null; // Resetear el último clic
-//   } else {
-//     // Aplicar filtro: ocultar todos los marcadores
-//     $.each(markers, function (id, markerGroup) {
-//       markerGroup.forEach(function (marker) {
-//         map.removeLayer(marker);
-//       });
-//     });
-
-//     // Mostrar solo los marcadores correspondientes a la tabla seleccionada
-//     markerIds.forEach(function (markerId) {
-//       markers[markerId].forEach(function (marker) {
-//         map.addLayer(marker);
-//       });
-//     });
-
-//     markersVisible = false; // Marcar que los marcadores están filtrados
-//     lastClickedId = "table-" + tableIndex; // Actualizar lastClickedId
-//   }
-// });
-
-
-// // Evento para manejar la activación visual de las filas
-// document.querySelectorAll(".tabla-icons tr").forEach((row) => {
-//   row.addEventListener("click", function () {
-//     // Si la fila ya tiene la clase 'active', se la quita
-//     if (this.classList.contains("active")) {
-//       this.classList.remove("active");
-//     } else {
-//       // Si no, se la quita de todas las filas y la añade solo a la fila actual
-//       document
-//         .querySelectorAll(".tabla-icons tr.active")
-//         .forEach((activeRow) => {
-//           activeRow.classList.remove("active");
-//         });
-
-//       // Añade la clase 'active' solo a la fila clickeada
-//       this.classList.add("active");
-//     }
-//   });
-// });
+    if ($(this).is(":checked")) {
+      // Switch activado: mostrar los marcadores de esta tabla
+      markerIds.forEach(function (markerId) {
+        markers[markerId].forEach(function (marker) {
+          map.addLayer(marker);
+        });
+      });
+    } else {
+      // Switch desactivado: ocultar los marcadores de esta tabla
+      markerIds.forEach(function (markerId) {
+        markers[markerId].forEach(function (marker) {
+          map.removeLayer(marker);
+        });
+      });
+    }
+  });
+}
+// funcionalidad para modificar las columnas de las tablas de filtrado dependiendo de la cantidad de elementos
 document.addEventListener("DOMContentLoaded", function () {
   // Selecciona todas las tablas con la clase 'tabla-icons'
   var tablas = document.querySelectorAll(".tabla-icons");

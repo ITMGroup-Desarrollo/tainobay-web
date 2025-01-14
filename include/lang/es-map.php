@@ -5,7 +5,7 @@ define('TITULOS_MAP', array(
     'descubre.'
 ));
 define('TABLAS_MAP', array(
-    'SHOPPING',
+    'SHOPPING EXPERIENCE',
     'ALIMENTOS Y BEBIDAS',
     'SERVICIOS',
     'PORT EXPERIENCE'
