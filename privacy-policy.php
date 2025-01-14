@@ -7,6 +7,44 @@ include_once("include/lang/{$idioma}-privacy-policy.php");
 
 <head>
     <?php include("include/head.php"); ?>
+    <style>
+        .shock-header .navbar {
+            background-color: var(--blue-color);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .shock-header .navbar.absolute {
+            position: relative;
+        }
+
+        .shock-header .navbar.fixed-on-scroll.fixed-top {
+            position: fixed !important;
+        }
+
+        section.map-section {
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .shock-header .navbar {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .shock-header #menu-toggle.show {
+                display: none;
+            }
+
+            .shock-header #menu-fixed,
+            .shock-header #menu-fixed.show {
+                display: flex;
+                visibility: visible;
+                opacity: 1;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 
 <body class="shock-body">
