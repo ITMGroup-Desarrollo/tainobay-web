@@ -44,7 +44,7 @@
             foreach ($points as $point) { ?>
                 <div class="slide-item side-intro <?= $point['id'] == '1' ? 'current-slide' : '' ?>">
                     <!-- share -->
-                    <div class="slide-share position-absolute share p-1 button-share">
+                    <div class="slide-share position-absolute share p-1 button-share" style="z-index: 99;">
                         <div class="container-btn">
                             <div class="redes">
                                 <a target="_blank" class="bg-orange" href="https://www.facebook.com/sharer/sharer.php?u=https://www.porttainobay.com/<?= $idioma; ?>/port-experience/<?= $point['path'] ?>"><i class="icon fab fa-facebook-f"></i></a>

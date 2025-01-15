@@ -718,7 +718,7 @@
             foreach ($tours as $tour) { ?>
                 <div class="slide-item side-intro <?= $tour['id'] == '1' ? 'current-slide' : '' ?>">
                     <!-- share -->
-                    <div class="slide-share position-absolute p-1 share-r button-share">
+                    <div class="slide-share position-absolute p-1 share-r button-share" style="z-index: 99;">
                         <div class="container-btn">
                             <div class="redes">
                                 <a target="_blank" class="bg-blue" href="https://www.facebook.com/sharer/sharer.php?u=https://www.porttainobay.com/<?= $idioma; ?>/discover-beyond"><i class="icon fab fa-facebook-f"></i></a>
