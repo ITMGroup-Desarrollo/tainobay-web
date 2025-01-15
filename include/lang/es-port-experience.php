@@ -941,7 +941,7 @@ $points = [
     'banner' => 'huracan/header-huracan.webp',
     'cover' => '/huracan/cover-huracan.webp',
     'title' => 'Gallery',
-    'text_home' => "A shopping experience to enjoy. From beauty, to souvenirs, and jewelry, find amazing souvenirs at our stores!",
+    'text_home' => "¡Justo al lado de la piscina! Disfruta tu bebida favorita para celebrar y encuentra el mejor spot para ver el main show.",
     'gallery' => ['assets\images\port-experience\huracan\carousel-huracan.webp'],
     'single_gallery' => [
       'assets\images\port-experience\huracan\gallery\huracan_1.webp',
