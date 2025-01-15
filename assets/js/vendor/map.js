@@ -342,7 +342,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Experiencia' : 'Experience'}</p>
+                <p>Follow Mr Rum and enjoy a fun journey through history!</p>
                 
             </div>
         `
@@ -473,7 +473,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
-            <p>Freshen up upon arrival. Grab a spot and don’t miss the party and shows</p>
+            <p>Freshen up upon arrival. Grab a spot and enjoy!</p>
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -782,7 +782,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+            <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>Don't miss the main&nbspshow!</p>
             </div>
         `
       )
@@ -816,6 +817,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
             </div>
         `
@@ -832,6 +834,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
             </div>
         `
@@ -848,6 +851,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
             </div>
         `
@@ -864,6 +868,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
             </div>
         `
@@ -880,6 +885,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
             </div>
         `
@@ -898,6 +904,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -914,6 +921,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -930,6 +938,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -946,6 +955,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -962,6 +972,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -978,6 +989,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -994,6 +1006,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -1010,6 +1023,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -1026,6 +1040,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -1044,6 +1059,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to book your favorite tour upon arrival</p>
             </div>
         `
@@ -1060,6 +1076,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to book your favorite tour upon arrival</p>
             </div>
         `
@@ -1076,6 +1093,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to book your favorite tour upon arrival</p>
             </div>
         `
@@ -1095,6 +1113,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/taxi-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Transportation services</p>
             </div>
         `
@@ -1113,6 +1132,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/shorex-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Find your excursion upon arrival!</p>
             </div>
         `
@@ -2112,7 +2132,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px;">
+                <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
                 <p>Let’s get spicy!</p>
                 <a href="${idioma}/port-experience/taco-lover" >
                     <button 
