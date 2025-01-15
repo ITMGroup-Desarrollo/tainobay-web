@@ -930,7 +930,7 @@ $points = [
   [
     'id' => 19,
     'type' => 'public',
-    'name' => 'Huracan Lounge Bar',
+    'name' => 'Huracan Lounge&nbsp;Bar',
     'path' => 'huracan-bar',
     'logo' => 'huracan/huracan-white.svg',
     'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
