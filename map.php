@@ -234,7 +234,7 @@ include_once("include/lang/{$idioma}-map.php");
                         <table class="tabla-icons">
                             <tr data-marker-id="20">
                                 <td><img src="assets/icons/map/retail.svg" alt="DIAMONDS"></td>
-                                <td>DIAMONDS</td>
+                                <td>DIAMONDS INTERNATIONAL</td>
                             </tr>
                             <tr data-marker-id="21">
                                 <td><img src="assets/icons/map/retail.svg" alt="DUFRY"></td>

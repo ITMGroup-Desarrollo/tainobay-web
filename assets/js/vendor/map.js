@@ -734,6 +734,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
             </div>
         `
@@ -750,6 +751,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
             </div>
         `
@@ -766,6 +768,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
             </div>
         `
@@ -799,6 +802,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
             </div>
         `
@@ -904,7 +908,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -921,7 +925,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -938,7 +942,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -955,7 +959,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -972,7 +976,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -989,7 +993,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -1006,7 +1010,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -1023,7 +1027,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -1040,7 +1044,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+            <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>Don't Forget to Share your pics and tag us on Instagram</p>
             </div>
         `
@@ -1151,7 +1155,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <p class="popupTitle">DIAMONDS</p>
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+            <p class="popupTitle">DIAMONDS INTERNATIONAL</p>
             <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
             
             </div>
@@ -1171,8 +1176,9 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DUFRY</p>
-                <p>${idioma === 'es' ? 'Big Retailer' : 'Big Retailer'}</p>
+                <p>Big Retailer</p>
             </div>
         `
       )
@@ -1190,6 +1196,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BLUE STONE</p>
                 <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
             </div>
@@ -1207,6 +1214,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BLUE STONE</p>
                 <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
             </div>
@@ -1226,6 +1234,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MORENA MIA</p>
                 <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
@@ -1243,7 +1252,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>MORENA MIA</p>
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">MORENA MIA</p>
                 <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
@@ -1260,7 +1270,8 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <p>MORENA MIA</p>
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">MORENA MIA</p>
                 <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
         `
@@ -1279,6 +1290,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PAWS BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Gift Shop' : 'Gift Shop'}</p>
             </div>
@@ -1298,6 +1310,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TSUNAMI XL</p>
                 <p>${idioma === 'es' ? 'Conveniencia' : 'Convenience Store'}</p>
             </div>
@@ -1317,6 +1330,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIRAÑA JOE</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
@@ -1336,6 +1350,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ISLAND LIFE - SURF SHOP</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
@@ -1355,6 +1370,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS'</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
@@ -1372,6 +1388,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
@@ -1389,6 +1406,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
@@ -1408,6 +1426,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CHRISTMAS BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1427,6 +1446,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">RUTA DE LAS INDAS</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
@@ -1446,6 +1466,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE TIE DYE HUT</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
@@ -1465,6 +1486,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIÑA COLADA BOUTIQUE</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
@@ -1484,6 +1506,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHARK ATTACK</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1501,6 +1524,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHARK ATTACK</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1520,6 +1544,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BLOSSOM SOAP</p>
                 <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
             </div>
@@ -1539,6 +1564,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SEA SALT</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1556,6 +1582,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SEA SALT</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1575,6 +1602,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LOCAL ITM</p>
                 <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
             </div>
@@ -1593,6 +1621,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LOCAL ITM</p>
                 <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
             </div>
@@ -1612,6 +1641,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MEXICAN EXPERIENCE</p>
                 <p>${idioma === 'es' ? 'Gift Shop/Tabaco' : 'Gift Shop/Tobacco'}</p>
             </div>
@@ -1631,6 +1661,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MUSEO DEL TABACO</p>
                 <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
             </div>
@@ -1650,6 +1681,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
             </div>
@@ -1667,6 +1699,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
             </div>
@@ -1684,6 +1717,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
             </div>
@@ -1703,6 +1737,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">${idioma === 'es' ? 'FARMACIA TAINO BAY' : 'TAINO BAY DRUGSTORE'}</p>
             </div>
         `
@@ -1721,6 +1756,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TAINO LOGO SHOP</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1740,6 +1776,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN YUCAYAQUE</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
@@ -1759,6 +1796,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TURQUESA</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1776,6 +1814,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TURQUESA</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1795,6 +1834,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">NATURAL BEAUTY</p>
                 <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
             </div>
@@ -1814,6 +1854,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">HARD ROCK CAFE</p>
                 <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
             </div>
@@ -1833,6 +1874,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DEL SOL</p>
                 <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
             </div>
@@ -1852,6 +1894,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">${idioma === 'es' ? 'FARMACIA' : 'DRUGSTORE'}</p>
             </div>
         `
@@ -1870,6 +1913,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VEARI PIEL</p>
                 <p>${idioma === 'es' ? 'Artículos de Piel ' : 'Leather goods'}</p>
             </div>
@@ -1889,6 +1933,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ABYSSAL</p>
                 <p>${idioma === 'es' ? 'Tienda destino ' : 'Store'}</p>
             </div>
@@ -1908,6 +1953,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle" >VELASCO HABANOS</p>
                 <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
             </div>
@@ -2313,7 +2359,9 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CHOCOLATE WORLD</p>
+                <p>Store</p>
             </div>
         `
       )
