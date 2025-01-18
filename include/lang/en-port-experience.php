@@ -969,10 +969,10 @@ $points = [
         <path class="cls-1" d="M 257.3 366 c -0.1 0.1 -0.1 0.1 -0.1 0.2 v 6.4 h 0.1 c 0 -2.2 0 -4.4 0 -6.6 Z"/>
         <path class="cls-1" d="M 455.9 740.5 c -1.6 0 -3.2 0 -4.8 0 c -3.4 0.1 -6.8 -0.5 -10.1 0.4 c 3.3 -0.5 6.7 -0.1 10 -0.2 h 8.3 c 0 -0.1 0 -0.1 0 -0.2 h -3.5 Z"/></svg>',
     'banner' => 'mr-rum\header_rums_experience.webp',
-    'cover' => '/huracan/cover-huracan.webp',
+    'cover' => '/mr-rum/cover-mr-rums.webp',
     'title' => 'Gallery',
-    'text_home' => "¡Justo al lado de la piscina! Disfruta tu bebida favorita para celebrar y encuentra el mejor spot para ver el main show.",
-    'gallery' => ['assets\images\port-experience\huracan\carousel-huracan.webp'],
+    'text_home' => "Join Mr. Rum and Yayael in a flavorful adventure. Enjoy the rich taste of Dominican rum and explore the fascinating process behind the country’s tobacco. This is an experience you won’t want to miss!",
+    'gallery' => ['assets\images\port-experience\mr-rum\carousel-mr-rums.webp'],
     'single_gallery' => [
       'assets\images\port-experience\mr-rum\gallery\mr-rum_1.webp',
       'assets\images\port-experience\mr-rum\gallery\mr-rum_2.webp',
