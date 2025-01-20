@@ -955,6 +955,11 @@ $points = [
       'assets\images\port-experience\huracan\gallery\huracan_1.webp',
       'assets\images\port-experience\huracan\gallery\huracan_2.webp',
       'assets\images\port-experience\huracan\gallery\huracan_3.webp',
+      'assets\images\port-experience\huracan\gallery\huracan_4.webp',
+      'assets\images\port-experience\huracan\gallery\huracan_5.webp',
+      'assets\images\port-experience\huracan\gallery\huracan_6.webp',
+      'assets\images\port-experience\huracan\gallery\huracan_7.webp',
+      'assets\images\port-experience\huracan\gallery\huracan_8.webp',
     ],
   ],
   [
