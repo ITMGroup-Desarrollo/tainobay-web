@@ -343,7 +343,14 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
                 <p>Follow Mr Rum and enjoy a fun journey through history!</p>
-                
+                <a href="${idioma}/port-experience/mr-rum-quest" >
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                    </button>
+                </a>
             </div>
         `
       )
@@ -2261,6 +2268,14 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
             <p>Need a drink for the pool? We got you</p>
+            <a href="${idioma}/port-experience/huracan-bar" >
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                    </button>
+                </a>
             </div>
         `
       )
