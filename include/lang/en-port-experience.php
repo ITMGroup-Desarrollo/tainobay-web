@@ -1022,6 +1022,9 @@ $points = [
       'assets\images\port-experience\mr-rum\gallery\mr-rum_2.webp',
       'assets\images\port-experience\mr-rum\gallery\mr-rum_3.webp',
       'assets\images\port-experience\mr-rum\gallery\mr-rum_5.webp',
+      'assets\images\port-experience\mr-rum\gallery\mr-rum_6.webp',
+      'assets\images\port-experience\mr-rum\gallery\mr-rum_7.webp',
+      'assets\images\port-experience\mr-rum\gallery\mr-rum_8.webp',
     ],
   ],
 ];
