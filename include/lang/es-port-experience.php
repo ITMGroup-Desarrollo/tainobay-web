@@ -1034,7 +1034,7 @@ $points = [
     ],
   ],
   [
-    'id' => 22,
+    'id' => 21,
     'type' => 'public',
     'name' => "Keloké Bar",
     'path' => 'keloke',
