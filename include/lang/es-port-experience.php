@@ -263,6 +263,13 @@ $points = [
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_3.webp',
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_4.webp',
       'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_5.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_6.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_7.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_8.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_9.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_10.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_11.webp',
+      'assets\images\port-experience\coffe-factory\gallery\COFFE_FACTORY_12.webp',
     ],
     'pdf' => 'port-experience/coffee-factory.pdf'
   ],
