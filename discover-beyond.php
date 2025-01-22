@@ -75,7 +75,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
         // console.log("Document is ready");
         // Función para manejar el clic en los botones de visualización
         function handleDisplayButtonClick(button) {
-            console.log("Button clicked", button);
+            // console.log("Button clicked", button);
             const section = button.closest('.carousel-section');
             const displayedBlog = section.find('.displayed-blog');
             const textElement = button.find('b');
@@ -150,12 +150,12 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
 
         // Inserta el valor de la variable PHP en una variable JavaScript
         const idioma = '<?php echo $idioma; ?>';
-        console.log(idioma);
+        // console.log(idioma);
         // Seleccionar el archivo JSON según el idioma
         const dataFile = idioma === 'es' ? 'es-data-discover.json' : 'data-discover.json';
         // Cargar contenido dinámico desde el archivo JSON
         $.getJSON('include/' + dataFile, function(data) {
-            console.log(data);
+            // console.log(data);
             const container = $('#carousel-sections-container');
             container.empty(); // Limpiar el contenedor antes de agregar nuevas secciones
             data.carouselSections.forEach((section, sectionIndex) => {
@@ -209,31 +209,6 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     items += `
                             <div class="carousel-item ${isActive}">
                                 <div class="carousel-image-wrapper position-relative">
-                                    <!-- share -->
-                                    <div class="slide-share position-absolute top-0 end-0 p-1 button-share">
-                                        <div class="container-btn">
-                                            <div class="redes">
-                                                <a target="_blank" class="bg-orange" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $path; ?>es/discover-beyond?post_id=${section.id}">
-                                                    <i class="icon fab fa-facebook-f"></i>
-                                                </a>
-                                                <a target="_blank" class="bg-orange" href="https://twitter.com/intent/tweet?url=<?php echo $path; ?>es/discover-beyond?post_id=${section.id}">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-
-                                                </a>
-                                                <a target="_blank" class="bg-orange" href="https://api.whatsapp.com/send?text=<?php echo $path; ?>es/discover-beyond?post_id=${section.id}">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
-                                                        <path fill="currentColor" d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
-                                                        <path fill="currentColor" d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                            <button class="border-0 text-white bg-transparent toggle-share">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
-                                                    <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
                                     <picture>
                                         <source src="${image}">
                                         <img src="${image}" class="d-block w-100" alt="Image">
@@ -299,11 +274,38 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                         </div>
                                     </div>
                                     <div id="${sectionId}" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-                                        <div class="carousel-indicators">
+                                        <div style="position: relative;">
+                                            <!-- share -->
+                                            <div class="slide-share share position-absolute top-0 end-0 p-1 button-share">
+                                                <div class="container-btn">
+                                                    <div class="redes">
+                                                        <a target="_blank" class="bg-orange" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $path; ?>es/discover-beyond?post_id=${section.id}">
+                                                            <i class="icon fab fa-facebook-f"></i>
+                                                        </a>
+                                                        <a target="_blank" class="bg-orange" href="https://twitter.com/intent/tweet?url=<?php echo $path; ?>es/discover-beyond?post_id=${section.id}">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+
+                                                        </a>
+                                                        <a target="_blank" class="bg-orange" href="https://api.whatsapp.com/send?text=<?php echo $path; ?>es/discover-beyond?post_id=${section.id}">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8c-10.1-3.8-17.5-5.6-24.8 5.6c-7.4 11.1-28.4 35.8-35 43.3c-6.4 7.4-12.9 8.3-23.8 2.8c-64.8-32.4-107.3-57.8-150-131.1c-11.3-19.5 11.3-18.1 32.4-60.2c3.6-7.4 1.8-13.7-1-19.3s-24.8-59.8-34-81.9c-8.9-21.5-18.1-18.5-24.8-18.9c-6.4-.4-13.7-.4-21.1-.4s-19.3 2.8-29.4 13.7c-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5c70 30.2 97.4 32.8 132.4 27.6c21.3-3.2 65.2-26.6 74.3-52.5c9.1-25.8 9.1-47.9 6.4-52.5c-2.7-4.9-10.1-7.7-21-13" />
+                                                                <path fill="currentColor" d="M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3c-41.3-41.3-89.5-73.8-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9c-53.3 22.8-101.1 55.2-142 96.5s-73 89.3-95.2 142.8c-23 55.4-34.6 114.3-34.3 174.9c.3 69.4 16.9 138.3 48 199.9v152c0 25.4 20.6 46 46 46h152.1c61.6 31.1 130.5 47.7 199.9 48h2.1c59.9 0 118-11.6 172.7-34.3c53.5-22.3 101.6-54.3 142.8-95.2c41.3-40.9 73.8-88.7 96.5-142c23.6-55.2 35.6-113.9 35.9-174.5c.3-60.9-11.5-120-34.8-175.6m-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8c69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9c44.6 18.7 84.6 45.6 119 80c34.3 34.3 61.3 74.4 80 119c19.4 46.2 29.1 95.2 28.9 145.8c-.6 99.6-39.7 192.9-110.1 262.7" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <button class="border-0 text-white bg-transparent toggle-share">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 1024 1024">
+                                                            <path fill="currentColor" d="m679.872 348.8l-301.76 188.608a127.8 127.8 0 0 1 5.12 52.16l279.936 104.96a128 128 0 1 1-22.464 59.904l-279.872-104.96a128 128 0 1 1-16.64-166.272l301.696-188.608a128 128 0 1 1 33.92 54.272z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-indicators">
                                             ${indicators}
-                                        </div>
-                                        <div class="carousel-inner">
-                                            ${items}
+                                            </div>
+                                            <div class="carousel-inner">
+                                                ${items}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
