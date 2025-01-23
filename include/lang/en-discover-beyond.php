@@ -670,4 +670,93 @@ $tours = [
             "Blind guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Guests must be at least 18 years old to consume alcohol. "
         ]
     ],
+    [
+        "id" => "8",
+        "Tour" => "Horseback Riding",
+        "tourName" => "Horseback Riding",
+        "title" => "ENJOY PLAYA DORADA ",
+        "subtitle" => "FROM A DIFFERENT POV.",
+        "button" => "Get ready!",
+        "content" => "A relaxing ride with a stunning view. This experience will take you through the golden sand and blue Playa Dorada sea, making it an experience to remember forever.",
+        "side" => "right-side",
+        "images" => [
+            "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
+        ],
+        "galleryImages" => [
+            "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
+            "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
+        ],
+        "shortIconSchedule" => "assets/images/discover-beyond/horse-riding/icon/icon-schedule-white.svg",
+        "shortIconIntensity" => "assets/images/discover-beyond/horse-riding/icon/level-4.svg",
+        "shortIconCategory" => "assets/images/discover-beyond/horse-riding/icon/horse.svg",
+        "displayTitle" => [
+            "Horseback Riding"
+        ],
+        "displayContent" => [
+            "Ride along a tropical beach, where adventure meets tranquility. Feel the ocean breeze as your horse strides through the soft sands of the renowned Playa Dorada, immersing you in stunning natural beauty.",
+            "Scenic drive to Montecarlo Ranch: Hop on a bus and take in panoramic views of Puerto Plata's vibrant coastline and its unique charm. After a scenic 20-minute drive, arrive at Montecarlo Ranch, to be warmly welcomed by the friendly staff with a refreshing drink.",
+            "Horseback Riding Adventure: Upon arrival, your guide will provide a safety briefing, gearing you up before a 10-minute bus ride to the riding area. Expert guides will match you with the perfect horse based on your level of experience. Once ready, enjoy a 30-minute ride through lush Bergantin trails. The trail leads to Playa Dorada, where you can ride along golden sands with stunning ocean views. After, return along the same scenic trails for another 30-minute trek.",
+            "Mamajuana tasting and transfer back: Return to Montecarlo Ranch for a Mamajuana tasting, the iconic Dominican drink made with rum, red wine, honey, and local herbs. Paired with fresh tropical fruit, it offers a perfect balance of flavors, showcasing Dominican tradition. Once time is up, ride back in the same transportation back to the ship."
+        ],
+        "displayHighlights" => [
+            "Bottle of water and non-alcoholic welcome drink",
+            "Horseback riding through countryside and beach",
+            "Seasonal fruit and Mamajuana shot"
+        ],
+        "displayIncluded" => [
+            "Round-trip transportation in A/C vehicle",
+            "Guided tour",
+            "One horse assigned per guest",
+            "Safety equipment",
+            "Bottle of water and non-alcoholic welcome drink",
+            "Horseback riding through countryside and beach",
+            "Seasonal fruit and Mamajuana shot"
+        ],
+        "displayWhatToBring" => [
+            [
+                "iconPath" => "assets/images/discover-beyond/horse-riding/icon/icon-shoe-white.svg",
+                "text" => "Closed shoes (MANDATORY)"
+            ],
+            [
+                "iconPath" => "assets/images/discover-beyond/horse-riding/icon/icon-pants-white.svg",
+                "text" => "Long pants"
+            ],
+            [
+                "iconPath" => "assets/images/discover-beyond/horse-riding/icon/icon-comfty-clothes-white.svg",
+                "text" => "Comfy clothing"
+            ],
+            [
+                "iconPath" => "assets/images/discover-beyond/horse-riding/icon/icon-hat-white.svg",
+                "text" => "Hat and sunglasses"
+            ],
+            [
+                "iconPath" => "assets/images/discover-beyond/horse-riding/icon/camara.svg",
+                "text" => "Camera or cellphone"
+            ],
+            [
+                "iconPath" => "assets/images/discover-beyond/horse-riding/icon/icon-bug-repelent-white.svg",
+                "text" => "Bug repellent"
+            ],
+            [
+                "iconPath" => "assets/images/discover-beyond/horse-riding/icon/icon-money-white.svg",
+                "text" => "Extra spending money"
+            ]
+        ],
+        "displayDuration" => "4 HOURS",
+        "displayNote" => [
+            "This tour is family-friendly. The activity welcomes riders of all experience levels, from beginners to experts, with a minimum and maximum age requirement. Minors must be accompanied by parents. Safety is a priority: helmets and closed-toe shoes are mandatory, and guides’ instructions must always be followed. Comfortable, outdoor-appropriate clothing and long pants are recommended. Guests must treat the horses with respect. Running the horse is only allowed under the guide’s instruction. Riders should maintain a safe speed and distance between horses, avoiding abrupt maneuvers or zigzags. Failure to comply with these rules may result in removal from the tour without a refund.",
+            "<b>Requirements and restrictions:</b> Participants must weigh no more than 120 kilos (264 pounds) and be between 8 and 65 years old. Hard of hearing or hearing-impaired guests must be accompanied by an assistant, friend, or family member. For safety reasons, this excursion is not suitable for guests with back or neck problems, recent surgeries, asthma, diabetes, epilepsy, pregnancy, allergies to animals, blindness, or any kind of heart or respiratory conditions. Guests must be ambulatory and able to walk long distances. Guests using wheelchairs, scooters, or electric mobility aids are not eligible to participate."
+        ]
+        ],
 ];
