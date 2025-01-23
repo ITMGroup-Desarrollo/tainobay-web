@@ -342,7 +342,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-                <p>Follow Mr Rum and enjoy a fun journey through history!</p>
+                <p>${idioma === 'es' ? 'Sigue a Mr Rum y acompáñalo en este viaje a través de la historia.' : 'Follow Mr Rum and enjoy a fun journey through history!'}</p>
                 <a href="${idioma}/port-experience/mr-rum-quest" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -370,7 +370,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LAZY RIVER</p>
-                <p>Let’s float around and enjoy the ride!</p>
+                <p>${idioma === 'es' ? '¡Flotemos y disfrutemos!' : 'Let’s float around and enjoy the ride!'}</p>
                 <a href="${idioma}/port-experience/lazy-river" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -397,7 +397,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>Get your adrenaline rush&nbsp;ON!</p>
+                <p>${idioma === 'es' ? '¡Encuentra la adrenalina que necesitas!' : 'Get your adrenaline rush&nbsp;ON!'}</p>
                 <a href="${idioma}/port-experience/splash-surfing" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -424,7 +424,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>Treat yourself and relax with a massage.</p>
+                <p>${idioma === 'es' ? 'Consiéntete y relájate con un masaje.' : 'Treat yourself and relax with a massage.'}</p>
                 <a href="${idioma}/port-experience/spa-wellness" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -452,7 +452,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/monkey-island.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MONKEY ISLAND</p>
-                <p>Make monkey friends and have a great time!</p>
+                <p>${idioma === 'es' ? 'Nuevos amigos, grandes recuerdos. ' : 'Make new monkey friends and have a great time!'}</p>
                 <a href="${idioma}/port-experience/monkey-island" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -480,7 +480,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
-            <p>Freshen up upon arrival. Grab a spot and enjoy!</p>
+            <p>${idioma === 'es' ? 'Nada, relájate y disfruta.' : 'Swim, relax, and enjoy. '}</p>
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -507,7 +507,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
-            <p>Freshen up upon arrival. Grab a spot and don’t miss the party and shows</p>            
+            <p>${idioma === 'es' ? '¡Refréscate al llegar! No te pierdas la fiesta y los shows.' : 'Freshen up upon arrival. Grab a spot and don’t miss the party and shows'}</p>            
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -535,7 +535,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
+            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -561,7 +561,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
+            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -587,7 +587,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
+            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -613,7 +613,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>Beach vibes at port! Lay by a sunbed and enjoy</p>
+            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -742,7 +742,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
             </div>
         `
       )
@@ -759,7 +759,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
             </div>
         `
       )
@@ -776,7 +776,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
             </div>
         `
       )
@@ -793,7 +793,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't miss the main&nbspshow!</p>
+                <p>${idioma === 'es' ? '¡No te pierdas del show principal! ' : 'Don\'t miss the main&nbspshow!'}</p>
             </div>
         `
       )
@@ -810,7 +810,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>The best of Dominican entertainment for you to&nbspenjoy!</p>
+                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
             </div>
         `
       )
@@ -829,7 +829,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
             </div>
         `
       )
@@ -846,7 +846,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
             </div>
         `
       )
@@ -863,7 +863,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
             </div>
         `
       )
@@ -880,7 +880,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
             </div>
         `
       )
@@ -897,7 +897,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Fresh drinks from fresh fruit, a must for the&nbspheat!</p>
+                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
             </div>
         `
       )
@@ -916,7 +916,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -933,7 +933,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -950,7 +950,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -967,7 +967,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -984,7 +984,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -1001,7 +1001,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -1018,7 +1018,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -1035,7 +1035,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -1052,7 +1052,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to Share your pics and tag us on Instagram</p>
+                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
             </div>
         `
       )
@@ -1071,7 +1071,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to book your favorite tour upon arrival</p>
+                <p>${idioma === 'es' ? '¿Sin reserva? Reserva tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
             </div>
         `
       )
@@ -1088,7 +1088,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to book your favorite tour upon arrival</p>
+                <p>${idioma === 'es' ? '¿Sin reserva? Reserva tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
             </div>
         `
       )
@@ -1105,7 +1105,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Don't Forget to book your favorite tour upon arrival</p>
+                <p>${idioma === 'es' ? '¿Sin reserva? Reserva tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
             </div>
         `
       )
@@ -1125,7 +1125,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/taxi-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>Transportation services</p>
+                <p>${idioma === 'es' ? 'Servicios de transportación.' : 'Transportation services'}</p>
             </div>
         `
       )
@@ -1144,7 +1144,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/shorex-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>Find your excursion upon arrival!</p>
+                <p>${idioma === 'es' ? '¡Encuentra tu tour al llegar!' : 'Find your excursion upon arrival!'}</p>
             </div>
         `
       )
@@ -1981,7 +1981,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
-            <p>Let’s start this party with a drink</p>
+            <p>${idioma === 'es' ? '¡Empecemos la fiesta con un drink!' : 'Let’s start this party with a drink'}</p>
             <a href="${idioma}/port-experience/keloke">
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2006,8 +2006,8 @@ var markers = {
       .addTo(map)
       .bindPopup(
         `   <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>Make a stop, and fuel up with Dominican coffee!</p>
+                <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
+                <p>${idioma === 'es' ? 'Visita y disfruta el auténtico café dominicano.' : 'Make a stop, and fuel up with Dominican coffee!'}</p>
                 <a href="${idioma}/port-experience/coffee-factory" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2034,7 +2034,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 70px; height: 70px;">
-                <p>Have a delicious treat!</p>
+                <p>${idioma === 'es' ? 'Un delicioso postre te espera.' : 'Have a delicious treat!'}</p>
                 <a href="${idioma}/port-experience/icekery" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2061,7 +2061,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;" >
-                <p>A mojito is always a great idea!</p>
+                <p>${idioma === 'es' ? 'Un mojito siempre es una buena idea.' : 'A mojito is always a great idea!'}</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2086,7 +2086,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>A mojito is always a great idea!</p>
+                <p>${idioma === 'es' ? 'Un mojito siempre es una buena idea.' : 'A mojito is always a great idea!'}</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2113,7 +2113,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 80px; height: 80px; ">
-                <p>The top spot for Caribbean food!</p>
+                <p>${idioma === 'es' ? '¡El mejor spot para el sabor caribeño!' : 'The top spot for Caribbean food! '}</p>
                 <a href="${idioma}/port-experience/cantina-latina" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2140,7 +2140,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mexican-grill.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Tacos and grilled snacks, it doesn\'t get any better than that!' : 'Tacos and grilled snacks, it doesn\'t get any better than that!'}</p>
+                <p>${idioma === 'es' ? 'Tacos y snacks, ¡no hay nada mejor!' : 'Tacos and grilled snacks, it doesn\'t get any better than that!'}</p>
                 <a href="${idioma}/port-experience/mexican-grill" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2167,7 +2167,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>Fresh seafood and good vibes!</p>
+                <p>${idioma === 'es' ? '¡Mariscos y good vibes!' : 'Fresh seafood and good vibes!'}</p>
                 <a href="${idioma}/port-experience/blue-parrot" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2194,7 +2194,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>Let’s get spicy!</p>
+                <p>${idioma === 'es' ? '¡Échale picante! ' : 'Let’s get spicy!'}</p>
                 <a href="${idioma}/port-experience/taco-lover" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2221,7 +2221,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 80px; height: 80px;"">
-                <p>Mango, strawberry, lime, and more, you choose!</p>
+                <p>${idioma === 'es' ? 'Mango, fresa, limón y más, ¡elige tu favorito!' : 'Mango, strawberry, lime, and more, you choose!'}</p>
                 <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2248,7 +2248,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/dom-dom-bar.svg" alt="Logo" style="width: 90px; height: 90px; ">
-                <p>Drinks by the pool? We got you!</p>
+                <p>${idioma === 'es' ? '¿Drinks en la piscina? ¡Aquí es el lugar!' : 'Drinks by the pool? We got you!'}</p>
                 <a href="${idioma}/port-experience/dom-dom-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2275,7 +2275,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-            <p>Need a drink for the pool? We got you</p>
+            <p>${idioma === 'es' ? 'Un drink en la piscina te espera. ' : 'Need a drink for the pool? We got you!'}</p>
             <a href="${idioma}/port-experience/huracan-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2302,7 +2302,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>Ready, sail, drink!</p>
+                <p>${idioma === 'es' ? '¿Listos? Navega y disfruta un drink. ' : 'Ready, sail, drink!'}</p>
                 <a href="${idioma}/port-experience/boat-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2329,7 +2329,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>Fresh drinks & fun!</p>
+                <p>${idioma === 'es' ? '¡Drinks frescos y diversión!' : 'Fresh drinks & fun!'}</p>
                 <a href="${idioma}/port-experience/tiki-tiki" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2356,7 +2356,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 100px; height: 100px; ">
-                <p>Love, fun, and Dominican rum!</p>
+                <p>${idioma === 'es' ? '¡Amor, diversión y mucho ron!' : 'Love, fun, and Dominican rum!'}</p>
                 <a href="${idioma}/port-experience/rum-rum-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
