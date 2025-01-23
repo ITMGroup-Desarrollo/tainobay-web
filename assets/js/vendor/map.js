@@ -1982,6 +1982,14 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
             <p>Let’s start this party with a drink</p>
+            <a href="${idioma}/port-experience/keloke">
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
+                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                    </button>
+                </a>
             </div>
         `
       )
