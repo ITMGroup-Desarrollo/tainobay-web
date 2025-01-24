@@ -33,7 +33,8 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
         </div>
         <!-- Image -->
         <div class="image-wrapper">
-          <div class="banner-fixed" style="background-image:url('assets/images/media/bg-port-experience.webp')">
+          <div class="banner-fixed" style="background-image:url('assets/images/media/bg-port-experience.jpg'); background-size: cover;">
+            <div class="overlay-banner"></div>
 
           </div>
           <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
