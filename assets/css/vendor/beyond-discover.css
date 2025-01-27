@@ -684,6 +684,9 @@ h2.title.white {
         display: flex;
         justify-content: center;
     }
+    .container-text{
+        text-align: justify;
+    }
 }
 
 @media (min-width: 574px) and (max-width: 654px) {
@@ -728,5 +731,8 @@ h2.title.white {
     
     .shock-section.right-side .carousel-content.order {
         order: 0 !important;
+    }
+    .container-text{
+        text-align: justify;
     }
 }
