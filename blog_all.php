@@ -22,21 +22,23 @@ include_once("include/lang/{$idioma}-blog.php");
                     <!-- Intro -->
                     <div class="basic-intro text-center">
                         <h1 class="title white text-1 banner-title text-uppercase fw-bold">
-                            <?php echo TITULOS_BLOG_ALL[0];  ?>
+                            <?= TITULOS_BLOG_ALL[0]; ?>
                         </h1>
-                        <p class="text-white banner-subtitle"><?php echo TITULOS_BLOG_ALL[1];  ?></p>
+                        <p class="text-white banner-subtitle"><?= TITULOS_BLOG_ALL[1]; ?></p>
                     </div>
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/blog/header-blog-port-taino-bay.webp')">
-                    </div>
-                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
+                    <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+          </div> -->
+                    <img src="assets/images/blog/header-blog-port-taino-bay.webp" class="image banner-fixed fit-cover brightness-8" alt="Banner discover beyond." />
+
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-banner"></div>
             </div>
         </section>
+
         <!-- Blog titles -->
         <section class="shock-section blog-section mt-4 mb-4">
             <div class="titles blog-scroll-view">

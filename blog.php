@@ -33,8 +33,9 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed">
-                    </div>
+                    <!-- <div class="banner-fixed">
+                    </div> -->
+                    <img src="a" class="image banner-fixed fit-cover brightness-8" alt="Banner discover beyond." />
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
@@ -181,7 +182,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 </div>
                 
             `);
-            $('.banner-fixed').css('background-image', `url(${data.image_url})`);
+            $('.banner-fixed').attr('src', `${data.image_url}`);
             $('#prev-page').prop('disabled', !hasPrevPost).attr('onclick', `changePost('${prevPostTitle}')`);
             $('#next-page').prop('disabled', !hasNextPost).attr('onclick', `changePost('${nextPostTitle}')`);
             // Actualizar la clase active del timeline

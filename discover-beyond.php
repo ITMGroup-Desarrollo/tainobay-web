@@ -28,15 +28,15 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             <?= TITULOS_DISCOVER[0] ?>
                             <br><?= TITULOS_DISCOVER[1] ?>
                         </h1>
-                        <p class="text-white banner-subtitle"><?php echo TITULOS_DISCOVER[2];  ?></p>
+                        <p class="text-white banner-subtitle"><?= TITULOS_DISCOVER[2]; ?></p>
                     </div>
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg'); background-size: cover; width: 100vw;">
+                    <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+          </div> -->
+                    <img src="assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg" class="image banner-fixed fit-cover brightness-8" alt="Banner discover beyond." />
 
-                    </div>
-                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-banner"></div>
