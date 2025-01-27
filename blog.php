@@ -35,7 +35,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                 <div class="image-wrapper">
                     <!-- <div class="banner-fixed">
                     </div> -->
-                    <img src="a" class="image banner-fixed fit-cover brightness-8" alt="Banner discover beyond." />
+                    <img src="assets/images/media/bg-faqs.jpg" class="image banner-fixed fit-cover brightness-8" alt="Banner discover beyond." />
                     <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->

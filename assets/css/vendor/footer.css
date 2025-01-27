@@ -30,6 +30,9 @@
   border-width: 3px;
   border-color: #fff;
 }
+.footer-textbox input::placeholder {
+  font-size: 0.7rem;
+}
 
 .footer-textbox-button a:hover {
   background-color: #1c355e;
@@ -159,7 +162,8 @@ footer {
   overflow: hidden;
 }
 .footer-textbox-button a {
-  font-size: larger;
+  font-size: 1rem;
+  /* font-size: larger; */
   width: 100% !important;
   color: #1c355e;
   height: 3rem;
@@ -231,6 +235,9 @@ footer {
 @media (min-width: 768px) {
   .footer-content .container {
     padding: 3rem 5rem 0 5rem;
+  }
+  .footer-textbox input::placeholder {
+    font-size: 1rem;
   }
 }
 /* @media (max-width: 550px) {
