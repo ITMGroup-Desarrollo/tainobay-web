@@ -48,7 +48,7 @@
                             <!-- Text -->
                             <div class="footer-textbox-container" style="height: 7rem">
                                 <div class="footer-textbox">
-                                    <input type="text" class="form-control  px-4 py-3" placeholder="<?php echo FOOTER_DESCRIP[2]; ?>">
+                                    <input type="text" class="form-control px-3 py-3" placeholder="<?php echo FOOTER_DESCRIP[2]; ?>">
                                 </div>
                                 <div class="footer-textbox-button">
                                     <div class="button-container"><a class="button-sub"><?php echo FOOTER_DESCRIP[1]; ?></a></div>

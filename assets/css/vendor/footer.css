@@ -13,7 +13,7 @@
 }
 
 .footer-textbox {
-  width: 60%;
+  width: 70%;
   padding-right: 0;
   overflow: hidden;
 
@@ -98,7 +98,7 @@ input::placeholder {
 .footer-textbox-button {
   padding-left: 0;
   overflow: hidden;
-  width: 40%;
+  width: 30%;
 }
 
 .button-container {
@@ -163,7 +163,6 @@ footer {
 }
 .footer-textbox-button a {
   font-size: 1rem;
-  /* font-size: larger; */
   width: 100% !important;
   color: #1c355e;
   height: 3rem;
