@@ -32,18 +32,16 @@ include_once("include/lang/{$idioma}-contact.php");
         @media (max-width: 991px) {
             .section-form {
                 min-height: 75vh;
-                max-height: 80vh;
+                max-height: 98vh;
             }
 
-            /* .image-wrapper {
-                min-height: 75vh;
-                max-height: 80vh;
+            .image-wrapper-form {
+                min-height: 100vh;
             }
 
-            .image-wrapper img {
-                min-height: 75vh;
-                max-height: 80vh;
-            } */
+            .image-wrapper-form img {
+                min-height: 100vh;
+            }
 
             /* .content-wrapper {
                 top: 0% !important;
