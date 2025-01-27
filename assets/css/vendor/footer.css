@@ -162,7 +162,7 @@ footer {
   overflow: hidden;
 }
 .footer-textbox-button a {
-  font-size: 1rem;
+  font-size: 0.7rem;
   width: 100% !important;
   color: #1c355e;
   height: 3rem;
@@ -236,6 +236,9 @@ footer {
     padding: 3rem 5rem 0 5rem;
   }
   .footer-textbox input::placeholder {
+    font-size: 1rem;
+  }
+  .footer-textbox-button a {
     font-size: 1rem;
   }
 }
