@@ -581,6 +581,95 @@
                 "Este es un tour no guiado. Está a 20 minutos del puerto. El hotel está equipado con rampas que permitirán a los huéspedes con movilidad reducida acceder a la mayoría de las áreas de la propiedad. Este tour es adecuado para personas que pueden caminar aproximadamente 100 metros, pero también pueden viajar con una silla de ruedas manual plegable, scooter ligero, silla de ruedas eléctrica, andador o bastón. Un adulto debe acompañar a los niños y adolescentes menores de 18 años. El alcohol se distribuirá con tolerancia controlada para todos.",
                 "Los invitados ciegos o con discapacidad auditiva deben ir acompañados de un asistente, amigo o familiar. Los huéspedes deben tener al menos 18 años para consumir alcohol."
             ]
+        },
+        {
+            "id": "8",
+            "Tour": "Paseos a Caballo en Playa Dorada",
+            "tourName": "Paseos a Caballo en Playa&nbps;Dorada",
+            "title": "DISFRUTA PLAYA DORADA",
+            "subtitle": "A LOMOS DE UN&nbsp;CABALLO",
+            "button": "¡PREPARATE!",
+            "content": "Donde la aventura y la tranquilidad se unen. Recorre la playa con una impresionante vista del mar azul.",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
+                "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/horse-riding/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/horse-riding/icon/level-4.svg",
+            "shortIconCategory": "assets/images/discover-beyond/horse-riding/icon/horse.svg",
+            "displayTitle": [
+                "Paseos a Caballo en Playa Dorada"
+            ],
+            "displayContent": [
+                "Pasea por una playa tropical, donde la aventura y la tranquilidad se unen. Siente la brisa del océano mientras tu caballo avanza por las suaves arenas de la renombrada Playa Dorada, sumergiéndote en una impresionante belleza natural.",
+                "<b>Viaje pintoresco al Rancho Montecarlo:</b> Súbete a un autobús y disfruta de vistas panorámicas de la vibrante costa de Puerto Plata y su encanto único. Después de un pintoresco trayecto de 20 minutos, llegarás al Rancho Montecarlo, donde el amable personal te recibirá cálidamente con una bebida refrescante.",
+                "<b>Aventura a Caballo:</b> Al llegar, tu guía te dará una charla de seguridad y te preparará antes de un viaje de 10 minutos en autobús hasta la zona de equitación. Los guías expertos te asignarán el caballo perfecto según tu nivel de experiencia. Una vez listo, disfrutarás de un paseo de 30 minutos por los exuberantes senderos de Bergantín. El camino te llevará a Playa Dorada, donde podrás cabalgar por las arenas doradas con impresionantes vistas al océano. Después, regresarás por los mismos senderos pintorescos en un recorrido de 30 minutos.",
+                "<b>Degustación de Mamajuana y regreso:</b> Regresa al Rancho Montecarlo para una degustación de Mamajuana, la icónica bebida dominicana elaborada con ron, vino tinto, miel y hierbas locales. Acompañada de frutas tropicales frescas, ofrece un equilibrio perfecto de sabores que destacan la tradición dominicana. Al finalizar, vuelve al transporte para regresar al barco."
+            ],
+            "displayHighlights": [
+                "Botella de agua y bebida de bienvenida sin alcohol.",
+                "Paseo a caballo por el campo y la playa.",
+                "Fruta de temporada y un shot de Mamajuana."
+            ],
+            "displayIncluded": [
+                "Transporte de ida y vuelta en vehículo con aire acondicionado.",
+                "Tour guiado.",
+                "Un caballo asignado por huésped.",
+                "Equipo de seguridad.",
+                "Botella de agua y bebida de bienvenida sin alcohol.",
+                "Paseo a caballo por el campo y la playa.",
+                "Frutas de temporada y un shot de Mamajuana."
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
+                    "text": "Repelente de insectos"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
+                    "text": "Dinero extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
+                    "text": "Gorro o sombrero"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
+                    "text": "Toalla"
+                }
+            ],
+            "displayDuration": "4 HORAS",
+            "displayNote": [
+                "Este tour es apto para toda la familia. La actividad da la bienvenida a jinetes de todos los niveles de experiencia, desde principiantes hasta expertos, con un requisito de edad mínima y máxima. Los menores deben estar acompañados por sus padres. La seguridad es una prioridad: es obligatorio el uso de cascos y zapatos cerrados, y siempre se deben seguir las instrucciones de los guías. Se recomienda ropa cómoda y adecuada para actividades al aire libre, así como pantalones largos. Los huéspedes deben tratar a los caballos con respeto. Correr con el caballo solo está permitido bajo la instrucción del guía. Los jinetes deben mantener una velocidad segura y una distancia adecuada entre los caballos, evitando maniobras bruscas o movimientos en zigzag. El incumplimiento de estas reglas puede resultar en la expulsión del tour sin derecho a reembolso.",
+                "<b>Requisitos y restricciones:</b> Los participantes no deben pesar más de 120 kilos (264 libras) y deben tener entre 8 y 65 años. Los huéspedes con discapacidad auditiva o sordera deben estar acompañados por un asistente, amigo o familiar. Por razones de seguridad, esta excursión no es apta para personas con problemas de espalda o cuello, cirugías recientes, asma, diabetes, epilepsia, embarazo, alergias a los animales, ceguera o cualquier tipo de afección cardíaca o respiratoria. Los participantes deben ser ambulantes y capaces de caminar largas distancias. Los huéspedes que utilicen sillas de ruedas, scooters o ayudas de movilidad eléctrica no son elegibles para participar."
+            ]
         }
     ]
 }
