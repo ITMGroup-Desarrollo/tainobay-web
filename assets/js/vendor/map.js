@@ -1185,7 +1185,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DUFRY</p>
-                <p>Big Retailer</p>
+                <p>${idioma === 'es' ? 'Tienda' : 'Big Retailer'}</p>
             </div>
         `
       )
@@ -1299,7 +1299,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PAWS BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Gift Shop' : 'Gift Shop'}</p>
+                <p>${idioma === 'es' ? 'Tienda de regalos' : 'Gift Shop'}</p>
             </div>
         `
       )
@@ -1650,7 +1650,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MEXICAN EXPERIENCE</p>
-                <p>${idioma === 'es' ? 'Gift Shop/Tabaco' : 'Gift Shop/Tobacco'}</p>
+                <p>${idioma === 'es' ? 'Tienda de regalos/Tabaco' : 'Gift Shop/Tobacco'}</p>
             </div>
         `
       )
