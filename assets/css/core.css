@@ -171,11 +171,7 @@ img,
 svg {
   vertical-align: middle;
 }
-@media (max-width: 991px) {
-  .blockquote {
-    margin: 1.5rem auto 1.5rem 0;
-  }
-}
+
 .w-25 {
   width: 25% !important;
 }
@@ -200,11 +196,22 @@ svg {
 .w-90 {
   width: 90% !important;
 }
+.w-95 {
+  width: 95% !important;
+}
 .w-100 {
   width: 100% !important;
 }
 .w-auto {
   width: auto !important;
+}
+@media (max-width: 991px) {
+  .blockquote {
+    margin: 1.5rem auto 1.5rem 0;
+  }
+  .md-w-auto {
+    width: auto !important;
+  }
 }
 @media (min-width: 1400px) {
   .max-w-25 {
@@ -307,6 +314,7 @@ svg {
   .vh-auto {
     height: 130vh !important;
   }
+  
 }
 .max-vh-25 {
   max-height: 25vh !important;
