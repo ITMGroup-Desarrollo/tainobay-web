@@ -433,9 +433,7 @@ a.button-transparent.button-orange.text-center:hover {
     font-size: 1.3rem;
 }
 
-.d-flex.align-items-center.w-75 {
-    max-width: 80%;
-}
+
 
 .swiper-slide {
     display: flex !important;

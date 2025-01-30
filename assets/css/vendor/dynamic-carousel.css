@@ -122,6 +122,9 @@
 .w-75 {
   max-width: 75%;
 }
+.md-w-auto {
+  max-width: 100%;
+}
 .carousel-content {
   padding: 2rem 1rem;
   row-gap: 1rem;
