@@ -1071,7 +1071,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¿Sin reserva? Reserva tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
+                <p>${idioma === 'es' ? '¿Sin reserva? Aparta tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
             </div>
         `
       )
@@ -1088,7 +1088,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¿Sin reserva? Reserva tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
+                <p>${idioma === 'es' ? '¿Sin reserva? Aparta tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
             </div>
         `
       )
@@ -1105,7 +1105,7 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¿Sin reserva? Reserva tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
+                <p>${idioma === 'es' ? '¿Sin reserva? Aparta tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
             </div>
         `
       )
