@@ -106,12 +106,18 @@
 #port-page .wrapper-icon {
   width: 50px;
 }
+.port-logo {
+  width: 300px;
+}
 /* sm */
 @media (min-width: 640px) {
 }
 
 /* md 768px  */
 @media (min-width: 768px) {
+  .port-logo {
+    width: fit-content;
+  }
   .grid-container-3 {
     grid-template-columns: repeat(2, 1fr);
   }

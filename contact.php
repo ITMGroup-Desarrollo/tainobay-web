@@ -20,7 +20,7 @@ include_once("include/lang/{$idioma}-contact.php");
   <!-- Main -->
   <main id="main" class="shock-main">
 
-    <!-- banner -->
+    <!-- Banner -->
     <section class="shock-section has-overlay">
       <div class="banner d-flex align-items-center">
         <div class="content-wrapper top-zero ">
@@ -34,10 +34,10 @@ include_once("include/lang/{$idioma}-contact.php");
         </div>
         <!-- Image -->
         <div class="image-wrapper">
-          <div class="banner-fixed" style="background-image:url('assets/images/media/header-contacto.jpg')">
+          <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+          </div> -->
+          <img src="assets/images/media/header-contacto.jpg" class="image banner-fixed fit-cover brightness-8" alt="Banner Contacto." />
 
-          </div>
-          <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
         </div>
         <!-- Overlay -->
         <div class="overlay-banner"></div>

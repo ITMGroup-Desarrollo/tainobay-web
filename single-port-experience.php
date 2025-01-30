@@ -54,9 +54,9 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
           <!-- Intro -->
           <div class="basic-intro text-center">
             <?php if ($currentMenu['logo']) { ?>
-              <img class="port-logo fit-content object-fit-contain" src="assets/images/port-experience/<?= $currentMenu['logo'] ?>" alt="Logo <?= $currentMenu['name'] ?>" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500">
+              <img class="port-logo object-fit-contain" src="assets/images/port-experience/<?= $currentMenu['logo'] ?>" alt="Logo <?= $currentMenu['name'] ?>" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500">
             <?php } else { ?>
-              <h1 class="title mx-auto white text-1 banner-title text-uppercase fw-bold port-logo" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500"><?= $currentMenu['name'] ?></h1>
+              <h1 class="title w-100 mx-auto white text-1 banner-title text-uppercase fw-bold port-logo" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500"><?= $currentMenu['name'] ?></h1>
             <?php } ?>
             <div class="mx-auto text-white mt-2 icon-banner" data-aos="fade-up" data-aos-delay="800" data-aos-duration="500"><?= $currentMenu['icon'] ?></div>
           </div>

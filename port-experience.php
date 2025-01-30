@@ -28,15 +28,16 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
             <h1 class="title white text-1 banner-title text-uppercase fw-bold">
               <?= TITULOS_BANNER_PORT_EXPERIENCE[0] ?>
             </h1>
-            <p class="text-white banner-subtitle"><?= TITULOS_BANNER_PORT_EXPERIENCE[1] ?></p>
+            <p class="text-white banner-subtitle"><?= TITULOS_BANNER_PORT_EXPERIENCE[1]; ?></p>
           </div>
         </div>
         <!-- Image -->
         <div class="image-wrapper">
-          <div class="banner-fixed" style="background-image:url('assets/images/media/bg-port-experience.webp')">
+          <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
 
-          </div>
-          <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
+          </div> -->
+          <img src="assets/images/media/bg-port-experience.webp" class="image banner-fixed fit-cover brightness-8" alt="Banner port experience." />
+
         </div>
         <!-- Overlay -->
         <div class="overlay-banner"></div>

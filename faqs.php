@@ -32,18 +32,16 @@ include_once("include/lang/{$idioma}-contact.php");
         @media (max-width: 991px) {
             .section-form {
                 min-height: 75vh;
-                max-height: 80vh;
+                max-height: 98vh;
             }
 
-            /* .image-wrapper {
-                min-height: 75vh;
-                max-height: 80vh;
+            .image-wrapper-form {
+                min-height: 100vh;
             }
 
-            .image-wrapper img {
-                min-height: 75vh;
-                max-height: 80vh;
-            } */
+            .image-wrapper-form img {
+                min-height: 100vh;
+            }
 
             /* .content-wrapper {
                 top: 0% !important;
@@ -78,17 +76,17 @@ include_once("include/lang/{$idioma}-contact.php");
                     <!-- Intro -->
                     <div class="basic-intro text-center">
                         <h1 class="title white text-1 banner-title text-uppercase fw-bold">
-                            <?= TITULOS_BANNER_FAQS[0];  ?>
+                            <?= TITULOS_BANNER_FAQS[0]; ?>
                         </h1>
                         <p class="text-white banner-subtitle"><?= TITULOS_BANNER_FAQS[1]; ?></p>
                     </div>
                 </div>
                 <!-- Image -->
                 <div class="image-wrapper">
-                    <div class="banner-fixed" style="background-image:url('assets/images/media/header-faqs-port-raino-bay.webp')">
+                    <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
+          </div> -->
+                    <img src="assets/images/media/header-faqs-port-raino-bay.webp" class="image banner-fixed fit-cover brightness-8" alt="Banner Faqs." />
 
-                    </div>
-                    <!-- <img src="assets/images/media/bg-faqs.jpg" class="image vh-65 fit-cover" alt="This is an example description for this item." /> -->
                 </div>
                 <!-- Overlay -->
                 <div class="overlay-banner"></div>
