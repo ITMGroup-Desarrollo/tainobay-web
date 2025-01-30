@@ -26,6 +26,8 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
     .swiper-button-prev {
       height: 4rem;
       top: 50%;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
 
     #gallery {
