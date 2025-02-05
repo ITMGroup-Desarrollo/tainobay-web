@@ -201,7 +201,7 @@ td:first-child {
 .filter-container{
     position: absolute;
     width: fit-content;
-    left: 12%;
+    left: 3%;
     /* background-color: black; */
     display: flex;
     flex-direction: column;

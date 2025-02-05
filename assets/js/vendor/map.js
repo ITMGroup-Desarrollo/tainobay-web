@@ -39,7 +39,7 @@ if (isMobile) {
   document.getElementById("map").style.width = "92vw"; // Tamaño más pequeño para mobile
 } else {
   document.getElementById("map").style.height = "100vh"; // Tamaño normal para desktop
-  document.getElementById("map").style.width = "75vw"; // Tamaño normal para desktop
+  document.getElementById("map").style.width = "95vw"; // Tamaño normal para desktop
 }
 // #endregion
 
