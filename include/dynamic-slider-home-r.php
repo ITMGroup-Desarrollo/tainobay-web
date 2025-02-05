@@ -677,7 +677,7 @@
         <section id="home-r" class="shock-section dynamic-slider-r scheme-1" data-autoplay="6000" data-aos="fade-up"
             data-aos-duration="1000" data-aos-delay="200">
             <!-- Index -->
-            <div id="slide-index" class="slide-index">
+            <div id="slide-index-r" class="slide-index">
                 <span class="slide-index-current">
                     <span class="slide-index-inner"></span>
                 </span>
@@ -783,13 +783,13 @@
                         <div class="slide-image-inner">
                             <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
                                 <div class="swiper-wrapper">
-
-                                    <div class="swiper-slide">
-                                        <div class="image-wrapper">
-                                            <img src="<?= $tour['images'][0] ?>" class="image" alt="<?= $tour['tourName'] ?>" />
+                                    <?php foreach ($tour['images'] as $img) { ?>
+                                        <div class="swiper-slide">
+                                            <div class="image-wrapper">
+                                                <img src=<?= $img ?> class="image" alt="<?= $tour['tourName'] ?>" />
+                                            </div>
                                         </div>
-                                    </div>
-
+                                    <?php } ?>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
