@@ -779,22 +779,7 @@
 
                     </div>
                     <!-- Image -->
-                    <div class="slide-image-wrapper">
-                        <div class="slide-image-inner">
-                            <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
-                                <div class="swiper-wrapper">
-                                    <?php foreach ($tour['images'] as $img) { ?>
-                                        <div class="swiper-slide">
-                                            <div class="image-wrapper">
-                                                <img src=<?= $img ?> class="image" alt="<?= $tour['tourName'] ?>" />
-                                            </div>
-                                        </div>
-                                    <?php } ?>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             <?php } ?>
         </section>
