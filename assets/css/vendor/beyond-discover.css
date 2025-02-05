@@ -145,7 +145,7 @@ a.boton-prev:hover {
 }
 
 .what-to-bring-list {
-    text-align: center;
+    
     background-color: #1c355e;
     padding-bottom: 3rem;
     width: fit-content;
@@ -153,6 +153,7 @@ a.boton-prev:hover {
 }
 
 .what-to-bring-list h2 {
+    text-align: center;
     padding-top: 2rem;
     color: #fff;
 }
