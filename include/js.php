@@ -15,7 +15,7 @@
     <script src="assets/js/vendor/typed.min.js"></script>
     <script src="assets/js/vendor/progressbar.min.js"></script>
     <script src="assets/js/vendor/map-styles.min.js"></script>
-    <script src="assets/js/vendor/magnetic-effect.min.js"></script>
+    <script src="assets/js/vendor/magnetic-effect.min.js?v=2.0"></script>
     <script src='assets/js/vendor/gsap.min.js'></script>
     <script src="assets/js/vendor/aos.min.js"></script>
     <script src="assets/js/vendor/lax.min.js"></script>
