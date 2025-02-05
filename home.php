@@ -85,6 +85,9 @@ include_once("include/lang/reviews.php");
             </div>
         </section>
 
+        <!-- New Carousel -->
+        <?php include("include/dynamic-slider-home.php"); ?>
+
         <!-- New Scrolling text -->
         <section class="shock-section pt-2 pb-4">
             <div class="scrolling-text">
