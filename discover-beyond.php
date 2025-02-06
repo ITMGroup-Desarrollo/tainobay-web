@@ -184,7 +184,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 });
                 section.displayWhatToBring.forEach((displayWhatToBrings) => {
                     displayW += `<div class="list-item-container">
-                        <img class:"wtbIcon" src=${displayWhatToBrings.iconPath} width="48" height="48" alt="Icono">
+                        <div><img class:"wtbIcon" src=${displayWhatToBrings.iconPath} width="48" height="48" alt="Icono"></div>
                         <p>${displayWhatToBrings.text}</p>
                         </div>`;
                 });
