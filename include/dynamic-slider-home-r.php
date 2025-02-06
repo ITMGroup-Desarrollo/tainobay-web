@@ -792,9 +792,6 @@
                                     <div class="swiper-slide">
                                         <img src="<?= $tour['images'][2] ?>" class="image" alt="<?= $tour['tourName'] ?>" />
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="<?= $tour['images'][3] ?>" class="image" alt="<?= $tour['tourName'] ?>" />
-                                    </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
