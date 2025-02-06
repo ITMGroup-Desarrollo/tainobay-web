@@ -785,9 +785,7 @@
                                 <div class="swiper-wrapper">
                                     <?php foreach ($tour['images'] as $img) { ?>
                                         <div class="swiper-slide">
-                                            <div class="image-wrapper">
-                                                <img src=<?= $img ?> class="image" alt="<?= $tour['tourName'] ?>" />
-                                            </div>
+                                            <img src=<?= $img ?> class="image" alt="<?= $tour['tourName'] ?>" />
                                         </div>
                                     <?php } ?>
                                 </div>
