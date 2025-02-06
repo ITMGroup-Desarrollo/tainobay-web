@@ -783,11 +783,15 @@
                         <div class="slide-image-inner">
                             <div class="gallery swiper slider has-navigation has-pagination scheme-1 primary" data-columns="1,1,1,1" data-autoplay="5000" data-loop="true">
                                 <div class="swiper-wrapper">
-                                    <?php foreach ($tour['images'] as $img) { ?>
-                                        <div class="swiper-slide">
-                                            <img src=<?= $img ?> class="image" alt="<?= $tour['tourName'] ?>" />
-                                        </div>
-                                    <?php } ?>
+                                    <div class="swiper-slide">
+                                        <img src="<?= $tour['images'][0] ?>" class="image" alt="<?= $tour['tourName'] ?>" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="<?= $tour['images'][1] ?>" class="image" alt="<?= $tour['tourName'] ?>" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="<?= $tour['images'][2] ?>" class="image" alt="<?= $tour['tourName'] ?>" />
+                                    </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
