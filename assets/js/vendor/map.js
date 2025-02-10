@@ -101,18 +101,31 @@ if (!isMobile) {
 // #endregion
 
 // #region Definición de íconos usando L.divIcon
+        // var retailIcon = L.divIcon({
+        //   html: `<div class="custom-icon" data-aos="fade-zoom-in"
+        //      data-aos-easing="ease-in-back"
+        //      data-aos-delay="300"
+        //      data-aos-offset="0">
+        //                <img src="assets/icons/map/retail.svg" alt="retail" width="20" height="20">
+        //            </div>`,
+        //   className: "", // Puedes usar tu propia clase CSS o dejarla vacía
+        //   iconSize: [20, 20],
+        //   iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
+        //   popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
+        // });
 var retailIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="0"
-     data-aos-offset="0">
-               <img src="assets/icons/map/retail.svg" alt="retail" width="20" height="20">
-           </div>`,
-  className: "", // Puedes usar tu propia clase CSS o dejarla vacía
+  data-aos-easing="ease-in-back"
+  data-aos-delay="200"
+  data-aos-offset="0">
+            <img src="assets/icons/map/retail.svg" alt="retail" width="20" height="20">
+        </div>`,
+  className: "",
   iconSize: [20, 20],
-  iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
-  popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
+  iconAnchor: [0, 0], 
+  popupAnchor: [12, -20], 
 });
+
 var restroomsIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -1065,24 +1078,8 @@ var markers = {
       }),
   ],
   13: [
-    L.marker([810, 1230], { icon: starIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¿Sin reserva? Aparta tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
-            </div>
-        `
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-    L.marker([835, 1295], { icon: starIcon })
+    
+    L.marker([835, 1265], { icon: starIcon })
       .addTo(map)
       .bindPopup(
         `
@@ -2570,7 +2567,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!isMobile) {
     tablas.forEach(function (tabla) {
       // Cuenta el número de filas en el tbody de la tabla
-      var filas = tabla.querySelectorAll("tbody tr").length;
+      var filas = tabla.querySelectorAll("tbody tr").length; 
 
       // Aplica el estilo CSS si hay más de 5 filas
       if (filas > 6 && filas <= 22) {
