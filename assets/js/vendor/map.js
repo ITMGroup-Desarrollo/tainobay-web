@@ -2425,11 +2425,12 @@ if (!isMobile) {
     var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
     var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
     var tableCheckbox = filterContainer.find(".filter-header .switch input[type='checkbox']");
+    var rows = filterContainer.find("tr"); // Todas las filas de la tabla
 
     if (!selectedMarkers) return; // Evitar errores si no hay marcadores asociados
 
     if (lastClickedId === markerId) {
-      // Segundo clic en la misma fila: mostrar todos los markers de la tabla
+      // **Segundo clic en la misma fila: mostrar todos los markers de la tabla y quitar selección**
       var tableMarkers = [];
 
       filterContainer.find(".tabla-icons tr").each(function () {
@@ -2451,15 +2452,18 @@ if (!isMobile) {
         map.addLayer(marker);
       });
 
-      // Activar solo el checkbox de la tabla actual**
+      // **Activar solo el checkbox de la tabla actual**
       $(".filter-header .switch input[type='checkbox']").prop("checked", false); // Desactiva todos
       tableCheckbox.prop("checked", true).trigger("change"); // Activa solo el de esta tabla
+
+      // **Quitar la clase "selected" de todas las filas**
+      rows.removeClass("selected");
 
       lastClickedId = null; // Resetear para permitir nuevos cambios
       return;
     }
 
-    // Primer clic: ocultar todos los markers y desactivar todos los checkboxes
+    // **Primer clic: ocultar todos los markers y desactivar todos los checkboxes**
     $.each(markers, function (id, markerGroup) {
       markerGroup.forEach(function (marker) {
         map.removeLayer(marker);
@@ -2471,13 +2475,19 @@ if (!isMobile) {
       map.addLayer(marker);
     });
 
-    // Desactivar todas las checkboxes
+    // **Desactivar todas las checkboxes**
     $(".filter-header .switch input[type='checkbox']").prop("checked", false);
+
+    // **Quitar la clase "selected" de todas las filas y agregarla a la actual**
+    rows.removeClass("selected");
+    $(this).addClass("selected");
 
     // Guardar el ID del último clic
     lastClickedId = markerId;
   });
 }
+
+
 
 
 if(isMobile){
