@@ -2422,36 +2422,74 @@ var markersVisible = true;
 if (!isMobile) {
   $(document).on("click", ".tabla-icons tr", function () {
     var markerId = $(this).data("marker-id");
-    var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
+    var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
+    var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
+    var tableCheckbox = filterContainer.find(".filter-header .switch input[type='checkbox']");
+    var rows = filterContainer.find("tr"); // Todas las filas de la tabla
 
-    if (lastClickedId === markerId && !markersVisible) {
-      // Si se hace clic en el mismo ícono y los marcadores están ocultos, mostrar todos los marcadores
-      $.each(markers, function (id, markerGroup) {
-        markerGroup.forEach(function (marker) {
-          map.addLayer(marker);
-        });
+    if (!selectedMarkers) return; // Evitar errores si no hay marcadores asociados
+
+    if (lastClickedId === markerId) {
+      // **Segundo clic en la misma fila: mostrar todos los markers de la tabla y quitar selección**
+      var tableMarkers = [];
+
+      filterContainer.find(".tabla-icons tr").each(function () {
+        var rowMarkerId = $(this).data("marker-id");
+        if (markers[rowMarkerId]) {
+          tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+        }
       });
-      markersVisible = true; // Marcar que los marcadores están visibles
-      lastClickedId = null; // Resetear lastClickedId para permitir nueva selección
 
-      // Cambiar el estado de los checkboxes de todas las tablas a activo
-      $(".filter-header .switch input[type='checkbox']").prop("checked", true);
-    } else {
-      // Ocultar todos los marcadores
+      // Ocultar todos los markers
       $.each(markers, function (id, markerGroup) {
         markerGroup.forEach(function (marker) {
           map.removeLayer(marker);
         });
       });
-      // Mostrar solo los marcadores seleccionados
-      selectedMarkers.forEach(function (marker) {
+
+      // Mostrar todos los markers de la tabla
+      tableMarkers.forEach(function (marker) {
         map.addLayer(marker);
       });
-      markersVisible = false; // Marcar que los marcadores están ocultos
-      lastClickedId = markerId; // Actualizar lastClickedId al último marcador clicado
+
+      // **Activar solo el checkbox de la tabla actual**
+      $(".filter-header .switch input[type='checkbox']").prop("checked", false); // Desactiva todos
+      tableCheckbox.prop("checked", true).trigger("change"); // Activa solo el de esta tabla
+
+      // **Quitar la clase "selected" de todas las filas**
+      rows.removeClass("selected");
+
+      lastClickedId = null; // Resetear para permitir nuevos cambios
+      return;
     }
+
+    // **Primer clic: ocultar todos los markers y desactivar todos los checkboxes**
+    $.each(markers, function (id, markerGroup) {
+      markerGroup.forEach(function (marker) {
+        map.removeLayer(marker);
+      });
+    });
+
+    // Mostrar solo los markers de la fila clickeada
+    selectedMarkers.forEach(function (marker) {
+      map.addLayer(marker);
+    });
+
+    // **Desactivar todas las checkboxes**
+    $(".filter-header .switch input[type='checkbox']").prop("checked", false);
+
+    // **Quitar la clase "selected" de todas las filas y agregarla a la actual**
+    rows.removeClass("selected");
+    $(this).addClass("selected");
+
+    // Guardar el ID del último clic
+    lastClickedId = markerId;
   });
 }
+
+
+
+
 if(isMobile){
   $(document).on("click", ".tabla-icons tr", function () {
     var markerId = $(this).data("marker-id");
@@ -2585,6 +2623,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+});
+//se agrega JS para mantener un Focus en el elemento clickeado de la tabla
+document.addEventListener("DOMContentLoaded", function () {
+  const rows = document.querySelectorAll(".leaflet-control-filter tr");
+
+  rows.forEach(row => {
+    row.addEventListener("click", function () {
+      // Remueve la clase "selected" de todas las filas
+      rows.forEach(r => r.classList.remove("selected"));
+      // Agrega la clase "selected" a la fila actual
+      this.classList.add("selected");
+    });
+  });
 });
 
 // #endregion

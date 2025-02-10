@@ -6,10 +6,6 @@
 div#map {
   border-radius: 10px;
 }
-.pop button:hover {
-  background-color: #f5a23a;
-  color: black;
-}
 section.map-section {
   display: flex;
   justify-content: center;
@@ -59,6 +55,12 @@ button.minimize-btn.show {
   cursor: pointer;
   color: #f5a23a;
 }
+.leaflet-control-filter tr.selected {
+  color: #f5a23a;
+  background-color: rgba(245, 162, 58, 0.3); /* Un fondo más notorio */
+  font-weight: bold;
+}
+
 .popupTitle {
   font-weight: bold;
   color: #1c355e;
@@ -404,7 +406,7 @@ body.shock-body {
   0% { transform: scale(0); }
   24% { transform: scale(2); }
   54% { transform: scale(1); }
-  100% { transform: scale(1); } /* Asegura que termine en su tamaño normal */
+  100% { transform: scale(1); } 
 }
 
 .custom-icon-animation {
