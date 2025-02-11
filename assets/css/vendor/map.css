@@ -183,7 +183,7 @@ input:checked + .slider:before {
 }
 
 body.shock-body {
-    background-color: #ddd !important;
+  background-color: #ddd !important;
 }
 .leaflet-marker-icon {
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 1));
@@ -346,6 +346,7 @@ body.shock-body {
         margin: auto;
     } */
   .filter-container {
+    order: 2;
     display: flex;
     flex-direction: row;
     min-width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
@@ -356,7 +357,9 @@ body.shock-body {
     margin-bottom: 10px;
     scrollbar-width: none;
   }
-
+  #map {
+    order: 1;
+  }
   .filter-container > * {
     scroll-snap-align: start; /* Añadido para el desplazamiento suave */
     flex: 0 0 auto; /* Asegura que los elementos no se reduzcan */
@@ -403,10 +406,18 @@ body.shock-body {
   }
 }
 @keyframes scale-easeOutBounce {
-  0% { transform: scale(0); }
-  24% { transform: scale(2); }
-  54% { transform: scale(1); }
-  100% { transform: scale(1); } 
+  0% {
+    transform: scale(0);
+  }
+  24% {
+    transform: scale(2);
+  }
+  54% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .custom-icon-animation {
@@ -421,6 +432,3 @@ body.shock-body {
   opacity: 1;
   animation: scale-easeOutBounce 2s ease-out forwards;
 }
-
-
-
