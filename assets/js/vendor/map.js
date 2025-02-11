@@ -19,9 +19,11 @@ var map = L.map("map", {
 });
 
 // Agrega un nuevo control de zoom en la posición deseada
-L.control.zoom({
-  position: 'topright' // Cambia 'topright' a la posición deseada ('topleft', 'bottomleft', 'bottomright')
-}).addTo(map);
+L.control
+  .zoom({
+    position: "topright", // Cambia 'topright' a la posición deseada ('topleft', 'bottomleft', 'bottomright')
+  })
+  .addTo(map);
 // Deshabilitar el zoom con el scroll del mouse si no es un dispositivo móvil
 if (!isMobile) {
   map.scrollWheelZoom.disable();
@@ -44,9 +46,10 @@ if (isMobile) {
 // #endregion
 
 // #region Agrega la imagen del mapa
-L.imageOverlay("assets/images/media/nuevo-mapa-taino-sin-nombres.jpg", bounds).addTo(
-  map
-);
+L.imageOverlay(
+  "assets/images/media/nuevo-mapa-taino-sin-nombres.jpg",
+  bounds
+).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
@@ -60,59 +63,56 @@ if (!isMobile) {
 
 // #region Evento para minimizar o expandir el contenido del filtro
 
+$(document).on("click", ".minimize-btn", function () {
+  var $minimizeBtn = $(this); // Botón que disparó el evento
+  var $filter = $minimizeBtn.closest(".leaflet-control-filter"); // Contenedor asociado
+  var $filterContent = $filter.find(".filter-content");
+  var $headerText = $filter.find(".header-text");
 
-  $(document).on('click', '.minimize-btn', function () {
-    
-    
-    var $minimizeBtn = $(this); // Botón que disparó el evento
-    var $filter = $minimizeBtn.closest('.leaflet-control-filter'); // Contenedor asociado
-    var $filterContent = $filter.find('.filter-content');
-    var $headerText = $filter.find('.header-text');
+  // Verifica si el botón clicado actualmente está en estado "hide"
+  var isExpanding = !$minimizeBtn.hasClass("show");
 
-    // Verifica si el botón clicado actualmente está en estado "hide"
-    var isExpanding = !$minimizeBtn.hasClass('show');
-
-    // Cambia todos los demás botones a "hide"
-    $('.minimize-btn.show').not($minimizeBtn).each(function () {
-        var $otherBtn = $(this);
-        $otherBtn.removeClass('show').addClass('hide');
-        var $otherFilter = $otherBtn.closest('.leaflet-control-filter');
-        $otherFilter.find('.filter-content').slideUp(200); // Contrae contenido de otros botones
-        $otherBtn.text('☰'); // Restablece el texto
-        $otherFilter.find('.header-text').get(0).style.paddingRight = '0rem'; // Ajusta estilo
+  // Cambia todos los demás botones a "hide"
+  $(".minimize-btn.show")
+    .not($minimizeBtn)
+    .each(function () {
+      var $otherBtn = $(this);
+      $otherBtn.removeClass("show").addClass("hide");
+      var $otherFilter = $otherBtn.closest(".leaflet-control-filter");
+      $otherFilter.find(".filter-content").slideUp(200); // Contrae contenido de otros botones
+      $otherBtn.text("☰"); // Restablece el texto
+      $otherFilter.find(".header-text").get(0).style.paddingRight = "0rem"; // Ajusta estilo
     });
 
-    // Alternar el estado del botón clicado
-    if (isExpanding) {
-        $minimizeBtn.removeClass('hide').addClass('show'); // Cambia a "show"
-        $filterContent.slideDown(200); // Expande el contenido
-        $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">'); // Cambia el contenido del botón
-        $headerText.get(0).style.paddingRight = ''; // Restablece el relleno
-    } else {
-        $minimizeBtn.removeClass('show').addClass('hide'); // Cambia a "hide"
-        $filterContent.slideUp(200); // Contrae el contenido
-        $minimizeBtn.text('☰'); // Cambia el texto
-        $headerText.get(0).style.paddingRight = '0rem'; // Ajusta el relleno
-    }
+  // Alternar el estado del botón clicado
+  if (isExpanding) {
+    $minimizeBtn.removeClass("hide").addClass("show"); // Cambia a "show"
+    $filterContent.slideDown(200); // Expande el contenido
+    $minimizeBtn.html('<img src="assets/icons/map/x.svg" alt="close">'); // Cambia el contenido del botón
+    $headerText.get(0).style.paddingRight = ""; // Restablece el relleno
+  } else {
+    $minimizeBtn.removeClass("show").addClass("hide"); // Cambia a "hide"
+    $filterContent.slideUp(200); // Contrae el contenido
+    $minimizeBtn.text("☰"); // Cambia el texto
+    $headerText.get(0).style.paddingRight = "0rem"; // Ajusta el relleno
+  }
 });
-
-
 
 // #endregion
 
 // #region Definición de íconos usando L.divIcon
-        // var retailIcon = L.divIcon({
-        //   html: `<div class="custom-icon" data-aos="fade-zoom-in"
-        //      data-aos-easing="ease-in-back"
-        //      data-aos-delay="300"
-        //      data-aos-offset="0">
-        //                <img src="assets/icons/map/retail.svg" alt="retail" width="20" height="20">
-        //            </div>`,
-        //   className: "", // Puedes usar tu propia clase CSS o dejarla vacía
-        //   iconSize: [20, 20],
-        //   iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
-        //   popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
-        // });
+// var retailIcon = L.divIcon({
+//   html: `<div class="custom-icon" data-aos="fade-zoom-in"
+//      data-aos-easing="ease-in-back"
+//      data-aos-delay="300"
+//      data-aos-offset="0">
+//                <img src="assets/icons/map/retail.svg" alt="retail" width="20" height="20">
+//            </div>`,
+//   className: "", // Puedes usar tu propia clase CSS o dejarla vacía
+//   iconSize: [20, 20],
+//   iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
+//   popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
+// });
 var retailIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
   data-aos-easing="ease-in-back"
@@ -122,8 +122,8 @@ var retailIcon = L.divIcon({
         </div>`,
   className: "",
   iconSize: [20, 20],
-  iconAnchor: [0, 0], 
-  popupAnchor: [12, -20], 
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
 });
 
 var restroomsIcon = L.divIcon({
@@ -347,7 +347,6 @@ var monkeyIcon = L.divIcon({
 // #region Marcadores y sus eventos
 
 var markers = {
-  
   2: [
     L.marker([890, 650], { icon: rumquestIcon })
       .addTo(map)
@@ -355,13 +354,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Sigue a Mr Rum y acompáñalo en este viaje a través de la historia.' : 'Follow Mr Rum and enjoy a fun journey through history!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Sigue a Mr Rum y acompáñalo en este viaje a través de la historia."
+                    : "Follow Mr Rum and enjoy a fun journey through history!"
+                }</p>
                 <a href="${idioma}/port-experience/mr-rum-quest" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -383,13 +386,17 @@ var markers = {
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LAZY RIVER</p>
-                <p>${idioma === 'es' ? '¡Flotemos y disfrutemos!' : 'Let’s float around and enjoy the ride!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Flotemos y disfrutemos!"
+                    : "Let’s float around and enjoy the ride!"
+                }</p>
                 <a href="${idioma}/port-experience/lazy-river" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -410,13 +417,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? '¡Encuentra la adrenalina que necesitas!' : 'Get your adrenaline rush&nbsp;ON!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Encuentra la adrenalina que necesitas!"
+                    : "Get your adrenaline rush&nbsp;ON!"
+                }</p>
                 <a href="${idioma}/port-experience/splash-surfing" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -437,13 +448,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Consiéntete y relájate con un masaje.' : 'Treat yourself and relax with a massage.'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Consiéntete y relájate con un masaje."
+                    : "Treat yourself and relax with a massage."
+                }</p>
                 <a href="${idioma}/port-experience/spa-wellness" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -465,13 +480,17 @@ var markers = {
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/monkey-island.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MONKEY ISLAND</p>
-                <p>${idioma === 'es' ? 'Nuevos amigos, grandes recuerdos. ' : 'Make new monkey friends and have a great time!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Nuevos amigos, grandes recuerdos. "
+                    : "Make new monkey friends and have a great time!"
+                }</p>
                 <a href="${idioma}/port-experience/monkey-island" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -492,14 +511,18 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
-            <p>${idioma === 'es' ? 'Nada, relájate y disfruta.' : 'Swim, relax, and enjoy. '}</p>
+            <p class="popupTitle">${idioma === "es" ? "PISCINA" : "POOL"}</p>
+            <p>${
+              idioma === "es"
+                ? "Nada, relájate y disfruta."
+                : "Swim, relax, and enjoy. "
+            }</p>
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'View more'}
+                       ${idioma === "es" ? "Ver más" : "View more"}
                      </button>
                  </a>
             </div>
@@ -511,22 +534,25 @@ var markers = {
           animate: true,
           pan: { duration: 1 },
         });
-      })
-      ,
+      }),
     L.marker([360, 390], { icon: poolIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === 'es' ? 'PISCINA' : 'POOL'}</p>
-            <p>${idioma === 'es' ? '¡Refréscate al llegar! No te pierdas la fiesta y los shows.' : 'Freshen up upon arrival. Grab a spot and don’t miss the party and shows'}</p>            
+            <p class="popupTitle">${idioma === "es" ? "PISCINA" : "POOL"}</p>
+            <p>${
+              idioma === "es"
+                ? "¡Refréscate al llegar! No te pierdas la fiesta y los shows."
+                : "Freshen up upon arrival. Grab a spot and don’t miss the party and shows"
+            }</p>            
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'View more'}
+                       ${idioma === "es" ? "Ver más" : "View more"}
                      </button>
                  </a>
             </div>
@@ -547,14 +573,18 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
+            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'View more'}
+                       ${idioma === "es" ? "Ver más" : "View more"}
                      </button>
                  </a>
             </div>
@@ -573,14 +603,18 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
+            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'View more'}
+                       ${idioma === "es" ? "Ver más" : "View more"}
                      </button>
                  </a>
             </div>
@@ -599,14 +633,18 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
+            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'View more'}
+                       ${idioma === "es" ? "Ver más" : "View more"}
                      </button>
                  </a>
             </div>
@@ -625,14 +663,18 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-            <p class="popupTitle">${idioma === 'es' ? 'PLAYA' : 'BEACH'}</p>
-            <p>${idioma === 'es' ? '¡La playa en el puerto! Descansa y broncéate.' : 'Beach vibes at port! Lay by a sunbed for a nice tan.'}</p>
+            <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                        onmouseover="this.style.backgroundColor='#f5a23a';" 
                        onmouseout="this.style.backgroundColor='#1c355e';">
-                       ${idioma === 'es' ? 'Ver más' : 'View more'}
+                       ${idioma === "es" ? "Ver más" : "View more"}
                      </button>
                  </a>
             </div>
@@ -655,9 +697,9 @@ var markers = {
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
       //           <a href="https://example.com" target="_blank">
-      //               <button 
+      //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
       //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
@@ -680,9 +722,9 @@ var markers = {
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
       //           <a href="https://example.com" target="_blank">
-      //               <button 
+      //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
       //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
@@ -705,9 +747,9 @@ var markers = {
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
       //           <a href="https://example.com" target="_blank">
-      //               <button 
+      //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
       //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
@@ -730,9 +772,9 @@ var markers = {
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
       //           <a href="https://example.com" target="_blank">
-      //               <button 
+      //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      //                 onmouseover="this.style.backgroundColor='#f5a23a';" 
+      //                 onmouseover="this.style.backgroundColor='#f5a23a';"
       //                 onmouseout="this.style.backgroundColor='#1c355e';">
       //                 ${idioma === 'es' ? 'Ver más' : 'View more'}
       //               </button>
@@ -755,7 +797,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
         `
       )
@@ -772,7 +818,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
         `
       )
@@ -789,7 +839,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
         `
       )
@@ -806,7 +860,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No te pierdas del show principal! ' : 'Don\'t miss the main&nbspshow!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No te pierdas del show principal! "
+                    : "Don't miss the main&nbspshow!"
+                }</p>
             </div>
         `
       )
@@ -823,7 +881,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Lo mejor del entretenimiento dominicano en el puerto. ' : 'The best of Dominican entertainment for you to&nbspenjoy!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
         `
       )
@@ -842,7 +904,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
         `
       )
@@ -859,7 +925,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
         `
       )
@@ -876,7 +946,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
         `
       )
@@ -893,7 +967,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
         `
       )
@@ -910,7 +988,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!' : 'Fresh drinks from fresh fruit, a must for the&nbspheat!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
         `
       )
@@ -929,7 +1011,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -946,7 +1032,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -963,7 +1053,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -980,7 +1074,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -997,7 +1095,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -1014,7 +1116,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -1031,7 +1137,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -1048,7 +1158,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -1065,7 +1179,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡No olvides tomar fotos y taggearnos en Instagram!' : 'Don\'t forget to share your pics and tag us on Instagram!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
         `
       )
@@ -1078,14 +1196,17 @@ var markers = {
       }),
   ],
   13: [
-    
     L.marker([835, 1265], { icon: starIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¿Sin reserva? Aparta tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Sin reserva? Aparta tu tour favorito al llegar."
+                    : "Don't Forget to book your favorite tour upon arrival"
+                }</p>
             </div>
         `
       )
@@ -1102,7 +1223,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¿Sin reserva? Aparta tu tour favorito al llegar.' : 'Don\'t Forget to book your favorite tour upon arrival'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Sin reserva? Aparta tu tour favorito al llegar."
+                    : "Don't Forget to book your favorite tour upon arrival"
+                }</p>
             </div>
         `
       )
@@ -1113,7 +1238,6 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-    
   ],
   14: [
     L.marker([185, 270], { icon: taxiIcon })
@@ -1122,7 +1246,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/taxi-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Servicios de transportación.' : 'Transportation services'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Servicios de transportación."
+                    : "Transportation services"
+                }</p>
             </div>
         `
       )
@@ -1141,7 +1269,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/shorex-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡Encuentra tu tour al llegar!' : 'Find your excursion upon arrival!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Encuentra tu tour al llegar!"
+                    : "Find your excursion upon arrival!"
+                }</p>
             </div>
         `
       )
@@ -1161,7 +1293,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">DIAMONDS INTERNATIONAL</p>
-            <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
+            <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
             
             </div>
         `
@@ -1182,7 +1314,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DUFRY</p>
-                <p>${idioma === 'es' ? 'Tienda' : 'Big Retailer'}</p>
+                <p>${idioma === "es" ? "Tienda" : "Big Retailer"}</p>
             </div>
         `
       )
@@ -1202,7 +1334,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BLUE STONE</p>
-                <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
+                <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
             </div>
         `
       )
@@ -1213,14 +1345,14 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([595, 297], { icon: retailIcon })
+    L.marker([595, 297], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BLUE STONE</p>
-                <p>${idioma === 'es' ? 'Joyería' : 'Jewelry'}</p>
+                <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
             </div>
         `
       )
@@ -1240,7 +1372,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MORENA MIA</p>
-                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
         `
       )
@@ -1251,14 +1387,18 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([890, 1002], { icon: retailIcon })
+    L.marker([890, 1002], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MORENA MIA</p>
-                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
         `
       )
@@ -1269,14 +1409,18 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([885, 738], { icon: retailIcon })
+    L.marker([885, 738], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MORENA MIA</p>
-                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
         `
       )
@@ -1296,7 +1440,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PAWS BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Tienda de regalos' : 'Gift Shop'}</p>
+                <p>${idioma === "es" ? "Tienda de regalos" : "Gift Shop"}</p>
             </div>
         `
       )
@@ -1316,7 +1460,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TSUNAMI XL</p>
-                <p>${idioma === 'es' ? 'Conveniencia' : 'Convenience Store'}</p>
+                <p>${idioma === "es" ? "Conveniencia" : "Convenience Store"}</p>
             </div>
         `
       )
@@ -1336,7 +1480,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIRAÑA JOE</p>
-                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
         `
       )
@@ -1356,7 +1504,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ISLAND LIFE - SURF SHOP</p>
-                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
         `
       )
@@ -1376,7 +1528,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS'</p>
-                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
         `
       )
@@ -1387,14 +1543,18 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([895, 910], { icon: retailIcon })
+    L.marker([895, 910], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS</p>
-                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
         `
       )
@@ -1405,14 +1565,18 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([280, 225], { icon: retailIcon })
+    L.marker([280, 225], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS</p>
-                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
         `
       )
@@ -1432,7 +1596,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">CHRISTMAS BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1452,7 +1616,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">RUTA DE LAS INDAS</p>
-                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
+                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
         `
       )
@@ -1472,7 +1636,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">THE TIE DYE HUT</p>
-                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
+                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
         `
       )
@@ -1492,7 +1656,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIÑA COLADA BOUTIQUE</p>
-                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
+                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
         `
       )
@@ -1512,7 +1676,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHARK ATTACK</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1523,14 +1687,14 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([510, 250], { icon: retailIcon })
+    L.marker([510, 250], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SHARK ATTACK</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1550,7 +1714,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">BLOSSOM SOAP</p>
-                <p>${idioma === 'es' ? 'Boutique' : 'Boutique'}</p>
+                <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
         `
       )
@@ -1570,7 +1734,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SEA SALT</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1581,14 +1745,14 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([461, 233], { icon: retailIcon })
+    L.marker([461, 233], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SEA SALT</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1608,7 +1772,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LOCAL ITM</p>
-                <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
+                <p>${idioma === "es" ? "Recuerdos" : "Souvenirs"}</p>
             </div>
         `
       )
@@ -1619,15 +1783,15 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      
-      L.marker([910, 788], { icon: retailIcon })
+
+    L.marker([910, 788], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LOCAL ITM</p>
-                <p>${idioma === 'es' ? 'Recuerdos' : 'Souvenirs'}</p>
+                <p>${idioma === "es" ? "Recuerdos" : "Souvenirs"}</p>
             </div>
         `
       )
@@ -1647,7 +1811,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MEXICAN EXPERIENCE</p>
-                <p>${idioma === 'es' ? 'Tienda de regalos/Tabaco' : 'Gift Shop/Tobacco'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Tienda de regalos/Tabaco"
+                    : "Gift Shop/Tobacco"
+                }</p>
             </div>
         `
       )
@@ -1667,7 +1835,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MUSEO DEL TABACO</p>
-                <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
+                <p>${idioma === "es" ? "Tabaco" : "Tobacco"}</p>
             </div>
         `
       )
@@ -1687,7 +1855,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
+                <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
             </div>
         `
       )
@@ -1698,14 +1866,14 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([320, 220], { icon: retailIcon })
+    L.marker([320, 220], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
+                <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
             </div>
         `
       )
@@ -1716,14 +1884,14 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([250, 240], { icon: retailIcon })
+    L.marker([250, 240], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">SILVER BY THE SEA</p>
-                <p>${idioma === 'es' ? 'Joyeria' : 'Jewelry'}</p>
+                <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
             </div>
         `
       )
@@ -1742,7 +1910,9 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">${idioma === 'es' ? 'FARMACIA TAINO BAY' : 'TAINO BAY DRUGSTORE'}</p>
+                <p class="popupTitle">${
+                  idioma === "es" ? "FARMACIA TAINO BAY" : "TAINO BAY DRUGSTORE"
+                }</p>
             </div>
         `
       )
@@ -1762,7 +1932,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TAINO LOGO SHOP</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1782,7 +1952,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN YUCAYAQUE</p>
-                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
         `
       )
@@ -1802,7 +1976,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TURQUESA</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1813,14 +1987,14 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-      L.marker([360, 230], { icon: retailIcon })
+    L.marker([360, 230], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">TURQUESA</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1840,7 +2014,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">NATURAL BEAUTY</p>
-                <p>${idioma === 'es' ? 'Perfumeria y cosmetica' : 'Perfumery and Cosmetics'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
         `
       )
@@ -1860,7 +2038,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">HARD ROCK CAFE</p>
-                <p>${idioma === 'es' ? 'Tienda destino' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
         `
       )
@@ -1880,7 +2058,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DEL SOL</p>
-                <p>${idioma === 'es' ? 'Ropa y accesorios' : 'Fashion & Accessories'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
         `
       )
@@ -1899,7 +2081,9 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">${idioma === 'es' ? 'FARMACIA' : 'DRUGSTORE'}</p>
+                <p class="popupTitle">${
+                  idioma === "es" ? "FARMACIA" : "DRUGSTORE"
+                }</p>
             </div>
         `
       )
@@ -1919,7 +2103,9 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VEARI PIEL</p>
-                <p>${idioma === 'es' ? 'Artículos de Piel ' : 'Leather goods'}</p>
+                <p>${
+                  idioma === "es" ? "Artículos de Piel " : "Leather goods"
+                }</p>
             </div>
         `
       )
@@ -1939,7 +2125,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ABYSSAL</p>
-                <p>${idioma === 'es' ? 'Tienda destino ' : 'Store'}</p>
+                <p>${idioma === "es" ? "Tienda destino " : "Store"}</p>
             </div>
         `
       )
@@ -1959,7 +2145,7 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle" >VELASCO HABANOS</p>
-                <p>${idioma === 'es' ? 'Tabaco' : 'Tobacco'}</p>
+                <p>${idioma === "es" ? "Tabaco" : "Tobacco"}</p>
             </div>
         `
       )
@@ -1978,13 +2164,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
-            <p>${idioma === 'es' ? '¡Empecemos la fiesta con un drink!' : 'Let’s start this party with a drink'}</p>
+            <p>${
+              idioma === "es"
+                ? "¡Empecemos la fiesta con un drink!"
+                : "Let’s start this party with a drink"
+            }</p>
             <a href="${idioma}/port-experience/keloke">
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2004,13 +2194,17 @@ var markers = {
       .bindPopup(
         `   <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? 'Visita y disfruta el auténtico café dominicano.' : 'Make a stop, and fuel up with Dominican coffee!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Visita y disfruta el auténtico café dominicano."
+                    : "Make a stop, and fuel up with Dominican coffee!"
+                }</p>
                 <a href="${idioma}/port-experience/coffee-factory" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2031,13 +2225,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 70px; height: 70px;">
-                <p>${idioma === 'es' ? 'Un delicioso postre te espera.' : 'Have a delicious treat!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Un delicioso postre te espera."
+                    : "Have a delicious treat!"
+                }</p>
                 <a href="${idioma}/port-experience/icekery" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2058,13 +2256,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;" >
-                <p>${idioma === 'es' ? 'Un mojito siempre es una buena idea.' : 'A mojito is always a great idea!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Un mojito siempre es una buena idea."
+                    : "A mojito is always a great idea!"
+                }</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2083,13 +2285,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Un mojito siempre es una buena idea.' : 'A mojito is always a great idea!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Un mojito siempre es una buena idea."
+                    : "A mojito is always a great idea!"
+                }</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2110,13 +2316,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 80px; height: 80px; ">
-                <p>${idioma === 'es' ? '¡El mejor spot para el sabor caribeño!' : 'The top spot for Caribbean food! '}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡El mejor spot para el sabor caribeño!"
+                    : "The top spot for Caribbean food! "
+                }</p>
                 <a href="${idioma}/port-experience/cantina-latina" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2137,13 +2347,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mexican-grill.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? 'Tacos y snacks, ¡no hay nada mejor!' : 'Tacos and grilled snacks, it doesn\'t get any better than that!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Tacos y snacks, ¡no hay nada mejor!"
+                    : "Tacos and grilled snacks, it doesn't get any better than that!"
+                }</p>
                 <a href="${idioma}/port-experience/mexican-grill" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2164,13 +2378,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? '¡Mariscos y good vibes!' : 'Fresh seafood and good vibes!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Mariscos y good vibes!"
+                    : "Fresh seafood and good vibes!"
+                }</p>
                 <a href="${idioma}/port-experience/blue-parrot" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2191,13 +2409,15 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${idioma === 'es' ? '¡Échale picante! ' : 'Let’s get spicy!'}</p>
+                <p>${
+                  idioma === "es" ? "¡Échale picante! " : "Let’s get spicy!"
+                }</p>
                 <a href="${idioma}/port-experience/taco-lover" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2218,13 +2438,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 80px; height: 80px;"">
-                <p>${idioma === 'es' ? 'Mango, fresa, limón y más, ¡elige tu favorito!' : 'Mango, strawberry, lime, and more, you choose!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "Mango, fresa, limón y más, ¡elige tu favorito!"
+                    : "Mango, strawberry, lime, and more, you choose!"
+                }</p>
                 <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2245,13 +2469,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/dom-dom-bar.svg" alt="Logo" style="width: 90px; height: 90px; ">
-                <p>${idioma === 'es' ? '¿Drinks en la piscina? ¡Aquí es el lugar!' : 'Drinks by the pool? We got you!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Drinks en la piscina? ¡Aquí es el lugar!"
+                    : "Drinks by the pool? We got you!"
+                }</p>
                 <a href="${idioma}/port-experience/dom-dom-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2272,13 +2500,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-            <p>${idioma === 'es' ? 'Un drink en la piscina te espera. ' : 'Need a drink for the pool? We got you!'}</p>
+            <p>${
+              idioma === "es"
+                ? "Un drink en la piscina te espera. "
+                : "Need a drink for the pool? We got you!"
+            }</p>
             <a href="${idioma}/port-experience/huracan-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2299,13 +2531,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? '¿Listos? Navega y disfruta un drink. ' : 'Ready, sail, drink!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Listos? Navega y disfruta un drink. "
+                    : "Ready, sail, drink!"
+                }</p>
                 <a href="${idioma}/port-experience/boat-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2326,13 +2562,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === 'es' ? '¡Drinks frescos y diversión!' : 'Fresh drinks & fun!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Drinks frescos y diversión!"
+                    : "Fresh drinks & fun!"
+                }</p>
                 <a href="${idioma}/port-experience/tiki-tiki" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2353,13 +2593,17 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 100px; height: 100px; ">
-                <p>${idioma === 'es' ? '¡Amor, diversión y mucho ron!' : 'Love, fun, and Dominican rum!'}</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Amor, diversión y mucho ron!"
+                    : "Love, fun, and Dominican rum!"
+                }</p>
                 <a href="${idioma}/port-experience/rum-rum-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
                       onmouseover="this.style.backgroundColor='#f5a23a';" 
                       onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === 'es' ? 'Ver más' : 'View more'}
+                      ${idioma === "es" ? "Ver más" : "View more"}
                     </button>
                 </a>
             </div>
@@ -2424,13 +2668,15 @@ if (!isMobile) {
     var markerId = $(this).data("marker-id");
     var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
     var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
-    var tableCheckbox = filterContainer.find(".filter-header .switch input[type='checkbox']");
+    var tableCheckbox = filterContainer.find(
+      ".filter-header .switch input[type='checkbox']"
+    );
     var rows = filterContainer.find("tr"); // Todas las filas de la tabla
 
     if (!selectedMarkers) return; // Evitar errores si no hay marcadores asociados
 
     if (lastClickedId === markerId) {
-      // **Segundo clic en la misma fila: mostrar todos los markers de la tabla y quitar selección**
+      // Segundo clic en la misma fila: mostrar todos los markers de la tabla y quitar selección
       var tableMarkers = [];
 
       filterContainer.find(".tabla-icons tr").each(function () {
@@ -2452,18 +2698,18 @@ if (!isMobile) {
         map.addLayer(marker);
       });
 
-      // **Activar solo el checkbox de la tabla actual**
+      // Activar solo el checkbox de la tabla actual
       $(".filter-header .switch input[type='checkbox']").prop("checked", false); // Desactiva todos
       tableCheckbox.prop("checked", true).trigger("change"); // Activa solo el de esta tabla
 
-      // **Quitar la clase "selected" de todas las filas**
+      // Quitar la clase "selected" de todas las filas
       rows.removeClass("selected");
 
       lastClickedId = null; // Resetear para permitir nuevos cambios
       return;
     }
 
-    // **Primer clic: ocultar todos los markers y desactivar todos los checkboxes**
+    // Primer clic: ocultar todos los markers y desactivar todos los checkboxes
     $.each(markers, function (id, markerGroup) {
       markerGroup.forEach(function (marker) {
         map.removeLayer(marker);
@@ -2475,10 +2721,10 @@ if (!isMobile) {
       map.addLayer(marker);
     });
 
-    // **Desactivar todas las checkboxes**
+    // Desactivar todas las checkboxes
     $(".filter-header .switch input[type='checkbox']").prop("checked", false);
 
-    // **Quitar la clase "selected" de todas las filas y agregarla a la actual**
+    // Quitar la clase "selected" de todas las filas y agregarla a la actual
     rows.removeClass("selected");
     $(this).addClass("selected");
 
@@ -2487,115 +2733,147 @@ if (!isMobile) {
   });
 }
 
-
-
-
-if(isMobile){
+if (isMobile) {
   $(document).on("click", ".tabla-icons tr", function () {
     var markerId = $(this).data("marker-id");
     var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
-  
+    var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
+    var tableCheckbox = filterContainer.find(".filter-header .switch input[type='checkbox']"); // Checkbox de la tabla
+    var rows = $(".leaflet-control-filter tr"); // Todas las filas de la tabla
+
+    if (!selectedMarkers) return;
+
     if (lastClickedId === markerId && !markersVisible) {
-      // Si se hace clic en el mismo ícono y los marcadores están ocultos, mostrar todos los marcadores
-      $.each(markers, function (id, markerGroup) {
-        markerGroup.forEach(function (marker) {
-          map.addLayer(marker);
-        });
-      });
-      markersVisible = true; // Marcar que los marcadores están visibles
-      lastClickedId = null; // Resetear lastClickedId para permitir nueva selección
+      // Segundo clic en la misma fila: mostrar todos los markers de la tabla y activar su checkbox
+      mostrarTodosLosMarcadoresDeTabla(filterContainer);
+      tableCheckbox.prop("checked", true).trigger("change"); // Activar el checkbox de esta tabla
+
+      lastClickedId = null; // Resetear el control para permitir nuevas selecciones
+
+      // Quitar la clase "selected" de todas las filas
+      rows.removeClass("selected");
     } else {
-      // Ocultar todos los marcadores
-      $.each(markers, function (id, markerGroup) {
-        markerGroup.forEach(function (marker) {
-          map.removeLayer(marker);
-        });
-      });
-      // Mostrar solo los marcadores seleccionados
+      ocultarTodosLosMarcadores();
+      
+      // Mostrar solo los markers de la fila seleccionada
       selectedMarkers.forEach(function (marker) {
         map.addLayer(marker);
         map.setView(marker.getLatLng(), 15); // Centrar el mapa en el marcador seleccionado
       });
-      markersVisible = false; // Marcar que los marcadores están ocultos
-      lastClickedId = markerId; // Actualizar lastClickedId al último marcador clicado
-    }
-  
-    // Desplazar la pantalla hacia el mapa
-    $('html, body').animate({
-      scrollTop: $("#map").offset().top
-    }, 500); // Ajusta la duración del desplazamiento según sea necesario
-  });
-}
-// Nueva funcionalidad para filtrar por tabla al cambiar el estado del switch
-if(isMobile){
-$(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
-  var table = $(this).closest(".leaflet-control-filter").find("table");
-  var tableIndex = table.index();
-  var markerIds = table
-    .find("tr")
-    .map(function () {
-      return $(this).data("marker-id");
-    })
-    .get();
 
-  if ($(this).is(":checked")) {
-    // Switch activado: aplicar filtro y mostrar solo los marcadores de esta tabla
+      markersVisible = false;
+      lastClickedId = markerId;
+
+      // Desactivar todas las checkboxes
+      $(".filter-header .switch input[type='checkbox']").prop("checked", false);
+
+      // Quitar la clase "selected" de todas las filas y agregarla a la actual
+      rows.removeClass("selected");
+      $(this).addClass("selected");
+    }
+
+    // Desplazar la pantalla hacia el mapa
+    $("html, body").animate(
+      {
+        scrollTop: $("#map").offset().top,
+      },
+      500
+    );
+  });
+
+  // Nueva funcionalidad para filtrar por tabla al cambiar el estado del switch
+  $(document).on(
+    "change",
+    ".filter-header .switch input[type='checkbox']",
+    function () {
+      var table = $(this).closest(".leaflet-control-filter").find("table");
+      var filterContainer = $(this).closest(".leaflet-control-filter");
+
+      if ($(this).is(":checked")) {
+        // Desactivar todas las demás checkboxes
+        $(".filter-header .switch input[type='checkbox']").not(this).prop("checked", false);
+
+        // Ocultar todos los marcadores y mostrar solo los de esta tabla
+        ocultarTodosLosMarcadores();
+        mostrarTodosLosMarcadoresDeTabla(filterContainer);
+
+        markersVisible = false;
+        lastClickedId = "table-" + table.index();
+      } else {
+        mostrarTodosLosMarcadores();
+        lastClickedId = null;
+      }
+    }
+  );
+
+  // Función para ocultar todos los marcadores
+  function ocultarTodosLosMarcadores() {
     $.each(markers, function (id, markerGroup) {
       markerGroup.forEach(function (marker) {
         map.removeLayer(marker);
       });
     });
+  }
+
+  // Función para mostrar todos los marcadores
+  function mostrarTodosLosMarcadores() {
+    $.each(markers, function (id, markerGroup) {
+      markerGroup.forEach(function (marker) {
+        map.addLayer(marker);
+      });
+    });
+    markersVisible = true;
+  }
+
+  // Función para mostrar todos los marcadores de una tabla específica
+  function mostrarTodosLosMarcadoresDeTabla(filterContainer) {
+    var markerIds = filterContainer.find("tr").map(function () {
+      return $(this).data("marker-id");
+    }).get();
 
     markerIds.forEach(function (markerId) {
       markers[markerId].forEach(function (marker) {
         map.addLayer(marker);
       });
     });
-
-    markersVisible = false; // Indicar que los marcadores están filtrados
-    lastClickedId = "table-" + tableIndex; // Actualizar lastClickedId
-  } else {
-    // Switch desactivado: mostrar todos los marcadores
-    $.each(markers, function (id, markerGroup) {
-      markerGroup.forEach(function (marker) {
-        map.addLayer(marker);
-      });
-    });
-
-    markersVisible = true; // Indicar que todos los marcadores están visibles
-    lastClickedId = null; // Resetear lastClickedId
   }
-});
 }
+
+
+
 if (!isMobile) {
   // Activar todos los checkboxes al inicio
   $(".filter-header .switch input[type='checkbox']").prop("checked", true);
 
-  $(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
-    var table = $(this).closest(".leaflet-control-filter").find("table");
-    var markerIds = table
-      .find("tr")
-      .map(function () {
-        return $(this).data("marker-id");
-      })
-      .get();
+  $(document).on(
+    "change",
+    ".filter-header .switch input[type='checkbox']",
+    function () {
+      var table = $(this).closest(".leaflet-control-filter").find("table");
+      var markerIds = table
+        .find("tr")
+        .map(function () {
+          return $(this).data("marker-id");
+        })
+        .get();
 
-    if ($(this).is(":checked")) {
-      // Switch activado: mostrar los marcadores de esta tabla
-      markerIds.forEach(function (markerId) {
-        markers[markerId].forEach(function (marker) {
-          map.addLayer(marker);
+      if ($(this).is(":checked")) {
+        // Switch activado: mostrar los marcadores de esta tabla
+        markerIds.forEach(function (markerId) {
+          markers[markerId].forEach(function (marker) {
+            map.addLayer(marker);
+          });
         });
-      });
-    } else {
-      // Switch desactivado: ocultar los marcadores de esta tabla
-      markerIds.forEach(function (markerId) {
-        markers[markerId].forEach(function (marker) {
-          map.removeLayer(marker);
+      } else {
+        // Switch desactivado: ocultar los marcadores de esta tabla
+        markerIds.forEach(function (markerId) {
+          markers[markerId].forEach(function (marker) {
+            map.removeLayer(marker);
+          });
         });
-      });
+      }
     }
-  });
+  );
 }
 // funcionalidad para modificar las columnas de las tablas de filtrado dependiendo de la cantidad de elementos
 document.addEventListener("DOMContentLoaded", function () {
@@ -2605,7 +2883,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!isMobile) {
     tablas.forEach(function (tabla) {
       // Cuenta el número de filas en el tbody de la tabla
-      var filas = tabla.querySelectorAll("tbody tr").length; 
+      var filas = tabla.querySelectorAll("tbody tr").length;
 
       // Aplica el estilo CSS si hay más de 5 filas
       if (filas > 6 && filas <= 22) {
@@ -2628,10 +2906,10 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const rows = document.querySelectorAll(".leaflet-control-filter tr");
 
-  rows.forEach(row => {
+  rows.forEach((row) => {
     row.addEventListener("click", function () {
       // Remueve la clase "selected" de todas las filas
-      rows.forEach(r => r.classList.remove("selected"));
+      rows.forEach((r) => r.classList.remove("selected"));
       // Agrega la clase "selected" a la fila actual
       this.classList.add("selected");
     });
