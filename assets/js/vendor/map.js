@@ -2915,5 +2915,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+if(!isMobile){
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".leaflet-control-filter").forEach(function (filter) {
+        let switchInput = filter.querySelector(".switch input");
+        let minimizeButton = filter.querySelector(".minimize-btn");
 
+        if (switchInput && minimizeButton) {
+            switchInput.addEventListener("change", function () {
+                if (switchInput.checked) {
+                    minimizeButton.click();
+                }
+            });
+        }
+    });
+});
+}
+
+  //se agrega JS para mantener un Focus en el elemento clickeado de la tabla
 // #endregion
