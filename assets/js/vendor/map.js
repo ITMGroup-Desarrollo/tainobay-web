@@ -2663,7 +2663,7 @@ var lastClickedId = null;
 var markersVisible = true;
 
 // Evento para manejar el click en las filas de la tabla
-if (!isMobile) {
+
   $(document).on("click", ".tabla-icons tr", function () {
     var markerId = $(this).data("marker-id");
     var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
@@ -2731,117 +2731,117 @@ if (!isMobile) {
     // Guardar el ID del último clic
     lastClickedId = markerId;
   });
-}
 
-if (isMobile) {
-  $(document).on("click", ".tabla-icons tr", function () {
-    var markerId = $(this).data("marker-id");
-    var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
-    var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
-    var tableCheckbox = filterContainer.find(".filter-header .switch input[type='checkbox']"); // Checkbox de la tabla
-    var rows = $(".leaflet-control-filter tr"); // Todas las filas de la tabla
 
-    if (!selectedMarkers) return;
+// if (isMobile) {
+//   $(document).on("click", ".tabla-icons tr", function () {
+//     var markerId = $(this).data("marker-id");
+//     var selectedMarkers = markers[markerId]; // Obtener los marcadores correspondientes al ID
+//     var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
+//     var tableCheckbox = filterContainer.find(".filter-header .switch input[type='checkbox']"); // Checkbox de la tabla
+//     var rows = $(".leaflet-control-filter tr"); // Todas las filas de la tabla
 
-    if (lastClickedId === markerId && !markersVisible) {
-      // Segundo clic en la misma fila: mostrar todos los markers de la tabla y activar su checkbox
-      mostrarTodosLosMarcadoresDeTabla(filterContainer);
-      tableCheckbox.prop("checked", true).trigger("change"); // Activar el checkbox de esta tabla
+//     if (!selectedMarkers) return;
 
-      lastClickedId = null; // Resetear el control para permitir nuevas selecciones
+//     if (lastClickedId === markerId && !markersVisible) {
+//       // Segundo clic en la misma fila: mostrar todos los markers de la tabla y activar su checkbox
+//       mostrarTodosLosMarcadoresDeTabla(filterContainer);
+//       tableCheckbox.prop("checked", true).trigger("change"); // Activar el checkbox de esta tabla
 
-      // Quitar la clase "selected" de todas las filas
-      rows.removeClass("selected");
-    } else {
-      ocultarTodosLosMarcadores();
+//       lastClickedId = null; // Resetear el control para permitir nuevas selecciones
+
+//       // Quitar la clase "selected" de todas las filas
+//       rows.removeClass("selected");
+//     } else {
+//       ocultarTodosLosMarcadores();
       
-      // Mostrar solo los markers de la fila seleccionada
-      selectedMarkers.forEach(function (marker) {
-        map.addLayer(marker);
-        map.setView(marker.getLatLng(), 15); // Centrar el mapa en el marcador seleccionado
-      });
+//       // Mostrar solo los markers de la fila seleccionada
+//       selectedMarkers.forEach(function (marker) {
+//         map.addLayer(marker);
+//         map.setView(marker.getLatLng(), 15); // Centrar el mapa en el marcador seleccionado
+//       });
 
-      markersVisible = false;
-      lastClickedId = markerId;
+//       markersVisible = false;
+//       lastClickedId = markerId;
 
-      // Desactivar todas las checkboxes
-      $(".filter-header .switch input[type='checkbox']").prop("checked", false);
+//       // Desactivar todas las checkboxes
+//       $(".filter-header .switch input[type='checkbox']").prop("checked", false);
 
-      // Quitar la clase "selected" de todas las filas y agregarla a la actual
-      rows.removeClass("selected");
-      $(this).addClass("selected");
-    }
+//       // Quitar la clase "selected" de todas las filas y agregarla a la actual
+//       rows.removeClass("selected");
+//       $(this).addClass("selected");
+//     }
 
-    // Desplazar la pantalla hacia el mapa
-    $("html, body").animate(
-      {
-        scrollTop: $("#map").offset().top,
-      },
-      500
-    );
-  });
+//     // Desplazar la pantalla hacia el mapa
+//     $("html, body").animate(
+//       {
+//         scrollTop: $("#map").offset().top,
+//       },
+//       500
+//     );
+//   });
 
-  // Nueva funcionalidad para filtrar por tabla al cambiar el estado del switch
-  $(document).on(
-    "change",
-    ".filter-header .switch input[type='checkbox']",
-    function () {
-      var table = $(this).closest(".leaflet-control-filter").find("table");
-      var filterContainer = $(this).closest(".leaflet-control-filter");
+//   // Nueva funcionalidad para filtrar por tabla al cambiar el estado del switch
+//   $(document).on(
+//     "change",
+//     ".filter-header .switch input[type='checkbox']",
+//     function () {
+//       var table = $(this).closest(".leaflet-control-filter").find("table");
+//       var filterContainer = $(this).closest(".leaflet-control-filter");
 
-      if ($(this).is(":checked")) {
-        // Desactivar todas las demás checkboxes
-        $(".filter-header .switch input[type='checkbox']").not(this).prop("checked", false);
+//       if ($(this).is(":checked")) {
+//         // Desactivar todas las demás checkboxes
+//         $(".filter-header .switch input[type='checkbox']").not(this).prop("checked", false);
 
-        // Ocultar todos los marcadores y mostrar solo los de esta tabla
-        ocultarTodosLosMarcadores();
-        mostrarTodosLosMarcadoresDeTabla(filterContainer);
+//         // Ocultar todos los marcadores y mostrar solo los de esta tabla
+//         ocultarTodosLosMarcadores();
+//         mostrarTodosLosMarcadoresDeTabla(filterContainer);
 
-        markersVisible = false;
-        lastClickedId = "table-" + table.index();
-      } else {
-        mostrarTodosLosMarcadores();
-        lastClickedId = null;
-      }
-    }
-  );
+//         markersVisible = false;
+//         lastClickedId = "table-" + table.index();
+//       } else {
+//         mostrarTodosLosMarcadores();
+//         lastClickedId = null;
+//       }
+//     }
+//   );
 
-  // Función para ocultar todos los marcadores
-  function ocultarTodosLosMarcadores() {
-    $.each(markers, function (id, markerGroup) {
-      markerGroup.forEach(function (marker) {
-        map.removeLayer(marker);
-      });
-    });
-  }
+//   // Función para ocultar todos los marcadores
+//   function ocultarTodosLosMarcadores() {
+//     $.each(markers, function (id, markerGroup) {
+//       markerGroup.forEach(function (marker) {
+//         map.removeLayer(marker);
+//       });
+//     });
+//   }
 
-  // Función para mostrar todos los marcadores
-  function mostrarTodosLosMarcadores() {
-    $.each(markers, function (id, markerGroup) {
-      markerGroup.forEach(function (marker) {
-        map.addLayer(marker);
-      });
-    });
-    markersVisible = true;
-  }
+//   // Función para mostrar todos los marcadores
+//   function mostrarTodosLosMarcadores() {
+//     $.each(markers, function (id, markerGroup) {
+//       markerGroup.forEach(function (marker) {
+//         map.addLayer(marker);
+//       });
+//     });
+//     markersVisible = true;
+//   }
 
-  // Función para mostrar todos los marcadores de una tabla específica
-  function mostrarTodosLosMarcadoresDeTabla(filterContainer) {
-    var markerIds = filterContainer.find("tr").map(function () {
-      return $(this).data("marker-id");
-    }).get();
+//   // Función para mostrar todos los marcadores de una tabla específica
+//   function mostrarTodosLosMarcadoresDeTabla(filterContainer) {
+//     var markerIds = filterContainer.find("tr").map(function () {
+//       return $(this).data("marker-id");
+//     }).get();
 
-    markerIds.forEach(function (markerId) {
-      markers[markerId].forEach(function (marker) {
-        map.addLayer(marker);
-      });
-    });
-  }
-}
+//     markerIds.forEach(function (markerId) {
+//       markers[markerId].forEach(function (marker) {
+//         map.addLayer(marker);
+//       });
+//     });
+//   }
+// }
 
 
 
-if (!isMobile) {
+
   // Activar todos los checkboxes al inicio
   $(".filter-header .switch input[type='checkbox']").prop("checked", true);
 
@@ -2874,7 +2874,7 @@ if (!isMobile) {
       }
     }
   );
-}
+
 // funcionalidad para modificar las columnas de las tablas de filtrado dependiendo de la cantidad de elementos
 document.addEventListener("DOMContentLoaded", function () {
   // Selecciona todas las tablas con la clase 'tabla-icons'
