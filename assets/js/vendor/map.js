@@ -342,10 +342,87 @@ var monkeyIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
+
+var salidaIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="400"
+     data-aos-offset="0">
+               <img class="salidaIcon" src="assets/icons/map/arrowGreen.svg" alt="PORT EXIT" width="30" height="30">
+           </div>`,
+  className: "",
+  iconSize: [30, 30],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
 // #endregion
 
 // #region Marcadores y sus eventos
-
+var caminoCoordenadas = [
+  [220, 140],
+  [190, 150],
+  [130, 200],
+  [90, 220],
+  [75, 260],
+  [100, 300],
+  [150, 310],
+  [180, 320],
+  [230, 325],
+  [250, 305],
+  [280, 270],
+  [300, 260],
+  [320, 260],
+  [370, 290],
+  [400, 290],
+  [440, 275],
+  [465, 275],
+  [495, 300],
+  [510, 330],
+  [520, 340],
+  [590, 340],
+  [610, 360],
+  [625, 400],
+  [610, 450],
+  [595, 480],
+  [610, 510],
+  [620, 515],
+  [660, 530], //Bifurcación
+  [685, 525],
+  [710, 505],
+  [740, 505],
+  [850, 550],
+  [910, 600],
+  [915, 650],
+  [920, 700],
+  [945, 750],
+  [955, 790],
+  [960, 850],
+  [955, 980],
+  [900, 1100],//union de la bifurcación
+  [910, 1130],
+  [900, 1210],
+  [880, 1210],
+  [860, 1230],
+  [850, 1245],
+  [730, 1300],
+  [500, 1230],
+];
+// 2️⃣ Dibujar el camino en el mapa
+var camino = L.polyline(caminoCoordenadas, { 
+  color: '#59ba47',      // Color del camino
+  weight: 8,          // Grosor de la línea
+  opacity: 1,       // Opacidad
+  dashArray: "8, 10"  // Línea discontinua (opcional)
+}).addTo(map);
+// Agregar la polyline al objeto markers como si fuera un "marker"
+// markers[75] = [
+//   L.polyline(caminoCoordenadas, { 
+//       color: '#59ba47',  
+//       weight: 8,        
+//       opacity: 1,
+//       dashArray: "8, 10"
+//   }).addTo(map)
+// ];
 var markers = {
   2: [
     L.marker([890, 650], { icon: rumquestIcon })
@@ -2637,6 +2714,10 @@ var markers = {
         });
       }),
   ],
+  75: [
+    L.marker([250, 120], { icon: salidaIcon })
+      .addTo(map)
+  ],
 };
 
 // Evento para ajustar el tamaño de los íconos en función del zoom
@@ -2663,74 +2744,102 @@ var lastClickedId = null;
 var markersVisible = true;
 
 // Evento para manejar el click en las filas de la tabla
+// Evento para manejar el click en las filas de la tabla
+$(document).on("click", ".tabla-icons tr", function () {
+  var markerId = $(this).data("marker-id");
+  var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
+  var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
+  var tableCheckbox = filterContainer.find(
+    ".filter-header .switch input[type='checkbox']"
+  );
+  var rows = filterContainer.find("tr"); // Todas las filas de la tabla
 
-  $(document).on("click", ".tabla-icons tr", function () {
-    var markerId = $(this).data("marker-id");
-    var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
-    var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
-    var tableCheckbox = filterContainer.find(
-      ".filter-header .switch input[type='checkbox']"
-    );
-    var rows = filterContainer.find("tr"); // Todas las filas de la tabla
+  if (!selectedMarkers) return; // Evitar errores si no hay marcadores asociados
 
-    if (!selectedMarkers) return; // Evitar errores si no hay marcadores asociados
+  if (lastClickedId === markerId) {
+    var tableMarkers = [];
 
-    if (lastClickedId === markerId) {
-      // Segundo clic en la misma fila: mostrar todos los markers de la tabla y quitar selección
-      var tableMarkers = [];
+    filterContainer.find(".tabla-icons tr").each(function () {
+      var rowMarkerId = $(this).data("marker-id");
+      if (markers[rowMarkerId]) {
+        tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+      }
+    });
 
-      filterContainer.find(".tabla-icons tr").each(function () {
-        var rowMarkerId = $(this).data("marker-id");
-        if (markers[rowMarkerId]) {
-          tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
-        }
-      });
-
-      // Ocultar todos los markers
-      $.each(markers, function (id, markerGroup) {
-        markerGroup.forEach(function (marker) {
-          map.removeLayer(marker);
-        });
-      });
-
-      // Mostrar todos los markers de la tabla
-      tableMarkers.forEach(function (marker) {
-        map.addLayer(marker);
-      });
-
-      // Activar solo el checkbox de la tabla actual
-      $(".filter-header .switch input[type='checkbox']").prop("checked", false); // Desactiva todos
-      tableCheckbox.prop("checked", true).trigger("change"); // Activa solo el de esta tabla
-
-      // Quitar la clase "selected" de todas las filas
-      rows.removeClass("selected");
-
-      lastClickedId = null; // Resetear para permitir nuevos cambios
-      return;
-    }
-
-    // Primer clic: ocultar todos los markers y desactivar todos los checkboxes
     $.each(markers, function (id, markerGroup) {
       markerGroup.forEach(function (marker) {
         map.removeLayer(marker);
       });
     });
 
-    // Mostrar solo los markers de la fila clickeada
-    selectedMarkers.forEach(function (marker) {
+    tableMarkers.forEach(function (marker) {
       map.addLayer(marker);
     });
 
-    // Desactivar todas las checkboxes
+    if (tableMarkers.includes(markers[75][0])) {
+      map.addLayer(camino); // Mostrar el polyline si la tabla tiene el marker 75
+    }
+
     $(".filter-header .switch input[type='checkbox']").prop("checked", false);
-
-    // Quitar la clase "selected" de todas las filas y agregarla a la actual
+    tableCheckbox.prop("checked", true).trigger("change");
     rows.removeClass("selected");
-    $(this).addClass("selected");
+    lastClickedId = null;
+    return;
+  }
 
-    // Guardar el ID del último clic
-    lastClickedId = markerId;
+  $.each(markers, function (id, markerGroup) {
+    markerGroup.forEach(function (marker) {
+      map.removeLayer(marker);
+    });
   });
+
+  selectedMarkers.forEach(function (marker) {
+    map.addLayer(marker);
+  });
+
+  if (markerId === 75) {
+    map.addLayer(camino); // Siempre mostrar el polyline cuando se selecciona el marker 75
+  } else {
+    map.removeLayer(camino); // Ocultar el polyline si se selecciona otro marcador
+  }
+
+  $(".filter-header .switch input[type='checkbox']").prop("checked", false);
+  rows.removeClass("selected");
+  $(this).addClass("selected");
+  lastClickedId = markerId;
+});
+
+// Evento para manejar la activación/desactivación del checkbox
+$(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
+  var isChecked = $(this).prop("checked");
+  var filterContainer = $(this).closest(".leaflet-control-filter");
+  var tableMarkers = [];
+
+  filterContainer.find(".tabla-icons tr").each(function () {
+    var rowMarkerId = $(this).data("marker-id");
+    if (markers[rowMarkerId]) {
+      tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+    }
+  });
+
+  if (isChecked) {
+    tableMarkers.forEach(function (marker) {
+      map.addLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.addLayer(camino); // Asegurar que el polyline se muestra si el marker 75 está en la tabla
+    }
+  } else {
+    tableMarkers.forEach(function (marker) {
+      map.removeLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.removeLayer(camino); // También ocultar el polyline si el marker 75 estaba en la tabla
+    }
+  }
+});
+
+
 
 
 // if (isMobile) {
@@ -2931,6 +3040,4 @@ if(!isMobile){
     });
 });
 }
-
-  //se agrega JS para mantener un Focus en el elemento clickeado de la tabla
 // #endregion

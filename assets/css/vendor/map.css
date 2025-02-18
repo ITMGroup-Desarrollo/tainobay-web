@@ -191,6 +191,13 @@ body.shock-body {
 .leaflet-marker-icon img {
   border: 1.5px solid white;
   border-radius: 50%;
+  
+}
+.salidaIcon{
+  border: none !important; 
+  width: 30px !important;
+  height: 30px !important;
+  rotate: 250deg;
 }
 @media (min-width: 769px) {
   .service .header-text {
