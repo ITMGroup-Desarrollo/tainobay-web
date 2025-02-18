@@ -65,6 +65,9 @@ $points = [
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_7.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_8.webp',
       'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_9.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_10.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_11.webp',
+      'assets\images\port-experience\blue-parrot\gallery\BLUE_PARROT_12.webp',
     ]
   ],
   [
