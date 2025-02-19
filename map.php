@@ -72,7 +72,7 @@ include_once("include/lang/{$idioma}-map.php");
                     <div class="filter-content">
                         <table class="tabla-icons">
                             <!-- <tr data-marker-id="76">
-                                <td><img src="assets/icons/map/arrowRed.svg" alt="SHOWS"></td>
+                                <td><img src="assets/icons/map/arrowGreen.svg" alt="SHOWS"></td>
                                 <td><?php echo $idioma === 'es' ? 'REGRESO CRUCERO' : 'BACK TO SHIP'; ?></td>
                             </tr> -->
                             <tr data-marker-id="9">
@@ -80,7 +80,7 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><?php echo $idioma === 'es' ? 'BAÑOS' : 'RESTROOMS'; ?></td>
                             </tr>
                             <tr data-marker-id="75">
-                                <td><img src="assets/icons/map/arrowGreen.svg" alt="SHOWS"></td>
+                                <td><img src="assets/icons/map/arrowRed.svg" alt="SHOWS"></td>
                                 <td><?php echo $idioma === 'es' ? 'SALIDA PUERTO' : 'PORT EXIT'; ?></td>
                             </tr>
                             <tr data-marker-id="10">

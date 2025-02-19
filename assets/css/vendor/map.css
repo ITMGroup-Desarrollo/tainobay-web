@@ -185,7 +185,7 @@ input:checked + .slider:before {
 body.shock-body {
   background-color: #ddd !important;
 }
-.leaflet-marker-icon {
+.shadowMarker {
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 1));
 }
 .leaflet-marker-icon img {
@@ -193,11 +193,11 @@ body.shock-body {
   border-radius: 50%;
   
 }
-.salidaIcon{
+.salidaCaminoIcon{
   border: none !important; 
   width: 30px !important;
   height: 30px !important;
-  rotate: 250deg;
+  rotate: 73deg;
 }
 @media (min-width: 769px) {
   .service .header-text {
