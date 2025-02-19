@@ -47,7 +47,7 @@ if (isMobile) {
 
 // #region Agrega la imagen del mapa
 L.imageOverlay(
-  "assets/images/media/nuevo-mapa-taino-sin-nombres.jpg",
+  "assets/images/media/nuevo-mapa-taino-sin-nombres.webp",
   bounds
 ).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
@@ -108,7 +108,7 @@ $(document).on("click", ".minimize-btn", function () {
 //      data-aos-offset="0">
 //                <img src="assets/icons/map/retail.svg" alt="retail" width="20" height="20">
 //            </div>`,
-//   className: "", // Puedes usar tu propia clase CSS o dejarla vacía
+//   className: "shadowMarker", // Puedes usar tu propia clase CSS o dejarla vacía
 //   iconSize: [20, 20],
 //   iconAnchor: [0, 0], // Ajusta el anclaje como en L.icon
 //   popupAnchor: [12, -20], // Ajusta el anclaje del popup como en L.icon
@@ -120,7 +120,7 @@ var retailIcon = L.divIcon({
   data-aos-offset="0">
             <img src="assets/icons/map/retail.svg" alt="retail" width="20" height="20">
         </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -133,7 +133,7 @@ var restroomsIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/restrooms.svg" alt="restrooms" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -145,7 +145,7 @@ var barIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/bar.svg" alt="bar" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -157,7 +157,7 @@ var foodIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/food.svg" alt="food" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -169,7 +169,7 @@ var drugstoreIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/drugstore.svg" alt="drugstore" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -181,7 +181,7 @@ var experienceIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/experience.svg" alt="experience" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -193,7 +193,7 @@ var showIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/show.svg" alt="experience" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -205,7 +205,7 @@ var fruitIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/fruits.svg" alt="experience" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -217,7 +217,7 @@ var camaraIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/camara.svg" alt="experience" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -229,7 +229,7 @@ var starIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/star.svg" alt="experience" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -241,7 +241,7 @@ var taxiIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/taxi.svg" alt="experience" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -253,7 +253,7 @@ var shorexIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/shorex.svg" alt="experience" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -265,7 +265,7 @@ var poolIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/pool-marker.svg" alt="pool" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -277,7 +277,7 @@ var beachIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/beach-marker.svg" alt="beach" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -289,7 +289,7 @@ var rumquestIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="rum-quest" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -301,7 +301,7 @@ var riverIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="lazy-river" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -313,7 +313,7 @@ var splashIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/splash-marker.svg" alt="splash-surfing" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -325,7 +325,7 @@ var spaIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/spa-marker.svg" alt="spa wellness" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
@@ -337,14 +337,231 @@ var monkeyIcon = L.divIcon({
      data-aos-offset="0">
                <img src="assets/icons/map/port-experience/monkey-marker.svg" alt="monkey-island" width="20" height="20">
            </div>`,
-  className: "",
+  className: "shadowMarker",
   iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+
+var salidaCaminoIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="400"
+     data-aos-offset="0">
+               <img class="salidaCaminoIcon" src="assets/icons/map/arrowRed.svg" alt="PORT EXIT" width="30" height="30">
+           </div>`,
+  className: "",
+  iconSize: [30, 30],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var salidaIcon = L.divIcon({
+  html: `<span style="color: #ed1654; font-weight: bold; font-size: 1.2rem; text-shadow: 
+    -1px -1px 0 white,  
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;">${idioma === "es" ? "SALIDA" : "EXIT"}</span>`,
+  className: "shadowMarker",
+  iconSize: [30, 30],
+  iconAnchor: [0, 0],
+  popupAnchor: [0, 0],
+});
+var regresoCaminoIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="400"
+     data-aos-offset="0">
+               <img class="regresoCaminoIcon" src="assets/icons/map/arrowGreen.svg" alt="PORT EXIT" width="30" height="30">
+           </div>`,
+  className: "",
+  iconSize: [30, 30],
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
 // #endregion
 
 // #region Marcadores y sus eventos
+var caminoCoordenadas = [
+  [220, 140],
+  [190, 150],
+  [130, 200],
+  [90, 220],
+  [75, 260],
+  [100, 300],
+  [150, 310],
+  [180, 320],
+  [230, 325],
+  [250, 305],
+  [280, 270],
+  [300, 260],
+  [320, 260],
+  [370, 290],
+  [400, 290],
+  [440, 275],
+  [465, 275],
+  [495, 300],
+  [510, 330],
+  [520, 340],
+  [590, 340],
+  [615, 360],
+  [625, 400],
+  [610, 450],
+  [595, 480],
+  [610, 510],
+  [620, 515],
+  [660, 525], //Bifurcación
+  
+  [680, 520],
+  [710, 505],
+  [740, 505],
+  [850, 550],
+  [885, 575],
+  [905, 600],
+  [915, 650],
+  [920, 700],
+  [945, 750],
+  [955, 790],
+  [960, 850],
+  [955, 980],
+  [900, 1100],//union de la bifurcación
+  [910, 1130],
+  [890, 1210],
+  [880, 1210],
+  [860, 1230],
+  [850, 1245],
+  [730, 1300],
+  [500, 1230],
+];
+var caminoCoordenadas2 = [
+  
+  [650, 525], //Bifurcación
+  [690, 540],
+  [720, 535],
+  [755, 532],
+  [775, 540],
+  [800, 560],
+  [810, 580],
+  [810, 640],
+  [835, 720],
+  [845, 765],
+  [870, 810],
+  [910, 870],
+  [912, 880],
+  [912, 950],
+  [910, 1000],
+  [895, 1050],
+  
+  [900, 1100],//union de la bifurcación
+  
+];
+var caminoCoordenadas3 = [
+  [220, 140],
+  [190, 150],
+  [130, 200],
+  [90, 220],
+  [75, 260],
+  [100, 300],
+  [150, 310],
+  [180, 320],
+  [230, 325],
+  [250, 305],
+  [280, 270],
+  [300, 260],
+  [320, 260],
+  [370, 290],
+  [400, 290],
+  [440, 275],
+  [465, 275],
+  [495, 300],
+  [510, 330],
+  [520, 340],
+  [590, 340],
+  [615, 360],
+  [625, 400],
+  [610, 450],
+  [595, 480],
+  [610, 510],
+  [620, 515],
+  [660, 525], //Bifurcación
+  
+  [680, 520],
+  [710, 505],
+  [740, 505],
+  [850, 550],
+  [885, 575],
+  [905, 600],
+  [915, 650],
+  [920, 700],
+  [945, 750],
+  [955, 790],
+  [960, 850],
+  [955, 980],
+  [900, 1100],//union de la bifurcación
+  [920, 1130],
+  [900, 1220],
+  [880, 1220],
+  [860, 1240],
+  [850, 1255],
+  [730, 1315],
+  [615, 1280],
+  
+];
+var caminoCoordenadas4 = [
+  
+  [650, 525], //Bifurcación
+  [690, 540],
+  [720, 535],
+  [755, 532],
+  [775, 540],
+  [800, 560],
+  [810, 580],
+  [810, 640],
+  [835, 720],
+  [845, 765],
+  [870, 810],
+  [910, 870],
+  [912, 880],
+  [912, 950],
+  [910, 1000],
+  [895, 1050],
+  
+  [900, 1100],//union de la bifurcación
+  
+];
+// Dibujar el camino en el mapa
+var camino3 = 
+L.polyline(caminoCoordenadas3, { 
+  color: '#60bc44',      // Color del camino
+  weight: 8,          // Grosor de la línea
+  opacity: 1,       // Opacidad
+  dashArray: "8, 10"  // Línea discontinua (opcional)
+}).addTo(map);
+var camino4 = 
+L.polyline(caminoCoordenadas4, { 
+  color: '#60bc44',      // Color del camino
+  weight: 8,          // Grosor de la línea
+  opacity: 1,       // Opacidad
+  dashArray: "8, 10"  // Línea discontinua (opcional)
+}).addTo(map);
+var camino = 
+L.polyline(caminoCoordenadas, { 
+  color: '#ed1654',      // Color del camino
+  weight: 8,          // Grosor de la línea
+  opacity: 1,       // Opacidad
+  dashArray: "8, 10"  // Línea discontinua (opcional)
+}).addTo(map);
+var camino2 = 
+L.polyline(caminoCoordenadas2, { 
+  color: '#ed1654',      // Color del camino
+  weight: 8,          // Grosor de la línea
+  opacity: 1,       // Opacidad
+  dashArray: "8, 10"  // Línea discontinua (opcional)
+}).addTo(map);
+
+//Marker del texto salida sin que sea afectado por los eventos de los otros markers
+L.marker(idioma === "es" ? [290, 95] : [290, 105], { icon: salidaIcon })
+      .addTo(map)
+
 
 var markers = {
   2: [
@@ -2637,6 +2854,18 @@ var markers = {
         });
       }),
   ],
+  75: [
+    L.marker([255, 118], { icon: salidaCaminoIcon })
+      .addTo(map)
+  ],
+  76: [
+    L.marker([618, 1262], { icon: regresoCaminoIcon })
+      .addTo(map)
+  ],
+  // 77: [
+  //   L.marker([290, 110], { icon: salidaIcon })
+  //     .addTo(map)
+  // ],
 };
 
 // Evento para ajustar el tamaño de los íconos en función del zoom
@@ -2663,74 +2892,160 @@ var lastClickedId = null;
 var markersVisible = true;
 
 // Evento para manejar el click en las filas de la tabla
+$(document).on("click", ".tabla-icons tr", function () {
+  var markerId = $(this).data("marker-id");
+  var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
+  var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
+  var tableCheckbox = filterContainer.find(
+    ".filter-header .switch input[type='checkbox']"
+  );
+  var rows = filterContainer.find("tr"); // Todas las filas de la tabla
 
-  $(document).on("click", ".tabla-icons tr", function () {
-    var markerId = $(this).data("marker-id");
-    var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
-    var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
-    var tableCheckbox = filterContainer.find(
-      ".filter-header .switch input[type='checkbox']"
-    );
-    var rows = filterContainer.find("tr"); // Todas las filas de la tabla
+  if (!selectedMarkers) return; // Evitar errores si no hay marcadores asociados
 
-    if (!selectedMarkers) return; // Evitar errores si no hay marcadores asociados
+  if (lastClickedId === markerId) {
+    var tableMarkers = [];
 
-    if (lastClickedId === markerId) {
-      // Segundo clic en la misma fila: mostrar todos los markers de la tabla y quitar selección
-      var tableMarkers = [];
+    filterContainer.find(".tabla-icons tr").each(function () {
+      var rowMarkerId = $(this).data("marker-id");
+      if (markers[rowMarkerId]) {
+        tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+      }
+    });
 
-      filterContainer.find(".tabla-icons tr").each(function () {
-        var rowMarkerId = $(this).data("marker-id");
-        if (markers[rowMarkerId]) {
-          tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
-        }
-      });
-
-      // Ocultar todos los markers
-      $.each(markers, function (id, markerGroup) {
-        markerGroup.forEach(function (marker) {
-          map.removeLayer(marker);
-        });
-      });
-
-      // Mostrar todos los markers de la tabla
-      tableMarkers.forEach(function (marker) {
-        map.addLayer(marker);
-      });
-
-      // Activar solo el checkbox de la tabla actual
-      $(".filter-header .switch input[type='checkbox']").prop("checked", false); // Desactiva todos
-      tableCheckbox.prop("checked", true).trigger("change"); // Activa solo el de esta tabla
-
-      // Quitar la clase "selected" de todas las filas
-      rows.removeClass("selected");
-
-      lastClickedId = null; // Resetear para permitir nuevos cambios
-      return;
-    }
-
-    // Primer clic: ocultar todos los markers y desactivar todos los checkboxes
     $.each(markers, function (id, markerGroup) {
       markerGroup.forEach(function (marker) {
         map.removeLayer(marker);
       });
     });
 
-    // Mostrar solo los markers de la fila clickeada
-    selectedMarkers.forEach(function (marker) {
+    tableMarkers.forEach(function (marker) {
       map.addLayer(marker);
     });
 
-    // Desactivar todas las checkboxes
+    if (tableMarkers.includes(markers[75][0])) {
+      map.addLayer(camino); // Mostrar el polyline si la tabla tiene el marker 75
+      map.addLayer(camino2); // También mostrar el segundo polyline
+    }
+    if (tableMarkers.includes(markers[76][0])) {
+      map.addLayer(camino3); // Mostrar el polyline si la tabla tiene el marker 76
+      map.addLayer(camino4); // También mostrar el segundo polyline
+    }
+
     $(".filter-header .switch input[type='checkbox']").prop("checked", false);
-
-    // Quitar la clase "selected" de todas las filas y agregarla a la actual
+    tableCheckbox.prop("checked", true).trigger("change");
     rows.removeClass("selected");
-    $(this).addClass("selected");
+    lastClickedId = null;
+    return;
+  }
 
-    // Guardar el ID del último clic
-    lastClickedId = markerId;
+  $.each(markers, function (id, markerGroup) {
+    markerGroup.forEach(function (marker) {
+      map.removeLayer(marker);
+    });
   });
+
+  selectedMarkers.forEach(function (marker) {
+    map.addLayer(marker);
+  });
+
+  if (markerId === 75) {
+    map.addLayer(camino);
+    map.addLayer(camino2);
+  } else {
+    map.removeLayer(camino);
+    map.removeLayer(camino2);
+  }
+
+  if (markerId === 76) {
+    map.addLayer(camino3);
+    map.addLayer(camino4);
+  } else {
+    map.removeLayer(camino3);
+    map.removeLayer(camino4);
+  }
+
+  $(".filter-header .switch input[type='checkbox']").prop("checked", false);
+  rows.removeClass("selected");
+  $(this).addClass("selected");
+  lastClickedId = markerId;
+});
+
+// Evento para manejar la activación/desactivación del checkbox
+$(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
+  var isChecked = $(this).prop("checked");
+  var filterContainer = $(this).closest(".leaflet-control-filter");
+  var tableMarkers = [];
+
+  filterContainer.find(".tabla-icons tr").each(function () {
+    var rowMarkerId = $(this).data("marker-id");
+    if (markers[rowMarkerId]) {
+      tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+    }
+  });
+
+  if (isChecked) {
+    tableMarkers.forEach(function (marker) {
+      map.addLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.addLayer(camino);
+      map.addLayer(camino2);
+    }
+    if (tableMarkers.includes(markers[76][0])) {
+      map.addLayer(camino3);
+      map.addLayer(camino4);
+    }
+  } else {
+    tableMarkers.forEach(function (marker) {
+      map.removeLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.removeLayer(camino);
+      map.removeLayer(camino2);
+    }
+    if (tableMarkers.includes(markers[76][0])) {
+      map.removeLayer(camino3);
+      map.removeLayer(camino4);
+    }
+  }
+});
+
+
+// Evento para manejar la activación/desactivación del checkbox
+$(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
+  var isChecked = $(this).prop("checked");
+  var filterContainer = $(this).closest(".leaflet-control-filter");
+  var tableMarkers = [];
+
+  filterContainer.find(".tabla-icons tr").each(function () {
+    var rowMarkerId = $(this).data("marker-id");
+    if (markers[rowMarkerId]) {
+      tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+    }
+  });
+
+  if (isChecked) {
+    tableMarkers.forEach(function (marker) {
+      map.addLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.addLayer(camino); // Asegurar que el polyline se muestra si el marker 75 está en la tabla
+      map.addLayer(camino2); // También mostrar el segundo polyline
+    }
+  } else {
+    tableMarkers.forEach(function (marker) {
+      map.removeLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.removeLayer(camino); // También ocultar el polyline si el marker 75 estaba en la tabla
+      map.removeLayer(camino2); // También ocultar el segundo polyline
+    }
+  }
+});
+
+
+
 
 
 // if (isMobile) {
@@ -2931,6 +3246,4 @@ if(!isMobile){
     });
 });
 }
-
-  //se agrega JS para mantener un Focus en el elemento clickeado de la tabla
 // #endregion

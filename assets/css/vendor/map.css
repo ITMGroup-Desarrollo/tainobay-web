@@ -185,12 +185,25 @@ input:checked + .slider:before {
 body.shock-body {
   background-color: #ddd !important;
 }
-.leaflet-marker-icon {
+.shadowMarker {
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 1));
 }
 .leaflet-marker-icon img {
   border: 1.5px solid white;
   border-radius: 50%;
+  
+}
+.salidaCaminoIcon{
+  border: none !important; 
+  width: 30px !important;
+  height: 30px !important;
+  rotate: 73deg;
+}
+.regresoCaminoIcon{
+  border: none !important; 
+  width: 30px !important;
+  height: 30px !important;
+  rotate: 108deg;
 }
 @media (min-width: 769px) {
   .service .header-text {
