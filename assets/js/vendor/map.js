@@ -366,6 +366,18 @@ var salidaIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [0, 0],
 });
+var regresoCaminoIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="400"
+     data-aos-offset="0">
+               <img class="regresoCaminoIcon" src="assets/icons/map/arrowGreen.svg" alt="PORT EXIT" width="30" height="30">
+           </div>`,
+  className: "",
+  iconSize: [30, 30],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
 // #endregion
 
 // #region Marcadores y sus eventos
@@ -442,7 +454,95 @@ var caminoCoordenadas2 = [
   [900, 1100],//union de la bifurcación
   
 ];
+var caminoCoordenadas3 = [
+  [220, 140],
+  [190, 150],
+  [130, 200],
+  [90, 220],
+  [75, 260],
+  [100, 300],
+  [150, 310],
+  [180, 320],
+  [230, 325],
+  [250, 305],
+  [280, 270],
+  [300, 260],
+  [320, 260],
+  [370, 290],
+  [400, 290],
+  [440, 275],
+  [465, 275],
+  [495, 300],
+  [510, 330],
+  [520, 340],
+  [590, 340],
+  [615, 360],
+  [625, 400],
+  [610, 450],
+  [595, 480],
+  [610, 510],
+  [620, 515],
+  [660, 525], //Bifurcación
+  
+  [680, 520],
+  [710, 505],
+  [740, 505],
+  [850, 550],
+  [885, 575],
+  [905, 600],
+  [915, 650],
+  [920, 700],
+  [945, 750],
+  [955, 790],
+  [960, 850],
+  [955, 980],
+  [900, 1100],//union de la bifurcación
+  [920, 1130],
+  [900, 1220],
+  [880, 1220],
+  [860, 1240],
+  [850, 1255],
+  [730, 1315],
+  [615, 1280],
+  
+];
+var caminoCoordenadas4 = [
+  
+  [650, 525], //Bifurcación
+  [690, 540],
+  [720, 535],
+  [755, 532],
+  [775, 540],
+  [800, 560],
+  [810, 580],
+  [810, 640],
+  [835, 720],
+  [845, 765],
+  [870, 810],
+  [910, 870],
+  [912, 880],
+  [912, 950],
+  [910, 1000],
+  [895, 1050],
+  
+  [900, 1100],//union de la bifurcación
+  
+];
 // Dibujar el camino en el mapa
+var camino3 = 
+L.polyline(caminoCoordenadas3, { 
+  color: '#60bc44',      // Color del camino
+  weight: 8,          // Grosor de la línea
+  opacity: 1,       // Opacidad
+  dashArray: "8, 10"  // Línea discontinua (opcional)
+}).addTo(map);
+var camino4 = 
+L.polyline(caminoCoordenadas4, { 
+  color: '#60bc44',      // Color del camino
+  weight: 8,          // Grosor de la línea
+  opacity: 1,       // Opacidad
+  dashArray: "8, 10"  // Línea discontinua (opcional)
+}).addTo(map);
 var camino = 
 L.polyline(caminoCoordenadas, { 
   color: '#ed1654',      // Color del camino
@@ -2758,6 +2858,10 @@ var markers = {
     L.marker([255, 118], { icon: salidaCaminoIcon })
       .addTo(map)
   ],
+  76: [
+    L.marker([618, 1262], { icon: regresoCaminoIcon })
+      .addTo(map)
+  ],
   // 77: [
   //   L.marker([290, 110], { icon: salidaIcon })
   //     .addTo(map)
@@ -2823,6 +2927,10 @@ $(document).on("click", ".tabla-icons tr", function () {
       map.addLayer(camino); // Mostrar el polyline si la tabla tiene el marker 75
       map.addLayer(camino2); // También mostrar el segundo polyline
     }
+    if (tableMarkers.includes(markers[76][0])) {
+      map.addLayer(camino3); // Mostrar el polyline si la tabla tiene el marker 76
+      map.addLayer(camino4); // También mostrar el segundo polyline
+    }
 
     $(".filter-header .switch input[type='checkbox']").prop("checked", false);
     tableCheckbox.prop("checked", true).trigger("change");
@@ -2842,11 +2950,19 @@ $(document).on("click", ".tabla-icons tr", function () {
   });
 
   if (markerId === 75) {
-    map.addLayer(camino); // Siempre mostrar el polyline cuando se selecciona el marker 75
-    map.addLayer(camino2); // También mostrar el segundo polyline
+    map.addLayer(camino);
+    map.addLayer(camino2);
   } else {
-    map.removeLayer(camino); // Ocultar el polyline si se selecciona otro marcador
-    map.removeLayer(camino2); // También ocultar el segundo polyline
+    map.removeLayer(camino);
+    map.removeLayer(camino2);
+  }
+
+  if (markerId === 76) {
+    map.addLayer(camino3);
+    map.addLayer(camino4);
+  } else {
+    map.removeLayer(camino3);
+    map.removeLayer(camino4);
   }
 
   $(".filter-header .switch input[type='checkbox']").prop("checked", false);
@@ -2854,6 +2970,47 @@ $(document).on("click", ".tabla-icons tr", function () {
   $(this).addClass("selected");
   lastClickedId = markerId;
 });
+
+// Evento para manejar la activación/desactivación del checkbox
+$(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
+  var isChecked = $(this).prop("checked");
+  var filterContainer = $(this).closest(".leaflet-control-filter");
+  var tableMarkers = [];
+
+  filterContainer.find(".tabla-icons tr").each(function () {
+    var rowMarkerId = $(this).data("marker-id");
+    if (markers[rowMarkerId]) {
+      tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+    }
+  });
+
+  if (isChecked) {
+    tableMarkers.forEach(function (marker) {
+      map.addLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.addLayer(camino);
+      map.addLayer(camino2);
+    }
+    if (tableMarkers.includes(markers[76][0])) {
+      map.addLayer(camino3);
+      map.addLayer(camino4);
+    }
+  } else {
+    tableMarkers.forEach(function (marker) {
+      map.removeLayer(marker);
+    });
+    if (tableMarkers.includes(markers[75][0])) {
+      map.removeLayer(camino);
+      map.removeLayer(camino2);
+    }
+    if (tableMarkers.includes(markers[76][0])) {
+      map.removeLayer(camino3);
+      map.removeLayer(camino4);
+    }
+  }
+});
+
 
 // Evento para manejar la activación/desactivación del checkbox
 $(document).on("change", ".filter-header .switch input[type='checkbox']", function () {

@@ -71,10 +71,10 @@ include_once("include/lang/{$idioma}-map.php");
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
-                            <!-- <tr data-marker-id="76">
+                            <tr data-marker-id="76">
                                 <td><img src="assets/icons/map/arrowGreen.svg" alt="SHOWS"></td>
                                 <td><?php echo $idioma === 'es' ? 'REGRESO CRUCERO' : 'BACK TO SHIP'; ?></td>
-                            </tr> -->
+                            </tr>
                             <tr data-marker-id="9">
                                 <td><img src="assets/icons/map/restrooms.svg" alt="RESTROOMS"></td>
                                 <td><?php echo $idioma === 'es' ? 'BAÑOS' : 'RESTROOMS'; ?></td>

@@ -199,6 +199,12 @@ body.shock-body {
   height: 30px !important;
   rotate: 73deg;
 }
+.regresoCaminoIcon{
+  border: none !important; 
+  width: 30px !important;
+  height: 30px !important;
+  rotate: 108deg;
+}
 @media (min-width: 769px) {
   .service .header-text {
     padding-right: 20%;
