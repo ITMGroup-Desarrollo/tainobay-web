@@ -538,24 +538,24 @@ L.polyline(caminoCoordenadas3, {
 }).addTo(map);
 var camino4 = 
 L.polyline(caminoCoordenadas4, { 
-  color: '#60bc44',      // Color del camino
-  weight: 8,          // Grosor de la línea
-  opacity: 1,       // Opacidad
-  dashArray: "8, 10"  // Línea discontinua (opcional)
+  color: '#60bc44',      
+  weight: 8,          
+  opacity: 1,       
+  dashArray: "8, 10"  
 }).addTo(map);
 var camino = 
 L.polyline(caminoCoordenadas, { 
-  color: '#ed1654',      // Color del camino
-  weight: 8,          // Grosor de la línea
-  opacity: 1,       // Opacidad
-  dashArray: "8, 10"  // Línea discontinua (opcional)
+  color: '#ed1654',      
+  weight: 8,         
+  opacity: 1,    
+  dashArray: "8, 10"  
 }).addTo(map);
 var camino2 = 
 L.polyline(caminoCoordenadas2, { 
-  color: '#ed1654',      // Color del camino
-  weight: 8,          // Grosor de la línea
-  opacity: 1,       // Opacidad
-  dashArray: "8, 10"  // Línea discontinua (opcional)
+  color: '#ed1654',    
+  weight: 8,         
+  opacity: 1,   
+  dashArray: "8, 10"  
 }).addTo(map);
 
 //Marker del texto salida sin que sea afectado por los eventos de los otros markers
@@ -2988,26 +2988,28 @@ $(document).on("change", ".filter-header .switch input[type='checkbox']", functi
     tableMarkers.forEach(function (marker) {
       map.addLayer(marker);
     });
-    if (tableMarkers.includes(markers[75][0])) {
-      map.addLayer(camino);
-      map.addLayer(camino2);
-    }
     if (tableMarkers.includes(markers[76][0])) {
       map.addLayer(camino3);
       map.addLayer(camino4);
     }
+    if (tableMarkers.includes(markers[75][0])) {
+      map.addLayer(camino);
+      map.addLayer(camino2);
+    }
+    
   } else {
     tableMarkers.forEach(function (marker) {
       map.removeLayer(marker);
     });
-    if (tableMarkers.includes(markers[75][0])) {
-      map.removeLayer(camino);
-      map.removeLayer(camino2);
-    }
     if (tableMarkers.includes(markers[76][0])) {
       map.removeLayer(camino3);
       map.removeLayer(camino4);
     }
+    if (tableMarkers.includes(markers[75][0])) {
+      map.removeLayer(camino);
+      map.removeLayer(camino2);
+    }
+    
   }
 });
 
