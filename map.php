@@ -400,6 +400,12 @@ include_once("include/lang/{$idioma}-map.php");
     document.querySelector('.leaflet-control-filter.fun .filter-header .minimize-btn.show')?.click();
     document.querySelector('.leaflet-control-filter.restaurants .filter-header .minimize-btn.show')?.click();
     document.querySelector('.leaflet-control-filter.service .filter-header .minimize-btn.show')?.click();
+    document.querySelector('.leaflet-control-filter.shop .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.fun .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.restaurants .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .switch')?.click();
+    document.querySelector('.leaflet-control-filter.service .filter-header .switch')?.click();
 </script>
 
 
