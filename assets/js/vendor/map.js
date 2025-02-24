@@ -346,7 +346,7 @@ var monkeyIcon = L.divIcon({
 var salidaCaminoIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="400"
+     data-aos-delay="0"
      data-aos-offset="0">
                <img class="salidaCaminoIcon" src="assets/icons/map/arrowRed.svg" alt="PORT EXIT" width="30" height="30">
            </div>`,
@@ -369,7 +369,7 @@ var salidaIcon = L.divIcon({
 var regresoCaminoIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
-     data-aos-delay="400"
+     data-aos-delay="0"
      data-aos-offset="0">
                <img class="regresoCaminoIcon" src="assets/icons/map/arrowGreen.svg" alt="PORT EXIT" width="30" height="30">
            </div>`,
@@ -384,6 +384,14 @@ var regresoIcon = L.divIcon({
      1px -1px 0 white,
     -1px  1px 0 white,
      1px  1px 0 white;">${idioma === "es" ? "VUELTA AL BARCO" : "BACK TO SHIP"}</span>`,
+  className: "shadowMarker",
+  iconSize: [30, 30],
+  iconAnchor: [0, 0],
+  popupAnchor: [0, 0],
+});
+var exitIcon = L.divIcon({
+  html: `<span style="color: #ffffff; font-weight: bold; font-size: 1.2rem; text-shadow: 
+    ">${idioma === "es" ? "SALIDA" : "EXIT"}</span>`,
   className: "shadowMarker",
   iconSize: [30, 30],
   iconAnchor: [0, 0],
@@ -2899,13 +2907,13 @@ var markers = {
   76: [
     L.marker([165, 270], { icon: regresoCaminoIcon })
       .addTo(map),
-    L.marker(idioma === "es" ? [190, 220] : [190, 220], { icon: regresoIcon })
+    L.marker(idioma === "es" ? [193, 220] : [193, 220], { icon: regresoIcon })
     .addTo(map)
   ],
-  // 77: [
-  //   L.marker([290, 110], { icon: salidaIcon })
-  //     .addTo(map)
-  // ],
+  77: [
+    L.marker(idioma === "es" ? [165, 190] : [165, 210], { icon: exitIcon })
+      .addTo(map)
+  ],
 };
 
 // Evento para ajustar el tamaño de los íconos en función del zoom
