@@ -2911,7 +2911,7 @@ var markers = {
     .addTo(map)
   ],
   77: [
-    L.marker(idioma === "es" ? [165, 190] : [165, 210], { icon: exitIcon })
+    L.marker(idioma === "es" ? [165, 220] : [165, 235], { icon: exitIcon })
       .addTo(map)
   ],
 };
