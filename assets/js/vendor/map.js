@@ -379,7 +379,7 @@ var regresoCaminoIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var regresoIcon = L.divIcon({
-  html: `<span style="color: #60bc44; font-weight: bold; font-size: 1.2rem; text-shadow: 
+  html: `<span style="color: #008f39; font-weight: bold; font-size: 1.2rem; text-shadow: 
     -1px -1px 0 white,  
      1px -1px 0 white,
     -1px  1px 0 white,
@@ -448,7 +448,7 @@ var caminoCoordenadas = [
 ];
 var caminoCoordenadas2 = [
   
-  [650, 525], //Bifurcación
+  [665, 532], //Bifurcación
   [690, 540],
   [720, 535],
   [755, 532],
@@ -465,7 +465,7 @@ var caminoCoordenadas2 = [
   [910, 1000],
   [895, 1050],
   
-  [900, 1100],//union de la bifurcación
+  [895, 1090],//union de la bifurcación
   
 ];
 var caminoCoordenadas3 = [
@@ -517,7 +517,7 @@ var caminoCoordenadas3 = [
 ];
 var caminoCoordenadas4 = [
   
-  [650, 525], //Bifurcación
+  [665, 532], //Bifurcación
   [690, 540],
   [720, 535],
   [755, 532],
@@ -534,7 +534,7 @@ var caminoCoordenadas4 = [
   [910, 1000],
   [895, 1050],
   
-  [900, 1100],//union de la bifurcación
+  [895, 1090],//union de la bifurcación
   
 ];
 // Dibujar el camino en el mapa
@@ -548,7 +548,7 @@ var bordeCamino3 = L.polyline(caminoCoordenadas3, {
 
 // Capa principal para camino3
 var camino3 = L.polyline(caminoCoordenadas3, { 
-  color: '#60bc44',  
+  color: '#008f39',  
   weight: 3,        
   opacity: 1,       
   dashArray: "8, 10"
@@ -564,7 +564,7 @@ var bordeCamino4 = L.polyline(caminoCoordenadas4, {
 
 // Capa principal para camino4
 var camino4 = L.polyline(caminoCoordenadas4, { 
-  color: '#60bc44',  
+  color: '#008f39',  
   weight: 3,        
   opacity: 1,       
   dashArray: "8, 10"
