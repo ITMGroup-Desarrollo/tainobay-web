@@ -379,7 +379,7 @@ var regresoCaminoIcon = L.divIcon({
   popupAnchor: [12, -20],
 });
 var regresoIcon = L.divIcon({
-  html: `<span style="color: #60bc44; font-weight: bold; font-size: 1.2rem; text-shadow: 
+  html: `<span style="color: #008f39; font-weight: bold; font-size: 1.2rem; text-shadow: 
     -1px -1px 0 white,  
      1px -1px 0 white,
     -1px  1px 0 white,
@@ -548,7 +548,7 @@ var bordeCamino3 = L.polyline(caminoCoordenadas3, {
 
 // Capa principal para camino3
 var camino3 = L.polyline(caminoCoordenadas3, { 
-  color: '#60bc44',  
+  color: '#008f39',  
   weight: 3,        
   opacity: 1,       
   dashArray: "8, 10"
@@ -564,7 +564,7 @@ var bordeCamino4 = L.polyline(caminoCoordenadas4, {
 
 // Capa principal para camino4
 var camino4 = L.polyline(caminoCoordenadas4, { 
-  color: '#60bc44',  
+  color: '#008f39',  
   weight: 3,        
   opacity: 1,       
   dashArray: "8, 10"
