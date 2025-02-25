@@ -448,7 +448,7 @@ var caminoCoordenadas = [
 ];
 var caminoCoordenadas2 = [
   
-  [650, 525], //Bifurcación
+  [665, 532], //Bifurcación
   [690, 540],
   [720, 535],
   [755, 532],
@@ -465,7 +465,7 @@ var caminoCoordenadas2 = [
   [910, 1000],
   [895, 1050],
   
-  [900, 1100],//union de la bifurcación
+  [895, 1090],//union de la bifurcación
   
 ];
 var caminoCoordenadas3 = [
@@ -517,7 +517,7 @@ var caminoCoordenadas3 = [
 ];
 var caminoCoordenadas4 = [
   
-  [650, 525], //Bifurcación
+  [665, 532], //Bifurcación
   [690, 540],
   [720, 535],
   [755, 532],
@@ -534,7 +534,7 @@ var caminoCoordenadas4 = [
   [910, 1000],
   [895, 1050],
   
-  [900, 1100],//union de la bifurcación
+  [895, 1090],//union de la bifurcación
   
 ];
 // Dibujar el camino en el mapa
