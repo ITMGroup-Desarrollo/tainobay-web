@@ -87,7 +87,7 @@
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/points-of-interest" class="menu-grid-main-item menu-item"><?php echo MENU[2]; ?></a> -->
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/port-experience" class="menu-grid-main-item menu-item"><?php echo MENU[8]; ?></a>
                                <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="menu-grid-main-item menu-item"><?php echo MENU[9]; ?></a>
-
+                               <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="menu-grid-main-item menu-item"><?php echo MENU[3]; ?></a>
                                <!--<a href="<?php //echo $path; 
                                             ?><?php //echo $idioma; 
                                                 ?>/arrivals"
