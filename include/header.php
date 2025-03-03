@@ -27,6 +27,7 @@
                <div id="menu-fixed" class="w-80 justify-content-evenly">
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/port-experience" class="menu-main-item-fixed"><?php echo MENU[8]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/discover-beyond" class="menu-main-item-fixed"><?php echo MENU[9]; ?></a>
+                   <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="menu-main-item-fixed"><?php echo MENU[3]; ?></a>
 
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/blog_all" class="menu-main-item-fixed"><?php echo MENU[5]; ?></a>
                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="menu-main-item-fixed"><?php echo MENU[6]; ?></a>
