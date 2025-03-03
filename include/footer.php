@@ -29,8 +29,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="nav-link">
-                                        <span class="text"><?php echo  FOOTER_OURS[4]; ?></span>
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/map" class="nav-link">
+                                        <span class="text"><?php echo  FOOTER_OURS[2]; ?></span>
                                     </a>
                                 </li>
 
@@ -60,6 +60,11 @@
                         <div class="footer-item">
                             <!-- Tag Cloud -->
                             <ul class="nav-list list-unstyled">
+                                <li class="nav-item">
+                                    <a href="<?php echo $path; ?><?php echo $idioma; ?>/faqs" class="nav-link">
+                                        <span class="text"><?php echo  FOOTER_OURS[4]; ?></span>
+                                    </a>
+                                </li>
                                 <li class="nav-item">
                                     <a href="<?php echo $path; ?><?php echo $idioma; ?>/contact" class="nav-link">
                                         <span class="text"><?php echo FOOTER_OURS[5]; ?></span>
