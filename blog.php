@@ -188,7 +188,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             // Actualizar la clase active del timeline
             updateActiveTimelineItem(title);
             // Reemplaza los guiones por espacios en blanco
-            data.title = data.title.replace(/-/g, ' ');
+            data.title = data.title.replace(/-/g, ' ').replace(/_/g, "'");
             // Establece el texto del título en el elemento con la clase 'blog-title'
             $('.blog-title').text(data.title);
             $('.blog-subtitle').text(data.subtitle);
