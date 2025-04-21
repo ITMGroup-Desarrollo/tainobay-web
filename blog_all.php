@@ -117,7 +117,8 @@ include_once("include/lang/{$idioma}-blog.php");
                 // Asumiendo que 'data.title' es el título que obtienes de tu fuente de datos
                 let title = post.title;
                 // Reemplaza los guiones por espacios en blanco
-                title = title.replace(/-/g, ' ');
+                title = title.replace(/-/g, ' ').replace(/_/g, "'");
+
                 // Establece el texto del título en el elemento con la clase 'blog-title'
                 $('.blog-title').text(title);
                 $('#blog-container .posts-wrapper').append(`
