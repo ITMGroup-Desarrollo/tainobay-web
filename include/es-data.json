@@ -1,6 +1,22 @@
 {
     "posts": [
         {
+            "id": 5,
+            "title": "MSC-World-America-en-Taino-Bay",
+            "subtitle":"",
+            "description": "¡La Novia del Atlántico recibió con orgullo a un nuevo y distinguido visitante!",
+            "content": "¡La Novia del Atlántico recibió con orgullo a un nuevo y distinguido visitante! El pasado 14 de abril tuvimos el honor de dar la bienvenida, por primera vez, al MSC World America en Taino Bay.\n\nEste impresionante barco de clase mundial de MSC Cruises cuenta con 22 cubiertas y una capacidad para 6,762 pasajeros. Por su gran tamaño, alberga el MSC Yacht Club más grande del Caribe.\n\nFue un día memorable, lleno de emoción, sol radiante y una hospitalidad cálida. Los pasajeros de todas las edades tuvieron la oportunidad de disfrutar todo lo que Taino Bay tiene para ofrecer: desde el lazy river, las piscinas vibrantes, hasta los restaurantes y bares temáticos. ¡Nos aseguramos de que cada crucerista viva una experiencia inolvidable!\n\n¿Has formado parte de un Maiden Call?\n\nLlamamos Maiden Call a la primera vez que un crucero visita un puerto en particular. Es un momento muy especial tanto para la naviera como para el destino. Como dicta la tradición, celebramos este hito con un intercambio de placas conmemorativas entre el capitán del barco y las autoridades portuarias.\n\nEn Taino Bay nos sentimos orgullosos de ofrecer una experiencia portuaria única. Desde espacios culturales inmersivos inspirados en la herencia taína, hasta tiendas auténticas, un Spa tropical de bienestar y entretenimiento de clase mundial, cada visita está diseñada para ser verdaderamente inolvidable.\n\nNos encanta ser parte de nuevos comienzos, y este fue extraordinario. ¡Esperamos con entusiasmo volver a recibir muy pronto a nuestros amigos de MSC World America!",
+            "image_url": "assets/images/blog/world-america/1.jpg",
+            "image_url2": "assets/images/blog/world-america/2.jpg",
+            "day": 14,
+            "month": "Abril",
+            "images": [
+                "assets/images/blog/world-america/1.jpg",
+                "assets/images/blog/world-america/2.jpg",
+                "assets/images/blog/world-america/3.jpg"
+            ]
+        },
+        {
             "id": 4,
             "title": "¡3-años-de-Taino-Bay!",
             "subtitle":"",
