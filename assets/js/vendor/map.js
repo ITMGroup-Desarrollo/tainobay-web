@@ -956,7 +956,7 @@ var markers = {
       //       <div class="pop" style="text-align: center;">
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
+      //           <a href="https://example.com" target="_self">
       //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';"
@@ -981,7 +981,7 @@ var markers = {
       //       <div class="pop" style="text-align: center;">
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
+      //           <a href="https://example.com" target="_self">
       //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';"
@@ -1006,7 +1006,7 @@ var markers = {
       //       <div class="pop" style="text-align: center;">
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
+      //           <a href="https://example.com" target="_self">
       //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';"
@@ -1031,7 +1031,7 @@ var markers = {
       //       <div class="pop" style="text-align: center;">
       //           <img src="assets/images/port-experience/blue-parrot/blue-parrot-logo-black.svg" alt="Logo" style="width: 50px; height: 50px;">
       //           <p>Fugiat </p>
-      //           <a href="https://example.com" target="_blank">
+      //           <a href="https://example.com" target="_self">
       //               <button
       //                 style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
       //                 onmouseover="this.style.backgroundColor='#f5a23a';"

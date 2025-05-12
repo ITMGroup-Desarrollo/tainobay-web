@@ -2,9 +2,9 @@
     <div class="side-widget to-left d-only-desktop">
         <div class="item">
             <span class="widget label-icons">
-                <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link black black-hover" target="_blank"><i class="icon fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/tainobay_puertoplata/" class="link black black-hover" target="_blank"><i class="icon fab fa-instagram"></i></a>
-                <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html" class="link black black-hover" target="_blank"><img src="assets/images/icons/tripadvisor-black.png" width="18" height="18" alt="Icono Tripadvisor"></a>
+                <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link black black-hover" target="_self"><i class="icon fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tainobay_puertoplata/" class="link black black-hover" target="_self"><i class="icon fab fa-instagram"></i></a>
+                <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html" class="link black black-hover" target="_self"><img src="assets/images/icons/tripadvisor-black.png" width="18" height="18" alt="Icono Tripadvisor"></a>
                 <span class="label-line black"></span>
             </span>
         </div>
