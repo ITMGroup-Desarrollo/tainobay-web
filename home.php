@@ -30,28 +30,36 @@ include_once("include/lang/reviews.php");
             .vh-100 {
                 height: 65vh !important;
             }
+
+            #image-360 {
+                width: 100vw;
+                height: 60vh;
+                position: relative;
+                overflow: hidden;
+            }
         }
+
         #image-360 {
-        width: 100vw;
-        height: 90vh;
-        position: relative;
-        overflow: hidden;
+            width: 100vw;
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
         }
 
         /* El a-scene y su canvas ocupan todo el contenedor */
         #image-360 a-scene {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* El canvas se inserta dentro del a-scene automáticamente,
         pero si necesitas asegurarte de que tenga 100% puedes añadir: */
         #image-360 a-scene canvas {
-        width: 100% !important;
-        height: 100% !important;
+            width: 100% !important;
+            height: 100% !important;
         }
     </style>
 </head>
@@ -368,30 +376,30 @@ include_once("include/lang/reviews.php");
             </div>
         </section> -->
         <section id="image-360">
-  <a-scene embedded>
-    <a-assets>
-      <img id="sky" src="assets/images/welcome/image-360.webp" crossorigin="anonymous" />
-    </a-assets>
-    <!-- se cambia los valores de lo que se ve en rango de 0 a -100 a 0 -->
-    <a-sky src="#sky" rotation="0 -100 0"></a-sky>
-    <a-entity camera look-controls wasd-controls position="0 1.6 0" id="myCamera"></a-entity>
-  </a-scene>
-</section>
-<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-<script>
-  AFRAME.registerComponent('limit-rotation', {
-    tick: function () {
-      const rot = this.el.object3D.rotation;
-      rot.y = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rot.y)); // yaw
-      rot.x = Math.max(-Math.PI / 4, Math.min(Math.PI / 4, rot.x)); // pitch
-    }
-  });
+            <a-scene embedded>
+                <a-assets>
+                    <img id="sky" src="assets/images/welcome/image-360.webp" crossorigin="anonymous" />
+                </a-assets>
+                <!-- se cambia los valores de lo que se ve en rango de 0 a -100 a 0 -->
+                <a-sky src="#sky" rotation="0 -100 0"></a-sky>
+                <a-entity camera look-controls wasd-controls position="0 1.6 0" id="myCamera"></a-entity>
+            </a-scene>
+        </section>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <script>
+            AFRAME.registerComponent('limit-rotation', {
+                tick: function() {
+                    const rot = this.el.object3D.rotation;
+                    rot.y = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rot.y)); // yaw
+                    rot.x = Math.max(-Math.PI / 4, Math.min(Math.PI / 4, rot.x)); // pitch
+                }
+            });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const camera = document.getElementById('myCamera');
-    camera.setAttribute('limit-rotation', '');
-  });
-</script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const camera = document.getElementById('myCamera');
+                camera.setAttribute('limit-rotation', '');
+            });
+        </script>
         <script>
             function parallax() {
                 let parallaxHolders = document.querySelectorAll('.parallaxHolder');
