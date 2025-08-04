@@ -21,7 +21,7 @@ include_once("include/lang/reviews.php");
                 height: 65vh !important;
             }
             #image-360 {
-                width: 100vw;
+                width: 100%;
                 height: 60vh;
                 position: relative;
                 overflow: hidden;
@@ -59,7 +59,7 @@ include_once("include/lang/reviews.php");
         }
         @media only screen and (min-width: 768px) {
             #image-360 {
-            width: 100vw;
+            width: 100%;
             height: 90vh;
             position: relative;
             overflow: hidden;
