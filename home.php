@@ -20,6 +20,12 @@ include_once("include/lang/reviews.php");
             .vh-100 {
                 height: 65vh !important;
             }
+            #image-360 {
+                width: 100vw;
+                height: 60vh;
+                position: relative;
+                overflow: hidden;
+            }
 
 
         }
@@ -31,20 +37,10 @@ include_once("include/lang/reviews.php");
                 height: 65vh !important;
             }
 
-            #image-360 {
-                width: 100vw;
-                height: 60vh;
-                position: relative;
-                overflow: hidden;
-            }
+            
         }
 
-        #image-360 {
-            width: 100vw;
-            height: 90vh;
-            position: relative;
-            overflow: hidden;
-        }
+        
 
         /* El a-scene y su canvas ocupan todo el contenedor */
         #image-360 a-scene {
@@ -61,6 +57,15 @@ include_once("include/lang/reviews.php");
             width: 100% !important;
             height: 100% !important;
         }
+        @media only screen and (min-width: 768px) {
+            #image-360 {
+            width: 100vw;
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
+        }
+        }
+
     </style>
 </head>
 
