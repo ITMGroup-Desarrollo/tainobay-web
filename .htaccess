@@ -22,9 +22,6 @@ RewriteRule ^blog/([^/]+)$ blog.php?title=$1 [L,QSA]
 # Bloquear acceso a todo el directorio vendor
 RedirectMatch 403 ^/vendor/.*$
 
-<Directory "/ruta/a/tu/proyecto/vendor">
-    Deny from all
-</Directory>
 # Bloquear acceso a archivos sensibles
 <FilesMatch "^(composer\.(json|lock)|launch\.json|package\.json|package-lock\.json|yarn\.lock|\.env)$">
     Require all denied
