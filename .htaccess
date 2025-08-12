@@ -20,6 +20,10 @@ RewriteRule ^port-experience/([^/]+)$ single-port-experience.php?point=$1 [L,QSA
 
 RewriteRule ^blog/([^/]+)$ blog.php?title=$1 [L,QSA]
 
+# Bloquear acceso a archivos sensibles
+<FilesMatch "^(composer\.(json|lock)|launch\.json|package\.json|package-lock\.json|yarn\.lock|\.env)$">
+    Require all denied
+</FilesMatch>
 #Redirecciones 404
 #RewriteCond %{REQUEST_URI} !^/(en|es)/404$#
 RewriteCond %{REQUEST_FILENAME} !-f
