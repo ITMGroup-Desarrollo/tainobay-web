@@ -89,10 +89,6 @@ include_once("include/lang/{$idioma}-map.php");
                             </tr>
                             <tr data-marker-id="10">
                                 <td><img src="assets/icons/map/show.svg" alt="SHOWS"></td>
-                                <td><?php echo $idioma === 'es' ? 'REGRESO CRUCERO' : 'BACK TO SHIP'; ?></td>
-                            </tr>
-                            <tr data-marker-id="10">
-                                <td><img src="assets/icons/map/show.svg" alt="SHOWS"></td>
                                 <td>SHOWS</td>
                             </tr>
                             <tr data-marker-id="11">
