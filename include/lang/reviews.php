@@ -3,6 +3,27 @@
 $reviews = [
 
   [
+    'avatar' => 'https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/ea/b2/default-avatar-2020-69.jpg?w=100&h=100&s=1',
+    'name' => 'Ki b',
+    'url' => 'https://www.tripadvisor.com/ShowUserReviews-g147290-d23803203-r1027712202-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
+    'date' => 'Aug - 2025',
+    'review' => 'Beautiful port Review of Taino Bay Puerto Plata Reviewed 3 weeks ago Beautiful port stop! CLEAN and it shows that they have a lot of pride and respect for this place...',
+  ],
+  [
+    'avatar' => 'https://media-cdn.tripadvisor.com/media/photo-l/12/60/8a/45/jorge-p.jpg?w=100&h=100&s=1',
+    'name' => 'Jorge P',
+    'url' => 'https://www.tripadvisor.com/ShowUserReviews-g147290-d23803203-r1029576821-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
+    'date' => 'Sep - 2025',
+    'review' => 'Un lugar totalmente espectacular! Tiene de todo para pasar un muy buen momento con musica, comida y bebidas. Muy recomendable...',
+  ],
+  [
+    'avatar' => 'https://media-cdn.tripadvisor.com/media/photo-l/1b/ed/9d/c8/caption.jpg?w=100&h=100&s=1',
+    'name' => 'iKissGirls',
+    'url' => 'https://www.tripadvisor.com/ShowUserReviews-g147290-d23803203-r1025915467-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
+    'date' => 'Aug - 2025',
+    'review' => 'We visited Taino Bay on our Virgin Voyages cruise and were immediately greeted by the warmth and hospitality of the people of Puerto Plata. From the moment we stepped off the ship, we were met with big smiles, lively dancers, and a truly festive atmosphere...',
+  ],
+  [
     'avatar' => 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ef/73/default-avatar-2020-13.jpg?w=100&h=100&s=1',
     'name' => 'NiPat5',
     'url' => 'https://www.tripadvisor.com.mx/ShowUserReviews-g147290-d23803203-r962442489-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
@@ -45,27 +66,6 @@ El paseo desde el muelle es un poco a pie, pero no demasiado largo y en el puert
     'url' => 'https://www.tripadvisor.com.mx/ShowUserReviews-g147290-d23803203-r878418361-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
     'date' => 'Feb - 2023',
     'review' => 'Will me ofreció un excelente servicio y siempre estuvo atento a lo que necesitaba. El lugar es excelente para descansar y disfrutar de una buena bebida o cóctel',
-  ],
-  [
-    'avatar' => 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/ea/b2/default-avatar-2020-69.jpg?w=100&h=100&s=1',
-    'name' => 'David Antonio V',
-    'url' => 'https://www.tripadvisor.com.mx/ShowUserReviews-g147290-d23803203-r877320155-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
-    'date' => 'Ene - 2023',
-    'review' => 'Increíble trato, buena música y unos bailarines y animadores muy divertidos. Algo que me gustó mucho es que tienen los animales en el puerto, las aves de modo que las puedes admirar tranquilamente',
-  ],
-  [
-    'avatar' => 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/de/e7/default-avatar-2020-37.jpg?w=100&h=100&s=1',
-    'name' => 'Martina vargas',
-    'url' => 'https://www.tripadvisor.com.mx/ShowUserReviews-g147290-d23803203-r877257217-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
-    'date' => 'Mar - 2022',
-    'review' => 'Taino bay , es un puerto que ofrece enormes beneficios para el cliente que venga y decida visitar , tantos como conocer la ciudad en 10 minuto elegir las mejores excursiones con un precio muy cómodos , y si no desea salir del puerto entonces encontrará diversas atracciones y cientos de tienda tax free una de ella es Dominican things , artículos para memories from paradise .',
-  ],
-  [
-    'avatar' => 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/f2/7a/default-avatar-2020-25.jpg?w=100&h=100&s=1',
-    'name' => 'Adriana G',
-    'url' => 'https://www.tripadvisor.com.mx/ShowUserReviews-g147290-d23803203-r873676925-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html',
-    'date' => 'Ene - 2022',
-    'review' => 'edwin nos trato excelente! gracias por todo! restaurante casa palapa. venimos en crucero y la pasamos fenomenal',
   ],
   [
     'avatar' => 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/70/91/26/gabykm.jpg?w=100&h=100&s=1',
