@@ -313,9 +313,13 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td>SEA SALT</td>
                             </tr>
                             <tr data-marker-id="36">
+                                <td><img src="assets/icons/map/retail.svg" alt="RIVIERA"></td>
+                                <td>RIVIERA</td>
+                            </tr>
+                            <!-- <tr data-marker-id="36">
                                 <td><img src="assets/icons/map/retail.svg" alt="LOCAL-ITM"></td>
                                 <td>LOCAL ITM</td>
-                            </tr>
+                            </tr> -->
                             <tr data-marker-id="37">
                                 <td><img src="assets/icons/map/retail.svg" alt="MEXICAN-EXPERIENCE-GIFTSHOP-TABACO"></td>
                                 <td>MEXICAN EXPERIENCE</td>

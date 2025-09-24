@@ -47,7 +47,7 @@ if (isMobile) {
 
 // #region Agrega la imagen del mapa
 L.imageOverlay(
-  "assets/images/media/nuevo-mapa-taino-sin-nombres.webp",
+  "assets/images/media/nuevo-mapa-taino-sin-nombres_final.jpg",
   bounds
 ).addTo(map);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
@@ -2025,33 +2025,14 @@ var markers = {
       }),
   ],
   36: [
-    L.marker([935, 782], { icon: retailIcon })
+    L.marker([920, 785], { icon: retailIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">LOCAL ITM</p>
-                <p>${idioma === "es" ? "Recuerdos" : "Souvenirs"}</p>
-            </div>
-        `
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-
-    L.marker([910, 788], { icon: retailIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">LOCAL ITM</p>
-                <p>${idioma === "es" ? "Recuerdos" : "Souvenirs"}</p>
+                <p class="popupTitle">RIVIERA</p>
+                <p>${idioma === "es" ? "Cosmetología" : "Cosmetology"}</p>
             </div>
         `
       )
