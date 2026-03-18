@@ -42,7 +42,7 @@ $cache_duration = 60 * 1; // 60 segundos
 header("Cache-Control: public, max-age=$cache_duration");
 header("Expires: " . gmdate("D, d M Y H:i:s", time() + $cache_duration) . " GMT");
 
-$carpetaRaiz = "/";
+$carpetaRaiz = "/tainobay/";
 $path = 'https://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
 $page = basename($_SERVER['SCRIPT_NAME']);
 
