@@ -445,7 +445,7 @@ $points = [
     ],
   ],
   [
-    'id' => 16,
+    'id' => 15,
     'type' => 'public',
     'name' => 'Shopping Experience',
     'path' => 'shopping-experience',
@@ -469,7 +469,7 @@ $points = [
     ],
   ],
   [
-    'id' => 17,
+    'id' => 16,
     'type' => 'public',
     'name' => 'Spa Wellness ',
     'path' => 'spa-wellness',
@@ -503,7 +503,7 @@ $points = [
     ],
   ],
   [
-    'id' => 18,
+    'id' => 17,
     'type' => 'public',
     'name' => 'Splash Surfing',
     'path' => 'splash-surfing',
@@ -530,7 +530,7 @@ $points = [
     ],
   ],
   [
-    'id' => 19,
+    'id' => 18,
     'type' => 'restaurant',
     'name' => 'Taco Lover',
     'path' => 'taco-lover',
@@ -562,7 +562,7 @@ $points = [
     'pdf' => 'port-experience/taco-lover.pdf'
   ],
   [
-    'id' => 20,
+    'id' => 19,
     'type' => 'restaurant',
     'name' => 'Tiki Tiki',
     'path' => 'tiki-tiki',
@@ -587,7 +587,7 @@ $points = [
     'pdf' => 'port-experience/tiki-tiki.pdf'
   ],
   [
-    'id' => 21,
+    'id' => 20,
     'type' => 'public',
     'name' => 'Zona de Playa',
     'path' => 'beach',
@@ -603,6 +603,48 @@ $points = [
     'single_gallery' => [
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
       'assets\images\port-experience\beach\carousel-beach.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
+    ],
+  ],
+  [
+    'id' => 21,
+    'type' => 'public',
+    'name' => 'Aviario',
+    'path' => 'aviary',
+    'logo' => '',
+    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM119.89,112.83l-4.63,2.67-4.63,2.67v-10.69l4.63,2.67,4.63,2.67ZM89.03,131.22c-10.23,0-18.52-8.29-18.52-18.52s8.29-18.52,18.52-18.52,18.52,8.29,18.52,18.52-8.29,18.52-18.52,18.52ZM94.38,134.43l-2.67,4.63-2.67,4.63-2.67-4.63-2.67-4.63h10.69ZM77.58,131.86l-5.16,1.38-5.16,1.39,1.38-5.16,1.38-5.16,3.78,3.78,3.78,3.78ZM104.35,128.08l3.78-3.78,1.38,5.16,1.38,5.16-5.16-1.39-5.16-1.38,3.78-3.78ZM105.73,92.37l5.16-1.38-1.38,5.16-1.38,5.16-3.78-3.78-3.78-3.78,5.16-1.38ZM86.36,86.47l2.67-4.63,2.67,4.63,2.67,4.63h-10.69l2.67-4.63ZM72.33,92.28l5.16,1.38-3.78,3.78-3.78,3.78-1.38-5.16-1.38-5.16,5.16,1.38ZM62.8,110.15l4.63-2.67v10.69l-4.63-2.67-4.63-2.67,4.63-2.67Z"/>
+      </svg>',
+    'banner' => 'beach/header-beach.webp',
+    'cover' => '/beach/cover-beach-port-experience.webp',
+    'title' => 'Gallery',
+    'text_home' => "Una experiencia única rodeada de aves exóticas en el corazón del puerto.",
+    'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
+    ],
+  ],
+  [
+    'id' => 22,
+    'type' => 'public',
+    'name' => 'Batting Legends',
+    'path' => 'batting-legends',
+    'logo' => '',
+    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM119.89,112.83l-4.63,2.67-4.63,2.67v-10.69l4.63,2.67,4.63,2.67ZM89.03,131.22c-10.23,0-18.52-8.29-18.52-18.52s8.29-18.52,18.52-18.52,18.52,8.29,18.52,18.52-8.29,18.52-18.52,18.52ZM94.38,134.43l-2.67,4.63-2.67,4.63-2.67-4.63-2.67-4.63h10.69ZM77.58,131.86l-5.16,1.38-5.16,1.39,1.38-5.16,1.38-5.16,3.78,3.78,3.78,3.78ZM104.35,128.08l3.78-3.78,1.38,5.16,1.38,5.16-5.16-1.39-5.16-1.38,3.78-3.78ZM105.73,92.37l5.16-1.38-1.38,5.16-1.38,5.16-3.78-3.78-3.78-3.78,5.16-1.38ZM86.36,86.47l2.67-4.63,2.67,4.63,2.67,4.63h-10.69l2.67-4.63ZM72.33,92.28l5.16,1.38-3.78,3.78-3.78,3.78-1.38-5.16-1.38-5.16,5.16,1.38ZM62.8,110.15l4.63-2.67v10.69l-4.63-2.67-4.63-2.67,4.63-2.67Z"/>
+      </svg>',
+    'banner' => 'beach/header-beach.webp',
+    'cover' => '/beach/cover-beach-port-experience.webp',
+    'title' => 'Gallery',
+    'text_home' => "¡Demuestra tu talento en el béisbol! Una experiencia emocionante para toda la familia en el puerto.",
+    'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
+    'single_gallery' => [
+      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
