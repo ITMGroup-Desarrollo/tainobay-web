@@ -25,10 +25,10 @@ if (session_status() === PHP_SESSION_ACTIVE) {
         session_name(),   // normalmente PHPSESSID
         session_id(),
         [
-            'expires'  => 0,
-            'path'     => '/',
-            'domain'   => $isLocal ? '' : '.porttainobay.com',
-            'secure'   => !$isLocal,
+            'expires' => 0,
+            'path' => '/',
+            'domain' => $isLocal ? '' : '.porttainobay.com',
+            'secure' => !$isLocal,
             'httponly' => true,
             'samesite' => 'Strict'
         ]
@@ -42,7 +42,7 @@ $cache_duration = 60 * 1; // 60 segundos
 header("Cache-Control: public, max-age=$cache_duration");
 header("Expires: " . gmdate("D, d M Y H:i:s", time() + $cache_duration) . " GMT");
 
-$carpetaRaiz = "/tainobay/";
+$carpetaRaiz = "/porttainobay/";
 $path = 'https://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
 $page = basename($_SERVER['SCRIPT_NAME']);
 
@@ -53,10 +53,10 @@ if (isset($_GET['lang'])) {
 
     // Guardar cookie "lang" con flags de seguridad
     setcookie("lang", $lang, [
-        'expires'  => time() + (3600 * 24 * 30),
-        'path'     => '/',
-        'domain'   => $isLocal ? '' : '.porttainobay.com',
-        'secure'   => !$isLocal,
+        'expires' => time() + (3600 * 24 * 30),
+        'path' => '/',
+        'domain' => $isLocal ? '' : '.porttainobay.com',
+        'secure' => !$isLocal,
         'httponly' => true,
         'samesite' => 'Strict'
     ]);

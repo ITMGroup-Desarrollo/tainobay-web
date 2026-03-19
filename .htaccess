@@ -11,7 +11,7 @@ Options +SymLinksIfOwnerMatch
 Options -Multiviews
 Options -Indexes
 RewriteEngine on
-RewriteBase /tainobay/
+RewriteBase /porttainobay/
 
 # 🚨 IMPORTANTE: respetar archivos y carpetas reales
 RewriteCond %{REQUEST_FILENAME} -f [OR]

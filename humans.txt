@@ -8,6 +8,9 @@
     
     Adrian Moreno
     - Diseñador
+
+    Danetsy Pech
+    -Desarrollador
     
 <!-----------------------------
      `    ``               `
