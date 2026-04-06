@@ -5,43 +5,59 @@
     Header set Expires 0
 </FilesMatch>
 
-#For security reasons, Option followsymlinks cannot be overridden.
-#Options +FollowSymlinks
 Options +SymLinksIfOwnerMatch
 Options -Multiviews
 Options -Indexes
-RewriteEngine on
-RewriteBase /porttainobay/
 
-# 🚨 IMPORTANTE: respetar archivos y carpetas reales (excepto carpetas de idioma)
-RewriteCond %{REQUEST_URI} !^/porttainobay/(en|es)/
+RewriteEngine on
+RewriteBase /
+
+# 🔒 Forzar HTTPS
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^porttainobay\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.porttainobay\.com$
+RewriteRule ^(.*)$ https://porttainobay.com/$1 [R=301,L]
+
+# ✅ Respetar archivos y carpetas reales (excepto carpetas de idioma)
+RewriteCond %{REQUEST_URI} !^/(en|es)/
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
+# Home
 RewriteRule ^/$ index.php [L]
+# ✅ FIX ESPECÍFICO
 RewriteRule ^(en|es)/port-experience/?$ port-experience.php?lang=$1 [QSA,L]
+# ✅ LÍNEA NUEVA — Port experience dinámico CON idioma
 RewriteRule ^(en|es)/port-experience/([^/]+)/?$ single-port-experience.php?point=$2&lang=$1 [QSA,L]
-RewriteRule ^(en|es)/(.*)$ $2.php?lang=$1 [QSA,L]
+# ✅ FIX: idioma SOLO para rutas simples (NO profundas)
+RewriteRule ^(en|es)/([^/]+)$ $2.php?lang=$1 [QSA,L]
 
-
+# Port experience dinámico
 RewriteRule ^port-experience/([^/]+)$ single-port-experience.php?point=$1 [L,QSA]
 
+# Blog
 RewriteRule ^blog/([^/]+)$ blog.php?title=$1 [L,QSA]
-# Bloquear acceso a todo el directorio vendor
+
+# Seguridad
 RedirectMatch 403 ^/vendor/.*$
 
-# Bloquear acceso a archivos sensibles
 <FilesMatch "^(composer\.(json|lock)|launch\.json|package\.json|package-lock\.json|yarn\.lock|\.env)$">
     Require all denied
 </FilesMatch>
-#Redirecciones 404
-#RewriteCond %{REQUEST_URI} !^/(en|es)/404$#
+
+# 404
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /en/404 [L,QSA]
 
+# MIME
 AddType video/ogg .ogv
 AddType video/mp4 .mp4
 AddType video/webm .webm
 
+# PHP handler
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
