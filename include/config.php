@@ -43,8 +43,11 @@ header("Cache-Control: public, max-age=$cache_duration");
 header("Expires: " . gmdate("D, d M Y H:i:s", time() + $cache_duration) . " GMT");
 
 $carpetaRaiz = "/porttainobay/";
-$path = 'https://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
-$page = basename($_SERVER['SCRIPT_NAME']);
+$protocol = $isLocal ? 'http://' : 'https://';
+$path = $protocol . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
+// $carpetaRaiz = "/porttainobay/";
+// $path = 'https://' . $_SERVER['SERVER_NAME'] . $carpetaRaiz;
+// $page = basename($_SERVER['SCRIPT_NAME']);
 
 // Detectar idioma
 if (isset($_GET['lang'])) {

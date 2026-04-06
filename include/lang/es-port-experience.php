@@ -502,39 +502,39 @@ $points = [
       'assets\images\port-experience\spa-wellness\gallery\SPA_WELLNESS_17.webp',
     ],
   ],
-  [
-    'id' => 17,
-    'type' => 'restaurant',
-    'name' => 'Rum Rum Bar',
-    'path' => 'rum-rum-bar',
-    'logo' => 'rum-rum-bar/rum-rum-bar-white.svg',
-    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-          <path d="M123.34,124.05c7.09-2.04,14.72-2.53,22.09-1.38,2.5.4,4.95.97,7.36,1.65v-20.21h-40.17l10.73,19.95Z"/>
-          <path d="M159.66,126.17c1.63.55,3.25,1.13,4.86,1.7,3.35,1.2,6.81,2.44,10.23,3.4l14.6-27.17h-29.69v22.06Z"/>
-          <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM196.78,104.29l-18.73,33.77s0,.03-.01.04l-25.03,45.14v36.74h40.25c1.66,0,3.01,1.35,3.01,3s-1.35,3-3.01,3h-86.51c-1.66,0-3-1.35-3-3s1.34-3,3-3h40.25v-36.74l-29.14-52.57-14.64-26.38c-.52-.93-.5-2.07.04-2.98.54-.91,1.53-1.48,2.58-1.48h46.56v-3.33c0-5.58,2.05-10.92,5.78-15.06,4.25-4.74,10.36-7.45,16.73-7.45h18.95c1.66,0,3,1.35,3,3s-1.34,3.01-3,3.01h-18.95c-4.68,0-9.14,1.99-12.27,5.45-2.73,3.04-4.23,6.96-4.23,11.04v3.33h35.75c1.06,0,2.04.56,2.58,1.48.54.91.55,2.05.04,2.98Z"/>
-        </svg>',
-    'banner' => 'rum-rum-bar/header-rum-rum-bar-port-experience.webp',
-    'cover' => 'rum-rum-bar/cover-rum-rum-bar-port-experience.webp',
-    'title' => 'Menu',
-    'gallery' => ['assets\images\port-experience\rum-rum-bar\carousel-rum-rum-bar.webp'],
-    'text_home' => "Salud to Dominican Rum! You'll need a fresh drink after all the shopping and having a good time, right? Visit Rum Rum for your favorite drinks!",
-    'single_gallery' => [
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_6.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_7.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_1.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_2.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_3.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_4.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_5.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_8.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_9.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_10.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_11.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_12.webp',
-      'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_13.webp',
-    ],
-    'pdf' => 'port-experience/rum-rum-bar.pdf'
-  ],
+  // [
+  //   'id' => 17,
+  //   'type' => 'restaurant',
+  //   'name' => 'Rum Rum Bar',
+  //   'path' => 'rum-rum-bar',
+  //   'logo' => 'rum-rum-bar/rum-rum-bar-white.svg',
+  //   'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  //         <path d="M123.34,124.05c7.09-2.04,14.72-2.53,22.09-1.38,2.5.4,4.95.97,7.36,1.65v-20.21h-40.17l10.73,19.95Z"/>
+  //         <path d="M159.66,126.17c1.63.55,3.25,1.13,4.86,1.7,3.35,1.2,6.81,2.44,10.23,3.4l14.6-27.17h-29.69v22.06Z"/>
+  //         <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM196.78,104.29l-18.73,33.77s0,.03-.01.04l-25.03,45.14v36.74h40.25c1.66,0,3.01,1.35,3.01,3s-1.35,3-3.01,3h-86.51c-1.66,0-3-1.35-3-3s1.34-3,3-3h40.25v-36.74l-29.14-52.57-14.64-26.38c-.52-.93-.5-2.07.04-2.98.54-.91,1.53-1.48,2.58-1.48h46.56v-3.33c0-5.58,2.05-10.92,5.78-15.06,4.25-4.74,10.36-7.45,16.73-7.45h18.95c1.66,0,3,1.35,3,3s-1.34,3.01-3,3.01h-18.95c-4.68,0-9.14,1.99-12.27,5.45-2.73,3.04-4.23,6.96-4.23,11.04v3.33h35.75c1.06,0,2.04.56,2.58,1.48.54.91.55,2.05.04,2.98Z"/>
+  //       </svg>',
+  //   'banner' => 'rum-rum-bar/header-rum-rum-bar-port-experience.webp',
+  //   'cover' => 'rum-rum-bar/cover-rum-rum-bar-port-experience.webp',
+  //   'title' => 'Menu',
+  //   'gallery' => ['assets\images\port-experience\rum-rum-bar\carousel-rum-rum-bar.webp'],
+  //   'text_home' => "Salud to Dominican Rum! You'll need a fresh drink after all the shopping and having a good time, right? Visit Rum Rum for your favorite drinks!",
+  //   'single_gallery' => [
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_6.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_7.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_1.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_2.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_3.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_4.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_5.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_8.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_9.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_10.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_11.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_12.webp',
+  //     'assets\images\port-experience\rum-rum-bar\gallery\RUM_RUM_BAR_13.webp',
+  //   ],
+  //   'pdf' => 'port-experience/rum-rum-bar.pdf'
+  // ],
   [
     'id' => 18,
     'type' => 'public',
@@ -641,46 +641,46 @@ $points = [
       'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
     ],
   ],
-  [
-    'id' => 22,
-    'type' => 'public',
-    'name' => 'Aviario',
-    'path' => 'aviary',
-    'logo' => '',
-    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-        <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM119.89,112.83l-4.63,2.67-4.63,2.67v-10.69l4.63,2.67,4.63,2.67ZM89.03,131.22c-10.23,0-18.52-8.29-18.52-18.52s8.29-18.52,18.52-18.52,18.52,8.29,18.52,18.52-8.29,18.52-18.52,18.52ZM94.38,134.43l-2.67,4.63-2.67,4.63-2.67-4.63-2.67-4.63h10.69ZM77.58,131.86l-5.16,1.38-5.16,1.39,1.38-5.16,1.38-5.16,3.78,3.78,3.78,3.78ZM104.35,128.08l3.78-3.78,1.38,5.16,1.38,5.16-5.16-1.39-5.16-1.38,3.78-3.78ZM105.73,92.37l5.16-1.38-1.38,5.16-1.38,5.16-3.78-3.78-3.78-3.78,5.16-1.38ZM86.36,86.47l2.67-4.63,2.67,4.63,2.67,4.63h-10.69l2.67-4.63ZM72.33,92.28l5.16,1.38-3.78,3.78-3.78,3.78-1.38-5.16-1.38-5.16,5.16,1.38ZM62.8,110.15l4.63-2.67v10.69l-4.63-2.67-4.63-2.67,4.63-2.67Z"/>
-      </svg>',
-    'banner' => 'beach/header-beach.webp',
-    'cover' => '/beach/cover-beach-port-experience.webp',
-    'title' => 'Gallery',
-    'text_home' => "Una experiencia única rodeada de aves exóticas en el corazón del puerto.",
-    'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
-    'single_gallery' => [
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
-    ],
-  ],
-  [
-    'id' => 23,
-    'type' => 'public',
-    'name' => 'Batting Legends',
-    'path' => 'batting-legends',
-    'logo' => '',
-    'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-        <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM119.89,112.83l-4.63,2.67-4.63,2.67v-10.69l4.63,2.67,4.63,2.67ZM89.03,131.22c-10.23,0-18.52-8.29-18.52-18.52s8.29-18.52,18.52-18.52,18.52,8.29,18.52,18.52-8.29,18.52-18.52,18.52ZM94.38,134.43l-2.67,4.63-2.67,4.63-2.67-4.63-2.67-4.63h10.69ZM77.58,131.86l-5.16,1.38-5.16,1.39,1.38-5.16,1.38-5.16,3.78,3.78,3.78,3.78ZM104.35,128.08l3.78-3.78,1.38,5.16,1.38,5.16-5.16-1.39-5.16-1.38,3.78-3.78ZM105.73,92.37l5.16-1.38-1.38,5.16-1.38,5.16-3.78-3.78-3.78-3.78,5.16-1.38ZM86.36,86.47l2.67-4.63,2.67,4.63,2.67,4.63h-10.69l2.67-4.63ZM72.33,92.28l5.16,1.38-3.78,3.78-3.78,3.78-1.38-5.16-1.38-5.16,5.16,1.38ZM62.8,110.15l4.63-2.67v10.69l-4.63-2.67-4.63-2.67,4.63-2.67Z"/>
-      </svg>',
-    'banner' => 'beach/header-beach.webp',
-    'cover' => '/beach/cover-beach-port-experience.webp',
-    'title' => 'Gallery',
-    'text_home' => "¡Demuestra tu talento en el béisbol! Una experiencia emocionante para toda la familia en el puerto.",
-    'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
-    'single_gallery' => [
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
-      'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
-    ],
-  ],
+  // [
+  //   'id' => 22,
+  //   'type' => 'public',
+  //   'name' => 'Aviario',
+  //   'path' => 'aviary',
+  //   'logo' => '',
+  //   'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  //       <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM119.89,112.83l-4.63,2.67-4.63,2.67v-10.69l4.63,2.67,4.63,2.67ZM89.03,131.22c-10.23,0-18.52-8.29-18.52-18.52s8.29-18.52,18.52-18.52,18.52,8.29,18.52,18.52-8.29,18.52-18.52,18.52ZM94.38,134.43l-2.67,4.63-2.67,4.63-2.67-4.63-2.67-4.63h10.69ZM77.58,131.86l-5.16,1.38-5.16,1.39,1.38-5.16,1.38-5.16,3.78,3.78,3.78,3.78ZM104.35,128.08l3.78-3.78,1.38,5.16,1.38,5.16-5.16-1.39-5.16-1.38,3.78-3.78ZM105.73,92.37l5.16-1.38-1.38,5.16-1.38,5.16-3.78-3.78-3.78-3.78,5.16-1.38ZM86.36,86.47l2.67-4.63,2.67,4.63,2.67,4.63h-10.69l2.67-4.63ZM72.33,92.28l5.16,1.38-3.78,3.78-3.78,3.78-1.38-5.16-1.38-5.16,5.16,1.38ZM62.8,110.15l4.63-2.67v10.69l-4.63-2.67-4.63-2.67,4.63-2.67Z"/>
+  //     </svg>',
+  //   'banner' => 'beach/header-beach.webp',
+  //   'cover' => '/beach/cover-beach-port-experience.webp',
+  //   'title' => 'Gallery',
+  //   'text_home' => "Una experiencia única rodeada de aves exóticas en el corazón del puerto.",
+  //   'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
+  //   'single_gallery' => [
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
+  //   ],
+  // ],
+  // [
+  //   'id' => 23,
+  //   'type' => 'public',
+  //   'name' => 'Batting Legends',
+  //   'path' => 'batting-legends',
+  //   'logo' => '',
+  //   'icon' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  //       <path d="M150,0C67.16,0,0,67.16,0,150s67.16,150,150,150,150-67.16,150-150S232.84,0,150,0ZM119.89,112.83l-4.63,2.67-4.63,2.67v-10.69l4.63,2.67,4.63,2.67ZM89.03,131.22c-10.23,0-18.52-8.29-18.52-18.52s8.29-18.52,18.52-18.52,18.52,8.29,18.52,18.52-8.29,18.52-18.52,18.52ZM94.38,134.43l-2.67,4.63-2.67,4.63-2.67-4.63-2.67-4.63h10.69ZM77.58,131.86l-5.16,1.38-5.16,1.39,1.38-5.16,1.38-5.16,3.78,3.78,3.78,3.78ZM104.35,128.08l3.78-3.78,1.38,5.16,1.38,5.16-5.16-1.39-5.16-1.38,3.78-3.78ZM105.73,92.37l5.16-1.38-1.38,5.16-1.38,5.16-3.78-3.78-3.78-3.78,5.16-1.38ZM86.36,86.47l2.67-4.63,2.67,4.63,2.67,4.63h-10.69l2.67-4.63ZM72.33,92.28l5.16,1.38-3.78,3.78-3.78,3.78-1.38-5.16-1.38-5.16,5.16,1.38ZM62.8,110.15l4.63-2.67v10.69l-4.63-2.67-4.63-2.67,4.63-2.67Z"/>
+  //     </svg>',
+  //   'banner' => 'beach/header-beach.webp',
+  //   'cover' => '/beach/cover-beach-port-experience.webp',
+  //   'title' => 'Gallery',
+  //   'text_home' => "¡Demuestra tu talento en el béisbol! Una experiencia emocionante para toda la familia en el puerto.",
+  //   'gallery' => ['assets\images\port-experience\beach\carousel-beach.webp'],
+  //   'single_gallery' => [
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_1.webp',
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_2.webp',
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_3.webp',
+  //     'assets\images\port-experience\beach\gallery\BEACH_PLAYGROUND_4.webp',
+  //   ],
+  // ],
 ];

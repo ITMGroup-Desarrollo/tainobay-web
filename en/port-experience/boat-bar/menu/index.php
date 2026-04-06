@@ -1,3 +1,3 @@
 <?php
-header("Location: prueba.pdf");
+header("Location: boat-bar.pdf");
 exit;
