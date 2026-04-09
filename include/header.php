@@ -9,7 +9,6 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
 }
 ?>
 
-?>
 <!-- Preloader -->
 <div id="preloader" class="preloader black" data-bg-image="assets/images/media/precarga.png"></div>
 
