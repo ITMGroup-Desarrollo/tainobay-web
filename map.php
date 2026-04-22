@@ -92,8 +92,8 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td>SHOWS</td>
                             </tr>
                             <tr data-marker-id="11">
-                                <td><img src="assets/icons/map/fruits.svg" alt="MARKET-PLACE"></td>
-                                <td>MARKET PLACE</td>
+                                <td><img src="assets/icons/map/port-experience/coco.svg" alt="CRAZY-COCONUT"></td>
+                                <td>CRAZY COCONUT & PINEAPPLE BAR</td>
                             </tr>
                             <tr data-marker-id="12">
                                 <td><img src="assets/icons/map/camara.svg" alt="PHOTO-SPOT"></td>
@@ -110,6 +110,14 @@ include_once("include/lang/{$idioma}-map.php");
                             <tr data-marker-id="15">
                                 <td><img src="assets/icons/map/shorex.svg" alt="SHOREX"></td>
                                 <td>PRE-BOOKED SHOREX</td>
+                            </tr>
+                            <tr data-marker-id="16">
+                                <td><img src="assets/icons/map/beach-play.svg" alt="BEACH PLAYGROUND"></td>
+                                <td>BEACH PLAYGROUND</td>
+                            </tr>
+                            <tr data-marker-id="17">
+                                <td><img src="assets/icons/map/yongol.svg" alt="YONGOL"></td>
+                                <td>YONGOL</td>
                             </tr>
                         </table>
                     </div>
@@ -154,6 +162,10 @@ include_once("include/lang/{$idioma}-map.php");
                             <tr data-marker-id="6">
                                 <td><img src="assets/icons/map/port-experience/monkey-marker.svg" alt="MONKEY-ISLAND"></td>
                                 <td>MONKEY ISLAND</td>
+                            </tr>
+                            <tr data-marker-id="18">
+                                <td><img src="assets/icons/map/port-experience/aviario.svg" alt="AVIARIUS"></td>
+                                <td><?php echo $idioma === 'es' ? 'AVIARIO' : 'AVIARIUS'; ?></td>
                             </tr>
                         </table>
                     </div>

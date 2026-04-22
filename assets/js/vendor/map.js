@@ -46,10 +46,9 @@ if (isMobile) {
 // #endregion
 
 // #region Agrega la imagen del mapa
-L.imageOverlay(
-  "assets/images/media/taino-actualizado-2026.webp",
-  bounds
-).addTo(map);
+L.imageOverlay("assets/images/media/taino-actualizado-2026.webp", bounds).addTo(
+  map,
+);
 map.fitBounds(bounds); // Ajustar los bounds para que el mapa se vea correctamente
 
 // Ajustar el nivel de zoom según el dispositivo después de ajustar los bounds
@@ -203,7 +202,7 @@ var fruitIcon = L.divIcon({
      data-aos-easing="ease-in-back"
      data-aos-delay="100"
      data-aos-offset="0">
-               <img src="assets/icons/map/fruits.svg" alt="experience" width="20" height="20">
+               <img src="assets/icons/map/port-experience/coco.svg" alt="experience" width="20" height="20">
            </div>`,
   className: "shadowMarker",
   iconSize: [20, 20],
@@ -318,6 +317,42 @@ var splashIcon = L.divIcon({
   iconAnchor: [0, 0],
   popupAnchor: [12, -20],
 });
+var BeachPlayIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="200"
+     data-aos-offset="0">
+               <img src="assets/icons/map/beach-play.svg" alt="beach-playground" width="20" height="20">
+           </div>`,
+  className: "shadowMarker",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var YongolIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="200"
+     data-aos-offset="0">
+               <img src="assets/icons/map/yongol.svg" alt="yongol" width="20" height="20">
+           </div>`,
+  className: "shadowMarker",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
+var AviarioIcon = L.divIcon({
+  html: `<div class="custom-icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="200"
+     data-aos-offset="0">
+               <img src="assets/icons/map/port-experience/aviario.svg" alt="aviarius" width="20" height="20">
+           </div>`,
+  className: "shadowMarker",
+  iconSize: [20, 20],
+  iconAnchor: [0, 0],
+  popupAnchor: [12, -20],
+});
 var spaIcon = L.divIcon({
   html: `<div class="custom-icon" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back"
@@ -401,7 +436,6 @@ var exitIcon = L.divIcon({
 
 // #region Marcadores y sus eventos
 var caminoCoordenadas = [
-
   [150, 310],
   [180, 320],
   [230, 325],
@@ -437,7 +471,7 @@ var caminoCoordenadas = [
   [955, 790],
   [960, 850],
   [955, 980],
-  [900, 1100],//union de la bifurcación
+  [900, 1100], //union de la bifurcación
   [910, 1130],
   [890, 1210],
   [880, 1210],
@@ -447,7 +481,6 @@ var caminoCoordenadas = [
   [500, 1235],
 ];
 var caminoCoordenadas2 = [
-
   [665, 532], //Bifurcación
   [690, 540],
   [720, 535],
@@ -465,11 +498,9 @@ var caminoCoordenadas2 = [
   [910, 1000],
   [895, 1050],
 
-  [895, 1090],//union de la bifurcación
-
+  [895, 1090], //union de la bifurcación
 ];
 var caminoCoordenadas3 = [
-
   [150, 310],
   [180, 320],
   [230, 325],
@@ -505,7 +536,7 @@ var caminoCoordenadas3 = [
   [955, 790],
   [960, 850],
   [955, 980],
-  [900, 1100],//union de la bifurcación
+  [900, 1100], //union de la bifurcación
   [910, 1130],
   [890, 1210],
   [880, 1210],
@@ -513,10 +544,8 @@ var caminoCoordenadas3 = [
   [850, 1245],
   [730, 1300],
   [500, 1235],
-
 ];
 var caminoCoordenadas4 = [
-
   [665, 532], //Bifurcación
   [690, 540],
   [720, 535],
@@ -534,77 +563,72 @@ var caminoCoordenadas4 = [
   [910, 1000],
   [895, 1050],
 
-  [895, 1090],//union de la bifurcación
-
+  [895, 1090], //union de la bifurcación
 ];
 // Dibujar el camino en el mapa
 // Capa de borde para camino3 (línea más gruesa en blanco)
 var bordeCamino3 = L.polyline(caminoCoordenadas3, {
-  color: 'white',
+  color: "white",
   weight: 6,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
 
 // Capa principal para camino3
 var camino3 = L.polyline(caminoCoordenadas3, {
-  color: '#008f39',
+  color: "#008f39",
   weight: 3,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
 
 // Capa de borde para camino4
 var bordeCamino4 = L.polyline(caminoCoordenadas4, {
-  color: 'white',
+  color: "white",
   weight: 6,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
 
 // Capa principal para camino4
 var camino4 = L.polyline(caminoCoordenadas4, {
-  color: '#008f39',
+  color: "#008f39",
   weight: 3,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
 
 // Capa de borde para camino
 var bordeCamino = L.polyline(caminoCoordenadas, {
-  color: 'white',
+  color: "white",
   weight: 6,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
 
 // Capa principal para camino
 var camino = L.polyline(caminoCoordenadas, {
-  color: '#ed1654',
+  color: "#ed1654",
   weight: 3,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
 
 // Capa de borde para camino2
 var bordeCamino2 = L.polyline(caminoCoordenadas2, {
-  color: 'white',
+  color: "white",
   weight: 6,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
 
 // Capa principal para camino2
 var camino2 = L.polyline(caminoCoordenadas2, {
-  color: '#ed1654',
+  color: "#ed1654",
   weight: 3,
   opacity: 1,
-  dashArray: "8, 10"
+  dashArray: "8, 10",
 }).addTo(map);
-
-
-
-
 
 var markers = {
   2: [
@@ -614,10 +638,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/rum-quest.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Sigue a Mr Rum y acompáñalo en este viaje a través de la historia."
-          : "Follow Mr Rum and enjoy a fun journey through history!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Sigue a Mr Rum y acompáñalo en este viaje a través de la historia."
+                    : "Follow Mr Rum and enjoy a fun journey through history!"
+                }</p>
                 <a href="${idioma}/port-experience/mr-rum-quest" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -627,7 +652,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -645,10 +670,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/lazy-river.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">LAZY RIVER</p>
-                <p>${idioma === "es"
-          ? "¡Flotemos y disfrutemos!"
-          : "Let’s float around and enjoy the ride!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Flotemos y disfrutemos!"
+                    : "Let’s float around and enjoy the ride!"
+                }</p>
                 <a href="${idioma}/port-experience/lazy-river" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -658,7 +684,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -675,10 +701,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === "es"
-          ? "¡Encuentra la adrenalina que necesitas!"
-          : "Get your adrenaline rush&nbsp;ON!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Encuentra la adrenalina que necesitas!"
+                    : "Get your adrenaline rush&nbsp;ON!"
+                }</p>
                 <a href="${idioma}/port-experience/splash-surfing" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -688,7 +715,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -705,10 +732,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/spa-wellness.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === "es"
-          ? "Consiéntete y relájate con un masaje."
-          : "Treat yourself and relax with a massage."
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Consiéntete y relájate con un masaje."
+                    : "Treat yourself and relax with a massage."
+                }</p>
                 <a href="${idioma}/port-experience/spa-wellness" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -718,7 +746,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -736,10 +764,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/monkey-island.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MONKEY ISLAND</p>
-                <p>${idioma === "es"
-          ? "Nuevos amigos, grandes recuerdos. "
-          : "Make new monkey friends and have a great time!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Nuevos amigos, grandes recuerdos. "
+                    : "Make new monkey friends and have a great time!"
+                }</p>
                 <a href="${idioma}/port-experience/monkey-island" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -749,7 +778,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -767,10 +796,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === "es" ? "PISCINA" : "POOL"}</p>
-            <p>${idioma === "es"
-          ? "Nada, relájate y disfruta."
-          : "Swim, relax, and enjoy. "
-        }</p>
+            <p>${
+              idioma === "es"
+                ? "Nada, relájate y disfruta."
+                : "Swim, relax, and enjoy. "
+            }</p>
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -780,7 +810,7 @@ var markers = {
                      </button>
                  </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -796,10 +826,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/pool.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === "es" ? "PISCINA" : "POOL"}</p>
-            <p>${idioma === "es"
-          ? "¡Refréscate al llegar! No te pierdas la fiesta y los shows."
-          : "Freshen up upon arrival. Grab a spot and don’t miss the party and shows"
-        }</p>            
+            <p>${
+              idioma === "es"
+                ? "¡Refréscate al llegar! No te pierdas la fiesta y los shows."
+                : "Freshen up upon arrival. Grab a spot and don’t miss the party and shows"
+            }</p>            
             <a href="${idioma}/port-experience/pool" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -809,7 +840,7 @@ var markers = {
                      </button>
                  </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -827,10 +858,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${idioma === "es"
-          ? "¡La playa en el puerto! Descansa y broncéate."
-          : "Beach vibes at port! Lay by a sunbed for a nice tan."
-        }</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -840,7 +872,7 @@ var markers = {
                      </button>
                  </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -856,10 +888,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${idioma === "es"
-          ? "¡La playa en el puerto! Descansa y broncéate."
-          : "Beach vibes at port! Lay by a sunbed for a nice tan."
-        }</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -869,7 +902,7 @@ var markers = {
                      </button>
                  </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -885,10 +918,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${idioma === "es"
-          ? "¡La playa en el puerto! Descansa y broncéate."
-          : "Beach vibes at port! Lay by a sunbed for a nice tan."
-        }</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -898,7 +932,7 @@ var markers = {
                      </button>
                  </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -914,10 +948,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/beach-playground.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
             <p class="popupTitle">${idioma === "es" ? "PLAYA" : "BEACH"}</p>
-            <p>${idioma === "es"
-          ? "¡La playa en el puerto! Descansa y broncéate."
-          : "Beach vibes at port! Lay by a sunbed for a nice tan."
-        }</p>
+            <p>${
+              idioma === "es"
+                ? "¡La playa en el puerto! Descansa y broncéate."
+                : "Beach vibes at port! Lay by a sunbed for a nice tan."
+            }</p>
             <a href="${idioma}/port-experience/beach" >
                      <button 
                        style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -927,7 +962,7 @@ var markers = {
                      </button>
                  </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1046,12 +1081,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Lo mejor del entretenimiento dominicano en el puerto. "
-          : "The best of Dominican entertainment for you to&nbspenjoy!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1066,12 +1102,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Lo mejor del entretenimiento dominicano en el puerto. "
-          : "The best of Dominican entertainment for you to&nbspenjoy!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1086,12 +1123,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Lo mejor del entretenimiento dominicano en el puerto. "
-          : "The best of Dominican entertainment for you to&nbspenjoy!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1106,12 +1144,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No te pierdas del show principal! "
-          : "Don't miss the main&nbspshow!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No te pierdas del show principal! "
+                    : "Don't miss the main&nbspshow!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1126,12 +1165,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/show-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Lo mejor del entretenimiento dominicano en el puerto. "
-          : "The best of Dominican entertainment for you to&nbspenjoy!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Lo mejor del entretenimiento dominicano en el puerto. "
+                    : "The best of Dominican entertainment for you to&nbspenjoy!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1142,18 +1182,19 @@ var markers = {
       }),
   ],
   11: [
-    L.marker([865, 1205], { icon: fruitIcon })
+    L.marker([945, 950], { icon: fruitIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-          : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
-        }</p>
+            <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1162,18 +1203,19 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-    L.marker([975, 755], { icon: fruitIcon })
+    L.marker([825, 695], { icon: fruitIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-          : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
-        }</p>
+            <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1182,18 +1224,40 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-    L.marker([415, 310], { icon: fruitIcon })
+    L.marker([625, 525], { icon: fruitIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-          : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
-        }</p>
+            <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+    L.marker([505, 360], { icon: fruitIcon })
+      .addTo(map)
+      .bindPopup(
         `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
+            </div>
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1207,13 +1271,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-          : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
-        }</p>
+            <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1227,13 +1292,14 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/fruit-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-          : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
-        }</p>
+            <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p>${
+                  idioma === "es"
+                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
+                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1250,12 +1316,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1270,12 +1337,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1284,18 +1352,19 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
-    L.marker([945, 940], { icon: camaraIcon })
+    L.marker([945, 915], { icon: camaraIcon })
       .addTo(map)
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1310,12 +1379,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1330,12 +1400,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1350,12 +1421,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1370,12 +1442,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1390,12 +1463,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1410,12 +1484,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/camara-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡No olvides tomar fotos y taggearnos en Instagram!"
-          : "Don't forget to share your pics and tag us on Instagram!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡No olvides tomar fotos y taggearnos en Instagram!"
+                    : "Don't forget to share your pics and tag us on Instagram!"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1432,12 +1507,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¿Sin reserva? Aparta tu tour favorito al llegar."
-          : "Don't Forget to book your favorite tour upon arrival"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Sin reserva? Aparta tu tour favorito al llegar."
+                    : "Don't Forget to book your favorite tour upon arrival"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1452,12 +1528,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/star-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¿Sin reserva? Aparta tu tour favorito al llegar."
-          : "Don't Forget to book your favorite tour upon arrival"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Sin reserva? Aparta tu tour favorito al llegar."
+                    : "Don't Forget to book your favorite tour upon arrival"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1474,12 +1551,13 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/taxi-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Servicios de transportación."
-          : "Transportation services"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Servicios de transportación."
+                    : "Transportation services"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1496,12 +1574,90 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/shorex-logo.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "¡Encuentra tu tour al llegar!"
-          : "Find your excursion upon arrival!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Encuentra tu tour al llegar!"
+                    : "Find your excursion upon arrival!"
+                }</p>
             </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  16: [
+    L.marker([570, 580], { icon: BeachPlayIcon })
+      .addTo(map)
+      .bindPopup(
         `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/icons/map/beach-play-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
+                <p>${
+                  idioma === "es"
+                    ? "¡Encuentra la adrenalina que necesitas!"
+                    : "Get your adrenaline rush&nbsp;ON!"
+                }</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  17: [
+    L.marker([700, 700], { icon: YongolIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/icons/map/yongol-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
+                <p>${
+                  idioma === "es"
+                    ? "¡Encuentra la adrenalina que necesitas!"
+                    : "Get your adrenaline rush&nbsp;ON!"
+                }</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
+  18: [
+    L.marker([820, 850], { icon: AviarioIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+                <img src="assets/icons/map/port-experience/aviario-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
+                <p>${
+                  idioma === "es"
+                    ? "¡Encuentra la adrenalina que necesitas!"
+                    : "Get your adrenaline rush&nbsp;ON!"
+                }</p>
+                <a href="${idioma}/port-experience/aviary" >
+                    <button 
+                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                      onmouseover="this.style.backgroundColor='#f5a23a';" 
+                      onmouseout="this.style.backgroundColor='#1c355e';">
+                      ${idioma === "es" ? "Ver más" : "View more"}
+                    </button>
+                </a>
+            </div>
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1522,7 +1678,7 @@ var markers = {
             <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
             
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1542,7 +1698,7 @@ var markers = {
                 <p class="popupTitle">DUFRY</p>
                 <p>${idioma === "es" ? "Tienda" : "Big Retailer"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1562,7 +1718,7 @@ var markers = {
                 <p class="popupTitle">BLUE STONE</p>
                 <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1580,7 +1736,7 @@ var markers = {
                 <p class="popupTitle">BLUE STONE</p>
                 <p>${idioma === "es" ? "Joyería" : "Jewelry"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1598,12 +1754,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MORENA MIA</p>
-                <p>${idioma === "es"
-          ? "Perfumeria y cosmetica"
-          : "Perfumery and Cosmetics"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1619,12 +1776,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MORENA MIA</p>
-                <p>${idioma === "es"
-          ? "Perfumeria y cosmetica"
-          : "Perfumery and Cosmetics"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1640,12 +1798,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MORENA MIA</p>
-                <p>${idioma === "es"
-          ? "Perfumeria y cosmetica"
-          : "Perfumery and Cosmetics"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1665,7 +1824,7 @@ var markers = {
                 <p class="popupTitle">PAWS BY THE SEA</p>
                 <p>${idioma === "es" ? "Tienda de regalos" : "Gift Shop"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1685,7 +1844,7 @@ var markers = {
                 <p class="popupTitle">TSUNAMI XL</p>
                 <p>${idioma === "es" ? "Conveniencia" : "Convenience Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1703,12 +1862,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">PIRAÑA JOE</p>
-                <p>${idioma === "es"
-          ? "Ropa y accesorios"
-          : "Fashion & Accessories"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1726,12 +1886,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">ISLAND LIFE - SURF SHOP</p>
-                <p>${idioma === "es"
-          ? "Ropa y accesorios"
-          : "Fashion & Accessories"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1749,12 +1910,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS'</p>
-                <p>${idioma === "es"
-          ? "Ropa y accesorios"
-          : "Fashion & Accessories"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1770,12 +1932,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS</p>
-                <p>${idioma === "es"
-          ? "Ropa y accesorios"
-          : "Fashion & Accessories"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1791,12 +1954,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN THINGS</p>
-                <p>${idioma === "es"
-          ? "Ropa y accesorios"
-          : "Fashion & Accessories"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1816,7 +1980,7 @@ var markers = {
                 <p class="popupTitle">CHRISTMAS BY THE SEA</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1836,7 +2000,7 @@ var markers = {
                 <p class="popupTitle">RUTA DE LAS INDAS</p>
                 <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1856,7 +2020,7 @@ var markers = {
                 <p class="popupTitle">THE TIE DYE HUT</p>
                 <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1876,7 +2040,7 @@ var markers = {
                 <p class="popupTitle">PIÑA COLADA BOUTIQUE</p>
                 <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1896,7 +2060,7 @@ var markers = {
                 <p class="popupTitle">SHARK ATTACK</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1914,7 +2078,7 @@ var markers = {
                 <p class="popupTitle">SHARK ATTACK</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1934,7 +2098,7 @@ var markers = {
                 <p class="popupTitle">BLOSSOM SOAP</p>
                 <p>${idioma === "es" ? "Boutique" : "Boutique"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1954,7 +2118,7 @@ var markers = {
                 <p class="popupTitle">SEA SALT</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1972,7 +2136,7 @@ var markers = {
                 <p class="popupTitle">SEA SALT</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -1992,7 +2156,7 @@ var markers = {
                 <p class="popupTitle">RIVIERA</p>
                 <p>${idioma === "es" ? "Cosmetología" : "Cosmetology"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2010,12 +2174,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">MEXICAN EXPERIENCE</p>
-                <p>${idioma === "es"
-          ? "Tienda de regalos/Tabaco"
-          : "Gift Shop/Tobacco"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Tienda de regalos/Tabaco"
+                    : "Gift Shop/Tobacco"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2035,7 +2200,7 @@ var markers = {
                 <p class="popupTitle">MUSEO DEL TABACO</p>
                 <p>${idioma === "es" ? "Tabaco" : "Tobacco"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2055,7 +2220,7 @@ var markers = {
                 <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2073,7 +2238,7 @@ var markers = {
                 <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2091,7 +2256,7 @@ var markers = {
                 <p class="popupTitle">SILVER BY THE SEA</p>
                 <p>${idioma === "es" ? "Joyeria" : "Jewelry"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2108,10 +2273,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">${idioma === "es" ? "FARMACIA TAINO BAY" : "TAINO BAY DRUGSTORE"
-        }</p>
+                <p class="popupTitle">${
+                  idioma === "es" ? "FARMACIA TAINO BAY" : "TAINO BAY DRUGSTORE"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2131,7 +2297,7 @@ var markers = {
                 <p class="popupTitle">TAINO LOGO SHOP</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2149,12 +2315,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DOMINICAN YUCAYAQUE</p>
-                <p>${idioma === "es"
-          ? "Ropa y accesorios"
-          : "Fashion & Accessories"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2174,7 +2341,7 @@ var markers = {
                 <p class="popupTitle">TURQUESA</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2192,7 +2359,7 @@ var markers = {
                 <p class="popupTitle">TURQUESA</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2210,12 +2377,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">NATURAL BEAUTY</p>
-                <p>${idioma === "es"
-          ? "Perfumeria y cosmetica"
-          : "Perfumery and Cosmetics"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Perfumeria y cosmetica"
+                    : "Perfumery and Cosmetics"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2235,7 +2403,7 @@ var markers = {
                 <p class="popupTitle">HARD ROCK CAFE</p>
                 <p>${idioma === "es" ? "Tienda destino" : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2253,12 +2421,13 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">DEL SOL</p>
-                <p>${idioma === "es"
-          ? "Ropa y accesorios"
-          : "Fashion & Accessories"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Ropa y accesorios"
+                    : "Fashion & Accessories"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2275,10 +2444,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/drugstore-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
-                <p class="popupTitle">${idioma === "es" ? "FARMACIA" : "DRUGSTORE"
-        }</p>
+                <p class="popupTitle">${
+                  idioma === "es" ? "FARMACIA" : "DRUGSTORE"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2296,10 +2466,11 @@ var markers = {
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p class="popupTitle">VEARI PIEL</p>
-                <p>${idioma === "es" ? "Artículos de Piel " : "Leather goods"
-        }</p>
+                <p>${
+                  idioma === "es" ? "Artículos de Piel " : "Leather goods"
+                }</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2319,7 +2490,7 @@ var markers = {
                 <p class="popupTitle">ABYSSAL</p>
                 <p>${idioma === "es" ? "Tienda destino " : "Store"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2339,7 +2510,7 @@ var markers = {
                 <p class="popupTitle" >VELASCO HABANOS</p>
                 <p>${idioma === "es" ? "Tabaco" : "Tobacco"}</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2356,10 +2527,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
-            <p>${idioma === "es"
-          ? "¡Empecemos la fiesta con un drink!"
-          : "Let’s start this party with a drink"
-        }</p>
+            <p>${
+              idioma === "es"
+                ? "¡Empecemos la fiesta con un drink!"
+                : "Let’s start this party with a drink"
+            }</p>
             <a href="${idioma}/port-experience/keloke">
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2369,7 +2541,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2385,10 +2557,11 @@ var markers = {
       .bindPopup(
         `   <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/coffee-factory.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es"
-          ? "Visita y disfruta el auténtico café dominicano."
-          : "Make a stop, and fuel up with Dominican coffee!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Visita y disfruta el auténtico café dominicano."
+                    : "Make a stop, and fuel up with Dominican coffee!"
+                }</p>
                 <a href="${idioma}/port-experience/coffee-factory" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2398,7 +2571,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2415,10 +2588,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/icekery.svg" alt="Logo" style="width: 70px; height: 70px;">
-                <p>${idioma === "es"
-          ? "Un delicioso postre te espera."
-          : "Have a delicious treat!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Un delicioso postre te espera."
+                    : "Have a delicious treat!"
+                }</p>
                 <a href="${idioma}/port-experience/icekery" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2428,7 +2602,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2445,10 +2619,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;" >
-                <p>${idioma === "es"
-          ? "Un mojito siempre es una buena idea."
-          : "A mojito is always a great idea!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Un mojito siempre es una buena idea."
+                    : "A mojito is always a great idea!"
+                }</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2458,7 +2633,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2473,10 +2648,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mojito-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === "es"
-          ? "Un mojito siempre es una buena idea."
-          : "A mojito is always a great idea!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Un mojito siempre es una buena idea."
+                    : "A mojito is always a great idea!"
+                }</p>
                 <a href="${idioma}/port-experience/mojito-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2486,7 +2662,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2503,10 +2679,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/cantina-latina.svg" alt="Logo" style="width: 80px; height: 80px; ">
-                <p>${idioma === "es"
-          ? "¡El mejor spot para el sabor caribeño!"
-          : "The top spot for Caribbean food! "
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡El mejor spot para el sabor caribeño!"
+                    : "The top spot for Caribbean food! "
+                }</p>
                 <a href="${idioma}/port-experience/cantina-latina" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2516,7 +2693,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2533,10 +2710,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/mexican-grill.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === "es"
-          ? "Tacos y snacks, ¡no hay nada mejor!"
-          : "Tacos and grilled snacks, it doesn't get any better than that!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Tacos y snacks, ¡no hay nada mejor!"
+                    : "Tacos and grilled snacks, it doesn't get any better than that!"
+                }</p>
                 <a href="${idioma}/port-experience/mexican-grill" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2546,7 +2724,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2563,10 +2741,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/blue-parrot.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === "es"
-          ? "¡Mariscos y good vibes!"
-          : "Fresh seafood and good vibes!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Mariscos y good vibes!"
+                    : "Fresh seafood and good vibes!"
+                }</p>
                 <a href="${idioma}/port-experience/blue-parrot" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2576,7 +2755,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2593,8 +2772,9 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/taco-lover.svg" alt="Logo" style="width: 80px; height: 80px; margin: 5px 0 10px 0;">
-                <p>${idioma === "es" ? "¡Échale picante! " : "Let’s get spicy!"
-        }</p>
+                <p>${
+                  idioma === "es" ? "¡Échale picante! " : "Let’s get spicy!"
+                }</p>
                 <a href="${idioma}/port-experience/taco-lover" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2604,7 +2784,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2621,10 +2801,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/margarita-bar.svg" alt="Logo" style="width: 80px; height: 80px;"">
-                <p>${idioma === "es"
-          ? "Mango, fresa, limón y más, ¡elige tu favorito!"
-          : "Mango, strawberry, lime, and more, you choose!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "Mango, fresa, limón y más, ¡elige tu favorito!"
+                    : "Mango, strawberry, lime, and more, you choose!"
+                }</p>
                 <a href="${idioma}/port-experience/margarita-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2634,7 +2815,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2651,10 +2832,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/dom-dom-bar.svg" alt="Logo" style="width: 90px; height: 90px; ">
-                <p>${idioma === "es"
-          ? "¿Drinks en la piscina? ¡Aquí es el lugar!"
-          : "Drinks by the pool? We got you!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Drinks en la piscina? ¡Aquí es el lugar!"
+                    : "Drinks by the pool? We got you!"
+                }</p>
                 <a href="${idioma}/port-experience/dom-dom-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2664,7 +2846,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2681,10 +2863,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
             <img src="assets/icons/map/port-experience/huracane-bar.svg" alt="Logo" style="width: 70px; height: 70px; margin: 5px 0 10px 0;">
-            <p>${idioma === "es"
-          ? "Un drink en la piscina te espera. "
-          : "Need a drink for the pool? We got you!"
-        }</p>
+            <p>${
+              idioma === "es"
+                ? "Un drink en la piscina te espera. "
+                : "Need a drink for the pool? We got you!"
+            }</p>
             <a href="${idioma}/port-experience/huracan-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2694,7 +2877,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2711,10 +2894,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/boat-bar.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === "es"
-          ? "¿Listos? Navega y disfruta un drink. "
-          : "Ready, sail, drink!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¿Listos? Navega y disfruta un drink. "
+                    : "Ready, sail, drink!"
+                }</p>
                 <a href="${idioma}/port-experience/boat-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2724,7 +2908,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2741,10 +2925,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/tiki-tiki.svg" alt="Logo" style="width: 80px; height: 80px;">
-                <p>${idioma === "es"
-          ? "¡Drinks frescos y diversión!"
-          : "Fresh drinks & fun!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Drinks frescos y diversión!"
+                    : "Fresh drinks & fun!"
+                }</p>
                 <a href="${idioma}/port-experience/tiki-tiki" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2754,7 +2939,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2771,10 +2956,11 @@ var markers = {
         `
             <div class="pop" style="text-align: center;">
                 <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 100px; height: 100px; ">
-                <p>${idioma === "es"
-          ? "¡Amor, diversión y mucho ron!"
-          : "Love, fun, and Dominican rum!"
-        }</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Amor, diversión y mucho ron!"
+                    : "Love, fun, and Dominican rum!"
+                }</p>
                 <a href="${idioma}/port-experience/rum-rum-bar" >
                     <button 
                       style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
@@ -2784,7 +2970,7 @@ var markers = {
                     </button>
                 </a>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2804,7 +2990,7 @@ var markers = {
                 <p class="popupTitle">CHOCOLATE WORLD</p>
                 <p>Store</p>
             </div>
-        `
+        `,
       )
       .on("click", function (e) {
         this.openPopup();
@@ -2815,21 +3001,22 @@ var markers = {
       }),
   ],
   75: [
-    L.marker([165, 270], { icon: salidaCaminoIcon })
-      .addTo(map),
+    L.marker([165, 270], { icon: salidaCaminoIcon }).addTo(map),
     //Marker del texto salida sin que sea afectado por los eventos de los otros markers
-    L.marker(idioma === "es" ? [165, 190] : [165, 210], { icon: salidaIcon })
-      .addTo(map)
+    L.marker(idioma === "es" ? [165, 190] : [165, 210], {
+      icon: salidaIcon,
+    }).addTo(map),
   ],
   76: [
-    L.marker([165, 270], { icon: regresoCaminoIcon })
-      .addTo(map),
-    L.marker(idioma === "es" ? [193, 220] : [193, 220], { icon: regresoIcon })
-      .addTo(map)
+    L.marker([165, 270], { icon: regresoCaminoIcon }).addTo(map),
+    L.marker(idioma === "es" ? [193, 220] : [193, 220], {
+      icon: regresoIcon,
+    }).addTo(map),
   ],
   77: [
-    L.marker(idioma === "es" ? [165, 220] : [165, 235], { icon: exitIcon })
-      .addTo(map)
+    L.marker(idioma === "es" ? [165, 220] : [165, 235], {
+      icon: exitIcon,
+    }).addTo(map),
   ],
 };
 
@@ -2862,7 +3049,7 @@ $(document).on("click", ".tabla-icons tr", function () {
   var selectedMarkers = markers[markerId]; // Obtener los marcadores de la fila
   var filterContainer = $(this).closest(".leaflet-control-filter"); // Contenedor de la tabla y checkbox
   var tableCheckbox = filterContainer.find(
-    ".filter-header .switch input[type='checkbox']"
+    ".filter-header .switch input[type='checkbox']",
   );
   var rows = filterContainer.find("tr"); // Todas las filas de la tabla
 
@@ -2940,41 +3127,44 @@ $(document).on("click", ".tabla-icons tr", function () {
 });
 
 // Evento para manejar la activación/desactivación del checkbox
-$(document).on("change", ".filter-header .switch input[type='checkbox']", function () {
-  var isChecked = $(this).prop("checked");
-  var filterContainer = $(this).closest(".leaflet-control-filter");
-  var tableMarkers = [];
+$(document).on(
+  "change",
+  ".filter-header .switch input[type='checkbox']",
+  function () {
+    var isChecked = $(this).prop("checked");
+    var filterContainer = $(this).closest(".leaflet-control-filter");
+    var tableMarkers = [];
 
-  filterContainer.find(".tabla-icons tr").each(function () {
-    var rowMarkerId = $(this).data("marker-id");
-    if (markers[rowMarkerId] && rowMarkerId !== 75 && rowMarkerId !== 76) {
-      tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+    filterContainer.find(".tabla-icons tr").each(function () {
+      var rowMarkerId = $(this).data("marker-id");
+      if (markers[rowMarkerId] && rowMarkerId !== 75 && rowMarkerId !== 76) {
+        tableMarkers = tableMarkers.concat(markers[rowMarkerId]);
+      }
+    });
+
+    if (isChecked) {
+      tableMarkers.forEach(function (marker) {
+        map.addLayer(marker);
+      });
+    } else {
+      tableMarkers.forEach(function (marker) {
+        map.removeLayer(marker);
+      });
     }
-  });
 
-  if (isChecked) {
-    tableMarkers.forEach(function (marker) {
-      map.addLayer(marker);
-    });
-  } else {
-    tableMarkers.forEach(function (marker) {
-      map.removeLayer(marker);
-    });
-  }
-
-  // Asegurar que los polylines y markers 75 y 76 nunca se muestren con el checkbox
-  map.removeLayer(camino);
-  map.removeLayer(camino2);
-  map.removeLayer(camino3);
-  map.removeLayer(camino4);
-  map.removeLayer(bordeCamino);
-  map.removeLayer(bordeCamino2);
-  map.removeLayer(bordeCamino3);
-  map.removeLayer(bordeCamino4);
-  markers[75]?.forEach(marker => map.removeLayer(marker));
-  markers[76]?.forEach(marker => map.removeLayer(marker));
-});
-
+    // Asegurar que los polylines y markers 75 y 76 nunca se muestren con el checkbox
+    map.removeLayer(camino);
+    map.removeLayer(camino2);
+    map.removeLayer(camino3);
+    map.removeLayer(camino4);
+    map.removeLayer(bordeCamino);
+    map.removeLayer(bordeCamino2);
+    map.removeLayer(bordeCamino3);
+    map.removeLayer(bordeCamino4);
+    markers[75]?.forEach((marker) => map.removeLayer(marker));
+    markers[76]?.forEach((marker) => map.removeLayer(marker));
+  },
+);
 
 // funcionalidad para modificar las columnas de las tablas de filtrado dependiendo de la cantidad de elementos
 document.addEventListener("DOMContentLoaded", function () {
@@ -3018,18 +3208,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 if (!isMobile) {
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".leaflet-control-filter").forEach(function (filter) {
-      let switchInput = filter.querySelector(".switch input");
-      let minimizeButton = filter.querySelector(".minimize-btn");
+    document
+      .querySelectorAll(".leaflet-control-filter")
+      .forEach(function (filter) {
+        let switchInput = filter.querySelector(".switch input");
+        let minimizeButton = filter.querySelector(".minimize-btn");
 
-      if (switchInput && minimizeButton) {
-        switchInput.addEventListener("change", function () {
-          if (switchInput.checked) {
-            minimizeButton.click();
-          }
-        });
-      }
-    });
+        if (switchInput && minimizeButton) {
+          switchInput.addEventListener("change", function () {
+            if (switchInput.checked) {
+              minimizeButton.click();
+            }
+          });
+        }
+      });
   });
 }
 // #endregion
