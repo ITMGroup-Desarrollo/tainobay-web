@@ -2955,7 +2955,7 @@ var markers = {
       .bindPopup(
         `
             <div class="pop" style="text-align: center;">
-                <img src="assets/icons/map/port-experience/rum-rum-bar.svg" alt="Logo" style="width: 100px; height: 100px; ">
+                <img src="assets/icons/map/port-experience/batting-legends-logo.svg" alt="Logo" style="width: 100px; height: 100px; ">
                 <p>${
                   idioma === "es"
                     ? "¡Amor, diversión y mucho ron!"

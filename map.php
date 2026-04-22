@@ -183,8 +183,8 @@ include_once("include/lang/{$idioma}-map.php");
                     <div class="filter-content">
                         <table class="tabla-icons">
                             <tr data-marker-id="73">
-                                <td><img src="assets/icons/map/bar.svg" alt="RUM-BAR"></td>
-                                <td>RUM RUM BAR</td>
+                                <td><img src="assets/icons/map/bar.svg" alt="BATTING LEGENDS"></td>
+                                <td>BATTING LEGENDS</td>
                             </tr>
                             <tr data-marker-id="60">
                                 <td><img src="assets/icons/map/food.svg" alt="BAR-KELOKE"></td>
