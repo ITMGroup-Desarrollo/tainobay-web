@@ -703,8 +703,8 @@ var markers = {
                 <img src="assets/icons/map/port-experience/splash-surffing.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${
                   idioma === "es"
-                    ? "¡Encuentra la adrenalina que necesitas!"
-                    : "Get your adrenaline rush&nbsp;ON!"
+                    ? "¡Sol, arena y mucha&nbsp;diversión!"
+                    : "Sun, sand, and lots of&nbsp;fun!"
                 }</p>
                 <a href="${idioma}/port-experience/splash-surfing" >
                     <button 
@@ -1190,8 +1190,8 @@ var markers = {
             <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>${
                   idioma === "es"
-                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
+                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
                 }</p>
             </div>
         `,
@@ -1211,8 +1211,8 @@ var markers = {
             <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>${
                   idioma === "es"
-                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
+                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
                 }</p>
             </div>
         `,
@@ -1232,8 +1232,8 @@ var markers = {
             <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>${
                   idioma === "es"
-                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
+                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
                 }</p>
             </div>
         `,
@@ -1253,8 +1253,8 @@ var markers = {
             <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>${
                   idioma === "es"
-                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
+                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
                 }</p>
             </div>
         `,
@@ -1274,8 +1274,8 @@ var markers = {
             <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>${
                   idioma === "es"
-                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
+                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
                 }</p>
             </div>
         `,
@@ -1295,8 +1295,8 @@ var markers = {
             <img src="assets/icons/map//port-experience/coco-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
                 <p>${
                   idioma === "es"
-                    ? "Drinks hechos con frutas frescas, ¡ideales para el calor dominicano!"
-                    : "Fresh drinks from fresh fruit, a must for the&nbspheat!"
+                    ? "¡El mejor spot para drinks de frutas y buenas&nbsp;vibras!"
+                    : "The spot for fresh fruit drinks & good&nbsp;vibes!"
                 }</p>
             </div>
         `,
@@ -1599,8 +1599,8 @@ var markers = {
                 <img src="assets/icons/map/beach-play-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${
                   idioma === "es"
-                    ? "¡Encuentra la adrenalina que necesitas!"
-                    : "Get your adrenaline rush&nbsp;ON!"
+                    ? "¡Sol, arena y mucha&nbsp;diversión!"
+                    : "Sun, sand, and lots of&nbsp;fun!"
                 }</p>
             </div>
         `,
@@ -1622,8 +1622,8 @@ var markers = {
                 <img src="assets/icons/map/yongol-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${
                   idioma === "es"
-                    ? "¡Encuentra la adrenalina que necesitas!"
-                    : "Get your adrenaline rush&nbsp;ON!"
+                    ? "¡Ejercitarse en el paraíso siempre será&nbsp;divertido!"
+                    : "Working out in paradise is always&nbsp;fun!"
                 }</p>
             </div>
         `,
@@ -1645,8 +1645,8 @@ var markers = {
                 <img src="assets/icons/map/port-experience/aviario-logo.svg" alt="Logo" style="width: 80px; height: 80px;">
                 <p>${
                   idioma === "es"
-                    ? "¡Encuentra la adrenalina que necesitas!"
-                    : "Get your adrenaline rush&nbsp;ON!"
+                    ? "¡Pasa un día genial en compañía de las&nbsp;aves!"
+                    : "Have a great day in the company of our feathery&nbsp;friends!"
                 }</p>
                 <a href="${idioma}/port-experience/aviary" >
                     <button 
@@ -2958,8 +2958,8 @@ var markers = {
                 <img src="assets/icons/map/port-experience/batting-legends-logo.svg" alt="Logo" style="width: 100px; height: 100px; ">
                 <p>${
                   idioma === "es"
-                    ? "¡Amor, diversión y mucho ron!"
-                    : "Love, fun, and Dominican rum!"
+                    ? "¡Un homerun de sabor!"
+                    : "A homerun of flavor!"
                 }</p>
                 <a href="${idioma}/port-experience/rum-rum-bar" >
                     <button 
