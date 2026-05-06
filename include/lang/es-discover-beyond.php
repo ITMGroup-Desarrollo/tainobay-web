@@ -82,83 +82,83 @@ define('DISCOVER_CARRUSEL4', array(
     'VER MENOS'
 ));
 $tours = [
-    [
-        "id" => "1",
-        "Tour" => "atv-expedition",
-        "tourName" => "ATV Expedition",
-        "title" => "AN ADRENALINE",
-        "subtitle" => "FUELED ESCAPE!",
-        "button" => "GET YOUR RUSH ON",
-        "content" => "Una increíble experiencia en ATV. Súbete a un camión safari al aire libre durante 25 minutos y disfruta de un recorrido panorámico a través del vibrante paisaje de Puerto Plata.",
-        "side" => "left-side",
-        "images" => [
-            "assets/images/discover-beyond/atv-exp/atv-expedition-main.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-main-two.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-main-three.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-main-four.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-main-five.webp"
-        ],
-        "galleryImages" => [
-            "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-one.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-two.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-three.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-four.webp",
-            "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-five.webp"
-        ],
-        "shortIconSchedule" => "assets/images/discover-beyond/atv-exp/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/atv-exp/icon/icon-intensity-white.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/atv-exp/icon/icon-buggy-white.svg",
-        "displayTitle" => [
-            "ATV EXPEDITION BACK COUNTRY",
-            "RIDING & BEACH"
-        ],
-        "displayContent" => [
-            "<b>Transfer to ATV hub=></b> Climb aboard an open-air safari truck for 25 minutes and enjoy a scenic journey through the vibrant landscape of Puerto Plata.",
-            "<b>ATV backcountry exploration=></b> After your guide’s safety briefing and driving test, put on your helmet and goggles, and hop into your automatic single or double ATV for an exciting one-hour ride.",
-            "Visit the picturesque rural area of Puerto Plata, drive through the lush rainforests, and prepare to get a little wet as you cross shallow creeks.",
-            "<b>Coffee & Chocolate break=></b> Get ready for a 15-minute cultural stop at a traditional Dominican country house. Freshly brewed coffee, rich chocolate, and authentic cigar tastings are included.",
-            "<b>Photo shooting & break at the beach=></b> Rest for 30 minutes at a local beach, where incredible views of the Atlantic shoreline and mountains beckon you to relax and unwind before heading back to port."
-        ],
-        "displayHighlights" => [
-            "Safari truck through Puerto Plata",
-            "ATV rainforest adventures",
-            "Delicious Dominican coffee & chocolate tasting",
-            "Sightseeing of the Atlantic shoreline",
-            "Beach break"
-        ],
-        "displayIncluded" => [
-            "Roundtrip transportation on open air safari truck",
-            "Bilingual certified tour guide",
-            "Single or double automatic ATV",
-            "Helmets & goggles",
-            "ATV through rural areas, backcountry private ranch, rainforest and stop at the beach",
-            "Coffee, chocolate and cigar tasting",
-            "One bottle of water"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-license-white.svg",
-                "text" => "Physical valid driver’s license (mandatory)"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-pants-white.svg",
-                "text" => "Long pants"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-shoe-white.svg",
-                "text" => "Closed shoes (mandatory, not sandals, or crocs)"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-cash-white.svg",
-                "text" => "Extra spending money"
-            ]
-        ],
-        "displayDuration" => "3.5 HOURS",
-        "displayNote" => [
-            "Physical valid driver’s license and closed shoes are mandatory. The minimum age to participate is 18 years old, and the maximum age is 65 years old. The maximum weight limit is 260 pounds or 117 kilograms. Alcohol will be distributed with careful tolerance to everyone. Guests must be ambulatory. Wheelchairs (collapsible or electric) are not permitted. For safety reasons, expectant mothers, guests with neck or back problems, recent surgeries, or patients with diabetes, epilepsy, blindness, asthma, or any other heart or respiratory conditions are not eligible to participate in this excursion.",
-            "Following the tour guide’s and staff’s instructions is mandatory. Guests may face cancellation without the possibility of a refund if they fail to adhere to the rules."
-        ]
-    ],
+    // [
+    //     "id" => "1",
+    //     "Tour" => "atv-expedition",
+    //     "tourName" => "ATV Expedition",
+    //     "title" => "AN ADRENALINE",
+    //     "subtitle" => "FUELED ESCAPE!",
+    //     "button" => "GET YOUR RUSH ON",
+    //     "content" => "Una increíble experiencia en ATV. Súbete a un camión safari al aire libre durante 25 minutos y disfruta de un recorrido panorámico a través del vibrante paisaje de Puerto Plata.",
+    //     "side" => "left-side",
+    //     "images" => [
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-main.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-main-two.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-main-three.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-main-four.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-main-five.webp"
+    //     ],
+    //     "galleryImages" => [
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-one.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-two.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-three.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-four.webp",
+    //         "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-five.webp"
+    //     ],
+    //     "shortIconSchedule" => "assets/images/discover-beyond/atv-exp/icon/icon-schedule-white.svg",
+    //     "shortIconIntensity" => "assets/images/discover-beyond/atv-exp/icon/icon-intensity-white.svg",
+    //     "shortIconCategory" => "assets/images/discover-beyond/atv-exp/icon/icon-buggy-white.svg",
+    //     "displayTitle" => [
+    //         "ATV EXPEDITION BACK COUNTRY",
+    //         "RIDING & BEACH"
+    //     ],
+    //     "displayContent" => [
+    //         "<b>Transfer to ATV hub=></b> Climb aboard an open-air safari truck for 25 minutes and enjoy a scenic journey through the vibrant landscape of Puerto Plata.",
+    //         "<b>ATV backcountry exploration=></b> After your guide’s safety briefing and driving test, put on your helmet and goggles, and hop into your automatic single or double ATV for an exciting one-hour ride.",
+    //         "Visit the picturesque rural area of Puerto Plata, drive through the lush rainforests, and prepare to get a little wet as you cross shallow creeks.",
+    //         "<b>Coffee & Chocolate break=></b> Get ready for a 15-minute cultural stop at a traditional Dominican country house. Freshly brewed coffee, rich chocolate, and authentic cigar tastings are included.",
+    //         "<b>Photo shooting & break at the beach=></b> Rest for 30 minutes at a local beach, where incredible views of the Atlantic shoreline and mountains beckon you to relax and unwind before heading back to port."
+    //     ],
+    //     "displayHighlights" => [
+    //         "Safari truck through Puerto Plata",
+    //         "ATV rainforest adventures",
+    //         "Delicious Dominican coffee & chocolate tasting",
+    //         "Sightseeing of the Atlantic shoreline",
+    //         "Beach break"
+    //     ],
+    //     "displayIncluded" => [
+    //         "Roundtrip transportation on open air safari truck",
+    //         "Bilingual certified tour guide",
+    //         "Single or double automatic ATV",
+    //         "Helmets & goggles",
+    //         "ATV through rural areas, backcountry private ranch, rainforest and stop at the beach",
+    //         "Coffee, chocolate and cigar tasting",
+    //         "One bottle of water"
+    //     ],
+    //     "displayWhatToBring" => [
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-license-white.svg",
+    //             "text" => "Physical valid driver’s license (mandatory)"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-pants-white.svg",
+    //             "text" => "Long pants"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-shoe-white.svg",
+    //             "text" => "Closed shoes (mandatory, not sandals, or crocs)"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/atv-exp/icon/icon-cash-white.svg",
+    //             "text" => "Extra spending money"
+    //         ]
+    //     ],
+    //     "displayDuration" => "3.5 HOURS",
+    //     "displayNote" => [
+    //         "Physical valid driver’s license and closed shoes are mandatory. The minimum age to participate is 18 years old, and the maximum age is 65 years old. The maximum weight limit is 260 pounds or 117 kilograms. Alcohol will be distributed with careful tolerance to everyone. Guests must be ambulatory. Wheelchairs (collapsible or electric) are not permitted. For safety reasons, expectant mothers, guests with neck or back problems, recent surgeries, or patients with diabetes, epilepsy, blindness, asthma, or any other heart or respiratory conditions are not eligible to participate in this excursion.",
+    //         "Following the tour guide’s and staff’s instructions is mandatory. Guests may face cancellation without the possibility of a refund if they fail to adhere to the rules."
+    //     ]
+    // ],
     [
         "id" => "2",
         "Tour" => "countryside",
@@ -658,94 +658,94 @@ $tours = [
             "Blind guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Guests must be at least 18 years old to consume alcohol. "
         ]
     ],
-    [
-        "id" => "8",
-        "Tour" => "Paseos a Caballo en Playa Dorada",
-        "tourName" => "Paseos a Caballo en Playa&nbsp;Dorada",
-        "title" => "DISFRUTA PLAYA DORADA",
-        "subtitle" => "A LOMOS DE UN&nbsp;CABALLO",
-        "button" => "¡PREPÁRATE!",
-        "content" => "Donde la aventura y la tranquilidad se unen. Recorre la playa con una impresionante vista del mar azul.",
-        "side" => "right-side",
-        "images" => [
-            "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
-        ],
-        "galleryImages" => [
-            "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
-            "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
-        ],
-        "shortIconSchedule" => "assets/images/discover-beyond/horse-riding/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/horse-riding/icon/level-4.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/horse-riding/icon/horse.svg",
-        "displayTitle" => [
-            "Paseos a Caballo en Playa Dorada"
-        ],
-        "displayContent" => [
-            "Pasea por una playa tropical, donde la aventura y la tranquilidad se unen. Siente la brisa del océano mientras tu caballo avanza por las suaves arenas de la renombrada Playa Dorada, sumergiéndote en una impresionante belleza natural.",
-            "<b>Viaje pintoresco al Rancho Montecarlo:</b> Súbete a un autobús y disfruta de vistas panorámicas de la vibrante costa de Puerto Plata y su encanto único. Después de un pintoresco trayecto de 20 minutos, llegarás al Rancho Montecarlo, donde el amable personal te recibirá cálidamente con una bebida refrescante.",
-            "<b>Aventura a Caballo:</b> Al llegar, tu guía te dará una charla de seguridad y te preparará antes de un viaje de 10 minutos en autobús hasta la zona de equitación. Los guías expertos te asignarán el caballo perfecto según tu nivel de experiencia. Una vez listo, disfrutarás de un paseo de 30 minutos por los exuberantes senderos de Bergantín. El camino te llevará a Playa Dorada, donde podrás cabalgar por las arenas doradas con impresionantes vistas al océano. Después, regresarás por los mismos senderos pintorescos en un recorrido de 30 minutos.",
-            "<b>Degustación de Mamajuana y regreso:</b> Regresa al Rancho Montecarlo para una degustación de Mamajuana, la icónica bebida dominicana elaborada con ron, vino tinto, miel y hierbas locales. Acompañada de frutas tropicales frescas, ofrece un equilibrio perfecto de sabores que destacan la tradición dominicana. Al finalizar, vuelve al transporte para regresar al barco."
-        ],
-        "displayHighlights" => [
-            "Botella de agua y bebida de bienvenida sin alcohol",
-            "Paseo a caballo por el campo y la playa",
-            "Fruta de temporada y un shot de Mamajuana"
-        ],
-        "displayIncluded" => [
-            "Transporte de ida y vuelta en vehículo con aire acondicionado",
-            "Tour guiado",
-            "Un caballo asignado por huésped",
-            "Equipo de seguridad",
-            "Botella de agua y bebida de bienvenida sin alcohol",
-            "Paseo a caballo por el campo y la playa",
-            "Frutas de temporada y un shot de Mamajuana"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
-                "text" => "Protector solar biodegradable"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
-                "text" => "Ropa cómoda"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
-                "text" => "Repelente de insectos"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
-                "text" => "Dinero extra"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
-                "text" => "Gorro o sombrero"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
-                "text" => "Traje de baño"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
-                "text" => "Toalla"
-            ]
-        ],
-        "displayDuration" => "4 HORAS",
-        "displayNote" => [
-            "Este tour es apto para toda la familia. La actividad da la bienvenida a jinetes de todos los niveles de experiencia, desde principiantes hasta expertos, con un requisito de edad mínima y máxima. Los menores deben estar acompañados por sus padres. La seguridad es una prioridad: es obligatorio el uso de cascos y zapatos cerrados, y siempre se deben seguir las instrucciones de los guías. Se recomienda ropa cómoda y adecuada para actividades al aire libre, así como pantalones largos. Los huéspedes deben tratar a los caballos con respeto. Correr con el caballo solo está permitido bajo la instrucción del guía. Los jinetes deben mantener una velocidad segura y una distancia adecuada entre los caballos, evitando maniobras bruscas o movimientos en zigzag. El incumplimiento de estas reglas puede resultar en la expulsión del tour sin derecho a reembolso.",
-            "<b>Requisitos y restricciones:</b> Los participantes no deben pesar más de 120 kilos (264 libras) y deben tener entre 8 y 65 años. Los huéspedes con discapacidad auditiva o sordera deben estar acompañados por un asistente, amigo o familiar. Por razones de seguridad, esta excursión no es apta para personas con problemas de espalda o cuello, cirugías recientes, asma, diabetes, epilepsia, embarazo, alergias a los animales, ceguera o cualquier tipo de afección cardíaca o respiratoria. Los participantes deben ser ambulantes y capaces de caminar largas distancias. Los huéspedes que utilicen sillas de ruedas, scooters o ayudas de movilidad eléctrica no son elegibles para participar."
-        ]
-    ]
+    // [
+    //     "id" => "8",
+    //     "Tour" => "Paseos a Caballo en Playa Dorada",
+    //     "tourName" => "Paseos a Caballo en Playa&nbsp;Dorada",
+    //     "title" => "DISFRUTA PLAYA DORADA",
+    //     "subtitle" => "A LOMOS DE UN&nbsp;CABALLO",
+    //     "button" => "¡PREPÁRATE!",
+    //     "content" => "Donde la aventura y la tranquilidad se unen. Recorre la playa con una impresionante vista del mar azul.",
+    //     "side" => "right-side",
+    //     "images" => [
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
+    //     ],
+    //     "galleryImages" => [
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
+    //         "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
+    //     ],
+    //     "shortIconSchedule" => "assets/images/discover-beyond/horse-riding/icon/icon-schedule-white.svg",
+    //     "shortIconIntensity" => "assets/images/discover-beyond/horse-riding/icon/level-4.svg",
+    //     "shortIconCategory" => "assets/images/discover-beyond/horse-riding/icon/horse.svg",
+    //     "displayTitle" => [
+    //         "Paseos a Caballo en Playa Dorada"
+    //     ],
+    //     "displayContent" => [
+    //         "Pasea por una playa tropical, donde la aventura y la tranquilidad se unen. Siente la brisa del océano mientras tu caballo avanza por las suaves arenas de la renombrada Playa Dorada, sumergiéndote en una impresionante belleza natural.",
+    //         "<b>Viaje pintoresco al Rancho Montecarlo:</b> Súbete a un autobús y disfruta de vistas panorámicas de la vibrante costa de Puerto Plata y su encanto único. Después de un pintoresco trayecto de 20 minutos, llegarás al Rancho Montecarlo, donde el amable personal te recibirá cálidamente con una bebida refrescante.",
+    //         "<b>Aventura a Caballo:</b> Al llegar, tu guía te dará una charla de seguridad y te preparará antes de un viaje de 10 minutos en autobús hasta la zona de equitación. Los guías expertos te asignarán el caballo perfecto según tu nivel de experiencia. Una vez listo, disfrutarás de un paseo de 30 minutos por los exuberantes senderos de Bergantín. El camino te llevará a Playa Dorada, donde podrás cabalgar por las arenas doradas con impresionantes vistas al océano. Después, regresarás por los mismos senderos pintorescos en un recorrido de 30 minutos.",
+    //         "<b>Degustación de Mamajuana y regreso:</b> Regresa al Rancho Montecarlo para una degustación de Mamajuana, la icónica bebida dominicana elaborada con ron, vino tinto, miel y hierbas locales. Acompañada de frutas tropicales frescas, ofrece un equilibrio perfecto de sabores que destacan la tradición dominicana. Al finalizar, vuelve al transporte para regresar al barco."
+    //     ],
+    //     "displayHighlights" => [
+    //         "Botella de agua y bebida de bienvenida sin alcohol",
+    //         "Paseo a caballo por el campo y la playa",
+    //         "Fruta de temporada y un shot de Mamajuana"
+    //     ],
+    //     "displayIncluded" => [
+    //         "Transporte de ida y vuelta en vehículo con aire acondicionado",
+    //         "Tour guiado",
+    //         "Un caballo asignado por huésped",
+    //         "Equipo de seguridad",
+    //         "Botella de agua y bebida de bienvenida sin alcohol",
+    //         "Paseo a caballo por el campo y la playa",
+    //         "Frutas de temporada y un shot de Mamajuana"
+    //     ],
+    //     "displayWhatToBring" => [
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
+    //             "text" => "Protector solar biodegradable"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
+    //             "text" => "Ropa cómoda"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
+    //             "text" => "Repelente de insectos"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
+    //             "text" => "Dinero extra"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
+    //             "text" => "Gorro o sombrero"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
+    //             "text" => "Traje de baño"
+    //         ],
+    //         [
+    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
+    //             "text" => "Toalla"
+    //         ]
+    //     ],
+    //     "displayDuration" => "4 HORAS",
+    //     "displayNote" => [
+    //         "Este tour es apto para toda la familia. La actividad da la bienvenida a jinetes de todos los niveles de experiencia, desde principiantes hasta expertos, con un requisito de edad mínima y máxima. Los menores deben estar acompañados por sus padres. La seguridad es una prioridad: es obligatorio el uso de cascos y zapatos cerrados, y siempre se deben seguir las instrucciones de los guías. Se recomienda ropa cómoda y adecuada para actividades al aire libre, así como pantalones largos. Los huéspedes deben tratar a los caballos con respeto. Correr con el caballo solo está permitido bajo la instrucción del guía. Los jinetes deben mantener una velocidad segura y una distancia adecuada entre los caballos, evitando maniobras bruscas o movimientos en zigzag. El incumplimiento de estas reglas puede resultar en la expulsión del tour sin derecho a reembolso.",
+    //         "<b>Requisitos y restricciones:</b> Los participantes no deben pesar más de 120 kilos (264 libras) y deben tener entre 8 y 65 años. Los huéspedes con discapacidad auditiva o sordera deben estar acompañados por un asistente, amigo o familiar. Por razones de seguridad, esta excursión no es apta para personas con problemas de espalda o cuello, cirugías recientes, asma, diabetes, epilepsia, embarazo, alergias a los animales, ceguera o cualquier tipo de afección cardíaca o respiratoria. Los participantes deben ser ambulantes y capaces de caminar largas distancias. Los huéspedes que utilicen sillas de ruedas, scooters o ayudas de movilidad eléctrica no son elegibles para participar."
+    //     ]
+    // ]
     
 ];

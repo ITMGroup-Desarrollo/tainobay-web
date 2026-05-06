@@ -1,58 +1,53 @@
 {
     "carouselSections": [
         {
-            
             "id": "1",
-            "Tour": "atv-expedition",
-            "tourName": "ATV Expedition",
+            "Tour": "utv-expedition",
+            "tourName": "UTV Expedition",
             "title": "AN ADRENALINE",
             "subtitle": "FUELED ESCAPE!",
             "button": "Get&nbsp;your rush&nbsp;on",
-            "content": "The ultimate ATV experience. Climb Aboard an open-air safari truck for 25 minutes and enjoy a scenic journey through vibrant landscape of Puerto Plata.",
+            "content": "Get ready for an exhilarating ride through rugged jungle trails, river crossings, and backroads as you make your way to a refreshing beach escape.",
             "side": "left-side",
             "images": [
-                "assets/images/discover-beyond/atv-exp/atv-expedition-main.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-main-two.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-main-three.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-main-four.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-main-five.webp"
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-4.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-3.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-2.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-5.webp"
             ],
             "galleryImages": [
-                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-one.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-two.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-three.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-four.webp",
-                "assets/images/discover-beyond/atv-exp/atv-expedition-gallery-five.webp"
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-2.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-3.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-4.webp"
             ],
-            "shortIconSchedule": "assets/images/discover-beyond/atv-exp/icon/icon-schedule-white.svg",
-            "shortIconIntensity": "assets/images/discover-beyond/atv-exp/icon/icon-intensity-white.svg",
-            "shortIconCategory": "assets/images/discover-beyond/atv-exp/icon/icon-buggy-white.svg",
+            "shortIconSchedule": "assets/images/discover-beyond/utv-exp/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/utv-exp/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/utv-exp/icon/icon-buggy-white.svg",
             "displayTitle": [
-                "ATV EXPEDITION BACK COUNTRY",
+                "UTV EXPEDITION BACK COUNTRY",
                 "RIDING & BEACH"
             ],
             "displayContent": [
-                "<b>Transfer to ATV hub:</b> Climb aboard an open-air safari truck for 25 minutes and enjoy a scenic journey through the vibrant landscape of Puerto Plata.",
-                "<b>ATV backcountry exploration:</b> After your guide’s safety briefing and driving test, put on your helmet and goggles, and hop into your automatic single or double ATV for an exciting one-hour ride.",
+                "<b>Transfer to UTV hub:</b> Climb aboard an open-air safari truck for 25 minutes and enjoy a scenic journey through the vibrant landscape of Puerto Plata.",
+                "<b>UTV backcountry exploration:</b> After your guide’s safety briefing and driving test, put on your helmet and goggles, and hop into your automatic single or double UTV for an exciting one-hour ride.",
                 "Visit the picturesque rural area of Puerto Plata, drive through the lush rainforests, and prepare to get a little wet as you cross shallow creeks.",
                 "<b>Coffee & Chocolate break:</b> Get ready for a 15-minute cultural stop at a traditional Dominican country house. Freshly brewed coffee, rich chocolate, and authentic cigar tastings are included.",
                 "<b>Photo shooting & break at the beach:</b> Rest for 30 minutes at a local beach, where incredible views of the Atlantic shoreline and mountains beckon you to relax and unwind before heading back to port."
             ],
             "displayHighlights": [
                 "Safari truck through Puerto Plata",
-                "ATV rainforest adventures",
+                "UTV rainforest adventures",
                 "Delicious Dominican coffee & chocolate tasting",
                 "Sightseeing of the Atlantic shoreline",
                 "Beach break"
             ],
             "displayIncluded": [
-                "Roundtrip transportation on open air safari truck",
-                "Bilingual certified tour guide",
-                "Single or double automatic ATV",
-                "Helmets & goggles",
-                "ATV through rural areas, backcountry private ranch, rainforest and stop at the beach",
-                "Coffee, chocolate and cigar tasting",
-                "One bottle of water"
+                "Tour guide",
+                "Safety equipment",
+                "Guided ride through rural areas, rainforest and beach",
+                "Coffee, chocolate and cigar tasting"
             ],
             "displayWhatToBring": [
                 {
@@ -581,96 +576,6 @@
                 "This is a non-guided tour. 20 min away from the port. The hotel is equipped with ramps which will allow guests with limited mobility to reach most of the property's areas.  This tour is appropriate for guests who can walk approximately 100 meters but travel with a folding manual wheelchair folding lightweight scooter/electric wheelchair, walker, and/or cane. An adult must accompany children and teenagers under 18 years old. Alcohol will be distributed with a watchful tolerance to everyone.",
                 "Blind guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Guests must be at least 18 years old to consume alcohol. "
             ]
-        },
-        {
-            "id": "8",
-            "Tour": "Horseback Riding",
-            "tourName": "Horseback Riding",
-            "title": "ENJOY PLAYA DORADA ",
-            "subtitle": "FROM A DIFFERENT POV.",
-            "button": "Get ready!",
-            "content": "A relaxing ride with a stunning view. This experience will take you through the golden sand and blue Playa Dorada sea, making it an experience to remember forever.",
-            "side": "right-side",
-            "images": [
-                "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
-            ],
-            "galleryImages": [
-                "assets/images/discover-beyond/horse-riding/horse-riding-1.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-2.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-3.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-4.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
-                "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
-            ],
-            "shortIconSchedule": "assets/images/discover-beyond/horse-riding/icon/icon-schedule-white.svg",
-            "shortIconIntensity": "assets/images/discover-beyond/horse-riding/icon/level-4.svg",
-            "shortIconCategory": "assets/images/discover-beyond/horse-riding/icon/horse.svg",
-            "displayTitle": [
-                "Horseback Riding"
-            ],
-            "displayContent": [
-                "Ride along a tropical beach, where adventure meets tranquility. Feel the ocean breeze as your horse strides through the soft sands of the renowned Playa Dorada, immersing you in stunning natural beauty.",
-                "Scenic drive to Montecarlo Ranch: Hop on a bus and take in panoramic views of Puerto Plata's vibrant coastline and its unique charm. After a scenic 20-minute drive, arrive at Montecarlo Ranch, to be warmly welcomed by the friendly staff with a refreshing drink.",
-                "Horseback Riding Adventure: Upon arrival, your guide will provide a safety briefing, gearing you up before a 10-minute bus ride to the riding area. Expert guides will match you with the perfect horse based on your level of experience. Once ready, enjoy a 30-minute ride through lush Bergantin trails. The trail leads to Playa Dorada, where you can ride along golden sands with stunning ocean views. After, return along the same scenic trails for another 30-minute trek.",
-                "Mamajuana tasting and transfer back: Return to Montecarlo Ranch for a Mamajuana tasting, the iconic Dominican drink made with rum, red wine, honey, and local herbs. Paired with fresh tropical fruit, it offers a perfect balance of flavors, showcasing Dominican tradition. Once time is up, ride back in the same transportation back to the ship."
-            ],
-            "displayHighlights": [
-                "Bottle of water and non-alcoholic welcome drink",
-                "Horseback riding through countryside and beach",
-                "Seasonal fruit and Mamajuana shot"
-            ],
-            "displayIncluded": [
-                "Round-trip transportation in A/C vehicle",
-                "Guided tour",
-                "One horse assigned per guest",
-                "Safety equipment",
-                "Bottle of water and non-alcoholic welcome drink",
-                "Horseback riding through countryside and beach",
-                "Seasonal fruit and Mamajuana shot"
-            ],
-            "displayWhatToBring": [
-                {
-                    "iconPath": "assets/images/discover-beyond/horse-riding/icon/icon-shoe-white.svg",
-                    "text": "Closed shoes (MANDATORY)"
-                },
-                {
-                    "iconPath": "assets/images/discover-beyond/horse-riding/icon/icon-pants-white.svg",
-                    "text": "long pants"
-                },
-                {
-                    "iconPath": "assets/images/discover-beyond/horse-riding/icon/icon-comfty-clothes-white.svg",
-                    "text": "Comfy clothing"
-                },
-                {
-                    "iconPath": "assets/images/discover-beyond/horse-riding/icon/icon-hat-white.svg",
-                    "text": "Hat and sunglasses"
-                },
-                {
-                    "iconPath": "assets/images/discover-beyond/horse-riding/icon/camara.svg",
-                    "text": "Camera or cellphone"
-                },
-                {
-                    "iconPath": "assets/images/discover-beyond/horse-riding/icon/icon-bug-repelent-white.svg",
-                    "text": "Bug repellent"
-                },
-                {
-                    "iconPath": "assets/images/discover-beyond/horse-riding/icon/icon-money-white.svg",
-                    "text": "Extra spending money"
-                }
-            ],
-            "displayDuration": "4 HOURS",
-            "displayNote": [
-                "This tour is family-friendly. The activity welcomes riders of all experience levels, from beginners to experts, with a minimum and maximum age requirement. Minors must be accompanied by parents. Safety is a priority: helmets and closed-toe shoes are mandatory, and guides’ instructions must always be followed. Comfortable, outdoor-appropriate clothing and long pants are recommended. Guests must treat the horses with respect. Running the horse is only allowed under the guide’s instruction. Riders should maintain a safe speed and distance between horses, avoiding abrupt maneuvers or zigzags. Failure to comply with these rules may result in removal from the tour without a refund.",
-                "<b>Requirements and restrictions:</b> Participants must weigh no more than 120 kilos (264 pounds) and be between 8 and 65 years old. Hard of hearing or hearing-impaired guests must be accompanied by an assistant, friend, or family member. For safety reasons, this excursion is not suitable for guests with back or neck problems, recent surgeries, asthma, diabetes, epilepsy, pregnancy, allergies to animals, blindness, or any kind of heart or respiratory conditions. Guests must be ambulatory and able to walk long distances. Guests using wheelchairs, scooters, or electric mobility aids are not eligible to participate."
-            ]
-
         }
     ]
 }
