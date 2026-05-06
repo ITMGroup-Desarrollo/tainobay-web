@@ -181,76 +181,6 @@ $tours = [
             "assets/images/discover-beyond/country/countryside-gallery-three.webp",
             "assets/images/discover-beyond/country/countryside-gallery-four.webp",
             "assets/images/discover-beyond/country/countryside-gallery-five.webp"
-        ],
-        "shortIconSchedule" => "assets/images/discover-beyond/country/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/country/icon/icon-intensity-white.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/country/icon/icon-buggy-white.svg",
-        "displayTitle" => [
-            "COUNTRYSIDE & HIDDEN",
-            "BEACH BUGGY ADVENTURE"
-        ],
-        "displayContent" => [
-            "Join us in this fun expedition through Puerto Plata! ",
-            "Our Buggy Adventure experience is perfect for people who love living life to its fullest! This tour will take you through plantations, mangrove routes, and rural areas like San Piñé, Ruta de Tebaida, and Bulula.",
-            "On your first stop at Los Cacaos Road, you'll have a taste of the delicious Dominican coffee. Later, we'll head to Muñoz countryside, and go off road until we reach a hidden beach in Playa Dorada. After a 30-minute refreshing break, a Mamajuana shot will be waiting for you back in the station. Fall in love with the landscapes, and don't forget to take pictures of this adventure!"
-        ],
-        "displayHighlights" => [
-            "Buggy ride through San Piñé, Ruta de Tebaida and Bulula",
-            "Dominican coffee tasting",
-            "Visit to Playa Dorada ",
-            "Break with Mamajuana shot "
-        ],
-        "displayIncluded" => [
-            "Roundtrip transportation on open safari truck",
-            "Two-seat buggy",
-            "Certified bilingual guide",
-            "Welcome non-alcoholic drink",
-            "Fruit & coffee break",
-            "Mamajuana shot ",
-            "Lockers & Helmet"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-license-white.svg",
-                "text" => "Physical driver’s license (mandatory)"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
-                "text" => "Comfy clothing"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
-                "text" => "Bug repellent"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-money-white.svg",
-                "text" => "Extra spending money"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-sunglases-white.svg",
-                "text" => "Sunglasses"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
-                "text" => "Swimwear"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
-                "text" => "Hat"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
-                "text" => "Biodegradable sunscreen"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-shoe-white.svg",
-                "text" => "Anti-slip closed toe shoes"
-            ]
-        ],
-        "displayDuration" => "3.5 HOURS",
-        "displayNote" => [
-            "Minimum age to drive is 18 years old. Minimum age to participate as a passenger is 8 years old. It is important to always follow the guides' instructions. Always wear a seat belt, helmet, and glasses. Maintain recommended speed. Keep distance between buggies. ",
-            "Avoid maneuvers and zigzags. In case of not respecting the rules, you will be asked to leave the tour without a refund."
         ]
     ],
     [
@@ -275,62 +205,6 @@ $tours = [
             "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-three.webp",
             "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-four.webp",
             "assets/images/discover-beyond/walk-through-puerto-plata/a-walk-through-puerto-plata-gallery-five.webp"
-        ],
-        "shortIconSchedule" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-intensity-white.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-explorer-white.svg",
-        "displayTitle" => [
-            "A WALK-THROUGH",
-            "PUERTO PLATA"
-        ],
-        "displayContent" => [
-            "On your way you will discover these amazing spots=>",
-            "<b>Umbrella Street</b>=> A fun street with plenty of activities. Enjoy the Dominican flavor of artisanal ice cream. Enjoy a coffee & chocolate tasting in the Coffee Corner. Visit the Cigar Factory, feel the music with folkloric dances, and try Mamajuana at BAR 1920.",
-            "<b>Doña Blanca’s Alley</b>=> This spot honors Doña Blanca Franceschini, the founder of the first hotel in Puerto Plata.",
-            "<b>Central Park</b>=> The perfect spot to learn more about Dominican Culture. View the City Hall, the Catholic Church, and learn about important holidays.",
-            "<b>Amber Museum</b>=> Historical review & exhibition of the history of amber.",
-            "<b>San Felipe Fortress</b>=> Built by the Spaniards to protect the country from corsairs, it is one of the most important colonial military structures."
-        ],
-        "displayHighlights" => [
-            "Umbrella Street walk",
-            "Doña Blanca’s Alley visit",
-            "Central Park walk",
-            "Historical exhibition at Amber Museum",
-            "Entrance to San Felipe Fortress"
-        ],
-        "displayIncluded" => [
-            "Roundtrip transportation",
-            "Bilingual certified guide",
-            "Walking guided tour",
-            "Access to all 5 interest spots",
-            "1 bottle of water"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-comfty-clothes-white.svg",
-                "text" => "Comfy clothing"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-sunprotector-white.svg",
-                "text" => "Biodegradable sunscreen"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-bugrepelent-white.svg",
-                "text" => "Bug repellent"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-money-white.svg",
-                "text" => "Extra spending money"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/walk-through-puerto-plata/icon/icon-hat-white.svg",
-                "text" => "Hat"
-            ]
-        ],
-        "displayDuration" => "3 HOURS",
-        "displayNote" => [
-            "All tour participants must return to port with the group guide at the end of the activities. This tour is appropriate for guests who can walk approximately 700 meters. Wheelchairs, scooters, walkers, and/or canes are not allowed on this tour.",
-            "Blind guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. An adult must accompany children and teenagers under 18 years old. Alcohol will be distributed with a watchful tolerance to everyone."
         ]
     ],
     [
@@ -355,66 +229,6 @@ $tours = [
             "assets/images/discover-beyond/damajagua/damajagua-gallery-three.webp",
             "assets/images/discover-beyond/damajagua/damajagua-gallery-four.webp",
             "assets/images/discover-beyond/damajagua/damajagua-gallery-five.webp"
-        ],
-        "shortIconSchedule" => "assets/images/discover-beyond/damajagua/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/damajagua/icon/icon-intensity-white.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/damajagua/icon/icon-pine-white.svg",
-        "displayTitle" => [
-            "DAMAJAGUA",
-            "& SCENIC DRIVE "
-        ],
-        "displayContent" => [
-            "The perfect combo to enjoy the beauty of Puerto Plata! Enjoy the picturesque city & discover the secluded Damajagua Waterfalls in the Dominican Republic’s mountains.",
-            "First, you’ll have the opportunity to capture the essence of Puerto Plata and its Victorian history during a scenic drive through the Central Park area.",
-            "After that, your guide will take you to the beautiful natural landscape during a 25-minute hike to two pristine falls, cascading over limestone. Jump, swim & save great memories in this Dominican Wonder!"
-        ],
-        "displayHighlights" => [
-            "Visit to Damajagua Waterfalls",
-            "Scenic drive through downtown Puerto Plata",
-            "Swim in the waterfall"
-        ],
-        "displayIncluded" => [
-            "Roundtrip transportation",
-            "Bilingual certified guide during scenic city tour",
-            "Bilingual certified guide at Damajagua Falls",
-            "Safety equipment at Damajagua’s camp base",
-            "Access to a natural pool and 2 falls",
-            "1 bottle of water"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
-                "text" => "Swimwear"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
-                "text" => "Comfy clothing"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-shoe-white.svg",
-                "text" => "Anti-slip closed toe shoes"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
-                "text" => "Bug repellent"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
-                "text" => "Biodegradable sunscreen"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-money-white.svg",
-                "text" => "Extra spending money"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
-                "text" => "Hat"
-            ]
-        ],
-        "displayDuration" => "3.5 HOURS",
-        "displayNote" => [
-            "Lockers and water shoes are available for rent at extra cost. The minimum age to participate is 8 years old. Guests with claustrophobia, limited sight, and/or impaired hearing must be accompanied by an assistant or friend or a family member.",
-            "All tour participants must return to the port with the group guide at the end of the activities. Guests must be in good physical condition and be able to walk long distances. Guests must wear/use safety equipment during the water portion. Watch your step. People with recent surgeries, and back problems, to mention some, are not recommended to participate. Mobility devices, such as wheelchairs, electric scooters, walkers, and/or canes are not allowed on this tour."
         ]
     ],
     [
@@ -439,54 +253,6 @@ $tours = [
             "assets/images/discover-beyond/monkey-island/monkey-island-gallery-three.webp",
             "assets/images/discover-beyond/monkey-island/monkey-island-gallery-four.webp",
             "assets/images/discover-beyond/monkey-island/monkey-island-gallery-five.webp"
-        ],
-        "shortIconSchedule" => "assets/images/discover-beyond/monkey-island/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/monkey-island/icon/icon-intensity-white.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/monkey-island/icon/icon-monkey-white.svg",
-        "displayTitle" => [
-            "MONKEY ISLAND"
-        ],
-        "displayContent" => [
-            "This 30-minute experience allows you to enjoy our friendly squirrel monkeys at Taino Bay Port.",
-            "Discover their habitat and feel free to pet, hold, pose and learn about our adorable friends. At the end of the tour, visit our photo booth to choose your favorite shots."
-        ],
-        "displayHighlights" => [
-            "Brief about interaction",
-            "Pet and hold squirrel monkeys",
-            "Take pictures"
-        ],
-        "displayIncluded" => [
-            "Access to a 30-minute interaction with squirrel monkeys",
-            "Certified bilingual guide",
-            "Access to port facilities",
-            "Access to shopping area",
-            "<b>Photo package at extra cost</b>"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
-                "text" => "Biodegradable sunscreen"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
-                "text" => "Comfy clothing"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
-                "text" => "Bug repellent"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-money-white.svg",
-                "text" => "Extra spending money"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
-                "text" => "Hat"
-            ]
-        ],
-        "displayDuration" => "30 MINUTES",
-        "displayNote" => [
-            "Bling guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Avoid wearing flashy or dangling accessories during the activity. "
         ]
     ],
     [
@@ -511,69 +277,6 @@ $tours = [
             "assets/images/discover-beyond/old-town/old-town-gallery-three.webp",
             "assets/images/discover-beyond/old-town/old-town-gallery-four.webp",
             "assets/images/discover-beyond/old-town/old-town-gallery-five.webp"
-        ],
-        "shortIconSchedule" => "assets/images/discover-beyond/old-town/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/old-town/icon/icon-intensity-white.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/old-town/icon/icon-explorer-white.svg",
-        "displayTitle" => [
-            "OLD TOWN",
-            "& BEACH"
-        ],
-        "displayContent" => [
-            "<b>Central Park</b>=> The perfect spot to fall in love with Dominican Culture. View the City Hall, the Catholic Church and learn about important holidays.",
-            "<b>Doña Blanca´s Alley</b>=> This boardwalk takes you to the historic Victorian Houses of Puerto Plata and a beautiful hot pink location!",
-            "<b>Umbrella Street</b>=> A fun street with plenty of activities. From artisanal ice cream to coffee & chocolate tasting in the Coffee Corner, enjoy the Dominican flavor. ",
-            "Enjoy the rest of the experience at the Beach Club, where you can work on that perfect Dominican tan and have a fresh swim, or...relax while sipping your favorite cocktail!"
-        ],
-        "displayHighlights" => [
-            "Learn about Dominican culture at Puerto Plata’s Central Park",
-            "Visit the most famous Pink alley in Dominican Republic",
-            "Take pictures at Umbrella Street",
-            "Have a drink and relax at the beach"
-        ],
-        "displayIncluded" => [
-            "Roundtrip transportation",
-            "Certified bilingual guide",
-            "Walking guided tour",
-            "Access to all interest spots",
-            "1 bottle of water",
-            "1 welcome drink at the club",
-            "Lounge chairs and parasol per couple",
-            "<b>Photo package at extra cost</b>"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
-                "text" => "Biodegradable sunscreen"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
-                "text" => "Comfy clothing"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
-                "text" => "Bug repellent"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
-                "text" => "Extra spending money"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
-                "text" => "Hat"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
-                "text" => "Swimwear"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
-                "text" => "Towel"
-            ]
-        ],
-        "displayDuration" => "3 HOURS",
-        "displayNote" => [
-            "All tour participants must return to port with the group guide at the end of the activities. Wheelchairs, scooters, walkers, and/or canes are not allowed on this tour. Bling guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member."
         ]
     ],
     [
@@ -599,65 +302,33 @@ $tours = [
             "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-four.webp",
             "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-five.webp"
         ],
-        "shortIconSchedule" => "assets/images/discover-beyond/playa-dorada/icon/icon-schedule-white.svg",
-        "shortIconIntensity" => "assets/images/discover-beyond/playa-dorada/icon/icon-intensity-white.svg",
-        "shortIconCategory" => "assets/images/discover-beyond/playa-dorada/icon/icon-palm-white.svg",
-        "displayTitle" => [
-            "PLAYA DORADA"
-        ],
-        "displayContent" => [
-            "Playa Dorada is a paradise with approximately 2 miles of white sand and crystal-clear water... <br>A must on your next visit!",
-            "Gran Ventana Beach Resort is in the center of Playa Dorada. Visit this exclusive getaway with a breathtaking beach area. The resort includes access to the pool, a private area for cruise passengers, a cocktail bar, lounge chairs, and non-motorized activities. The hotel’s buffet and snacks are included."
-        ],
-        "displayHighlights" => [
-            "Relax at the beach",
-            "Have your favorite refreshing drink",
-            "Enjoy the hotel facilities"
-        ],
-        "displayIncluded" => [
-            "Roundtrip transportation",
-            "Access to Gran Ventana hotel & resort",
-            "Beach & hotel facilities (swim in pool or beach, lounge chairs, showers, restrooms, shaded area)",
-            "Open bar at the beach area (selected drinks)",
-            "Snacks and hotel buffet",
-            "Non-motorized water activities"
-        ],
-        "displayWhatToBring" => [
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
-                "text" => "Biodegradable sunscreen"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
-                "text" => "Comfy clothing"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
-                "text" => "Bug repellent"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
-                "text" => "Extra spending money"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
-                "text" => "Hat"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
-                "text" => "Swimwear"
-            ],
-            [
-                "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
-                "text" => "Towel"
-            ]
-        ],
-        "displayDuration" => "4 HOURS",
-        "displayNote" => [
-            "This is a non-guided tour. 20 min away from the port. The hotel is equipped with ramps which will allow guests with limited mobility to reach most of the property's areas.  This tour is appropriate for guests who can walk approximately 100 meters but travel with a folding manual wheelchair folding lightweight scooter/electric wheelchair, walker, and/or cane. An adult must accompany children and teenagers under 18 years old. Alcohol will be distributed with a watchful tolerance to everyone.",
-            "Blind guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Guests must be at least 18 years old to consume alcohol. "
-        ]
+
     ],
+    [
+        "id" => "8",
+        "Tour" => "port-pass",
+        "tourName" => "Taino Bay Port Pass",
+        "title" => "RELAX, EXPLORA",
+        "subtitle" => "¡Y DISFRUTA EL PUERTO!",
+        "button" => "¡Tu día perfecto en tierra!",
+        "content" => "Si deseas relajarte al llegar y disfrutar del puerto, entonces nuestro Taino Bay Port Pass está hecho para ti. Disfruta de un masaje relajante con vista a la bahía, descubre una experiencia inmersiva y divertida inspirada en leyendas y visita nuestro aviario, con alegres aves del Caribe.",
+        "side" => "right-side",
+        "images" => [
+            "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_6_2_11zon.webp",
+            "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_23_6_11zon.webp"
+        ],
+        "galleryImages" => [
+            "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
+        ],
+    ],
+
     // [
     //     "id" => "8",
     //     "Tour" => "Paseos a Caballo en Playa Dorada",
@@ -684,68 +355,7 @@ $tours = [
     //         "assets/images/discover-beyond/horse-riding/horse-riding-5.webp",
     //         "assets/images/discover-beyond/horse-riding/horse-riding-6.webp",
     //         "assets/images/discover-beyond/horse-riding/horse-riding-7.webp"
-    //     ],
-    //     "shortIconSchedule" => "assets/images/discover-beyond/horse-riding/icon/icon-schedule-white.svg",
-    //     "shortIconIntensity" => "assets/images/discover-beyond/horse-riding/icon/level-4.svg",
-    //     "shortIconCategory" => "assets/images/discover-beyond/horse-riding/icon/horse.svg",
-    //     "displayTitle" => [
-    //         "Paseos a Caballo en Playa Dorada"
-    //     ],
-    //     "displayContent" => [
-    //         "Pasea por una playa tropical, donde la aventura y la tranquilidad se unen. Siente la brisa del océano mientras tu caballo avanza por las suaves arenas de la renombrada Playa Dorada, sumergiéndote en una impresionante belleza natural.",
-    //         "<b>Viaje pintoresco al Rancho Montecarlo:</b> Súbete a un autobús y disfruta de vistas panorámicas de la vibrante costa de Puerto Plata y su encanto único. Después de un pintoresco trayecto de 20 minutos, llegarás al Rancho Montecarlo, donde el amable personal te recibirá cálidamente con una bebida refrescante.",
-    //         "<b>Aventura a Caballo:</b> Al llegar, tu guía te dará una charla de seguridad y te preparará antes de un viaje de 10 minutos en autobús hasta la zona de equitación. Los guías expertos te asignarán el caballo perfecto según tu nivel de experiencia. Una vez listo, disfrutarás de un paseo de 30 minutos por los exuberantes senderos de Bergantín. El camino te llevará a Playa Dorada, donde podrás cabalgar por las arenas doradas con impresionantes vistas al océano. Después, regresarás por los mismos senderos pintorescos en un recorrido de 30 minutos.",
-    //         "<b>Degustación de Mamajuana y regreso:</b> Regresa al Rancho Montecarlo para una degustación de Mamajuana, la icónica bebida dominicana elaborada con ron, vino tinto, miel y hierbas locales. Acompañada de frutas tropicales frescas, ofrece un equilibrio perfecto de sabores que destacan la tradición dominicana. Al finalizar, vuelve al transporte para regresar al barco."
-    //     ],
-    //     "displayHighlights" => [
-    //         "Botella de agua y bebida de bienvenida sin alcohol",
-    //         "Paseo a caballo por el campo y la playa",
-    //         "Fruta de temporada y un shot de Mamajuana"
-    //     ],
-    //     "displayIncluded" => [
-    //         "Transporte de ida y vuelta en vehículo con aire acondicionado",
-    //         "Tour guiado",
-    //         "Un caballo asignado por huésped",
-    //         "Equipo de seguridad",
-    //         "Botella de agua y bebida de bienvenida sin alcohol",
-    //         "Paseo a caballo por el campo y la playa",
-    //         "Frutas de temporada y un shot de Mamajuana"
-    //     ],
-    //     "displayWhatToBring" => [
-    //         [
-    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-sunprotector-white.svg",
-    //             "text" => "Protector solar biodegradable"
-    //         ],
-    //         [
-    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-comfty-clothes-white.svg",
-    //             "text" => "Ropa cómoda"
-    //         ],
-    //         [
-    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-bug-repelent-white.svg",
-    //             "text" => "Repelente de insectos"
-    //         ],
-    //         [
-    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-money-white.svg",
-    //             "text" => "Dinero extra"
-    //         ],
-    //         [
-    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-hat-white.svg",
-    //             "text" => "Gorro o sombrero"
-    //         ],
-    //         [
-    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-swimsuit-white.svg",
-    //             "text" => "Traje de baño"
-    //         ],
-    //         [
-    //             "iconPath" => "assets/images/discover-beyond/old-town/icon/icon-towel-white.svg",
-    //             "text" => "Toalla"
-    //         ]
-    //     ],
-    //     "displayDuration" => "4 HORAS",
-    //     "displayNote" => [
-    //         "Este tour es apto para toda la familia. La actividad da la bienvenida a jinetes de todos los niveles de experiencia, desde principiantes hasta expertos, con un requisito de edad mínima y máxima. Los menores deben estar acompañados por sus padres. La seguridad es una prioridad: es obligatorio el uso de cascos y zapatos cerrados, y siempre se deben seguir las instrucciones de los guías. Se recomienda ropa cómoda y adecuada para actividades al aire libre, así como pantalones largos. Los huéspedes deben tratar a los caballos con respeto. Correr con el caballo solo está permitido bajo la instrucción del guía. Los jinetes deben mantener una velocidad segura y una distancia adecuada entre los caballos, evitando maniobras bruscas o movimientos en zigzag. El incumplimiento de estas reglas puede resultar en la expulsión del tour sin derecho a reembolso.",
-    //         "<b>Requisitos y restricciones:</b> Los participantes no deben pesar más de 120 kilos (264 libras) y deben tener entre 8 y 65 años. Los huéspedes con discapacidad auditiva o sordera deben estar acompañados por un asistente, amigo o familiar. Por razones de seguridad, esta excursión no es apta para personas con problemas de espalda o cuello, cirugías recientes, asma, diabetes, epilepsia, embarazo, alergias a los animales, ceguera o cualquier tipo de afección cardíaca o respiratoria. Los participantes deben ser ambulantes y capaces de caminar largas distancias. Los huéspedes que utilicen sillas de ruedas, scooters o ayudas de movilidad eléctrica no son elegibles para participar."
     //     ]
     // ]
-    
+
 ];

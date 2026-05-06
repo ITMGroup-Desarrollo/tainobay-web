@@ -576,6 +576,75 @@
                 "This is a non-guided tour. 20 min away from the port. The hotel is equipped with ramps which will allow guests with limited mobility to reach most of the property's areas.  This tour is appropriate for guests who can walk approximately 100 meters but travel with a folding manual wheelchair folding lightweight scooter/electric wheelchair, walker, and/or cane. An adult must accompany children and teenagers under 18 years old. Alcohol will be distributed with a watchful tolerance to everyone.",
                 "Blind guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Guests must be at least 18 years old to consume alcohol. "
             ]
+        },
+        {
+            "id": "8",
+            "Tour": "port-pass",
+            "tourName": "Taino Bay Port Pass",
+            "title": "RELAX, EXPLORE",
+            "subtitle": "& ENJOY THE PORT!",
+            "button": "Your perfect day ashore!",
+            "content": "If you'd rather relax ashore than stay on the ship, our Taino Bay Port Pass is made for you. Enjoy a relaxing spa massage overlooking the bay, experience an immersive rum tasting inspired by island legends, and visit the on-site aviary filled with vibrant Caribbean birds.",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_6_2_11zon.webp",
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_23_6_11zon.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/monkey-island/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/monkey-island/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/monkey-island/icon/icon-monkey-white.svg",
+            "displayTitle": [
+                "TAINO BAY",
+                "PORT PASS"
+            ],
+            "displayContent": [
+                "If you'd rather relax ashore than stay on the ship, our Taino Bay Port Pass is made for you.",
+                "Enjoy a relaxing spa massage overlooking the bay, experience an immersive rum tasting inspired by island legends, and visit the on-site aviary filled with vibrant Caribbean birds."
+            ],
+            "displayHighlights": [
+                "Access to the Aviary",
+                "Mr. Rum Quest: Rum tasting experience",
+                "30-minute relaxing back massage",
+                "Free time to enjoy the rest of the cruise port activities"
+            ],
+            "displayIncluded": [
+                "Access to the Aviary",
+                "Mr. Rum Quest: Rum tasting experience",
+                "30-minute relaxing back massage",
+                "Free time to enjoy port facilities"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Comfy clothing for outdoor activities"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Biodegradable sunscreen"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Extra spending money"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Swimwear and towel"
+                }
+            ],
+            "displayDuration": "2 HOURS",
+            "displayNote": [
+                "Capacity: 48 Pax. Free time to enjoy the rest of the cruise port activities included."
+            ]
         }
     ]
 }

@@ -503,6 +503,77 @@
                 "Este es un tour no guiado. Está a 20 minutos del puerto. El hotel está equipado con rampas que permitirán a los huéspedes con movilidad reducida acceder a la mayoría de las áreas de la propiedad. Este tour es adecuado para personas que pueden caminar aproximadamente 100 metros, pero también pueden viajar con una silla de ruedas manual plegable, scooter ligero, silla de ruedas eléctrica, andador o bastón. Un adulto debe acompañar a los niños y adolescentes menores de 18 años. El alcohol se distribuirá con tolerancia controlada para todos.",
                 "Los invitados ciegos o con discapacidad auditiva deben ir acompañados de un asistente, amigo o familiar. Los huéspedes deben tener al menos 18 años para consumir alcohol."
             ]
+        },
+        {
+            "id": "8",
+            "Tour": "port-pass",
+            "tourName": "Taino Bay Port Pass",
+            "title": "RELAX, EXPLORA",
+            "subtitle": "¡Y DISFRUTA EL PUERTO!",
+            "button": "¡Tu día perfecto en tierra!",
+            "content": "Si deseas relajarte al llegar y disfrutar del puerto, entonces nuestro Taino Bay Port Pass está hecho para ti. Disfruta de un masaje relajante con vista a la bahía, descubre una experiencia inmersiva y divertida inspirada en leyendas y visita nuestro aviario, con alegres aves del Caribe.",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_6_2_11zon.webp",
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_23_6_11zon.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/monkey-island/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/monkey-island/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/monkey-island/icon/icon-monkey-white.svg",
+            "displayTitle": [
+                "TAINO BAY",
+                "PORT PASS"
+            ],
+            "displayContent": [
+                "Si deseas relajarte al llegar y disfrutar del puerto, entonces nuestro Taino Bay Port Pass está hecho para ti.",
+                "Durante este recorrido no tendrás que salir del puerto. Disfruta de un masaje relajante con vista a la bahía por 30 minutos, ¡lo mereces!",
+                "¿Listo para el ron dominicano? Mr. Rum Quest es una experiencia inmersiva inspirada en el ron dominicano. Estamos seguros que te encantará.",
+                "Haz nuevos amigos en nuestro aviario. Aprende, convive y pasa un rato divertido con aves del Caribe. Un recuerdo que atesorarás por siempre."
+            ],
+            "displayHighlights": [
+                "Acceso al aviario",
+                "Mr. Rum Quest: degustación de ron",
+                "Masaje relajante de 30 minutos",
+                "Tiempo libre para disfrutar las actividades del puerto"
+            ],
+            "displayIncluded": [
+                "Acceso al aviario",
+                "Mr. Rum Quest: degustación de ron",
+                "Masaje relajante de 30 minutos",
+                "Tiempo libre para disfrutar las actividades del puerto"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda para actividades al aire libre"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Dinero para gastos extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño y toalla"
+                }
+            ],
+            "displayDuration": "2 HORAS",
+            "displayNote": [
+                "Capacidad: 48 personas. Es obligatorio seguir las instrucciones del guía turístico y del personal. Si los participantes no respetan las normas, se les podrá cancelar la excursión sin posibilidad de reembolso."
+            ]
         }
     ]
 }
