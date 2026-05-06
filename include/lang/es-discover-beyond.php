@@ -160,6 +160,29 @@ $tours = [
     //     ]
     // ],
     [
+        "id" => "1",
+        "Tour" => "utv-expedition",
+        "tourName" => "UTV Expedition",
+        "title" => "¡PREPÁRATE PARA",
+        "subtitle" => "LA GRAN AVENTURA!",
+        "button" => "¡Vive la emoción!",
+        "content" => "Prepárate para un emocionante recorrido por la jungla, río y carreteras en camino a un relajante día de playa.",
+        "side" => "left-side",
+        "images" => [
+            "assets/images/discover-beyond/utv-exp/atv-expedition-main.webp",
+            "assets/images/discover-beyond/utv-exp/atv-expedition-main-4.webp",
+            "assets/images/discover-beyond/utv-exp/atv-expedition-main-3.webp",
+            "assets/images/discover-beyond/utv-exp/atv-expedition-main-2.webp",
+            "assets/images/discover-beyond/utv-exp/atv-expedition-main-5.webp"
+        ],
+        "galleryImages" => [
+            "assets/images/discover-beyond/utv-exp/atv-expedition-gallery.webp",
+            "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-2.webp",
+            "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-3.webp",
+            "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-4.webp"
+        ],
+    ],
+    [
         "id" => "2",
         "Tour" => "countryside",
         "tourName" => "Countryside",
@@ -326,6 +349,30 @@ $tours = [
             "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
             "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
             "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
+        ],
+    ],
+    [
+        "id" => "9",
+        "Tour" => "viva-beach",
+        "tourName" => "Viva Beach Getaway",
+        "title" => "¡ESCÁPATE A TU",
+        "subtitle" => "DÍA PERFECTO EN LA PLAYA!",
+        "button" => "¡Relájate y disfruta la barra libre!",
+        "content" => "Aléjate del ruido de la multitud y regálate un día de relax en esta experiencia exclusiva. ¡Toma el sol, hunde los pies en la arena cálida y disfruta de bebidas ilimitadas en nuestra barra libre!",
+        "side" => "left-side",
+        "images" => [
+            "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513065860_e886b04bd5_k_5_11zon_6_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513158315_6038a534d2_k_6_11zon_7_11zon.webp"
+        ],
+        "galleryImages" => [
+            "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp"
         ],
     ],
 

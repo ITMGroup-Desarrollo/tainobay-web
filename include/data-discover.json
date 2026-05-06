@@ -645,6 +645,86 @@
             "displayNote": [
                 "Capacity: 48 Pax. Free time to enjoy the rest of the cruise port activities included."
             ]
+        },
+        {
+            "id": "9",
+            "Tour": "viva-beach",
+            "tourName": "Viva Beach Getaway",
+            "title": "ESCAPE TO YOUR",
+            "subtitle": "PERFECT BEACH DAY!",
+            "button": "Relax & enjoy the open bar!",
+            "content": "Escape from the hustle and bustle and treat yourself to a day of relaxation at our exclusive Beach Getaway. Bask in the sun, sink your toes into the warm sand, and enjoy unlimited drinks with our open bar!",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513065860_e886b04bd5_k_5_11zon_6_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513158315_6038a534d2_k_6_11zon_7_11zon.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/playa-dorada/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/playa-dorada/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/playa-dorada/icon/icon-palm-white.svg",
+            "displayTitle": [
+                "VIVA BEACH GETAWAY",
+                "WITH OPEN BAR"
+            ],
+            "displayContent": [
+                "Escape from the hustle and bustle of the crowds and treat yourself to a day of relaxation at our exclusive Beach Getaway.",
+                "Bask in the sun, sink your toes into the warm sand, and enjoy unlimited drinks with our open bar! Once time is up, go back to the lobby for your pick-up as specified by your host to go back to the ship."
+            ],
+            "displayHighlights": [
+                "Roundtrip transportation",
+                "Access to Viva Wyndham Beach Resort",
+                "Beach chairs, shaded areas, pool area and all beach facilities",
+                "National Open Bar",
+                "Waiter service"
+            ],
+            "displayIncluded": [
+                "Roundtrip transportation",
+                "Access to Viva Wyndham Beach Resort",
+                "Beach chairs, shaded areas, pool area, access to the beach and all beach facilities",
+                "National Open Bar",
+                "Waiter service"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Swimsuit and towel"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Comfortable clothing"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
+                    "text": "Hat / Sunglasses"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Biodegradable sunblock"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Eco friendly insect repellent"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Extra spending money"
+                }
+            ],
+            "displayDuration": "4 HOURS",
+            "displayNote": [
+                "This tour is recommended for all family members, but minors should always be accompanied by their parents. Guests must be over 18 years old to consume alcoholic beverages. The tour includes only national open bar; food is at extra cost.",
+                "Hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member."
+            ]
         }
     ]
 }
