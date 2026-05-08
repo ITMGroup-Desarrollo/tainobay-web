@@ -121,7 +121,7 @@ $tours = [
     [
         "id" => "1",
         "Tour" => "utv-expedition",
-        "tourName" => "UTV EXPEDITION",
+        "tourName" => "UTV Expedition",
         "title" => "AN ADRENALINE",
         "subtitle" => "FUELED ESCAPE!",
         "button" => "GET YOUR RUSH ON",
