@@ -617,9 +617,9 @@
                 "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
                 "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
             ],
-            "shortIconSchedule": "assets/images/discover-beyond/monkey-island/icon/icon-schedule-white.svg",
+            "shortIconSchedule": "assets/images/discover-beyond/port-pass/icon-schedule-white2hrs.svg",
             "shortIconIntensity": "assets/images/discover-beyond/monkey-island/icon/icon-intensity-white.svg",
-            "shortIconCategory": "assets/images/discover-beyond/monkey-island/icon/icon-monkey-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/port-pass/icon-schedule-white-ticket.svg",
             "displayTitle": [
                 "TAINO BAY",
                 "PORT PASS"
