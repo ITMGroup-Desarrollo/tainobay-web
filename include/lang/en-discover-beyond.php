@@ -284,6 +284,55 @@ $tours = [
             "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-four.webp",
             "assets/images/discover-beyond/playa-dorada/playa-dorada-gallery-five.webp"
         ]
+
+    ],
+    [
+        "id" => "8",
+        "Tour" => "port-pass",
+        "tourName" => "Taino Bay Port Pass",
+        "title" => "RELAX, EXPLORE",
+        "subtitle" => "& ENJOY THE PORT!",
+        "button" => "Your perfect day ashore!",
+        "content" => "If you'd rather relax ashore than stay on the ship, our Taino Bay Port Pass is made for you. Enjoy a relaxing spa massage overlooking the bay, experience an immersive rum tasting inspired by island legends, and visit the on-site aviary filled with vibrant Caribbean birds.",
+        "side" => "left-side",
+        "images" => [
+            "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_6_2_11zon.webp",
+            "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_23_6_11zon.webp"
+        ],
+        "galleryImages" => [
+            "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+            "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
+        ]
+    ],
+    [
+        "id" => "9",
+        "Tour" => "viva-beach",
+        "tourName" => "Viva Beach Getaway",
+        "title" => "ESCAPE TO YOUR",
+        "subtitle" => "PERFECT BEACH DAY!",
+        "button" => "Relax & enjoy the open bar!",
+        "content" => "Escape from the hustle and bustle and treat yourself to a day of relaxation at our exclusive Beach Getaway. Bask in the sun, sink your toes into the warm sand, and enjoy unlimited drinks with our open bar!",
+        "side" => "left-side",
+        "images" => [
+            "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513065860_e886b04bd5_k_5_11zon_6_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513158315_6038a534d2_k_6_11zon_7_11zon.webp"
+        ],
+        "galleryImages" => [
+            "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+            "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp"
+        ],
     ],
     // [
     //     "id" => "8",

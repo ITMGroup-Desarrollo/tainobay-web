@@ -7,7 +7,7 @@
             "title": "AN ADRENALINE",
             "subtitle": "FUELED ESCAPE!",
             "button": "Get&nbsp;your rush&nbsp;on",
-            "content": "Get ready for an exhilarating ride through rugged jungle trails, river crossings, and backroads as you make your way to a refreshing beach escape.",
+            "content": "Get ready for an adrenaline-fueled escapade as you venture through the rugged backcountry trails of the Dominican rain forest aboard your own all-terrain vehicle.",
             "side": "left-side",
             "images": [
                 "assets/images/discover-beyond/utv-exp/atv-expedition-main.webp",
@@ -26,51 +26,68 @@
             "shortIconIntensity": "assets/images/discover-beyond/utv-exp/icon/icon-intensity-white.svg",
             "shortIconCategory": "assets/images/discover-beyond/utv-exp/icon/icon-buggy-white.svg",
             "displayTitle": [
-                "UTV EXPEDITION BACK COUNTRY",
-                "RIDING & BEACH"
+                "UTV EXPEDITION BACKCOUNTRY",
+                "RIDE & BEACH"
             ],
             "displayContent": [
-                "<b>Transfer to UTV hub:</b> Climb aboard an open-air safari truck for 25 minutes and enjoy a scenic journey through the vibrant landscape of Puerto Plata.",
-                "<b>UTV backcountry exploration:</b> After your guide’s safety briefing and driving test, put on your helmet and goggles, and hop into your automatic single or double UTV for an exciting one-hour ride.",
-                "Visit the picturesque rural area of Puerto Plata, drive through the lush rainforests, and prepare to get a little wet as you cross shallow creeks.",
-                "<b>Coffee & Chocolate break:</b> Get ready for a 15-minute cultural stop at a traditional Dominican country house. Freshly brewed coffee, rich chocolate, and authentic cigar tastings are included.",
-                "<b>Photo shooting & break at the beach:</b> Rest for 30 minutes at a local beach, where incredible views of the Atlantic shoreline and mountains beckon you to relax and unwind before heading back to port."
+                "Your adventure begins as you climb aboard an open-air safari truck, treating you to a breathtaking 25-minute scenic journey through the city of Puerto Plata.",
+                "Upon arrival, you and your fellow explorers will be instructed with a comprehension briefing, covering some essential safety protocols and riding instructions for an exhilarating adventure. Traverse through the picturesque rural area of Puerto Plata, immersing yourself in the authentic charm of the Dominican countryside. Continue your expedition through the lush rainforests that will create a captivating backdrop for your adventure.",
+                "Along the way, immerse yourself in the local culture with a stop at a traditional Dominican country house. Indulge in tasting samples of brewed coffee, rich chocolate, and authentic cigars, while also browsing at the gift shop for the perfect souvenir and contributing to the local economy.",
+                "Cap off your adventure with a well-deserved 30-minute break at the beach, where incredible view of the Atlantic shoreline and mountains beckon you to relax and unwind."
             ],
             "displayHighlights": [
-                "Safari truck through Puerto Plata",
-                "UTV rainforest adventures",
-                "Delicious Dominican coffee & chocolate tasting",
-                "Sightseeing of the Atlantic shoreline",
-                "Beach break"
+                "Scenic safari truck ride through Puerto Plata",
+                "UTV ride through rural areas and rainforest",
+                "Coffee, chocolate and cigar tasting at a traditional Dominican country house",
+                "30-minute beach break with Atlantic views"
             ],
             "displayIncluded": [
-                "Tour guide",
-                "Safety equipment",
-                "Guided ride through rural areas, rainforest and beach",
-                "Coffee, chocolate and cigar tasting"
+                "Round-trip transportation on open air safari truck",
+                "Bilingual certified tour guide",
+                "Double automatic shared UTV",
+                "Helmet & goggles",
+                "UTV ride through rural areas, backcountry private ranch, rainforest and stop at the beach",
+                "Coffee, chocolate and cigar tasting",
+                "One bottle of water"
             ],
             "displayWhatToBring": [
                 {
                     "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-license-white.svg",
-                    "text": "Physical valid driver’s license (mandatory)"
-                },
-                {
-                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-pants-white.svg",
-                    "text": "Long pants"
+                    "text": "Physical valid driver license (MANDATORY)"
                 },
                 {
                     "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-shoe-white.svg",
-                    "text": "Closed shoes (mandatory, not sandals, or crocs)"
+                    "text": "Closed shoes or sneakers, not water shoes or crocs (MANDATORY)"
                 },
                 {
-                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-cash-white.svg",
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-pants-white.svg",
+                    "text": "Long pants (HIGHLY RECOMMENDED)"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Comfortable clothing for outdoor activities"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Eco friendly insect repellent"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Biodegradable sunscreen"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
                     "text": "Extra spending money"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Swimwear and towel"
                 }
             ],
             "displayDuration": "3.5 HOURS",
             "displayNote": [
-                "Physical valid driver’s license and closed shoes are mandatory. The minimum age to participate is 18 years old, and the maximum age is 65 years old. The maximum weight limit is 260 pounds or 117 kilograms. Alcohol will be distributed with careful tolerance to everyone. Guests must be ambulatory. Wheelchairs (collapsible or electric) are not permitted. For safety reasons, expectant mothers, guests with neck or back problems, recent surgeries, or patients with diabetes, epilepsy, blindness, asthma, or any other heart or respiratory conditions are not eligible to participate in this excursion.",
-                "Following the tour guide’s and staff’s instructions is mandatory. Guests may face cancellation without the possibility of a refund if they fail to adhere to the rules."
+                "Guests might get dirty while crossing creeks or streams. Even roads get muddy when it is rainy and dusty in dry seasons. The use of appropriate attire is highly recommended (long pants and not favorite shoes).",
+                "Following tour guide and staff instructions is mandatory. Guests may face cancellation without the possibility of a refund if they fail to adhere to the rules."
             ]
         },
         {
@@ -176,8 +193,8 @@
             "id": "3",
             "Tour": "a-walk-through-puerto-plata",
             "tourName": "Countryside",
-            "title": "DISCOVER THE HOTTEST",
-            "subtitle": "PUERTO PLATA SPOTS!",
+            "title": "ENJOY A FUN WALK",
+            "subtitle": "THROUGH PUERTO PLATA.",
             "button": "The&nbsp;Bride&nbsp;of the&nbsp;Atlantic",
             "content": "Explore the most representative landmarks of Puerto Plata in this fun tour through its downtown. ",
             "side": "left-side",
@@ -412,8 +429,8 @@
             "id": "6",
             "Tour": "Old town & beach ",
             "tourName": "Old Town & Beach",
-            "title": "ENJOY A FUN WALK",
-            "subtitle": "THROUGH PUERTO PLATA.",
+            "title": "DISCOVER THE HOTTEST",
+            "subtitle": "PUERTO PLATA SPOTS!",
             "button": "Have&nbsp;a fresh&nbsp;day&nbsp;at the&nbsp;beach!",
             "content": "The perfect combo to discover the beautiful Puerto Plata. Visit downtown, take the coolest shots, and relax at the beach!",
             "side": "right-side",
@@ -575,6 +592,155 @@
             "displayNote": [
                 "This is a non-guided tour. 20 min away from the port. The hotel is equipped with ramps which will allow guests with limited mobility to reach most of the property's areas.  This tour is appropriate for guests who can walk approximately 100 meters but travel with a folding manual wheelchair folding lightweight scooter/electric wheelchair, walker, and/or cane. An adult must accompany children and teenagers under 18 years old. Alcohol will be distributed with a watchful tolerance to everyone.",
                 "Blind guests and hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member. Guests must be at least 18 years old to consume alcohol. "
+            ]
+        },
+        {
+            "id": "8",
+            "Tour": "port-pass",
+            "tourName": "Taino Bay Port Pass",
+            "title": "RELAX, EXPLORE",
+            "subtitle": "& ENJOY THE PORT!",
+            "button": "Your perfect day ashore!",
+            "content": "If you'd rather relax ashore than stay on the ship, our Taino Bay Port Pass is made for you. Enjoy a relaxing spa massage overlooking the bay, experience an immersive rum tasting inspired by island legends, and visit the on-site aviary filled with vibrant Caribbean birds.",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_6_2_11zon.webp",
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_23_6_11zon.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/monkey-island/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/monkey-island/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/monkey-island/icon/icon-monkey-white.svg",
+            "displayTitle": [
+                "TAINO BAY",
+                "PORT PASS"
+            ],
+            "displayContent": [
+                "If you'd rather relax ashore than stay on the ship, our Taino Bay Port Pass is made for you.",
+                "Enjoy a relaxing spa massage overlooking the bay, experience an immersive rum tasting inspired by island legends, and visit the on-site aviary filled with vibrant Caribbean birds."
+            ],
+            "displayHighlights": [
+                "Access to the Aviary",
+                "Mr. Rum Quest: Rum tasting experience",
+                "30-minute relaxing back massage",
+                "Free time to enjoy the rest of the cruise port activities"
+            ],
+            "displayIncluded": [
+                "Access to the Aviary",
+                "Mr. Rum Quest: Rum tasting experience",
+                "30-minute relaxing back massage",
+                "Free time to enjoy port facilities"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Comfy clothing for outdoor activities"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Biodegradable sunscreen"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Extra spending money"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Swimwear and towel"
+                }
+            ],
+            "displayDuration": "2 HOURS",
+            "displayNote": [
+                "Capacity: 48 Pax. Free time to enjoy the rest of the cruise port activities included."
+            ]
+        },
+        {
+            "id": "9",
+            "Tour": "viva-beach",
+            "tourName": "Viva Beach Getaway",
+            "title": "ESCAPE TO YOUR",
+            "subtitle": "PERFECT BEACH DAY!",
+            "button": "Relax & enjoy the open bar!",
+            "content": "Escape from the hustle and bustle and treat yourself to a day of relaxation at our exclusive Beach Getaway. Bask in the sun, sink your toes into the warm sand, and enjoy unlimited drinks with our open bar!",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513065860_e886b04bd5_k_5_11zon_6_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513158315_6038a534d2_k_6_11zon_7_11zon.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/playa-dorada/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/playa-dorada/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/playa-dorada/icon/icon-palm-white.svg",
+            "displayTitle": [
+                "VIVA BEACH GETAWAY",
+                "WITH OPEN BAR"
+            ],
+            "displayContent": [
+                "Escape from the hustle and bustle of the crowds and treat yourself to a day of relaxation at our exclusive Beach Getaway.",
+                "Bask in the sun, sink your toes into the warm sand, and enjoy unlimited drinks with our open bar! Once time is up, go back to the lobby for your pick-up as specified by your host to go back to the ship."
+            ],
+            "displayHighlights": [
+                "Roundtrip transportation",
+                "Access to Viva Wyndham Beach Resort",
+                "Beach chairs, shaded areas, pool area and all beach facilities",
+                "National Open Bar",
+                "Waiter service"
+            ],
+            "displayIncluded": [
+                "Roundtrip transportation",
+                "Access to Viva Wyndham Beach Resort",
+                "Beach chairs, shaded areas, pool area, access to the beach and all beach facilities",
+                "National Open Bar",
+                "Waiter service"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Swimsuit and towel"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Comfortable clothing"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
+                    "text": "Hat / Sunglasses"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Biodegradable sunblock"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Eco friendly insect repellent"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Extra spending money"
+                }
+            ],
+            "displayDuration": "4 HOURS",
+            "displayNote": [
+                "This tour is recommended for all family members, but minors should always be accompanied by their parents. Guests must be over 18 years old to consume alcoholic beverages. The tour includes only national open bar; food is at extra cost.",
+                "Hard of hearing/hearing impaired guests must be accompanied by an assistant, friend, or family member."
             ]
         }
     ]

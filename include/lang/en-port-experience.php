@@ -645,7 +645,7 @@ $points = [
     'type' => 'public',
     'name' => 'Aviary',
     'path' => 'aviary',
-    'logo' => 'aviario/aviario-final.svg',
+    'logo' => 'aviario/LOGO_AVIARIO_TB_BLANCO.svg',
     'icon' => '<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 879.11 879.11">
   <defs>
     <style>.st0{fill:#fff;}</style>

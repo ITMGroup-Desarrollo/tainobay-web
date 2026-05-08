@@ -1,6 +1,96 @@
 {
     "carouselSections": [
         {
+            "id": "1",
+            "Tour": "utv-expedition",
+            "tourName": "UTV Expedition",
+            "title": "¡PREPÁRATE PARA",
+            "subtitle": "LA GRAN AVENTURA!",
+            "button": "¡Vive la emoción!",
+            "content": "Prepárate para un emocionante recorrido por la jungla, río y carreteras en camino a un relajante día de playa.",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-4.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-3.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-2.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-main-5.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-2.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-3.webp",
+                "assets/images/discover-beyond/utv-exp/atv-expedition-gallery-4.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/utv-exp/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/utv-exp/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/utv-exp/icon/icon-buggy-white.svg",
+            "displayTitle": [
+                "UTV EXPEDITION",
+                "BACKCOUNTRY RIDE & BEACH"
+            ],
+            "displayContent": [
+                "Tu aventura comienza con un impresionante recorrido panorámico de 25 minutos por la ciudad de Puerto Plata en un camión safari.",
+                "Al llegar recibirás instrucciones sobre las normas básicas de seguridad y conducción y después comenzará la gran aventura. Recorre la pintoresca zona rural de Puerto Plata y sumérgete en el auténtico encanto del campo dominicano.",
+                "Por el camino, sumérgete en la cultura local con una parada en una casa de campo tradicional. Disfruta de degustaciones de café recién hecho, chocolate intenso y auténticos puros.",
+                "Termina la aventura con un merecido descanso de 30 minutos en la playa, donde las increíbles vistas de la costa atlántica y las montañas te invitan a relajarte y desconectar."
+            ],
+            "displayHighlights": [
+                "Recorrido panorámico en camión safari por Puerto Plata",
+                "Aventura en UTV por la selva tropical",
+                "Parada en casa de campo con degustación de café, chocolate y puros",
+                "Descanso en la playa con vistas al Atlántico"
+            ],
+            "displayIncluded": [
+                "Transportación en un camión safari descapotable",
+                "Guía turístico certificado bilingüe",
+                "UTV doble automático compartido",
+                "Casco y gafas protectoras",
+                "Recorrido en UTV por zonas rurales, un rancho privado en plena naturaleza, la selva tropical y parada en la playa",
+                "Cata de café, chocolate y puros",
+                "Una botella de agua"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-license-white.svg",
+                    "text": "Licencia de conducir válida (OBLIGATORIO)"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-shoe-white.svg",
+                    "text": "Calzado cerrado o tenis, no calzado acuático ni Crocs (OBLIGATORIO)"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/atv-exp/icon/icon-pants-white.svg",
+                    "text": "Pantalones largos (MUY RECOMENDADO)"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda para actividades al aire libre"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Repelente de insectos ecológico"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Dinero para gastos extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño y toalla"
+                }
+            ],
+            "displayDuration": "3.5 HORAS",
+            "displayNote": [
+                "Los participantes pueden ensuciarse al cruzar arroyos o riachuelos. Incluso las carreteras se llenan de barro cuando llueve y de polvo en las estaciones secas. Se recomienda encarecidamente llevar ropa adecuada (pantalones largos y no el calzado favorito).",
+                "Es obligatorio seguir las instrucciones del guía turístico y del personal. Si los participantes no respetan las normas, se les podrá cancelar la excursión sin posibilidad de reembolso."
+            ]
+        },
+        {
             "id": "2",
             "Tour": "countryside",
             "tourName": "Countryside",
@@ -103,8 +193,8 @@
             "id": "3",
             "Tour": "a-walk-through-puerto-plata",
             "tourName": "Countryside",
-            "title": "¡DESCUBRE LOS&nbsp;LUGARES",
-            "subtitle": "MÁS&nbsp;COOL&nbsp;DE PUERTO&nbsp;PLATA!",
+            "title": "DISFRUTA DE&nbsp;UN PASEO",
+            "subtitle": "DIVERTIDO&nbsp;EN PUERTO&nbsp;PLATA.",
             "button": "La&nbsp;Novia del&nbsp;Atlántico",
             "content": "Explora los spots más representativos de Puerto Plata en este divertido recorrido por el centro histórico",
             "side": "left-side",
@@ -339,8 +429,8 @@
             "id": "6",
             "Tour": "Old town & beach ",
             "tourName": "Old Town & Beach",
-            "title": "DISFRUTA DE&nbsp;UN PASEO",
-            "subtitle": "DIVERTIDO&nbsp;EN PUERTO&nbsp;PLATA.",
+            "title": "¡DESCUBRE LOS&nbsp;LUGARES",
+            "subtitle": "MÁS&nbsp;COOL&nbsp;DE PUERTO&nbsp;PLATA!",
             "button": "¡Un día fresco en la&nbsp;playa!",
             "content": "La combinación perfecta para descubrir Puerto Plata. ¡Visita el centro, toma las fotos más cool y relájate en la playa!",
             "side": "right-side",
@@ -502,6 +592,157 @@
             "displayNote": [
                 "Este es un tour no guiado. Está a 20 minutos del puerto. El hotel está equipado con rampas que permitirán a los huéspedes con movilidad reducida acceder a la mayoría de las áreas de la propiedad. Este tour es adecuado para personas que pueden caminar aproximadamente 100 metros, pero también pueden viajar con una silla de ruedas manual plegable, scooter ligero, silla de ruedas eléctrica, andador o bastón. Un adulto debe acompañar a los niños y adolescentes menores de 18 años. El alcohol se distribuirá con tolerancia controlada para todos.",
                 "Los invitados ciegos o con discapacidad auditiva deben ir acompañados de un asistente, amigo o familiar. Los huéspedes deben tener al menos 18 años para consumir alcohol."
+            ]
+        },
+        {
+            "id": "8",
+            "Tour": "port-pass",
+            "tourName": "Taino Bay Port Pass",
+            "title": "RELAX, EXPLORA",
+            "subtitle": "¡Y DISFRUTA EL PUERTO!",
+            "button": "¡Tu día perfecto en tierra!",
+            "content": "Si deseas relajarte al llegar y disfrutar del puerto, entonces nuestro Taino Bay Port Pass está hecho para ti. Disfruta de un masaje relajante con vista a la bahía, descubre una experiencia inmersiva y divertida inspirada en leyendas y visita nuestro aviario, con alegres aves del Caribe.",
+            "side": "right-side",
+            "images": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_6_2_11zon.webp",
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_23_6_11zon.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/port-pass/MR_RUM_QUEST-IMAGEN_2_5_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-avariario-imagen_1_4_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-aviario-imagen_5_3_11zon.webp",
+                "assets/images/discover-beyond/port-pass/Pto-TainoBay-spa-imagen_4_1_11zon.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/monkey-island/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/monkey-island/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/monkey-island/icon/icon-monkey-white.svg",
+            "displayTitle": [
+                "TAINO BAY",
+                "PORT PASS"
+            ],
+            "displayContent": [
+                "Si deseas relajarte al llegar y disfrutar del puerto, entonces nuestro Taino Bay Port Pass está hecho para ti.",
+                "Durante este recorrido no tendrás que salir del puerto. Disfruta de un masaje relajante con vista a la bahía por 30 minutos, ¡lo mereces!",
+                "¿Listo para el ron dominicano? Mr. Rum Quest es una experiencia inmersiva inspirada en el ron dominicano. Estamos seguros que te encantará.",
+                "Haz nuevos amigos en nuestro aviario. Aprende, convive y pasa un rato divertido con aves del Caribe. Un recuerdo que atesorarás por siempre."
+            ],
+            "displayHighlights": [
+                "Acceso al aviario",
+                "Mr. Rum Quest: degustación de ron",
+                "Masaje relajante de 30 minutos",
+                "Tiempo libre para disfrutar las actividades del puerto"
+            ],
+            "displayIncluded": [
+                "Acceso al aviario",
+                "Mr. Rum Quest: degustación de ron",
+                "Masaje relajante de 30 minutos",
+                "Tiempo libre para disfrutar las actividades del puerto"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda para actividades al aire libre"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Dinero para gastos extra"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño y toalla"
+                }
+            ],
+            "displayDuration": "2 HORAS",
+            "displayNote": [
+                "Capacidad: 48 personas. Es obligatorio seguir las instrucciones del guía turístico y del personal. Si los participantes no respetan las normas, se les podrá cancelar la excursión sin posibilidad de reembolso."
+            ]
+        },
+        {
+            "id": "9",
+            "Tour": "viva-beach",
+            "tourName": "Viva Beach Getaway",
+            "title": "¡ESCÁPATE A TU",
+            "subtitle": "DÍA PERFECTO EN LA PLAYA!",
+            "button": "¡Relájate y disfruta la barra libre!",
+            "content": "Aléjate del ruido de la multitud y regálate un día de relax en esta experiencia exclusiva. ¡Toma el sol, hunde los pies en la arena cálida y disfruta de bebidas ilimitadas en nuestra barra libre!",
+            "side": "left-side",
+            "images": [
+                "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513065860_e886b04bd5_k_5_11zon_6_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513158315_6038a534d2_k_6_11zon_7_11zon.webp"
+            ],
+            "galleryImages": [
+                "assets/images/discover-beyond/viva-beach/48531120046_3edf1c5816_k_1_11zon_2_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/48531252112_7cfb0221f7_k_2_11zon_3_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53511783062_1c5ea4fabb_k_3_11zon_4_11zon.webp",
+                "assets/images/discover-beyond/viva-beach/53513008694_e8fa08b0f7_k_4_11zon_5_11zon.webp"
+            ],
+            "shortIconSchedule": "assets/images/discover-beyond/playa-dorada/icon/icon-schedule-white.svg",
+            "shortIconIntensity": "assets/images/discover-beyond/playa-dorada/icon/icon-intensity-white.svg",
+            "shortIconCategory": "assets/images/discover-beyond/playa-dorada/icon/icon-palm-white.svg",
+            "displayTitle": [
+                "VIVA BEACH GETAWAY",
+                "CON BARRA LIBRE"
+            ],
+            "displayContent": [
+                "Aléjate del ruido de la multitud y regálate un día de relax en esta experiencia exclusiva.",
+                "¡Toma el sol, hunde los pies en la arena cálida y disfruta de bebidas ilimitadas en nuestra barra libre! Cuando termine el tiempo, vuelve al vestíbulo para que te recojan y regreses al barco."
+            ],
+            "displayHighlights": [
+                "Transportación",
+                "Acceso a Viva Wyndham Beach Resort",
+                "Camastros, áreas con sombra, piscinas y todas las amenidades de playa",
+                "Barra libre nacional",
+                "Servicio de meseros"
+            ],
+            "displayIncluded": [
+                "Transportación",
+                "Acceso a Viva Wyndham Beach Resort",
+                "Camastros, áreas con sombra, piscinas, acceso a la playa y todas sus amenidades",
+                "Barra libre nacional",
+                "Servicio de meseros"
+            ],
+            "displayWhatToBring": [
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-swimsuit-white.svg",
+                    "text": "Traje de baño y toalla"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-comfty-clothes-white.svg",
+                    "text": "Ropa cómoda para actividades al aire libre"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-hat-white.svg",
+                    "text": "Sombrero y gafas de sol"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-sunprotector-white.svg",
+                    "text": "Protector solar biodegradable"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-bugrepelent-white.svg",
+                    "text": "Repelente eco-friendly"
+                },
+                {
+                    "iconPath": "assets/images/discover-beyond/country/icon/icon-money-white.svg",
+                    "text": "Dinero para gastos extra"
+                }
+            ],
+            "displayDuration": "4 HORAS",
+            "displayNote": [
+                "Esta excursión está recomendada para todos los miembros de la familia, pero los menores deben ir siempre acompañados de sus padres. Para consumir bebidas alcohólicas es necesario ser mayor de 18 años. La excursión incluye únicamente barra libre de bebidas nacionales; la comida tiene un coste adicional.",
+                "Las personas con discapacidad auditiva deben ir acompañadas de un asistente, un amigo o un familiar."
             ]
         }
     ]
