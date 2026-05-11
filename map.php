@@ -239,6 +239,10 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/bar.svg" alt="TIKI-TIKI"></td>
                                 <td>TIKI TIKI BAR</td>
                             </tr>
+                            <tr data-marker-id="78">
+                                <td><img src="assets/icons/map/food.svg" alt="SPLASH GRILL & CHILL"></td>
+                                <td>SPLASH GRILL & CHILL</td>
+                            </tr>
 
                         </table>
                     </div>

@@ -3018,6 +3018,30 @@ var markers = {
       icon: exitIcon,
     }).addTo(map),
   ],
+  78: [
+    L.marker([520, 510], { icon: foodIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/food.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">SPLASH GRILL & CHILL</p>
+                <p>${
+                  idioma === "es"
+                    ? "¡Relájate después de nadar!"
+                    : "Relax after a day of swimming!"
+                }</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
+  ],
 };
 
 // Evento para ajustar el tamaño de los íconos en función del zoom
