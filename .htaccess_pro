@@ -1,9 +1,76 @@
-# Evitar caché para CSS y JS
-<FilesMatch "\.(css|js)$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires 0
-</FilesMatch>
+# ============================================================
+# CACHÉ EFICIENTE PARA ASSETS ESTÁTICOS (PageSpeed Optimization)
+# ============================================================
+
+# --- Imágenes: caché de 1 año (365 días = 31536000 seg) ---
+<IfModule mod_headers.c>
+    <FilesMatch "\.(webp|jpg|jpeg|png|gif|ico|svg|avif)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # --- Fuentes: caché de 1 año ---
+    <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # --- CSS y JS: caché de 1 mes (2592000 seg) ---
+    # Si necesitas invalidar caché, agrega ?v=2 al enlace del archivo
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # --- Videos: caché de 1 año ---
+    <FilesMatch "\.(mp4|webm|ogv|ogg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # --- PDF y documentos: caché de 1 mes ---
+    <FilesMatch "\.(pdf|doc|docx)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
+# ============================================================
+# COMPRESIÓN GZIP/BROTLI (reduce tamaño de transferencia)
+# ============================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+    AddOutputFilterByType DEFLATE application/font-woff
+    AddOutputFilterByType DEFLATE application/font-woff2
+</IfModule>
+
+# ============================================================
+# EXPIRES MODULE (respaldo si mod_headers no está disponible)
+# ============================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/webm "access plus 1 year"
+    ExpiresByType video/ogg "access plus 1 year"
+</IfModule>
 
 Options +SymLinksIfOwnerMatch
 Options -Multiviews
