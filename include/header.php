@@ -50,7 +50,7 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                     <a href="https://www.instagram.com/tainobay_puertoplata/" class="link" target="_self"
                         aria-label="Instagram de Taino Bay"><i class="icon fab fa-instagram"></i></a>
                     <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html"
-                        class="link" target="_self">
+                        class="link" target="_self" aria-label="TripAdvisor de Taino Bay">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" height="22"
                             viewBox="0 0 2304 1408">
                             <path
@@ -133,7 +133,7 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                 <div class="menu-grid-item item-2" data-direction="lr">
                     <div class="menu-grid-item-inner">
                         <!-- Image -->
-                        <a href="javascript:void(0)" class="menu-grid-item-image">
+                        <a href="#" class="menu-grid-item-image" aria-label="Imagen del menú Taino Bay">
                             <!-- <img src="assets/images/media/img-menu-1-n.jpg" alt="Image name" class="image" /> -->
                             <picture class="image">
                                 <source srcset="assets/images/media/img-menu-1-n.webp" class="image" type="image/webp">
@@ -167,7 +167,8 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                                     </li>
                                     <li class="item">
                                         <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html"
-                                            class="link white primary-hover hover-rotate" target="_self">
+                                            class="link white primary-hover hover-rotate" target="_self"
+                                            aria-label="TripAdvisor de Taino Bay">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                                 viewBox="0 0 2304 1408">
                                                 <path
@@ -183,9 +184,8 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                 <div class="menu-grid-item item-4" data-direction="rl">
                     <div class="menu-grid-item-inner">
                         <!-- Image -->
-                        <a href="javascript:void(0)" class="menu-grid-item-image"
-                            aria-label="Imagen del menú Taino Bay">
-                            <img src="assets/images/media/img-menu-2.jpg" alt="Image name" class="image" />
+                        <a href="#" class="menu-grid-item-image" aria-label="Imagen del menú Taino Bay">
+                            <img src="assets/images/media/img-menu-2.jpg" alt="Taino Bay menú imagen" class="image" />
                         </a>
                     </div>
                 </div>

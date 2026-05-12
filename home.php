@@ -209,7 +209,8 @@ include_once("include/lang/reviews.php");
                                             <?php } ?>
                                             <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer'
                                                 class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase'
-                                                style="font-size: 12px;"><?= BTN_REVIEW ?></a>
+                                                style="font-size: 12px;"
+                                                aria-label="Ver reseña de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?> en TripAdvisor"><?= BTN_REVIEW ?></a>
                                         </div>
                                         <!-- Quotes Right -->
                                         <div class="text-orange text-end mt-1">
