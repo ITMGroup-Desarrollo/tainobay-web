@@ -18,10 +18,12 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
     <nav id="navbar" class="navbar navbar-expand-lg fixed-on-scroll absolute">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="navbar-brand" href="<?php echo $path; ?><?php echo $idioma; ?>/home">
+            <a class="navbar-brand" href="<?php echo $path; ?><?php echo $idioma; ?>/home"
+                aria-label="Inicio Taino Bay">
                 <!-- <div class="site-title">Site Title</div> -->
                 <img src="assets/images/<?php echo $logo ?>" data-logo-alt="assets/images/<?php echo $logo ?>"
-                    data-logo-mobile="assets/images/<?php echo $logo ?>" alt="Shock Theme" class="logo" width="150px" />
+                    data-logo-mobile="assets/images/<?php echo $logo ?>" alt="Taino Bay Puerto Plata" class="logo"
+                    width="150px" />
             </a>
             <!-- Menu fixed on screen lg -->
             <!-- <div id="menu-fixed" class="w-85 justify-content-evenly d-none d-lg-flex"> -->
@@ -43,10 +45,10 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                     <?php include("include/search.php"); ?>
                 </div>
                 <div class="social-media">
-                    <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link" target="_self"><i
-                            class="icon fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/tainobay_puertoplata/" class="link" target="_self"><i
-                            class="icon fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link" target="_self"
+                        aria-label="Facebook de Taino Bay"><i class="icon fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/tainobay_puertoplata/" class="link" target="_self"
+                        aria-label="Instagram de Taino Bay"><i class="icon fab fa-instagram"></i></a>
                     <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html"
                         class="link" target="_self">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" height="22"
@@ -153,12 +155,14 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                                 <ul class="icon-h-list">
                                     <li class="ms-0 item">
                                         <a href="https://www.facebook.com/TainobayPuertoPlata/?mibextid=ZbWKwL"
-                                            class="link white primary-hover hover-rotate" target="_self"><i
+                                            class="link white primary-hover hover-rotate" target="_self"
+                                            aria-label="Facebook de Taino Bay"><i
                                                 class="icon fab fa-facebook-f"></i></a>
                                     </li>
                                     <li class="item">
                                         <a href="https://instagram.com/porttainobay?igshid=OGQ2MjdiOTE="
-                                            class="link white primary-hover hover-rotate" target="_self"><i
+                                            class="link white primary-hover hover-rotate" target="_self"
+                                            aria-label="Instagram de Taino Bay"><i
                                                 class="icon fab fa-instagram"></i></a>
                                     </li>
                                     <li class="item">
@@ -179,7 +183,8 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                 <div class="menu-grid-item item-4" data-direction="rl">
                     <div class="menu-grid-item-inner">
                         <!-- Image -->
-                        <a href="javascript:void(0)" class="menu-grid-item-image">
+                        <a href="javascript:void(0)" class="menu-grid-item-image"
+                            aria-label="Imagen del menú Taino Bay">
                             <img src="assets/images/media/img-menu-2.jpg" alt="Image name" class="image" />
                         </a>
                     </div>

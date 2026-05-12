@@ -36,7 +36,8 @@ include_once("include/lang/{$idioma}-contact.php");
         <div class="image-wrapper">
           <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
           </div> -->
-          <img src="assets/images/media/header-contacto.jpg" class="image banner-fixed fit-cover brightness-8" alt="Banner Contacto." />
+          <img src="assets/images/media/header-contacto.jpg" class="image banner-fixed fit-cover brightness-8"
+            alt="Banner Contacto." loading="lazy" />
 
         </div>
         <!-- Overlay -->
@@ -61,9 +62,11 @@ include_once("include/lang/{$idioma}-contact.php");
     <section class="shock-section pb-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
       <div class="container max-w-85">
         <div class="mb-1 text-center">
-          <a href="mailto:info@porttainobay.com" class="text-blue text-center text-style-13"><strong>info@porttainobay.com</strong></a>
+          <a href="mailto:info@porttainobay.com"
+            class="text-blue text-center text-style-13"><strong>info@porttainobay.com</strong></a>
         </div>
-        <address class="text-blue text-center">Av. Antigua Via Férrea, Muelle Turístico entre Av. Penetración Portuaria y Prolongación Duarte. <br>
+        <address class="text-blue text-center">Av. Antigua Via Férrea, Muelle Turístico entre Av. Penetración Portuaria
+          y Prolongación Duarte. <br>
           Puerto Plata 57000 República Dominicana.
         </address>
         <!-- Form -->
