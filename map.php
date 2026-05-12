@@ -58,7 +58,8 @@ include_once("include/lang/{$idioma}-map.php");
 
         <!-- Content -->
         <section class="shock-section map-section">
-            <div class="filter-container" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+            <div class="filter-container" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic"
+                data-aos-duration="500">
                 <!-- Service -->
                 <div class="leaflet-control-filter service">
                     <div class="filter-header">
@@ -67,7 +68,8 @@ include_once("include/lang/{$idioma}-map.php");
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label>
-                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
+                        <button class="minimize-btn show" aria-label="Cerrar filtro"><img src="assets/icons/map/x.svg"
+                                alt="close"></button>
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -130,7 +132,8 @@ include_once("include/lang/{$idioma}-map.php");
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label>
-                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
+                        <button class="minimize-btn show" aria-label="Cerrar filtro"><img src="assets/icons/map/x.svg"
+                                alt="close"></button>
 
                     </div>
                     <div class="filter-content">
@@ -144,23 +147,28 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><?php echo $idioma === 'es' ? 'PLAYA' : 'BEACH'; ?></td>
                             </tr>
                             <tr data-marker-id="2">
-                                <td><img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="MR-RUM-QUEST"></td>
+                                <td><img src="assets/icons/map/port-experience/rum-quest-marker.svg" alt="MR-RUM-QUEST">
+                                </td>
                                 <td>MR. RUM QUEST</td>
                             </tr>
                             <tr data-marker-id="3">
-                                <td><img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="THE-RIVER"></td>
+                                <td><img src="assets/icons/map/port-experience/lazy-river-marker.svg" alt="THE-RIVER">
+                                </td>
                                 <td>LAZY RIVER</td>
                             </tr>
                             <tr data-marker-id="4">
-                                <td><img src="assets/icons/map/port-experience/splash-marker.svg" alt="SPLASH-SUFRING"></td>
+                                <td><img src="assets/icons/map/port-experience/splash-marker.svg" alt="SPLASH-SUFRING">
+                                </td>
                                 <td>SPLASH SURFING</td>
                             </tr>
                             <tr data-marker-id="5">
-                                <td><img src="assets/icons/map/port-experience/spa-marker.svg" alt="SPA WELLNESS RETREATS"></td>
+                                <td><img src="assets/icons/map/port-experience/spa-marker.svg"
+                                        alt="SPA WELLNESS RETREATS"></td>
                                 <td>SPA WELLNESS RETREAT</td>
                             </tr>
                             <tr data-marker-id="6">
-                                <td><img src="assets/icons/map/port-experience/monkey-marker.svg" alt="MONKEY-ISLAND"></td>
+                                <td><img src="assets/icons/map/port-experience/monkey-marker.svg" alt="MONKEY-ISLAND">
+                                </td>
                                 <td>MONKEY ISLAND</td>
                             </tr>
                             <tr data-marker-id="18">
@@ -178,7 +186,8 @@ include_once("include/lang/{$idioma}-map.php");
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label>
-                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close"></button>
+                        <button class="minimize-btn show" aria-label="Cerrar filtro"><img src="assets/icons/map/x.svg"
+                                alt="close"></button>
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -251,8 +260,8 @@ include_once("include/lang/{$idioma}-map.php");
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label>
-                        <button class="minimize-btn show"><img src="assets/icons/map/x.svg" alt="close">
-                        </button>
+                        <button class="minimize-btn show" aria-label="Cerrar filtro"><img src="assets/icons/map/x.svg"
+                                alt="close"></button>
                     </div>
                     <div class="filter-content">
                         <table class="tabla-icons">
@@ -333,7 +342,8 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td>LOCAL ITM</td>
                             </tr> -->
                             <tr data-marker-id="37">
-                                <td><img src="assets/icons/map/retail.svg" alt="MEXICAN-EXPERIENCE-GIFTSHOP-TABACO"></td>
+                                <td><img src="assets/icons/map/retail.svg" alt="MEXICAN-EXPERIENCE-GIFTSHOP-TABACO">
+                                </td>
                                 <td>MEXICAN EXPERIENCE</td>
                             </tr>
 
