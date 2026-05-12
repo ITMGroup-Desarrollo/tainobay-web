@@ -98,6 +98,7 @@ include_once("include/lang/reviews.php");
                     <video class="video vh-100 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted"
                         loop="loop">
                         <source src="assets/videos/TainoBay.mp4" type="video/mp4">
+                        <track kind="captions" src="" srclang="es" label="Español" default>
                     </video>
                 </div>
             </div>
@@ -258,8 +259,7 @@ include_once("include/lang/reviews.php");
                             <div class="collapse-group">
                                 <a href="#collapse-1"
                                     class="d-block parent w-100 text-center text-orange button-plus collapsed"
-                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse"
-                                    aria-label="Ver más sobre pregunta 1">
+                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse">
 
                                     <div class="text-blue content-icon mx-auto mb-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.38 497.68">
@@ -353,7 +353,8 @@ include_once("include/lang/reviews.php");
                                 </div>
                                 <a href="#collapse-2"
                                     class="d-block parent w-100 text-center text-orange button-plus collapsed"
-                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse">
+                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse"
+                                    aria-label="Ver más sobre pregunta 2">
                                     <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                         viewBox="0 0 448 512">
                                         <path fill="currentColor"
@@ -408,7 +409,8 @@ include_once("include/lang/reviews.php");
                                 </div>
                                 <a href="#collapse-3"
                                     class="d-block parent w-100 text-center text-orange button-plus collapsed"
-                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse">
+                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse"
+                                    aria-label="Ver más sobre pregunta 3">
                                     <svg class="rotate-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                         viewBox="0 0 448 512">
                                         <path fill="currentColor"
