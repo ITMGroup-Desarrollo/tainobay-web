@@ -163,7 +163,7 @@ include_once("include/lang/reviews.php");
                         <div class="text-blue d-block">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 class="slide-navigation-item-prev swiper-button-prev text-blue" fill="currentColor"
-                                width="200" height="500" viewBox="0 0 231.26 729.5">
+                                width="200" height="500" viewBox="0 0 231.26 729.5" aria-label="Anterior" role="button">
                                 <path class="cls-1"
                                     d="M126.93,729.5c.78,0,1.57-.13,2.34-.4,3.73-1.29,5.7-5.36,4.41-9.08L15.05,377.88,133.73,9.33c1.21-3.75-.86-7.78-4.61-8.98-3.76-1.22-7.78.85-8.98,4.61L0,378.05l120.19,346.65c1.02,2.95,3.79,4.8,6.74,4.8Z" />
                                 <path class="cls-1"
@@ -229,7 +229,8 @@ include_once("include/lang/reviews.php");
                         <div class="text-blue">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 class="swiper-button-next slide-navigation-item-next text-blue" fill="currentColor"
-                                width="200" height="500" viewBox="0 0 231.26 729.5">
+                                width="200" height="500" viewBox="0 0 231.26 729.5" aria-label="Siguiente"
+                                role="button">
                                 <path class="cls-1"
                                     d="M104.33,729.5c-.78,0-1.57-.13-2.34-.4-3.73-1.29-5.7-5.36-4.41-9.08l118.63-342.14L97.53,9.33c-1.21-3.75.86-7.78,4.61-8.98,3.76-1.22,7.78.85,8.98,4.61l120.14,373.1-120.19,346.65c-1.02,2.95-3.79,4.8-6.74,4.8Z" />
                                 <path class="cls-1"
@@ -261,7 +262,8 @@ include_once("include/lang/reviews.php");
                             <div class="collapse-group">
                                 <a href="#collapse-1"
                                     class="d-block parent w-100 text-center text-orange button-plus collapsed"
-                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse">
+                                    aria-expanded="false" aria-controls="collapse-1" data-bs-toggle="collapse"
+                                    aria-label="Ver más sobre pregunta 1">
 
                                     <div class="text-blue content-icon mx-auto mb-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.38 497.68">
@@ -438,7 +440,7 @@ include_once("include/lang/reviews.php");
         <section id="image-360">
             <a-scene embedded>
                 <a-assets>
-                    <img id="sky" src="assets/images/welcome/image-360.webp" crossorigin="anonymous" loading="lazy" />
+                    <img id="sky" src="assets/images/welcome/image-360.webp" crossorigin="anonymous" />
                 </a-assets>
                 <!-- se cambia los valores de lo que se ve en rango de 0 a -100 a 0 -->
                 <a-sky src="#sky" rotation="0 -100 0"></a-sky>
