@@ -86,7 +86,7 @@ include_once("include/lang/{$idioma}-contact.php");
                     <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
           </div> -->
                     <img src="assets/images/media/header-faqs-port-raino-bay.webp"
-                        class="image banner-fixed fit-cover brightness-8" alt="Banner Faqs." />
+                        class="image banner-fixed fit-cover brightness-8" alt="Banner Faqs." loading="lazy" />
 
                 </div>
                 <!-- Overlay -->
@@ -189,7 +189,7 @@ include_once("include/lang/{$idioma}-contact.php");
                 <!-- Image -->
                 <div class="image-wrapper-form">
                     <img src="assets/images/media/port-taino-bay-faqs.webp" class="image fit-cover brightness-6"
-                        alt="Formulario de contacto Taino Bay Puerto Plata" </div>
+                        alt="Formulario de contacto Taino Bay Puerto Plata" loading="lazy" />
                     <!-- Overlay -->
                     <div class="overlay-blue"></div>
                 </div>

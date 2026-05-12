@@ -145,7 +145,7 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
             $('#blog-container').append(`
                 <div class="blog-post">
                     <div class="title-image">
-                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}">
+                        <img src="${data.image_url}" class="img-fluid imgRound" alt="${data.title}" loading="lazy">
                         <!-- share -->
                         <div class="slide-share position-absolute top-0 end-0 p-1 button-share">
                             <div class="container-btn">
@@ -187,14 +187,14 @@ $title = isset($_GET['title']) ? $_GET['title'] : '';
                     ${data.content.split('\n').map(paragraph => `<p class="justificado">${paragraph}</p>`).join('')}
                 </div>
                 <div class="title-image mb-3">
-                    <img src="${data.image_url2}" class="img-fluid imgRound" alt="${data.title}">
+                    <img src="${data.image_url2}" class="img-fluid imgRound" alt="${data.title}" loading="lazy">
                 </div>
                 <div class="gallery-section">
                     <div class="gallery-title2 mb-2">
                         <h2 class="title"><span class="text-2 text-style-6"><?php echo TITULOS_BLOG[4]; ?></span></h2>
                     </div>
                     <div class="gallery-container2 mb-3">
-                        ${data.images.map(imageUrl => `<img src="${imageUrl}" class="img-fluid gallery-img" alt="Gallery image">`).join('')}
+                        ${data.images.map(imageUrl => `<img src="${imageUrl}" class="img-fluid gallery-img" alt="Gallery image" loading="lazy">`).join('')}
                     </div>
                 </div>
                 

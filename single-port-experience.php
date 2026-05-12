@@ -131,7 +131,7 @@ $currentMenu = current(array_filter($points, function ($point) use ($currentUri)
                 <div class="swiper-slide">
                   <a href="<?= $img ?>" class="item lightbox-link hover-zoom-rotate">
                     <div class="image-wrapper">
-                      <img src="<?= $img ?>" class="image" alt="Imagen de <?= $currentMenu['name'] ?>" />
+                      <img src="<?= $img ?>" class="image" alt="Imagen de <?= $currentMenu['name'] ?>" loading="lazy" />
                     </div>
                   </a>
                 </div>

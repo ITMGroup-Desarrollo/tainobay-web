@@ -32,7 +32,7 @@ include_once("include/lang/{$idioma}-blog.php");
                     <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
           </div> -->
                     <img src="assets/images/blog/header-blog-port-taino-bay.webp"
-                        class="image banner-fixed fit-cover brightness-8" alt="Banner discover beyond." />
+                        class="image banner-fixed fit-cover brightness-8" alt="Banner Blog Taino Bay." loading="lazy" />
 
                 </div>
                 <!-- Overlay -->
@@ -149,7 +149,7 @@ include_once("include/lang/{$idioma}-blog.php");
                             </div>
                             <div class="col-11 col-md-8 col-lg-4 single-list-blog-image">                                  
                                 <div class="image-blog-container imgRound">
-                                    <a href="<?php echo $idioma; ?>/blog/${post.title}"><img src="${post.image_url}" class="imgRound " alt="${title}"></a>
+                                   <img src="${post.image_url}" class="imgRound " alt="${title}" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="col-11 col-md-10 col-lg-5 single-blog-content">

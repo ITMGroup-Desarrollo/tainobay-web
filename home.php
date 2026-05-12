@@ -180,6 +180,7 @@ include_once("include/lang/reviews.php");
                                         <!-- Image wrapper -->
                                         <div class="card-header mb-1">
                                             <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img"
+                                                loading="lazy"
                                                 alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>"
                                                 onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
                                         </div>
@@ -436,7 +437,7 @@ include_once("include/lang/reviews.php");
         <section id="image-360">
             <a-scene embedded>
                 <a-assets>
-                    <img id="sky" src="assets/images/welcome/image-360.webp" crossorigin="anonymous" />
+                    <img id="sky" src="assets/images/welcome/image-360.webp" crossorigin="anonymous" loading="lazy" />
                 </a-assets>
                 <!-- se cambia los valores de lo que se ve en rango de 0 a -100 a 0 -->
                 <a-sky src="#sky" rotation="0 -100 0"></a-sky>

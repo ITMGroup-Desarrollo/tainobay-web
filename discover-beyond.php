@@ -36,7 +36,8 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                     <!-- <div class="banner-fixed" style="background-image:url('assets/images/media/bg-faqs.jpg')">
           </div> -->
                     <img src="assets/images/discover-beyond/banner-header-discovery-beyond-the-cruise.jpg"
-                        class="image banner-fixed fit-cover brightness-8" alt="Banner discover beyond." />
+                        class="image banner-fixed fit-cover brightness-8" alt="Banner Discover Beyond the Cruise."
+                        loading="lazy" />
 
                 </div>
                 <!-- Overlay -->
@@ -185,7 +186,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                 });
                 section.displayWhatToBring.forEach((displayWhatToBrings) => {
                     displayW += `<div class="list-item-container">
-                        <div><img class:"wtbIcon" src=${displayWhatToBrings.iconPath} width="48" height="48" alt="Icono"></div>
+                        <div><img class:"wtbIcon" src=${displayWhatToBrings.iconPath} width="48" height="48" alt="Icono" loading="lazy"></div>
                         <p>${displayWhatToBrings.text}</p>
                         </div>`;
                 });
@@ -197,7 +198,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                             <div class="swiper-slide">
                                 <a href="${galleryImage}" class="item lightbox-link hover-zoom-rotate">
                                     <div class="image-wrapper">
-                                        <img src="${galleryImage}">
+                                        <img src="${galleryImage}" loading="lazy">
                                     </div>
                                 </a>
                             </div>
@@ -212,7 +213,7 @@ include_once("include/lang/{$idioma}-discover-beyond.php");
                                 <div class="carousel-image-wrapper position-relative">
                                     <picture>
                                         <source src="${image}">
-                                        <img src="${image}" class="d-block w-100" alt="Image">
+                                        <img src="${image}" class="d-block w-100" alt="Image" loading="lazy">
                                     </picture>
                                 </div>
                             </div>
