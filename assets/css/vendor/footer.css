@@ -30,6 +30,7 @@
   border-width: 3px;
   border-color: #fff;
 }
+
 .footer-textbox input::placeholder {
   font-size: 0.7rem;
 }
@@ -38,10 +39,12 @@
   background-color: #1c355e;
   color: #fff;
 }
+
 .footer-textbox-button {
   border-color: #fff;
   border-width: 4px;
 }
+
 .footer-content {
   display: flex;
   justify-content: center;
@@ -123,6 +126,7 @@ input::placeholder {
 .item-social .link {
   padding-left: 1.2rem;
 }
+
 .item-social .link:last-child {
   padding-left: 0;
 }
@@ -133,12 +137,10 @@ span.text {
 }
 
 .shock-footer .footer-content .nav-link .text {
-  background: linear-gradient(
-    to right,
-    var(--color),
-    var(--color) 50%,
-    #fff 50%
-  );
+  background: linear-gradient(to right,
+      var(--color),
+      var(--color) 50%,
+      #fff 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -161,6 +163,7 @@ span.text {
 footer {
   overflow: hidden;
 }
+
 .footer-textbox-button a {
   font-size: 0.7rem;
   width: 100% !important;
@@ -184,6 +187,7 @@ footer {
   .footer-textbox-container {
     padding: 0 2rem 0 2rem;
   }
+
   .footer-first-list,
   .footer-second-list {
     flex-direction: row;
@@ -203,27 +207,33 @@ footer {
   }
 
   .footer-first-list a,
-  .footer-second-list a {
-  }
+  .footer-second-list a {}
+
   .footer-second-list .nav-link {
     text-align: center;
   }
+
   .footer-item {
     margin-left: 3rem;
   }
+
   .item-social .link:last-child {
     padding-left: 0;
   }
+
   .footer-item {
     margin-bottom: 1.5rem;
     margin-left: 0;
   }
+
   .footer-first-list .footer-item {
     margin-left: 0;
   }
+
   .footer-second-list .footer-item {
     margin-right: 0;
   }
+
   .item-follow,
   .item-social {
     display: flex;
@@ -231,19 +241,33 @@ footer {
     justify-content: center;
   }
 }
+
 @media (min-width: 768px) {
   .footer-content .container {
     padding: 3rem 5rem 0 5rem;
   }
+
   .footer-textbox input::placeholder {
     font-size: 1rem;
   }
+
   .footer-textbox-button a {
     font-size: 1rem;
   }
 }
+
 /* @media (max-width: 550px) {
   .form-control::placeholder {
     visibility: hidden;
   }
 } */
+.footer-textbox input {
+  color: #ffffff;
+}
+
+.footer-textbox input:focus {
+  color: #ffffff;
+  background: transparent;
+  border-color: #fff;
+  box-shadow: none;
+}

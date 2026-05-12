@@ -23,7 +23,7 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                 <!-- <div class="site-title">Site Title</div> -->
                 <img src="assets/images/<?php echo $logo ?>" data-logo-alt="assets/images/<?php echo $logo ?>"
                     data-logo-mobile="assets/images/<?php echo $logo ?>" alt="Taino Bay Puerto Plata" class="logo"
-                    width="150px" />
+                    width="150" height="50" />
             </a>
             <!-- Menu fixed on screen lg -->
             <!-- <div id="menu-fixed" class="w-85 justify-content-evenly d-none d-lg-flex"> -->

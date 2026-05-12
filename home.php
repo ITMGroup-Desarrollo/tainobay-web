@@ -180,7 +180,7 @@ include_once("include/lang/reviews.php");
                                         <!-- Image wrapper -->
                                         <div class="card-header mb-1">
                                             <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img"
-                                                loading="lazy"
+                                                loading="lazy" width="60" height="60"
                                                 alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>"
                                                 onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
                                         </div>
@@ -196,8 +196,8 @@ include_once("include/lang/reviews.php");
 
                                         <!-- Card content -->
                                         <div class="card-body text-center">
-                                            <h4 class="mb-0"><strong><?= $review['name'] ?></strong></h4>
-                                            <h6 class=""><?= $review['date'] ?></h6>
+                                            <p class="mb-0"><strong><?= $review['name'] ?></strong></p>
+                                            <p class=""><?= $review['date'] ?></p>
                                             <?php
                                             if (strlen($review['review']) > 150) {
                                                 $short_text = substr($review['review'], 0, 140) . '...';
@@ -447,7 +447,7 @@ include_once("include/lang/reviews.php");
                 <a-entity camera look-controls wasd-controls position="0 1.6 0" id="myCamera"></a-entity>
             </a-scene>
         </section>
-        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js" defer></script>
         <script>
             AFRAME.registerComponent('limit-rotation', {
                 tick: function () {
