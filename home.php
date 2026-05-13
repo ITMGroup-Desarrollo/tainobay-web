@@ -97,7 +97,7 @@ include_once("include/lang/reviews.php");
                 <div class="image-wrapper over-gradient">
                     <video class="video vh-100 fit-cover" playsinline="playsinline" autoplay="autoplay" muted="muted"
                         loop="loop">
-                        <source src="assets/videos/TainoBay.mp4" type="video/mp4">
+                        <source src="assets/videos/TainoBay_compri.mp4" type="video/mp4">
                         <track kind="captions" src="" srclang="es" label="Español" default>
                     </video>
                 </div>
@@ -442,14 +442,14 @@ include_once("include/lang/reviews.php");
         <section id="image-360">
             <a-scene embedded>
                 <a-assets>
-                    <img id="sky" src="assets/images/welcome/image-360.webp" crossorigin="anonymous" />
+                    <img id="sky" src="assets/images/welcome/image-360_11zon1.webp" crossorigin="anonymous" />
                 </a-assets>
                 <!-- se cambia los valores de lo que se ve en rango de 0 a -100 a 0 -->
                 <a-sky src="#sky" rotation="0 -100 0"></a-sky>
                 <a-entity camera look-controls wasd-controls position="0 1.6 0" id="myCamera"></a-entity>
             </a-scene>
         </section>
-        <script src="https://aframe.io/releases/1.7.0/aframe.min.js" defer></script>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
         <script>
             AFRAME.registerComponent('limit-rotation', {
                 tick: function () {
