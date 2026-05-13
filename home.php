@@ -180,7 +180,6 @@ include_once("include/lang/reviews.php");
                                         <!-- Image wrapper -->
                                         <div class="card-header mb-1">
                                             <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img"
-                                                loading="lazy" width="60" height="60"
                                                 alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>"
                                                 onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
                                         </div>
@@ -196,8 +195,8 @@ include_once("include/lang/reviews.php");
 
                                         <!-- Card content -->
                                         <div class="card-body text-center">
-                                            <p class="mb-0"><strong><?= $review['name'] ?></strong></p>
-                                            <p class=""><?= $review['date'] ?></p>
+                                            <h4 class="mb-0"><strong><?= $review['name'] ?></strong></h4>
+                                            <h6 class=""><?= $review['date'] ?></h6>
                                             <?php
                                             if (strlen($review['review']) > 150) {
                                                 $short_text = substr($review['review'], 0, 140) . '...';
@@ -209,10 +208,7 @@ include_once("include/lang/reviews.php");
                                             <?php } ?>
                                             <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer'
                                                 class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase'
-                                                style="font-size: 12px;"
-                                                title="Ver reseña de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?> en TripAdvisor"
-                                                aria-label="Ver reseña de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?> en TripAdvisor">Ver
-                                                reseña de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?></a>
+                                                style="font-size: 12px;"><?= BTN_REVIEW ?></a>
                                         </div>
                                         <!-- Quotes Right -->
                                         <div class="text-orange text-end mt-1">
@@ -223,7 +219,7 @@ include_once("include/lang/reviews.php");
                                             </svg>
                                         </div>
                                     </div>
-                                <?php } ?>  
+                                <?php } ?>
                             </div>
                         </div>
 
