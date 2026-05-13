@@ -31,7 +31,7 @@ $points = [
     'banner' => 'blue-parrot/header-blue-parrot-port-experience.webp',
     'cover' => 'blue-parrot/cover-blue-parrot-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/port-experience/blue-parrot/blue-parrot-six.jpg'],
+    'gallery' => ['assets/images/port-experience/blue-parrot/blue-parrot-six_11zon.jpg'],
     'text_home' => "¡Un ambiente único y colorido te da la bienvenida en Blue Parrot! Encuentra un sabor inolvidable en su increíble menú de mariscos inspirado en el Caribe.",
     'pdf' => 'port-experience/blue-parrot.pdf',
     'single_gallery' => [
@@ -86,7 +86,7 @@ $points = [
     'banner' => 'cantina-latina/header-cantina-latina-port-experience.webp',
     'cover' => 'cantina-latina/cover-cantina-latina-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets/images/port-experience/cantina-latina/carousel-cantina-latina_.webp'],
+    'gallery' => ['assets/images/port-experience/cantina-latina/carousel-cantina-latina_11zon.webp'],
     'text_home' => '¡Disfruta el Puerto Plata! Cantina Latina te invita a disfrutar platillos a la parrilla, clásicos de cocina dominicana y bebidas refrescantes en una atmósfera acogedora, lista para recibir a todos.',
     'single_gallery' => [
       'assets\images\port-experience\cantina-latina\gallery\CANTINA_LATINA_1.webp',
@@ -203,7 +203,7 @@ $points = [
     'banner' => 'icekery\header-icekery-port-experience.webp',
     'cover' => 'icekery\cover-icekery.webp',
     'title' => 'Menu',
-    'gallery' => ['assets\images\port-experience\icekery\carousel-icekery.webp'],
+    'gallery' => ['assets\images\port-experience\icekery\carousel-icekery_11zon.webp'],
     'text_home' => "¡Encontramos la solución para el calor! Icekery es el lugar perfecto para disfrutar de un delicioso helado. Elige tu sabor y toppings favoritos, ¡y no dejes que se derrita!  ",
     'single_gallery' => [
       'assets\images\port-experience\icekery\gallery\ICEKERY_1.webp',
@@ -267,7 +267,7 @@ $points = [
           <path d="M228.45,137.13c.75,4.39.86,8.81.34,13.19,3.45-1.45,5.43-3.13,5.66-4.88.34-2.63-2.97-5.99-5.99-8.31Z"/>
           <path d="M186.4,109.88c-10.88-7.03-23.07-9.62-35.77-10.24-.74,0-1.45.02-2.15,0-1.27-.06-2.29.3-2.33,1.75-.04,1.45.93,1.8,2.22,1.86,3.23.15,6.46.27,9.66.64,9.13,1.08,17.88,3.48,25.71,8.45,6.99,4.43,12.55,9.94,12.89,18.96.04,1.11.8,1.71,1.89,1.66,1.11-.05,1.83-.73,1.66-1.84-.35-2.37-.55-4.82-1.37-7.04-2.31-6.27-6.94-10.67-12.42-14.21Z"/>
         </svg>',
-    'banner' => 'lazy-river\header-lazy-river.webp',
+    'banner' => 'lazy-river\header-lazy-river_11zon.webp',
     'cover' => 'lazy-river\cover-lazy-river-port-experience.webp',
     'title' => 'Menu',
     'text_home' => "¡Una nueva forma de explorar el puerto! Toma un flotador y déjate llevar en esta experiencia en el puerto.",
@@ -362,7 +362,7 @@ $points = [
     'banner' => 'mojito-bar/header-mojito-bar-port-experience.webp',
     'cover' => 'mojito-bar/mojito-bar-one.webp',
     'title' => 'Menu',
-    'gallery' => ['assets\images\port-experience\mojito-bar\carousel-mojito-bar.webp'],
+    'gallery' => ['assets\images\port-experience\mojito-bar\carousel-mojito-bar_11zon.webp'],
     'text_home' => "Si la vida te da limones, ¡mézclalos con ron y haz mojitos! Cócteles, tequila, ron y, por supuesto, frescos mojitos con diferentes sabores. ¡Salud!",
     'single_gallery' => [
       'assets\images\port-experience\mojito-bar\gallery\MOJITO_BAR_1.webp',
@@ -608,7 +608,7 @@ $points = [
     'banner' => 'tiki-tiki/header-tiki-tiki-port-experience.webp',
     'cover' => 'tiki-tiki/cover-tiki-tiki-port-experience.webp',
     'title' => 'Menu',
-    'gallery' => ['assets\images\port-experience\tiki-tiki\carousel-tiki-tiki.webp'],
+    'gallery' => ['assets\images\port-experience\tiki-tiki\carousel-tiki-tiki_11zon.webp'],
     'text_home' => 'Ubicado en nuestra área inspirada en la playa, a pasos del Lazy River, en Tiki Tiki encontrarás tus drinks favoritos para tu día en Taino Bay.',
     'single_gallery' => [
       'assets\images\port-experience\tiki-tiki\gallery\TIKI_TIKI_1.webp',

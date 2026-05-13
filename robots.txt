@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /include/
+Disallow: /assets/js/
+Disallow: /vendor/
+
+Sitemap: https://porttainobay.com/sitemap.xml
