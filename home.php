@@ -169,15 +169,17 @@ include_once("include/lang/reviews.php");
                                     <div class="card-review rounded-5 d-flex flex-column position-relative swiper-slide">
                                         <!-- Image wrapper -->
                                         <div class="card-header mb-1">
-                                            <img src="<?= $review['avatar'] ?>"
-                                                class="rounded-circle user-img"
-                                                alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>" onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
+                                            <img src="<?= $review['avatar'] ?>" class="rounded-circle user-img"
+                                                alt="Avatar de <?= htmlspecialchars($review['name'], ENT_QUOTES) ?>"
+                                                onerror="this.onerror=null;this.src='https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif';">
                                         </div>
 
                                         <!-- Quotes left -->
                                         <div class=" text-orange mb-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-                                                <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179" />
                                             </svg>
                                         </div>
 
@@ -188,22 +190,26 @@ include_once("include/lang/reviews.php");
                                             <?php
                                             if (strlen($review['review']) > 150) {
                                                 $short_text = substr($review['review'], 0, 140) . '...';
-                                            ?>
+                                                ?>
                                                 <p class='text-justify text-xs bold'><?= $short_text ?></p>
 
-                                            <?php  } else { ?>
+                                            <?php } else { ?>
                                                 <p class='text-justify text-xs bold'><?= $review['review'] ?></p>
                                             <?php } ?>
-                                            <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer' class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase' style="font-size: 12px;"><?= BTN_REVIEW ?></a>
+                                            <a href='<?= $review['url'] ?>' target='_blank' rel='noopener noreferrer'
+                                                class='button-transparent-reviews button-orange text-center d-inline-block text-uppercase'
+                                                style="font-size: 12px;"><?= BTN_REVIEW ?></a>
                                         </div>
                                         <!-- Quotes Right -->
                                         <div class="text-orange text-end mt-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-                                                <path fill="currentColor" d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.248-5.621c-.537.278-1.24.375-1.93.311c-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179m-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621c-.537.278-1.24.375-1.929.311C4.591 12.323 3.17 10.842 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.248-5.621c-.537.278-1.24.375-1.93.311c-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179m-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621c-.537.278-1.24.375-1.929.311C4.591 12.323 3.17 10.842 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179" />
                                             </svg>
                                         </div>
                                     </div>
-                                <?php } ?>
+                                <?php } ?>  
                             </div>
                         </div>
 
