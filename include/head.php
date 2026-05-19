@@ -18,7 +18,7 @@
 <!-- Preconnect -->
 <link rel="preconnect" href="https://aframe.io" />
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preload" as="video" href="assets/videos/TainoBay.mp4" type="video/mp4">
+<link rel="preload" as="video" href="assets/videos/TainoBay_compri.mp4" type="video/mp4">
 
 <!-- Vendor Style Sheet -->
 <link rel="stylesheet" href="assets/css/vendor/font-family.min.css" />
