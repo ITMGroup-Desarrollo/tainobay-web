@@ -129,7 +129,8 @@
             <!-- Image -->
             <div class="slide-image-wrapper">
                 <div class="slide-image-inner">
-                    <img src=<?= $point['gallery'][0] ?> class="image slide-image" alt="<?= $point['name'] ?>" />
+                    <img src="<?= $point['gallery'][0] ?>" class="image slide-image" alt="<?= $point['name'] ?>"
+                        loading="lazy" />
                 </div>
             </div>
         </div>
