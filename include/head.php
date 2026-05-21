@@ -18,6 +18,8 @@
 <!-- Preconnect -->
 <link rel="preconnect" href="https://aframe.io" />
 <link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://p.typekit.net" crossorigin />
+<link rel="preconnect" href="https://use.typekit.net" crossorigin />
 <link rel="preload" as="video" href="assets/videos/TainoBay_compri.mp4" type="video/mp4">
 
 <!-- Vendor Style Sheet -->
