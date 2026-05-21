@@ -13,7 +13,7 @@
 <script src="assets/js/vendor/bricklayer.min.js" defer></script>
 <script src="assets/js/vendor/lightbox.min.js" defer></script>
 <script src="assets/js/vendor/typed.min.js" defer></script>
-<script src="assets/js/vendor/progressbar.min.js" defer></script>
+<!-- <script src="assets/js/vendor/progressbar.min.js" defer></script> -->
 <script src="assets/js/vendor/map-styles.min.js" defer></script>
 <script src="assets/js/vendor/magnetic-effect.min.js?v=2.0" defer></script>
 <script src='assets/js/vendor/gsap.min.js' defer></script>
