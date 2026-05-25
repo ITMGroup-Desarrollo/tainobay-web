@@ -445,7 +445,17 @@ include_once("include/lang/reviews.php");
                 <a-entity camera look-controls wasd-controls position="0 1.6 0" id="myCamera"></a-entity>
             </a-scene>
         </section>
-        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <script>
+            const observer360 = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    const script = document.createElement('script');
+                    script.src = 'https://aframe.io/releases/1.7.0/aframe.min.js';
+                    document.head.appendChild(script);
+                    observer360.disconnect();
+                }
+            });
+            observer360.observe(document.getElementById('image-360'));
+        </script>
         <script>
             AFRAME.registerComponent('limit-rotation', {
                 tick: function () {

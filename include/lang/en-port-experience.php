@@ -437,7 +437,7 @@ $points = [
   //   ],
   // ],
   [
-    'id' => 15,
+    'id' => 14,
     'type' => 'public',
     'name' => 'Pool and Shows',
     'path' => 'pool',
@@ -467,7 +467,7 @@ $points = [
     ],
   ],
   [
-    'id' => 16,
+    'id' => 15,
     'type' => 'public',
     'name' => 'Shopping Experience',
     'path' => 'shopping-experience',
@@ -524,7 +524,7 @@ $points = [
   //   'pdf' => 'port-experience/rum-rum-bar.pdf'
   // ],
   [
-    'id' => 18,
+    'id' => 16,
     'type' => 'public',
     'name' => 'Spa Wellness',
     'path' => 'spa-wellness',
@@ -558,7 +558,7 @@ $points = [
     ],
   ],
   [
-    'id' => 19,
+    'id' => 17,
     'type' => 'public',
     'name' => 'Splash Surfing',
     'path' => 'splash-surfing',
@@ -585,7 +585,7 @@ $points = [
     ],
   ],
   [
-    'id' => 20,
+    'id' => 18,
     'type' => 'restaurant',
     'name' => 'Taco Lover',
     'path' => 'taco-lover',
@@ -617,7 +617,7 @@ $points = [
     'pdf' => 'port-experience/taco-lover.pdf'
   ],
   [
-    'id' => 21,
+    'id' => 19,
     'type' => 'restaurant',
     'name' => 'Tiki Tiki',
     'path' => 'tiki-tiki',
@@ -641,7 +641,7 @@ $points = [
     'pdf' => 'port-experience/tiki-tiki.pdf'
   ],
   [
-    'id' => 22,
+    'id' => 20,
     'type' => 'public',
     'name' => 'Aviary',
     'path' => 'aviary',
@@ -674,7 +674,7 @@ $points = [
     ],
   ],
   [
-    'id' => 23,
+    'id' => 21,
     'type' => 'public',
     'name' => 'Batting Legends',
     'path' => 'batting-legends',
