@@ -13,12 +13,21 @@
 <script src="assets/js/vendor/bricklayer.min.js" defer></script>
 <script src="assets/js/vendor/lightbox.min.js" defer></script>
 <script src="assets/js/vendor/typed.min.js" defer></script>
-<script src="assets/js/vendor/progressbar.min.js" defer></script>
+<!-- <script src="assets/js/vendor/progressbar.min.js" defer></script> -->
 <script src="assets/js/vendor/map-styles.min.js" defer></script>
 <script src="assets/js/vendor/magnetic-effect.min.js?v=2.0" defer></script>
 <script src='assets/js/vendor/gsap.min.js' defer></script>
 <script src="assets/js/vendor/aos.min.js" defer></script>
-<script src="assets/js/vendor/lax.min.js" defer></script>
+<script>
+    window.addEventListener('scroll', function () {
+        if (!window.laxLoaded) {
+            window.laxLoaded = true;
+            var script = document.createElement('script');
+            script.src = 'assets/js/vendor/lax.min.js';
+            document.body.appendChild(script);
+        }
+    }, { passive: true });
+</script>
 <script src="assets/js/vendor/cursor-effect.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" defer></script>
 
