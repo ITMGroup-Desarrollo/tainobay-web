@@ -1,3 +1,3 @@
 <?php
-header("Location: tiki-tiki.pdf");
+header("Location: tiki-tiki-2.pdf");
 exit;
