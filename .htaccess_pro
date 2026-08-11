@@ -78,6 +78,7 @@ Options -Indexes
 
 RewriteEngine on
 RewriteBase /
+RewriteRule ^map-aviario/?$ mapa-aviario/index.php [L]
 
 # 🔒 Forzar HTTPS
 RewriteCond %{HTTPS} off
