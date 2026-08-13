@@ -4,6 +4,13 @@ include_once("include/config.php");
 include_once("include/lang/{$idioma}-port-experience.php");
 include_once("include/lang/{$idioma}-single-port-experience.php");
 
+// Ordenar las tarjetas por orden alfabético de su nombre (título)
+usort($points, function($a, $b) {
+    $nameA = str_replace('&nbsp;', ' ', $a['name']);
+    $nameB = str_replace('&nbsp;', ' ', $b['name']);
+    return strcasecmp($nameA, $nameB);
+});
+
 ?>
 <!DOCTYPE HTML>
 <html lang="<?php echo $idioma; ?>">
@@ -66,7 +73,7 @@ include_once("include/lang/{$idioma}-single-port-experience.php");
     <section class="shock-section pb-5" data-aos="fade-up" data-aos-delay="400" data-aos-duration="500">
       <div class="container max-w-85">
         <div class="container text-center">
-          <div class="row row-cols-3 g-2">
+          <div class="row row-cols-3 g-2 <?= (count($points) % 3 === 1) ? 'justify-content-center' : '' ?>">
             <?php foreach ($points as $point) { ?>
               <div class="col-12 col-md-4">
                 <div class="card-port text-bg-dark">
