@@ -1707,6 +1707,24 @@ var markers = {
           pan: { duration: 1 },
         });
       }),
+    L.marker([990, 1250], { icon: retailIcon })
+      .addTo(map)
+      .bindPopup(
+        `
+            <div class="pop" style="text-align: center;">
+            <img src="assets/icons/map/retail-logo.svg" alt="Logo" style="width: 50px; height: 50px; margin: 5px 0 10px 0;">
+                <p class="popupTitle">DUFRY</p>
+                <p>${idioma === "es" ? "Tienda" : "Big Retailer"}</p>
+            </div>
+        `,
+      )
+      .on("click", function (e) {
+        this.openPopup();
+        map.setView(this.getLatLng(), map.getZoom(), {
+          animate: true,
+          pan: { duration: 1 },
+        });
+      }),
   ],
   22: [
     L.marker([990, 960], { icon: retailIcon })
@@ -2520,37 +2538,37 @@ var markers = {
         });
       }),
   ],
-  60: [
-    L.marker([990, 1250], { icon: foodIcon })
-      .addTo(map)
-      .bindPopup(
-        `
-            <div class="pop" style="text-align: center;">
-            <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
-            <p>${
-              idioma === "es"
-                ? "¡Empecemos la fiesta con un drink!"
-                : "Let’s start this party with a drink"
-            }</p>
-            <a href="${idioma}/port-experience/keloke">
-                    <button 
-                      style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                      onmouseover="this.style.backgroundColor='#f5a23a';" 
-                      onmouseout="this.style.backgroundColor='#1c355e';">
-                      ${idioma === "es" ? "Ver más" : "View more"}
-                    </button>
-                </a>
-            </div>
-        `,
-      )
-      .on("click", function (e) {
-        this.openPopup();
-        map.setView(this.getLatLng(), map.getZoom(), {
-          animate: true,
-          pan: { duration: 1 },
-        });
-      }),
-  ],
+  // 60: [
+  //   L.marker([990, 1250], { icon: foodIcon })
+  //     .addTo(map)
+  //     .bindPopup(
+  //       `
+  //           <div class="pop" style="text-align: center;">
+  //           <img src="assets/icons/map/port-experience/keloke-bar.svg" alt="Logo" style="width: 90px; height: 90px;">
+  //           <p>${
+  //             idioma === "es"
+  //               ? "¡Empecemos la fiesta con un drink!"
+  //               : "Let’s start this party with a drink"
+  //           }</p>
+  //           <a href="${idioma}/port-experience/keloke">
+  //                   <button
+  //                     style="padding: 5px 10px; background-color: #1c355e; color: white; border: none; border-radius: 5px; cursor: pointer;"
+  //                     onmouseover="this.style.backgroundColor='#f5a23a';"
+  //                     onmouseout="this.style.backgroundColor='#1c355e';">
+  //                     ${idioma === "es" ? "Ver más" : "View more"}
+  //                   </button>
+  //               </a>
+  //           </div>
+  //       `,
+  //     )
+  //     .on("click", function (e) {
+  //       this.openPopup();
+  //       map.setView(this.getLatLng(), map.getZoom(), {
+  //         animate: true,
+  //         pan: { duration: 1 },
+  //       });
+  //     }),
+  // ],
   61: [
     L.marker([890, 860], { icon: foodIcon })
       .addTo(map)

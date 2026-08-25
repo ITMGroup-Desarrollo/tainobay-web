@@ -195,10 +195,10 @@ include_once("include/lang/{$idioma}-map.php");
                                 <td><img src="assets/icons/map/bar.svg" alt="BATTING LEGENDS"></td>
                                 <td>BATTING LEGENDS</td>
                             </tr>
-                            <tr data-marker-id="60">
+                            <!-- <tr data-marker-id="">
                                 <td><img src="assets/icons/map/food.svg" alt="BAR-KELOKE"></td>
                                 <td>KELOKÉ BAR</td>
-                            </tr>
+                            </tr> -->
 
                             <tr data-marker-id="61">
                                 <td><img src="assets/icons/map/food.svg" alt="THE COFFEE FACTORY"></td>
