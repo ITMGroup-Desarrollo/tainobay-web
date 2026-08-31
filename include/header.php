@@ -45,9 +45,9 @@ if ($page == 'points-of-interest.php' or $page == 'what-to-do.php' or $page == '
                     <?php include("include/search.php"); ?>
                 </div>
                 <div class="social-media">
-                    <a href="https://www.facebook.com/TainobayPuertoPlata/" class="link" target="_self"
+                    <a href="https://www.facebook.com/tainobayport/" class="link" target="_self"
                         aria-label="Facebook de Taino Bay"><i class="icon fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/tainobay_puertoplata/" class="link" target="_self"
+                    <a href="https://www.instagram.com/porttainobay/" class="link" target="_self"
                         aria-label="Instagram de Taino Bay"><i class="icon fab fa-instagram"></i></a>
                     <a href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html"
                         class="link" target="_self" aria-label="TripAdvisor de Taino Bay">

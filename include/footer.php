@@ -76,7 +76,7 @@
                                         </a>
                                     </div>
                                     <div class="item-social">
-                                        <a href="https://www.facebook.com//tainobayport/" class="link black black-hover"
+                                        <a href="https://www.facebook.com/tainobayport/" class="link black black-hover"
                                             target="_self" aria-label="Facebook de Taino Bay"><i
                                                 class="icon fab fa-facebook-f"
                                                 style="color: white; font-size:2rem"></i></a>
