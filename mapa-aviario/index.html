@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aviarius Bird Experience – Taino Bay Puerto Plata</title>
     <meta name="description"
-        content="Welcome to Aviarius Bird Experience at Taino Bay Puerto Plata. Making feathery friends and having the best time! Discover Aviarius and get the Port Taino Bay map.">
+        content="Welcome to Aviarius Bird Experience at Taino Bay Puerto Plata. Get ready to explore and have a day to remember! Discover Aviarius and get the Port Taino Bay map.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
@@ -66,7 +66,7 @@
             left: 0;
             width: 52vw;
             height: 100%;
-            background: var(--green-dark);
+            background: var(--green-dark) url('assets/fondo.jpg') center/cover no-repeat;
             overflow: hidden;
             z-index: 0;
         }
@@ -78,7 +78,7 @@
             inset: 0;
             background:
                 radial-gradient(ellipse 90% 70% at 10% 90%, rgba(0, 0, 0, 0.45) 0%, transparent 65%),
-                radial-gradient(ellipse 70% 50% at 85% 10%, rgba(50, 90, 45, 0.35) 0%, transparent 70%);
+                radial-gradient(ellipse 70% 50% at 85% 10%, rgba(50, 90, 45, 0.25) 0%, transparent 70%);
             pointer-events: none;
             z-index: 1;
         }
@@ -99,8 +99,6 @@
             width: 100%;
             object-fit: fill;
             display: block;
-            /* Warm tint to blend SVG (#FCFCFC) closer to cream (#F4EEE0) */
-            filter: sepia(20%) saturate(0.6) brightness(0.97) hue-rotate(8deg);
         }
 
         /* ── Birds ── */
@@ -112,19 +110,18 @@
         .bird-white {
             top: 5vh;
             left: 4vw;
-            width: clamp(130px, 19vw, 290px);
+            width: clamp(160px, 25vw, 380px);
             height: auto;
-            transform: scaleX(-1);
-            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.25));
         }
 
         .bird-blue {
-            top: 20%;
-            left: 14vw;
-            width: clamp(100px, 14vw, 210px);
+            top: 18%;
+            left: 22vw;
+            width: clamp(130px, 20vw, 300px);
             height: auto;
-            transform: scaleX(-1) rotate(-8deg);
-            filter: drop-shadow(0 6px 18px rgba(0,0,0,0.2));
+            transform: rotate(-8deg);
+            filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.2));
         }
 
         .bird-parrot {
@@ -132,47 +129,33 @@
             left: 1vw;
             width: clamp(150px, 22vw, 330px);
             height: auto;
-            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
         }
 
-        /* ── Plant decorations at bottom of hero ── */
-        .hero-plants {
+        /* ── Plant decoration desktop ── */
+        .plant-center {
             position: absolute;
             bottom: 0;
-            left: 0;
-            /* Constrain to green panel area — avoid the wave transition zone */
-            width: 46vw;
+            left: 40%;
+            transform: translateX(-50%);
+            width: clamp(100px, 14vw, 210px);
+            height: auto;
             z-index: 4;
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
             pointer-events: none;
         }
 
-        .plant-left {
-            width: clamp(90px, 13vw, 200px);
-            height: auto;
-            transform: scaleX(-1);
-        }
-
-        .plant-right-hero {
-            width: clamp(90px, 13vw, 200px);
-            height: auto;
-        }
-
-        /* ── Taino Bay logo — bottom-left area of hero ── */
+        /* ── Taino Bay logo desktop hero ── */
         .hero-logo {
             position: absolute;
             bottom: clamp(50px, 10vh, 100px);
             left: clamp(60px, 10vw, 180px);
-            width: clamp(100px, 13vw, 185px);
+            width: clamp(110px, 14vw, 200px);
             height: auto;
             z-index: 5;
-            filter: brightness(0) invert(1);
-            opacity: 0.85;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
         }
 
-        /* ── Content panel — right side ── */
+        /* ── Content panel — right side desktop ── */
         .content {
             position: absolute;
             top: 0;
@@ -190,14 +173,12 @@
             z-index: 6;
         }
 
-        /* Aviarius logo (desktop, right panel) */
         .aviarius-logo {
             width: clamp(200px, 28vw, 420px);
             height: auto;
             display: block;
         }
 
-        /* Subtitle */
         .subtitle {
             color: var(--dark-text);
             font-size: clamp(14px, 1.5vw, 24px);
@@ -205,7 +186,6 @@
             line-height: 1.55;
         }
 
-        /* Buttons container */
         .buttons {
             display: flex;
             flex-direction: column;
@@ -214,7 +194,6 @@
             align-items: center;
         }
 
-        /* CTA pill buttons */
         .cta-btn {
             display: flex;
             align-items: center;
@@ -256,18 +235,11 @@
             line-height: 1;
         }
 
-        /* "Let's connect!" section */
         .social-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: clamp(8px, 1.2vh, 16px);
-        }
-
-        .social-label {
-            font-size: clamp(14px, 1.4vw, 22px);
-            font-weight: 600;
-            color: var(--dark-text);
         }
 
         .social-icons {
@@ -294,29 +266,29 @@
             display: block;
         }
 
-        /* Small plant accent — bottom right of content */
         .content-plant {
             position: absolute;
             bottom: 0;
             right: 0;
-            width: clamp(70px, 10vw, 160px);
+            width: clamp(140px, 18vw, 290px);
             height: auto;
             pointer-events: none;
-            opacity: 0.45;
-            z-index: 0;
+            opacity: 1;
+            z-index: 7;
         }
 
-        /* Mobile-only elements hidden on desktop */
-        .photo-section {
+        .mobile-plant-left,
+        .mobile-plant-right {
             display: none;
         }
 
+        .photo-section,
         .mobile-footer {
             display: none;
         }
 
         /* ═══════════════════════════════════════════════════
-           TABLET / iPAD (≤ 900px) — stacked layout
+           TABLET & MOBILE (≤ 900px) — stacked layout
         ═══════════════════════════════════════════════════ */
         @media (max-width: 900px) {
 
@@ -330,101 +302,72 @@
                 background: var(--cream);
             }
 
-            /* Hide desktop-specific absolute elements */
             .hero-panel,
             .wave-divider,
             .content-plant {
                 display: none;
             }
 
-            /* ─ Mobile hero section ─ */
+            /* ─ Mobile hero section with texture background ─ */
             .photo-section {
                 display: block;
                 position: relative;
                 width: 100%;
                 overflow: hidden;
-                height: 50vh;
+                height: 46vh;
                 min-height: 350px;
-                max-height: 540px;
-                background: var(--green-dark);
+                max-height: 500px;
+                background: var(--green-dark) url('assets/fondo.jpg') center/cover no-repeat;
             }
 
             .photo-overlay {
                 position: absolute;
                 inset: 0;
-                background: radial-gradient(ellipse 140% 80% at bottom left,
-                    rgba(0, 0, 0, 0.35) 0%,
-                    transparent 70%);
+                background: radial-gradient(circle at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.35) 100%);
                 z-index: 1;
             }
 
-            /* Mobile birds */
+            /* Mobile birds — EVEN LARGER size matching official screenshot */
             .mobile-bird-white {
                 position: absolute;
-                top: 4%;
-                left: 3%;
-                width: clamp(90px, 24vw, 190px);
+                top: 5%;
+                left: 5%;
+                width: clamp(160px, 52vw, 290px);
                 height: auto;
-                transform: scaleX(-1);
                 z-index: 3;
-                filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+                filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
             }
 
             .mobile-bird-blue {
                 position: absolute;
-                top: 12%;
-                right: 4%;
-                width: clamp(70px, 20vw, 160px);
+                top: 30%;
+                right: 5%;
+                width: clamp(150px, 52vw, 260px);
                 height: auto;
-                transform: scaleX(-1);
                 z-index: 3;
-                filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+                filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.25));
             }
 
             .mobile-bird-parrot {
                 position: absolute;
-                bottom: 14%;
-                left: 3%;
-                width: clamp(110px, 30vw, 230px);
+                top: 40%;
+                left: 5%;
+                width: clamp(160px, 42vw, 290px);
                 height: auto;
                 z-index: 3;
-                filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+                filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
             }
 
-            /* Aviarius logo centered on hero */
-            .mobile-aviarius-logo {
+            /* Taino Bay logo — centered below birds */
+            .mobile-taino-logo {
                 position: absolute;
-                top: 50%;
+                top: 65%;
                 left: 50%;
-                transform: translate(-50%, -50%);
-                width: clamp(150px, 52vw, 340px);
+                transform: translateX(-50%);
+                width: clamp(100px, 32vw, 170px);
                 height: auto;
-                filter: brightness(0) invert(1);
                 z-index: 4;
-            }
-
-            /* Plants at bottom of mobile hero */
-            .mobile-plants {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-                z-index: 3;
-                pointer-events: none;
-            }
-
-            .mobile-plant-l {
-                width: clamp(55px, 16vw, 130px);
-                height: auto;
-                transform: scaleX(-1);
-            }
-
-            .mobile-plant-r {
-                width: clamp(70px, 18vw, 150px);
-                height: auto;
+                filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
             }
 
             /* Cream wave at the bottom of hero */
@@ -433,7 +376,7 @@
                 bottom: -1px;
                 left: 0;
                 width: 100%;
-                height: 64px;
+                height: 56px;
                 z-index: 5;
             }
 
@@ -443,78 +386,80 @@
                 height: 100%;
             }
 
-            /* ─ Content ─ */
+            /* ─ Content — taller cream section with narrower content ─ */
             .content {
-                position: static;
+                position: relative;
                 width: 100%;
+                min-height: 54vh;
                 height: auto;
                 flex: 1;
-                padding: clamp(24px, 5vw, 52px) clamp(20px, 6vw, 52px) clamp(16px, 3vw, 28px);
-                gap: clamp(16px, 3vw, 28px);
+                padding: clamp(24px, 5vw, 44px) clamp(28px, 8vw, 60px) clamp(45px, 10vw, 85px);
+                gap: clamp(12px, 2.5vw, 20px);
                 justify-content: center;
+                align-items: center;
                 background: var(--cream);
+                overflow: hidden;
             }
 
-            /* Hide the desktop logo — mobile uses photo-section logo */
+            .content>* {
+                position: relative;
+                z-index: 2;
+            }
+
             .aviarius-logo {
-                display: none;
+                display: block;
+                width: clamp(160px, 54vw, 280px);
             }
 
             .subtitle {
-                font-size: clamp(20px, 4.8vw, 34px);
+                font-size: clamp(15px, 4.2vw, 24px);
+                font-weight: 500;
+                padding: 1rem 0;
+                line-height: 1.35;
+                max-width: 270px;
             }
 
             .cta-btn {
-                width: clamp(240px, 74vw, 440px);
-                font-size: clamp(16px, 3.6vw, 26px);
-                padding: clamp(13px, 2.5vw, 20px) clamp(22px, 4vw, 36px);
-            }
-
-            .social-label {
-                font-size: clamp(16px, 3.6vw, 26px);
+                width: clamp(190px, 64vw, 290px);
+                font-size: clamp(14px, 3.4vw, 21px);
+                padding: clamp(11px, 2vw, 16px) clamp(18px, 3.5vw, 28px);
+                box-shadow: 0 4px 14px rgba(224, 123, 40, 0.28);
             }
 
             .social-icons {
-                gap: clamp(22px, 5vw, 50px);
+                margin-top: 2rem;
+                gap: clamp(16px, 4vw, 30px);
             }
 
             .social-icon {
-                width: clamp(44px, 9vw, 70px);
+                width: clamp(34px, 7.8vw, 48px);
             }
 
-            /* ─ Green footer ─ */
-            .mobile-footer {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                background: transparent;
-            }
-
-            .footer-wave {
-                width: 100%;
-                height: 64px;
+            /* Mobile plants sitting at the bottom corners of cream section — untouched by narrow buttons */
+            .mobile-plant-left {
                 display: block;
-                margin-top: -1px;
-            }
-
-            .footer-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                background: var(--green-dark);
-                height: 130px;
-                padding-bottom: clamp(16px, 3vw, 28px);
-            }
-
-            .footer-logo {
-                width: clamp(120px, 40vw, 260px);
+                position: absolute;
+                bottom: -5px;
+                left: -30px;
+                width: clamp(85px, 26vw, 150px);
                 height: auto;
-                margin-top: clamp(4px, 2vw, 16px);
-                filter: brightness(0) invert(1);
-                opacity: 0.88;
+                z-index: 1;
+                pointer-events: none;
+            }
+
+            .mobile-plant-right {
+                display: block;
+                position: absolute;
+                bottom: -5px;
+                right: -30px;
+                width: clamp(95px, 28vw, 165px);
+                height: auto;
+                z-index: 1;
+                pointer-events: none;
+            }
+
+            .mobile-footer {
+                display: none;
             }
         }
 
@@ -524,31 +469,34 @@
         @media (max-width: 600px) {
 
             .photo-section {
-                height: 50vh;
-                min-height: 300px;
+                height: 46vh;
+                min-height: 340px;
             }
 
-            .footer-content {
-                height: 130px;
-                padding-bottom: clamp(20px, 5vw, 36px);
-            }
-
-            .subtitle {
-                font-size: clamp(18px, 5.5vw, 28px);
-            }
+            /* .subtitle {
+                font-size: clamp(14px, 4.4vw, 22px);
+            } */
 
             .cta-btn {
-                width: clamp(220px, 82vw, 360px);
-                font-size: clamp(15px, 4.2vw, 22px);
+                width: clamp(190px, 66vw, 280px);
+                font-size: clamp(14px, 3.8vw, 20px);
             }
 
             .content {
-                padding: clamp(20px, 5vw, 36px) 16px 12px;
-                gap: clamp(14px, 4vw, 22px);
+                padding: clamp(20px, 4vw, 32px) 24px clamp(45px, 10vw, 80px);
+                gap: clamp(12px, 3vw, 18px);
             }
 
             .social-icon {
-                width: clamp(40px, 11vw, 62px);
+                width: clamp(32px, 8vw, 44px);
+            }
+
+            .mobile-plant-left {
+                width: clamp(80px, 26vw, 135px);
+            }
+
+            .mobile-plant-right {
+                width: clamp(90px, 28vw, 150px);
             }
         }
     </style>
@@ -562,11 +510,9 @@
             <img class="bird bird-white" src="assets/AVE BLANCA.png" alt="">
             <img class="bird bird-blue" src="assets/AVE Azul.png" alt="">
             <img class="bird bird-parrot" src="assets/AVE ROJA.png" alt="">
-            <div class="hero-plants">
-                <img class="plant-left" src="assets/planta2.png" alt="">
-                <img class="plant-right-hero" src="assets/planta1.png" alt="">
-            </div>
-            <img class="hero-logo" src="assets/LOGO AVIARIO.svg" alt="Taino Bay Puerto Plata">
+            <!-- planta1 (hojas banana) centrada -->
+            <img class="plant-center" src="assets/planta1.png" alt="">
+            <img class="hero-logo" src="assets/Taino logo.svg" alt="Taino Bay Puerto Plata">
         </div>
 
         <!-- Wave / curve divider -->
@@ -580,11 +526,7 @@
             <img class="mobile-bird-white" src="assets/AVE BLANCA.png" alt="">
             <img class="mobile-bird-blue" src="assets/AVE Azul.png" alt="">
             <img class="mobile-bird-parrot" src="assets/AVE ROJA.png" alt="">
-            <img class="mobile-aviarius-logo" src="assets/LOGO AVIARIO.svg" alt="Aviarius Bird Experience">
-            <div class="mobile-plants">
-                <img class="mobile-plant-l" src="assets/planta2.png" alt="">
-                <img class="mobile-plant-r" src="assets/planta1.png" alt="">
-            </div>
+            <img class="mobile-taino-logo" src="assets/Taino logo.svg" alt="Taino Bay Puerto Plata">
             <!-- Cream wave at bottom -->
             <div class="photo-wave">
                 <svg viewBox="0 0 768 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -596,11 +538,11 @@
         <!-- ── CONTENT PANEL (right desktop / center mobile) ── -->
         <section class="content" aria-label="Aviarius Bird Experience">
 
-            <!-- Aviarius logo — visible on desktop only -->
+            <!-- Aviarius logo -->
             <img class="aviarius-logo" src="assets/LOGO AVIARIO.svg"
                 alt="Aviarius Bird Experience – Taino Bay Puerto Plata">
 
-            <p class="subtitle">Making feathery friends<br>and having the best time!</p>
+            <p class="subtitle">Get ready to explore<br>and have a day to remember</p>
 
             <!-- Two CTA buttons -->
             <div class="buttons">
@@ -616,7 +558,6 @@
 
             <!-- Social links -->
             <div class="social-section">
-                <p class="social-label">Let's connect!</p>
                 <div class="social-icons">
                     <a class="social-icon-link" id="facebook-link" href="#" target="_blank" rel="noopener"
                         aria-label="Aviarius en Facebook">
@@ -633,22 +574,14 @@
                 </div>
             </div>
 
-            <!-- Decorative plant (bottom-right corner, desktop) -->
-            <img class="content-plant" src="assets/planta1.png" alt="" aria-hidden="true">
+            <!-- Desktop plant: planta2 (palma+arbusto) — extrema derecha corner -->
+            <img class="content-plant" src="assets/planta2.png" alt="" aria-hidden="true">
+
+            <!-- Mobile plants: planta1 (left) & planta2 (right) at bottom corners of cream section -->
+            <img class="mobile-plant-left" src="assets/planta1.png" alt="" aria-hidden="true">
+            <img class="mobile-plant-right" src="assets/planta2.png" alt="" aria-hidden="true">
 
         </section>
-
-        <!-- ── MOBILE FOOTER (green + logo, hidden on desktop) ── -->
-        <div class="mobile-footer" aria-hidden="true">
-            <svg class="footer-wave" viewBox="0 0 768 64" preserveAspectRatio="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,64 L0,32 Q192,0 384,32 Q576,64 768,48 L768,64 Z" fill="#1B2D1A" />
-            </svg>
-            <div class="footer-content">
-                <img class="footer-logo" src="assets/LOGO AVIARIO.svg"
-                    alt="Taino Bay Puerto Plata – Aviarius Bird Experience">
-            </div>
-        </div>
 
     </main>
 </body>
