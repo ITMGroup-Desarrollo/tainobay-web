@@ -11,7 +11,8 @@
         gtag('config', 'G-Z2VZW040HN');
     </script>
     <meta charset="utf-8">
-    <base href="/mapa-aviario/">
+    <!-- se pone mapa-aviario/ para produccion y se quita para local -->
+    <!-- <base href="/mapa-aviario/"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aviarius Bird Experience – Taino Bay Puerto Plata</title>
     <meta name="description"
@@ -521,6 +522,108 @@
                 width: clamp(90px, 28vw, 150px);
             }
         }
+
+        /* ═══════════════════════════════════════════════════
+           VIDEO MODAL (Linktree Styled)
+        ═══════════════════════════════════════════════════ */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 28, 14, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            position: relative;
+            width: 100%;
+            max-width: 860px;
+            background: var(--cream);
+            border-radius: 24px;
+            padding: 24px 24px 20px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(224, 123, 40, 0.2);
+            transform: scale(0.92);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            width: 44px;
+            height: 44px;
+            background: var(--orange);
+            color: var(--white);
+            border: 3px solid var(--cream);
+            border-radius: 50%;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, background 0.2s ease;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: var(--orange-hover);
+            transform: scale(1.1);
+        }
+
+        .modal-video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .modal-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 600px) {
+            .modal-card {
+                padding: 16px 16px 14px;
+                border-radius: 18px;
+            }
+
+            .modal-close {
+                top: -14px;
+                right: -14px;
+                width: 38px;
+                height: 38px;
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 
@@ -610,7 +713,65 @@
 
         </section>
 
+        <!-- ── VIDEO MODAL ── -->
+        <div id="video-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+            aria-label="Discover Aviarius Video">
+            <div class="modal-card">
+                <button id="modal-close-btn" class="modal-close" aria-label="Cerrar video">&times;</button>
+                <div class="modal-video-wrapper">
+                    <iframe id="modal-video-iframe" src="" title="Aviarius Bird Experience Video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const discoverBtn = document.getElementById('discover-aviarius-btn');
+            const videoModal = document.getElementById('video-modal');
+            const closeModalBtn = document.getElementById('modal-close-btn');
+            const videoIframe = document.getElementById('modal-video-iframe');
+            const videoUrl = 'https://www.youtube-nocookie.com/embed/qcRRMNeyxXg?autoplay=1&rel=0';
+
+            function openModal(e) {
+                if (e) e.preventDefault();
+                videoIframe.src = videoUrl;
+                videoModal.classList.add('active');
+                videoModal.setAttribute('aria-hidden', 'false');
+            }
+
+            function closeModal() {
+                videoModal.classList.remove('active');
+                videoModal.setAttribute('aria-hidden', 'true');
+                videoIframe.src = '';
+            }
+
+            if (discoverBtn) {
+                discoverBtn.addEventListener('click', openModal);
+            }
+
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', closeModal);
+            }
+
+            if (videoModal) {
+                videoModal.addEventListener('click', function (e) {
+                    if (e.target === videoModal) {
+                        closeModal();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
