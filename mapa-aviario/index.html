@@ -601,13 +601,16 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
         }
 
-        .modal-video-wrapper iframe {
+        .modal-video-wrapper iframe,
+        .modal-video-wrapper video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             border: 0;
+            object-fit: cover;
+            border-radius: 16px;
         }
 
         @media (max-width: 600px) {
@@ -629,7 +632,10 @@
 
 <body>
     <main class="page">
-
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMWKKZL2" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <!-- ── DESKTOP: LEFT HERO PANEL (hidden on mobile) ── -->
         <div class="hero-panel" aria-hidden="true">
             <img class="bird bird-white" src="assets/AVE BLANCA.png" alt="">
@@ -719,9 +725,10 @@
             <div class="modal-card">
                 <button id="modal-close-btn" class="modal-close" aria-label="Cerrar video">&times;</button>
                 <div class="modal-video-wrapper">
-                    <iframe id="modal-video-iframe" src="" title="Aviarius Bird Experience Video" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                    <video id="modal-video-player" controls playsinline preload="metadata">
+                        <source src="https://backends.itmgroup.mx/multimedia/videos/port-tainobay/aviario/aviario.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de este video.
+                    </video>
                 </div>
             </div>
         </div>
@@ -733,20 +740,27 @@
             const discoverBtn = document.getElementById('discover-aviarius-btn');
             const videoModal = document.getElementById('video-modal');
             const closeModalBtn = document.getElementById('modal-close-btn');
-            const videoIframe = document.getElementById('modal-video-iframe');
-            const videoUrl = 'https://www.youtube-nocookie.com/embed/qcRRMNeyxXg?autoplay=1&rel=0';
+            const videoPlayer = document.getElementById('modal-video-player');
 
             function openModal(e) {
                 if (e) e.preventDefault();
-                videoIframe.src = videoUrl;
                 videoModal.classList.add('active');
                 videoModal.setAttribute('aria-hidden', 'false');
+                if (videoPlayer) {
+                    videoPlayer.currentTime = 0;
+                    videoPlayer.play().catch(function (err) {
+                        console.log("Autoplay con sonido bloqueado por el navegador:", err);
+                    });
+                }
             }
 
             function closeModal() {
                 videoModal.classList.remove('active');
                 videoModal.setAttribute('aria-hidden', 'true');
-                videoIframe.src = '';
+                if (videoPlayer) {
+                    videoPlayer.pause();
+                    videoPlayer.currentTime = 0;
+                }
             }
 
             if (discoverBtn) {
