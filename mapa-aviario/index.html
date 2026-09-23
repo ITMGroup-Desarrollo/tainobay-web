@@ -28,7 +28,8 @@
             --cream: #F4EEE0;
             --orange: #E07B28;
             --orange-hover: #C86A18;
-            --dark-text: #1A1A1A;
+            --dark-text: #243524;
+            ;
             --white: #fff;
         }
 
@@ -68,7 +69,7 @@
             left: 0;
             width: 52vw;
             height: 100%;
-            background: var(--green-dark) url('assets/fondo.jpg') center/cover no-repeat;
+            background: var(--green-dark) url('assets/fondo.png') center/cover no-repeat;
             overflow: hidden;
             z-index: 0;
         }
@@ -118,12 +119,14 @@
         }
 
         .bird-blue {
+            position: absolute;
             top: 35%;
             left: 28vw;
             width: clamp(130px, 48vw, 450px);
             height: auto;
             transform: rotate(-8deg);
             filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.2));
+            z-index: 20;
         }
 
         .bird-parrot {
@@ -138,11 +141,11 @@
         .plant-center {
             position: absolute;
             bottom: 0;
-            left: 95%;
+            left: 49vw;
             transform: translateX(-50%);
             width: clamp(100px, 14vw, 210px);
             height: auto;
-            z-index: 40;
+            z-index: 20;
             pointer-events: none;
         }
 
@@ -184,15 +187,15 @@
         .subtitle {
             font-weight: 700;
             color: var(--dark-text);
-            font-size: clamp(14px, 1.5vw, 24px);
-            font-weight: 500;
-            line-height: 1.55;
+            font-size: clamp(14px, 32px, 32px);
+            line-height: 1.15;
+            margin: 2rem 0;
         }
 
         .buttons {
             display: flex;
             flex-direction: column;
-            gap: clamp(10px, 1.4vh, 18px);
+            gap: clamp(10px, 1.8vw, 30px);
             width: 100%;
             align-items: center;
         }
@@ -201,16 +204,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: clamp(10px, 1.5vw, 20px);
+            gap: clamp(10px, 2vw, 30px);
             background: var(--orange);
             border-radius: 16px;
             color: var(--white);
             text-decoration: none;
             padding: clamp(12px, 1.5vh, 20px) clamp(24px, 2.5vw, 38px);
-            width: clamp(240px, 30vw, 440px);
+            width: clamp(240px, 34vw, 480px);
             font-family: 'BLAZTER', 'Lato', sans-serif;
-            font-size: clamp(14px, 1.6vw, 26px);
-            font-weight: 400;
+            font-size: 36px;
+            font-weight: 400 !important;
             letter-spacing: 0.02em;
             transition: background 0.22s, transform 0.22s, box-shadow 0.22s;
             box-shadow: 0 4px 18px rgba(224, 123, 40, 0.32);
@@ -232,18 +235,27 @@
             text-align: left;
         }
 
-        .btn-arrow {
-            font-size: 1.3em;
-            font-weight: 400;
+        .btn-arrow-icon {
+            width: clamp(12px, 1.2vw, 22px);
+            height: auto;
+            transform: rotate(180deg);
             flex-shrink: 0;
-            line-height: 1;
+            display: block;
         }
 
         .social-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: clamp(8px, 1.2vh, 16px);
+            gap: clamp(6px, 1vh, 12px);
+        }
+
+        .social-label {
+            font-size: clamp(14px, 32px, 32px);
+            font-weight: 700;
+            color: var(--dark-text);
+            text-align: center;
+            margin: 3rem 0 1rem;
         }
 
         .social-icons {
@@ -265,7 +277,7 @@
         }
 
         .social-icon {
-            width: clamp(34px, 3.8vw, 58px);
+            height: clamp(34px, 3.8vw, 58px);
             height: auto;
             display: block;
         }
@@ -308,8 +320,9 @@
 
             .hero-panel,
             .wave-divider,
-            .content-plant {
-                display: none;
+            .content-plant,
+            .desktop-only {
+                display: none !important;
             }
 
             /* ─ Mobile hero section with texture background ─ */
@@ -416,23 +429,28 @@
             }
 
             .subtitle {
-                font-size: clamp(15px, 4.2vw, 32px);
+                font-size: clamp(15px, 28px, 32px);
                 font-weight: 700;
                 padding: 1rem 0;
-                line-height: 1.35;
-                max-width: 270px;
+                line-height: 1.15;
             }
 
             .cta-btn {
                 width: clamp(190px, 64vw, 290px);
-                font-size: clamp(14px, 3.4vw, 21px);
+                font-size: 24px;
                 padding: clamp(11px, 2vw, 16px) clamp(18px, 3.5vw, 28px);
                 box-shadow: 0 4px 14px rgba(224, 123, 40, 0.28);
             }
 
             .social-icons {
-                margin-top: 2rem;
                 gap: clamp(16px, 4vw, 30px);
+            }
+
+            .social-label {
+                font-size: clamp(14px, 32px, 32px);
+                font-weight: 700;
+                text-align: center;
+                margin: 2rem 0 1rem;
             }
 
             .social-icon {
@@ -483,7 +501,7 @@
 
             .cta-btn {
                 width: clamp(190px, 66vw, 280px);
-                font-size: clamp(14px, 3.8vw, 20px);
+                font-size: 16px;
             }
 
             .content {
@@ -512,10 +530,7 @@
         <!-- ── DESKTOP: LEFT HERO PANEL (hidden on mobile) ── -->
         <div class="hero-panel" aria-hidden="true">
             <img class="bird bird-white" src="assets/AVE BLANCA.png" alt="">
-            <img class="bird bird-blue" src="assets/AVE Azul.png" alt="">
             <img class="bird bird-parrot" src="assets/AVE ROJA.png" alt="">
-            <!-- planta1 (hojas banana) centrada -->
-            <img class="plant-center" src="assets/planta1.png" alt="">
             <img class="hero-logo" src="assets/Taino logo.svg" alt="Taino Bay Puerto Plata">
         </div>
 
@@ -523,6 +538,10 @@
         <div class="wave-divider" aria-hidden="true">
             <img src="vector-1.svg" alt="">
         </div>
+
+        <!-- Desktop overlapping elements above wave curve & content -->
+        <img class="bird bird-blue desktop-only" src="assets/AVE Azul.png" alt="" aria-hidden="true">
+        <img class="plant-center desktop-only" src="assets/planta1.png" alt="" aria-hidden="true">
 
         <!-- ── MOBILE: HERO SECTION (hidden on desktop) ── -->
         <div class="photo-section" aria-hidden="true">
@@ -546,33 +565,37 @@
             <img class="aviarius-logo" src="assets/LOGO AVIARIO.svg"
                 alt="Aviarius Bird Experience – Taino Bay Puerto Plata">
 
-            <p class="subtitle">Get ready to explore<br>and have a day to remember</p>
+            <p class="subtitle">Making&nbsp;feathery&nbsp;friends<br>
+                and&nbsp;having&nbsp;the&nbsp;best&nbsp;time!</p>
 
             <!-- Two CTA buttons -->
             <div class="buttons">
                 <a class="cta-btn" id="discover-aviarius-btn" href="#" target="_blank" rel="noopener">
                     <span class="btn-text">Discover Aviarius</span>
-                    <span class="btn-arrow">&#8250;</span>
+                    <img class="btn-arrow-icon" src="arrow-back-ios.svg" alt="" aria-hidden="true">
                 </a>
-                <a class="cta-btn" id="port-tainobay-map-btn" href="#" target="_blank" rel="noopener">
-                    <span class="btn-text">Port Taino Bay Map</span>
-                    <span class="btn-arrow">&#8250;</span>
+                <a class="cta-btn" id="port-tainobay-map-btn" href="https://porttainobay.com/en/map" target="_blank"
+                    rel="noopener">
+                    <span class="btn-text">Port Taino Bay&nbsp;Map</span>
+                    <img class="btn-arrow-icon" src="arrow-back-ios.svg" alt="" aria-hidden="true">
                 </a>
             </div>
 
             <!-- Social links -->
             <div class="social-section">
+                <p class="social-label">Let's connect!</p>
                 <div class="social-icons">
-                    <a class="social-icon-link" id="facebook-link" href="#" target="_blank" rel="noopener"
-                        aria-label="Aviarius en Facebook">
+                    <a class="social-icon-link" id="facebook-link" href="https://www.facebook.com/tainobayport/"
+                        target="_blank" rel="noopener" aria-label="Aviarius en Facebook">
                         <img class="social-icon" src="assets/fb logo.svg" alt="Facebook">
                     </a>
-                    <a class="social-icon-link" id="instagram-link" href="#" target="_blank" rel="noopener"
-                        aria-label="Aviarius en Instagram">
+                    <a class="social-icon-link" id="instagram-link" href="https://www.instagram.com/porttainobay"
+                        target="_blank" rel="noopener" aria-label="Aviarius en Instagram">
                         <img class="social-icon" src="assets/ig logo.svg" alt="Instagram">
                     </a>
-                    <a class="social-icon-link" id="tripadvisor-link" href="#" target="_blank" rel="noopener"
-                        aria-label="Aviarius en TripAdvisor">
+                    <a class="social-icon-link" id="tripadvisor-link"
+                        href="https://www.tripadvisor.com.mx/Attraction_Review-g147290-d23803203-Reviews-Taino_Bay_Puerto_Plata-Puerto_Plata_Puerto_Plata_Province_Dominican_Republic.html"
+                        target="_blank" rel="noopener" aria-label="Aviarius en TripAdvisor">
                         <img class="social-icon" src="assets/TripAdvisorLogo.svg" alt="TripAdvisor">
                     </a>
                 </div>
